@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>The simplest self-publishing workflow | Notes from the digital underground by Lngnmn</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="org-mode, hugo, static site, git, github pages">
 <meta name="description" content="Overview This is the simplest but smart self-publishing workflow.
 org-mode -&gt; ox_hugo -&gt; hugo -&gt; static html -&gt; git commit -a -&gt; git push -&gt; github pages
 Everything is according to the universal principles of being almost &ldquo;pure functional transformations&rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
@@ -67,7 +67,7 @@ At each stage or step we delegate some aspect to an appropriate external vendore
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lngnmn2.github.io/articles/the-simplest-workflow/" /><meta property="article:section" content="articles" />
 <meta property="article:published_time" content="2023-07-13T00:00:00+05:45" />
-<meta property="article:modified_time" content="2023-07-13T17:30:35+05:45" />
+<meta property="article:modified_time" content="2023-07-15T10:42:32+05:45" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The simplest self-publishing workflow"/>
@@ -105,13 +105,13 @@ At each stage or step we delegate some aspect to an appropriate external vendore
   "name": "The simplest self-publishing workflow",
   "description": "Overview This is the simplest but smart self-publishing workflow.\norg-mode -\u0026gt; ox_hugo -\u0026gt; hugo -\u0026gt; static html -\u0026gt; git commit -a -\u0026gt; git push -\u0026gt; github pages\nEverything is according to the universal principles of being almost \u0026ldquo;pure functional transformations\u0026rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).\nAt each stage or step we delegate some aspect to an appropriate external vendored tool.",
   "keywords": [
-    
+    "org-mode", "hugo", "static site", "git", "github pages"
   ],
   "articleBody": "Overview This is the simplest but smart self-publishing workflow.\norg-mode -\u003e ox_hugo -\u003e hugo -\u003e static html -\u003e git commit -a -\u003e git push -\u003e github pages\nEverything is according to the universal principles of being almost “pure functional transformations” of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).\nAt each stage or step we delegate some aspect to an appropriate external vendored tool.\nWe start with the most general and versatile format - org-mode and then gradually specialize it (via markdown being exported into a static html by hugo) to be published on the Github Pages.\nUsing org-mode as the structural text is the key. The same .org file could be exported into almost everything, including LaTeX, and then a good quality .pdf.\nThe standalone pandoc tool can be used separately with the source .org files.\nThe principles We are trying to separate the concerns and to decouple everything (at each step).\nEach format is reproducible (from an org file) and gets preserved. Each tool does its own thing only, and, hopefully, does it well. The tools We use Emacs, which formats the code, checks spelling and grammar, etc. We write everything in org-mode files, decorated with the Hugo-specific properties. ox-hugo generates all the markdown files inside of $HUGO_BASE_DIR/content. it follows simple directory-based layout, so we just have a nested directories. it runs the hugo binary which generates the static site html according to the theme. we use git to version the resulting html content and to push it into github. The properties We just specify default properties which Hugo requires (at least the section).\nHUGO_SECTION (required by Hugo) EXPORT_FILE_NAME to use a whole sub-tree (a directory) for a single “post”. HUGO_BUNDLE ",
   "wordCount" : "293",
   "inLanguage": "en",
   "datePublished": "2023-07-13T00:00:00+05:45",
-  "dateModified": "2023-07-13T17:30:35+05:45",
+  "dateModified": "2023-07-15T10:42:32+05:45",
   "author":[{
     "@type": "Person",
     "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
@@ -236,6 +236,11 @@ step).</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/org-mode/">org-mode</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/hugo/">hugo</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/static-site/">static site</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/git/">git</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/github-pages/">github pages</a></li>
     </ul>
   </footer>
 </article>

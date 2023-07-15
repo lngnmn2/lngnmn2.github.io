@@ -6,7 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Rust</title>
+      <link>https://lngnmn2.github.io/articles/unrestanding-rust/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/unrestanding-rust/</guid>
+      <description>Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.
+Everyone who talks about Rust as a &amp;ldquo;almost a functional language&amp;rdquo; or a &amp;ldquo;language much like Standard ML&amp;rdquo; is an unqualified clueless bullshitter. Imperative code (flows of statements) and the referential transparency property are alternatives - it is either one or another.</description>
+    </item>
+    
     <item>
       <title>The simplest self-publishing workflow</title>
       <link>https://lngnmn2.github.io/articles/the-simplest-workflow/</link>

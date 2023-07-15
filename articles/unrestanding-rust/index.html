@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Understanding Rust | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="rust, imperative, borrow checker, ownership">
+<meta name="description" content="Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.
+Everyone who talks about Rust as a &ldquo;almost a functional language&rdquo; or a &ldquo;language much like Standard ML&rdquo; is an unqualified clueless bullshitter. Imperative code (flows of statements) and the referential transparency property are alternatives - it is either one or another.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/unrestanding-rust/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Understanding Rust" />
+<meta property="og:description" content="Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.
+Everyone who talks about Rust as a &ldquo;almost a functional language&rdquo; or a &ldquo;language much like Standard ML&rdquo; is an unqualified clueless bullshitter. Imperative code (flows of statements) and the referential transparency property are alternatives - it is either one or another." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/unrestanding-rust/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-07-15T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-07-15T10:41:50+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Understanding Rust"/>
+<meta name="twitter:description" content="Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.
+Everyone who talks about Rust as a &ldquo;almost a functional language&rdquo; or a &ldquo;language much like Standard ML&rdquo; is an unqualified clueless bullshitter. Imperative code (flows of statements) and the referential transparency property are alternatives - it is either one or another."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Understanding Rust",
+      "item": "https://lngnmn2.github.io/articles/unrestanding-rust/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understanding Rust",
+  "name": "Understanding Rust",
+  "description": "Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.\nEveryone who talks about Rust as a \u0026ldquo;almost a functional language\u0026rdquo; or a \u0026ldquo;language much like Standard ML\u0026rdquo; is an unqualified clueless bullshitter. Imperative code (flows of statements) and the referential transparency property are alternatives - it is either one or another.",
+  "keywords": [
+    "rust", "imperative", "borrow checker", "ownership"
+  ],
+  "articleBody": "Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.\nEveryone who talks about Rust as a “almost a functional language” or a “language much like Standard ML” is an unqualified clueless bullshitter. Imperative code (flows of statements) and the referential transparency property are alternatives - it is either one or another.\nFor an imperative language one has to trace or simulate in ones mind the flow of execution of statements in order to understand the program. Only with this mental tracing one could “see” the current state of the system as a current “snapshot” of all its memory locations, which is what variables are in imperative languages.\nThe concurrent multi-threaded access and destructive mutations together result in a non-determinism, so such a “snapshot” of all the variables cannot be obtained in principle (only a possibly infinite set of all possible such snapshots) .\nIn the classic languages we have immutable bindings and all the “state” is wrapped and “hidden” inside of closures and is still described declaratively (what eventually has to be done with it in all possible cases).\nThe principles The Rust compiler imposes (and reinforces) a strict discipline of what can be done with variables and references, and given that, does the “tracing” for you to make sure that certain conditions (situations) do not arise – it signals an error at a compile time (instead of producing a runtime errors as a result of a runtime checks).\nThe real major innovation is to threat all the references (specialization of pointers, which are just offsets) “explicitly” by restricting and formalizing their possible “behavior”. References became “typed” or lifted into (are recognized by) the type system.\nMaking the imperative notion of an “ownership” – which variable has the data in memory right now (in time) – explicit, and tracked by the compiler, is another innovation.\nIn the Classic languages we have no notion of time, which is, in principle, the right understanding.\nThe rather amateur and awkward notions of “borrows”, “permissions” and “lifetimes” have been introduced to explain and implement the typing rules.\nThe borrows from FP A few fundamental concepts has been borrowed from the Classic World. The refs from Standard ML (where they are part of the core language) and from Haskell, where they are just an Abstract Data Type, defined in the standard library.\nIn these languages the refs first-class values, which themselves are immutable. Semantically they are similar to syntactic closures, which capture (and carry along) all the values of its bindings.\nThe fundamental referential transparency property still holds for refs as immutable bindings, so there is no imperative issues with mutation and (together with) aliasing.\nRefs are passed along explicitly, and being an ADT (or even an instance of a Monad) protect the “state” (actual values) from being leaked (or even observed).\nThe rules Again, since Rust is an imperative language, so the notions of “time” and flow of control are central to simulating and thus understanding of the current state of a program.\nRust formalized and restricts the possible behaviors (in the code) by enforcing the set of informal (but actually implemented inside the compiler) rules.\nVariables are locations in memory (either on the stack or the heap). Variables or function arguments “own” the values in memory. A single owner at any time. Ownership “moves” between owners. References do not “own” the values they refer to. Variables do. Any number of Immutable references to a variable are allowed. At most one Mutable reference to a variable (which owns) at a time. Taking a mutable reference (moment in time) invalidates all the other refs. Change in (moving of an) ownership invalidates prior variables (in time). “Dropping” of the last “owner” returns the ownership to the previous one. Nothing to see there Nothing is “profound” there. It is just a systematic attempt to formalize and restrict the possible behavior of an imperative code, by borrowing some fundamental ideas from the Classic Languages.\nAn advanced imperative language Aside from the restrictions and rules described above, Rust is just an ordinary imperative language, with all the usual imperative issues, just as with an assembly language, which is an “ultimate location-based imperative code”.\nEverything is a location in memory (either on the stack, the heap or in the registers). The content is being “moved” (actually - copied) between locations (which include registers).\nThere is a reason why the most used instructions is called mov. It implicitly signals an invalidation of “the source”, and that “the destination” is now the right (current) location of the content.\nUsing the “old locations” thus is a fundamental imperative problem (among others).\nThe procedures calling issues are still out there\npassing by value (a copy) passing by a reference (a copy of a pointer) returning by a value (a copy) returning a reference (a pointer to a location) ",
+  "wordCount" : "830",
+  "inLanguage": "en",
+  "datePublished": "2023-07-15T00:00:00+05:45",
+  "dateModified": "2023-07-15T10:41:50+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/unrestanding-rust/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Understanding Rust
+    </h1>
+    <div class="post-meta"><span title='2023-07-15 00:00:00 +0545 +0545'>July 15, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
+<p>Rust is, in principle, an <em>imperative language</em>. The order of <em>statements</em> matters
+(a lot, giving the changes of ownership), <em>expressions</em> are just an addition, and
+there is no (and never will be) <em>referential transparency</em>.</p>
+<p>Everyone who talks about Rust as a &ldquo;almost a functional language&rdquo; or a &ldquo;language
+much like Standard ML&rdquo; is an unqualified clueless bullshitter. Imperative code (flows
+of statements) and the referential transparency property are <em>alternatives</em> -
+it is <em>either</em> one or another.</p>
+<p>For an imperative language one has to <em>trace or simulate in ones mind</em> the flow of
+execution of statements in order to understand the program. Only with this mental tracing
+one could &ldquo;see&rdquo; the current <em>state</em> of the system as a current &ldquo;snapshot&rdquo; of all
+its memory locations, which is what <em>variables</em> are in imperative languages.</p>
+<p>The concurrent multi-threaded access and destructive mutations <em>together</em> result
+in a <em>non-determinism</em>, so such a &ldquo;snapshot&rdquo; of all the variables <em>cannot be obtained</em> in
+principle (only a possibly infinite set of all possible such snapshots) .</p>
+<p>In the classic languages we have <em>immutable bindings</em> and all the &ldquo;state&rdquo; is
+wrapped and &ldquo;hidden&rdquo; inside of <em>closures</em> and is still <em>described declaratively</em> (what
+<em>eventually</em> has to be done with it <em>in all possible cases</em>).</p>
+<h2 id="the-principles">The principles<a hidden class="anchor" aria-hidden="true" href="#the-principles">#</a></h2>
+<p>The Rust compiler imposes (and reinforces) a strict <em>discipline</em> of what can be
+done with <em>variables</em> and <em>references</em>, and given that, does the &ldquo;tracing&rdquo; for you to make
+sure that certain conditions (situations) do not arise &ndash; it signals an error at
+a compile time (instead of producing a runtime errors as a result of a runtime checks).</p>
+<p>The real <em>major innovation</em> is to threat <em>all the references</em> (specialization of
+<em>pointers</em>, which are just <em>offsets</em>) &ldquo;explicitly&rdquo; by restricting and <em>formalizing</em>
+their possible &ldquo;behavior&rdquo;. References became &ldquo;typed&rdquo; or lifted into (are recognized
+by) the type system.</p>
+<p>Making the imperative notion of an &ldquo;ownership&rdquo; &ndash; which variable has the data in
+memory <em>right now (in time)</em> &ndash; explicit, and tracked by the compiler, is another innovation.</p>
+<p>In the Classic languages we have no notion of time, which is, in principle, <em>the
+right understanding</em>.</p>
+<p>The rather amateur and awkward notions of &ldquo;borrows&rdquo;, &ldquo;permissions&rdquo; and
+&ldquo;lifetimes&rdquo; have been introduced to explain and implement the <em>typing rules</em>.</p>
+<h2 id="the-borrows-from-fp">The borrows from FP<a hidden class="anchor" aria-hidden="true" href="#the-borrows-from-fp">#</a></h2>
+<p>A few fundamental concepts has been <em>borrowed</em> from the Classic World. The <code>refs</code>
+from Standard ML (where they are part of the core language) and from Haskell,
+where they are just an Abstract Data Type, defined in the standard library.</p>
+<p>In these languages the <code>refs</code> first-class values, which themselves are immutable.
+Semantically they are similar to syntactic closures, which capture (and carry
+along) all the values of its <em>bindings</em>.</p>
+<p>The fundamental <em>referential transparency</em> property still holds for <code>refs</code> as
+<em>immutable bindings</em>, so there is no imperative issues with mutation and (together
+with) aliasing.</p>
+<p>Refs are passed along <em>explicitly</em>, and being an ADT (or even an instance of a
+Monad) protect the &ldquo;state&rdquo; (actual values) from being <em>leaked</em> (or even observed).</p>
+<h2 id="the-rules">The rules<a hidden class="anchor" aria-hidden="true" href="#the-rules">#</a></h2>
+<p>Again, since Rust is an imperative language, so the notions of &ldquo;time&rdquo; and flow of
+control are central to simulating and thus understanding of the current state of
+a program.</p>
+<p>Rust formalized and restricts the possible behaviors (in the code) by enforcing
+the set of informal (but actually implemented inside the compiler) <em>rules</em>.</p>
+<h3 id="variables-are-locations-in-memory--either-on-the-stack-or-the-heap--dot">Variables are locations in memory (either on the stack or the heap).<a hidden class="anchor" aria-hidden="true" href="#variables-are-locations-in-memory--either-on-the-stack-or-the-heap--dot">#</a></h3>
+<h3 id="variables-or-function-arguments-own-the-values-in-memory-dot">Variables or function arguments &ldquo;own&rdquo; the values in memory.<a hidden class="anchor" aria-hidden="true" href="#variables-or-function-arguments-own-the-values-in-memory-dot">#</a></h3>
+<h3 id="a-single-owner-at-any-time-dot-ownership-moves-between-owners-dot">A single owner at any time. Ownership &ldquo;moves&rdquo; between owners.<a hidden class="anchor" aria-hidden="true" href="#a-single-owner-at-any-time-dot-ownership-moves-between-owners-dot">#</a></h3>
+<h3 id="references-do-not-own-the-values-they-refer-to-dot-variables-do-dot">References do not &ldquo;own&rdquo; the values they refer to. Variables do.<a hidden class="anchor" aria-hidden="true" href="#references-do-not-own-the-values-they-refer-to-dot-variables-do-dot">#</a></h3>
+<h3 id="any-number-of-immutable-references-to-a-variable-are-allowed-dot">Any number of Immutable references to a variable are allowed.<a hidden class="anchor" aria-hidden="true" href="#any-number-of-immutable-references-to-a-variable-are-allowed-dot">#</a></h3>
+<h3 id="at-most-one-mutable-reference-to-a-variable--which-owns--at-a-time-dot">At most one Mutable reference to a variable (which owns) at a time.<a hidden class="anchor" aria-hidden="true" href="#at-most-one-mutable-reference-to-a-variable--which-owns--at-a-time-dot">#</a></h3>
+<h3 id="taking-a-mutable-reference--moment-in-time--invalidates-all-the-other-refs-dot">Taking a mutable reference (moment in time) invalidates all the other refs.<a hidden class="anchor" aria-hidden="true" href="#taking-a-mutable-reference--moment-in-time--invalidates-all-the-other-refs-dot">#</a></h3>
+<h3 id="change-in--moving-of-an--ownership-invalidates-prior-variables--in-time--dot">Change in (moving of an) ownership invalidates prior variables (in time).<a hidden class="anchor" aria-hidden="true" href="#change-in--moving-of-an--ownership-invalidates-prior-variables--in-time--dot">#</a></h3>
+<h3 id="dropping-of-the-last-owner-returns-the-ownership-to-the-previous-one-dot">&ldquo;Dropping&rdquo; of the last &ldquo;owner&rdquo; returns the ownership to the previous one.<a hidden class="anchor" aria-hidden="true" href="#dropping-of-the-last-owner-returns-the-ownership-to-the-previous-one-dot">#</a></h3>
+<h2 id="nothing-to-see-there">Nothing to see there<a hidden class="anchor" aria-hidden="true" href="#nothing-to-see-there">#</a></h2>
+<p>Nothing is &ldquo;profound&rdquo; there. It is just a systematic attempt to formalize and
+restrict the possible behavior of an <em>imperative code</em>, by borrowing some fundamental
+ideas  from the Classic Languages.</p>
+<h2 id="an-advanced-imperative-language">An advanced imperative language<a hidden class="anchor" aria-hidden="true" href="#an-advanced-imperative-language">#</a></h2>
+<p>Aside from the restrictions and rules described above, Rust is just an ordinary
+imperative language, with all the usual imperative issues, just as with an assembly
+language, which is an &ldquo;ultimate location-based imperative code&rdquo;.</p>
+<p>Everything is a location in memory (either on the stack, the heap or in the <em>registers</em>). The
+content is being &ldquo;moved&rdquo; (actually - copied) between <em>locations</em> (which include
+<em>registers</em>).</p>
+<p>There is a reason why the most used instructions is called <code>mov</code>. It implicitly
+signals an <em>invalidation</em> of &ldquo;the source&rdquo;, and that &ldquo;the destination&rdquo; is now the <em>right
+(current) location</em> of the content.</p>
+<p>Using the &ldquo;old locations&rdquo; thus is a fundamental imperative problem (among others).</p>
+<p>The procedures calling issues are still out there</p>
+<ul>
+<li>passing by value (a copy)</li>
+<li>passing by a reference (a copy of a pointer)</li>
+<li>returning by a value (a copy)</li>
+<li>returning a reference (a pointer to a location)</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/rust/">rust</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/imperative/">imperative</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/borrow-checker/">borrow checker</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/ownership/">ownership</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

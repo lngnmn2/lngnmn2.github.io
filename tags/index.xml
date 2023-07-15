@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>borrow checker</title>
+      <link>https://lngnmn2.github.io/tags/borrow-checker/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/borrow-checker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imperative</title>
+      <link>https://lngnmn2.github.io/tags/imperative/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/imperative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ownership</title>
+      <link>https://lngnmn2.github.io/tags/ownership/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/ownership/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://lngnmn2.github.io/tags/rust/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://lngnmn2.github.io/tags/git/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github pages</title>
+      <link>https://lngnmn2.github.io/tags/github-pages/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hacker news</title>
       <link>https://lngnmn2.github.io/tags/hacker-news/</link>
@@ -26,11 +80,38 @@
     </item>
     
     <item>
+      <title>hugo</title>
+      <link>https://lngnmn2.github.io/tags/hugo/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>lngnmn</title>
       <link>https://lngnmn2.github.io/tags/lngnmn/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/lngnmn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org-mode</title>
+      <link>https://lngnmn2.github.io/tags/org-mode/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/org-mode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static site</title>
+      <link>https://lngnmn2.github.io/tags/static-site/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/static-site/</guid>
       <description></description>
     </item>
     
