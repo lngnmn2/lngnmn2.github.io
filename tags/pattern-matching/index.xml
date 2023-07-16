@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pattern-matching on Notes from the digital underground by Lngnmn</title>
+    <link>https://lngnmn2.github.io/tags/pattern-matching/</link>
+    <description>Recent content in pattern-matching on Notes from the digital underground by Lngnmn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/pattern-matching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The recurring patterns captured as a Monoid</title>
+      <link>https://lngnmn2.github.io/articles/monoids/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/monoids/</guid>
+      <description>The common patterns There are recurrent patterns, which has been captured in familiar &amp;ldquo;standard&amp;rdquo; abstractions.
+Monoid A Set along with a composition operation, which has an identity element.
+addition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is &amp;quot;&amp;quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.</description>
+    </item>
+    
+  </channel>
+</rss>

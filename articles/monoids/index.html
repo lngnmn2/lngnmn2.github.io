@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The recurring patterns captured as a Monoid | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="Monoid, map, function composition, chaining, pattern-matching, propagation, error handling, Erlang">
+<meta name="description" content="The common patterns There are recurrent patterns, which has been captured in familiar &ldquo;standard&rdquo; abstractions.
+Monoid A Set along with a composition operation, which has an identity element.
+addition, for (&#43;) identity is 0 concatenation, which is a specialization of putting together, identity is &quot;&quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/monoids/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="The recurring patterns captured as a Monoid" />
+<meta property="og:description" content="The common patterns There are recurrent patterns, which has been captured in familiar &ldquo;standard&rdquo; abstractions.
+Monoid A Set along with a composition operation, which has an identity element.
+addition, for (&#43;) identity is 0 concatenation, which is a specialization of putting together, identity is &quot;&quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/monoids/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-07-16T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-07-16T18:52:25+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The recurring patterns captured as a Monoid"/>
+<meta name="twitter:description" content="The common patterns There are recurrent patterns, which has been captured in familiar &ldquo;standard&rdquo; abstractions.
+Monoid A Set along with a composition operation, which has an identity element.
+addition, for (&#43;) identity is 0 concatenation, which is a specialization of putting together, identity is &quot;&quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The recurring patterns captured as a Monoid",
+      "item": "https://lngnmn2.github.io/articles/monoids/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The recurring patterns captured as a Monoid",
+  "name": "The recurring patterns captured as a Monoid",
+  "description": "The common patterns There are recurrent patterns, which has been captured in familiar \u0026ldquo;standard\u0026rdquo; abstractions.\nMonoid A Set along with a composition operation, which has an identity element.\naddition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is \u0026quot;\u0026quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.",
+  "keywords": [
+    "Monoid", "map", "function composition", "chaining", "pattern-matching", "propagation", "error handling", "Erlang"
+  ],
+  "articleBody": "The common patterns There are recurrent patterns, which has been captured in familiar “standard” abstractions.\nMonoid A Set along with a composition operation, which has an identity element.\naddition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is \"\". List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.\nFor AND we have False as the identity element (a single False). For OR it is True (at least one True)\nNesting of pattern-matching It takes some effort to disentangle and clearly separate all the notions and “patterns” involved, but once it is done, everything is clear and self-evident.\nThere are notions involved:\nthe universal notion behind function composition is nesting. the universal notion of pattern-matching on data-constructors of sum-types one and only one branch will be evaluated sum-types (the data-constructors) can be parameterized The main principle is this: functions defined by clauses are composed branch-wise.\nThe “natural” pattern-matching on data-constructors (“variants” or possible outcomes) results in functions defined with clauses (like abs in mathematics).\nThese clauses reflect the “structure” of the type and the commonalities will be noticed and abstracted out. Some clauses (or branches) will be common, or even identical.\nWhen composed (or nested) each branch will be composed with the corresponding one, and this “branch-wise composition” will form a distinct “path” within the whole “composition” (a chain of nested map or whatever).\nThe clear view is this. Functions defined by clauses (or distinct branches of the match expression) can only be composed at the corresponding branch level, thus forming distinct “patches” within.\nEach “path” or a composed branches (one and only one of which will be evaluated) is its own level of abstraction within composed functions defined by clauses.\nA sum-type Once your type has more than one data-constructor we naturally pattern-match on them, and all the functions or expressions would have the particular form of the type, which reflects (mimics) its “structure”.\nAny function would “naturally” have as many clauses as there are data-constructors. So would have a match expression.\nThe common pattern is captured with pattern-matching – for the case of the identity element of a Monoid the value just propagates – being passed along “untouched”, and the other branch will not be evaluated.\nThe mathematical notion is that the identity element of an operation do nothing (literally), this is why it just being passed along within its branch.\nOption type 'a option = None | Some of 'a Maybe type Maybe :: * -\u003e * data Maybe a = Nothing | Just a The functions on these types have the common form which directly reflect (mimics) the structure of the type. I will write them later.\n“Errors” as just taking another branch There is a universal notion of a condition, captured by the IF special form – with at least two potential outcomes, while one and only one branch (the actual next step) could be actually taken. The other branch will remain as an ephemeral potentiality, and will never be “seen” in the actual “path” (a sequence of steps) of a process.\nPattern-matching on data-constructors of a sum-type (a tagged-union of potential outcomes) generalizes IF (the short-circuiting conditional expression).\nThe fundamental property is, again, that one and only one branch will actually be taken (evaluated) and the others will “disappear”, as never existed, but as ephemeral potentialities or imaginary possibilities.\nYes, we as humans are conditioned to thing in terms of a “fork on the road”, and where the each way is no less real as the other. This is how we miss the subtle fact that, possiblel outcome and an actual outcome (the next step being taken) live at very different levels of abstraction and must never be “mixed”.\nThe clear separation between potential (or possible) and actual (taken) is the mark of mature thinking.\nTake another branch We should think of what we call an “error” as just a signal to take another branch (backtrack and restart).\nAll the dramatic connotations must be removed. It is just a branch within a conditional expression.\nThis branch, however, which usually leads to “backtracking” and to a “restart” must always be included in a “plan” or a declarative program.\nAn error could be signaled in various ways, but the handling is uniform – just take (evaluate) the corresponding branch.\nThese exact notions are behind the Erlang uniform strategy of error handling. Understanding this is the beginning of “wisdom”.\nNothing was returned So, when nothing (meaningful) was returned, we have to evaluate a corresponding branch, which must always be present.\nNone or Nohing thus is an identity element of a Monoid of composition (chain) of actions without an error occured, /yet.\nOnce the “Nothing” branch has been evaluated, it will just propagate along, and all the other branches (in a chain) will remain evaluated.\nThus no further steps will be taken by a process along the “happy” path.\nReturning Nothing is backtracking When we take the “Nothing” branch we simply backtrack (literally, through the call-stack) to a function where a restart (if any) could have occur.\nThe genius Erlang guys have noticed and generalized this universal pattern with the supervision hierarchies. The process “fail” and the failure propagaget to the “supervisor” which restart a new process.\nNested maps So, we nest (which is the same as compose) the map function over Option or Maybe types.\nThis is how we compose computations which may fail at any step. They have the common “fail branch”, which is of “Nothing” (to return).\nflatMap composes “Kleisli arrows”.\nCombinators There is a small set of combinators that can be composed with map or flatMap.\nSome of these functions are non-strict (lazy) on its arguments, so they short-circuit, just like the IF special form does.\nThe most familiar are orElse and andThen.\n",
+  "wordCount" : "1004",
+  "inLanguage": "en",
+  "datePublished": "2023-07-16T00:00:00+05:45",
+  "dateModified": "2023-07-16T18:52:25+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/monoids/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      The recurring patterns captured as a Monoid
+    </h1>
+    <div class="post-meta"><span title='2023-07-16 00:00:00 +0545 +0545'>July 16, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="the-common-patterns">The common patterns<a hidden class="anchor" aria-hidden="true" href="#the-common-patterns">#</a></h2>
+<p>There are <em>recurrent patterns</em>, which has been captured in familiar &ldquo;standard&rdquo;
+abstractions.</p>
+<h2 id="monoid">Monoid<a hidden class="anchor" aria-hidden="true" href="#monoid">#</a></h2>
+<p>A Set along with a <em>composition</em> operation, which has an identity element.</p>
+<ul>
+<li>addition, for <code>(+)</code> identity is <code>0</code></li>
+<li>concatenation, which is a specialization of <em>putting together</em>, identity is <code>&quot;&quot;</code>.</li>
+<li>List, a fundamental <em>recursive sum-type</em>, identity is <code>[]</code></li>
+<li>Option, a specialization of empty/non-empty aspect of a <em>List</em>,  identity is <code>None</code></li>
+<li>Boolean logic, very subtle, identity is <code>False</code> (<em>false imply nothing</em>)</li>
+</ul>
+<p>The notion that some Boolean operations form a Monoid is very subtle, but it
+will emerge with <em>conditional expressions</em>.</p>
+<p>For <code>AND</code> we have <code>False</code> as the identity element (a single <code>False</code>).
+For <code>OR</code> it is <code>True</code> (at least one <code>True</code>)</p>
+<h2 id="nesting-of-pattern-matching">Nesting of pattern-matching<a hidden class="anchor" aria-hidden="true" href="#nesting-of-pattern-matching">#</a></h2>
+<p>It takes some effort to <em>disentangle</em> and clearly separate all the notions and
+&ldquo;patterns&rdquo; involved, but once it is done, everything is clear and self-evident.</p>
+<p>There are notions involved:</p>
+<ul>
+<li>the universal notion behind function composition is <em>nesting</em>.</li>
+<li>the universal notion of <em>pattern-matching on data-constructors</em> of sum-types</li>
+<li>one and only one branch will be evaluated</li>
+<li>sum-types (the data-constructors) can be <em>parameterized</em></li>
+</ul>
+<p>The main principle is this: <em>functions defined by clauses are composed branch-wise</em>.</p>
+<p>The &ldquo;natural&rdquo; pattern-matching on data-constructors (&ldquo;variants&rdquo; or <em>possible
+outcomes</em>) results in <em>functions defined with clauses</em> (like <code>abs</code> in mathematics).</p>
+<p>These <em>clauses</em> reflect the <em>&ldquo;structure&rdquo; of the type</em> and the commonalities will be
+noticed and abstracted out. Some clauses (or branches) will be common, or even
+<em>identical</em>.</p>
+<p>When <em>composed (or nested)</em> each branch will be composed with the corresponding
+one, and this &ldquo;branch-wise composition&rdquo; will form a distinct <em>&ldquo;path&rdquo;</em> within the whole
+&ldquo;composition&rdquo; (a chain of nested <code>map</code> or whatever).</p>
+<p>The clear view is this. Functions defined by <em>clauses</em> (or distinct branches of
+the <code>match</code> expression) can only be composed at the <em>corresponding branch</em> level,
+thus forming distinct <em>&ldquo;patches&rdquo;</em> within.</p>
+<p>Each &ldquo;path&rdquo; or a <em>composed branches</em> (<em>one and only one</em> of which will be evaluated)
+is its own level of abstraction <em>within composed functions defined by clauses</em>.</p>
+<h2 id="a-sum-type">A sum-type<a hidden class="anchor" aria-hidden="true" href="#a-sum-type">#</a></h2>
+<p>Once your type has more than one <em>data-constructor</em> we <em>naturally pattern-match</em> on
+them, and all the functions or expressions would have the particular <em>form</em> of the
+type, which reflects (mimics) its &ldquo;structure&rdquo;.</p>
+<p>Any function would &ldquo;naturally&rdquo; have as many <em>clauses</em> as there are
+<em>data-constructors</em>. So would have a <code>match</code> expression.</p>
+<p>The <em>common pattern</em> is <em>captured</em> with pattern-matching &ndash; for the case of the
+<em>identity element of a Monoid</em> the value <em>just propagates</em> &ndash; being passed along
+&ldquo;untouched&rdquo;, and the <em>other branch</em> will not be <em>evaluated</em>.</p>
+<p>The mathematical notion is that the identity element of an operation do nothing
+(literally), this is why it just being passed along <em>within its branch</em>.</p>
+<h3 id="option">Option<a hidden class="anchor" aria-hidden="true" href="#option">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">&#39;</span>a option <span style="color:#f92672">=</span> <span style="color:#a6e22e">None</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Some</span> <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">&#39;</span>a
+</span></span></code></pre></div><h3 id="maybe">Maybe<a hidden class="anchor" aria-hidden="true" href="#maybe">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Maybe</span> <span style="color:#f92672">::</span> <span style="color:#f92672">*</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">Maybe</span> a <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">Just</span> a
+</span></span></code></pre></div><p>The functions on these types have the common form which directly reflect (mimics)
+the structure of the type. I will write them later.</p>
+<h2 id="errors-as-just-taking-another-branch">&ldquo;Errors&rdquo; as just taking another branch<a hidden class="anchor" aria-hidden="true" href="#errors-as-just-taking-another-branch">#</a></h2>
+<p>There is a universal notion of a <em>condition</em>, captured by the <code>IF</code> <em>special form</em> &ndash;
+with <em>at least two potential outcomes</em>, while <em>one and only one</em> branch (the actual
+next step) could be <em>actually taken</em>. The other branch will remain as an <em>ephemeral
+potentiality</em>, and will never be &ldquo;seen&rdquo; in the actual &ldquo;path&rdquo; (a <em>sequence of steps</em>) of a process.</p>
+<p><em>Pattern-matching</em> on <em>data-constructors</em> of a <em>sum-type</em> (a <em>tagged-union of potential
+outcomes</em>) generalizes <code>IF</code> (the <em>short-circuiting conditional expression</em>).</p>
+<p>The fundamental property is, again, that <em>one and only one</em> branch will actually be
+taken (evaluated) and the others will &ldquo;disappear&rdquo;, as never existed, but as
+<em>ephemeral potentialities</em> or imaginary <em>possibilities</em>.</p>
+<p>Yes, we as humans are conditioned to thing in terms of a &ldquo;fork on the road&rdquo;, and
+where the <em>each way is no less real as the other</em>. This is how we miss the subtle fact
+that, <em>possiblel outcome</em> and an <em>actual outcome</em> (the <em>next step</em> being taken) live
+at very different levels of abstraction and must never be &ldquo;mixed&rdquo;.</p>
+<p>The clear separation between <em>potential</em> (or <em>possible</em>) and <em>actual</em> (taken) is the
+mark of mature thinking.</p>
+<h3 id="take-another-branch">Take another branch<a hidden class="anchor" aria-hidden="true" href="#take-another-branch">#</a></h3>
+<p>We should think of what we call an &ldquo;error&rdquo; as just a <em>signal</em> to take another
+branch (backtrack and restart).</p>
+<p>All the dramatic connotations must be removed. It is just a branch within a
+conditional expression.</p>
+<p>This branch, however, which usually leads to &ldquo;backtracking&rdquo; and to a &ldquo;restart&rdquo;
+must always be included in a &ldquo;plan&rdquo; or a <em>declarative program</em>.</p>
+<p>An error could be <em>signaled</em> in various ways, but the <em>handling</em> is uniform &ndash; just
+take (evaluate) the corresponding branch.</p>
+<p>These exact notions are behind the <code>Erlang</code> uniform strategy of error handling.
+Understanding this is the beginning of &ldquo;wisdom&rdquo;.</p>
+<h2 id="nothing-was-returned">Nothing was returned<a hidden class="anchor" aria-hidden="true" href="#nothing-was-returned">#</a></h2>
+<p>So, when nothing (meaningful) was returned, we have to evaluate a <em>corresponding
+branch</em>, which must always be present.</p>
+<p><code>None</code> or <code>Nohing</code> thus is an identity element of a <em>Monoid</em> of <em>composition (chain)
+of actions without an error occured, /yet</em>.</p>
+<p>Once the &ldquo;Nothing&rdquo; branch has been evaluated, it will just propagate along, and
+all the other branches (in a chain) will remain evaluated.</p>
+<p>Thus <em>no further steps will be taken by a process</em> along the &ldquo;happy&rdquo; path.</p>
+<h2 id="returning-nothing-is-backtracking">Returning Nothing is backtracking<a hidden class="anchor" aria-hidden="true" href="#returning-nothing-is-backtracking">#</a></h2>
+<p>When we take the &ldquo;Nothing&rdquo; branch we simply backtrack (literally, through the
+call-stack) to a function where a restart (if any) could have occur.</p>
+<p>The genius Erlang guys have noticed and generalized this <em>universal pattern</em>
+with the <em>supervision hierarchies</em>. The process &ldquo;fail&rdquo; and the failure propagaget
+to the &ldquo;supervisor&rdquo; which <em>restart</em> a new process.</p>
+<h2 id="nested-maps">Nested maps<a hidden class="anchor" aria-hidden="true" href="#nested-maps">#</a></h2>
+<p>So, we <em>nest</em> (which is the same as <em>compose</em>) the <code>map</code> function over <code>Option</code> or <code>Maybe</code>
+types.</p>
+<p>This is how we <em>compose computations which may fail</em> at any step. They have the
+common &ldquo;fail branch&rdquo;, which is of &ldquo;Nothing&rdquo; (to return).</p>
+<p><code>flatMap</code> composes <em>&ldquo;Kleisli arrows&rdquo;</em>.</p>
+<h2 id="combinators">Combinators<a hidden class="anchor" aria-hidden="true" href="#combinators">#</a></h2>
+<p>There is a small set of <em>combinators</em> that can be composed with <code>map</code> or <code>flatMap</code>.</p>
+<p>Some of these functions are <em>non-strict</em> (lazy) on its arguments, so they <em>short-circuit</em>, just
+like the <code>IF</code> <em>special form</em> does.</p>
+<p>The most familiar are <code>orElse</code> and <code>andThen</code>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/monoid/">Monoid</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/function-composition/">function composition</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/chaining/">chaining</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/pattern-matching/">pattern-matching</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/propagation/">propagation</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/error-handling/">error handling</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/erlang/">Erlang</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
