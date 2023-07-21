@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>remote</title>
+      <link>https://lngnmn2.github.io/categories/remote/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/categories/remote/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>esoteric views</title>
       <link>https://lngnmn2.github.io/categories/esoteric-views/</link>
@@ -22,15 +31,6 @@
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>remote</title>
-      <link>https://lngnmn2.github.io/categories/remote/</link>
-      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/categories/remote/</guid>
       <description></description>
     </item>
     

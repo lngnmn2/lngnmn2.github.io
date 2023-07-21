@@ -6,7 +6,16 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remote</title>
+      <link>https://lngnmn2.github.io/articles/remote/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/remote/</guid>
+      <description>Practices that work.</description>
+    </item>
+    
     <item>
       <title>Foundations</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
@@ -28,17 +37,6 @@ It was indeed &amp;ldquo;done&amp;rdquo; (right). There is nothing more to remov
       <description>The common patterns There are recurrent patterns, which has been captured in familiar &amp;ldquo;standard&amp;rdquo; abstractions.
 Monoid A Set along with a composition operation, which has an identity element.
 addition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is &amp;quot;&amp;quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.</description>
-    </item>
-    
-    <item>
-      <title>Remote</title>
-      <link>https://lngnmn2.github.io/articles/remote/</link>
-      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/articles/remote/</guid>
-      <description>Back in 80s and 90s, which, arguably, was the golden age of programming if we look at evolution of the Classic languages (Lisp and ML family), we did not have any &amp;ldquo;online&amp;rdquo; real-time constant-presence crap (except IRC, which was fun).
-All the means of communication we had back then were , in principle, text-based, off-line, /asynchronous.
-In short, we used the ancient &amp;ldquo;paradigm&amp;rdquo;, which goes back to the ancient &amp;ldquo;spiritual practices&amp;rdquo;, based on solitude, withdrawal from society, observation after taking a step back, and focused introspection.</description>
     </item>
     
     <item>
