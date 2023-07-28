@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>GNU Emacs | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, imperative, ADT, homoiconicity, embedded, DSL, Monoid">
+<meta name="description" content="  The monument and a world-heritage &#34;site&#34;.
+  ">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/emacs/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="GNU Emacs" />
+<meta property="og:description" content="  The monument and a world-heritage &#34;site&#34;.
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/emacs/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-07-28T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-07-28T14:55:05+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GNU Emacs"/>
+<meta name="twitter:description" content="  The monument and a world-heritage &#34;site&#34;.
+  "/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "GNU Emacs",
+      "item": "https://lngnmn2.github.io/articles/emacs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "GNU Emacs",
+  "name": "GNU Emacs",
+  "description": "  The monument and a world-heritage \"site\".\n  ",
+  "keywords": [
+    "emacs", "imperative", "ADT", "homoiconicity", "embedded", "DSL", "Monoid"
+  ],
+  "articleBody": "Emacs is a monumen (just like Potala palace in Lhasa) of an old-school software enginering and classic languages – it is, indeed, a world heritage site of the golden age of programming.\nIt also could be compared with the ghat complex of Varanasi, which began no one knows when and is constantly changing since then, being reshaped by the “waves” and “tides” of social dynamics.\nVisiting Emacs is like visiting one of such historic sites, and just like them, it has been re-shaped by the successions of mass-hysteria and zealous over-excitement about bullshit.\nNowadays the current mass hysteria is about threads and some ad-hoc library-based async stuff.\nAdding an ad-hoc concurrency to an imperative language will always be a failure in principle, and the Ocaml guys went through all the pains of designing a principled algebraic effects based runtime for a reason – an imperative code and concurrency simply do not match (thank you, Joe) .\nOne at least could embrace the principled approach of Clojure, and rely on actually immutable and persistent (a balanced tree-based) data structures (straightforwardly shared and garbage-collected). Yes, yes I know.\nAnyway, coming (partially) from MIT CSAIL it has been based on the right priciples and incorporates (realizes and manifests) some “big ideas” and universal notions.\nIt is a set of layered DSLs written in a dynamically typed LISP-2, which is in rurn implemented in (an imperative and unsafe) C, Just like TeX, by the way.\nEmacs is a truly dynamic system (everything could be changed at runtime, even a new procedures could be created) similar to Smalltalk, which is almost an ideal in this respect.\nIt is just a single-executable software Lisp Machine or stripped down the Genera operating system, and one can really see and feel it.\nEmacs is, indeed, an actual manifestation of the power of symbolic manipulation, at both code and data levels – the original principle of homoiconicity (everything is of the same a LIST structure made out of conses, both LISP expressions and the data). This principle gives a subtle Monoid property for all the combinator procedures, which is the actual cause behind the expressiveness of the original LISP.\nThere is a lot going on in this locus of symbolic computation and the layers upon layers of DLSs embedded in LISP. The number of “packages” is already in thousands.\nTo really understand and appreciate what one sees requires a lot of the right knowledge, but then everything is “clicks” and falls into its places.\nIt has been noticed at the times of the early LISPs that linear, tree-like and lookup-table-like data structures are enought for everything. The inspirations came from the recent discovery of the DNA structure and the resulting hype and excitement. It seems that biology also uses (the “blind” process of biological evolution at the level of molecular biology “discovered”) these fundamental “structures”.\nAnd, behold, all these could be made out of CONS’ses, where an associative list (a list of pairs, which are “improper conses”), is a “minimal” and essential lookup table (with a linear time complexity).\nIt can never be over-emphasised, that Lists and other fundamental Abstract Data Types (trees, lookup tables) are enough to implement a universal machine - an intepreter of a language with the Environment Model of evaluation (which as extruded Substitution Model).\nThis result was so excited and fundamental that MIT used to teach most of the CS courses (in Scheme) about these ideas, principles and their actual implementations. They even build a tiny (but done just right) Emacs-like editor, called /Edwin, which is included in the MIT Scheme distribution.\nThe last classic course of this great lineage (the MIT Scheme tradition) is the 2004 6.001 SICP Scheme course by Eric Grimson et all. The last book is Software Design for Flexibility by Sussman, the wizard.\nIn a dynamically but strongly typed language (with runtime checks) all these structured values could not just be arbitrary /nested (due to the fact that everything is an expression and that everything is homoiconous (of the same CONSes), but also created on-demand and modified (re-bound) at runtime.\nThese are the “fundamental building blocks” of Emacs - the fundamental data structures and at a higher level the hierarchical layered DSLs embedded in LISP.\nThe first old implementations were simple-enough to be hacked toghether by just a few people in their spare time (/excactly due to the right principles,fundamentals and “natural” proper design decisions).\nAgian, it is not about the gory details of how exactly it is implemented, but how the architecture, modularity and the embedded language ()for writing DSLs and packages) has been done just right.\nThe implementation side is actually ugly – imperative, mutable, destructively in-place updated and with the “clever” C (that no one really fully understood) under the hood.\nNo serious attempts has been taken to write a Clojure-like immutable and persistent “stdlib” as the shared Basis for all the modules, just as the SML guys did with their Basis Library or the Erlang guys did with their OTP.\nThe big, classic ideas, however, cannot be marred by the dirty impure imperative stuff. The fact that LISP is a “very-high-level” and even “programmable” programming language – one coud define one’s own control structures and even special forms (using macros) – outweights all other concerns.\nThe causes of the miracle (of classic software engineering) and the greatness of the monument are exactly these listed above, and they have to be realized and fully understood, including the Monoid part (over CONSses).\nFrom the perspective of a merely user of the system (it is by no means an editor, rather it is a single-binary Lisp OS, (just like Chomium nowadays, by the way).\nSelf-documenting\nDiscoverable\nExtensible\n(Lisp as a programmable language)\nKeyboard macros\nMacros\nDeclarative DSLs\n",
+  "wordCount" : "959",
+  "inLanguage": "en",
+  "datePublished": "2023-07-28T00:00:00+05:45",
+  "dateModified": "2023-07-28T14:55:05+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/emacs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      GNU Emacs
+    </h1>
+    <div class="post-description">
+        The monument and a world-heritage &#34;site&#34;.
+  
+    </div>
+    <div class="post-meta"><span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Emacs is a <em>monumen</em> (just like <em>Potala palace in Lhasa</em>) of an old-school software enginering and classic languages &ndash; it is, indeed, a <em>world heritage site</em> of the golden age of programming.</p>
+<p>It also could be compared with the <em>ghat</em> complex of Varanasi, which began no one knows when and is constantly changing since then, being reshaped by the &ldquo;waves&rdquo; and &ldquo;tides&rdquo; of social dynamics.</p>
+<p>Visiting Emacs is like visiting one of such historic sites, and just like them, it has been re-shaped by the successions of mass-hysteria and zealous over-excitement about bullshit.</p>
+<p>Nowadays the current mass hysteria is about threads and some <em>ad-hoc</em> library-based <em>async</em> stuff.</p>
+<p>Adding an <em>ad-hoc concurrency</em> to an imperative language will always be a failure in principle, and the Ocaml guys went through all the pains of designing a principled algebraic effects based runtime for a reason &ndash; an imperative code and concurrency simply do not match (thank you, Joe) .</p>
+<p>One at least could embrace the principled approach of Clojure, and rely on actually immutable and persistent (a balanced tree-based) data structures (straightforwardly shared and garbage-collected). Yes, yes I know.</p>
+<p>Anyway, coming (partially) from <em>MIT CSAIL</em> it has been based on the right priciples and incorporates (realizes and manifests) some &ldquo;big ideas&rdquo; and universal notions.</p>
+<p>It is a set of layered DSLs written in a <em>dynamically typed</em> LISP-2, which is in rurn implemented in (an imperative and unsafe) <code>C</code>, Just like TeX, by the way.</p>
+<p>Emacs is a truly dynamic system (everything could be changed at runtime, even a new procedures could be created) similar to <em>Smalltalk</em>, which is almost an ideal in this respect.</p>
+<p>It is just a single-executable software Lisp Machine or stripped down the Genera operating system, and one can really see and <em>feel</em> it.</p>
+<p>Emacs is, indeed, an actual manifestation of the power of <em>symbolic manipulation</em>, at both <em>code and data</em> levels &ndash; the original principle of homoiconicity (everything is of the same a LIST structure made out of conses, both LISP expressions and the data). This principle gives a subtle <em>Monoid</em> property for all the combinator procedures, which is the actual cause behind the expressiveness of the original LISP.</p>
+<p>There is <em>a lot</em> going on in this <em>locus</em> of symbolic computation and the layers upon layers of DLSs <em>embedded in LISP</em>. The number of &ldquo;packages&rdquo; is already in thousands.</p>
+<p>To really understand and appreciate what one sees requires a lot of the right
+knowledge, but then everything is &ldquo;clicks&rdquo; and falls into its places.</p>
+<p>It has been noticed at the times of the early LISPs that linear,
+tree-like and lookup-table-like data structures are enought for
+everything. The inspirations came from the recent discovery of the DNA
+structure and the resulting hype and excitement. It seems that biology
+also uses (the &ldquo;blind&rdquo; process of biological evolution at the level of
+molecular biology &ldquo;discovered&rdquo;) these fundamental &ldquo;structures&rdquo;.</p>
+<p>And, behold, all these could be made out of <em>CONS&rsquo;ses</em>, where an
+<em>associative list</em> (a list of pairs, which are &ldquo;improper conses&rdquo;), is a
+&ldquo;minimal&rdquo; and essential <em>lookup table</em> (with a linear time complexity).</p>
+<p>It can never be over-emphasised, that Lists and other fundamental
+Abstract Data Types (trees, lookup tables) are enough to implement a
+<em>universal machine</em> - an <em>intepreter</em> of a language with the <em>Environment
+Model of evaluation</em> (which as extruded Substitution Model).</p>
+<p>This result was so excited and <em>fundamental</em> that MIT used to teach most
+of the CS courses (in Scheme) about these ideas, principles and their
+actual implementations. They even build a tiny (but done just right)
+Emacs-like editor, called <em>/Edwin</em>, which is included in the MIT Scheme
+distribution.</p>
+<p>The last classic course of this great lineage (the MIT Scheme tradition)
+is the 2004 6.001 SICP Scheme course by <em>Eric Grimson</em> et all. The last
+book is <em>Software Design for Flexibility</em> by Sussman, the wizard.</p>
+<p>In a dynamically but strongly typed language (with runtime checks) all
+these <em>structured values</em> could not just be arbitrary <em>/nested</em> (due to the
+fact that everything is an <em>expression</em> and that everything is
+<em>homoiconous</em> (of the same CONSes), but also created on-demand and
+modified (re-bound) at runtime.</p>
+<p>These are the &ldquo;fundamental building blocks&rdquo; of Emacs - the fundamental
+data structures and at a higher level the hierarchical layered DSLs embedded in LISP.</p>
+<p>The first old implementations were simple-enough to be hacked toghether
+by just a few people in their spare time (<em>/excactly</em> due to the right
+principles,fundamentals and &ldquo;natural&rdquo; proper design decisions).</p>
+<p>Agian, it is not about the gory details of how exactly it is
+implemented, but how the architecture, modularity and the embedded language ()for
+writing DSLs and packages) has been done just right.</p>
+<p>The implementation side is actually ugly &ndash; imperative, mutable,
+destructively in-place updated and with the &ldquo;clever&rdquo; <code>C</code> (that no one really
+fully understood) under the hood.</p>
+<p>No serious attempts has been taken to write a <em>Clojure</em>-like <em>immutable
+and persistent</em> &ldquo;stdlib&rdquo; as the shared Basis for all the modules, just as
+the SML guys did with their <em>Basis Library</em> or the Erlang guys did with
+their OTP.</p>
+<p>The big, classic ideas, however, cannot be marred by the dirty impure
+imperative stuff. The fact that LISP is a &ldquo;very-high-level&rdquo; and even
+&ldquo;programmable&rdquo; programming language &ndash; one coud define one&rsquo;s own <em>control
+structures</em> and even <em>special forms</em> (using macros) &ndash; outweights all other
+concerns.</p>
+<p>The <em>causes</em> of the miracle (of classic software engineering) and the
+greatness of the monument are exactly these listed above, and they have
+to be realized and fully understood, including the Monoid part (over CONSses).</p>
+<p>From the perspective of a merely user of the system (it is by no means
+an editor, rather it is a single-binary Lisp OS, (just like Chomium nowadays, by
+the way).</p>
+<p>Self-documenting</p>
+<p>Discoverable</p>
+<p>Extensible</p>
+<p>(Lisp as a programmable language)</p>
+<p>Keyboard macros</p>
+<p>Macros</p>
+<p>Declarative DSLs</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/imperative/">imperative</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/homoiconicity/">homoiconicity</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded/">embedded</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/monoid/">Monoid</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

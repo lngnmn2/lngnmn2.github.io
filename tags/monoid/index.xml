@@ -6,7 +6,17 @@
     <description>Recent content in Monoid on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/monoid/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/monoid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNU Emacs</title>
+      <link>https://lngnmn2.github.io/articles/emacs/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
+    </item>
+    
     <item>
       <title>The recurring patterns captured as a Monoid</title>
       <link>https://lngnmn2.github.io/articles/monoids/</link>

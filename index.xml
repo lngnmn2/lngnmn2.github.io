@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
       <link>https://lngnmn2.github.io/about/</link>
@@ -18,6 +18,16 @@ I wrote a bunch of articles by an organ in the first person.
 https://schiptsov.github.io/
 My HN footprint My relationships with https://news.ycombinator.com/ was rather stormy.
 I would say that I have graduated from it, starting as a naive idealist on the best (at the very beginning) free English-media technologist site, and ended up as a bitter dissident from the heavily policed and strictly moderated Chud&amp;rsquo;s safe space.</description>
+    </item>
+    
+    <item>
+      <title>GNU Emacs</title>
+      <link>https://lngnmn2.github.io/articles/emacs/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
     </item>
     
     <item>

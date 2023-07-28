@@ -5,19 +5,52 @@
     <loc>https://lngnmn2.github.io/about/</loc>
     <lastmod>2023-07-13T18:29:13+05:45</lastmod>
   </url><url>
+    <loc>https://lngnmn2.github.io/tags/adt/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
     <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2023-07-23T18:25:27+05:45</lastmod>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/dsl/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/emacs/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/emacs/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/embedded/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/emacs/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/homoiconicity/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/imperative/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/monoid/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/programming/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2023-07-28T14:55:05+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/life-itself/</loc>
     <lastmod>2023-07-23T18:25:27+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/categories/</loc>
-    <lastmod>2023-07-23T18:25:27+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/categories/esoteric/</loc>
-    <lastmod>2023-07-23T18:25:27+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/</loc>
     <lastmod>2023-07-23T18:25:27+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/remote/</loc>
@@ -27,9 +60,6 @@
     <lastmod>2023-07-21T18:06:24+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/remote/</loc>
-    <lastmod>2023-07-21T18:06:24+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
     <lastmod>2023-07-21T18:06:24+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/wfh/</loc>
@@ -44,9 +74,6 @@
     <loc>https://lngnmn2.github.io/articles/foundations/</loc>
     <lastmod>2023-07-19T08:28:41+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/categories/programming/</loc>
-    <lastmod>2023-07-19T08:28:41+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/chaining/</loc>
     <lastmod>2023-07-17T22:51:47+05:45</lastmod>
   </url><url>
@@ -59,9 +86,6 @@
     <loc>https://lngnmn2.github.io/tags/function-composition/</loc>
     <lastmod>2023-07-17T22:51:47+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/tags/monoid/</loc>
-    <lastmod>2023-07-17T22:51:47+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/pattern-matching/</loc>
     <lastmod>2023-07-17T22:51:47+05:45</lastmod>
   </url><url>
@@ -71,16 +95,10 @@
     <loc>https://lngnmn2.github.io/articles/monoids/</loc>
     <lastmod>2023-07-17T22:51:47+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/tags/adt/</loc>
-    <lastmod>2023-07-15T19:45:06+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/borrow-checker/</loc>
     <lastmod>2023-07-15T19:45:06+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/borrowing/</loc>
-    <lastmod>2023-07-15T19:45:06+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/imperative/</loc>
     <lastmod>2023-07-15T19:45:06+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/ownership/</loc>
