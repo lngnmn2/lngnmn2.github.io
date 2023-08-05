@@ -6,7 +6,19 @@
     <description>Recent content in foundations on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/foundations/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/foundations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why S and K are enough.</title>
+      <link>https://lngnmn2.github.io/articles/sk/</link>
+      <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/sk/</guid>
+      <description>DESCRIPTION: Oops, I did it again.
+The hack The word &amp;ldquo;implies&amp;rdquo; and corresponding arrows are grossly overloaded and have more than one subtle but distinct meanings.
+We will read and interpret the &amp;ldquo;arrows&amp;rdquo; (and the word &amp;ldquo;implies&amp;rdquo;) from different formalisms differently (as an implication in terms of necessity and sufficiency and as a single discrete step of causality).
+We will put the universal notion of an environment (and the corresponding Γ abstraction) from obscurity to the center.</description>
+    </item>
+    
     <item>
       <title>Foundations</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
