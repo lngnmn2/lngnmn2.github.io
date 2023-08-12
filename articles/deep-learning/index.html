@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Deep Learning | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="machine learning, deep learning, neural network, patrial derivative">
+<meta name="description" content="Understanding the undrlying universal principles.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/deep-learning/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Deep Learning" />
+<meta property="og:description" content="Understanding the undrlying universal principles." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/deep-learning/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-08-12T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-08-12T10:36:59+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deep Learning"/>
+<meta name="twitter:description" content="Understanding the undrlying universal principles."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Deep Learning",
+      "item": "https://lngnmn2.github.io/articles/deep-learning/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Deep Learning",
+  "name": "Deep Learning",
+  "description": "Understanding the undrlying universal principles.",
+  "keywords": [
+    "machine learning", "deep learning", "neural network", "patrial derivative"
+  ],
+  "articleBody": "Supervised\nLearning a representation by trial-and-error (literally) Supervised learning from given “the right answers” Having an implicit feed-back loop (“the right answers”) No explicit programming (back propagation) Representation can be examined and used (updated) Optimizations of the structure of a network (“topology”) Reinforcement\nReinforcement is learning by doing (games, sports) Representation gets refined with each “experience” Implicit feedback loop by evaluating performace Recurrent for linear structure’s (induction) Related to the Bayesian “beliefs”. Representations\nWe “learn” updated terms of pure mathematical expressions Mathematical expressions are represented as an AST an AST can be manipulated (a well-understood problem) Symbolic differentiation since early LISPs Computing derivatives packaged as libraries (autograds) Mutable structures (no persistence). Deep learning enables data-driven decisions by identifying and extracting patterns from large datasets that accurately map from sets of complex inputs to good decision outcomes.\nThis implies that the actual, non-imaginary signal (the set of complex inputs) must be “out there”.\nA data-set is a table (or a set of relations), each row is a single “example”, each column is a distinct “feature” or a relation (like a ratio) between features.\nThe principle is that the data (in a table) must be consistent.\nAn algorithm defines a process (as a declarative description or a “template”).\nA function is a deterministic mapping (can be thought off as a “table”) which corresponds to some relation between the values in its domain and its range.\n\\[\\x \\mapsto 2x + 1\\]\nIs a mapping (\\[\\forall x\\]) and a particular relation (multiply by 2 and then add 1).\nMost of the time we want to approximate (to learn a representation of) functions of multiple (many) variables – big tables with many related features.\nThis is the whole point - what is difficult to be explicitly programmed can be approximated (“learned” as a “structure”) by a generalized set of algorithms.\nThe goal is a particular set of “parameters” and “weights” in a “learned” representation of a “network” of a particular shape (“architecture”).\nThe shape of a network has the same number of inputs and an output as the function (set of mappings or “arrows”) we want to approximate (learn a representation of).\nIt is worth noting this abstract correspondence - a “set of arrows” being approximated by a “network of arrows” (a directed graph).\nAs the inputs “flow through the network” and the outputs come out of the “black box” – always the same for the same inputs – this arrangement, just like a function, can be thought off as a “mechanical machine”.\nThe fundamental difference is that we do not define the “function’s body” expression ahead of the time, but gradually improve (“learn”) its representation inside a “black box” by feeding the data and the “right answers” to a learning algorightm.\nThere are lots of analogies of this kind of a process, ranging from a bunch of people doing something by trial-and-error (trying to come up with a robust and efficient aircraft engine) to a whole process of evolution, which, in a sense, “learns” stable molecular arrangements (of enzymes, say, and everything else).\nThis is the right understanding. Notice that the “inputs” (the molecules and ions) has to be “stable”, as the physical (electo-chemical) properties of their combinations (“relations among them”).\nThis is the universal principle – the “building blocks” has to be stable and actually “out there” (non-imaginable).\nThe “mechanics” Each “neuron” is a function (a mapping from a set of inputs to an output) – a mathematical expression. It is represented inside a computer as an abstract syntax tree.\nAn expression is a syntactic closure, which captures all its bound variables and constants (if any) as the “leafs” of an AST.\nThe process of back-propagation (defined by a particular algorithm) traverses the whole network and modifies (updates) the values of these bound variables by computing the partial derivatives for each variable recursively.\nAll the “operators” has to be differentiable (do a partial derivative can be taken).\nSo it is a learning algorithm that updates the “terms” of a vastly complex, deeply nested pure mathematical expression.\nAnd, viewed as a graph, it is a “bunch of arrows between simple functions (“neurons”) which are lexical closures that capture its bound variables”. There is no “free variables” in this context.\nSo what we actually “learn” is this set of “weights” inside these “closures”, which represent the terms of pure mathematical expressions – mappings from inputs to an output.\nDifferentiable Now what is differentiable? Two or more “arrows come together” (this is a universal shape or a “pattern” of multiple causality, of a weighted sum, etc, etc.), and a “contribution” (a “weight” or a “steepness of a slope”) of each “arrow” can be determined.\nProgramming The ability to zoom through the layers (of a hierarchy) of abstractions (from general to specific and bottom-up) and to switch between an abstraction and its representation is what makes a good programmer. It is not “knowing” some PHP or Javascript.\n",
+  "wordCount" : "820",
+  "inLanguage": "en",
+  "datePublished": "2023-08-12T00:00:00+05:45",
+  "dateModified": "2023-08-12T10:36:59+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/deep-learning/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Deep Learning
+    </h1>
+    <div class="post-description">
+      Understanding the undrlying universal principles.
+    </div>
+    <div class="post-meta"><span title='2023-08-12 00:00:00 +0545 +0545'>August 12, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Supervised</p>
+<ul>
+<li>Learning a representation by trial-and-error (literally)</li>
+<li>Supervised learning from given &ldquo;the right answers&rdquo;</li>
+<li>Having an implicit <em>feed-back loop</em> (&ldquo;the right answers&rdquo;)</li>
+<li>No explicit programming (<em>back propagation</em>)</li>
+<li><em>Representation</em> can be examined and used (updated)</li>
+<li>Optimizations of the structure of a network (&ldquo;topology&rdquo;)</li>
+</ul>
+<p>Reinforcement</p>
+<ul>
+<li>Reinforcement is <em>learning by doing</em> (games, sports)</li>
+<li>Representation gets <em>refined</em> with each &ldquo;experience&rdquo;</li>
+<li>Implicit feedback loop by <em>evaluating performace</em></li>
+<li>Recurrent for linear structure&rsquo;s (induction)</li>
+<li>Related to the Bayesian &ldquo;beliefs&rdquo;.</li>
+</ul>
+<p>Representations</p>
+<ul>
+<li>We &ldquo;learn&rdquo; updated terms of <em>pure</em> mathematical expressions</li>
+<li>Mathematical expressions are represented as an AST</li>
+<li>an AST can be manipulated (a well-understood problem)</li>
+<li><em>Symbolic differentiation</em> since early LISPs</li>
+<li>Computing derivatives packaged as libraries (<em>autograds</em>)</li>
+<li>Mutable structures (no persistence).</li>
+</ul>
+<p>Deep learning enables <em>data-driven</em> decisions by <em>identifying and extracting patterns</em> from large datasets that <em>accurately map</em> from sets of complex inputs to good decision outcomes.</p>
+<p>This implies that the actual, non-imaginary signal (the set of complex inputs) must be &ldquo;out there&rdquo;.</p>
+<p>A data-set is a <em>table</em> (or a set of relations), each row is a single &ldquo;example&rdquo;, each column is a distinct &ldquo;feature&rdquo; or a relation (like a ratio) between features.</p>
+<p>The principle is that the data (in a table) must be <em>consistent</em>.</p>
+<p>An algorithm defines a process (as a declarative description or a <em>&ldquo;template&rdquo;</em>).</p>
+<p>A function is a <em>deterministic mapping</em> (can be thought off as a <em>&ldquo;table&rdquo;</em>) which corresponds to some <em>relation</em> between the values in its <em>domain</em> and its <em>range</em>.</p>
+<p>\[\x \mapsto 2x + 1\]</p>
+<p>Is a <em>mapping</em> (\[\forall x\]) and a particular <em>relation</em> (multiply by 2 and then add 1).</p>
+<p>Most of the time we want to approximate (to learn a representation of) functions of multiple (many) variables &ndash; big tables with <em>many related features</em>.</p>
+<p>This is the whole point - what is difficult to be explicitly programmed can be approximated (&ldquo;learned&rdquo; as a &ldquo;structure&rdquo;) by a generalized set of algorithms.</p>
+<p>The goal is a particular set of &ldquo;parameters&rdquo; and &ldquo;weights&rdquo; in a &ldquo;learned&rdquo; <em>representation</em> of a &ldquo;network&rdquo; of a particular <em>shape</em> (&ldquo;architecture&rdquo;).</p>
+<p>The <em>shape</em> of a network has the same number of inputs and an output as the <em>function</em> (set of mappings or &ldquo;arrows&rdquo;) we want to approximate (learn a representation of).</p>
+<p>It is worth noting this abstract correspondence - a &ldquo;set of arrows&rdquo; being approximated by a &ldquo;network of arrows&rdquo; (a directed graph).</p>
+<p>As the inputs &ldquo;flow through the network&rdquo; and the outputs come out of the &ldquo;black box&rdquo; &ndash;  always the same for the same inputs &ndash; this <em>arrangement</em>, just like a function, can be thought off as a &ldquo;mechanical machine&rdquo;.</p>
+<p>The fundamental difference is that we do not define the &ldquo;function&rsquo;s body&rdquo; expression ahead of the time, but gradually improve (&ldquo;learn&rdquo;) its <em>representation</em> inside a &ldquo;black box&rdquo; by feeding the data and the &ldquo;right answers&rdquo; to a <em>learning algorightm</em>.</p>
+<p>There are lots of analogies of this kind of a process, ranging from a bunch of people doing something by trial-and-error (trying to come up with a robust and efficient aircraft engine) to a whole process of evolution, which, in a sense, &ldquo;learns&rdquo; stable molecular arrangements (of enzymes, say, and everything else).</p>
+<p>This is the right understanding. Notice that the &ldquo;inputs&rdquo; (the molecules and ions) has to be &ldquo;stable&rdquo;, as the physical (electo-chemical) properties of their combinations (&ldquo;relations among them&rdquo;).</p>
+<p>This is the universal principle &ndash; the &ldquo;building blocks&rdquo; has to be stable and actually &ldquo;out there&rdquo; (non-imaginable).</p>
+<h2 id="the-mechanics">The &ldquo;mechanics&rdquo;<a hidden class="anchor" aria-hidden="true" href="#the-mechanics">#</a></h2>
+<p>Each &ldquo;neuron&rdquo; is a function (a mapping from a set of inputs to an output) &ndash; a <em>mathematical expression</em>. It is represented inside a computer as an <em>abstract syntax tree</em>.</p>
+<p>An expression is a <em>syntactic closure</em>, which captures all its <em>bound variables</em> and constants (if any) as the &ldquo;leafs&rdquo; of an AST.</p>
+<p>The process of back-propagation (defined by a particular algorithm) traverses the whole network and modifies (updates) the values of these bound variables by computing the partial derivatives for each variable <em>recursively</em>.</p>
+<p>All the &ldquo;operators&rdquo; has to be <em>differentiable</em> (do a partial derivative can be taken).</p>
+<p>So it is a <em>learning algorithm</em> that updates the &ldquo;terms&rdquo; of a vastly complex, deeply nested pure mathematical expression.</p>
+<p>And, viewed as a graph, it is a &ldquo;bunch of arrows between simple functions (&ldquo;neurons&rdquo;) which are <em>lexical closures</em> that capture its bound variables&rdquo;. There is no &ldquo;free variables&rdquo; in this context.</p>
+<p>So what we actually &ldquo;learn&rdquo; is this set of &ldquo;weights&rdquo; inside these &ldquo;closures&rdquo;, which <em>represent the terms of pure mathematical expressions &ndash; mappings from inputs to an output</em>.</p>
+<h2 id="differentiable">Differentiable<a hidden class="anchor" aria-hidden="true" href="#differentiable">#</a></h2>
+<p>Now what is <em>differentiable</em>? Two or more &ldquo;arrows come together&rdquo; (this is a universal  <em>shape</em> or a &ldquo;pattern&rdquo; of multiple causality, of a weighted sum, etc, etc.), and a &ldquo;contribution&rdquo; (a &ldquo;weight&rdquo; or a &ldquo;steepness of a slope&rdquo;) of each &ldquo;arrow&rdquo; can be determined.</p>
+<h2 id="programming">Programming<a hidden class="anchor" aria-hidden="true" href="#programming">#</a></h2>
+<p>The ability to zoom through the layers (of a hierarchy) of abstractions (from general to specific and bottom-up) and to switch between an abstraction and its representation is what makes a good programmer. It is not &ldquo;knowing&rdquo; some PHP or Javascript.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/machine-learning/">machine learning</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/deep-learning/">deep learning</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/neural-network/">neural network</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/patrial-derivative/">patrial derivative</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

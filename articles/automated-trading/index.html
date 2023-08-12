@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Writing a semi-automated trading system | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="trading system, automation, functional programming">
+<meta name="description" content="AUTHOR: &lt;lngnmn2@yahoo.com&gt;
+Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
+Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
+Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).">
+<meta name="author" content="Ln Gnmn">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/automated-trading/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Writing a semi-automated trading system" />
+<meta property="og:description" content="AUTHOR: &lt;lngnmn2@yahoo.com&gt;
+Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
+Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
+Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/automated-trading/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-07-28T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-08-12T10:38:27+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Writing a semi-automated trading system"/>
+<meta name="twitter:description" content="AUTHOR: &lt;lngnmn2@yahoo.com&gt;
+Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
+Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
+Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code)."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Writing a semi-automated trading system",
+      "item": "https://lngnmn2.github.io/articles/automated-trading/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Writing a semi-automated trading system",
+  "name": "Writing a semi-automated trading system",
+  "description": "AUTHOR: \u0026lt;lngnmn2@yahoo.com\u0026gt;\nWriting a semi-automated trading system is easy - just ask John Carmack to write it down for you.\nBefore that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.\nMaybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).",
+  "keywords": [
+    "trading system", "automation", "functional programming"
+  ],
+  "articleBody": "AUTHOR: Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.\nBefore that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.\nMaybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).\nDone.\nSo, you do not have enough money to hire Carmack and Eveans? Then you have to do it all yourself. The only problem is you have to be an above average trader with actual experience, a domain analyst and model maker, a mathematician and a functional programmer at the same time, and a technical writer and a software tester too.\nThe “hire the top tallent to do things which you do not fully understand” meme, according to the tradition, goes, through Bell Labs and Los Alamos, all the way back to Henry Ford, but it seems that the ancient Indians knew it too.\nSo, lets do it all by yourself. What’s the problem?\nUnderstanding the domain The most difficult part of a good programming is to know what to write and why. The common scenario is that programmers write low-level unmaintainable crap according to how they understand the domain, which is usually even worse (more perverse) than amateur newbies.\nYou have to have some serious personal trading experience – the more painful and full of stupid errors – the better. Then, and only then, you will realize that almost everything you hear and read is nonsense, but some aspects are indeed crucial.\nThis experience will allow you to correctly “call bullshit” in what you read in the books and on public forums, which all are full of shit to the brim.\nThe skill is to extract the actual underlying principles by observing (and generalizing from) recurring patterns on the charts, while correctly mapping (associating) them to the actual social causes – events, current sentiments, memes and other social dynamics.\nSometimes the causes are market actions of institutions and malicious actors trying to manipulate the prince, but these actions are still within the current social environment (sentiments).\nThe main task, thus, is to extract the underlying principles (which describe the actual causality) from the commonly used idioms and metaphors (which codify the knowledge gained from experience of thousands of individuals).\n“buy the dip, to ze moon! 100k EOY” “fuck me, I have bought the top” “he sold the bottom, LMAO” “stoploses? never heard of ’em” catching the falling knife I am FOMOing into XXX These are examples of actual sentences which contain the knowledge.\nThe entities One has to extract, identify and formally define (with a precise mathematical specification) every involved entity, including “abstract concepts”, which people actually mention and use.\nThese are, as in any domain-specific language, “things” and “actions” – nouns and verbs, and there are deep hierarchies and layers of these.\nCommunication with an exchange (placing Orders) is a sub-language (and a sub-domain) in itself, and goes from high-level “buy” and “sell” order down to the underlying HTTP headers and to the entire RESTful protocol which an exchange public API provides.\nThe goal is to have a dictionary (a wiki) which defines all the used vocabulary, and zooms through the layers of complexity.\nPartitioning Every domain (an abstract “space”) is implicitly partitioned into distinct “compartments”, reflecting the universal “architecture of complexity” – a hierarchy of nested layers, partitioned by abstraction barriers.\nIn trading your Orders (which may or may not be filled) and the resulting open Positions are in its own “compartment”, while your trading Account is in another.\nEverything related to the analysis if the Candles (market data) should live in its own separate subsystem, so is the communication API at a much lower level of abstraction.\nThe key is to stay at he highest level of abstraction and to model everything “just right” at this conceptual level. This, basically, has an one-to-one correspondence with the actions a person performs and the reasoning behind them.\nThe partitions will be “natural”, along the “delegation” boundaries (and person-to-person “interfaces”). One has to have a sketch (a picture) of the system with partitioned into distinct sub-systems.\nHigh-level prototyping Good programming begins with an exploratory, rapid high-level prototyping (in an interactive high-level language like LISP). Two times high-level here is not an accident. The purpose is to check, validate (and correct) our naive assumptions and expectations early.\nThere is a quote from a great person: #+BEGIN_QUITE What makes a good programmer? It is a matter of efﬁciency over the entire production of a program. The key is to reduce wasted effort at each stage.\nThings that can help include thinking through your implementation before you start coding, coding in a way that eliminates errors before you test, doing rigorous testing so that errors are found early, and paying careful attention to modularity so that when errors are discovered, they can be corrected with minimal impact on the program as a whole. #+END_QUOTE\nModules Each entity (or a concept) has to have its own software module which represents and implements it. This is where we go beyond abstract mathematics (of Sets and Relations) to the actual Programming.\nAbstraction and Modularity together is the true essence of programming.\nAbstraction means how we define (the behavior) and how we interact with (interfaces) our entities, NOT how we actually represent and implement them – this is another, clearly separate topic.\nData Types At this level of abstraction each well-defined concept has to have its own algebraic data type (in a corresponding module).\nThe key point is that data-abstractions must non-leaking – completely opaque, “black-box” abstractions. Only the exported public interface (an API) is what is visible to the clients (at the “use-site”).\nAgain, this is the most important point in all programming - to establish proper “abstract” public interfaces, so the code is being partitioned along with these well-defined, non-leaking abstraction barriers.\nImplementations There are, of course, a mesh of relations between individual types and whole hidden hierarchies at the “implementation details” level.\nOnce we have a set up proper abstraction barriers (by exporting public interfaces) we could have more than one representation for every data-abstraction and more than one corresponding implementation, which could be safely changed and updated locally, without affection, leave alone breaking, anything else in the rest of the system.\nThis is the main principle of Modularity in programming, and this, of course, corresponds to ability to replace a faulty part of an assembly in our everyday life, or replacing a faulty protein in a cell biology.\nTesting of assumptions and expectations Languages Ideally, we have to use the pure functional language Haskell (and sometimes Coq), but very few people can write a proper, non-bullshit Haskell, like in the books of Richard Bird. 99% of public Haskell code is an utter crap by unqualified, attention-seeking Chuds.\nThis is the most pragmatic decisions, because what we will obtain is a written down, executable rigorous formalism of our problem domain in a pure system of logic (System-F Omega).\nThink of writing an executable mathematics or logic – things that people do with the modern proof-assistants.\nThe efficiency concerns of execution (running) of the resulting formalism is absolutely irrelevant here. It will be good-enough to place Orders and to track the open Positions.\nAt least it has to be a mostly-functional, statically typed language, like Ocaml, with simple well-defined semantics (and evaluation rules) which contain no hidden imperative mutable state.\nTruly immutable and persistent data structures (as of Clojure) is the main criteria.\nAI Deep learning has two fundamental properties\nIt can approximate any computable function\nwithout being explicitly programmed\nNotice the word “function”. This implies that the domain may even be infinite, but it has to be fixed.\nIt also implies an injection or surjection, which restricts what can be actually “learned”.\nAgain, the domain must be fixed (immutable), like a Set of numbers, and, in general, the relations between variables has to be “stable” (persistent).\nThe key mathematical principle is the back-propagation algorithm, which updates the weights by calculating a partial derivative, which is a universal way.\nThe simple and straightforward optimization algorithms, such as gradient descent, can also be easily traced back to reality.\nA valid intuitive metaphor is that we “learn” a “surface” which will match (will cover, up to the last wrinkle) the whole actual Himalaya.\nOne more time (it cannot be over-emphasized) arbitrary inputs to a learning algorithm will result in “learning” an utter bullshit.\nMost of currently used systems feed it with wrong domains and git “hallucinations” as output.\n",
+  "wordCount" : "1459",
+  "inLanguage": "en",
+  "datePublished": "2023-07-28T00:00:00+05:45",
+  "dateModified": "2023-08-12T10:38:27+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "Ln Gnmn"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/automated-trading/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Writing a semi-automated trading system
+    </h1>
+    <div class="post-meta"><span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;Ln Gnmn
+
+</div>
+  </header> 
+  <div class="post-content"><p>AUTHOR: &lt;lngnmn2@yahoo.com&gt;</p>
+<p>Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.</p>
+<p>Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.</p>
+<p>Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).</p>
+<p>Done.</p>
+<p>So, you do not have enough money to hire Carmack and Eveans? Then you have to do it all yourself. The only problem is you have to be an above average <em>trader with actual experience</em>, a domain analyst and model maker, a mathematician and a functional programmer at the same time, and a technical writer and a software tester too.</p>
+<p>The <em>&ldquo;hire the top tallent to do things which you do not fully understand&rdquo;</em> meme, according to the tradition, goes, through Bell Labs and Los Alamos, all the way back to Henry Ford, but it seems that the ancient Indians knew it too.</p>
+<p>So, lets do it all by yourself. What&rsquo;s the problem?</p>
+<h2 id="understanding-the-domain">Understanding the domain<a hidden class="anchor" aria-hidden="true" href="#understanding-the-domain">#</a></h2>
+<p>The most difficult part of a good programming is to know what to write and why. The common scenario is that programmers write low-level unmaintainable crap according to how they understand the domain, which is usually even worse (more perverse) than amateur newbies.</p>
+<p>You have to have some serious personal trading experience &ndash; the more painful and full of stupid errors &ndash; the better. Then, and only then, you will realize that almost everything you hear and read is nonsense, but some aspects are indeed crucial.</p>
+<p>This experience  will allow you to correctly &ldquo;call bullshit&rdquo; in what you read in the books and on public forums, which all are full of shit to the brim.</p>
+<p>The skill is to extract the actual underlying principles by observing (and generalizing from) recurring patterns on the charts, while correctly mapping (associating) them to the actual social causes &ndash; events, current sentiments, memes and  other social dynamics.</p>
+<p>Sometimes the causes are market actions of institutions and malicious actors trying to manipulate the prince, but these actions are still within the current social environment (sentiments).</p>
+<p>The main task, thus, is to extract the underlying principles (which describe the actual causality) from the commonly used idioms and metaphors (which codify the knowledge gained from experience of thousands of individuals).</p>
+<ul>
+<li>&ldquo;buy the dip, to ze moon! 100k EOY&rdquo;</li>
+<li>&ldquo;fuck me, I have bought the top&rdquo;</li>
+<li>&ldquo;he sold the bottom, LMAO&rdquo;</li>
+<li>&ldquo;stoploses? never heard of &rsquo;em&rdquo;</li>
+<li>catching the falling knife</li>
+<li>I am FOMOing into XXX</li>
+</ul>
+<p>These are examples of actual sentences which contain the knowledge.</p>
+<h3 id="the-entities">The entities<a hidden class="anchor" aria-hidden="true" href="#the-entities">#</a></h3>
+<p>One has to extract, identify and formally define (with a precise mathematical specification) every involved entity, including &ldquo;abstract concepts&rdquo;, which people actually mention and use.</p>
+<p>These are, as in any <em>domain-specific language</em>, &ldquo;things&rdquo; and &ldquo;actions&rdquo; &ndash; nouns and verbs, and there are deep hierarchies and layers of these.</p>
+<p>Communication with an exchange (placing <code>Orders</code>) is a sub-language (and a sub-domain) in itself, and goes from high-level &ldquo;buy&rdquo; and &ldquo;sell&rdquo; order down to the underlying HTTP headers and to the entire RESTful protocol which an exchange public API provides.</p>
+<p>The goal is to have a dictionary (a wiki) which defines all the used vocabulary, and zooms through the layers of complexity.</p>
+<h3 id="partitioning">Partitioning<a hidden class="anchor" aria-hidden="true" href="#partitioning">#</a></h3>
+<p>Every domain (an abstract &ldquo;space&rdquo;) is implicitly partitioned into distinct &ldquo;compartments&rdquo;, reflecting the universal &ldquo;architecture of complexity&rdquo; &ndash; a hierarchy of nested layers, partitioned by abstraction barriers.</p>
+<p>In trading your <code>Orders</code> (which may or may not be filled) and the resulting open <code>Positions</code> are in its own &ldquo;compartment&rdquo;, while your trading <code>Account</code> is in another.</p>
+<p>Everything related to the analysis if the <code>Candles</code> (market data) should live in its own separate subsystem, so is the communication API at a much lower level of abstraction.</p>
+<p>The key is to stay at he highest level of abstraction and to model everything &ldquo;just right&rdquo; at this conceptual level. This, basically, has an one-to-one correspondence with the actions a person performs and the reasoning behind them.</p>
+<p>The partitions will be &ldquo;natural&rdquo;, along the &ldquo;delegation&rdquo; boundaries (and person-to-person &ldquo;interfaces&rdquo;). One has to have a sketch (a picture) of the system with partitioned into distinct sub-systems.</p>
+<h2 id="high-level-prototyping">High-level prototyping<a hidden class="anchor" aria-hidden="true" href="#high-level-prototyping">#</a></h2>
+<p>Good programming begins with an exploratory, rapid high-level prototyping (in an interactive high-level language like LISP). Two times high-level here is not an accident. The purpose is to check, validate (and correct) our naive assumptions and expectations <em>early</em>.</p>
+<p>There is a quote from a great person:
+#+BEGIN_QUITE
+What makes a good programmer? It is a matter of efﬁciency over the entire
+production of a program. The key is to reduce wasted effort at each stage.</p>
+<p>Things that can help include thinking through your implementation before
+you start coding, coding in a way that eliminates errors before you test, doing
+rigorous testing so that errors are found early, and paying careful attention
+to modularity so that when errors are discovered, they can be corrected with
+minimal impact on the program as a whole.
+#+END_QUOTE</p>
+<h3 id="modules">Modules<a hidden class="anchor" aria-hidden="true" href="#modules">#</a></h3>
+<p>Each entity (or a concept) has to have its own software module which <em>represents</em> and  <em>implements</em> it. This is where we go beyond abstract mathematics (of Sets and Relations) to the actual Programming.</p>
+<p><em>Abstraction and Modularity</em> together is the true essence of programming.</p>
+<p>Abstraction means how we define (the behavior) and how we interact with (interfaces) our entities, NOT how we actually represent and implement them &ndash; this is another, clearly separate topic.</p>
+<h3 id="data-types">Data Types<a hidden class="anchor" aria-hidden="true" href="#data-types">#</a></h3>
+<p>At this level of abstraction each well-defined concept has to have its own algebraic data type (in a corresponding module).</p>
+<p>The key point is that <em>data-abstractions</em> must <em>non-leaking</em> &ndash; completely opaque, &ldquo;black-box&rdquo; abstractions. Only the exported public interface (an API) is what is visible to the clients (at the &ldquo;use-site&rdquo;).</p>
+<p>Again, this is the most important point in all programming - to establish proper &ldquo;abstract&rdquo; public interfaces, so the code is being <em>partitioned</em> along with these well-defined, non-leaking <em>abstraction barriers</em>.</p>
+<h3 id="implementations">Implementations<a hidden class="anchor" aria-hidden="true" href="#implementations">#</a></h3>
+<p>There are, of course, a mesh of relations between individual types and whole hidden hierarchies at the &ldquo;implementation details&rdquo; level.</p>
+<p>Once we have a set up proper <em>abstraction barriers</em> (by exporting public interfaces) we could have more than one representation for every data-abstraction and more than one corresponding implementation, which could be safely changed and updated <em>locally</em>, without affection, leave alone breaking, anything else in the rest of the system.</p>
+<p>This is the main principle of Modularity in programming, and this, of course, corresponds to ability to replace a faulty part of an assembly in our everyday life, or replacing a faulty protein in a cell biology.</p>
+<h2 id="testing-of-assumptions-and-expectations">Testing of assumptions and expectations<a hidden class="anchor" aria-hidden="true" href="#testing-of-assumptions-and-expectations">#</a></h2>
+<h2 id="languages">Languages<a hidden class="anchor" aria-hidden="true" href="#languages">#</a></h2>
+<p>Ideally, we have to use the pure functional language <code>Haskell</code> (and sometimes <code>Coq</code>), but very few people can write a proper, non-bullshit Haskell, like in the books of Richard Bird. 99% of public Haskell code is an utter crap by unqualified, attention-seeking Chuds.</p>
+<p>This is the most pragmatic decisions, because what we will obtain is a written down, <em>executable</em> rigorous formalism of our problem domain in a pure system of logic (System-F Omega).</p>
+<p>Think of writing an executable mathematics or logic &ndash; things that people do with the modern proof-assistants.</p>
+<p>The efficiency concerns of <em>execution</em> (running) of the resulting formalism is absolutely irrelevant here. It will be good-enough to place <code>Orders</code> and to track the open <code>Positions</code>.</p>
+<p>At least it has to be a mostly-functional, statically typed language, like <code>Ocaml</code>, with simple <em>well-defined semantics</em> (and evaluation rules) which contain no hidden imperative mutable state.</p>
+<p>Truly <em>immutable and persistent data structures</em> (as of Clojure) is the main criteria.</p>
+<h2 id="ai">AI<a hidden class="anchor" aria-hidden="true" href="#ai">#</a></h2>
+<p>Deep learning has two fundamental properties</p>
+<ul>
+<li>
+<p>It can approximate any computable function</p>
+</li>
+<li>
+<p>without being explicitly programmed</p>
+<p>Notice the word &ldquo;function&rdquo;. This implies that the domain may even be infinite, but it has to be <em>fixed</em>.</p>
+<p>It also implies an <em>injection</em> or <em>surjection</em>, which restricts what can be actually &ldquo;learned&rdquo;.</p>
+<p>Again, the <em>domain</em> must be fixed (immutable), like a Set of numbers, and, in general, the relations between variables has to be &ldquo;stable&rdquo; (persistent).</p>
+<p>The key mathematical principle is the <em>back-propagation</em> algorithm, which updates the weights by calculating a partial derivative, which is a universal way.</p>
+<p>The simple and straightforward optimization algorithms, such as gradient descent, can also be easily traced back to reality.</p>
+<p>A valid intuitive metaphor is that we &ldquo;learn&rdquo; a &ldquo;surface&rdquo; which will match (will cover, up to the last wrinkle) the whole actual Himalaya.</p>
+<p>One more time (it cannot be over-emphasized) arbitrary inputs to a learning algorithm will result in &ldquo;learning&rdquo; an utter bullshit.</p>
+<p>Most of currently used systems feed it with wrong domains and git &ldquo;hallucinations&rdquo; as output.</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/trading-system/">trading system</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/automation/">automation</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/functional-programming/">functional programming</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

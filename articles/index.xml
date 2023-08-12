@@ -6,7 +6,16 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Learning</title>
+      <link>https://lngnmn2.github.io/articles/deep-learning/</link>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/deep-learning/</guid>
+      <description>Understanding the undrlying universal principles.</description>
+    </item>
+    
     <item>
       <title>Trading</title>
       <link>https://lngnmn2.github.io/articles/trading/</link>
@@ -54,6 +63,18 @@ We will put the universal notion of an environment (and the corresponding Γ abs
       
       <guid>https://lngnmn2.github.io/articles/trading-math/</guid>
       <description>The concrete mathematics of trading.</description>
+    </item>
+    
+    <item>
+      <title>Writing a semi-automated trading system</title>
+      <link>https://lngnmn2.github.io/articles/automated-trading/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/automated-trading/</guid>
+      <description>AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;
+Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
+Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
+Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).</description>
     </item>
     
     <item>
