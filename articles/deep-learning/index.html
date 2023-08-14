@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Deep Learning | Notes from the digital underground by Lngnmn</title>
 <meta name="keywords" content="machine learning, deep learning, neural network, patrial derivative">
-<meta name="description" content="Understanding the undrlying universal principles.">
+<meta name="description" content="Understanding the underlying universal principles.">
 <meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/deep-learning/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
@@ -68,15 +68,15 @@ font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Deep Learning" />
-<meta property="og:description" content="Understanding the undrlying universal principles." />
+<meta property="og:description" content="Understanding the underlying universal principles." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lngnmn2.github.io/articles/deep-learning/" /><meta property="article:section" content="articles" />
 <meta property="article:published_time" content="2023-08-12T00:00:00+05:45" />
-<meta property="article:modified_time" content="2023-08-12T10:36:59+05:45" />
+<meta property="article:modified_time" content="2023-08-14T08:38:23+05:45" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deep Learning"/>
-<meta name="twitter:description" content="Understanding the undrlying universal principles."/>
+<meta name="twitter:description" content="Understanding the underlying universal principles."/>
 
 
 <script type="application/ld+json">
@@ -105,15 +105,15 @@ font-family: 'Source Code Pro', monospace;
   "@type": "BlogPosting",
   "headline": "Deep Learning",
   "name": "Deep Learning",
-  "description": "Understanding the undrlying universal principles.",
+  "description": "Understanding the underlying universal principles.",
   "keywords": [
     "machine learning", "deep learning", "neural network", "patrial derivative"
   ],
-  "articleBody": "Supervised\nLearning a representation by trial-and-error (literally) Supervised learning from given “the right answers” Having an implicit feed-back loop (“the right answers”) No explicit programming (back propagation) Representation can be examined and used (updated) Optimizations of the structure of a network (“topology”) Reinforcement\nReinforcement is learning by doing (games, sports) Representation gets refined with each “experience” Implicit feedback loop by evaluating performace Recurrent for linear structure’s (induction) Related to the Bayesian “beliefs”. Representations\nWe “learn” updated terms of pure mathematical expressions Mathematical expressions are represented as an AST an AST can be manipulated (a well-understood problem) Symbolic differentiation since early LISPs Computing derivatives packaged as libraries (autograds) Mutable structures (no persistence). Deep learning enables data-driven decisions by identifying and extracting patterns from large datasets that accurately map from sets of complex inputs to good decision outcomes.\nThis implies that the actual, non-imaginary signal (the set of complex inputs) must be “out there”.\nA data-set is a table (or a set of relations), each row is a single “example”, each column is a distinct “feature” or a relation (like a ratio) between features.\nThe principle is that the data (in a table) must be consistent.\nAn algorithm defines a process (as a declarative description or a “template”).\nA function is a deterministic mapping (can be thought off as a “table”) which corresponds to some relation between the values in its domain and its range.\n\\[\\x \\mapsto 2x + 1\\]\nIs a mapping (\\[\\forall x\\]) and a particular relation (multiply by 2 and then add 1).\nMost of the time we want to approximate (to learn a representation of) functions of multiple (many) variables – big tables with many related features.\nThis is the whole point - what is difficult to be explicitly programmed can be approximated (“learned” as a “structure”) by a generalized set of algorithms.\nThe goal is a particular set of “parameters” and “weights” in a “learned” representation of a “network” of a particular shape (“architecture”).\nThe shape of a network has the same number of inputs and an output as the function (set of mappings or “arrows”) we want to approximate (learn a representation of).\nIt is worth noting this abstract correspondence - a “set of arrows” being approximated by a “network of arrows” (a directed graph).\nAs the inputs “flow through the network” and the outputs come out of the “black box” – always the same for the same inputs – this arrangement, just like a function, can be thought off as a “mechanical machine”.\nThe fundamental difference is that we do not define the “function’s body” expression ahead of the time, but gradually improve (“learn”) its representation inside a “black box” by feeding the data and the “right answers” to a learning algorightm.\nThere are lots of analogies of this kind of a process, ranging from a bunch of people doing something by trial-and-error (trying to come up with a robust and efficient aircraft engine) to a whole process of evolution, which, in a sense, “learns” stable molecular arrangements (of enzymes, say, and everything else).\nThis is the right understanding. Notice that the “inputs” (the molecules and ions) has to be “stable”, as the physical (electo-chemical) properties of their combinations (“relations among them”).\nThis is the universal principle – the “building blocks” has to be stable and actually “out there” (non-imaginable).\nThe “mechanics” Each “neuron” is a function (a mapping from a set of inputs to an output) – a mathematical expression. It is represented inside a computer as an abstract syntax tree.\nAn expression is a syntactic closure, which captures all its bound variables and constants (if any) as the “leafs” of an AST.\nThe process of back-propagation (defined by a particular algorithm) traverses the whole network and modifies (updates) the values of these bound variables by computing the partial derivatives for each variable recursively.\nAll the “operators” has to be differentiable (do a partial derivative can be taken).\nSo it is a learning algorithm that updates the “terms” of a vastly complex, deeply nested pure mathematical expression.\nAnd, viewed as a graph, it is a “bunch of arrows between simple functions (“neurons”) which are lexical closures that capture its bound variables”. There is no “free variables” in this context.\nSo what we actually “learn” is this set of “weights” inside these “closures”, which represent the terms of pure mathematical expressions – mappings from inputs to an output.\nDifferentiable Now what is differentiable? Two or more “arrows come together” (this is a universal shape or a “pattern” of multiple causality, of a weighted sum, etc, etc.), and a “contribution” (a “weight” or a “steepness of a slope”) of each “arrow” can be determined.\nProgramming The ability to zoom through the layers (of a hierarchy) of abstractions (from general to specific and bottom-up) and to switch between an abstraction and its representation is what makes a good programmer. It is not “knowing” some PHP or Javascript.\n",
-  "wordCount" : "820",
+  "articleBody": "A valid (less wrong) intuitive metaphor is that we “learn” a “surface” which will match (will cover, up to the last wrinkle) the whole actual Himalaya.\nThis notion “generalizes to any number of dimensions” meme (differences, distances and derivatives do not care about Mind’s abstract bullshit)\nThe Himalayas (Truth) has to be “out there”.\nGeneral principles\nA “curve/surface” fitting using feed-back loops Least square errors (reducing a “distance”) Convergence due to an “error minimization” Supervised\nLearning a representation by trial-and-error (literally) Supervised learning from given “the right answers” Having an implicit feed-back loop (“the right answers”) No explicit programming (back propagation) Representation can be examined and used (updated) Optimizations of the structure of a network (“topology”) Reinforcement\nReinforcement is learning by doing (games, sports) Representation gets refined with each “experience” Implicit feedback loop by evaluating performace Recurrent for linear structure’s (induction) Related to the Bayesian “beliefs”. Representations\nWe “learn” updated terms of pure mathematical expressions Mathematical expressions are represented as an AST an AST can be manipulated (a well-understood problem) Symbolic differentiation since early LISPs Computing derivatives packaged as libraries (autograds) Mutable structures (no persistence). Architecture\nThe “architecture” is “fully connected layers” Theoretically it is the right thing to do. Some weights will become zeroes (“pruning”) Pruning is a fundamental notion (child’s brains do it) Deep learning enables data-driven decisions by identifying and extracting patterns from large datasets that accurately map from sets of complex inputs to good decision outcomes.\nThis implies that the actual, non-imaginary signal (the set of complex inputs) must be “out there”.\nA data-set is a table (or a set of relations), each row is a single “example”, each column is a distinct “feature” or a relation (like a ratio) between features.\nThe principle is that the data (in a table) must be consistent.\nAn algorithm defines a process (as a declarative description or a “template”).\nA function is a deterministic mapping (can be thought off as a “table”) which corresponds to some relation between the values in its domain and its range.\n\\[\\x \\mapsto 2x + 1\\]\nIs a mapping (\\[\\forall x\\]) and a particular relation (multiply by 2 and then add 1).\nMost of the time we want to approximate (to learn a representation of) functions of multiple (many) variables – big tables with many related features.\nThis is the whole point - what is difficult to be explicitly programmed can be approximated (“learned” as a “structure”) by a generalized set of algorithms.\nThe goal is a particular set of “parameters” and “weights” in a “learned” representation of a “network” of a particular shape (“architecture”).\nThe shape of a network has the same number of inputs and an output as the function (set of mappings or “arrows”) we want to approximate (learn a representation of).\nIt is worth noting this abstract correspondence - a “set of arrows” being approximated by a “network of arrows” (a directed graph).\nAs the inputs “flow through the network” and the outputs come out of the “black box” – always the same for the same inputs – this arrangement, just like a function, can be thought off as a “mechanical machine”.\nThe fundamental difference is that we do not define the “function’s body” expression ahead of the time, but gradually improve (“learn”) its representation inside a “black box” by feeding the data and the “right answers” to a learning algorightm.\nThere are lots of analogies of this kind of a process, ranging from a bunch of people doing something by trial-and-error (trying to come up with a robust and efficient aircraft engine) to a whole process of evolution, which, in a sense, “learns” stable molecular arrangements (of enzymes, say, and everything else).\nThis is the right understanding. Notice that the “inputs” (the molecules and ions) has to be “stable”, as the physical (electo-chemical) properties of their combinations (“relations among them”).\nThis is the universal principle – the “building blocks” has to be stable and actually “out there” (non-imaginable).\nThe “mechanics” Each “neuron” is a function (a mapping from a set of inputs to an output) – a mathematical expression. It is represented inside a computer as an abstract syntax tree.\nAn expression is a syntactic closure, which captures all its bound variables and constants (if any) as the “leafs” of an AST.\nThe process of back-propagation (defined by a particular algorithm) traverses the whole network and modifies (updates) the values of these bound variables by computing the partial derivatives for each variable recursively.\nAll the “operators” has to be differentiable (do a partial derivative can be taken).\nSo it is a learning algorithm that updates the “terms” of a vastly complex, deeply nested pure mathematical expression.\nAnd, viewed as a graph, it is a “bunch of arrows between simple functions (“neurons”) which are lexical closures that capture its bound variables”. There is no “free variables” in this context.\nSo what we actually “learn” is this set of “weights” inside these “closures”, which represent the terms of pure mathematical expressions – mappings from inputs to an output.\nDifferentiable Now what is differentiable? Two or more “arrows come together” (this is a universal shape or a “pattern” of multiple causality, of a weighted sum, etc, etc.), and a “contribution” (a “weight” or a “steepness of a slope”) of each “arrow” can be determined.\nProgramming The ability to zoom through the layers (of a hierarchy) of abstractions (from general to specific and bottom-up) and to switch between an abstraction and its representation is what makes a good programmer. It is not “knowing” some PHP or Javascript.\n",
+  "wordCount" : "924",
   "inLanguage": "en",
   "datePublished": "2023-08-12T00:00:00+05:45",
-  "dateModified": "2023-08-12T10:36:59+05:45",
+  "dateModified": "2023-08-14T08:38:23+05:45",
   "author":[{
     "@type": "Person",
     "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
@@ -191,13 +191,23 @@ font-family: 'Source Code Pro', monospace;
       Deep Learning
     </h1>
     <div class="post-description">
-      Understanding the undrlying universal principles.
+      Understanding the underlying universal principles.
     </div>
     <div class="post-meta"><span title='2023-08-12 00:00:00 +0545 +0545'>August 12, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
 
 </div>
   </header> 
-  <div class="post-content"><p>Supervised</p>
+  <div class="post-content"><p>A valid (less wrong) <em>intuitive</em> metaphor is that we &ldquo;learn&rdquo; a &ldquo;surface&rdquo; which will match (will cover, up to the last wrinkle) the whole actual Himalaya.</p>
+<p>This notion &ldquo;generalizes to any number of dimensions&rdquo; meme (differences, distances and derivatives do not care about Mind&rsquo;s abstract bullshit)</p>
+<p>The Himalayas (Truth) has to be &ldquo;out there&rdquo;.</p>
+<p>General principles</p>
+<ul>
+<li>A &ldquo;curve/surface&rdquo; fitting</li>
+<li>using feed-back loops</li>
+<li>Least square errors (reducing a &ldquo;distance&rdquo;)</li>
+<li>Convergence due to an &ldquo;error minimization&rdquo;</li>
+</ul>
+<p>Supervised</p>
 <ul>
 <li>Learning a representation by trial-and-error (literally)</li>
 <li>Supervised learning from given &ldquo;the right answers&rdquo;</li>
@@ -222,6 +232,13 @@ font-family: 'Source Code Pro', monospace;
 <li><em>Symbolic differentiation</em> since early LISPs</li>
 <li>Computing derivatives packaged as libraries (<em>autograds</em>)</li>
 <li>Mutable structures (no persistence).</li>
+</ul>
+<p>Architecture</p>
+<ul>
+<li>The &ldquo;architecture&rdquo; is &ldquo;fully connected layers&rdquo;</li>
+<li>Theoretically it is the right thing to do.</li>
+<li>Some weights will become zeroes (&ldquo;pruning&rdquo;)</li>
+<li>Pruning is a fundamental notion (child&rsquo;s brains do it)</li>
 </ul>
 <p>Deep learning enables <em>data-driven</em> decisions by <em>identifying and extracting patterns</em> from large datasets that <em>accurately map</em> from sets of complex inputs to good decision outcomes.</p>
 <p>This implies that the actual, non-imaginary signal (the set of complex inputs) must be &ldquo;out there&rdquo;.</p>
