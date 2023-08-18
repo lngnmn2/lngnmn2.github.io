@@ -6,7 +6,16 @@
     <description>Recent content in automation on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On burnout</title>
+      <link>https://lngnmn2.github.io/articles/burnout/</link>
+      <pubDate>Fri, 18 Aug 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/burnout/</guid>
+      <description>What is to be done.</description>
+    </item>
+    
     <item>
       <title>Writing a semi-automated trading system</title>
       <link>https://lngnmn2.github.io/articles/automated-trading/</link>
