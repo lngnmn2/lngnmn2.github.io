@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>deep leaning on Notes from the digital underground by Lngnmn</title>
+    <link>https://lngnmn2.github.io/tags/deep-leaning/</link>
+    <description>Recent content in deep leaning on Notes from the digital underground by Lngnmn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/deep-leaning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LLMS For Coding</title>
+      <link>https://lngnmn2.github.io/articles/llms-for-codeing/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/llms-for-codeing/</guid>
+      <description>Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;
+First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.
+If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.</description>
+    </item>
+    
+  </channel>
+</rss>

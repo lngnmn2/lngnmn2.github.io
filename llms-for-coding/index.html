@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>LLMS For Coding | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="">
+<meta name="description" content="Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &#34;CodeLama-34b&#34; which is &#34;designed for general code synthesis and understanding.&#34;
+First of all, I personaly do not want to rely in any part of my life on any &#34;synthesized&#34; (and &#34;understood&#34; software, and demand an explicit opt-out. Yes, yes, I know.
+If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/llms-for-coding/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="LLMS For Coding" />
+<meta property="og:description" content="Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &#34;CodeLama-34b&#34; which is &#34;designed for general code synthesis and understanding.&#34;
+First of all, I personaly do not want to rely in any part of my life on any &#34;synthesized&#34; (and &#34;understood&#34; software, and demand an explicit opt-out. Yes, yes, I know.
+If I have any understanding of these subjects at all, this is a bubble and irrational exuberance." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/llms-for-coding/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2023-08-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-26T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LLMS For Coding"/>
+<meta name="twitter:description" content="Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &#34;CodeLama-34b&#34; which is &#34;designed for general code synthesis and understanding.&#34;
+First of all, I personaly do not want to rely in any part of my life on any &#34;synthesized&#34; (and &#34;understood&#34; software, and demand an explicit opt-out. Yes, yes, I know.
+If I have any understanding of these subjects at all, this is a bubble and irrational exuberance."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "LLMS For Coding",
+      "item": "https://lngnmn2.github.io/llms-for-coding/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LLMS For Coding",
+  "name": "LLMS For Coding",
+  "description": "Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a \u0026#34;CodeLama-34b\u0026#34; which is \u0026#34;designed for general code synthesis and understanding.\u0026#34;\nFirst of all, I personaly do not want to rely in any part of my life on any \u0026#34;synthesized\u0026#34; (and \u0026#34;understood\u0026#34; software, and demand an explicit opt-out. Yes, yes, I know.\nIf I have any understanding of these subjects at all, this is a bubble and irrational exuberance.",
+  "keywords": [
+    
+  ],
+  "articleBody": " Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a \"CodeLama-34b\" which is \"designed for general code synthesis and understanding.\"\nFirst of all, I personaly do not want to rely in any part of my life on any \"synthesized\" (and \"understood\" software, and demand an explicit opt-out. Yes, yes, I know.\nIf I have any understanding of these subjects at all, this is a bubble and irrational exuberance. Lets try to unpack \"the whys\".\nAside from memes and million dollar investments, there are actual data structures and algorithms under the hood, which are complex and convoluted. Nevertheless, at a higher level of abstractions we could see what is going on without talking too much bullshit.\nFirst, there are a few thing to acknowledge.\nWhen n-grams or even bit-sequences are used for training from the start, we are discarding any semantics of the underlying language and switching to a \"meaningless\" information processing./\nThis is a strong claim but it is correct (not wrong). The actual nodes of the wast trees will contain short bit sequences, and the links and weights will capture not the semantics of standard idioms of a language, as we would wish to, or even generalized algorithmic patterns (to reflect the underlying linear, sequential and table-like structures), but the overall \"multi-dimensional shape\" of the whole training set.\nPlease, read this again, this is an important principle. From the very start of the training process they choice a wrong (too low) level of underlying abstraction.\nThe resulting model \"works\" or people claim it does, but its size and resources required to run it are simply ridiculous. The number of \"neurons\" is a signal (heuristic) that the whole approach is just wrong. There has to be a better way.\nFrom a PLT perspective, training a model on a junk code from the internet or even github is just nonsees. The last 60 years of PLT research by smart people gave us a few fundamental results, which can be grossly oversimplified to \"each language has its own uses and standard idioms\".\nOne more step back. In the 70s and 80s they tried to teach programming systematically, by illustrating the underlying universal principles with discovered and refined common idioms. The idea was to teach a student \"just right things\" from the start.\nThey indeed gradually introduced the common \"shapes\" of the data and standard idioms and algorithms to deal with each particular shape (sequences, trees, tables). Things like sorting of linear sequences were distinct subtopics but there were common patterns too.\nThe code they used to teach was simplified but idiomatic, and very few actual projects has been written in this \"teaching style\" which everyone could understand. The classic MIT books are well-known for their high-level clear and idiomatic code in Scheme .\nAnother great tradition if of Standard ML and lately Ocaml, which also write very careful, idiomatic code in their standard libraries.\nWith Haskell only GHC and its dependencies are well-written (including the base), and most of public Haskell code is an unimaginable crap of over-abstraction and redundancy (which is supposed to be cleverness).\nNow please pay attention.\nTraining on very principle-guided, idiomatic, consistent and clean codebases, with careful attention to detail, should yield an order of magnitude better performance for any uses in the same codebase.\nSo, take, lets say, MIT Scheme and its libraries, Ocaml compiler and its libraries (NOT the crap from Jane Street, or take it separately), or take whole GHC. I think Scala 3 compiler and libs are also very well-written.\nWhich any of these one can, theoretically at least, do what they did with \"Handwritten digits\" back in the 1989 (33 years ago, @karpathy hi there) – have an actual proof (in code) that their concepts work (and that the level of abstraction is just right).\nHere I claim that all the current model will fail to capture the underlying fundamental and significant differences (form a non-bullshit PLT perspective) and will show the same crappy mediocre performance.\nThe humans, however, trained in the classic MIT style has consistently shown an orders of magnitude better performance in serious programming (not some modern webshit).\nThe result will show that the level of abstraction of bits is wrong, and the rat-race of training larger and larger models is futile.\nOne more thing. When \"generating\" is considered, the algorithmic technique used rely on probability distributions and on \"some\" randomness.\nThis is the \"generalizing to not seen before examples\" meme, which is the greatest.\nThere is the thing - it is ok to do pattern-recognition and classification this way, because it is indeed discarding insignificant differences as a noise, and ML does it exceptionally well.\nBut, as it is with the \"make more of Shakespire\" demonstration, one will always get what he asked for - just more bullshit. I do not want to read that Shakespire. Neither I want to rely on that code.\nAgain, this is serious. From an algorithmic perspective, the way one generate or synthesize guarantees that, in principle, only look-alike bullshit will be produced. Why? Because, again, what was captured (or learned) were probability distributions of bit patterns, not the underlying semantics or even universal shapes of the data, which are out there.\nOne last time. There are patterns everywhere out there, at all levels - the data structures, algorithms (the data-dominates principle) and the standard idioms of languages. There are even distinct and well-understood patterns at the type-level (ADTs, GADTs, etc).\nThey can in principle be \"recognized\" and then \"used\", but we do not see anything of this sort. And the reasons are stated above. After spending merely 20 years of my life I recognize, know and use the most common ones LMAO.\nTo summarize, information processing or indexing at the level of bits will never yield any \"knowledge\" or \"intelligence\" in principle. It isn't there. The huge networks (models) capture \"snapshots of all the noise\".\nLast but not least, one cannot train a model of 4chan. It will become a literal shizo (due to exposure to inconsistent, self-contradictory bullshit and abysmally horrific code snippets). There is still an acute shortage of actually good code, expecially compared to 70s and 80s.\n",
+  "wordCount" : "1040",
+  "inLanguage": "en",
+  "datePublished": "2023-08-26T00:00:00Z",
+  "dateModified": "2023-08-26T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "\u003clngnmn2@yahoo.com\u003e"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/llms-for-coding/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      LLMS For Coding
+    </h1>
+    <div class="post-meta"><span title='2023-08-26 00:00:00 +0000 UTC'>August 26, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>
+Today <a href="https://news.ycombinator.com/">https://news.ycombinator.com/</a> is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &#34;CodeLama-34b&#34; which is <em>&#34;designed for general code synthesis and understanding.&#34;</em></p>
+<p>
+First of all, I personaly do not want to rely in any part of my life on any &#34;synthesized&#34; (and &#34;understood&#34; software, and demand an explicit opt-out. Yes, yes, I know.</p>
+<p>
+If I have any understanding of these subjects at all, this is a bubble and <em>irrational exuberance</em>. Lets try to unpack &#34;the whys&#34;.</p>
+<p>
+Aside from memes and million dollar investments, there are actual data structures and algorithms under the hood, which are complex and convoluted. Nevertheless, at a higher level of abstractions we could see what is going on without talking too much bullshit.</p>
+<p>
+First, there are a few thing to acknowledge.</p>
+<p>
+When <em>n-grams</em> or even <em>bit-sequences</em> are used for training from the start, we are discarding any semantics of the underlying language and switching to a &#34;meaningless&#34; <em>information processing</em>./</p>
+<p>
+This is a strong claim but it is correct (not wrong). The actual nodes of the wast trees will contain short <em>bit sequences</em>, and the links and weights will <em>capture</em> not the semantics of standard idioms of a language, as we would wish to, or even generalized algorithmic patterns (to reflect the underlying linear, sequential and table-like structures), but the overall &#34;multi-dimensional shape&#34; of the whole training set.</p>
+<p>
+Please, read this again, this is an important <em>principle</em>. From the very start of the training process they choice a wrong (too low) level of underlying abstraction.</p>
+<p>
+The resulting model &#34;works&#34; or people claim it does, but its size and resources required to run it are simply ridiculous. The number of &#34;neurons&#34; is a signal (heuristic) that the whole approach is just wrong. There has to be a better way.</p>
+<p>
+From a PLT perspective, training a model on a junk code from the internet or even github is just nonsees. The last 60 years of PLT research by smart people gave us a few fundamental results, which can be grossly oversimplified to &#34;each language has its own uses and standard idioms&#34;.</p>
+<p>
+One more step back. In the 70s and 80s they tried to teach programming <em>systematically</em>, by illustrating the underlying universal principles with <em>discovered</em> and refined common idioms. The idea was to teach a student &#34;just right things&#34; from the start.</p>
+<p>
+They indeed gradually introduced the common &#34;shapes&#34; of the data and standard idioms and algorithms to deal with each particular shape (sequences, trees, tables). Things like sorting of linear sequences were distinct subtopics but there were common patterns too.</p>
+<p>
+The code they used to teach was simplified but idiomatic, and very few actual projects has been written in this &#34;teaching style&#34; which everyone could understand. The classic MIT books are well-known for their high-level clear and idiomatic code in <code>Scheme</code> .</p>
+<p>
+Another great tradition if of <code>Standard ML</code> and lately <code>Ocaml</code>, which also write very careful, idiomatic code in their standard libraries.</p>
+<p>
+With <code>Haskell</code> only <em>GHC</em> and its dependencies are well-written (including the <code>base</code>), and most of public <code>Haskell</code> code is an unimaginable crap of over-abstraction and redundancy (which is supposed to be cleverness).</p>
+<p>
+Now please pay attention.</p>
+<p>
+Training on very principle-guided, idiomatic, <em>consistent</em> and clean codebases, with careful attention to detail, should yield an order of magnitude better performance for any uses in <em>the same codebase</em>.</p>
+<p>
+So, take, lets say, <code>MIT Scheme</code> and its libraries, <code>Ocaml</code> compiler and its libraries (NOT the crap from Jane Street, or take it <em>separately</em>), or take whole GHC. I think <code>Scala 3</code> compiler and libs are also very well-written.</p>
+<p>
+Which any of these one can, theoretically at least, do what they did with &#34;Handwritten digits&#34; back in the 1989 (33 years ago, <code>@karpathy</code> hi there) – have an actual <em>proof</em> (in code) that their <em>concepts</em> work (and that the level of abstraction is just right).</p>
+<p>
+Here I claim that all the current model will fail to capture the underlying fundamental and significant differences (form a non-bullshit PLT perspective) and will show the same crappy mediocre performance.</p>
+<p>
+The humans, however, trained in the classic MIT style has <em>consistently</em> shown an orders of magnitude better performance in serious programming (not some modern <em>webshit</em>).</p>
+<p>
+The result will show that the level of abstraction of bits is wrong, and the rat-race of training larger and larger models is futile.</p>
+<p>
+One more thing. When &#34;generating&#34; is considered, the <em>algorithmic technique</em> used rely on <em>probability distributions</em> and on &#34;some&#34; randomness.</p>
+<p>
+This is the &#34;generalizing to not seen before examples&#34; meme, which is the greatest.</p>
+<p>
+There is the thing - it is ok to do <em>pattern-recognition</em> and <em>classification</em> this way, because it is indeed <em>discarding insignificant differences as a noise</em>, and ML does it exceptionally well.</p>
+<p>
+But, as it is  with the &#34;make more of Shakespire&#34; demonstration, one will always get what he asked for - just more bullshit. I do not want to read <em>that</em> Shakespire. Neither I want to rely on <em>that</em> code.</p>
+<p>
+Again, this is serious. From an algorithmic perspective, the way one generate or synthesize <em>guarantees that, in principle, only look-alike bullshit will be produced</em>. Why? Because, again, what was captured (or learned) were <em>probability distributions of bit patterns</em>, not the underlying semantics or even universal shapes of the data, which are out there.</p>
+<p>
+One last time. There <em>are</em> patterns everywhere out there, at all levels - the data structures, algorithms (the <em>data-dominates</em> principle) and the standard idioms of languages. There are even distinct and well-understood patterns <em>at the type-level</em> (ADTs, GADTs, etc).</p>
+<p>
+They can in principle be &#34;recognized&#34; and then &#34;used&#34;, but we do not see anything of this sort. And the reasons are stated above. After spending merely 20 years of my life I recognize, know and use the most common ones LMAO.</p>
+<p>
+To summarize, <em>information processing</em> or <em>indexing</em> at the level of bits will never yield any &#34;knowledge&#34; or &#34;intelligence&#34; in principle. It isn&#39;t there. The huge networks (models) capture &#34;snapshots of all the noise&#34;.</p>
+<p>
+Last but not least, one cannot train a model of <code>4chan</code>. It will become a literal shizo (due to exposure to inconsistent, self-contradictory bullshit and abysmally horrific code snippets).
+There is still an acute shortage of actually good code, expecially compared to 70s and 80s.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

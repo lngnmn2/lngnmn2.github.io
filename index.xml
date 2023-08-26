@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
       <link>https://lngnmn2.github.io/about/</link>
@@ -18,6 +18,28 @@ I wrote a bunch of articles by an organ in the first person.
 https://schiptsov.github.io/
 That scene from Rocky movie Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:
 ..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.</description>
+    </item>
+    
+    <item>
+      <title>LLMS For Coding</title>
+      <link>https://lngnmn2.github.io/llms-for-coding/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lngnmn2.github.io/llms-for-coding/</guid>
+      <description>Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;#34;CodeLama-34b&amp;#34; which is &amp;#34;designed for general code synthesis and understanding.&amp;#34;
+First of all, I personaly do not want to rely in any part of my life on any &amp;#34;synthesized&amp;#34; (and &amp;#34;understood&amp;#34; software, and demand an explicit opt-out. Yes, yes, I know.
+If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.</description>
+    </item>
+    
+    <item>
+      <title>LLMS For Coding</title>
+      <link>https://lngnmn2.github.io/articles/llms-for-codeing/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/llms-for-codeing/</guid>
+      <description>Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;
+First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.
+If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.</description>
     </item>
     
     <item>
