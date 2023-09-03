@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Sep 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>emacs</title>
+      <link>https://lngnmn2.github.io/tags/emacs/</link>
+      <pubDate>Sun, 03 Sep 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org-mode</title>
+      <link>https://lngnmn2.github.io/tags/org-mode/</link>
+      <pubDate>Sun, 03 Sep 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/org-mode/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>AI</title>
       <link>https://lngnmn2.github.io/tags/ai/</link>
@@ -220,15 +238,6 @@
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/dsl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs</title>
-      <link>https://lngnmn2.github.io/tags/emacs/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/emacs/</guid>
       <description></description>
     </item>
     
@@ -463,15 +472,6 @@
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/lngnmn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>org-mode</title>
-      <link>https://lngnmn2.github.io/tags/org-mode/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/org-mode/</guid>
       <description></description>
     </item>
     

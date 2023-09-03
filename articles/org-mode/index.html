@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The org-mode rituals of a narcissistic busy-body | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, org-mode">
+<meta name="description" content="The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.
+The underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly &ldquo;the right thing&rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.
+These &ldquo;very smart&rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are &ldquo;very smart&rdquo;.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/org-mode/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="The org-mode rituals of a narcissistic busy-body" />
+<meta property="og:description" content="The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.
+The underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly &ldquo;the right thing&rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.
+These &ldquo;very smart&rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are &ldquo;very smart&rdquo;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/org-mode/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-09-03T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-09-03T15:33:43+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The org-mode rituals of a narcissistic busy-body"/>
+<meta name="twitter:description" content="The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.
+The underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly &ldquo;the right thing&rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.
+These &ldquo;very smart&rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are &ldquo;very smart&rdquo;."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The org-mode rituals of a narcissistic busy-body",
+      "item": "https://lngnmn2.github.io/articles/org-mode/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The org-mode rituals of a narcissistic busy-body",
+  "name": "The org-mode rituals of a narcissistic busy-body",
+  "description": "The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.\nThe underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly \u0026ldquo;the right thing\u0026rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.\nThese \u0026ldquo;very smart\u0026rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are \u0026ldquo;very smart\u0026rdquo;.",
+  "keywords": [
+    "emacs", "org-mode"
+  ],
+  "articleBody": "The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.\nThe underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly “the right thing”, which, in turn, is the neurological basis of all repetitive religious rituals.\nThese “very smart” guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are “very smart”.\nThe very similar vastly complex and full of elaborate minute details, which all “validated” and justified by seemingly “logical” reasons, systems of daily rituals can be seen within Tibetan tantric sects.\nBefore that Indian Brahmans were the absolute champions of keeping themselves busy with nothing for other people to marvel upon.\nAll your micromanagements are just means to keep you busy and to feel good (from continuous dopamine releases) about yourself for doing “the right thing”, and thus being special – “not like everyone else”.\nWhat isn’t bullshit Headlines are just “vertical” lists – an ordered sequences. We can change the order (sort) according to some “priorities”. M-up and M-down “change the order”.\nThen, by adding the notion of “nesting” we could have a whole “horizontal dimension” in which every outline is nested within (is a part of) the previous one. M-left and M-right “change the nesting”.\nOrdering and nesting is a half of Universe, on which Life Itself has been evolved upon.\nTo have a stable structure is to maintain a particular order of elements.\nThe nested /environments and closures within (cells and enzymes) are possible because of the universal notions of ordering and nesting.\nUniversal notions There are the same “universal notions” underlying predicate logic, mathematical set-comprehension notation, sets-and-relations basis of SQL and the query languages like that one of Datomic.\nThese notions, by the way, are “natural and necessary implications” of the fact that Causality itself “can be seen as a bunch of directed graphs of single steps or transitions”. The Mind just observes and generalizes form the resulting “effects”.\nThis is not a coincidence that everything in CS can be reduced to such graphs (with no loops, but spirals of recursions) at various levels.\nSo, the universal notions which org-mode has been built upon are:\nAn ordering (having a particular structure) Nesting (of headlines and tags) Tagging, including type-tagging Sets and “groups” (based on tags) Predicates (on tags and groups) Selecting and queering (such that) There are “headlines”, which have several levels of outlining (nesting) usually up to 6.\nThe level of outlining of a headline is dynamic and semantically irrelevant, which means that it can be changed without altering the meaning.\nThe the outlines may capture the notion of a hierarchy and of general class-subclass, group-subgroup, set-subset relations.\nTags In general, decorating with a tag is the same notion as attaching a label.\nWords (particular sequences of sounds) of a human language are such labels.\nHeadlines can be decorated (tagged) with symbolic tags (symbols).\nThis is closely related to the notion of type-tagging of individual values in memory, used in the early LISPs.\nWith tags we create the simplest ad-hoc non-systematic type-system.\nSome tags signify a major or minor category, some are just labels.\nPre-defined type-tags can be used as simplest types-as-sets markers.\nThe fundamental notion is that we just decorate (label) and all the “higher-level” grouping and filtering operations are orthogonal, and at are at the higher level of abstraction.\nThis corresponds to a generalized hierarchical structure, in which a type-system is at a higher level, “above” the terms.\nRelations Just as with Types or mathematical Sets, we could have an item decorated (annotated) more than one tag. This is a fundamental feature.\nSome tags, just like Sets, are semantically mutually exclusive, some are proper subsets of the other, some may have a non-empty intersection.\nThere is no way to systematically and consistently define such constraints.\nAgain, just as it is with the mathematical Set Theory, the meaning (semantics) is out of scope. Every meaning or “use” is up to the “user”.\nCategories There are simplest examples of tags\n:math: :programming: :trading: :emacs: :neovim: The first three are (stands for) whole “categories”, while the last two are just “type-tags”.\nOf course, they have the meaning only in how we interpret and use them.\nUnlike the traditional classic type-systems, we do not define a set of values by a set of all the possible operations (on individual values), which is what mathematicians do to define their own abstractions rigorously.\nSets, Groups, Monoids, Matrices, Tensors are examples of such “types”.\nOn capturing we tag ’em When we capture some new information, we not just create and choose a corresponding new headline, we also tag it with pre-defined (or even new, ad-hoc) tags.\nSelecting and grouping This is what it is all about within the org-mode. We group headlines (and other items) based on the tags.\norg-super-agenda provide the way to define such “groups” and there is even a whole “query language” (implemented as a library) in the org-ql package.\nThis does not mean we have to use them, but it is good to have them ready (and being maintained by other people).\norg-ql This is an implementation of an embedded DSL which corresponds to the mathematical set-comprehension notation, which rely on the such-that notion, based on predicate logic.\nNotice that Sets are untyped (and the elements are untagged), and defined in terms of a set of all possible operations.\nIt is also similar to a query language that Datomic offers.\nAgain, everything which has been properly captured can be “unfolded” back to the underlying aspects of What Is from which it has been generalized.\n",
+  "wordCount" : "952",
+  "inLanguage": "en",
+  "datePublished": "2023-09-03T00:00:00+05:45",
+  "dateModified": "2023-09-03T15:33:43+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/org-mode/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      The org-mode rituals of a narcissistic busy-body
+    </h1>
+    <div class="post-meta"><span title='2023-09-03 00:00:00 +0545 +0545'>September 3, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>The <code>~org-mode~</code> package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.</p>
+<p>The underlying mechanism is satisfaction (a dopamine release reward) from  <em>repeatedly doing supposedly &ldquo;the right thing&rdquo;</em>, which, in turn, is the neurological basis of all repetitive religious rituals.</p>
+<p>These &ldquo;very smart&rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their <em>self-identification</em> is based upon, that they are &ldquo;very smart&rdquo;.</p>
+<p>The very similar vastly complex and full of elaborate minute details, which all &ldquo;validated&rdquo; and justified by seemingly &ldquo;logical&rdquo; reasons, systems of daily rituals can be seen within Tibetan tantric sects.</p>
+<p>Before that Indian Brahmans were the absolute champions of keeping themselves busy with nothing for other people to marvel upon.</p>
+<p>All your micromanagements are just means to keep you busy and to feel good (from continuous dopamine releases) about yourself for doing &ldquo;the right thing&rdquo;, and thus being <em>special</em> &ndash; &ldquo;not like everyone else&rdquo;.</p>
+<h2 id="what-isn-t-bullshit">What isn&rsquo;t bullshit<a hidden class="anchor" aria-hidden="true" href="#what-isn-t-bullshit">#</a></h2>
+<p>Headlines are just &ldquo;vertical&rdquo; lists &ndash; an ordered sequences. We can change the order (sort) according to some &ldquo;priorities&rdquo;. <code>M-up</code> and <code>M-down</code> &ldquo;change the order&rdquo;.</p>
+<p>Then, by adding the notion of &ldquo;nesting&rdquo; we could have a whole &ldquo;horizontal dimension&rdquo; in which every <em>outline</em> is nested within (is a part of) the previous one. <code>M-left</code> and <code>M-right</code> &ldquo;change the nesting&rdquo;.</p>
+<p><em>Ordering</em> and <em>nesting</em> is a half of Universe, on which <em>Life Itself</em> has been evolved upon.</p>
+<p>To have a <em>stable structure</em> is to maintain a particular order of elements.</p>
+<p>The <em>nested /environments</em> and <em>closures</em> within (cells and enzymes) are possible because of the universal notions of ordering and nesting.</p>
+<h3 id="universal-notions">Universal notions<a hidden class="anchor" aria-hidden="true" href="#universal-notions">#</a></h3>
+<p>There are the same &ldquo;universal notions&rdquo; underlying predicate logic, mathematical set-comprehension notation, sets-and-relations basis of <code>SQL</code> and the query languages like that one of <code>Datomic</code>.</p>
+<p>These notions, by the way, are &ldquo;natural and necessary implications&rdquo; of the fact that Causality itself &ldquo;can be seen as a bunch of directed graphs of single steps or transitions&rdquo;. The Mind just observes and generalizes form the resulting &ldquo;effects&rdquo;.</p>
+<p>This is not a coincidence that everything in CS can be reduced to such graphs (with no loops, but <em>spirals of recursions</em>) at various levels.</p>
+<p>So, the universal notions which <code>org-mode</code> has been built upon are:</p>
+<ul>
+<li>An <em>ordering</em> (having a particular structure)</li>
+<li>Nesting (of headlines and tags)</li>
+<li>Tagging, including <em>type-tagging</em></li>
+<li>Sets and &ldquo;groups&rdquo; (based on tags)</li>
+<li>Predicates (on tags and groups)</li>
+<li>Selecting and queering (<em>such that</em>)</li>
+</ul>
+<p>There are &ldquo;headlines&rdquo;, which have several levels of outlining (nesting) usually up to 6.</p>
+<p>The level of outlining of a headline is <em>dynamic</em> and semantically irrelevant, which means that it can be changed without altering the meaning.</p>
+<p>The the outlines may capture the notion of a <em>hierarchy</em> and of general <em>class-subclass</em>, <em>group-subgroup</em>, <em>set-subset</em> relations.</p>
+<h3 id="tags">Tags<a hidden class="anchor" aria-hidden="true" href="#tags">#</a></h3>
+<p>In general, decorating with a <em>tag</em> is the same notion as attaching a <em>label</em>.</p>
+<p>Words (particular sequences of sounds) of a human language are such labels.</p>
+<p>Headlines can be decorated (tagged) with symbolic <em>tags</em> (symbols).</p>
+<p>This is closely related to the notion of <em>type-tagging</em> of individual values in memory, used in the early LISPs.</p>
+<p>With tags we create the simplest <em>ad-hoc</em> non-systematic type-system.</p>
+<p>Some tags signify a major or <em>minor category</em>, some are just <em>labels</em>.</p>
+<p>Pre-defined <em>type-tags</em> can be used as simplest types-as-sets markers.</p>
+<p>The fundamental notion is that we just decorate (label) and all the &ldquo;higher-level&rdquo; grouping and filtering operations are orthogonal, and at are at the higher level of abstraction.</p>
+<p>This corresponds to a generalized hierarchical structure, in which a type-system is at a higher level, &ldquo;above&rdquo; the terms.</p>
+<h3 id="relations">Relations<a hidden class="anchor" aria-hidden="true" href="#relations">#</a></h3>
+<p>Just as with Types or mathematical Sets, we could have an item decorated (annotated) <em>more than one tag</em>. This is a fundamental feature.</p>
+<p>Some tags, just like Sets, are <em>semantically</em> mutually exclusive, some are proper subsets of the other, some may have a non-empty <em>intersection</em>.</p>
+<p>There is no way to systematically and consistently define such <em>constraints</em>.</p>
+<p>Again, just as it is with the mathematical Set Theory, the meaning (semantics) is out of scope. Every meaning or &ldquo;use&rdquo; is up to the &ldquo;user&rdquo;.</p>
+<h3 id="categories">Categories<a hidden class="anchor" aria-hidden="true" href="#categories">#</a></h3>
+<p>There are simplest examples of tags</p>
+<ul>
+<li>:math:</li>
+<li>:programming:</li>
+<li>:trading:</li>
+<li>:emacs:</li>
+<li>:neovim:</li>
+</ul>
+<p>The first three are (stands for) whole &ldquo;categories&rdquo;, while the last two are just &ldquo;type-tags&rdquo;.</p>
+<p>Of course, they have the meaning only in how we <em>interpret</em> and <em>use</em> them.</p>
+<p>Unlike the traditional classic type-systems, we do not define a set of values by a set of all the possible operations (on individual values), which is what mathematicians do to define their own abstractions rigorously.</p>
+<p><em>Sets, Groups, Monoids, Matrices, Tensors</em> are examples of such &ldquo;types&rdquo;.</p>
+<h3 id="on-capturing-we-tag-em">On capturing we tag &rsquo;em<a hidden class="anchor" aria-hidden="true" href="#on-capturing-we-tag-em">#</a></h3>
+<p>When we capture some new information, we not just create and choose a corresponding new <em>headline</em>, we also <em>tag</em> it with pre-defined (or even new, <em>ad-hoc</em>) tags.</p>
+<h3 id="selecting-and-grouping">Selecting and grouping<a hidden class="anchor" aria-hidden="true" href="#selecting-and-grouping">#</a></h3>
+<p>This is what it is all about within the <code>org-mode</code>. We <em>group</em> headlines (and other items) based on the tags.</p>
+<p><code>org-super-agenda</code> provide the way to define such &ldquo;groups&rdquo; and there is even a whole &ldquo;query language&rdquo; (implemented as a library) in the <code>org-ql</code> package.</p>
+<p>This does not mean we have to use them, but it is good to have them ready (and being maintained by other people).</p>
+<h3 id="org-ql">org-ql<a hidden class="anchor" aria-hidden="true" href="#org-ql">#</a></h3>
+<p>This is an implementation of an <em>embedded DSL</em> which corresponds to the mathematical set-comprehension notation, which rely on the <em>such-that</em> notion, based on <em>predicate logic</em>.</p>
+<p>Notice that Sets are untyped (and the elements are untagged), and defined in terms of a set of all possible operations.</p>
+<p>It is also similar to a query language that <code>Datomic</code> offers.</p>
+<p>Again, everything which has been <em>properly captured</em> can be &ldquo;unfolded&rdquo; back to the underlying aspects of <em>What Is</em> from which it has been generalized.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/org-mode/">org-mode</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
