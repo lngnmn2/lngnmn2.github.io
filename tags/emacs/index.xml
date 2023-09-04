@@ -6,7 +6,21 @@
     <description>Recent content in emacs on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Sep 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixing the annoying bug</title>
+      <link>https://lngnmn2.github.io/articles/bug/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/bug/</guid>
+      <description>I has been struggling with this very annoying bug when code blocks in the org mode are messed up badly when the global-whitespace-mode is enabled.
+This global-whitespace-mode is especially important to see the actual mess which is usually invisible (like decease causing bacteria).
+My &amp;ldquo;quality benchmark&amp;rdquo; is how my configuration renders Sacha.org, you know.
+So, here is how to fix it.
+Doom themes (as a standalone package)
+(use-package doom-themes :demand :hook (after-init .</description>
+    </item>
+    
     <item>
       <title>The org-mode rituals of a narcissistic busy-body</title>
       <link>https://lngnmn2.github.io/articles/org-mode/</link>

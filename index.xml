@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Sep 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
       <link>https://lngnmn2.github.io/about/</link>
@@ -18,6 +18,20 @@ I wrote a bunch of articles by an organ in the first person.
 https://schiptsov.github.io/
 That scene from Rocky movie Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:
 ..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.</description>
+    </item>
+    
+    <item>
+      <title>Fixing the annoying bug</title>
+      <link>https://lngnmn2.github.io/articles/bug/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/bug/</guid>
+      <description>I has been struggling with this very annoying bug when code blocks in the org mode are messed up badly when the global-whitespace-mode is enabled.
+This global-whitespace-mode is especially important to see the actual mess which is usually invisible (like decease causing bacteria).
+My &amp;ldquo;quality benchmark&amp;rdquo; is how my configuration renders Sacha.org, you know.
+So, here is how to fix it.
+Doom themes (as a standalone package)
+(use-package doom-themes :demand :hook (after-init .</description>
     </item>
     
     <item>
