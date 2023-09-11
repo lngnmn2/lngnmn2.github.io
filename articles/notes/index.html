@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Formulating the problem | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="trading, deep-learning, neural-network">
+<meta name="description" content="These are just assorted notes for now, which shall become something ready to be formalized.
+Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
+The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
+All the features should be actual &ldquo;measurements&rdquo; of something real, like &ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements like &ldquo;Volume&rdquo;.">
+<meta name="author" content="Ln Gnmn">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/notes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Formulating the problem" />
+<meta property="og:description" content="These are just assorted notes for now, which shall become something ready to be formalized.
+Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
+The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
+All the features should be actual &ldquo;measurements&rdquo; of something real, like &ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements like &ldquo;Volume&rdquo;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/notes/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-09-11T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-09-11T00:00:00+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Formulating the problem"/>
+<meta name="twitter:description" content="These are just assorted notes for now, which shall become something ready to be formalized.
+Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
+The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
+All the features should be actual &ldquo;measurements&rdquo; of something real, like &ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements like &ldquo;Volume&rdquo;."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Formulating the problem",
+      "item": "https://lngnmn2.github.io/articles/notes/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Formulating the problem",
+  "name": "Formulating the problem",
+  "description": "These are just assorted notes for now, which shall become something ready to be formalized.\nNon-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.\nThe proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.\nAll the features should be actual \u0026ldquo;measurements\u0026rdquo; of something real, like \u0026ldquo;Open Interest\u0026rdquo; or the \u0026ldquo;Long/Short ratio\u0026rdquo; and other obvious measurements like \u0026ldquo;Volume\u0026rdquo;.",
+  "keywords": [
+    "trading", "deep-learning", "neural-network"
+  ],
+  "articleBody": "These are just assorted notes for now, which shall become something ready to be formalized.\nNon-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.\nThe proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.\nAll the features should be actual “measurements” of something real, like “Open Interest” or the “Long/Short ratio” and other obvious measurements like “Volume”.\nThese measurements have to be “by the same instruments” and have to be available for the “unseen before” inputs (for generalizing or “inference”).\nThe crucial measurements include the day of a week (to capture recurring patterns of the US market), the month, to potentially capture seasonal changes, and even an hour, to potentially capture intro-day fluctuations in the US time-zone .Just daily candles would not be enough.\nThe more features we have, the more noise and nonsense we “learn”. The hope is that “reality” will reduce the weights of bullshit, as it always happen.\nCandles On the other hand, for candle-level recurrent patterns all this would be a “noise” because what the “candle-patterns” capture are recurring behavioral patterns of the market participants and, potentially, how they react when observing the same chart formations.\nAt even deeper level, the observed pattern on the chart (the candles) has been caused by the sum-total of the current “market sentiments” - what the majority of participants feel and think about the current market conditions (the current set of memes in their heads).\nThis is what candle-level patterns of the various time-frames actually capture or even “measure” – the most recent actions (at the right edge) of the market participants. A chart is a “dashboard” of the market. This is where our “inputs” shall come from.\nThe training set The quality and adequacy (connection to reality) of a training set is by far the most important “metric”. We absolutely shall not try to find patterns in an abstract data noise.\nData has to be at an appropriate (just right) level. Not of “individual pixels” or a “raw sound”.\nIdeally, the conceptual level must math the level at which the market professionals and other participants tend to think and reason. The level of the current memes.\nCurrent readings of the most used meme “indicators” (RSI, MACD, BOLL) has to be added as features.\nAll the descriptive statustics which “Binance” offers has to be used. Our network should “see” what other people (and other algos) are observing.\nWishful thinking We wish that the NN will “learn its own features” (capture the overlocked subtle patterns). There are always some “hidden” (non-obvious) relations between “measurements” (they have to be “reliable instrument readings”).\nWe expect that these relations (connections or “pathways”) will “learn” significant weights (a set of parameters).\nIn short, we hope not for just the “right structure” (that matches the observed patterns) but also the “myelination” of the crucial connections (of the corresponding relations).\nAnother good metaphor is beaten paths (frequently used trails) in the mountains. We definitely have these inside our mature brains.\nMath Scaling \\(\\frac{42}{1}\\) means, literally, “forty two ones”, or 42 “scratches” (in an unary system), which, in turn, means 1 “added to itself” 42 times or just \\(42*1\\).\nWhen we scale by a scalar (a Real number) we just “replace” that \\(1\\) (the unit) with the given scalar and then add these together.\n26.2 miles times \\(1.61\\) is, well, \\(1.61\\) (instead of \\(1\\)) 26.2 times.\nSo, again, this is just a repeated addition (putting together) but of different (scaled) “units”.\nThis simplified (but obviously correct) view is very useful when we think of what ML algorithms really do.\nDivision is a repeated subtraction.\nWeighted sums everywhere Just adding together and scaling by “weights”.\nPolynomials are also a special case of a weighted sum.\nA line \\[ \\forall x, y \\mapsto wx^{1} + bx^{0} \\] where \\(w\\) and \\(b\\) are parameters which determine the position of a line.\nAnd \\(x^{0} = 1\\) and \\(x^{1} = x\\)\nPackaging The notion of a “vector”. \\[ x = \\begin{bmatrix} x_{0} \\\\ x_{1} \\end{bmatrix} \\]\nAnd a scalar is “just” a \\[ \\begin{bmatrix} y \\end{bmatrix} \\] So we can “package” a line as two vectors - one of the parameters \\[ p = \\begin{bmatrix} b \\\\ a \\end{bmatrix} \\] and one of the x-es, \\[ x = \\begin{bmatrix} x^{0} \\\\ x^{1} \\end{bmatrix} \\]\nAn abstract data type with a corresponding notation It is indeed an ADT defined in term of possible operations.\nA particular notation has been evolved to denote such “objects”.\nDenotational semantics is to use notation to convey the meaning.\nTensor is a generalized ADT The concept of a Tensor is even more a proper ADT.\nIt has the notion of a rank and a set of contrains.\nMatrix multiplication Dimensions has to match up, just like types in a function composition.\nJust like a function application – associative but not commutative.\nOnce composed (chained) correctly can be calculated (evaluated) in any order.\nGilbert Strang The column-oriented perspective on Linear Algebra.\nAn “n-dimension vector” (from the Origin) is a single column.\nIt can be thought off as denoting a point in a /“n-dimensional space”.\nThus the order of “coordinates” is fixed.\nthe Normal Equations method \\[ \\Theta = (X^{T}X)^{-1} X^{T}y \\]\nMatrix multiplication is associative.\ntheta = pinv(X'*X)*X'*y in Julia\n\\Theta = (pinv(transpose(X)*X))*transpose(X)*y Learning a representation Learning the “parameters” of a function.\nGeneralizing or “inference” (calling on an unseen before values, which is what it is all about) is just a straightforward computation with the weights (parameters) we have “learned”.\nNotice that “prediction” is a wrong word. We are not predicting or forecasting the future. We just calculate the output from a given input.\nThe “learning” is just a “curve fitting” (squared error minimization) or a generalization of it - no magic there.\nThink if an “elastic cloth” (as a “space”) transformed by the weights “hanging from it on strings”.\nNon-bullshit ML for trading The most difficult (and crucial) part is to decide what are the xs and /ys.\nThe “AI will learn the hidden patterns in the data by itself” meme is an utter bullshit. It is like finding patterns in the clouds or waves. They are out there, but they almost never repeat (never emerge again the same).\nSo this will be finding patterns in a noise or fitting a “space” on all clouds (thus taking a snapshot).\nIt has to be a well-defined “table” first “features” has to be selected by hand including “extra” (explicit) ratios and rates of change 3-candle “mini-patterns” every 4th candle is a \\(y\\) for the previous \\(3\\) every scale is OK, just use relative values High-level There are high-level libraries to be used (after all logical reasoning and math has been done “on paper”).\nA typical training procedure for a neural network is as follows:\nDefine the neural network that has some learnable parameters (or weights) Iterate over a dataset of inputs Process input through the network Compute the loss (how far is the output from being correct) Propagate gradients back into the network’s parameters Update the weights of the network, typically using a simple update rule: weight = weight - learning_rate * gradient You just have to define the forward method, and the backward method (where gradients are computed) is automatically derived for you using autograd. import torch.nn as nn class Net(nn.Module): def __init__(self): super(Net, self).__init__() def forward(self, x): return x ",
+  "wordCount" : "1252",
+  "inLanguage": "en",
+  "datePublished": "2023-09-11T00:00:00+05:45",
+  "dateModified": "2023-09-11T00:00:00+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "Ln Gnmn"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/notes/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Formulating the problem
+    </h1>
+    <div class="post-meta"><span title='2023-09-11 00:00:00 +0545 +0545'>September 11, 2023</span>&nbsp;·&nbsp;Ln Gnmn
+
+</div>
+  </header> 
+  <div class="post-content"><p>These are just assorted <em>notes</em> for now, which shall become something ready to be <em>formalized.</em></p>
+<h2 id="non-bullshit">Non-bullshit<a hidden class="anchor" aria-hidden="true" href="#non-bullshit">#</a></h2>
+<p>The objective is to train a NN which captures <em>subtle recurrent
+patterns</em> among many well-chosen (and well-defined) <em>features</em>.</p>
+<p>The proper set of features that, in turn, captures the most relevant aspects
+of reality is what determines the distinction between a modest success
+or a total failure of this ML approach.</p>
+<p>All the features should be actual &ldquo;measurements&rdquo; of something real, like
+&ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements
+like &ldquo;Volume&rdquo;.</p>
+<p>These measurements have to be &ldquo;by the same instruments&rdquo; and have to be
+available for the &ldquo;unseen before&rdquo; inputs (for generalizing or
+&ldquo;inference&rdquo;).</p>
+<p>The crucial measurements include the day of a week (to capture recurring
+patterns of the US market), the month, to potentially capture seasonal
+changes, and even an hour, to potentially capture <em>intro-day fluctuations
+in the US time-zone</em> .Just <em>daily</em> candles would not be enough.</p>
+<p>The more features we have, the more noise and nonsense we &ldquo;learn&rdquo;. The
+hope is that &ldquo;reality&rdquo; will reduce the weights of bullshit, as it always
+happen.</p>
+<h2 id="candles">Candles<a hidden class="anchor" aria-hidden="true" href="#candles">#</a></h2>
+<p>On the other hand, for candle-level recurrent patterns all this would be
+a <em>&ldquo;noise&rdquo;</em> because what the &ldquo;candle-patterns&rdquo; capture are recurring
+<em>behavioral patterns</em> of the market participants and, potentially, how
+they react when observing the same chart formations.</p>
+<p>At even deeper level, the observed pattern on the chart (the candles)
+has been caused by the sum-total of the current &ldquo;market sentiments&rdquo; -
+what the majority of participants <em>feel</em> and think about the current
+market conditions (the current set of memes in their heads).</p>
+<p><em>This</em> is what candle-level patterns of the various time-frames actually
+capture or even &ldquo;measure&rdquo; &ndash; the most recent actions (at <em>the right edge</em>)
+of the market participants. A chart is a &ldquo;dashboard&rdquo; of the market. This
+is where our &ldquo;inputs&rdquo; shall come from.</p>
+<h2 id="the-training-set">The training set<a hidden class="anchor" aria-hidden="true" href="#the-training-set">#</a></h2>
+<p>The quality and <em>adequacy</em> (connection to reality) of a training set is
+by far the most important &ldquo;metric&rdquo;. We absolutely shall not try to find
+patterns in an <em>abstract data noise</em>.</p>
+<p>Data has to be at an appropriate (just right) level. <em>Not</em> of &ldquo;individual
+pixels&rdquo; or a &ldquo;raw sound&rdquo;.</p>
+<p>Ideally, the conceptual level must math the level at which the market
+professionals and other participants tend to think and reason. The level
+of the current memes.</p>
+<p>Current readings of the most used meme &ldquo;indicators&rdquo; (RSI, MACD, BOLL) has to be added as features.</p>
+<p>All the descriptive statustics which &ldquo;<em>Binance</em>&rdquo; offers has to be used.
+Our network should &ldquo;see&rdquo; what other people (and other algos) are observing.</p>
+<h2 id="wishful-thinking">Wishful thinking<a hidden class="anchor" aria-hidden="true" href="#wishful-thinking">#</a></h2>
+<p>We <em>wish</em> that the NN will &ldquo;learn its own features&rdquo; (capture the
+<em>overlocked subtle patterns</em>). There are always some &ldquo;hidden&rdquo;
+(non-obvious) <em>relations</em> between &ldquo;measurements&rdquo; (they have to be
+&ldquo;reliable instrument readings&rdquo;).</p>
+<p>We expect that these relations (connections or &ldquo;pathways&rdquo;) will &ldquo;learn&rdquo;
+significant weights (a set of parameters).</p>
+<p>In short, we hope not for just the &ldquo;right structure&rdquo; (that matches the
+observed patterns) but also the &ldquo;myelination&rdquo; of the crucial connections
+(of the corresponding <em>relations</em>).</p>
+<p>Another good metaphor is beaten paths (frequently used trails) in the
+mountains. We definitely have these inside our mature brains.</p>
+<h2 id="math">Math<a hidden class="anchor" aria-hidden="true" href="#math">#</a></h2>
+<h3 id="scaling">Scaling<a hidden class="anchor" aria-hidden="true" href="#scaling">#</a></h3>
+<p>\(\frac{42}{1}\) means, literally, &ldquo;forty two ones&rdquo;, or 42 &ldquo;scratches&rdquo; (in an unary system), which, in turn, means 1 &ldquo;added to itself&rdquo; <em>42 times</em> or just \(42*1\).</p>
+<p>When we <em>scale</em> by a scalar (a Real number) we just &ldquo;replace&rdquo; that \(1\) (the unit) with the given <em>scalar</em> and then add <em>these</em> together.</p>
+<p>26.2 miles <em>times</em> \(1.61\) is, well, \(1.61\) (instead of \(1\)) 26.2 times.</p>
+<p>So, again, this is just a <em>repeated addition</em> (putting together) but of different (scaled) &ldquo;units&rdquo;.</p>
+<p>This simplified (but obviously correct) view is very useful when we think of what ML algorithms really do.</p>
+<p>Division is a <em>repeated subtraction</em>.</p>
+<h3 id="weighted-sums-everywhere">Weighted sums everywhere<a hidden class="anchor" aria-hidden="true" href="#weighted-sums-everywhere">#</a></h3>
+<p>Just <em>adding together</em> and <em>scaling</em> by &ldquo;weights&rdquo;.</p>
+<p><em>Polynomials</em> are also a <em>special case</em> of a weighted sum.</p>
+<h3 id="a-line">A line<a hidden class="anchor" aria-hidden="true" href="#a-line">#</a></h3>
+<p>\[ \forall x, y \mapsto wx^{1} + bx^{0} \]
+where \(w\) and \(b\) are <em>parameters</em> which determine the position of a line.</p>
+<p>And \(x^{0} = 1\) and \(x^{1} = x\)</p>
+<h3 id="packaging">Packaging<a hidden class="anchor" aria-hidden="true" href="#packaging">#</a></h3>
+<p>The notion of a &ldquo;vector&rdquo;.
+\[ x = \begin{bmatrix} x_{0} \\ x_{1} \end{bmatrix} \]</p>
+<p>And a <em>scalar</em> is &ldquo;just&rdquo; a
+\[ \begin{bmatrix} y \end{bmatrix} \]
+So we can &ldquo;package&rdquo; a line as two vectors - one of the <em>parameters</em>
+\[ p = \begin{bmatrix} b \\ a \end{bmatrix} \]
+and one of the <em>x-es</em>,
+\[ x = \begin{bmatrix} x^{0} \\ x^{1} \end{bmatrix} \]</p>
+<h3 id="an-abstract-data-type-with-a-corresponding-notation">An abstract data type with a corresponding notation<a hidden class="anchor" aria-hidden="true" href="#an-abstract-data-type-with-a-corresponding-notation">#</a></h3>
+<p>It is indeed an ADT defined in term of possible operations.</p>
+<p>A particular notation has been evolved to <em>denote</em> such &ldquo;objects&rdquo;.</p>
+<p><em>Denotational semantics</em> is to use <em>notation</em> to convey the <em>meaning</em>.</p>
+<h3 id="tensor-is-a-generalized-adt">Tensor is a generalized ADT<a hidden class="anchor" aria-hidden="true" href="#tensor-is-a-generalized-adt">#</a></h3>
+<p>The concept of a Tensor is even more a proper ADT.</p>
+<p>It has the notion of a <em>rank</em> and a <em>set of contrains</em>.</p>
+<h3 id="matrix-multiplication">Matrix multiplication<a hidden class="anchor" aria-hidden="true" href="#matrix-multiplication">#</a></h3>
+<p>Dimensions has to match up, just like <em>types</em> in a function composition.</p>
+<p>Just like a <em>function application</em> &ndash; <em>associative</em> but not <em>commutative</em>.</p>
+<p>Once composed (chained) correctly can be calculated (evaluated) in any order.</p>
+<h3 id="gilbert-strang">Gilbert Strang<a hidden class="anchor" aria-hidden="true" href="#gilbert-strang">#</a></h3>
+<p>The <em>column-oriented</em> perspective on Linear Algebra.</p>
+<p>An <em>&ldquo;n-dimension vector&rdquo;</em> (from the Origin) is a single <em>column</em>.</p>
+<p>It can be thought off as <em>denoting a point in a /&ldquo;n-dimensional space&rdquo;</em>.</p>
+<p>Thus the <em>order</em> of &ldquo;coordinates&rdquo; is fixed.</p>
+<h3 id="the-normal-equations-method">the Normal Equations method<a hidden class="anchor" aria-hidden="true" href="#the-normal-equations-method">#</a></h3>
+<p>\[ \Theta = (X^{T}X)^{-1} X^{T}y \]</p>
+<p>Matrix multiplication is <em>associative</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-octave" data-lang="octave"><span style="display:flex;"><span>  theta = pinv(X<span style="color:#f92672">&#39;*</span>X)<span style="color:#f92672">*</span>X<span style="color:#f92672">&#39;*</span>y<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>in Julia</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-julia" data-lang="julia"><span style="display:flex;"><span><span style="color:#f92672">\</span>Theta <span style="color:#f92672">=</span> (pinv(transpose(X)<span style="color:#f92672">*</span>X))<span style="color:#f92672">*</span>transpose(X)<span style="color:#f92672">*</span>y
+</span></span></code></pre></div><h2 id="learning-a-representation">Learning a representation<a hidden class="anchor" aria-hidden="true" href="#learning-a-representation">#</a></h2>
+<p>Learning the &ldquo;parameters&rdquo; of a function.</p>
+<p>Generalizing or &ldquo;inference&rdquo; (calling on an <em>unseen before values</em>, which is what it is all about) is just a straightforward computation with the <em>weights</em> (parameters) we have &ldquo;learned&rdquo;.</p>
+<p>Notice that &ldquo;prediction&rdquo; is a wrong word. We are not predicting or
+forecasting the future. We just calculate the output from a given input.</p>
+<p>The &ldquo;learning&rdquo; is just a &ldquo;curve fitting&rdquo; (squared error minimization) or
+a generalization of it - <em>no magic there</em>.</p>
+<p>Think if an &ldquo;elastic cloth&rdquo; (as a &ldquo;space&rdquo;) transformed by the weights
+&ldquo;hanging from it on strings&rdquo;.</p>
+<h2 id="non-bullshit-ml-for-trading">Non-bullshit ML for trading<a hidden class="anchor" aria-hidden="true" href="#non-bullshit-ml-for-trading">#</a></h2>
+<p>The most difficult (and crucial) part is to decide what are the <em>xs and /ys</em>.</p>
+<p>The &ldquo;AI will learn the hidden patterns in the data <em>by itself</em>&rdquo; meme is an
+utter bullshit. It is like finding patterns in the clouds or waves. They
+are out there, but they almost never repeat (never emerge again the same).</p>
+<p>So this will be finding patterns in a noise or fitting a &ldquo;space&rdquo; on all clouds (thus taking a snapshot).</p>
+<ul>
+<li>It has to be a well-defined &ldquo;table&rdquo; first</li>
+<li><em>&ldquo;features&rdquo;</em> has to be selected by hand</li>
+<li>including &ldquo;extra&rdquo; (explicit) ratios and rates of change</li>
+<li>3-candle &ldquo;mini-patterns&rdquo;</li>
+<li>every <em>4th candle</em> is a \(y\) for the previous \(3\)</li>
+<li>every scale is OK, just use <em>relative values</em></li>
+</ul>
+<h2 id="high-level">High-level<a hidden class="anchor" aria-hidden="true" href="#high-level">#</a></h2>
+<p>There are high-level libraries to be used (after all logical reasoning
+and math has been done &ldquo;on paper&rdquo;).</p>
+<p>A typical training procedure for a neural network is as follows:</p>
+<ul>
+<li>Define the neural network that has some learnable parameters (or weights)</li>
+<li>Iterate over a dataset of inputs</li>
+<li>Process input through the network</li>
+<li>Compute the loss (how far is the output from being correct)</li>
+<li>Propagate gradients back into the network’s parameters</li>
+<li>Update the weights of the network, typically using a simple update rule: <code>weight = weight - learning_rate * gradient</code></li>
+<li>You just have to define the <code>forward</code> method, and the <code>backward</code> method (where gradients are computed) is automatically derived for you using autograd.</li>
+</ul>
+<!--listend-->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  <span style="color:#f92672">import</span> torch.nn <span style="color:#66d9ef">as</span> nn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Net</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> __init__(self):
+</span></span><span style="display:flex;"><span>           super(Net, self)<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">return</span> x
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/trading/">trading</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/deep-learning/">deep learning</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/neural-network/">neural network</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
