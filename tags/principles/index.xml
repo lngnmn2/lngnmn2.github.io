@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>principles on Notes from the digital underground by Lngnmn</title>
+    <link>https://lngnmn2.github.io/tags/principles/</link>
+    <description>Recent content in principles on Notes from the digital underground by Lngnmn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Sep 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/principles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on proper abstractions and ADTs</title>
+      <link>https://lngnmn2.github.io/articles/prog1/</link>
+      <pubDate>Sun, 24 Sep 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/prog1/</guid>
+      <description>Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
+Both algebraic types (&amp;ldquo;products&amp;rdquo; and &amp;ldquo;sums&amp;rdquo;), could be used &amp;ldquo;like tables&amp;rdquo;, with new columns being added without affecting any code that is already out there.
+This implies a by name instead of position-based (offset) access.
+This, in turn, is the fundamental, definitive property of structs over tuples.</description>
+    </item>
+    
+  </channel>
+</rss>
