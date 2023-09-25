@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Way | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="">
+<meta name="description" content="  A breadth-first search for &#34;enlightenment&#34;.
+  ">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-way/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="The Way" />
+<meta property="og:description" content="  A breadth-first search for &#34;enlightenment&#34;.
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/the-way/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-09-25T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-09-25T19:04:17+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Way"/>
+<meta name="twitter:description" content="  A breadth-first search for &#34;enlightenment&#34;.
+  "/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Way",
+      "item": "https://lngnmn2.github.io/articles/the-way/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Way",
+  "name": "The Way",
+  "description": "  A breadth-first search for \"enlightenment\".\n  ",
+  "keywords": [
+    
+  ],
+  "articleBody": "There are something (a generalized class of algorithms) called “backtracking search”.\nThe main property is that an algorithm goes back onse a dead end is reached, or a certain threshold of maximum steps.\nThere are two “strategies” for these algorithms (of how to expand the “fringe”) - one is called “depth-first”, another – “breadth-first”.\nThe first one goes “fast” and “narrow” (inforamaly), where another one goes “slowly”, and “layer after layer”.\nIt is well-understood that the first one is “incomplete” and might miss the goal by going indefinitely “deep down into a rabbit hole”, whole another one is complete and guaranteed to eventually reach the target (the goal). The point it that it might be too late or even never happen withing a given time constraint.\nMost of people advocate to stick to a single language and really push on it without any “distraction”. To them all the books which end with “in Java” are being sold.\nAnother way is the old MIT way, which is about teaching (and learning) the principles (and the underlying mathematics) first and use a language as just a teaching tool.\nIt worked remarkably well when they used Scheme as a teaching language, and we got a whole generation of exceptionally good programmers out o that. Then they switched to Python and it “won” (nowadays it is even better than the fucking Javascript).\nSpeaking of Python, in the 3.12 (and 3.13) it would have the Scala-like type-parameters syntax, which is somehow a milestone (for what began as a dynamically typed language).\nYeah, it is “just right” to thing that a polymorphic function is sort of partially applied to a type variable, yielding a “normal” function. Anyway.\nThe point is that going breadth-first pays back when started early enough. One is expected to stick to a computer since primary school and even to program since secondary school. One has to get familiar and comfortable with mathematics early, and by reaching a college to be an above average in the high-school algebra and geometry.\nThen, the math-and-the-principles first approach will allow one eventually pick up particular languages easily, on the go, and to outperform these “Javascript” or “Python” guys by orders of magnitude. There won’t be even any “competition” from their side.\nI started “depth-fisrst” into System administration (which is called “devops” nowadays) and then slowly and painfully backtracked all the way back to high-school algebra and did a “breadth-first” through all the underlying mathematics. Now I understand how MIT grads feel like.\nBy the way, everything is actually quite easy at MIT if you are already familiar with all the underlying mathematical concepts, and it is almost impossible to survive if you don’t.\nThis means that the ones who started early and on the right path (program and messing with maths in their teens) will eventually get so further ahead by going through a distinguished tech school like MIT, Stanford, CMU or Cornell, that it would be rediculous to even try to compare such guys with a typical /g/ dweller or a code-monkey.\nThe real problem, however, is that all this knowledge without being applied is useless. Knowking is not enough, we must do (apply).\nSo, this is the way, which is remarkably similar to the Buddha’s “Right Path”, by being “grounded in reality” and to see things as they are, for which math is the only adequate language (in which the principles themselves are properly captured).\nFor those of us who never had a chance to get into MIT or even to study in our teens, there are just a very few good books (wast majority of books are crap). We have to read only the top 1% of the best guys who went in the right way.\nFinding these “right” books is another challenge, because going though commercial crap and graphomania of some narcissistic mediocrity burns you out.\nThis challenge, however, is very similar to a so-called spiritual journey, when one reaches an “enlightenment” after discarding all the socially constructed bullshit.\n",
+  "wordCount" : "667",
+  "inLanguage": "en",
+  "datePublished": "2023-09-25T00:00:00+05:45",
+  "dateModified": "2023-09-25T19:04:17+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-way/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      The Way
+    </h1>
+    <div class="post-description">
+        A breadth-first search for &#34;enlightenment&#34;.
+  
+    </div>
+    <div class="post-meta"><span title='2023-09-25 00:00:00 +0545 +0545'>September 25, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There are something (a generalized class of algorithms) called <em>&ldquo;backtracking search&rdquo;</em>.</p>
+<p>The main property is that an algorithm goes back onse a dead end is reached, or a certain threshold of maximum steps.</p>
+<p>There are two &ldquo;strategies&rdquo; for these algorithms (of how to expand the &ldquo;fringe&rdquo;) - one is called &ldquo;depth-first&rdquo;, another &ndash; &ldquo;breadth-first&rdquo;.</p>
+<p>The first one goes &ldquo;fast&rdquo; and &ldquo;narrow&rdquo; (inforamaly), where another one goes &ldquo;slowly&rdquo;, and &ldquo;layer after layer&rdquo;.</p>
+<p>It is well-understood that the first one is &ldquo;incomplete&rdquo; and might miss the goal by going indefinitely &ldquo;deep down into a rabbit hole&rdquo;, whole another one is <em>complete</em> and guaranteed to <em>eventually</em> reach the target (the goal). The point it that it might be too late or even never happen withing a given time constraint.</p>
+<p>Most of people advocate to stick to a single language and really push on it without any &ldquo;distraction&rdquo;. To them all the books which end with &ldquo;in Java&rdquo; are being sold.</p>
+<p>Another way is the old MIT way, which is about teaching (and learning) the principles (and the underlying mathematics) first and use a language as just a teaching tool.</p>
+<p>It worked remarkably well when they used <em>Scheme</em> as a teaching language, and we got a whole generation of exceptionally good programmers out o that. Then they switched to <em>Python</em> and it &ldquo;won&rdquo; (nowadays it is even better than the fucking <em>Javascript</em>).</p>
+<p>Speaking of <em>Python</em>, in the 3.12 (and 3.13) it would have the Scala-like type-parameters syntax, which is somehow a milestone (for what began as a dynamically typed language).</p>
+<p>Yeah, it is &ldquo;just right&rdquo; to thing that a <em>polymorphic</em> function is sort of <em>partially applied</em> to a type variable, yielding a &ldquo;normal&rdquo; function. Anyway.</p>
+<p>The point is that going <em>breadth-first</em> pays back when started early enough. One is expected to stick to a computer since primary school and even to program since secondary school. One has to get familiar and comfortable with mathematics early, and by reaching a college to be an above average in the high-school algebra and geometry.</p>
+<p>Then, the <em>math-and-the-principles</em> first approach will allow one <em>eventually</em> pick up particular languages easily, on the go, and to outperform these &ldquo;Javascript&rdquo; or &ldquo;Python&rdquo; guys by orders of magnitude. There won&rsquo;t be even any &ldquo;competition&rdquo; from their side.</p>
+<p>I started &ldquo;depth-fisrst&rdquo; into System administration (which is called &ldquo;devops&rdquo; nowadays) and then slowly and painfully backtracked all the way back to high-school algebra and did a &ldquo;breadth-first&rdquo; through all the underlying mathematics. Now I understand how MIT grads feel like.</p>
+<p>By the way, everything is actually quite <em>easy</em> at MIT if you are already familiar with all the underlying mathematical concepts, and it is almost impossible to survive if you don&rsquo;t.</p>
+<p>This means that the ones who started early and on the right path (program and messing with maths in their teens) will <em>eventually</em> get so further ahead by going through a distinguished tech school like MIT, Stanford, CMU or Cornell, that it would be rediculous to even try to compare such guys with a typical <code>/g/</code> dweller or a code-monkey.</p>
+<p>The real problem, however, is that all this knowledge without being applied is useless. <em>Knowking is not enough, we must do (apply)</em>.</p>
+<p>So, this is the way, which is remarkably similar to the Buddha&rsquo;s &ldquo;Right Path&rdquo;, by being &ldquo;grounded in reality&rdquo; and to <em>see things as they are</em>, for which <em>math</em> is the only adequate <em>language</em> (in which the principles themselves are properly captured).</p>
+<p>For those of us who never had a chance to get into MIT or even to study in our teens, there are just a very few good books (wast majority of books are crap). We have to read only the top 1% of the best guys who went in the right way.</p>
+<p>Finding these &ldquo;right&rdquo; books is another challenge, because going though commercial crap and graphomania of some narcissistic mediocrity burns you out.</p>
+<p>This challenge, however, is very similar to a so-called <em>spiritual journey</em>, when one reaches an &ldquo;enlightenment&rdquo; after <em>discarding</em> all the socially constructed bullshit.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
