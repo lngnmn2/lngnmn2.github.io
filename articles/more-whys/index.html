@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>More Whys | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="">
+<meta name="description" content="Have you ever thought why the Set Theory and Predicate Logic looks &ldquo;the same&rdquo; when being visualized using Venn and Euler diagrams?
+Are these partitions is the most fundamental abstract building block?
+Most of the examples which are used to explain logic has been drawn from &ldquo;natural categories&rdquo; of biological species - mammals, reptiles, men.
+These are distinct partitions indeed, but how they came to be as they are?
+It is because somewhere in the past a literal &ldquo;fork&rdquo;, a mutation (or a whole set of these) occurred (and the resulting population survived).">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/more-whys/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="More Whys" />
+<meta property="og:description" content="Have you ever thought why the Set Theory and Predicate Logic looks &ldquo;the same&rdquo; when being visualized using Venn and Euler diagrams?
+Are these partitions is the most fundamental abstract building block?
+Most of the examples which are used to explain logic has been drawn from &ldquo;natural categories&rdquo; of biological species - mammals, reptiles, men.
+These are distinct partitions indeed, but how they came to be as they are?
+It is because somewhere in the past a literal &ldquo;fork&rdquo;, a mutation (or a whole set of these) occurred (and the resulting population survived)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/more-whys/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-09-29T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-09-29T19:59:06+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="More Whys"/>
+<meta name="twitter:description" content="Have you ever thought why the Set Theory and Predicate Logic looks &ldquo;the same&rdquo; when being visualized using Venn and Euler diagrams?
+Are these partitions is the most fundamental abstract building block?
+Most of the examples which are used to explain logic has been drawn from &ldquo;natural categories&rdquo; of biological species - mammals, reptiles, men.
+These are distinct partitions indeed, but how they came to be as they are?
+It is because somewhere in the past a literal &ldquo;fork&rdquo;, a mutation (or a whole set of these) occurred (and the resulting population survived)."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "More Whys",
+      "item": "https://lngnmn2.github.io/articles/more-whys/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "More Whys",
+  "name": "More Whys",
+  "description": "Have you ever thought why the Set Theory and Predicate Logic looks \u0026ldquo;the same\u0026rdquo; when being visualized using Venn and Euler diagrams?\nAre these partitions is the most fundamental abstract building block?\nMost of the examples which are used to explain logic has been drawn from \u0026ldquo;natural categories\u0026rdquo; of biological species - mammals, reptiles, men.\nThese are distinct partitions indeed, but how they came to be as they are?\nIt is because somewhere in the past a literal \u0026ldquo;fork\u0026rdquo;, a mutation (or a whole set of these) occurred (and the resulting population survived).",
+  "keywords": [
+    
+  ],
+  "articleBody": "Have you ever thought why the Set Theory and Predicate Logic looks “the same” when being visualized using Venn and Euler diagrams?\nAre these partitions is the most fundamental abstract building block?\nMost of the examples which are used to explain logic has been drawn from “natural categories” of biological species - mammals, reptiles, men.\nThese are distinct partitions indeed, but how they came to be as they are?\nIt is because somewhere in the past a literal “fork”, a mutation (or a whole set of these) occurred (and the resulting population survived).\nSchematically, it was a “split” event, denoted as \\(\u003c\\). Or a “fork”.\nAfter such kind of a “split” or a “fork” two distinct “partitions” have been emerged - one which has a new distinct property, and the other which does not.\nAt all levels, from DNA to whole species the same reasoning (or a universal law) applies.\nNotice that this process has a direction, and the notion of something being prior to something else - an implicit ordering.\nWhen we reduce everything to bunch of dots and errors (connected into directed graphs) we would be able to see the Causality Itself at work.\nThis is why we see all the dots and arrows in most fundamental mathematical and logical formalisms.\nSo, “logic works” because (and only because) the Causality is out there, it has its “patterns” and “directionality” (which one may mistake for the abstract notion of Time).\nFunction composition which is one of the most fundamental building blocks of the Lambda Calculus (an implicit Environment is another one) has been “implemented as nesting” to capture the notion of directionality, is depicted as a two joined arrows - the fundamental building block.\nThis is also signifies the fact than no “fork” occurred there.\nAll logic and mathematics could be unfolded back to these “universal patterns of Causality” – “steps”, “forks” and “joins”.\nJoins are the captured notion of “necessary and sufficient”, and currying is a perfectly captured “implementation” – all slots has to be filled in, and the intermediate state “partially applied lambda” is out there.\nForks are all imaginary and hypothetical (it is always either one way or another, as if multiple ways do not actually exist), but the results of the events are real – the resulting “partitions” are distinct and observable.\nThis is an important notion. Every water molecule in a stream seem to have an innumerable branching factor of an imaginary tree of potential “forks”, yet, it goes it unique “linear” path without a single fork.\nThe principle is this: In order to be valid and sound logic, math, machine learning algorithtms /has to be applied to actual patterns – the properly captured and generalized data.\nJust like addition is properly abstracted away from what is being added (put together), some rules of logic are the properly captured abstractions (by the same process within the Mind of an External Observer).\nIt is not arbitrary that the notion of a Narural Number could be defined as a cardinality of a Set. This is the proper capture (the unary number system of scratches on a wall).\nSets capture the universal notions of partitioning (as results of “forks”) which the Mind observes (and which are out there prior to it).\nThe whole Tree of Life has its structure due to what we call the causality principle, which, in turn, is due to the laws of the Universe (at this partocular locality).\nLogic, maths and now the “deep learning” are “results” (proper generalizations of some aspects) of these processes – Observing the same “mountain” (Universe) from different distances and points of view.\nNo fundamental “correspondences” or “isomorphisms” (at the level of dots and arrows) are arbitrary.\nThe notions of the premises, of the shared environment, of the \\[\\Gamma\\], of a global namespace (and its nested frames) are capturing the fact of “prior results” - of stable intermediate results, necessary for new transitions (steps).\nThe point is to realize the whys these correspondences exist in the first place, and then to use these fundamental building blocks “just right” in our programs.\nAll the fundamental notions has already been captured (but not yet properly systematized).\nDots and arrows at the level of closures Sets of values as simplest types (partitions) Sets of interfaces (which are individual type-signatures) Algebraic types (\\(|\\), $,$, \\(\\rightarrow\\) ) Set Union at a type level, Set Intersection at a type level A Subset relation (as sub-classing) concatenation as a composition of Traits Haskell type-classes as required subset at a interface level. And the Environments in which everything happens The same building blocks are necessarily underlying any form of logic, and this is why Curry-Howard correspondence do exist.\nLast but not least, it is all can be imagined a directed graph with retrospective “forks” and “joins”, which are not “loops”.\nIteration is a spiral, not a loop, just a recursive processes are.\n",
+  "wordCount" : "816",
+  "inLanguage": "en",
+  "datePublished": "2023-09-29T00:00:00+05:45",
+  "dateModified": "2023-09-29T19:59:06+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/more-whys/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      More Whys
+    </h1>
+    <div class="post-meta"><span title='2023-09-29 00:00:00 +0545 +0545'>September 29, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Have you ever thought <em>why</em> the <em>Set Theory</em> and <em>Predicate Logic</em> looks &ldquo;the
+same&rdquo; when being visualized using Venn and Euler diagrams?</p>
+<p>Are these <em>partitions</em> is the most fundamental abstract building block?</p>
+<p>Most of the examples which are used to explain logic has been drawn from
+&ldquo;natural categories&rdquo; of biological species - mammals, reptiles, men.</p>
+<p>These are distinct partitions indeed, but how they came to be as they
+are?</p>
+<p>It is because somewhere in the past a literal &ldquo;fork&rdquo;, a mutation (or a
+whole set of these) occurred (and the resulting population survived).</p>
+<p>Schematically, it was a &ldquo;split&rdquo; event, denoted as \(&lt;\). Or a &ldquo;fork&rdquo;.</p>
+<p><em>After</em> such kind of a &ldquo;split&rdquo; or a &ldquo;fork&rdquo; two distinct &ldquo;partitions&rdquo; have
+been emerged - one which has a new distinct property, and the other
+which does not.</p>
+<p>At all levels, from DNA to whole species the same reasoning (or a
+universal law) applies.</p>
+<p>Notice that this process has a <em>direction</em>, and the notion of something
+being <em>prior</em> to something else - an implicit ordering.</p>
+<p>When we reduce everything to bunch of <em>dots and errors</em> (connected into
+directed graphs) we would be able to see the Causality Itself at work.</p>
+<p><em>This is why</em> we see all the dots and arrows in most fundamental
+mathematical and logical formalisms.</p>
+<p>So, &ldquo;logic works&rdquo; because (and only because) the Causality is out there,
+it has its &ldquo;patterns&rdquo; and &ldquo;directionality&rdquo; (which one may mistake for
+the abstract notion of Time).</p>
+<p><em>Function composition</em> which is one of the most fundamental building
+blocks of the <em>Lambda Calculus</em> (an implicit Environment is another one)
+has been &ldquo;implemented as nesting&rdquo; to capture the notion of
+directionality, is depicted as a <em>two joined arrows</em> - the fundamental
+building block.</p>
+<p>This is also signifies the fact than no &ldquo;fork&rdquo; occurred there.</p>
+<p>All logic and mathematics could be unfolded back to these &ldquo;universal
+patterns of Causality&rdquo; &ndash; &ldquo;steps&rdquo;, &ldquo;forks&rdquo; and &ldquo;joins&rdquo;.</p>
+<p>Joins are the captured notion of &ldquo;necessary and sufficient&rdquo;, and
+<em>currying</em> is a perfectly captured &ldquo;implementation&rdquo; &ndash; all slots has to be
+filled in, and the intermediate state &ldquo;partially applied lambda&rdquo; is out
+there.</p>
+<p>Forks are all imaginary and hypothetical (it is always either one way or
+another, as if multiple ways do not actually exist), but the results of
+the events are real &ndash; the resulting &ldquo;partitions&rdquo; are distinct and observable.</p>
+<p>This is an important notion. Every water molecule in a stream seem to
+have an innumerable branching factor of an imaginary tree of potential
+&ldquo;forks&rdquo;, yet, it goes it unique &ldquo;linear&rdquo; path without a single fork.</p>
+<p>The principle is this: In order to be valid and sound logic, math,
+machine learning algorithtms /has to be applied to actual patterns &ndash;
+the properly captured and generalized data.</p>
+<p>Just like addition is properly abstracted away from what is being added
+(put together), <em>some</em> rules of logic are the properly captured
+abstractions (by the same process within the Mind of an External
+Observer).</p>
+<p>It is not arbitrary that the notion of a Narural Number could be defined as a cardinality of a Set. This is the proper capture (the unary number system of scratches on a wall).</p>
+<p>Sets capture the universal notions of partitioning (as results of
+&ldquo;forks&rdquo;) which the Mind observes (and which are <em>out there prior to it</em>).</p>
+<p>The whole <em>Tree of Life</em> has its structure due to what we call the
+causality principle, which, in turn, is due to the laws of the Universe
+(at this partocular locality).</p>
+<p>Logic, maths and now the &ldquo;deep learning&rdquo; are &ldquo;results&rdquo; (proper
+generalizations of some aspects) of these processes &ndash; Observing the
+same &ldquo;mountain&rdquo; (Universe) from different distances and  points of view.</p>
+<p>No fundamental &ldquo;correspondences&rdquo; or &ldquo;isomorphisms&rdquo; (at the level of dots
+and arrows) are arbitrary.</p>
+<p>The notions of the premises, of the shared environment, of the \[\Gamma\], of a
+<em>global namespace</em> (and its nested frames) are capturing the fact of &ldquo;prior results&rdquo; - of stable intermediate results, necessary for new transitions (steps).</p>
+<p>The point is to realize the <em>whys</em> these correspondences exist in the
+first place, and then to use these fundamental building blocks &ldquo;just right&rdquo; in our programs.</p>
+<p>All the fundamental notions has already been captured (but not
+yet properly systematized).</p>
+<ul>
+<li><em>Dots and arrows</em> at the level of <em>closures</em></li>
+<li><em>Sets of values</em> as simplest types (partitions)</li>
+<li>Sets of <em>interfaces</em> (which are individual type-signatures)</li>
+<li>Algebraic types (\(|\), $,$, \(\rightarrow\) )</li>
+<li>Set Union at a type level,</li>
+<li>Set Intersection at a type level</li>
+<li>A Subset relation (as sub-classing)</li>
+<li><em>concatenation</em> as a composition of Traits</li>
+<li>Haskell type-classes as <em>required subset</em> at a interface level.</li>
+<li>And the <em>Environments</em> in which everything happens</li>
+</ul>
+<p>The same building blocks are necessarily underlying any form of logic, and this is <em>why</em> Curry-Howard correspondence do exist.</p>
+<p>Last but not least, it is all can be imagined a directed graph with retrospective &ldquo;forks&rdquo; and &ldquo;joins&rdquo;, which are not &ldquo;loops&rdquo;.</p>
+<p>Iteration is a <em>spiral</em>, not a loop, just a recursive processes are.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
