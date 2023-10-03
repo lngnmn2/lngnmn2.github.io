@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Junk Foods of Programming | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, DSL">
+<meta name="description" content="A small disclaimer: I&rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.
+Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto &ldquo;engineers&rdquo;, of course.
+Just like chef Gusteau from the Ratatouille movie famously proclaimed &ndash; &ldquo;Anyone can cook&rdquo;.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/junk-food/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="The Junk Foods of Programming" />
+<meta property="og:description" content="A small disclaimer: I&rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.
+Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto &ldquo;engineers&rdquo;, of course.
+Just like chef Gusteau from the Ratatouille movie famously proclaimed &ndash; &ldquo;Anyone can cook&rdquo;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/junk-food/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-10-03T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-10-03T13:37:24+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Junk Foods of Programming"/>
+<meta name="twitter:description" content="A small disclaimer: I&rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.
+Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto &ldquo;engineers&rdquo;, of course.
+Just like chef Gusteau from the Ratatouille movie famously proclaimed &ndash; &ldquo;Anyone can cook&rdquo;."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Junk Foods of Programming",
+      "item": "https://lngnmn2.github.io/articles/junk-food/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Junk Foods of Programming",
+  "name": "The Junk Foods of Programming",
+  "description": "A small disclaimer: I\u0026rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.\nNowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto \u0026ldquo;engineers\u0026rdquo;, of course.\nJust like chef Gusteau from the Ratatouille movie famously proclaimed \u0026ndash; \u0026ldquo;Anyone can cook\u0026rdquo;.",
+  "keywords": [
+    "ADT", "DSL"
+  ],
+  "articleBody": "A small disclaimer: I’ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.\nNowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto “engineers”, of course.\nJust like chef Gusteau from the Ratatouille movie famously proclaimed – “Anyone can cook”.\nWell, bad cooking is easy – one just put the ingredients together and heat it up. Most of the time the result will be tolerated, and will even have some demand if priced cheap enough.\nI absolutely love these food porn videos on social media, where they show how Indian non-veg curries were made - they literally put together like 10 different spicy powders (masalaa) in a pod, with meat, gee and curd (why not?!), and then just grossly over-heat it.\nThere has to be a better way, but it requires a lot of knowledge (and experience) about what is the best match to what, what exact temperature is optimal for this and that ingredient, how long they have to be cooked at that particular temperature and thus what is the proper timing to add stuff in (and how to do it without ruining what has already been done).\nJunk-food is the best metaphor I know of about “modern coding” which is being shilled to us as a programming. Almost no one is qualified or even has enough experience, but everyone is advertising their “skills” and cool “projects”.\nLiterally, just like these makeshift food stalls at a seasonal bazaar. Well, there are always a few masters among them, but this is not the point.\nThe code we see literally everywhere (nowadays mostly on Github) is a low-effort, never-researched crap by unqualified but very ambitious narcissistic amateurs. It is especially prominent in the Haskell community.\nIf only one would compare the carefully crafted code of Richard Bird, Graham Hutton, Paul Hudak, Philip Wadler and, of course, SPJ which the crap we see on hackage and Github…\nThe main problem, is, of course, unnecessary, redundant abstractions (which is the root of all evil) and over-abstraction without understanding in general. They just put everything in a pot.\nYes, indeed, just as Peter Norvig, the great (https://www.norvig.com/21-days.html), said: “Bad programming is easy. Idiots can learn it in 21 days , even if they are dummies”. And, boy, they actually do.\nAll these Chuds is a real cancer, just like that “Russki Mir”, you know.\nImmutability, which is, perhaps, the most profound and universal principle, has been turned by Chuds into that “Nix” abomination, which literally shits on my disks with gigabytes of unnecessary, redundant crap.\nThe ignorant idiots are trying to enforce it at the lowest, implementation level instead on a proper conceptual level of abstractions.\nWell, for that the Chuds have to read (and understand) the classic book by Barbara Liskov (“Abstraction and Specification in Program Development”), which teaches how to define a proper, non-leaking ADT, what are the implications (possibility of having and using multiple implementations), and, most importantly, do not have this problem, which “requires” all this:\nls ~/.stack/snapshots/x86_64-linux/260ea70bfa01bb3c75249eacb12ba7643c201e7a6f18bfe9a2b5327959d557fa/9.6.3/lib/x86_64-linux-ghc-9.6.3/ aeson-2.1.2.1-AtHDhNlMDlXGlQEQo9BMGu aeson-pretty-0.8.10-7bTrb6h5JjV6fkukjlf4nG ansi-terminal-1.0-3kfRbX22CbYKtT7TWkfDm3 ansi-terminal-types-0.11.5-7070YP17lX07wjJ4YjrtXA ansi-wl-pprint-1.0.2-7W2Pb8mhGAZ2C885aRPEnj assoc-1.1-B2oYzvtRAbL6TdG9vtcpvT attoparsec-0.14.4-8EcVDwSMoUiLNbBvSik1jh-attoparsec-internal attoparsec-0.14.4-IisHTJET72jKYnz1Wlbmz9 base-compat-0.13.0-JbgR4gkZn2S7VJJWJHpoE base-compat-batteries-0.13.0-6rnW8gl5KYBFY48L9XeQFH base-orphans-0.9.0-J44kyio6vh9BIquFiEWgdc bifunctors-5.6.1-BKBejTD5rTW2Cwk3hpbNKZ cmdargs-0.10.22-Bo66f0Kl3eE5G8AycK8y3n colour-2.3.6-CL1PpcKDPAc8DjPzbsln3V comonad-5.0.8-7VmOZq2W2aPEc92Us4CIJR contravariant-1.5.5-D7uv6gRHfsshi2SiSflrv data-default-0.7.1.1-3YvGn2u185f1XWhdramjaH data-default-class-0.1.2.0-5FK3vpOLcdkKGIel7pORbQ data-default-instances-containers-0.0.1-4iMZsUnb16EAGSBDaolDhW data-default-instances-dlist-0.0.1-IZH6bFs7BObEUaakPOxb0v data-default-instances-old-locale-0.0.1-2s6n6c5MnQ7LChnI5uCwHf data-fix-0.3.2-LxyWgDBHbHh457Ex3XUnTI distributive-0.6.2.1-91VzmrRDrQ29F0tHcRSIMo dlist-1.0-EiNZyHbYIYq9Gl8u0nmg6M free-5.2-6t18XEmCbtvCVgcZ5FDJ32 generically-0.1.1-EkcRYhUnPJ57wDcdcrdfk6 hashable-1.4.3.0-Cy9XuTuozCgAdsdKEf3KNi haskell-src-exts-1.23.1-6bq8L1rOeseFIOXsg52Nca indexed-traversable-0.1.2.1-HT9WlttgftJ3Yjcmj6Vls1 indexed-traversable-instances-0.1.1.2-3HUB7EIjq533qow89Uyy4h integer-logarithms-1.0.3.1-6BMdz0fAUjKELClrM8UIuk libHSaeson-2.1.2.1-AtHDhNlMDlXGlQEQo9BMGu-ghc9.6.3.so libHSaeson-pretty-0.8.10-7bTrb6h5JjV6fkukjlf4nG-ghc9.6.3.so libHSansi-terminal-1.0-3kfRbX22CbYKtT7TWkfDm3-ghc9.6.3.so libHSansi-terminal-types-0.11.5-7070YP17lX07wjJ4YjrtXA-ghc9.6.3.so libHSansi-wl-pprint-1.0.2-7W2Pb8mhGAZ2C885aRPEnj-ghc9.6.3.so libHSassoc-1.1-B2oYzvtRAbL6TdG9vtcpvT-ghc9.6.3.so libHSattoparsec-0.14.4-8EcVDwSMoUiLNbBvSik1jh-attoparsec-internal-ghc9.6.3.so libHSattoparsec-0.14.4-IisHTJET72jKYnz1Wlbmz9-ghc9.6.3.so libHSbase-compat-0.13.0-JbgR4gkZn2S7VJJWJHpoE-ghc9.6.3.so libHSbase-compat-batteries-0.13.0-6rnW8gl5KYBFY48L9XeQFH-ghc9.6.3.so libHSbase-orphans-0.9.0-J44kyio6vh9BIquFiEWgdc-ghc9.6.3.so libHSbifunctors-5.6.1-BKBejTD5rTW2Cwk3hpbNKZ-ghc9.6.3.so libHScmdargs-0.10.22-Bo66f0Kl3eE5G8AycK8y3n-ghc9.6.3.so libHScolour-2.3.6-CL1PpcKDPAc8DjPzbsln3V-ghc9.6.3.so libHScomonad-5.0.8-7VmOZq2W2aPEc92Us4CIJR-ghc9.6.3.so libHScontravariant-1.5.5-D7uv6gRHfsshi2SiSflrv-ghc9.6.3.so libHSdata-default-0.7.1.1-3YvGn2u185f1XWhdramjaH-ghc9.6.3.so libHSdata-default-class-0.1.2.0-5FK3vpOLcdkKGIel7pORbQ-ghc9.6.3.so libHSdata-default-instances-containers-0.0.1-4iMZsUnb16EAGSBDaolDhW-ghc9.6.3.so libHSdata-default-instances-dlist-0.0.1-IZH6bFs7BObEUaakPOxb0v-ghc9.6.3.so libHSdata-default-instances-old-locale-0.0.1-2s6n6c5MnQ7LChnI5uCwHf-ghc9.6.3.so libHSdata-fix-0.3.2-LxyWgDBHbHh457Ex3XUnTI-ghc9.6.3.so libHSdistributive-0.6.2.1-91VzmrRDrQ29F0tHcRSIMo-ghc9.6.3.so libHSdlist-1.0-EiNZyHbYIYq9Gl8u0nmg6M-ghc9.6.3.so libHSfree-5.2-6t18XEmCbtvCVgcZ5FDJ32-ghc9.6.3.so libHSgenerically-0.1.1-EkcRYhUnPJ57wDcdcrdfk6-ghc9.6.3.so libHShashable-1.4.3.0-Cy9XuTuozCgAdsdKEf3KNi-ghc9.6.3.so libHShaskell-src-exts-1.23.1-6bq8L1rOeseFIOXsg52Nca-ghc9.6.3.so libHSindexed-traversable-0.1.2.1-HT9WlttgftJ3Yjcmj6Vls1-ghc9.6.3.so libHSindexed-traversable-instances-0.1.1.2-3HUB7EIjq533qow89Uyy4h-ghc9.6.3.so libHSinteger-logarithms-1.0.3.1-6BMdz0fAUjKELClrM8UIuk-ghc9.6.3.so libHSmonad-dijkstra-0.1.1.3-CgVzvieVxhx2JPRSo7EHqY-ghc9.6.3.so libHSold-locale-1.0.0.7-OpLxQwSdbqHzI1qJrI5NI-ghc9.6.3.so libHSOneTuple-0.4.1.1-3xROWIPE1CT4QZlQuFvzgR-ghc9.6.3.so libHSoptparse-applicative-0.18.1.0-5cbl2zXi6SE2pC3wd7rg7U-ghc9.6.3.so libHSprettyprinter-1.7.1-5e7OiMaiyLWFEOfH8r8oT4-ghc9.6.3.so libHSprettyprinter-ansi-terminal-1.1.3-4Ig0UpU6YgF9y9AFEicGiL-ghc9.6.3.so libHSprettyprinter-compat-ansi-wl-pprint-1.0.2-GfW9Eya3Gwc5xywUHVIlks-ghc9.6.3.so libHSprimitive-0.8.0.0-Jo5jlESTXJeEofOqAuqg9C-ghc9.6.3.so libHSprofunctors-5.6.2-4f0ilW1gMatAhGo5L3LEyL-ghc9.6.3.so libHSpsqueues-0.2.7.3-2kvLBLtRyjxI4EXBl9dKvi-ghc9.6.3.so libHSQuickCheck-2.14.3-3pqw5pyBKGqHO3NbSB9C7y-ghc9.6.3.so libHSrandom-1.2.1.1-I7RCALOFfYGFaJvIapv0Ql-ghc9.6.3.so libHSscientific-0.3.7.0-KNaRCO8KEOFA8E2t5UN5Bi-ghc9.6.3.so libHSsemialign-1.3-2GwwSRQ97db1tic40Nc1OT-ghc9.6.3.so libHSsemigroupoids-6.0.0.1-BO0d9UKfiwM2rKjtaDXfIv-ghc9.6.3.so libHSsplitmix-0.1.0.4-3LPiSuZCzhU6PeA3JszOX5-ghc9.6.3.so libHSStateVar-1.2.2-LE1zE95ecHb3rKz2GzNMvC-ghc9.6.3.so libHSstrict-0.5-4zd7ONntlnWFbP40qKstE9-ghc9.6.3.so libHStagged-0.8.7-DqRkQTFiCFVIkc5ul6U7ms-ghc9.6.3.so libHStext-short-0.1.5-2mzATDPgHcEDIpJmXzh33-ghc9.6.3.so libHSth-abstraction-0.5.0.0-JD9vmJ369jBCu5VUUIjZuj-ghc9.6.3.so libHSthese-1.2-IKneMuHnSS84xFpHBzbRdQ-ghc9.6.3.so libHStime-compat-1.9.6.1-DlgiqBexBaS23LqsxahfKQ-ghc9.6.3.so libHStransformers-base-0.4.6-1AaMvJ2gX4DSSZfr5Ad54-ghc9.6.3.so libHStransformers-compat-0.7.2-9x8A6zWhyVKLofAGiBIUux-ghc9.6.3.so libHSunordered-containers-0.2.19.1-BWYtaJ8jCLn9nFdaUg5lKu-ghc9.6.3.so libHSuuid-types-1.0.5-BoZZBLnt7jULlvbkdidkgS-ghc9.6.3.so libHSvector-0.13.0.0-DQjDtT0hTdSECzYvtVe6dV-ghc9.6.3.so libHSvector-stream-0.1.0.0-46tIj2XpJ1K5aHx2g36wqS-ghc9.6.3.so libHSwitherable-0.4.2-5Hu3Nk4QTme835unXarsGj-ghc9.6.3.so monad-dijkstra-0.1.1.3-CgVzvieVxhx2JPRSo7EHqY old-locale-1.0.0.7-OpLxQwSdbqHzI1qJrI5NI OneTuple-0.4.1.1-3xROWIPE1CT4QZlQuFvzgR optparse-applicative-0.18.1.0-5cbl2zXi6SE2pC3wd7rg7U prettyprinter-1.7.1-5e7OiMaiyLWFEOfH8r8oT4 prettyprinter-ansi-terminal-1.1.3-4Ig0UpU6YgF9y9AFEicGiL prettyprinter-compat-ansi-wl-pprint-1.0.2-GfW9Eya3Gwc5xywUHVIlks primitive-0.8.0.0-Jo5jlESTXJeEofOqAuqg9C profunctors-5.6.2-4f0ilW1gMatAhGo5L3LEyL psqueues-0.2.7.3-2kvLBLtRyjxI4EXBl9dKvi QuickCheck-2.14.3-3pqw5pyBKGqHO3NbSB9C7y random-1.2.1.1-I7RCALOFfYGFaJvIapv0Ql scientific-0.3.7.0-KNaRCO8KEOFA8E2t5UN5Bi semialign-1.3-2GwwSRQ97db1tic40Nc1OT semigroupoids-6.0.0.1-BO0d9UKfiwM2rKjtaDXfIv splitmix-0.1.0.4-3LPiSuZCzhU6PeA3JszOX5 StateVar-1.2.2-LE1zE95ecHb3rKz2GzNMvC strict-0.5-4zd7ONntlnWFbP40qKstE9 tagged-0.8.7-DqRkQTFiCFVIkc5ul6U7ms text-short-0.1.5-2mzATDPgHcEDIpJmXzh33 th-abstraction-0.5.0.0-JD9vmJ369jBCu5VUUIjZuj these-1.2-IKneMuHnSS84xFpHBzbRdQ time-compat-1.9.6.1-DlgiqBexBaS23LqsxahfKQ transformers-base-0.4.6-1AaMvJ2gX4DSSZfr5Ad54 transformers-compat-0.7.2-9x8A6zWhyVKLofAGiBIUux unordered-containers-0.2.19.1-BWYtaJ8jCLn9nFdaUg5lKu uuid-types-1.0.5-BoZZBLnt7jULlvbkdidkgS vector-0.13.0.0-DQjDtT0hTdSECzYvtVe6dV vector-stream-0.1.0.0-46tIj2XpJ1K5aHx2g36wqS witherable-0.4.2-5Hu3Nk4QTme835unXarsGj One more time: abstraction by specification has to be done at the lavel of stable interfaces, such that implementations are not even a concern.\nJust like it has been done with good quality, properly desinged and well-crafted stdlibs (of SML, Haskell, Ocaml Scala and Go), I do not care about the actual implementations of the List module as long as the specifications holds. Same is true for all the other major ADTs.\nNothing of that fucking abomination displayed above is required or necessary.\nSpecifications and immutability at the interface level (and of the bindings) is at the core of proper programming (and mathematics).\nThis has lots of implications. One would have discover that the TLA+ system is about checking and proving the properties and invariants at an interface level.\nThat the defuns and defstrcuts are enough to implement the CLOS, or that the core OCaml is enough to define an Object System (an extension, which is a set of embedded DSLs) and other remarkable, principle-guided achievements.\nAll this was possible because of stable (immutable) interfaces. When we must change something we must define a new (versioned, perhaps) interface, /just exactly as if we have to define a new binding with a new symbol (as in Erlang).\nWe could also define a new binding which will shadow the previous one in a particular scope. The module system of modern Ocaml has been done just right and has all these well-researched mechanisms implemented, including that “open” keyword.\nLast but not least, even that narcissistic Rich Hickey in one of his talks (I do not remember which, because they all so poorly structured) got it right with the reference to the Maven repository as an immutable structure and that this very property is the key to its usability at a global scale.\nOne cannot change any of already published packages (and the interfaces they export), only to “extend” the repo with a new version on a corresponding branch.\nThis is exactly the fundamental (and even universal) principles at work.\nAnd this, finally, after taking a whole “round trip”, brings us back to the “extensions methods” of Scala (stolen from it without understanding, like everything else, by Kotlin).\nThe concept is, not surprisingly, is very similar to Haskell’s type-classes which are a sets of required (to be implemented according to informally stated “laws”) interfaces.\nWe just concatenate a new set of interfaces, without nesting or sub-setting of the concepts, and thus “extend” a type with a new Trait.\nLet the mix of terminology from the different meme-languages not to confuse you – they all just different names for the same poorly generalized universal notions, which are:\nImmutability at the level of “stable” interfaces. Ensuring specifications instead or implementations. This principle holds all the biology together and is the basis of Life Itself. No fucking hashes required.\nBut Who Am I to tell to the Chuds how to do things.\n",
+  "wordCount" : "1139",
+  "inLanguage": "en",
+  "datePublished": "2023-10-03T00:00:00+05:45",
+  "dateModified": "2023-10-03T13:37:24+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/junk-food/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      The Junk Foods of Programming
+    </h1>
+    <div class="post-meta"><span title='2023-10-03 00:00:00 +0545 +0545'>October 3, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>A small disclaimer: I&rsquo;ve lived in India for a few years, I have some good friends there and I think I <em>begin</em> to really understand the some cultural aspects which govern this vastly complex and spontaneous society.</p>
+<p>Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a <em>crapto</em> &ldquo;engineers&rdquo;, of course.</p>
+<p>Just like chef <em>Gusteau</em> from the <em>Ratatouille</em> movie famously proclaimed &ndash; <em>&ldquo;Anyone can cook&rdquo;</em>.</p>
+<p>Well, bad cooking is easy &ndash; one just put the ingredients together and heat it up. Most of the time the result will be tolerated, and will even have some <em>demand</em> if priced cheap enough.</p>
+<p>I absolutely love these <em>food porn</em> videos on social media, where they show how Indian non-veg curries were made - they literally put together like 10 different spicy powders (<em>masalaa</em>) in a pod, with meat, gee and curd (why not?!), and then just grossly <em>over-heat</em> it.</p>
+<p>There has to be a better way, but it requires <em>a lot</em> of knowledge
+(and experience) about what is the best match to what, what exact temperature is optimal for this and that ingredient, how long they have to be cooked at that particular temperature and thus what is the proper timing to add stuff in (and how to do it without ruining what has already been done).</p>
+<p><em>Junk-food</em> is the best metaphor I know of about &ldquo;modern coding&rdquo; which is being shilled to us as a programming. Almost no one is qualified or even has enough experience, but everyone is advertising their &ldquo;skills&rdquo; and cool &ldquo;projects&rdquo;.</p>
+<p>Literally, just like these makeshift food stalls at a seasonal bazaar. Well, there are always a few masters among them, but this is not the point.</p>
+<p>The code we see literally everywhere (nowadays mostly on Github) is a low-effort, never-researched crap by unqualified but very ambitious narcissistic amateurs. It is especially prominent in the Haskell community.</p>
+<p>If only one would compare the carefully crafted code of Richard Bird, Graham Hutton, Paul Hudak, Philip Wadler and, of course, SPJ which the crap we see on <em>hackage</em> and <em>Github</em>&hellip;</p>
+<p>The main problem, is, of course, <em>unnecessary, redundant abstractions (which is the root of all evil)</em> and over-abstraction without understanding in general. They just put everything in a pot.</p>
+<p>Yes, indeed, just as Peter Norvig, the great (<a href="https://www.norvig.com/21-days.html">https://www.norvig.com/21-days.html</a>), said: <em>&ldquo;Bad programming is easy. Idiots can learn it in 21 days , even if they are dummies&rdquo;</em>. And, boy, they actually do.</p>
+<p>All these <em>Chuds</em> is a real cancer, just like that &ldquo;Russki Mir&rdquo;, you
+know.</p>
+<p>Immutability, which is, perhaps, the most profound and universal
+principle, has been turned by <em>Chuds</em> into that &ldquo;Nix&rdquo; abomination,
+which literally shits on my disks with gigabytes of unnecessary,
+redundant crap.</p>
+<p>The ignorant idiots are trying to enforce it at the lowest,
+<em>implementation level</em> instead on a proper <em>conceptual</em> level of
+abstractions.</p>
+<p>Well, for that the Chuds have to read (and understand) the classic
+book by Barbara Liskov (<em>&ldquo;Abstraction and Specification in Program
+Development&rdquo;</em>), which teaches how to define a proper, non-leaking ADT,
+what are the implications (possibility of having and using multiple
+implementations), and, most importantly, <em>do not have this problem,
+which &ldquo;requires&rdquo; all this</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ls ~/.stack/snapshots/x86_64-linux/260ea70bfa01bb3c75249eacb12ba7643c201e7a6f18bfe9a2b5327959d557fa/9.6.3/lib/x86_64-linux-ghc-9.6.3/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>aeson-2.1.2.1-AtHDhNlMDlXGlQEQo9BMGu aeson-pretty-0.8.10-7bTrb6h5JjV6fkukjlf4nG ansi-terminal-1.0-3kfRbX22CbYKtT7TWkfDm3 ansi-terminal-types-0.11.5-7070YP17lX07wjJ4YjrtXA ansi-wl-pprint-1.0.2-7W2Pb8mhGAZ2C885aRPEnj assoc-1.1-B2oYzvtRAbL6TdG9vtcpvT attoparsec-0.14.4-8EcVDwSMoUiLNbBvSik1jh-attoparsec-internal attoparsec-0.14.4-IisHTJET72jKYnz1Wlbmz9 base-compat-0.13.0-JbgR4gkZn2S7VJJWJHpoE base-compat-batteries-0.13.0-6rnW8gl5KYBFY48L9XeQFH base-orphans-0.9.0-J44kyio6vh9BIquFiEWgdc bifunctors-5.6.1-BKBejTD5rTW2Cwk3hpbNKZ cmdargs-0.10.22-Bo66f0Kl3eE5G8AycK8y3n colour-2.3.6-CL1PpcKDPAc8DjPzbsln3V comonad-5.0.8-7VmOZq2W2aPEc92Us4CIJR contravariant-1.5.5-D7uv6gRHfsshi2SiSflrv data-default-0.7.1.1-3YvGn2u185f1XWhdramjaH data-default-class-0.1.2.0-5FK3vpOLcdkKGIel7pORbQ data-default-instances-containers-0.0.1-4iMZsUnb16EAGSBDaolDhW data-default-instances-dlist-0.0.1-IZH6bFs7BObEUaakPOxb0v data-default-instances-old-locale-0.0.1-2s6n6c5MnQ7LChnI5uCwHf data-fix-0.3.2-LxyWgDBHbHh457Ex3XUnTI distributive-0.6.2.1-91VzmrRDrQ29F0tHcRSIMo dlist-1.0-EiNZyHbYIYq9Gl8u0nmg6M free-5.2-6t18XEmCbtvCVgcZ5FDJ32 generically-0.1.1-EkcRYhUnPJ57wDcdcrdfk6 hashable-1.4.3.0-Cy9XuTuozCgAdsdKEf3KNi haskell-src-exts-1.23.1-6bq8L1rOeseFIOXsg52Nca indexed-traversable-0.1.2.1-HT9WlttgftJ3Yjcmj6Vls1 indexed-traversable-instances-0.1.1.2-3HUB7EIjq533qow89Uyy4h integer-logarithms-1.0.3.1-6BMdz0fAUjKELClrM8UIuk libHSaeson-2.1.2.1-AtHDhNlMDlXGlQEQo9BMGu-ghc9.6.3.so libHSaeson-pretty-0.8.10-7bTrb6h5JjV6fkukjlf4nG-ghc9.6.3.so libHSansi-terminal-1.0-3kfRbX22CbYKtT7TWkfDm3-ghc9.6.3.so libHSansi-terminal-types-0.11.5-7070YP17lX07wjJ4YjrtXA-ghc9.6.3.so libHSansi-wl-pprint-1.0.2-7W2Pb8mhGAZ2C885aRPEnj-ghc9.6.3.so libHSassoc-1.1-B2oYzvtRAbL6TdG9vtcpvT-ghc9.6.3.so libHSattoparsec-0.14.4-8EcVDwSMoUiLNbBvSik1jh-attoparsec-internal-ghc9.6.3.so libHSattoparsec-0.14.4-IisHTJET72jKYnz1Wlbmz9-ghc9.6.3.so libHSbase-compat-0.13.0-JbgR4gkZn2S7VJJWJHpoE-ghc9.6.3.so libHSbase-compat-batteries-0.13.0-6rnW8gl5KYBFY48L9XeQFH-ghc9.6.3.so libHSbase-orphans-0.9.0-J44kyio6vh9BIquFiEWgdc-ghc9.6.3.so libHSbifunctors-5.6.1-BKBejTD5rTW2Cwk3hpbNKZ-ghc9.6.3.so libHScmdargs-0.10.22-Bo66f0Kl3eE5G8AycK8y3n-ghc9.6.3.so libHScolour-2.3.6-CL1PpcKDPAc8DjPzbsln3V-ghc9.6.3.so libHScomonad-5.0.8-7VmOZq2W2aPEc92Us4CIJR-ghc9.6.3.so libHScontravariant-1.5.5-D7uv6gRHfsshi2SiSflrv-ghc9.6.3.so libHSdata-default-0.7.1.1-3YvGn2u185f1XWhdramjaH-ghc9.6.3.so libHSdata-default-class-0.1.2.0-5FK3vpOLcdkKGIel7pORbQ-ghc9.6.3.so libHSdata-default-instances-containers-0.0.1-4iMZsUnb16EAGSBDaolDhW-ghc9.6.3.so libHSdata-default-instances-dlist-0.0.1-IZH6bFs7BObEUaakPOxb0v-ghc9.6.3.so libHSdata-default-instances-old-locale-0.0.1-2s6n6c5MnQ7LChnI5uCwHf-ghc9.6.3.so libHSdata-fix-0.3.2-LxyWgDBHbHh457Ex3XUnTI-ghc9.6.3.so libHSdistributive-0.6.2.1-91VzmrRDrQ29F0tHcRSIMo-ghc9.6.3.so libHSdlist-1.0-EiNZyHbYIYq9Gl8u0nmg6M-ghc9.6.3.so libHSfree-5.2-6t18XEmCbtvCVgcZ5FDJ32-ghc9.6.3.so libHSgenerically-0.1.1-EkcRYhUnPJ57wDcdcrdfk6-ghc9.6.3.so libHShashable-1.4.3.0-Cy9XuTuozCgAdsdKEf3KNi-ghc9.6.3.so libHShaskell-src-exts-1.23.1-6bq8L1rOeseFIOXsg52Nca-ghc9.6.3.so libHSindexed-traversable-0.1.2.1-HT9WlttgftJ3Yjcmj6Vls1-ghc9.6.3.so libHSindexed-traversable-instances-0.1.1.2-3HUB7EIjq533qow89Uyy4h-ghc9.6.3.so libHSinteger-logarithms-1.0.3.1-6BMdz0fAUjKELClrM8UIuk-ghc9.6.3.so libHSmonad-dijkstra-0.1.1.3-CgVzvieVxhx2JPRSo7EHqY-ghc9.6.3.so libHSold-locale-1.0.0.7-OpLxQwSdbqHzI1qJrI5NI-ghc9.6.3.so libHSOneTuple-0.4.1.1-3xROWIPE1CT4QZlQuFvzgR-ghc9.6.3.so libHSoptparse-applicative-0.18.1.0-5cbl2zXi6SE2pC3wd7rg7U-ghc9.6.3.so libHSprettyprinter-1.7.1-5e7OiMaiyLWFEOfH8r8oT4-ghc9.6.3.so libHSprettyprinter-ansi-terminal-1.1.3-4Ig0UpU6YgF9y9AFEicGiL-ghc9.6.3.so libHSprettyprinter-compat-ansi-wl-pprint-1.0.2-GfW9Eya3Gwc5xywUHVIlks-ghc9.6.3.so libHSprimitive-0.8.0.0-Jo5jlESTXJeEofOqAuqg9C-ghc9.6.3.so libHSprofunctors-5.6.2-4f0ilW1gMatAhGo5L3LEyL-ghc9.6.3.so libHSpsqueues-0.2.7.3-2kvLBLtRyjxI4EXBl9dKvi-ghc9.6.3.so libHSQuickCheck-2.14.3-3pqw5pyBKGqHO3NbSB9C7y-ghc9.6.3.so libHSrandom-1.2.1.1-I7RCALOFfYGFaJvIapv0Ql-ghc9.6.3.so libHSscientific-0.3.7.0-KNaRCO8KEOFA8E2t5UN5Bi-ghc9.6.3.so libHSsemialign-1.3-2GwwSRQ97db1tic40Nc1OT-ghc9.6.3.so libHSsemigroupoids-6.0.0.1-BO0d9UKfiwM2rKjtaDXfIv-ghc9.6.3.so libHSsplitmix-0.1.0.4-3LPiSuZCzhU6PeA3JszOX5-ghc9.6.3.so libHSStateVar-1.2.2-LE1zE95ecHb3rKz2GzNMvC-ghc9.6.3.so libHSstrict-0.5-4zd7ONntlnWFbP40qKstE9-ghc9.6.3.so libHStagged-0.8.7-DqRkQTFiCFVIkc5ul6U7ms-ghc9.6.3.so libHStext-short-0.1.5-2mzATDPgHcEDIpJmXzh33-ghc9.6.3.so libHSth-abstraction-0.5.0.0-JD9vmJ369jBCu5VUUIjZuj-ghc9.6.3.so libHSthese-1.2-IKneMuHnSS84xFpHBzbRdQ-ghc9.6.3.so libHStime-compat-1.9.6.1-DlgiqBexBaS23LqsxahfKQ-ghc9.6.3.so libHStransformers-base-0.4.6-1AaMvJ2gX4DSSZfr5Ad54-ghc9.6.3.so libHStransformers-compat-0.7.2-9x8A6zWhyVKLofAGiBIUux-ghc9.6.3.so libHSunordered-containers-0.2.19.1-BWYtaJ8jCLn9nFdaUg5lKu-ghc9.6.3.so libHSuuid-types-1.0.5-BoZZBLnt7jULlvbkdidkgS-ghc9.6.3.so libHSvector-0.13.0.0-DQjDtT0hTdSECzYvtVe6dV-ghc9.6.3.so libHSvector-stream-0.1.0.0-46tIj2XpJ1K5aHx2g36wqS-ghc9.6.3.so libHSwitherable-0.4.2-5Hu3Nk4QTme835unXarsGj-ghc9.6.3.so monad-dijkstra-0.1.1.3-CgVzvieVxhx2JPRSo7EHqY old-locale-1.0.0.7-OpLxQwSdbqHzI1qJrI5NI OneTuple-0.4.1.1-3xROWIPE1CT4QZlQuFvzgR optparse-applicative-0.18.1.0-5cbl2zXi6SE2pC3wd7rg7U prettyprinter-1.7.1-5e7OiMaiyLWFEOfH8r8oT4 prettyprinter-ansi-terminal-1.1.3-4Ig0UpU6YgF9y9AFEicGiL prettyprinter-compat-ansi-wl-pprint-1.0.2-GfW9Eya3Gwc5xywUHVIlks primitive-0.8.0.0-Jo5jlESTXJeEofOqAuqg9C profunctors-5.6.2-4f0ilW1gMatAhGo5L3LEyL psqueues-0.2.7.3-2kvLBLtRyjxI4EXBl9dKvi QuickCheck-2.14.3-3pqw5pyBKGqHO3NbSB9C7y random-1.2.1.1-I7RCALOFfYGFaJvIapv0Ql scientific-0.3.7.0-KNaRCO8KEOFA8E2t5UN5Bi semialign-1.3-2GwwSRQ97db1tic40Nc1OT semigroupoids-6.0.0.1-BO0d9UKfiwM2rKjtaDXfIv splitmix-0.1.0.4-3LPiSuZCzhU6PeA3JszOX5 StateVar-1.2.2-LE1zE95ecHb3rKz2GzNMvC strict-0.5-4zd7ONntlnWFbP40qKstE9 tagged-0.8.7-DqRkQTFiCFVIkc5ul6U7ms text-short-0.1.5-2mzATDPgHcEDIpJmXzh33 th-abstraction-0.5.0.0-JD9vmJ369jBCu5VUUIjZuj these-1.2-IKneMuHnSS84xFpHBzbRdQ time-compat-1.9.6.1-DlgiqBexBaS23LqsxahfKQ transformers-base-0.4.6-1AaMvJ2gX4DSSZfr5Ad54 transformers-compat-0.7.2-9x8A6zWhyVKLofAGiBIUux unordered-containers-0.2.19.1-BWYtaJ8jCLn9nFdaUg5lKu uuid-types-1.0.5-BoZZBLnt7jULlvbkdidkgS vector-0.13.0.0-DQjDtT0hTdSECzYvtVe6dV vector-stream-0.1.0.0-46tIj2XpJ1K5aHx2g36wqS witherable-0.4.2-5Hu3Nk4QTme835unXarsGj
+</span></span></code></pre></div><p>One more time: abstraction by <em>specification</em> has to be done at the lavel of <em>stable interfaces</em>, such that implementations are not even a concern.</p>
+<p>Just like it has been done with good quality, properly desinged and
+well-crafted stdlibs (of SML, Haskell, Ocaml Scala and Go), I do not
+care about the actual implementations of the <code>List</code> module as long as <em>the specifications holds</em>. Same is true for all the other major ADTs.</p>
+<p>Nothing of that fucking abomination displayed above is required or
+necessary.</p>
+<p><em>Specifications</em> and <em>immutability at the interface level</em> (and of the bindings) is at the core of <em>proper</em> programming (and mathematics).</p>
+<p>This has lots of implications. One would have discover that the <code>TLA+</code> system is about checking and proving the properties and invariants at an interface level.</p>
+<p>That the <code>defuns</code> and <code>defstrcuts</code> are enough to implement the CLOS,
+or that the core OCaml is enough to define an Object System (an extension, which is a set of embedded DSLs) and other remarkable, principle-guided achievements.</p>
+<p>All this was possible because of stable (immutable) interfaces. When
+we must change something we must define a <em>new</em> (versioned, perhaps)
+interface, /just exactly as if we have to define a new binding with a new symbol (as in Erlang).</p>
+<p>We could also define a new binding which will <em>shadow</em> the
+previous one <em>in a particular scope</em>. The module system of modern
+<em>Ocaml</em> has been done just right and has all these well-researched
+mechanisms implemented, including that &ldquo;open&rdquo; keyword.</p>
+<p>Last but not least, even that narcissistic <em>Rich Hickey</em> in one of his talks (I do not remember which, because they all so poorly structured) got it right with the reference to the Maven repository as an <em>immutable structure</em> and that this very property is the key to its usability at a global scale.</p>
+<p>One cannot change any of already published packages (and the interfaces they export), only to &ldquo;extend&rdquo; the repo with a new version on a corresponding branch.</p>
+<p>This is exactly the fundamental (and even universal) principles at work.</p>
+<p>And <em>this</em>, finally, after taking a whole &ldquo;round trip&rdquo;, brings us back to the &ldquo;extensions methods&rdquo; of Scala (stolen from it without understanding, like everything else, by Kotlin).</p>
+<p>The concept is, not surprisingly, is very similar to Haskell&rsquo;s <em>type-classes</em> which are a sets of required (to be implemented according to informally stated &ldquo;laws&rdquo;) interfaces.</p>
+<p>We just <em>concatenate</em> a new set of interfaces, <em>without nesting or
+sub-setting of the concepts</em>, and thus <em>&ldquo;extend&rdquo; a type with a new
+Trait</em>.</p>
+<p>Let the mix of terminology from the different meme-languages not to confuse you &ndash; they all just different names for the same poorly generalized  <em>universal notions</em>, which are:</p>
+<ul>
+<li>Immutability at the level of &ldquo;stable&rdquo; interfaces.</li>
+<li>Ensuring specifications instead or implementations.</li>
+</ul>
+<p>This principle holds all the biology together and <em>is</em> the basis of
+<em>Life Itself</em>. No fucking <em>hashes</em> required.</p>
+<p>But <em>Who Am I</em> to tell to the Chuds how to do things.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

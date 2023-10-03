@@ -5,11 +5,29 @@
     <loc>https://lngnmn2.github.io/about/</loc>
     <lastmod>2023-08-05T19:21:03+05:45</lastmod>
   </url><url>
+    <loc>https://lngnmn2.github.io/tags/adt/</loc>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
+  </url><url>
     <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2023-10-02T14:03:06+05:45</lastmod>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/</loc>
-    <lastmod>2023-10-02T14:03:06+05:45</lastmod>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/dsl/</loc>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/</loc>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/programming/</loc>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/junk-food/</loc>
+    <lastmod>2023-10-03T13:37:24+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/deep-learning/</loc>
     <lastmod>2023-10-02T14:03:06+05:45</lastmod>
@@ -20,16 +38,10 @@
     <loc>https://lngnmn2.github.io/articles/llmbs-3/</loc>
     <lastmod>2023-10-02T14:03:06+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/</loc>
-    <lastmod>2023-10-02T14:03:06+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/categories/esoteric/</loc>
     <lastmod>2023-09-29T19:59:06+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/more-whys/</loc>
-    <lastmod>2023-09-29T19:59:06+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/programming/</loc>
     <lastmod>2023-09-29T19:59:06+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/the-way/</loc>
@@ -39,9 +51,6 @@
     <lastmod>2023-09-24T00:00:00+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/principles/</loc>
-    <lastmod>2023-09-24T00:00:00+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
     <lastmod>2023-09-24T00:00:00+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/deep-learning/</loc>
@@ -164,9 +173,6 @@
     <loc>https://lngnmn2.github.io/categories/abstractions/</loc>
     <lastmod>2023-08-04T09:55:30+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/tags/adt/</loc>
-    <lastmod>2023-08-04T09:55:30+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/modularity/</loc>
     <lastmod>2023-08-04T09:55:30+05:45</lastmod>
   </url><url>
@@ -175,9 +181,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/tags/derivatives/</loc>
     <lastmod>2023-08-10T12:05:25+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/dsl/</loc>
-    <lastmod>2023-08-02T12:43:44+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/embedded/</loc>
     <lastmod>2023-08-02T12:43:44+05:45</lastmod>
