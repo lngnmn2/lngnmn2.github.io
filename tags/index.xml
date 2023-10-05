@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ADT</title>
       <link>https://lngnmn2.github.io/tags/adt/</link>
-      <pubDate>Tue, 03 Oct 2023 00:00:00 +0545</pubDate>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/adt/</guid>
       <description></description>
@@ -19,9 +19,18 @@
     <item>
       <title>DSL</title>
       <link>https://lngnmn2.github.io/tags/dsl/</link>
-      <pubDate>Tue, 03 Oct 2023 00:00:00 +0545</pubDate>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/dsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homoiconicity</title>
+      <link>https://lngnmn2.github.io/tags/homoiconicity/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/homoiconicity/</guid>
       <description></description>
     </item>
     
@@ -292,15 +301,6 @@
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/functional-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>homoiconicity</title>
-      <link>https://lngnmn2.github.io/tags/homoiconicity/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/homoiconicity/</guid>
       <description></description>
     </item>
     

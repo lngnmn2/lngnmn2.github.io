@@ -6,7 +6,19 @@
     <description>Recent content in homoiconicity on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/homoiconicity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/homoiconicity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>High Level</title>
+      <link>https://lngnmn2.github.io/articles/high-level/</link>
+      <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/high-level/</guid>
+      <description>I finally found a well-written no-bullshit book about CS. It says, among other things:
+There is no need to define a representation of the values False and True in terms of values of some other type.
+Conceptually, values of type Bool are simply (denoted by) the expressions False and True.
+Of course, the computer’s internal representation of Bool and all other data is in terms of bits, but we don’t need to know any of the details of how that works to write programs.</description>
+    </item>
+    
     <item>
       <title>GNU Emacs</title>
       <link>https://lngnmn2.github.io/articles/emacs/</link>
