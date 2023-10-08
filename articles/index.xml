@@ -6,7 +6,30 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>  Neurons &#34;reuse&#34;
+  </title>
+      <link>https://lngnmn2.github.io/articles/neurons/</link>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/neurons/</guid>
+      <description>There is an inportant subtlety when on is trying to interpret what a Neural Network actually does &amp;ndash; each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.
+Let&amp;rsquo;s see what is going on out there.</description>
+    </item>
+    
+    <item>
+      <title>Solving async-await for Rust</title>
+      <link>https://lngnmn2.github.io/articles/async-rust/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/async-rust/</guid>
+      <description>So, you want to add these ~async~/~await/ keywords?
+First of all, it has already been seriously researched by the C#/F# .NET guys. Just learn what they have come up with.
+One&amp;rsquo;s own principle-guided reasoning could proceed like this:
+The fundamental difference between ordinary procedures and async procedures is the whole protocol for calling and returning of values, and dealing with actual implementation of the corresponding mechanisms (abstract at this point, but has to reuse what is already out there).</description>
+    </item>
+    
     <item>
       <title>Transformers bullshit everywhere</title>
       <link>https://lngnmn2.github.io/articles/transformer-bullshit/</link>

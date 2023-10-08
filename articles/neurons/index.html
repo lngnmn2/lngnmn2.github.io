@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>  Neurons &#34;reuse&#34;
+   | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="">
+<meta name="description" content="There is an inportant subtlety when on is trying to interpret what a Neural Network actually does &ndash; each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.
+Let&rsquo;s see what is going on out there.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/neurons/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="  Neurons &#34;reuse&#34;
+  " />
+<meta property="og:description" content="There is an inportant subtlety when on is trying to interpret what a Neural Network actually does &ndash; each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.
+Let&rsquo;s see what is going on out there." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/neurons/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-10-08T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-10-08T19:22:39+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="  Neurons &#34;reuse&#34;
+  "/>
+<meta name="twitter:description" content="There is an inportant subtlety when on is trying to interpret what a Neural Network actually does &ndash; each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.
+Let&rsquo;s see what is going on out there."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "  Neurons \"reuse\"\n  ",
+      "item": "https://lngnmn2.github.io/articles/neurons/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "  Neurons \"reuse\"\n  ",
+  "name": "  Neurons \u0022reuse\u0022\n  ",
+  "description": "There is an inportant subtlety when on is trying to interpret what a Neural Network actually does \u0026ndash; each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.\nLet\u0026rsquo;s see what is going on out there.",
+  "keywords": [
+    
+  ],
+  "articleBody": "There is an inportant subtlety when on is trying to interpret what a Neural Network actually does – each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.\nLet’s see what is going on out there. The problem comes from the fact that the same “early” layers of neurons has been given completely unrelated sets of inputs. In other words, there is no specialization yet. On the other hand, the “wiring” of the visual system is deliberate and specialized, which is opposite of a “fully connected” networks.\nBack-propagation on inconsistent inputs (noisy “examples” or verbalized “bullshit”) necessarily ruins (distorts) the weights, so every next forward pass after a backward pass from a noise example is more “blurred”.\nThe same neurons respond to a completely different set of inputs (assuming the threshold has been exceeded), so the learned (so far) weights are being “reused” to encode more than one “feature”.\nThe weights are being constantly distorted with each backward passes on “other features”, and “rebalanced” with each backward pass on “the same features”. The analogy with blurring of an image and sharpening is not arbitrary.\n“Reuse” of neurons and learned so-far weights (internal state) for partially encoding different “features” is just an observed fact. This implies that all the naive interpretations, especially based on over-simplified but seeminigly sophisticated-enough meme models (hyper-spheres, and what not) are just disconnected from What Is.\nThe difference is in the “correctness” or “how noisy” is the next training example and, most importantly, how far the training process has already progressed. In a stable environments the level of noise is by definition has to be tiny. Otherwise what we would learn is the noise (no actual learning could be possible at all).\nConsequently, a “mature, well-developed brain” discards the noise very efficiently. Contradictions do not exist, check your premises).\nThis is how a “multiple features with reuse” encoding stabilizes and why it has been selected by evolution. We have evolved in stable environments with very consistent sensory inputs, that corresponds to the physical constraints of the shared environment and its recurring processes (days, weather, seasons).\nNotice that unlike spoken human languages, the environment does not lie to you and do not talk bullshit, so the inputs are indeed very consistent.\nThis is how we (biological systems) almost never have an over-fitting, and this, it seems, is an evolved “optimization” against being “too specific” or “too narrow”.\nThere is also no other way for a fully connected network to behave. The brain prunes connections, most of them. The network only learns some zero weights at best.\nPruning implies no way to “re-learn it back” (using the same brain structures, but it has been shown that different parts of the brain could learn), which is ok for a stable environment. Once the brains is matured it is basically “fixed” – the resulting structures after pruning are presumably the best match to the environment.\nThe conclusion is that almost all explanations, especially based on imaginary topological “objects” are utterly wrong and serve no purpose but to display one’s “intelligence” and being “up to date”. The quest for the Truth (which is always out there, you know) is to find that one “less wrong” one, with the “shortest distance to What Is” (local optimum for a limited human intellect).\nSo, the weights emerged (learned) so far are being reused to partially represent multiple “features”. This simple fact invalidates all the “papers” by Chuddies.\nThere is another hint: it is extremely important that the social environment in which a child spends its first years and is being taught to speak to be “stable” and “consistent”, but rich in the sensory input. It has been observed innumerable number of times, that “village” children (of normal families) are in general “smarter” and more clever.\nIn the modern terms this is called “the quality of the data set”, which, unsurprisingly, is by far the most important metric for any Machine Learning project, on which the most money has been spent (not unlike how smart and rich people spend on their kids).\nBeing able to zoom in and out through commonalities and universals is the key.\n",
+  "wordCount" : "726",
+  "inLanguage": "en",
+  "datePublished": "2023-10-08T00:00:00+05:45",
+  "dateModified": "2023-10-08T19:22:39+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/neurons/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+        Neurons &#34;reuse&#34;
+  
+    </h1>
+    <div class="post-meta"><span title='2023-10-08 00:00:00 +0545 +0545'>October 8, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There is an inportant subtlety when on is trying to interpret what a Neural Network actually does &ndash; each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.</p>
+<p>Let&rsquo;s see what is going on out there. The problem comes from the fact that the same &ldquo;early&rdquo; layers of neurons has been given completely unrelated sets of inputs. In other words, there is no specialization <em>yet</em>. On the other hand, the &ldquo;wiring&rdquo; of the visual system is deliberate and specialized, which is opposite of a &ldquo;fully connected&rdquo; networks.</p>
+<p>Back-propagation on inconsistent inputs (noisy &ldquo;examples&rdquo; or verbalized &ldquo;bullshit&rdquo;) necessarily ruins (distorts) the weights, so every next forward pass <em>after a backward pass</em> from a noise example is more &ldquo;blurred&rdquo;.</p>
+<p>The same neurons respond to a completely different set of inputs (assuming the threshold has been exceeded), so the learned (so far) weights are being &ldquo;reused&rdquo; to encode more than one &ldquo;feature&rdquo;.</p>
+<p>The weights are being constantly <em>distorted</em> with each <em>backward passes</em> on &ldquo;other features&rdquo;, and <em>&ldquo;rebalanced&rdquo;</em> with each backward pass on &ldquo;the same features&rdquo;. The analogy with blurring of an image and sharpening is not arbitrary.</p>
+<p>&ldquo;Reuse&rdquo; of neurons and learned so-far weights (internal state) for <em>partially</em> encoding different &ldquo;features&rdquo; is just an observed fact. This implies that all the naive interpretations, especially based on over-simplified but seeminigly sophisticated-enough meme models (hyper-spheres, and what not) are just disconnected from <em>What Is</em>.</p>
+<p>The difference is in the &ldquo;correctness&rdquo; or &ldquo;how noisy&rdquo; is the next training example and, most importantly, how far the training process has already progressed. In a stable environments the level of noise is by definition has to be tiny. Otherwise what we would learn is the noise (no actual learning could be possible at all).</p>
+<p>Consequently, a &ldquo;mature, well-developed brain&rdquo; discards the noise very efficiently.  <em>Contradictions</em> do not exist, check your premises).</p>
+<p>This is <em>how</em> a &ldquo;multiple features with reuse&rdquo; encoding <em>stabilizes</em> and <em>why</em> it has been selected by evolution. We have evolved in stable environments with very consistent sensory inputs, that corresponds to the physical constraints of the shared environment and its recurring processes (days, weather, seasons).</p>
+<p>Notice that unlike spoken human languages, the environment does not lie to you and do not talk bullshit, so the inputs are indeed very consistent.</p>
+<p>This is how we (biological systems) almost never have an <em>over-fitting</em>, and this, it seems, is an evolved &ldquo;optimization&rdquo; against being &ldquo;too specific&rdquo; or &ldquo;too narrow&rdquo;.</p>
+<p>There is also <em>no other way for a fully connected network to behave</em>. The brain <em>prunes</em> connections, <em>most</em> of them. The network only learns some zero weights at best.</p>
+<p>Pruning implies no way to &ldquo;re-learn it back&rdquo; (using the same brain structures, but it has been shown that different parts of the brain could learn), which is ok for a <em>stable environment</em>. Once the brains is matured it is basically &ldquo;fixed&rdquo; &ndash; the resulting structures after pruning are presumably the best match to the environment.</p>
+<p>The conclusion is that almost all explanations, especially based on imaginary topological &ldquo;objects&rdquo; are utterly wrong and serve no purpose but to display one&rsquo;s &ldquo;intelligence&rdquo; and being &ldquo;up to date&rdquo;. The quest for the Truth (which is always out there, you know) is to find that one &ldquo;less wrong&rdquo; one, with the &ldquo;shortest distance to <em>What Is</em>&rdquo; (local optimum for a limited human intellect).</p>
+<p>So, the weights emerged (learned) so far are being reused to partially represent multiple &ldquo;features&rdquo;. This simple fact invalidates all the &ldquo;papers&rdquo; by Chuddies.</p>
+<p>There is another hint: it is extremely important that the social environment in which a child spends its first years and is being taught to speak to be &ldquo;stable&rdquo; and &ldquo;consistent&rdquo;, but rich in the sensory input. It has been observed innumerable number of times, that &ldquo;village&rdquo; children (of normal families) are in general &ldquo;smarter&rdquo; and more clever.</p>
+<p>In the modern terms this is called &ldquo;the quality of the data set&rdquo;, which, unsurprisingly, is <em>by far</em> the most important metric for any Machine Learning project, on which the most money has been spent (not unlike how smart and rich people spend on their kids).</p>
+<p>Being able to zoom in and out through  commonalities and universals is the key.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

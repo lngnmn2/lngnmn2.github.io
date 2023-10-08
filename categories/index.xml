@@ -6,13 +6,22 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>deep learning</title>
       <link>https://lngnmn2.github.io/categories/deep-learning/</link>
-      <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
+      <pubDate>Sun, 08 Oct 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PLT</title>
+      <link>https://lngnmn2.github.io/categories/plt/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/categories/plt/</guid>
       <description></description>
     </item>
     
@@ -28,7 +37,7 @@
     <item>
       <title>programming</title>
       <link>https://lngnmn2.github.io/categories/programming/</link>
-      <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/categories/programming/</guid>
       <description></description>

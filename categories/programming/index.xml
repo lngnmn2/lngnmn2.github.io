@@ -6,7 +6,19 @@
     <description>Recent content in programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solving async-await for Rust</title>
+      <link>https://lngnmn2.github.io/articles/async-rust/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/async-rust/</guid>
+      <description>So, you want to add these ~async~/~await/ keywords?
+First of all, it has already been seriously researched by the C#/F# .NET guys. Just learn what they have come up with.
+One&amp;rsquo;s own principle-guided reasoning could proceed like this:
+The fundamental difference between ordinary procedures and async procedures is the whole protocol for calling and returning of values, and dealing with actual implementation of the corresponding mechanisms (abstract at this point, but has to reuse what is already out there).</description>
+    </item>
+    
     <item>
       <title>High Level</title>
       <link>https://lngnmn2.github.io/articles/high-level/</link>
