@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The right way | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, embedded, DSL, immutability">
+<meta name="description" content="How to program instead of doing a webshit coding">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-right-way/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="The right way" />
+<meta property="og:description" content="How to program instead of doing a webshit coding" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/the-right-way/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-10-15T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-10-15T18:01:44+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The right way"/>
+<meta name="twitter:description" content="How to program instead of doing a webshit coding"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The right way",
+      "item": "https://lngnmn2.github.io/articles/the-right-way/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The right way",
+  "name": "The right way",
+  "description": "How to program instead of doing a webshit coding",
+  "keywords": [
+    "ADT", "embedded", "DSL", "immutability"
+  ],
+  "articleBody": "There is only one true way (the proper way) to program. Just as there is only one “reality”, one “truth” (which correctly describes What Is) and The Right Way (of the Buddha, which means being firmly grounded in What Is).\nImagine, if you will, that you are writing a program for yourself which will trade your own life savings on some “exchange”. Not for other people, not other people’s money. You for yourself.\nSuddenly, you really want to have every single line of your code, at any level of abstraction, to be absolutely correct (and, ideally, even to have been proven so)! Why not, one could generate Haskell code from Coq!\nBut how do you actually write such kind of code? How would you make all the necessary decisions at all levels?\nIt is in this situation that the time (money) and effort spent for studying The Classic Computer Science begin to pay off.\nSuddenly all the foundational concepts, such as Modularity, Immutability, Abstraction Barriers, Strong Typing and especially Pure Functions (as in pure mathematics) start to make sense to you.\nSome notions, like Partitioning and Nesting and assumed Immutability are the basic building blocks of Life Ltself, and go even deeper, into the so-called “fabric of the Universe” which underly and “establish” The Causality Principle itself.\nEverything proper abstraction has to traced back to the aspects of reality from which it has been generalized (just as Sets or Numbers) or “Arrows” (directed graphs). Anyway, whatever.\nSo, how would one even approach such a task? Well, from the first principles.\nOne of them is “Data Dominates”. It goes as deep as “Everything (in the Universe) Has a Structure”, and implies that algorithms almost always “naturally” follow.\nAnother principle says that “Everything Is a Process”, and that processes have a shape. Mathematical and general Recursion have a shape of a spiral, not just a loop.\nWhat a tip of an arm of a clock is “painting” is a spiral, not a circle, and the modular arithmetic is about points on a spiral (which appears as a circle).\nAll these detours, by the way, aren’t useless or redundant - they show you how the best proper abstractions produced by humanity work.\nIn so-classed Computer Science the most central and the most fundamental notion is how mathematician have created properly generalized abstractions long before any computers – with a set of values and a set of all possible operations.\nIt was so “right” that the notion of Sets themselves has been defined in this very way. Peano’s Numbers are another example.\nOf course, it was a proper generalization which captures how the Mind of an external observer “works” (because the Universe has its “laws”).\nThis is what our Abstract Data Types are and ought to be - A set of values (defined by some set of properties – “such that”, and a set of operations (interfaces or type-signatures).\nThis is the connection all the way down to What Is.\nThis is what (and how) our own “types” (Algebraic and Abstract) which captures concepts of the problem domain have to be.\nWhat we do with them is partitioning of the Universe of Discourse using Abstraction Barriers defined as Sets of Interfaces.\nThis corresponds to a cell-membrane of a biological cell.\nPartitioning is crucial because it isolates and decouples and, most fundamentally, allows modifications (changes) without breaking the whole.\nThis is exactly what keeps huge and vastly complex systems (like Windows or Office) from falling apart and even what makes them possible.\nNo surprise here. The very same principles are behind biological systems, like (You), which are uncomparably more complex.\nThe idea to learn the underlying principles and “patterns” from Biology is at the core of the classic MIT tradition, which gave us MIT Scheme and everything that it is based upon.\nIf one would realize and use just these principles one already would be way better off than an average webshit “developer”. This, however, is only beginning, a tip of an iceberg. CS is wast and already encompass several “traditions” within.\nAlmost everything is reducible to particular arrangements of “arrows”, and those, in turn, form distinct patterns.\nThe early LISP guys have captured some with their box-and-pointer diagrams at the level of “the shapes of the data”.\nThe classic algorithm charting techniques have captured some more (at a different level of “shapes of sub-processes”).\nThe “Category theory” tried to capture all of em.\nFor us there are these generalized patterns:\n, | -\u003e and nesting and currying of these.\nThey are at the level of types as well as at the level of code. No surprise here. The symbolic notation used to describe logic are just these arrows replaced by the horizontal lines, and commas instead of currying.\nCurrying, of course, captures the notion of a “join” of one or more arrows - necessary and sufficient coming together in a some locality.\nThe neural networks, again unsurprisingly, has been built out of the very same building blocks, with partitioning and nesting. This is not because we “repeat ourselves”, but because “The Reality is One” and this can be “seen”.\nEverything in CS, mathematics and logic is reducible to these arrangements of arrows (because this is how Causality Itself looks like).\nThis is what a proper programming (instead of “coding”) rests upon.\nImmutability Volumes have been writtern. It just pays off greatly if one defines everything in terms of pure functional language (or a pure subset) using only immutable data stractures (as in Clojure).\nThe resulting properties of such definitions are technically the same as wiht mathematics or logic, so one writes an “executable” pure math or pure logic (which is what GHC is an implementation of).\nThere are also Agda and Coq which could formally verify that your pure code (some modules at least) being “proven correct”.\nAll pure languages have the same basis (the Simply Typed Lambda Calculus) which, in turn, is a proper capture of a universal notion (including the necessary notion of an environment).\nAn interpreter of the Lambda Calculus is a universal machiene (which uses the fundamental notions) and this is why these MIT professors wear such funny hats and clothes on TV.\nAgain, everything is reducible to the patterns of dots and arrows (joins and forks in a directed acyclic graph), just like the information-processing strucure of the brain.\nCurrird functions a -\u003e b -\u003e c -\u003e d shoud just be pictured as a “join” of a, b, c\" (from differnt \"directions\") into a \"dot\" (an event) which emits ~d.\nThe premises and a conclusion have the same shape. Again, the notion of Necessity and Sufficiency (as in a chemical reaction) has been captured there. Or crossing a treshold within a neuron.\nWhere it goes form here? At a “higer level of abstraction” we have events, which are conceptually simialr to “things” because they could be categorized just like things in Sets (using the “such that”) notion.\nAn event can be described by a tuple. Even 1-tuple.\nThe questing of identity is subtle (it is an exact location, which implies time, because the location is never the same). For us it is a location and (,) a timestamp.\nThey (more precisely - their observations) are collected in a log (an append-only file) Each entry can be conceptually viewed as a tuple. What wasn’t oberved didn’t happen.\nA tuple is the simplest structured (non-atomic) and ordered (unlike a Set) data type. The ordering is necessary for actually writing down and accessing the elements of a tuple.\nEvery list has to be written down on a paper in some order (serialized).\nEach row of a table is a tuple. Each row is an “example” if it correspond to a single distinct observation of an event.\nIt is a single recording of an event (from a log) and a “record type” is just a particualr representation (in order to store it or “write it down”).\nWhen all the slots are number (ideally being normalized) it can be a row of a matrix. A “single training example” in the context of ML.\nAgain, each row is an “example” or a recording of an event.\nA “record” is a “named tuple” with access of the elements by name (associated symbol), not by an offset (in bytes). Conceptually, “access by name” discrds the notion of an actual order (in a storage).\nA set of tuples (of the same type) is, thus, the most general non-atomic type, and a Set of attributes (or properties) is the most general notion.\nEmbrace and design for changes The Programs you write should be used for long time, otherwise why bother?\nThis implies they are never “finished” and have to extended and maintained.\nA long-living program “stabilizes along abstraction barriers and corresponding stable interface”. Just like GNU Emacs or an OS such as Linux. Or MS Excel.\nThis means that stable high-level interfaces and modules are the main concerns.\nIdeally, each high-level ADT (that represent a distinct concept from the problem domain) should live in its own module.\nEmbracing and optimizing for upcoming changes is the most important idea.\nOur medium, unlike painting, sculpture or architecture is extremely maliable and lots of changes are at least possible. One cannot change a building or a sculpture (at late stages) or even a painting (signigicantly).\nWith program code we can change almost everithing, except, perhaps, very stupid architectural decisions, such as using async libraries everywhere.\nThe last 60 years of PL research and the modern practices of lartge corportations have taught us 4 fundamental things:\nDisciplined modulatity (and strict discipline in general) Static typing (facilitates changes, makes it less costly) Interface versioning (stable, even immutable interfaces) Immutable/persistent data (still esoteric) Dynamically typed languages are cool and enable really fast prototyping, but then everything will become as mess. Look at Neovim’s Lua codebases. They all going fast and thus buggy as fuck.\nFour our small progects (there is a limit to our cognitive capacity) the mantra is “ABC - Always Be Compiled” or just never leave a project in a inconsistent state.\nTesting Changes also imply mandatory extensive testing, including a regression testing. Testing is tedious and boring, but it is absolutely necessary.\nThe good news is that the properer TTD practices done right (at an interface level) allows writing tests before code, which, in turn, is related to exploratory programming and REPL-like quick experementation.\nThe main principle about testing is that one never writes tests after the code, but before the implemetation details.\nProper tersting (before code) tests the validity of inteterface-level constraints and invariants before any implementation is being programmed.\nRemember that having non-leaking abstractions (proper abstraction barriers) will allow to have multiple implementations to coexist and be easily swapped and reused.\nLayers of DSLs At a system level it has been shown multiple times (independently) that there is nothing better than to organize large systems as layers of embedded pure-functional DSLs.\nThis is the principle of “immutable interfaces” at work. Hardware graphics pipelines is where it really shines. MATLAB’s Matrix DLS is another golden standard.\nX11, TeX and GNU Emacs are famous for their proper layered structure.\nLanguages Ocaml 5 (Modularity and discipline) Scala 3 (wonderful testing DSLs as libraries) Haskell 9.6+ (proper UTF-8) Agda or Coq TLA+ These are, despite memes, way, way superior to any commercial imperative crap, like C++, even with all the tooling.\nOK, it is easy to rewrite in C++ once you have a pure FP prototype working and tested. And Rust is already a better choice.\nThe real problem This was the easy part. There is almost never any problem with how to write (given familiarity with a classic CS literature).\nThe real problem is what to write. How do you even start to begin?\nDiscrete-time signal processing? Kalman filters and other mathematical basis of the radar tech?\nDeep Learning Non-bullshit deep learning (it is infested by Chuds like a fresh pile of poo with flies) has a couple really fundamenral principles behind it.\nimprovemnts in observed behavior without being explicitly programmed automatically learning the “parameters” (without being selected by hand) At the highest, conceptual level this is big. The system learns a nearly optimal representation from the data.\nAll stupid memes aside, it allows to actually do things which are way beiond our tiny mental (cognitive) capacities.\nThere are challenges of a similar magnitude:\nhow not to learn noise how not to overfit how to consistently re-learn on the new data (withot regressions) The answers are that one cannot apply Deep Learning to anything, only to a well-defined problems in a stable, fully-observable and preferably discrete environment.\nThe problem is, all such environments (models) are gross over-simplifications. The real challenge is to come up with one that is actually useful and earns you money.\nThe key to successful Deep Learning applications is to have a data-set which adequately measures (captures) the phenomena and in not lying to yourself.\nThis is exactly why seemingly “obvious” applications of the learnign algorithms to the financial markets (by Chuds) yeielded so far only bullshit (markets are the exact opposites of stable and fully-observable environments).\nThe real challenge is to come up with a set of measurements that actually measure and prartially capture at least some aspects of the social Causality behind recurrent (re-emergent) patterns.\nActual and accurate measurements of anythig non-imaginary, not just any “big data” (meme) is the key to success.\nAt the highest level this is “To observe (measure and record) things as they really are”.\n",
+  "wordCount" : "2251",
+  "inLanguage": "en",
+  "datePublished": "2023-10-15T00:00:00+05:45",
+  "dateModified": "2023-10-15T18:01:44+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-right-way/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      The right way
+    </h1>
+    <div class="post-description">
+      How to program instead of doing a webshit coding
+    </div>
+    <div class="post-meta"><span title='2023-10-15 00:00:00 +0545 +0545'>October 15, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There is <em>only one</em> true way (the proper way) to program. Just as there is only one &ldquo;reality&rdquo;, one &ldquo;truth&rdquo; (which correctly describes <em>What Is</em>) and The Right Way (of the Buddha, which means being firmly grounded in <em>What Is</em>).</p>
+<p>Imagine, if you will, that you are writing a program <em>for yourself</em> which will <em>trade your own life savings</em> on some &ldquo;exchange&rdquo;. Not for other people, not other people&rsquo;s money. You for yourself.</p>
+<p>Suddenly, you <em>really</em> want to have every single line of your code, at any level of abstraction, to be absolutely correct (and, ideally, even to have been proven so)! Why not, one could generate Haskell code from Coq!</p>
+<p>But how do you actually write such kind of code? How would you make
+all the necessary decisions at all levels?</p>
+<p>It is <em>in this situation</em> that the time (money) and effort spent for studying <em>The Classic Computer Science</em> begin to pay off.</p>
+<p>Suddenly all the foundational concepts, such as <em>Modularity</em>, <em>Immutability</em>, <em>Abstraction Barriers</em>, <em>Strong Typing</em> and especially <em>Pure Functions</em> (as in pure mathematics) start to make sense to you.</p>
+<p>Some notions, like <em>Partitioning</em> and <em>Nesting</em> and assumed <em>Immutability</em> are the basic building blocks of Life Ltself, and go even deeper, into the so-called &ldquo;fabric of the Universe&rdquo; which underly and &ldquo;establish&rdquo; The Causality Principle itself.</p>
+<p>Everything proper abstraction has to traced back to the aspects of reality from which it has been generalized (just as Sets or Numbers) or &ldquo;Arrows&rdquo; (directed graphs). Anyway, whatever.</p>
+<p>So, how would one even approach such a task? Well, from the <em>first
+principles</em>.</p>
+<p>One of them is <em>&ldquo;Data Dominates&rdquo;</em>. It goes as deep as &ldquo;Everything (in the Universe) Has a Structure&rdquo;, and implies that algorithms almost always &ldquo;naturally&rdquo; follow.</p>
+<p>Another principle says that &ldquo;Everything Is a Process&rdquo;, and that processes have a <em>shape</em>. Mathematical and general <em>Recursion</em> have a shape of a <em>spiral</em>, not just a loop.</p>
+<p>What a tip of an arm of a clock is &ldquo;painting&rdquo; is a spiral, not a circle, and the modular arithmetic is about points on a spiral (which appears as a circle).</p>
+<p>All these detours, by the way, aren&rsquo;t useless or redundant - they show you how the best <em>proper abstractions</em> produced by humanity work.</p>
+<p>In so-classed Computer Science the most central and the most
+fundamental notion is how mathematician have created <em>properly
+generalized abstractions</em> long before any computers &ndash; with a set of values and a set of <em>all</em> possible operations.</p>
+<p>It was so &ldquo;right&rdquo; that the notion of Sets themselves has been defined in this very way. Peano&rsquo;s <em>Numbers</em> are another example.</p>
+<p>Of course, it was a proper generalization which <em>captures</em> how the Mind of an external observer &ldquo;works&rdquo; (because the Universe has its &ldquo;laws&rdquo;).</p>
+<p>This is what our <em>Abstract Data Types</em> are and ought to be - A set of values (defined by some set of <em>properties &ndash; &ldquo;such that&rdquo;</em>, and a set of operations (interfaces or type-signatures).</p>
+<p>This is the connection all the way down to <em>What Is</em>.</p>
+<p>This is what (and how) our own &ldquo;types&rdquo; (Algebraic and Abstract) which captures concepts of the problem domain have to be.</p>
+<p>What we do with them is <em>partitioning</em> of the <em>Universe of Discourse</em> using <em>Abstraction Barriers</em> defined as Sets of Interfaces.</p>
+<p>This corresponds to a cell-membrane of a biological cell.</p>
+<p>Partitioning is crucial because it <em>isolates</em> and <em>decouples</em> and, most fundamentally, allows <em>modifications</em> (changes) without breaking the whole.</p>
+<p>This is exactly what keeps huge and vastly complex systems (like
+Windows or Office) from falling apart and even what makes them
+possible.</p>
+<p>No surprise here. The very same principles are behind biological
+systems, like (You), which are uncomparably more complex.</p>
+<p>The idea to learn the underlying principles and &ldquo;patterns&rdquo; from Biology is at the core of the classic MIT tradition, which gave us MIT Scheme and everything that it is based upon.</p>
+<p>If one would realize and use <em>just these</em> principles one already would be way better off than an average <em>webshit</em> &ldquo;developer&rdquo;. This, however, is only beginning, a tip of an iceberg. CS is <em>wast</em> and already encompass several &ldquo;traditions&rdquo; within.</p>
+<p>Almost everything is <em>reducible to particular arrangements of
+&ldquo;arrows&rdquo;</em>, and those, in turn, form distinct <em>patterns</em>.</p>
+<p>The early LISP guys have captured <em>some</em> with their <em>box-and-pointer diagrams</em> at the level of &ldquo;the shapes of the data&rdquo;.</p>
+<p>The classic algorithm charting techniques have captured some more (at a different level of &ldquo;shapes of sub-processes&rdquo;).</p>
+<p>The &ldquo;Category theory&rdquo; tried to capture <em>all of em</em>.</p>
+<p>For us there are these generalized patterns:</p>
+<ul>
+<li><code>,</code></li>
+<li><code>|</code></li>
+<li><code>-&gt;</code></li>
+</ul>
+<p>and <em>nesting</em> and <em>currying</em> of these.</p>
+<p>They are at the level of <em>types</em> as well as at the level of code. No surprise here. The symbolic notation used to describe logic are just these arrows replaced by the horizontal lines, and commas instead of currying.</p>
+<p>Currying, of course, captures the notion of a &ldquo;join&rdquo; of one or more arrows - necessary and sufficient coming together in a some locality.</p>
+<p>The neural networks, again unsurprisingly, has been built out of the very same building blocks, with <em>partitioning</em> and  <em>nesting</em>. This is not because we &ldquo;repeat ourselves&rdquo;, but because &ldquo;The Reality is One&rdquo; and this can be &ldquo;seen&rdquo;.</p>
+<p>Everything in CS, mathematics and logic is reducible to these arrangements of arrows (because this is how Causality Itself looks like).</p>
+<p>This is what a <em>proper programming</em> (instead of &ldquo;coding&rdquo;) rests upon.</p>
+<h2 id="immutability">Immutability<a hidden class="anchor" aria-hidden="true" href="#immutability">#</a></h2>
+<p>Volumes have been writtern. It just pays off greatly if one defines everything in terms of pure functional language (or a pure subset) using only immutable data stractures (as in Clojure).</p>
+<p>The resulting properties of such definitions are <em>technically</em> the same as wiht mathematics or logic, so one writes an &ldquo;executable&rdquo; pure math or pure logic (which is what GHC is an implementation of).</p>
+<p>There are also <em>Agda</em> and <em>Coq</em> which could <em>formally verify</em> that your pure code (some modules at least) being &ldquo;proven correct&rdquo;.</p>
+<p>All pure languages have the same basis (the Simply Typed Lambda Calculus) which, in turn, is a proper capture of a <em>universal notion</em> (including the <em>necessary</em> notion of an <em>environment</em>).</p>
+<p>An <em>interpreter</em> of the Lambda Calculus is a <em>universal machiene</em> (which uses the fundamental notions) and <em>this</em> is why these MIT professors wear such funny hats and clothes on TV.</p>
+<p>Again, everything is reducible to the patterns of dots and arrows (joins and forks in a <em>directed</em> acyclic graph), just like the information-processing strucure of the brain.</p>
+<p>Currird functions <code>a -&gt; b -&gt; c -&gt; d</code> shoud just be pictured as a &ldquo;join&rdquo; of <code>a, b, c&quot; (from differnt &quot;directions&quot;) into a &quot;dot&quot; (an event) which emits ~d</code>.</p>
+<p>The premises and a conclusion have the same shape. Again, the notion of Necessity and Sufficiency (as in a chemical reaction) has been captured there. Or crossing a treshold within a neuron.</p>
+<h2 id="where-it-goes-form-here">Where it goes form here?<a hidden class="anchor" aria-hidden="true" href="#where-it-goes-form-here">#</a></h2>
+<p>At a &ldquo;higer level of abstraction&rdquo; we have <em>events</em>, which are conceptually simialr to &ldquo;things&rdquo; because they could be categorized just like things in Sets (using the &ldquo;such that&rdquo;) notion.</p>
+<p>An <em>event</em> can be described by a tuple. Even <em>1-tuple</em>.</p>
+<p>The questing of <em>identity</em> is subtle (it is an exact location, which implies <em>time</em>, because the location is never the same). For us it is a <em>location</em> and (<code>,</code>) a <em>timestamp</em>.</p>
+<p>They (more precisely - their observations) are collected in a <em>log</em> (an <em>append-only file</em>) Each <em>entry</em> can be conceptually viewed as a <em>tuple</em>. What wasn&rsquo;t oberved didn&rsquo;t happen.</p>
+<p>A tuple is the simplest <em>structured</em> (non-atomic) and <em>ordered</em> (unlike a Set) data type. The ordering is necessary for actually <em>writing down</em> and accessing the elements of a tuple.</p>
+<p>Every list has to be written down on a paper in some order (serialized).</p>
+<p>Each row of a <em>table</em> is a tuple. Each row is an &ldquo;example&rdquo; if it correspond to a single distinct <em>observation</em> of an event.</p>
+<p>It is a single recording of an event (from a log) and a &ldquo;record type&rdquo; is just a particualr <em>representation</em> (in order to store it or &ldquo;write it down&rdquo;).</p>
+<p>When all the <em>slots</em> are number (ideally being normalized) it can be a row of a <em>matrix</em>. A &ldquo;single training example&rdquo; in the context of ML.</p>
+<p>Again, each row is an &ldquo;example&rdquo; or a recording of an <em>event</em>.</p>
+<p>A &ldquo;record&rdquo; is a &ldquo;named tuple&rdquo; with access of the elements <em>by name</em> (associated <em>symbol</em>), not by <em>an offset</em> (in bytes). Conceptually, &ldquo;access by name&rdquo; discrds the notion of an actual order (in a storage).</p>
+<p>A set of tuples (of the same type) is, thus, the most general non-atomic type, and a Set of attributes (or properties) is the most general notion.</p>
+<h2 id="embrace-and-design-for-changes">Embrace and design for changes<a hidden class="anchor" aria-hidden="true" href="#embrace-and-design-for-changes">#</a></h2>
+<p>The Programs you write should be used for long time, otherwise why bother?</p>
+<p>This implies they are never &ldquo;finished&rdquo; and have to extended and maintained.</p>
+<p>A long-living program <em>&ldquo;stabilizes along abstraction barriers and corresponding stable interface&rdquo;</em>. Just like GNU Emacs or an OS such as Linux. Or MS Excel.</p>
+<p>This means that <em>stable high-level interfaces</em> and modules are the main concerns.</p>
+<p>Ideally, each high-level ADT (that represent a distinct <em>concept</em> from the problem <em>domain</em>) should live in its own module.</p>
+<p>Embracing and optimizing for upcoming changes is the most important idea.</p>
+<p>Our medium, unlike painting, sculpture or architecture is extremely maliable and lots of changes are at least possible. One cannot change a building or a sculpture (at late stages) or even a painting (signigicantly).</p>
+<p>With program code we can change almost everithing, except, perhaps, very stupid architectural decisions, such as using <em>async</em> libraries everywhere.</p>
+<p>The last 60 years of PL research and the modern practices of lartge corportations have taught us 4 fundamental things:</p>
+<ul>
+<li>Disciplined modulatity (and strict discipline in general)</li>
+<li>Static typing (facilitates changes, makes it less costly)</li>
+<li>Interface versioning (stable, even immutable interfaces)</li>
+<li>Immutable/persistent data (still esoteric)</li>
+</ul>
+<p>Dynamically typed languages are cool and enable <em>really</em> fast prototyping, but then everything will become as mess. Look at Neovim&rsquo;s Lua codebases. They all going fast and thus <em>buggy as fuck</em>.</p>
+<p>Four our small progects (there is a limit to our cognitive capacity) the mantra is &ldquo;ABC - Always Be Compiled&rdquo; or just never leave a project in a inconsistent <em>state</em>.</p>
+<h2 id="testing">Testing<a hidden class="anchor" aria-hidden="true" href="#testing">#</a></h2>
+<p>Changes also imply mandatory extensive <em>testing</em>, including a regression testing. Testing is tedious and boring, but it is absolutely necessary.</p>
+<p>The good news is that the properer TTD practices done right (at an <em>interface level</em>) allows writing tests before code, which, in turn, is related to <em>exploratory programming</em> and REPL-like quick <em>experementation</em>.</p>
+<p>The main principle about testing is that one never writes tests <em>after</em> the code, but <em>before</em> the implemetation details.</p>
+<p>Proper tersting (before code) tests the validity of <em>inteterface-level constraints and invariants</em> before any implementation is being programmed.</p>
+<p>Remember that having non-leaking abstractions (proper abstraction barriers) will allow to have multiple implementations to coexist and be easily swapped and reused.</p>
+<h2 id="layers-of-dsls">Layers of DSLs<a hidden class="anchor" aria-hidden="true" href="#layers-of-dsls">#</a></h2>
+<p>At a system level it has been shown multiple times (independently) that there is nothing better than to organize large systems as <em>layers of embedded pure-functional DSLs</em>.</p>
+<p>This is the principle of &ldquo;immutable interfaces&rdquo; at work. Hardware graphics pipelines is where it really shines. MATLAB&rsquo;s Matrix DLS is another golden standard.</p>
+<p>X11, TeX and GNU Emacs are famous for their proper layered structure.</p>
+<h2 id="languages">Languages<a hidden class="anchor" aria-hidden="true" href="#languages">#</a></h2>
+<ul>
+<li>Ocaml 5 (Modularity and discipline)</li>
+<li>Scala 3 (wonderful testing DSLs as libraries)</li>
+<li>Haskell 9.6+ (proper UTF-8)</li>
+<li>Agda or Coq</li>
+<li>TLA+</li>
+</ul>
+<p>These are, despite memes, way, way superior to any commercial imperative crap, like C++, even with all the tooling.</p>
+<p>OK, it is easy to rewrite in C++ once you have a pure FP prototype working and tested. And Rust is already a better choice.</p>
+<h2 id="the-real-problem">The real problem<a hidden class="anchor" aria-hidden="true" href="#the-real-problem">#</a></h2>
+<p>This was the easy part. There is almost never any problem with <em>how to write</em> (given familiarity with a classic CS literature).</p>
+<p>The real problem is <em>what to write</em>. How do you even start to begin?</p>
+<p>Discrete-time signal processing? <em>Kalman filters</em> and other mathematical basis of the radar tech?</p>
+<h2 id="deep-learning">Deep Learning<a hidden class="anchor" aria-hidden="true" href="#deep-learning">#</a></h2>
+<p>Non-bullshit deep learning (it is infested by Chuds like a fresh pile of poo with flies) has a couple really fundamenral principles behind it.</p>
+<ul>
+<li>improvemnts in observed behavior <em>without being explicitly programmed</em></li>
+<li>automatically learning the &ldquo;parameters&rdquo; (without being selected by hand)</li>
+</ul>
+<p>At the highest, conceptual level this is <em>big</em>. The system <em>learns a nearly optimal representation</em> from the data.</p>
+<p>All stupid memes aside, it allows to actually <em>do</em> things which are way beiond our tiny mental (cognitive) capacities.</p>
+<p>There are challenges of a similar magnitude:</p>
+<ul>
+<li>how not to learn noise</li>
+<li>how not to overfit</li>
+<li>how to consistently <em>re-learn</em> on the new data (withot regressions)</li>
+</ul>
+<p>The answers are that one cannot apply Deep Learning to anything, only to a well-defined problems in a stable, fully-observable and preferably discrete environment.</p>
+<p>The problem is, all such environments (models) are gross over-simplifications. The real challenge is to come up with one that is actually useful and earns you money.</p>
+<p>The key to successful Deep Learning applications is to have a data-set which adequately <em>measures</em> (captures) the phenomena and in <em>not lying to yourself</em>.</p>
+<p>This is <em>exactly why</em> seemingly &ldquo;obvious&rdquo; applications of the learnign algorithms to the financial markets (by Chuds) yeielded so far only bullshit (markets are the exact opposites of <em>stable and fully-observable</em> environments).</p>
+<p>The real challenge is to come up with a set of measurements that actually measure and prartially capture at least some aspects of the social Causality behind recurrent (re-emergent) patterns.</p>
+<p>Actual and accurate <em>measurements</em> of anythig non-imaginary, not just any &ldquo;big data&rdquo; (meme) is the key to success.</p>
+<p>At the highest level this is &ldquo;To observe (measure and record) things as they really are&rdquo;.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded/">embedded</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/immutability/">immutability</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

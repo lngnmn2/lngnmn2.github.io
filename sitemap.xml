@@ -5,19 +5,40 @@
     <loc>https://lngnmn2.github.io/about/</loc>
     <lastmod>2023-08-05T19:21:03+05:45</lastmod>
   </url><url>
+    <loc>https://lngnmn2.github.io/tags/adt/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/dsl/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/embedded/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/immutability/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/programming/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/the-right-way/</loc>
+    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
+  </url><url>
     <loc>https://lngnmn2.github.io/articles/neurons/</loc>
     <lastmod>2023-10-08T19:22:39+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2023-10-08T19:22:39+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/</loc>
-    <lastmod>2023-10-08T19:22:39+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/categories/deep-learning/</loc>
-    <lastmod>2023-10-08T19:22:39+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/</loc>
     <lastmod>2023-10-08T19:22:39+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/ai/</loc>
@@ -29,16 +50,10 @@
     <loc>https://lngnmn2.github.io/categories/principles/</loc>
     <lastmod>2023-10-06T16:11:02+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/categories/programming/</loc>
-    <lastmod>2023-10-06T16:45:07+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/rust/</loc>
     <lastmod>2023-10-06T16:45:07+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/async-rust/</loc>
-    <lastmod>2023-10-06T16:45:07+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
     <lastmod>2023-10-06T16:45:07+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/transformer/</loc>
@@ -46,12 +61,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/transformer-bullshit/</loc>
     <lastmod>2023-10-06T16:11:02+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/adt/</loc>
-    <lastmod>2023-10-05T17:03:30+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/dsl/</loc>
-    <lastmod>2023-10-05T17:03:30+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/high-level/</loc>
     <lastmod>2023-10-05T17:03:30+05:45</lastmod>
@@ -208,9 +217,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/tags/derivatives/</loc>
     <lastmod>2023-08-10T12:05:25+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/embedded/</loc>
-    <lastmod>2023-08-02T12:43:44+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/functional-programming/</loc>
     <lastmod>2023-08-12T10:38:27+05:45</lastmod>

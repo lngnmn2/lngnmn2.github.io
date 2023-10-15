@@ -6,7 +6,16 @@
     <description>Recent content in programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The right way</title>
+      <link>https://lngnmn2.github.io/articles/the-right-way/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/the-right-way/</guid>
+      <description>How to program instead of doing a webshit coding</description>
+    </item>
+    
     <item>
       <title>Solving async-await for Rust</title>
       <link>https://lngnmn2.github.io/articles/async-rust/</link>
