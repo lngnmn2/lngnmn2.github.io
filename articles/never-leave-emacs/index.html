@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Never leave Emacs | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, imperative, ADT, homoiconicity, embedded-DSL">
+<meta name="description" content="How to partially overcome our cognitive deficiencies.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/never-leave-emacs/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Never leave Emacs" />
+<meta property="og:description" content="How to partially overcome our cognitive deficiencies." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/never-leave-emacs/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-10-17T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-10-17T12:37:04+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Never leave Emacs"/>
+<meta name="twitter:description" content="How to partially overcome our cognitive deficiencies."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Never leave Emacs",
+      "item": "https://lngnmn2.github.io/articles/never-leave-emacs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Never leave Emacs",
+  "name": "Never leave Emacs",
+  "description": "How to partially overcome our cognitive deficiencies.",
+  "keywords": [
+    "emacs", "imperative", "ADT", "homoiconicity", "embedded-DSL"
+  ],
+  "articleBody": "It takes time to get more-or-less familiar with the major branches of human knowledge, which is traditionally called a classic education.\nThis gives one, among other things, the ability to see what other people call “connections” between seemingly unrelated “things”.\nThis ability, in turn, helps to see things as they really are, which is the most important part of life, and goes back to the Upanishads and the Buddha.\nThe most difficult and subtle “thing” to see (as it really is), is, of course, your own self, and the habit of doing so, which is called introspection, which ultimately leads to self-knowledge and self-control, is the most sought after ability since beginning of time (at least in the Orient).\nOne could observe, for instance, that contrary to all that western “humanitarian” bullshit, we are techincally driven by dopamine and a few other neuromodulators, and all that seemingly complex “unique” behavior, based on a “human spirit” and “free will” is basically dopamine-induced random-walk (constrained heavily by the current social environment and its current contexts).\nHave you ever heard about that “drunken sailor on a lamp post” story, which is used to illustrate the “random walk” scientific concept?\nAnyway, there are a few facts which could be easily observed, if one wishes to do so:\nmost of our actions are habitual ways to get a tiny dopamine release performing regular, familiar, even ritualistic tasks is just these dopamine releases (this explains all the repetitive religious practices) all the repetitive compurer tasks, like rising, configuring, updating, tweaking, customizing your environment is of exactly the same nature. simple coding (unlike serious principle-guided programming) is also driven by these dopamine-based yays (this is why a crappy code is so abundant).\nIn addition to that we could also observe that:\nwe have very limited cognitive capacity we are very easy to distract (with almost every unwanted sensory stimuli) restoring the previous mental state is literally impossible (we will always get something different and slightly worse). maintaining a focused attention is very hard and takes lots of deliberate practice (the ancients of the East knew this) relaxed mental concentration, which is called awareness, requires absence of distractions and interruptions (which ancients referred to as solitude) these mental states are absolutely required to do any highly competitive intellectual work involving computers The modern memes for all this are “an adult ADHD” and “Deep Work” (the meme book).\nThere are, however, “connections” and underlying principles behind all these observations and memes. We are evolved biological systems, made our of meat, conditioned by the environment and driven by neuromodulators.\nWhat is absolutely crucial to realize, is that we were not evolved to live in modern social environments with are:\novercrowded and competitive full of sensory noise full of social distractions full of lies and bullshit (verbalized nonsense) full of low quality unnecessary, meaningless information The last one is especially important. Our brains has been evolved within stable and “fair” physical environment. The explosion of language and “information” is the most recent phenomena.\nOk, what all this have to do with Emacs?\nWell, Emacs, being a “software LISP Machine” and an “operating system written in LISP, which happen to include a text editor”, is the partial solution to most of these problems, assuming we use it “just right”.\nFor us, Emacs is an information processing and environment, which includes most of the required tools and building blocks. It could even be used as a rudimentary “knowledge base”.\nAt least, Emacs has been evolved for reading and writing.\nWe can read web pages with eww, PDFs with the pdf-tools, EPUBs with the nov-mode, and so on.\nIt has the org-mode for writing math and prose, and various specialized modes for writing programs.\nFortunately, we also have a world-class LaTex support.\nAnd the org-roam2 for creating and maintaining a simple Wiki-like knowledge base, which is absolutely essential for overcoming all the cognitive limitation and challenges.\nAll these tools (and much more) are being integrated withing a single extensible and programmable environment. (“Lisp is a programmable programming language”, your know).\nTechnically, the Emacs environment is a collection of layered DSLs (embedded in Emacs Lisp), packaged into a collection of built-in and third-party “packages”.\nIt is sort of an operating system, for us.\nNow lets get serious here.\nUnnecessary, redundant, unwanted context switches (within the brain) is the root of all evil.\nThis is not just another meme from the “Deep Work”. An electrochemical states within the specialized brain areas (within sinapses, basically) are very real, difficult to maintain and very easy to mess up.\nEmacs helps to avoid (well, to minimize) distractions and interruptions.\nWithin Emacs it is possible to limit (minimize) redundant context switches.\nOne basically learns a new set of habits to stay in Emacs and do not even thing about it, just like drivers do not even think about driving a car.\nIt takes time and understanding to separate what is essential and even fundamental from memes, bells and whistles.\nEssential (required) things are:\nhaving minimum visible UI elements having the same font set everywhere have the same colors everywhere (rising has it merits) having the fonts and colors being consistent everywhere the similar thing have to look sthe same, different - differntly (this is the subtle point that theme designers miss) a key-bindings-driven navigation and buffer management to have a true discroverability (which-key and describe-*) “fuzzy” search on M-x, C-h-* and describe-* having a context-aware completions (at point) everywhere The most important part is that everything is a Emacs Lisp code which could be read, understood and modified if necessary. Everything.\nAnother emergent (evolved) key aspect is to use org-mode (the particular generalized file format of a structured text) and the related tooling (libraries) everywhere.\nThe org-roam2 package has been, in some sense, built upon all of these evolved characteristics which makes Emacs unique.\nAgain, it is not particulars, but the underlying principles, which require understanding (everyhing has a structure, nesting, composeability (via interfaces), proper ADTs, declarative embedded DSLs, etc.)\nThis is just a few-page overview, which barely shows the way.\nThe point, however, is that it helps to overcome our cognitive limitations and to deal with all the challenges, partially, because it is an evolved system, evolved by the smartest people on Earth.\n",
+  "wordCount" : "1044",
+  "inLanguage": "en",
+  "datePublished": "2023-10-17T00:00:00+05:45",
+  "dateModified": "2023-10-17T12:37:04+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/never-leave-emacs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Never leave Emacs
+    </h1>
+    <div class="post-description">
+      How to partially overcome our cognitive deficiencies.
+    </div>
+    <div class="post-meta"><span title='2023-10-17 00:00:00 +0545 +0545'>October 17, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>It takes time to get more-or-less familiar with the major
+branches of human knowledge, which is traditionally called a
+<em>classic education</em>.</p>
+<p>This gives one, among other things, the ability to see what other
+people call &ldquo;connections&rdquo; between seemingly unrelated &ldquo;things&rdquo;.</p>
+<p>This ability, in turn, helps <em>to see things as they really are</em>, which
+is the most important part of life, and goes back to the Upanishads and
+the Buddha.</p>
+<p>The most difficult and subtle &ldquo;thing&rdquo; to see (as it really is), is,
+of course, your own self, and the habit of doing so, which is called
+<em>introspection</em>, which ultimately leads to self-knowledge and
+self-control, is the most sought after ability since beginning of time
+(at least in the Orient).</p>
+<p>One could observe, for instance, that contrary to all that western
+&ldquo;humanitarian&rdquo; bullshit, we are <em>techincally</em> driven by dopamine and a
+few other <em>neuromodulators</em>, and all that seemingly complex &ldquo;unique&rdquo; behavior,
+based on a &ldquo;human spirit&rdquo; and &ldquo;free will&rdquo; is basically <em>dopamine-induced random-walk</em>
+(constrained heavily by the current social environment and its current contexts).</p>
+<p>Have you ever heard about that &ldquo;drunken sailor on a lamp post&rdquo; story,
+which is used to illustrate the &ldquo;random walk&rdquo; scientific concept?</p>
+<p>Anyway, there are a few facts which could be easily observed, if one
+wishes to do so:</p>
+<ul>
+<li>most of our actions are habitual ways to get a tiny dopamine release</li>
+<li>performing regular, familiar, even ritualistic tasks is just these dopamine
+releases (this explains all the repetitive religious practices)</li>
+<li>all the repetitive compurer tasks, like <em>rising</em>, configuring,
+updating, tweaking, customizing your <em>environment</em> is of exactly the
+same nature.</li>
+<li>simple coding (unlike serious principle-guided programming) is also
+driven by these <em>dopamine-based yays</em> (this is why a crappy code is</li>
+</ul>
+<p>so abundant).</p>
+<p>In addition to that we could also observe that:</p>
+<ul>
+<li>we have very limited cognitive capacity</li>
+<li>we are very easy to distract (with almost every unwanted sensory stimuli)</li>
+<li>restoring the previous mental state is literally impossible (we will
+always get something different and slightly worse).</li>
+<li>maintaining a focused attention is very hard and takes lots of
+deliberate practice (the ancients of the East knew this)</li>
+<li>relaxed mental concentration, which is called <em>awareness</em>, requires
+absence of distractions and interruptions (which ancients referred to as
+<em>solitude</em>)</li>
+<li>these mental states are absolutely <em>required</em> to do any highly competitive
+intellectual work involving computers</li>
+</ul>
+<p>The modern memes for all this are &ldquo;an adult ADHD&rdquo; and &ldquo;Deep Work&rdquo; (the
+meme book).</p>
+<p>There are, however, &ldquo;connections&rdquo; and underlying principles behind all
+these observations and memes. We are evolved biological systems, made
+our of meat, conditioned by the environment and driven by
+neuromodulators.</p>
+<p>What is absolutely crucial to realize, is that we were not evolved to
+live in modern social environments with are:</p>
+<ul>
+<li>overcrowded and competitive</li>
+<li>full of sensory noise</li>
+<li>full of social distractions</li>
+<li>full of lies and bullshit (verbalized nonsense)</li>
+<li>full of low quality unnecessary, meaningless information</li>
+</ul>
+<p>The last one is especially important. Our brains has been evolved
+within stable and &ldquo;fair&rdquo; physical environment. The explosion of
+language and &ldquo;information&rdquo; is the most recent phenomena.</p>
+<p>Ok, what all this have to do with Emacs?</p>
+<p>Well, Emacs, being a &ldquo;software LISP Machine&rdquo; and an &ldquo;operating system
+written in LISP, which happen to include a text editor&rdquo;, is the
+partial solution to most of these problems, assuming we use it &ldquo;just
+right&rdquo;.</p>
+<p>For us, Emacs is an information processing and environment, which
+includes most of the required tools and building blocks. It could even
+be used as a rudimentary &ldquo;knowledge base&rdquo;.</p>
+<p>At least, Emacs has been evolved for <em>reading</em> and <em>writing</em>.</p>
+<p>We can read web pages with <code>eww</code>, PDFs with the <code>pdf-tools</code>, EPUBs with
+the <code>nov-mode</code>, and so on.</p>
+<p>It has the <code>org-mode</code> for writing <em>math</em> and prose, and various specialized modes for
+writing programs.</p>
+<p>Fortunately, we also have a world-class <em>LaTex</em> support.</p>
+<p>And the <code>org-roam2</code> for creating and maintaining a simple <em>Wiki-like</em>
+knowledge base, which is absolutely essential for overcoming all the
+cognitive limitation and challenges.</p>
+<p>All these tools (and much more) are being <em>integrated</em> withing a single
+extensible and programmable <em>environment</em>. (&ldquo;Lisp is a programmable
+programming language&rdquo;, your know).</p>
+<p>Technically, the Emacs environment is a collection of layered DSLs
+(embedded in Emacs Lisp), packaged into a collection of built-in and third-party &ldquo;packages&rdquo;.</p>
+<p>It <em>is</em> sort of an operating system, for us.</p>
+<p>Now lets get serious here.</p>
+<p>Unnecessary, redundant, unwanted <em>context switches</em> (within the brain)
+is the root of all evil.</p>
+<p>This is not just another meme from the &ldquo;Deep Work&rdquo;. An electrochemical <em>states</em>
+within the specialized brain areas (within sinapses, basically) are very real,
+difficult to maintain and very easy to mess up.</p>
+<p>Emacs helps to avoid (well, to <em>minimize</em>) distractions and interruptions.</p>
+<p>Within Emacs it is possible to limit (minimize) redundant <em>context switches</em>.</p>
+<p>One basically learns a new set of habits <em>to stay in Emacs</em> and do not
+even thing about it, just like drivers do not even think about driving
+a car.</p>
+<p>It takes time and <em>understanding</em> to separate what is essential and
+even fundamental from memes, bells and whistles.</p>
+<p>Essential (required) things are:</p>
+<ul>
+<li>having minimum visible UI elements</li>
+<li>having the same font set everywhere</li>
+<li>have the same colors everywhere (<em>rising</em> has it merits)</li>
+<li>having the fonts and colors being <em>consistent</em> everywhere</li>
+<li>the similar thing have to look sthe same, different - differntly</li>
+<li>(this is the subtle point that theme designers miss)</li>
+<li>a <em>key-bindings-driven</em> navigation and buffer management</li>
+<li>to have a true <em>discroverability</em> (<code>which-key</code> and <code>describe-*</code>)</li>
+<li>&ldquo;fuzzy&rdquo; search on <code>M-x</code>, <code>C-h-*</code> and <code>describe-*</code></li>
+<li>having a context-aware <em>completions</em> (at point) everywhere</li>
+</ul>
+<p>The most important part is that <em>everything is a Emacs Lisp code</em>
+which could be read, understood and modified if necessary. <em>Everything</em>.</p>
+<p>Another <em>emergent</em> (evolved) key aspect is to use <code>org-mode</code> (the
+particular generalized file format of a structured text) and
+the related tooling (libraries) everywhere.</p>
+<p>The <code>org-roam2</code> package has been, in some sense, <em>built upon</em> all of these evolved characteristics which makes Emacs <em>unique</em>.</p>
+<p>Again, it is not particulars, but the underlying principles, which
+require understanding (everyhing has a structure, nesting, composeability (via interfaces), proper ADTs, declarative embedded DSLs, etc.)</p>
+<p>This is just a few-page overview, which barely shows the way.</p>
+<p>The point, however, is that it helps to overcome our cognitive limitations and to deal with all the challenges, partially, because it is an <em>evolved</em> system, evolved by the smartest people on Earth.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/imperative/">imperative</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/homoiconicity/">homoiconicity</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded-dsl/">embedded-DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
