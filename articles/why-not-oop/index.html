@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Why not OOP | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, OOP">
+<meta name="description" content="It&#39;s time to backtrack and prune.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/why-not-oop/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Why not OOP" />
+<meta property="og:description" content="It&#39;s time to backtrack and prune." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/why-not-oop/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-10-21T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-10-21T10:46:08+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Why not OOP"/>
+<meta name="twitter:description" content="It&#39;s time to backtrack and prune."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Why not OOP",
+      "item": "https://lngnmn2.github.io/articles/why-not-oop/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why not OOP",
+  "name": "Why not OOP",
+  "description": "It's time to backtrack and prune.",
+  "keywords": [
+    "ADT", "OOP"
+  ],
+  "articleBody": " Object-oriented design is the roman numerals of computing.\nRob Pike\nJoe Armstrong said in his thesis that Java is not even suitable for programming.\nIt is good idea to try to realize why.\nThe fundamental flaw, which cannot be eliminated, comes from the fact that the “designers” of Java lacked a required mathematical background.\nThe idea of mimicking the “real world” in which “objects having its internal state” is exactly what is wrong.\nYes, “object” of real world do have internal state, but this fact does not imply that the language for describing the world should have objects with a state.\nMathematics does not have any state for a reason and it is a meta-language for describing aspects of real world.\nThe way do deal with the state has been discovered long before OOP and the principle is that we just read and write the data as it is.\nEvery classic language since Common Lisp and Standard ML have the REPL functionality. The principle is that one can print a value of any type and then read it back into a system.\nThis is the way to deal with a state. This, unsurprisingly, is similar to what Erlang and telecom people called “in-wire” representation. We just spell it out.\nHaving “an encapsulated mutable state within an object” which is the main selling point of OOP is just wrong in a multi-threaded environment with an unrestricted write access.\nThe right way is to have an immutable binding or an immutable reference (as a proper, non-leaking abstraction – as an ADT).\nHaving at most one “mutable reference” is implicit in the classic FP languages due to immutability of a binding - one has to explicitly pass the value (of the type “ref”) along.\nWhat Rust guarantees at the static type-system level (a major innovation) is implicit in the classic FP languages due to following mathematics instead of a processor (the principles on which it has been built).\nEverything else just follows. Again, it is not about the identity of an object, but about having at most one (mutable) reference to every value.\nThis mimics the real world better, and, corresponds to a mathematical notion of an (at most one) arrow pointing to a value and thus selecting it. I think they call it a probe or something like that.\nSo, what Rust designers “discovered” or come up with is a fundamental notion which has been captured more than once by different branches of human knowledge.\nIn logic this notion is also implicit - every “fact” in \\(\\Gamma\\) has only one implicit “arrow pointing at it”.\nThis is not the end of the story, however. It is seems that the only way to do computation reliably is by using symbolic manipulation (exactly as in mathematics and logic, using pen and paper) within a specialized (for immutability of bindings and lexical closures) G-Machine/.\nIn short, it has to be the Lambda Calculus (yes, all over again), not a CPU-memory model with mutable state and concurrent arbitrary writes (even C was ok as long as there were no concurrency).\nIt is time to admit that a CPU-Memory model is just wrong (and we have to backtrack from this dead end) and is an ultimate technical dept.\nYes, yes, Windows, OpenJDK and Chromium works, but only until they don’t.\nThe early FP guys, like Joe Armstrong, did all the proper research.\n",
+  "wordCount" : "565",
+  "inLanguage": "en",
+  "datePublished": "2023-10-21T00:00:00+05:45",
+  "dateModified": "2023-10-21T10:46:08+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/why-not-oop/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Why not OOP
+    </h1>
+    <div class="post-description">
+      It&#39;s time to backtrack and prune.
+    </div>
+    <div class="post-meta"><span title='2023-10-21 00:00:00 +0545 +0545'>October 21, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>Object-oriented design is the roman numerals of computing.</p>
+<p>Rob Pike</p>
+</blockquote>
+<p>Joe Armstrong said in his thesis that Java is not even suitable for
+programming.</p>
+<p>It is good idea to try to <em>realize</em> why.</p>
+<p>The fundamental flaw, which cannot be eliminated, comes from the fact
+that the &ldquo;designers&rdquo; of Java lacked a required mathematical background.</p>
+<p>The idea of mimicking the &ldquo;real world&rdquo; in which &ldquo;objects having its internal
+state&rdquo; is exactly what is wrong.</p>
+<p>Yes, &ldquo;object&rdquo; of real world do have internal state, but this fact does
+not imply that the language for describing the world should have objects
+with a state.</p>
+<p>Mathematics does not have any state for a reason and it is a
+meta-language for describing aspects of real world.</p>
+<p>The way do deal with the state has been discovered long before OOP and
+the principle is that we just <em>read and write</em> the data as it is.</p>
+<p>Every classic language since Common Lisp and Standard ML have the REPL
+functionality. The principle is that one can <em>print</em> a value of any type
+and then <em>read</em> it back into a system.</p>
+<p>This is the way to deal with a state. This, unsurprisingly, is similar
+to what Erlang and telecom people called &ldquo;in-wire&rdquo; representation. We
+just spell it out.</p>
+<p>Having <em>&ldquo;an encapsulated mutable state within an object&rdquo;</em> which is the
+main selling point of OOP is just wrong in a multi-threaded environment
+with an unrestricted <em>write</em> access.</p>
+<p>The right way is to have an immutable binding or an immutable reference
+(as a proper, non-leaking abstraction &ndash; as an ADT).</p>
+<p>Having at most one &ldquo;mutable reference&rdquo; is implicit in the classic FP
+languages due to immutability of a binding - one has to explicitly pass
+the value (of the type &ldquo;ref&rdquo;) along.</p>
+<p>What Rust guarantees at the static type-system level (a major
+innovation) is implicit in the classic FP languages due to following
+mathematics instead of a processor (the principles on which it has been
+built).</p>
+<p>Everything else just follows. Again, it is not about the identity of an
+object, but about having at most one (mutable) reference to every value.</p>
+<p>This mimics the real world better, and, corresponds to a mathematical
+notion of <em>an (at most one) arrow pointing to a value</em> and thus <em>selecting
+it</em>. I think they call it <em>a probe</em> or something like that.</p>
+<p>So, what Rust designers &ldquo;discovered&rdquo; or come up with is a fundamental
+notion which has been captured more than once by different branches of
+human knowledge.</p>
+<p>In logic this notion is also implicit - every &ldquo;fact&rdquo; in \(\Gamma\) has only one
+implicit &ldquo;arrow pointing at it&rdquo;.</p>
+<p>This is not the end of the story, however. It is seems that the only way
+to do computation reliably is by using symbolic manipulation (exactly as
+in mathematics and logic, <em>using pen and paper</em>) within a
+specialized (for immutability of bindings and lexical closures)
+<em>G</em>-Machine/.</p>
+<p>In short, it has to be the Lambda Calculus (yes, all over again), not a
+CPU-memory model with mutable state and concurrent arbitrary writes
+(even <code>C</code> was ok as long as there were <em>no concurrency</em>).</p>
+<p>It is time to admit that a CPU-Memory model is just wrong (and we have
+to <em>backtrack</em> from this dead end) and is an ultimate technical dept.</p>
+<p>Yes, yes, Windows, OpenJDK and Chromium works, but only until they don&rsquo;t.</p>
+<p>The early FP guys, like Joe Armstrong, did all the proper research.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/oop/">OOP</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
