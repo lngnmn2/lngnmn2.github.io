@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>A small step towards GAI | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="deep-learning, GAI">
+<meta name="description" content="DESCRIPTION: There is no &ldquo;I&rdquo; in your AI.
+Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).
+There is what every &ldquo;AI researcher&rdquo; should know about Knowledge and Intelligence (yes, both capitalized).
+There is so-called &ldquo;reality&rdquo; prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.
+&ldquo;I am That&rdquo; (&ldquo;That Thou Art&rdquo;) of Chandogya Upanishad is the &ldquo;end of knowledge&rdquo; and the &ldquo;arrival&rdquo; to the ultimate &ldquo;truth&rdquo;, with implies existence of &ldquo;That&rdquo; and one being just a sub-process (a wave) in It.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/look-ma-no-i/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="A small step towards GAI" />
+<meta property="og:description" content="DESCRIPTION: There is no &ldquo;I&rdquo; in your AI.
+Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).
+There is what every &ldquo;AI researcher&rdquo; should know about Knowledge and Intelligence (yes, both capitalized).
+There is so-called &ldquo;reality&rdquo; prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.
+&ldquo;I am That&rdquo; (&ldquo;That Thou Art&rdquo;) of Chandogya Upanishad is the &ldquo;end of knowledge&rdquo; and the &ldquo;arrival&rdquo; to the ultimate &ldquo;truth&rdquo;, with implies existence of &ldquo;That&rdquo; and one being just a sub-process (a wave) in It." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/look-ma-no-i/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-10-21T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-10-21T13:32:56+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A small step towards GAI"/>
+<meta name="twitter:description" content="DESCRIPTION: There is no &ldquo;I&rdquo; in your AI.
+Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).
+There is what every &ldquo;AI researcher&rdquo; should know about Knowledge and Intelligence (yes, both capitalized).
+There is so-called &ldquo;reality&rdquo; prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.
+&ldquo;I am That&rdquo; (&ldquo;That Thou Art&rdquo;) of Chandogya Upanishad is the &ldquo;end of knowledge&rdquo; and the &ldquo;arrival&rdquo; to the ultimate &ldquo;truth&rdquo;, with implies existence of &ldquo;That&rdquo; and one being just a sub-process (a wave) in It."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "A small step towards GAI",
+      "item": "https://lngnmn2.github.io/articles/look-ma-no-i/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "A small step towards GAI",
+  "name": "A small step towards GAI",
+  "description": "DESCRIPTION: There is no \u0026ldquo;I\u0026rdquo; in your AI.\nLets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).\nThere is what every \u0026ldquo;AI researcher\u0026rdquo; should know about Knowledge and Intelligence (yes, both capitalized).\nThere is so-called \u0026ldquo;reality\u0026rdquo; prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.\n\u0026ldquo;I am That\u0026rdquo; (\u0026ldquo;That Thou Art\u0026rdquo;) of Chandogya Upanishad is the \u0026ldquo;end of knowledge\u0026rdquo; and the \u0026ldquo;arrival\u0026rdquo; to the ultimate \u0026ldquo;truth\u0026rdquo;, with implies existence of \u0026ldquo;That\u0026rdquo; and one being just a sub-process (a wave) in It.",
+  "keywords": [
+    "deep-learning", "GAI"
+  ],
+  "articleBody": "DESCRIPTION: There is no “I” in your AI.\nLets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).\nThere is what every “AI researcher” should know about Knowledge and Intelligence (yes, both capitalized).\nThere is so-called “reality” prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.\n“I am That” (“That Thou Art”) of Chandogya Upanishad is the “end of knowledge” and the “arrival” to the ultimate “truth”, with implies existence of “That” and one being just a sub-process (a wave) in It.\nThere is just nothing to talk about. Sectarian dogmatism is irrelevant against this ultimate result of an observing human mind.\nSo, about knowledge and intelligence?\nAll Knowledge is within That and in nowhere else. There is no abstract knowledge apart from That and all the true knowledge could (and should) be traced back to some or other aspect of That.\nAll the proper mathematics can be traced back to “ultimate reality”.\nOne more time: Knowledge is not within individuals (agents), Knowledge is within the shared environment (Universe). From this everything follows.\nWhen you (as an agent) observes some locality of our shared environment we literally “see” knowledge embedded in it everywhere.\nIt is just the “natural” habit of always asking “why it is so?”. Most of Knowledge is in the “whys” and little bit more in “hows”.\nNot just every human artifact has some reasoning of /why it has been done this particular way. Every natural phenomenon has its whys.\nWhys are special because they ought to show (describe) the causes - what caused this or that.\nWhat we call the Causality principle is behind everything That Is. Whys are less wrong explanations of it.\nNotice that there is always an ultimate true “graph” of causality which “produced” everything that is out there. There is nothing not connected within this imaginary directed graph of causes and effects.\nThe edge of this “front” is Everything That Is.\nSo, what about GAI?\nIt has to have the ability to “read” knowledge from What Is and put it back in some commonly agreed form of information, so all the other agents could read it too.\nIt is that simple. Intelligence is multi-agent phenomena and it is require multiple agents to observe the same “reality” (from different angles) and to share what they “know”.\nHuman knowledge is the shared knowledge implicit in all the human artifacts, just as causality is implicit in every aspect of Mother Nature.\nWe do not have to reinvent all the mathematics by every single person and we do not “learn” every time from a ground zero.\nEven animals have “knowledge” about its environment embedded in the structure of their brains and neural system.\nAll the living forms has been evolved to match the constraints of its environment in this parricular locality.\nLets state in one more time: Knowledge in not in the texts (most of texts are bullshit). Texts (and speech) are just encodings. Knowledge is in What Is and an Intelligence is the ability to observe and trace the causality and capture, extract and generalize knowledge.\nThere is no “I” in AI There is no knowledge or intelligence in current LLMs. Only information extracted from texts.\nThere is, literally, (and this is the best and the most adequate metaphor) no more knowledge or intelligence in an output of an LLM that in an audio output of a parrot (a bird) which mimics human speech.\nCurrent AI only mimics of (cosplays if you will) intelligence. It only looks intelligent (just like all the Chuds).\nIntelligence, again, is a habit and ability of tracing back (unwind) to What Is.\nIt is like non-stop verifying of the findings of a scientific method.\nThe famous Subjective vs Objective false dichotomy is only applicable to abstract bullshit. There is nothing “subjective” in any natural phenomena or a human artifact (everything has its ultimate whys and the exact “path” (a directed graphs) of how exactly it came to be in this particular way).\nEvery person has such a graph, a wast one, no different that any kitten or a dog (everyone has been conditioned by the events which happened to him).\nSo how do we even start to begin? Ultimately, the answer has been given some 2500 years ago - “To See Things As They Really Are”.\nBut understanding require knowledge of “facts” or the principles behind the Causality itself.\nSuch knowledge come from a multi-agent effort and is stored (literally) within the shared environment and within what we call a shared culture.\nThis means it has to be a multi-agent shared environment before we even begin.\nThen, of course, there has to be a shared (agreed upon or standardized) “encoding”, not for merely “information” (it is too low-level) but for “description of extracted knowledge” (just like it is with mathematical texts and notation).\nMay be the agents will “learn” its own “mathematical knowledge” (which is a set of properly captured generalizations stored in the shared culture).\nWho knows. But what we do know is that there is still no “I” in AI, not even close. Just very complex parroting at the level of texts and speech (which, again, are just encodings).\nTo see things as they really are is to be able to trace everything back to the actual causes (to What Is) using evolved methodologies (which are basically ability to see “natural” experiments and to perform well-controlled scientific ones).\nAgain, it is not in the texts, it is a process, like everything else in this Universe.\nSorry, Chuds, you are just emitting streams of verbalized bullshit in order to impress each other (and “validate” yourselves) according to your current cultural (sectarian) norms.\n",
+  "wordCount" : "959",
+  "inLanguage": "en",
+  "datePublished": "2023-10-21T00:00:00+05:45",
+  "dateModified": "2023-10-21T13:32:56+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/look-ma-no-i/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      A small step towards GAI
+    </h1>
+    <div class="post-meta"><span title='2023-10-21 00:00:00 +0545 +0545'>October 21, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>DESCRIPTION: There is no &ldquo;I&rdquo; in your AI.</p>
+<p>Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).</p>
+<p>There is what every &ldquo;AI researcher&rdquo; should know about Knowledge and
+Intelligence (yes, both capitalized).</p>
+<p>There <em>is</em> so-called &ldquo;reality&rdquo; <em>prior to</em> any knowledge or intelligence. Any
+reasonable thinker has been arrived at the ultimate reality.</p>
+<p><em>&ldquo;I am That&rdquo;</em> (&ldquo;That Thou Art&rdquo;) of Chandogya Upanishad is the &ldquo;end of
+knowledge&rdquo; and the &ldquo;arrival&rdquo; to the ultimate &ldquo;truth&rdquo;, with implies
+existence of &ldquo;That&rdquo; and one being just a sub-process (a wave) in It.</p>
+<p>There is just nothing to talk about. Sectarian dogmatism is irrelevant
+against this ultimate result of an observing human mind.</p>
+<p>So, about knowledge and intelligence?</p>
+<p><em>All Knowledge is within That</em> and in nowhere else. There is no abstract
+knowledge <em>apart from That</em> and all the true knowledge could (and should)
+be traced back to some or other aspect of That.</p>
+<p>All the proper mathematics can be traced back to &ldquo;ultimate reality&rdquo;.</p>
+<p>One more time: Knowledge is not within individuals (agents), Knowledge
+is within the shared environment (Universe). From this everything
+follows.</p>
+<p>When you (as an agent) observes some locality of our shared environment
+we literally &ldquo;see&rdquo; knowledge <em>embedded</em> in it everywhere.</p>
+<p>It is just the &ldquo;natural&rdquo; habit of always asking &ldquo;why it is so?&rdquo;. Most of
+Knowledge is in the &ldquo;whys&rdquo; and little bit more in &ldquo;hows&rdquo;.</p>
+<p>Not just every human artifact has some reasoning <em>of /why</em> it has been done this
+particular way. Every natural phenomenon has its whys.</p>
+<p>Whys are special because they ought to show (describe) the causes - what
+caused this or that.</p>
+<p>What we call the Causality principle is behind everything <em>That Is</em>. Whys
+are less wrong explanations of it.</p>
+<p>Notice that there is always an ultimate true &ldquo;graph&rdquo; of causality which
+&ldquo;produced&rdquo; <em>everything that is out there</em>. There is <em>nothing not connected
+within this imaginary directed graph of causes and effects</em>.</p>
+<p>The edge of this &ldquo;front&rdquo; is Everything That Is.</p>
+<p>So, what about GAI?</p>
+<p>It has to have the ability to &ldquo;read&rdquo; knowledge from <em>What Is</em> and put it
+back in some commonly agreed form of <em>information</em>, so all the other
+agents could read it too.</p>
+<p>It is that simple. Intelligence is <em>multi-agent</em> phenomena and it is
+require multiple agents to observe the same &ldquo;reality&rdquo; (from different
+angles) and to share what they &ldquo;know&rdquo;.</p>
+<p>Human knowledge is the shared knowledge <em>implicit in all the human
+artifacts</em>, just as causality is implicit in every aspect of Mother Nature.</p>
+<p>We do not have to reinvent all the mathematics by every single person
+and we do not &ldquo;learn&rdquo; every time from a ground zero.</p>
+<p>Even animals have &ldquo;knowledge&rdquo; about its environment <em>embedded</em> in the
+structure of their brains and neural system.</p>
+<p>All the living forms has been evolved to match the constraints of its
+environment in this parricular locality.</p>
+<p>Lets state in one more time: Knowledge in not in the texts (most of
+texts are bullshit). Texts (and speech) are just <em>encodings</em>. Knowledge is
+in <em>What Is</em> and an Intelligence is the ability to observe and trace the
+causality and capture, extract and generalize knowledge.</p>
+<h2 id="there-is-no-i-in-ai">There is no &ldquo;I&rdquo; in AI<a hidden class="anchor" aria-hidden="true" href="#there-is-no-i-in-ai">#</a></h2>
+<p>There is no knowledge or intelligence in current LLMs. Only information
+extracted from texts.</p>
+<p>There is, literally, (and this is the best and the most adequate
+metaphor) no more knowledge or intelligence in an output of an LLM that
+in an audio output of a parrot (a bird) which mimics human speech.</p>
+<p>Current AI only <em>mimics</em> of (cosplays if you will) intelligence. It only
+<em>looks</em> intelligent (just like all the Chuds).</p>
+<p>Intelligence, again, is a habit and ability of tracing back (unwind) to
+<em>What Is</em>.</p>
+<p>It is like non-stop verifying of the findings of a scientific method.</p>
+<p>The famous Subjective vs Objective false dichotomy is only applicable to
+abstract bullshit. There is nothing &ldquo;subjective&rdquo; in any natural
+phenomena or a human artifact (everything has its ultimate <em>whys</em> and the
+exact &ldquo;path&rdquo; (a directed graphs) of how exactly it came to be in this
+particular way).</p>
+<p>Every person has such a graph, a wast one, no different that any kitten
+or a dog (everyone has been conditioned by the events which happened to him).</p>
+<h2 id="so-how-do-we-even-start-to-begin">So how do we even start to begin?<a hidden class="anchor" aria-hidden="true" href="#so-how-do-we-even-start-to-begin">#</a></h2>
+<p>Ultimately, the answer has been given some 2500 years ago - &ldquo;To See
+Things As They Really Are&rdquo;.</p>
+<p>But understanding require knowledge of &ldquo;facts&rdquo; or the principles behind
+the Causality itself.</p>
+<p>Such knowledge come from a multi-agent effort and is stored (literally)
+within the shared environment and within what we call a shared culture.</p>
+<p>This means it has to be a multi-agent shared environment before we even
+begin.</p>
+<p>Then, of course, there has to be a shared (agreed upon or standardized)
+&ldquo;encoding&rdquo;, not for merely &ldquo;information&rdquo; (it is too low-level) but for
+&ldquo;description of extracted knowledge&rdquo; (just like it is with mathematical
+texts and notation).</p>
+<p>May be the agents will &ldquo;learn&rdquo; its own &ldquo;mathematical knowledge&rdquo; (which
+is a set of properly captured generalizations stored in the shared
+culture).</p>
+<p>Who knows. But what we do know is that there is still no &ldquo;I&rdquo; in AI, not
+even close. Just very complex parroting at the level of texts and speech
+(which, again, are just encodings).</p>
+<p>To see things as they really are is to be able to trace everything back
+to the actual causes (to What Is) using evolved methodologies (which
+are basically ability to see &ldquo;natural&rdquo; experiments and to perform
+well-controlled scientific ones).</p>
+<p>Again, it is not in the texts, it is a <em>process</em>, like everything else in
+this Universe.</p>
+<p>Sorry, Chuds, you are just emitting streams of verbalized bullshit in
+order to impress each other (and &ldquo;validate&rdquo; yourselves) according to
+<em>your</em> current cultural (sectarian) norms.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/deep-learning/">deep learning</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/gai/">GAI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
