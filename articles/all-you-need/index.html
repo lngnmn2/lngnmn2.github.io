@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>All you need is… | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, imperative, ADT, homoiconicity, DSL">
+<meta name="description" content="Hold it without an effort, and it will come to you without an end.">
+<meta name="author" content="&lt;lngnmn2@yahoo.com&gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/all-you-need/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="All you need is…" />
+<meta property="og:description" content="Hold it without an effort, and it will come to you without an end." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/all-you-need/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2023-10-29T00:00:00+05:45" />
+<meta property="article:modified_time" content="2023-10-29T13:46:29+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="All you need is…"/>
+<meta name="twitter:description" content="Hold it without an effort, and it will come to you without an end."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "All you need is…",
+      "item": "https://lngnmn2.github.io/articles/all-you-need/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "All you need is…",
+  "name": "All you need is…",
+  "description": "Hold it without an effort, and it will come to you without an end.",
+  "keywords": [
+    "emacs", "imperative", "ADT", "homoiconicity", "DSL"
+  ],
+  "articleBody": "There are a few ancient sayings about going around the world, looking for the Truth (which us Out There, you know) and then returning back home only to find It right there. Other ancient thinkers have suggested to look no further than onto your own self (to find all the answers). And, of course, the ultimate resit is I Am That from the Upanishads.\nThere are some manifestations Truths I found going around the world.\nPrinciples at work. There is a list of remarkable and even extraordinary achievements, which all together point at the same “Mountain”.\nMost of the time it is about uniformity which emerged from using just right principles and proper universal abstractions.\nM. A. Jackson’s book. PRINCIPLES OF PROGRAM DESIGN, Academic Press, 1975.\nBy that time it was well-understood from the algorithm charting techniques, that just 3 the control structurs are required to express any algorithm.\na sequence\nbranching\na branch that returns back (a loop)\nUnsurprisingly, the same fundamental building blocks can be found at circuit schematics.\nThe crucial thing to realize here is that there is that, just as with a road fork, always only one particular road could be taken (without backtracking).\nNo matter how complex a river’s delta is, each molecule takes a “linear path” and “see no forks”.\nLoops correspond to the universal “feed-back” and “feed-forward” loops.\nAll you need is Lambda by prof. Brian Harvey, the great.\nThe Natural Numbers, branching and looping (via recursion) can be implemented within the Lambda Calculus.\nThis theoretical result proves the “All you need” part.\nThe language Scheme tried to do everything “just right”, including a proper “Numeric Tower”, tail-recursion, etc.\nBarbara Liskov books Data abstractions (ADTs) and specifications as the essence of a high-level programming, when on just adds new data-abstractions to a language.\nThis means that a “core” language should be augmented with Abstract Data Types in exactly the same way mathematics has been augmented with Sets or Monoids.\nNotice that the “procedural abstraction” (lambdas) and “data abstraction” (ADTs) are everywhere at all levels (universal).\nThe “iteration abstraction” are an instance of a standardized protocol (interfaces and informal rules) defined as a type-class.\nThe Miranda language The big idea here is that the “core language” should be an abstract machine (which interprets an augmented Lambda Calculus).\nThis is, basically, an executable mathematics done right, including the “Natural Order” (non-strict) of evaluation.\nSmalltalk This is a uniform message-passing everywhere - a standard protocol for communication between objects.\nIt is this uniformity and the rules which make Smalltalk small.\nHaskell vs. Ada vs. C++ vs. Awk vs. … The famous paper which shows nearly 10 times less LOC for a math-heavy task.\nhttps://web.cecs.pdx.edu/~apt/cs457_2005/hudak-jones.pdf\nThe result is not just from application of a Functional Language to a math problem, but from doing things at a higher-level, at the same level as the problem domain.\nOctave (MATLAB) This is the best high-level DSL ever created. Well, maybe second only to TeX.\nAndrew Ng’s phenomenal results Whole ML algorithms implemented as one liners in Octave.\nPG’s Arc Language There we could actually observe how all the “control structures” has been bootsrapped from the “lambda”.\nThe first three expressions of arc.arc basically bootsrapped a Lambda-based LISP dialect using assignment (for an implicit environment – there is always an environment!), the lambda (fn) and the syntax-level macros.\nYes. there is some “cheating” in that it uses Racket’s runtime (because runtimes are hard and messy), but nevertheless.\nThe original version of Arc has been mirrored here: https://github.com/liolaarc/arc3.1\nThe community version is here https://github.com/arclanguage/anarki\nClojure Practical immutable (persistent) data structures - a rewrite of the Okasaki book, translating to the JVM primitive types.\nClojure is a clever hack itself, which, just like Arc, delegates (or offloads) the difficult parts to a “stable” runtime.\nHaskell’s Prelude An evolved (part of a) standard library of universal pure-functional data abstractions.\nThis is indeed nothing but applied principles and the mathematical abstractions done right (implemented as ADTs within corresponding modules in a pure system of logic).\nErlang A whole world in itself. One has to read everything by Joe Armstrong.\nIt is an asynchronous message-passing between share-nothing lambdas (and the runtime which makes it happen).\nOcaml’s standard library A proper discipline and modularity done right. Good-enough to implement an advanced compiler.\nThe type-hierarchy of Coq Both so-called “sum-types” and “product-types” have been bootstrapped as parts of a standard library.\nYes, all the types are just augmented Sets, just as all the control is augmented Lambdas.\nWell, we could have simple lambdas (parameterization and application of types to one another) at the level of types too.\nCLOS Which is just an embedded DSL, based on structs and slots which contains “lambdas”.\nMy own contribution I abbreviate my results as , | -\u003e, which basically says it all. These universal patterns are literally everywhere.\nThe shallow meaning is that these kinds of types (parameterized, “type-classed” or not) is all you need besides the lambda.\nThe deep meaning is that these are universal notions, and they can be traced back to the very “nature of Causality”.\n",
+  "wordCount" : "847",
+  "inLanguage": "en",
+  "datePublished": "2023-10-29T00:00:00+05:45",
+  "dateModified": "2023-10-29T13:46:29+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/all-you-need/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      All you need is…
+    </h1>
+    <div class="post-description">
+      Hold it without an effort, and it will come to you without an end.
+    </div>
+    <div class="post-meta"><span title='2023-10-29 00:00:00 +0545 +0545'>October 29, 2023</span>&nbsp;·&nbsp;&lt;lngnmn2@yahoo.com&gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There are a few ancient sayings about going around the world, looking for the <em>Truth</em> (which us <em>Out There</em>, you know) and then returning back home only to find <em>It</em> right there.
+Other ancient thinkers have suggested to look no further than onto your own self (to find all the answers). And, of course, the ultimate resit is <em>I Am That</em> from the Upanishads.</p>
+<p>There are some <em>manifestations</em> Truths I found going around the world.</p>
+<h2 id="principles-at-work-dot">Principles at work.<a hidden class="anchor" aria-hidden="true" href="#principles-at-work-dot">#</a></h2>
+<p>There is a list of remarkable and even extraordinary achievements, which all together point at the same &ldquo;Mountain&rdquo;.</p>
+<p>Most of the time it is about <em>uniformity</em> which <em>emerged</em> from using <em>just right</em> principles and proper universal abstractions.</p>
+<h3 id="m-dot-a-dot-jackson-s-book-dot">M. A. Jackson&rsquo;s book.<a hidden class="anchor" aria-hidden="true" href="#m-dot-a-dot-jackson-s-book-dot">#</a></h3>
+<p>PRINCIPLES OF PROGRAM DESIGN, Academic Press, 1975.</p>
+<p>By that time it was well-understood from the algorithm charting techniques, that just 3 the control structurs are required to express any algorithm.</p>
+<ul>
+<li>
+<p>a sequence</p>
+</li>
+<li>
+<p>branching</p>
+</li>
+<li>
+<p>a branch that returns back (a loop)</p>
+<p>Unsurprisingly, the same fundamental building blocks can be found at <em>circuit schematics</em>.</p>
+<p>The crucial thing to realize here is that there is that, just as with a road fork, always only one particular road could be taken (without backtracking).</p>
+<p>No matter how complex a river&rsquo;s delta is, each molecule takes a &ldquo;linear path&rdquo; and &ldquo;see no forks&rdquo;.</p>
+<p>Loops correspond to the universal &ldquo;feed-back&rdquo; and &ldquo;feed-forward&rdquo; loops.</p>
+</li>
+</ul>
+<h3 id="all-you-need-is-lambda">All you need is Lambda<a hidden class="anchor" aria-hidden="true" href="#all-you-need-is-lambda">#</a></h3>
+<p>by prof. Brian Harvey, the great.</p>
+<p>The Natural Numbers, branching and looping (via recursion) can be implemented within the Lambda Calculus.</p>
+<p>This theoretical result proves the &ldquo;All you need&rdquo; part.</p>
+<p>The language <code>Scheme</code> tried to do everything &ldquo;just right&rdquo;, including a proper &ldquo;Numeric Tower&rdquo;, <em>tail-recursion</em>, etc.</p>
+<h3 id="barbara-liskov-books">Barbara Liskov books<a hidden class="anchor" aria-hidden="true" href="#barbara-liskov-books">#</a></h3>
+<p>Data abstractions (ADTs) and specifications as the essence of a high-level programming, when on just adds new data-abstractions to a language.</p>
+<p>This means that a &ldquo;core&rdquo; language should be augmented with Abstract Data Types in exactly the same way mathematics has been augmented with Sets or Monoids.</p>
+<p>Notice that the &ldquo;procedural abstraction&rdquo; (lambdas) and &ldquo;data abstraction&rdquo; (ADTs) are everywhere <em>at all levels</em> (universal).</p>
+<p>The &ldquo;iteration abstraction&rdquo; are an instance of a <em>standardized protocol</em> (interfaces and informal rules) defined as a type-class.</p>
+<h3 id="the-miranda-language">The Miranda language<a hidden class="anchor" aria-hidden="true" href="#the-miranda-language">#</a></h3>
+<p>The big idea here is that the &ldquo;core language&rdquo; should be an abstract machine (which interprets an augmented Lambda Calculus).</p>
+<p>This is, basically, an executable mathematics <em>done right</em>, including the &ldquo;Natural Order&rdquo; (non-strict) of evaluation.</p>
+<h3 id="smalltalk">Smalltalk<a hidden class="anchor" aria-hidden="true" href="#smalltalk">#</a></h3>
+<p>This is a <em>uniform message-passing everywhere</em> - a standard protocol for communication between objects.</p>
+<p>It is this <em>uniformity</em> and the rules which make Smalltalk <em>small</em>.</p>
+<h3 id="haskell-vs-dot-ada-vs-dot-c-plus-plus-vs-dot-awk-vs-dot-dot-dot-dot">Haskell vs. Ada vs. C++ vs. Awk vs. &hellip;<a hidden class="anchor" aria-hidden="true" href="#haskell-vs-dot-ada-vs-dot-c-plus-plus-vs-dot-awk-vs-dot-dot-dot-dot">#</a></h3>
+<p>The famous paper which shows nearly 10 times less LOC for a math-heavy task.</p>
+<p><a href="https://web.cecs.pdx.edu/~apt/cs457_2005/hudak-jones.pdf">https://web.cecs.pdx.edu/~apt/cs457_2005/hudak-jones.pdf</a></p>
+<p>The result is not just from application of a Functional Language to a math problem,
+but from doing things at a higher-level, <em>at the same level as the problem domain</em>.</p>
+<h3 id="octave--matlab">Octave (MATLAB)<a hidden class="anchor" aria-hidden="true" href="#octave--matlab">#</a></h3>
+<p>This is the best <em>high-level DSL</em> ever created. Well, maybe second only to <code>TeX</code>.</p>
+<h4 id="andrew-ng-s-phenomenal-results">Andrew Ng&rsquo;s phenomenal results<a hidden class="anchor" aria-hidden="true" href="#andrew-ng-s-phenomenal-results">#</a></h4>
+<p>Whole ML algorithms implemented as <em>one liners</em> in Octave.</p>
+<h3 id="pg-s-arc-language">PG&rsquo;s Arc Language<a hidden class="anchor" aria-hidden="true" href="#pg-s-arc-language">#</a></h3>
+<p>There we could actually observe how all the &ldquo;control structures&rdquo; has been bootsrapped from the &ldquo;lambda&rdquo;.</p>
+<p>The first three expressions of <code>arc.arc</code> basically bootsrapped a Lambda-based LISP dialect using <em>assignment</em> (for an <em>implicit</em> environment &ndash; there is always an environment!), the lambda (<code>fn</code>) and the syntax-level macros.</p>
+<p>Yes. there is some &ldquo;cheating&rdquo; in that it <em>uses Racket&rsquo;s runtime</em> (because <em>runtimes are hard</em> and messy), but nevertheless.</p>
+<ul>
+<li>The <em>original</em> version of <code>Arc</code> has been mirrored here:</li>
+</ul>
+<p><a href="https://github.com/liolaarc/arc3.1">https://github.com/liolaarc/arc3.1</a></p>
+<ul>
+<li>The community version is here</li>
+</ul>
+<p><a href="https://github.com/arclanguage/anarki">https://github.com/arclanguage/anarki</a></p>
+<h3 id="clojure">Clojure<a hidden class="anchor" aria-hidden="true" href="#clojure">#</a></h3>
+<p>Practical immutable (persistent) data structures - a rewrite of the Okasaki book, translating to the JVM primitive types.</p>
+<p>Clojure is a clever hack itself, which, just like <code>Arc</code>, <em>delegates</em> (or offloads) the difficult parts to a &ldquo;stable&rdquo; runtime.</p>
+<h3 id="haskell-s-prelude">Haskell&rsquo;s Prelude<a hidden class="anchor" aria-hidden="true" href="#haskell-s-prelude">#</a></h3>
+<p>An evolved (part of a) standard library of universal pure-functional data abstractions.</p>
+<p>This is indeed nothing but <em>applied principles</em> and the mathematical abstractions
+done right (implemented as ADTs within corresponding modules in a pure system of logic).</p>
+<h3 id="erlang">Erlang<a hidden class="anchor" aria-hidden="true" href="#erlang">#</a></h3>
+<p>A whole world in itself. One has to read everything by <em>Joe Armstrong</em>.</p>
+<p>It is an <em>asynchronous message-passing</em> between <em>share-nothing lambdas</em> (and the <em>runtime</em> which makes it happen).</p>
+<h3 id="ocaml-s-standard-library">Ocaml&rsquo;s standard library<a hidden class="anchor" aria-hidden="true" href="#ocaml-s-standard-library">#</a></h3>
+<p>A proper <em>discipline</em> and modularity done right. Good-enough to implement an advanced compiler.</p>
+<h3 id="the-type-hierarchy-of-coq">The type-hierarchy of Coq<a hidden class="anchor" aria-hidden="true" href="#the-type-hierarchy-of-coq">#</a></h3>
+<p>Both so-called <em>&ldquo;sum-types&rdquo;</em> and <em>&ldquo;product-types&rdquo;</em> have been bootstrapped as parts of a standard library.</p>
+<p>Yes, all the types are just augmented Sets, just as all the control is augmented Lambdas.</p>
+<p>Well, we could have simple lambdas (parameterization and application of types to one another) at the level of types too.</p>
+<h3 id="clos">CLOS<a hidden class="anchor" aria-hidden="true" href="#clos">#</a></h3>
+<p>Which is just an embedded DSL, based on structs and slots which contains &ldquo;lambdas&rdquo;.</p>
+<h3 id="my-own-contribution">My own contribution<a hidden class="anchor" aria-hidden="true" href="#my-own-contribution">#</a></h3>
+<p>I abbreviate my results as <code>, | -&gt;</code>, which basically says it all. These <em>universal patterns</em> are literally everywhere.</p>
+<p>The shallow meaning is that these kinds of types (parameterized, &ldquo;type-classed&rdquo; or not) is all you need besides the <code>lambda</code>.</p>
+<p>The deep meaning is that these are universal notions, and they can be traced back to the very &ldquo;nature of Causality&rdquo;.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/imperative/">imperative</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/homoiconicity/">homoiconicity</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

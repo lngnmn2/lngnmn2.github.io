@@ -6,22 +6,58 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ADT</title>
+      <link>https://lngnmn2.github.io/tags/adt/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/adt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DSL</title>
+      <link>https://lngnmn2.github.io/tags/dsl/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emacs</title>
+      <link>https://lngnmn2.github.io/tags/emacs/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homoiconicity</title>
+      <link>https://lngnmn2.github.io/tags/homoiconicity/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/homoiconicity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imperative</title>
+      <link>https://lngnmn2.github.io/tags/imperative/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/tags/imperative/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>esoteric</title>
       <link>https://lngnmn2.github.io/tags/esoteric/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/esoteric/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ADT</title>
-      <link>https://lngnmn2.github.io/tags/adt/</link>
-      <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/adt/</guid>
       <description></description>
     </item>
     
@@ -62,47 +98,11 @@
     </item>
     
     <item>
-      <title>emacs</title>
-      <link>https://lngnmn2.github.io/tags/emacs/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>embedded-DSL</title>
       <link>https://lngnmn2.github.io/tags/embedded-dsl/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/tags/embedded-dsl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>homoiconicity</title>
-      <link>https://lngnmn2.github.io/tags/homoiconicity/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/homoiconicity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>imperative</title>
-      <link>https://lngnmn2.github.io/tags/imperative/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/imperative/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DSL</title>
-      <link>https://lngnmn2.github.io/tags/dsl/</link>
-      <pubDate>Sun, 15 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
       <description></description>
     </item>
     
