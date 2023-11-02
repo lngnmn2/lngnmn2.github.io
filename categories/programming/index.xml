@@ -174,18 +174,6 @@ Maybe it is even better to rather ask Simon Peyton Jones to write a matching eng
     </item>
     
     <item>
-      <title>Foundations</title>
-      <link>https://lngnmn2.github.io/articles/foundations/</link>
-      <pubDate>Tue, 18 Jul 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/articles/foundations/</guid>
-      <description>Stupid people would usually ask &amp;ldquo;why do we need all this theoretical bullshit and abstracted theories&amp;rdquo;?
-The answer is, to have &amp;ldquo;the right understanding&amp;rdquo; and because of that to be able to do things &amp;ldquo;just right&amp;rdquo;.
-&amp;ldquo;Just right&amp;rdquo; has many meanings and implications. Among other things it is that what has been &amp;ldquo;done right&amp;rdquo; (ideally &amp;ndash; a local optimum) does not require any further modifications.
-It was indeed &amp;ldquo;done&amp;rdquo; (right). There is nothing more to remove (or alter).</description>
-    </item>
-    
-    <item>
       <title>The recurring patterns captured as a Monoid</title>
       <link>https://lngnmn2.github.io/articles/monoids/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
