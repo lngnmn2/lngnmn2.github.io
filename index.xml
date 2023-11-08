@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Nov 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Nov 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
       <link>https://lngnmn2.github.io/about/</link>
@@ -18,6 +18,15 @@ I wrote a bunch of articles by an organ in the first person.
 https://schiptsov.github.io/
 That scene from Rocky movie Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:
 ..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.</description>
+    </item>
+    
+    <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
     </item>
     
     <item>
@@ -339,16 +348,6 @@ We will put the universal notion of an environment (and the corresponding Γ abs
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
-    </item>
-    
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
