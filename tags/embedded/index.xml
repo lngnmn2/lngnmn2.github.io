@@ -4,27 +4,32 @@
     <title>embedded on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/embedded/</link>
     <description>Recent content in embedded on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/embedded/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2024 08:34:59 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/embedded/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everything in Emacs</title>
+      <link>https://lngnmn2.github.io/articles/everything-in-emacs/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/everything-in-emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
+    </item>
     <item>
       <title>The right way</title>
       <link>https://lngnmn2.github.io/articles/the-right-way/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/the-right-way/</guid>
       <description>How to program instead of doing a webshit coding</description>
     </item>
-    
     <item>
       <title>GNU Emacs</title>
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
-    
   </channel>
 </rss>

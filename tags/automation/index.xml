@@ -4,29 +4,26 @@
     <title>automation on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/automation/</link>
     <description>Recent content in automation on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Aug 2023 18:24:46 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>On burnout</title>
       <link>https://lngnmn2.github.io/articles/burnout/</link>
       <pubDate>Fri, 18 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/burnout/</guid>
       <description>What is to be done.</description>
     </item>
-    
     <item>
       <title>Writing a semi-automated trading system</title>
       <link>https://lngnmn2.github.io/articles/automated-trading/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/automated-trading/</guid>
       <description>AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;
 Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
 Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
 Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,18 +4,17 @@
     <title>LLM on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/llm/</link>
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/llm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 14:03:06 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/categories/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LLM Bullshit-3</title>
       <link>https://lngnmn2.github.io/articles/llmbs-3/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/llmbs-3/</guid>
       <description>It is more or less obvious why AI and LLM bubble is so huge - imagine just charging money for every https request to a RESTful API, without, literally, being responsible about the quality of the responce (it is not out fault if a LLM returned bullshit to you, or, which is much worse &amp;ndash; a highly sophisiticated, convincing subtle bullshit).
 Again, there is not enough good code to train a model on it.</description>
     </item>
-    
   </channel>
 </rss>

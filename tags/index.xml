@@ -4,620 +4,485 @@
     <title>Tags on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/</link>
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>deep learning</title>
-      <link>https://lngnmn2.github.io/tags/deep-learning/</link>
-      <pubDate>Mon, 27 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GPT</title>
-      <link>https://lngnmn2.github.io/tags/gpt/</link>
-      <pubDate>Mon, 20 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/gpt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LLM</title>
-      <link>https://lngnmn2.github.io/tags/llm/</link>
-      <pubDate>Mon, 20 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/llm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>autism</title>
-      <link>https://lngnmn2.github.io/tags/autism/</link>
-      <pubDate>Fri, 17 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/autism/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>trading</title>
-      <link>https://lngnmn2.github.io/tags/trading/</link>
-      <pubDate>Mon, 13 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/trading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AI</title>
-      <link>https://lngnmn2.github.io/tags/ai/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>math</title>
-      <link>https://lngnmn2.github.io/tags/math/</link>
-      <pubDate>Thu, 02 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>writing</title>
-      <link>https://lngnmn2.github.io/tags/writing/</link>
-      <pubDate>Wed, 01 Nov 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/writing/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 24 Apr 2024 08:34:59 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ADT</title>
       <link>https://lngnmn2.github.io/tags/adt/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/adt/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DSL</title>
       <link>https://lngnmn2.github.io/tags/dsl/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/dsl/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>emacs</title>
       <link>https://lngnmn2.github.io/tags/emacs/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/emacs/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>homoiconicity</title>
-      <link>https://lngnmn2.github.io/tags/homoiconicity/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/homoiconicity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>imperative</title>
-      <link>https://lngnmn2.github.io/tags/imperative/</link>
-      <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/imperative/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>esoteric</title>
-      <link>https://lngnmn2.github.io/tags/esoteric/</link>
-      <pubDate>Tue, 24 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/esoteric/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GAI</title>
-      <link>https://lngnmn2.github.io/tags/gai/</link>
-      <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/gai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OOP</title>
-      <link>https://lngnmn2.github.io/tags/oop/</link>
-      <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/oop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rant</title>
-      <link>https://lngnmn2.github.io/tags/rant/</link>
-      <pubDate>Thu, 19 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/rant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>embedded-DSL</title>
-      <link>https://lngnmn2.github.io/tags/embedded-dsl/</link>
-      <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
-      <guid>https://lngnmn2.github.io/tags/embedded-dsl/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>embedded</title>
       <link>https://lngnmn2.github.io/tags/embedded/</link>
-      <pubDate>Sun, 15 Oct 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/embedded/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>deep learning</title>
+      <link>https://lngnmn2.github.io/tags/deep-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT</title>
+      <link>https://lngnmn2.github.io/tags/gpt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/gpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://lngnmn2.github.io/tags/llm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>autism</title>
+      <link>https://lngnmn2.github.io/tags/autism/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/autism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>trading</title>
+      <link>https://lngnmn2.github.io/tags/trading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/trading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://lngnmn2.github.io/tags/ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>math</title>
+      <link>https://lngnmn2.github.io/tags/math/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>writing</title>
+      <link>https://lngnmn2.github.io/tags/writing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/writing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>homoiconicity</title>
+      <link>https://lngnmn2.github.io/tags/homoiconicity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/homoiconicity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>imperative</title>
+      <link>https://lngnmn2.github.io/tags/imperative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/imperative/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>esoteric</title>
+      <link>https://lngnmn2.github.io/tags/esoteric/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/esoteric/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GAI</title>
+      <link>https://lngnmn2.github.io/tags/gai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/gai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OOP</title>
+      <link>https://lngnmn2.github.io/tags/oop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/oop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>rant</title>
+      <link>https://lngnmn2.github.io/tags/rant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/rant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>embedded-DSL</title>
+      <link>https://lngnmn2.github.io/tags/embedded-dsl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/embedded-dsl/</guid>
+      <description></description>
+    </item>
     <item>
       <title>immutability</title>
       <link>https://lngnmn2.github.io/tags/immutability/</link>
-      <pubDate>Sun, 15 Oct 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/immutability/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>rust</title>
       <link>https://lngnmn2.github.io/tags/rust/</link>
-      <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/rust/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>transformer</title>
       <link>https://lngnmn2.github.io/tags/transformer/</link>
-      <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/transformer/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>principles</title>
       <link>https://lngnmn2.github.io/tags/principles/</link>
-      <pubDate>Sun, 24 Sep 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/principles/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>neural network</title>
       <link>https://lngnmn2.github.io/tags/neural-network/</link>
-      <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/neural-network/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>archery</title>
       <link>https://lngnmn2.github.io/tags/archery/</link>
-      <pubDate>Mon, 04 Sep 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/archery/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>configuration</title>
       <link>https://lngnmn2.github.io/tags/configuration/</link>
-      <pubDate>Mon, 04 Sep 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/configuration/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>org-mode</title>
       <link>https://lngnmn2.github.io/tags/org-mode/</link>
-      <pubDate>Sun, 03 Sep 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/org-mode/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>deep leaning</title>
       <link>https://lngnmn2.github.io/tags/deep-leaning/</link>
-      <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/deep-leaning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>automation</title>
       <link>https://lngnmn2.github.io/tags/automation/</link>
-      <pubDate>Fri, 18 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/automation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>burnout</title>
       <link>https://lngnmn2.github.io/tags/burnout/</link>
-      <pubDate>Fri, 18 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/burnout/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>methodology</title>
       <link>https://lngnmn2.github.io/tags/methodology/</link>
-      <pubDate>Fri, 18 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/methodology/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>machine learning</title>
       <link>https://lngnmn2.github.io/tags/machine-learning/</link>
-      <pubDate>Sat, 12 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>patrial derivative</title>
       <link>https://lngnmn2.github.io/tags/patrial-derivative/</link>
-      <pubDate>Sat, 12 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/patrial-derivative/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>crypto</title>
       <link>https://lngnmn2.github.io/tags/crypto/</link>
-      <pubDate>Wed, 09 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/crypto/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>daytrading</title>
       <link>https://lngnmn2.github.io/tags/daytrading/</link>
-      <pubDate>Wed, 09 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/daytrading/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>shitcoins</title>
       <link>https://lngnmn2.github.io/tags/shitcoins/</link>
-      <pubDate>Wed, 09 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/shitcoins/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>combinators</title>
       <link>https://lngnmn2.github.io/tags/combinators/</link>
-      <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/combinators/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>foundations</title>
       <link>https://lngnmn2.github.io/tags/foundations/</link>
-      <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/foundations/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Monoid</title>
       <link>https://lngnmn2.github.io/tags/monoid/</link>
-      <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/monoid/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>semigroup</title>
       <link>https://lngnmn2.github.io/tags/semigroup/</link>
-      <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/semigroup/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>abstract interface</title>
       <link>https://lngnmn2.github.io/tags/abstract-interface/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/abstract-interface/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>abstraction barrier</title>
       <link>https://lngnmn2.github.io/tags/abstraction-barrier/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/abstraction-barrier/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>modularity</title>
       <link>https://lngnmn2.github.io/tags/modularity/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/modularity/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>curve fitting</title>
       <link>https://lngnmn2.github.io/tags/curve-fitting/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/curve-fitting/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>derivatives</title>
       <link>https://lngnmn2.github.io/tags/derivatives/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/derivatives/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>functional programming</title>
       <link>https://lngnmn2.github.io/tags/functional-programming/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/functional-programming/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>kalman filter</title>
       <link>https://lngnmn2.github.io/tags/kalman-filter/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/kalman-filter/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>markov process</title>
       <link>https://lngnmn2.github.io/tags/markov-process/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/markov-process/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>moving averages</title>
       <link>https://lngnmn2.github.io/tags/moving-averages/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/moving-averages/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>trading system</title>
       <link>https://lngnmn2.github.io/tags/trading-system/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/trading-system/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>remote</title>
       <link>https://lngnmn2.github.io/tags/remote/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/remote/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>WFH</title>
       <link>https://lngnmn2.github.io/tags/wfh/</link>
-      <pubDate>Fri, 21 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/wfh/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>chaining</title>
       <link>https://lngnmn2.github.io/tags/chaining/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/chaining/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Erlang</title>
       <link>https://lngnmn2.github.io/tags/erlang/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/erlang/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>error handling</title>
       <link>https://lngnmn2.github.io/tags/error-handling/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/error-handling/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>function composition</title>
       <link>https://lngnmn2.github.io/tags/function-composition/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/function-composition/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>pattern-matching</title>
       <link>https://lngnmn2.github.io/tags/pattern-matching/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/pattern-matching/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>propagation</title>
       <link>https://lngnmn2.github.io/tags/propagation/</link>
-      <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/propagation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>borrow checker</title>
       <link>https://lngnmn2.github.io/tags/borrow-checker/</link>
-      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/borrow-checker/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>borrowing</title>
       <link>https://lngnmn2.github.io/tags/borrowing/</link>
-      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/borrowing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ownership</title>
       <link>https://lngnmn2.github.io/tags/ownership/</link>
-      <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/ownership/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>git</title>
       <link>https://lngnmn2.github.io/tags/git/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>github pages</title>
       <link>https://lngnmn2.github.io/tags/github-pages/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/github-pages/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>hacker news</title>
       <link>https://lngnmn2.github.io/tags/hacker-news/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/hacker-news/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HN</title>
       <link>https://lngnmn2.github.io/tags/hn/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/hn/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>hugo</title>
       <link>https://lngnmn2.github.io/tags/hugo/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>lngnmn</title>
       <link>https://lngnmn2.github.io/tags/lngnmn/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/lngnmn/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>static site</title>
       <link>https://lngnmn2.github.io/tags/static-site/</link>
-      <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/static-site/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

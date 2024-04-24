@@ -4,31 +4,28 @@
     <title>org-mode on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/org-mode/</link>
     <description>Recent content in org-mode on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Sep 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Sep 2023 21:58:32 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The org-mode rituals of a narcissistic busy-body</title>
       <link>https://lngnmn2.github.io/articles/org-mode/</link>
       <pubDate>Sun, 03 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/org-mode/</guid>
       <description>The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.
 The underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly &amp;ldquo;the right thing&amp;rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.
 These &amp;ldquo;very smart&amp;rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are &amp;ldquo;very smart&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>The simplest self-publishing workflow</title>
       <link>https://lngnmn2.github.io/articles/the-simplest-workflow/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/the-simplest-workflow/</guid>
       <description>Overview This is the simplest but smart self-publishing workflow.
 org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages
 Everything is according to the universal principles of being almost &amp;ldquo;pure functional transformations&amp;rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
 At each stage or step we delegate some aspect to an appropriate external vendored tool.</description>
     </item>
-    
   </channel>
 </rss>

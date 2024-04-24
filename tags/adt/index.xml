@@ -4,96 +4,87 @@
     <title>ADT on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/adt/</link>
     <description>Recent content in ADT on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/adt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2024 08:34:59 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/adt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everything in Emacs</title>
+      <link>https://lngnmn2.github.io/articles/everything-in-emacs/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/everything-in-emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
+    </item>
     <item>
       <title>All you need is…</title>
       <link>https://lngnmn2.github.io/articles/all-you-need/</link>
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/all-you-need/</guid>
       <description>Hold it without an effort, and it will come to you without an end.</description>
     </item>
-    
     <item>
       <title>Why not OOP</title>
       <link>https://lngnmn2.github.io/articles/why-not-oop/</link>
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/why-not-oop/</guid>
       <description>It&amp;#39;s time to backtrack and prune.</description>
     </item>
-    
     <item>
       <title>Never leave Emacs</title>
       <link>https://lngnmn2.github.io/articles/never-leave-emacs/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/never-leave-emacs/</guid>
       <description>How to partially overcome our cognitive deficiencies.</description>
     </item>
-    
     <item>
       <title>The right way</title>
       <link>https://lngnmn2.github.io/articles/the-right-way/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/the-right-way/</guid>
       <description>How to program instead of doing a webshit coding</description>
     </item>
-    
     <item>
       <title>High Level</title>
       <link>https://lngnmn2.github.io/articles/high-level/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/high-level/</guid>
       <description>I finally found a well-written no-bullshit book about CS. It says, among other things:
 There is no need to define a representation of the values False and True in terms of values of some other type.
 Conceptually, values of type Bool are simply (denoted by) the expressions False and True.
 Of course, the computer’s internal representation of Bool and all other data is in terms of bits, but we don’t need to know any of the details of how that works to write programs.</description>
     </item>
-    
     <item>
       <title>The Junk Foods of Programming</title>
       <link>https://lngnmn2.github.io/articles/junk-food/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/junk-food/</guid>
       <description>A small disclaimer: I&amp;rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.
 Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto &amp;ldquo;engineers&amp;rdquo;, of course.
 Just like chef Gusteau from the Ratatouille movie famously proclaimed &amp;ndash; &amp;ldquo;Anyone can cook&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>Abstraction barriers</title>
       <link>https://lngnmn2.github.io/articles/abstractions/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/abstractions/</guid>
       <description>Interfaces, interfaces everywhere.</description>
     </item>
-    
     <item>
       <title>GNU Emacs</title>
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>Understanding Rust</title>
       <link>https://lngnmn2.github.io/articles/unrestanding-rust/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/unrestanding-rust/</guid>
       <description>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an &amp;ldquo;arch and OS /duo&amp;rdquo;, and to be &amp;ldquo;aware of&amp;rdquo; the ABIs in general.
 Overview Rust is, in principle, an imperative language.</description>
     </item>
-    
   </channel>
 </rss>

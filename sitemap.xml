@@ -5,25 +5,46 @@
     <loc>https://lngnmn2.github.io/about/</loc>
     <lastmod>2023-08-05T19:21:03+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/categories/ai/</loc>
-    <lastmod>2023-11-27T09:34:17+05:45</lastmod>
+    <loc>https://lngnmn2.github.io/tags/adt/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2023-11-27T09:34:17+05:45</lastmod>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/dsl/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/emacs/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/emacs/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/embedded/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/everything-in-emacs/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/programming/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2024-04-24T08:34:59+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/ai/</loc>
     <lastmod>2023-11-27T09:34:17+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/deep-learning/</loc>
     <lastmod>2023-11-27T09:34:17+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/late/</loc>
-    <lastmod>2023-11-27T09:34:17+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/</loc>
-    <lastmod>2023-11-27T09:34:17+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
     <lastmod>2023-11-27T09:34:17+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/gpt/</loc>
@@ -71,25 +92,13 @@
     <loc>https://lngnmn2.github.io/articles/foundations/</loc>
     <lastmod>2023-11-02T11:56:06+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/categories/programming/</loc>
-    <lastmod>2023-11-01T14:14:53+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/articles/art-forms/</loc>
     <lastmod>2023-11-01T14:14:53+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/writing/</loc>
     <lastmod>2023-11-01T14:14:53+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/tags/adt/</loc>
-    <lastmod>2023-10-29T13:46:29+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/articles/all-you-need/</loc>
-    <lastmod>2023-10-29T13:46:29+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/dsl/</loc>
-    <lastmod>2023-10-29T13:46:29+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/emacs/</loc>
     <lastmod>2023-10-29T13:46:29+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/homoiconicity/</loc>
@@ -128,9 +137,6 @@
     <loc>https://lngnmn2.github.io/categories/web3shit/</loc>
     <lastmod>2023-10-19T15:13:21+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/categories/emacs/</loc>
-    <lastmod>2023-10-17T12:37:04+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/embedded-dsl/</loc>
     <lastmod>2023-10-17T12:37:04+05:45</lastmod>
   </url><url>
@@ -142,9 +148,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/productivity-porn/</loc>
     <lastmod>2023-10-17T18:10:36+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/embedded/</loc>
-    <lastmod>2023-10-15T18:01:44+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/immutability/</loc>
     <lastmod>2023-10-15T18:01:44+05:45</lastmod>

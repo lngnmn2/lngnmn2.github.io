@@ -4,60 +4,51 @@
     <title>trading on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/trading/</link>
     <description>Recent content in trading on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Nov 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/categories/trading/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Nov 2023 16:16:17 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/categories/trading/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Non-bullshit Trading</title>
       <link>https://lngnmn2.github.io/articles/non-bullshit-trading/</link>
       <pubDate>Mon, 13 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/non-bullshit-trading/</guid>
       <description>  Some assorted &amp;#34;brain dump&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>Formulating the problem</title>
       <link>https://lngnmn2.github.io/articles/notes/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/notes/</guid>
       <description>These are just assorted notes for now, which shall become something ready to be formalized.
 Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
 The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
 All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like &amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements like &amp;ldquo;Volume&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>Trading</title>
       <link>https://lngnmn2.github.io/articles/trading/</link>
       <pubDate>Wed, 09 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/trading/</guid>
       <description>Extracting the principles and the whys.</description>
     </item>
-    
     <item>
       <title>Trading Math</title>
       <link>https://lngnmn2.github.io/articles/trading-math/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/trading-math/</guid>
       <description>The concrete mathematics of trading.</description>
     </item>
-    
     <item>
       <title>Writing a semi-automated trading system</title>
       <link>https://lngnmn2.github.io/articles/automated-trading/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/automated-trading/</guid>
       <description>AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;
 Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
 Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
 Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).</description>
     </item>
-    
   </channel>
 </rss>

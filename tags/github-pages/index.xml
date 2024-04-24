@@ -4,20 +4,19 @@
     <title>github pages on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/github-pages/</link>
     <description>Recent content in github pages on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 10:42:32 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The simplest self-publishing workflow</title>
       <link>https://lngnmn2.github.io/articles/the-simplest-workflow/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/the-simplest-workflow/</guid>
       <description>Overview This is the simplest but smart self-publishing workflow.
 org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages
 Everything is according to the universal principles of being almost &amp;ldquo;pure functional transformations&amp;rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
 At each stage or step we delegate some aspect to an appropriate external vendored tool.</description>
     </item>
-    
   </channel>
 </rss>

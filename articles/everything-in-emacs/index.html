@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Everything in Emacs | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, ADT, embedded, DSL">
+<meta name="description" content="  The monument and a world-heritage &#34;site&#34;.
+  ">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/everything-in-emacs/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Everything in Emacs" />
+<meta property="og:description" content="  The monument and a world-heritage &#34;site&#34;.
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/everything-in-emacs/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-04-24T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-04-24T08:34:59+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Everything in Emacs"/>
+<meta name="twitter:description" content="  The monument and a world-heritage &#34;site&#34;.
+  "/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Everything in Emacs",
+      "item": "https://lngnmn2.github.io/articles/everything-in-emacs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Everything in Emacs",
+  "name": "Everything in Emacs",
+  "description": "  The monument and a world-heritage \"site\".\n  ",
+  "keywords": [
+    "emacs", "ADT", "embedded", "DSL"
+  ],
+  "articleBody": "Google deprecated external access to its IMAP due to “security reasons”\nKarpathy posted a classy coding video lecture in which programming has been done entirely from the default Mac OS browser (doing everything in a web-interface to a Jupiter notebook).\nCorporations want us to stay in their (and only their) browsers all the time (in many different tabs) and never leave, so they can collect all the data they want.\nThis may be “the future” of computing, but not for me.\nThe biggest complain about the most advanced open-source solutions based on GNU Emacs and Neoivim is that they require too much time to set up and configure – “we have some work to do” – they said.\nYes, everything is pre-defined and pre-configured in the so-called webapps.Services like Github and YouTube even have their own browser extensions, with nice keyboard shortcuts and what not. Updates and bugfixes of corporate web services are being rolled without you even noticing..\nYes, compulsory tweaking of one’s complex configuration is, perhaps, the most common way of tricking oneself into procrastination – doing unnecessary but dopamine-rewarding simple tasks instead of hard/boring required ones – being busy with nothing,\nThis, however, is superficial. The main point of never leaving Emacs is not in being a clever member of an “elite”, but in minimizing unnecessary context switches, and thus in reducing the cognitive load and the number of inevitable distractions and restarts. In short – to stay in the same familiar uniform working environment, just as Symbolics envisioned it back then.\nThe greatest enemy of open-source solutions is over-configuring. and not enough delegating.\nTechnically, the problem is in breaking the abstraction barriers, literally (using improper leaky abstractions which expose implementation details) instead of just using declarative embedded DSLs. To understand and realize this fact requires some level of sophistication.\nIdeally, we have to just use declarative DSLs of, lets say, Doom Emacs, and it will never break with the next update (at least in a theory). The only configuration is by enabling the modules (of corresponding components) we wish to use.\n:lang emacs-lisp data agda coq common-lisp (clojure +lsp) (json +lsp) (yaml +lsp) (sh +lsp) (lua +lsp) (python +lsp +pyright) (julia +lsp) (sml) (erlang +lsp) (ocaml +lsp) (haskell +lsp) (fsharp +lsp) (scala +lsp +metals) (rust +lsp) (markdown +grip) (latex +cdlatex +latexmk +lsp) (org +gnuplot +hugo +pandoc +pretty +roam2) :email (mu4e +org +gmail) …aaand wallah, just like that…. In reality, however, things are a bit more complicated. Every update will potentially break your configuration by changing arbitrary things – no one promised any stability of interfaces within Doom-Emacs or even Emacs itself (at the ELisp level) – it has to be “dynamic” after all.\nBut I think you can see the potential – literally everything within the same, familiar, uniform text-based extensible environment.\nLatex and Org-mode are the obvious choices – the way of processing (working with) a symbolic information and producing documents.\nThe key part is that email (mu4e), a knowledge-base (org-roam2), the converter (pandoc) and web publisher (hugo) are all in one place.\nThere are also readers (including for .pdf) and even a rudimentary web-browser, good-enough to read HTML documentation (as in Rust).\nAdd to this spell-checking, formatting, completions, snippets and nothing could match this power. Again, it is just like a Symbolics Lisp-machine.\nWhat is crucial for reducing cognitive overload and unnecessary context switches is the uniformity – the same keyboard shortcuts across all buffers (navigation, marking, copying and yanking completions, snippet expansion, etc).\nThe same appearance of the same or similar (related) things across all kinds of buffers is another major factor. This is what is behind the overall “magic”.\nThe take-home principle is sound and even universal – do not break abstraction barriers (or use improper ADTs). Use the use-package DSL at least.\nYour configuration should be actually small and mostly declarative - you don’t have to redefine every single variable (the defaults are almost always OK) and reconfigure all the packages (the authors of the Doom Emacs has been done a lot of work).\nDoing everything in Emacs is still a dream, but it will be actually an improvement when you simplify and actually understand whys and hows behind your workflow and how your time being wasted on context-switches and restarts.\nLast but not least, a versioned (ability to examine all the changes as diffs) semantic knowledge base (as a Wiki or a org-roam2 base) along with the source code (obviously versioned) is what one actually needs.\nHaving a structured text (mostly paragraphs and plain lists ) in org-mode (with embedded LaTeX, math and code block) as the source for storing in files and for conversion into other formats is the main objective.\nThis will “pay back” eventually (once your workflow stabilizes) and you will never look back to any web tools or IDEs.\n",
+  "wordCount" : "803",
+  "inLanguage": "en",
+  "datePublished": "2024-04-24T00:00:00+05:45",
+  "dateModified": "2024-04-24T08:34:59+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/everything-in-emacs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Everything in Emacs
+    </h1>
+    <div class="post-description">
+        The monument and a world-heritage &#34;site&#34;.
+  
+    </div>
+    <div class="post-meta"><span title='2024-04-24 00:00:00 +0545 +0545'>April 24, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Google  deprecated external access to its IMAP due to &ldquo;security reasons&rdquo;</p>
+<p>Karpathy posted a classy coding video lecture in which programming has
+been done entirely from the default Mac OS browser (doing everything in
+a web-interface to a Jupiter notebook).</p>
+<p>Corporations want us to stay in <em>their</em> (and only their) browsers all the
+time (in many different tabs) and never leave, so they can collect all
+the data they want.</p>
+<p>This may be &ldquo;the future&rdquo; of computing, but not for me.</p>
+<p>The biggest complain about the most advanced open-source solutions based
+on <code>GNU Emacs</code> and <code>Neoivim</code>  is that they require too much time to set up
+and configure &ndash; &ldquo;we have some work to do&rdquo; &ndash; they said.</p>
+<p>Yes, everything is pre-defined and pre-configured in the so-called
+webapps.Services like <em>Github</em> and <em>YouTube</em> even have their own <em>browser
+extensions</em>, with nice keyboard shortcuts and what not. Updates and
+bugfixes of corporate web services are being rolled without you even noticing..</p>
+<p>Yes, compulsory tweaking of one&rsquo;s complex configuration is, perhaps, the
+most common way of tricking oneself into procrastination &ndash; doing
+unnecessary but dopamine-rewarding simple tasks instead of hard/boring
+<em>required</em> ones &ndash; being busy with nothing,</p>
+<p>This, however, is superficial. The main point of <em>never leaving Emacs</em> is
+not in being a clever member of an &ldquo;elite&rdquo;, but in <em>minimizing
+unnecessary context switches</em>, and thus in <em>reducing the cognitive load</em>
+and the number of inevitable distractions and <em>restarts</em>. In short &ndash; to
+stay in the same familiar <em>uniform</em> working environment, just as Symbolics
+envisioned it back then.</p>
+<p>The greatest enemy of open-source solutions is <em>over-configuring</em>. and not enough delegating.</p>
+<p>Technically, the problem is in <em>breaking the abstraction barriers</em>, literally (using <em>improper leaky abstractions which expose implementation details</em>) instead of just using  <em>declarative embedded DSLs</em>. To understand and realize this fact requires some level of sophistication.</p>
+<p>Ideally, we have to just use declarative DSLs of, lets say, <code>Doom Emacs</code>,
+and it will never break with  the next update (at least in a theory).
+The only configuration is by enabling <em>the modules</em> (of corresponding components) we wish to use.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-elisp" data-lang="elisp"><span style="display:flex;"><span>:lang
+</span></span><span style="display:flex;"><span>emacs-lisp
+</span></span><span style="display:flex;"><span>data
+</span></span><span style="display:flex;"><span>agda
+</span></span><span style="display:flex;"><span>coq
+</span></span><span style="display:flex;"><span>common-lisp
+</span></span><span style="display:flex;"><span>(clojure +lsp)
+</span></span><span style="display:flex;"><span>(json +lsp)
+</span></span><span style="display:flex;"><span>(yaml +lsp)
+</span></span><span style="display:flex;"><span>(sh +lsp)
+</span></span><span style="display:flex;"><span>(lua +lsp)
+</span></span><span style="display:flex;"><span>(python +lsp +pyright)
+</span></span><span style="display:flex;"><span>(julia +lsp)
+</span></span><span style="display:flex;"><span>(sml)
+</span></span><span style="display:flex;"><span>(erlang +lsp)
+</span></span><span style="display:flex;"><span>(ocaml +lsp)
+</span></span><span style="display:flex;"><span>(haskell +lsp)
+</span></span><span style="display:flex;"><span>(fsharp +lsp)
+</span></span><span style="display:flex;"><span>(scala +lsp +metals)
+</span></span><span style="display:flex;"><span>(rust +lsp)
+</span></span><span style="display:flex;"><span>(markdown +grip)
+</span></span><span style="display:flex;"><span>(latex +cdlatex +latexmk +lsp)
+</span></span><span style="display:flex;"><span>(org  +gnuplot  +hugo +pandoc +pretty +roam2)
+</span></span><span style="display:flex;"><span>:email
+</span></span><span style="display:flex;"><span>(mu4e +org +gmail)
+</span></span></code></pre></div><p>&hellip;aaand wallah, just like that&hellip;. In reality, however, things are a
+bit more complicated. Every update will potentially break your
+configuration by changing arbitrary things &ndash; no one promised any
+stability of interfaces within Doom-Emacs or even Emacs itself (at the
+ELisp level) &ndash; it has to be &ldquo;dynamic&rdquo; after all.</p>
+<p>But I think you can see the potential &ndash; literally everything within the same, familiar, <em>uniform</em> text-based extensible environment.</p>
+<p><em>Latex</em> and <em>Org-mode</em> are the obvious choices &ndash; <em>the</em> way of processing (working with) a symbolic information and producing documents.</p>
+<p>The key part is that <em>email</em> (<code>mu4e</code>), a <em>knowledge-base</em> (<code>org-roam2</code>), the converter (<code>pandoc</code>) and web publisher (<code>hugo</code>) are all in one place.</p>
+<p>There are also <em>readers</em> (including for <code>.pdf</code>) and even a rudimentary <em>web-browser</em>, good-enough to read <em>HTML</em> documentation (as in Rust).</p>
+<p>Add to this <em>spell-checking, formatting, completions, snippets</em> and nothing could match this power. Again, it is just like a <em>Symbolics Lisp-machine</em>.</p>
+<p>What is crucial for reducing cognitive overload and unnecessary context
+switches is the uniformity &ndash; the same keyboard shortcuts across all
+buffers (navigation, marking, copying and yanking completions, snippet
+expansion, etc).</p>
+<p>The same appearance of the same or similar (related) things across all
+kinds of buffers is another major factor. This is what is behind the overall &ldquo;magic&rdquo;.</p>
+<p>The take-home principle is sound and even universal &ndash; <em>do not break abstraction barriers</em> (or use <em>improper</em> ADTs). Use the <code>use-package</code> DSL at least.</p>
+<p>Your configuration should be actually small and mostly declarative - you
+don&rsquo;t have to redefine every single variable (the defaults are almost
+always OK) and reconfigure all the packages (the authors of the Doom
+Emacs has been done a lot of work).</p>
+<p>Doing everything in Emacs is still a dream, but it will be actually an
+improvement when you simplify and actually understand <em>whys</em> and hows
+behind your workflow and how your time being wasted on context-switches
+and restarts.</p>
+<p>Last but not least, a versioned (ability to examine all the changes as
+diffs) semantic knowledge base (as a <em>Wiki</em> or a <code>org-roam2</code> base) along
+with the source code (obviously versioned) is what one actually needs.</p>
+<p>Having a structured text (mostly paragraphs and plain lists ) in
+<code>org-mode</code> (with embedded LaTeX, math and code block) as the source for
+storing in files and for conversion into other formats is the main
+objective.</p>
+<p>This will &ldquo;pay back&rdquo; eventually (once your workflow stabilizes) and you
+will never look back to any web tools or IDEs.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded/">embedded</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

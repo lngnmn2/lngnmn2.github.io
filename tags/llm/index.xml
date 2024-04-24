@@ -4,37 +4,32 @@
     <title>LLM on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/llm/</link>
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Nov 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Nov 2023 07:38:45 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Selfawareness</title>
       <link>https://lngnmn2.github.io/articles/selfawareness/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/selfawareness/</guid>
       <description>Abstract bullshitting is not enough.</description>
     </item>
-    
     <item>
       <title>LLM predictions</title>
       <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
       <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
     </item>
-    
     <item>
       <title>LLMS For Coding</title>
       <link>https://lngnmn2.github.io/articles/llms-for-coding/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/llms-for-coding/</guid>
       <description>Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;
 First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.
 If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.</description>
     </item>
-    
   </channel>
 </rss>

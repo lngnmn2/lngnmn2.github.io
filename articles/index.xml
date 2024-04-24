@@ -4,14 +4,22 @@
     <title>Articles on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/articles/</link>
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Apr 2024 08:34:59 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everything in Emacs</title>
+      <link>https://lngnmn2.github.io/articles/everything-in-emacs/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/everything-in-emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
+    </item>
     <item>
       <title>Late to the party.</title>
       <link>https://lngnmn2.github.io/articles/late/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/late/</guid>
       <description>This is sort of an answer to this question.
 https://news.ycombinator.com/item?id=38425475
@@ -19,79 +27,63 @@ So, what if you are late to the party?
 Unfortunately, nowadays it is even much harder to get through all the utter bullshit and hype, but there is a sort of a shortcut or &amp;ldquo;the Hard Way&amp;rdquo;.
 There are two and a half key figures: Geoffrey Hinton, who did most of the mathematical heavy lifting, Andrew Ng, who not just did all the derivations, but became the most famous practitioner, and Andrej Karpathy who us just a narcissistic asshole, similar to Lex Friedman.</description>
     </item>
-    
     <item>
       <title>Selfawareness</title>
       <link>https://lngnmn2.github.io/articles/selfawareness/</link>
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/selfawareness/</guid>
       <description>Abstract bullshitting is not enough.</description>
     </item>
-    
     <item>
       <title>The Psychology of Autism</title>
       <link>https://lngnmn2.github.io/articles/autism-psychology/</link>
       <pubDate>Fri, 17 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/autism-psychology/</guid>
       <description>To see ourselves as we really are.</description>
     </item>
-    
     <item>
       <title>Non-bullshit Trading</title>
       <link>https://lngnmn2.github.io/articles/non-bullshit-trading/</link>
       <pubDate>Mon, 13 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/non-bullshit-trading/</guid>
       <description>  Some assorted &amp;#34;brain dump&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>LLM predictions</title>
       <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
       <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
     </item>
-    
     <item>
       <title>On foundations of mathematics</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/foundations/</guid>
       <description>This is a short follow-up to this post https://lawrencecpaulson.github.io/2023/11/01/Foundations.html
 To define the foundations of mathematics mere symbols are not enough.
 We have to consider
 the actual existence of what we call &amp;ldquo;reality&amp;rdquo; or &amp;ldquo;Universe&amp;rdquo; which has some observable properties. the &amp;ldquo;Mind (of an external observe)&amp;rdquo;, which actually builds and maintains a &amp;ldquo;map&amp;rdquo; (which is not a territory). the actual existence of a language-based shared human culture which stores the &amp;ldquo;previous results&amp;rdquo; invention of a symbolic notations and formal methodologies for creating &amp;ldquo;system&amp;rdquo; So, yes, intuitionists were right, and yes, the set theory is jsut another system, generalizing from what the Mind observes.</description>
     </item>
-    
     <item>
       <title>The lost art of using a language</title>
       <link>https://lngnmn2.github.io/articles/art-forms/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/art-forms/</guid>
       <description>Everything spoken or written has to be a form of an art.</description>
     </item>
-    
     <item>
       <title>All you need is…</title>
       <link>https://lngnmn2.github.io/articles/all-you-need/</link>
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/all-you-need/</guid>
       <description>Hold it without an effort, and it will come to you without an end.</description>
     </item>
-    
     <item>
       <title>No, it doesn&#39;t.</title>
       <link>https://lngnmn2.github.io/articles/no-it-doesnt/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/no-it-doesnt/</guid>
       <description>There is a typical quote from some random Chud on the internet:
 The location within the [high-dimensional hyper-] space represents the semantic meaning of the content, according to the embedding model’s weird, mostly incomprehensible understanding of the world.
@@ -99,12 +91,10 @@ This is bullshit at so many levels, and in a such &amp;ldquo;lecturing&amp;rdquo
 First of all, there is no &amp;ldquo;understanding&amp;rdquo; whatsoever and it is not &amp;ldquo;of the world&amp;rdquo;.
 &amp;ldquo;The world&amp;rdquo; is at a fundamentally different level of abstraction from what has been used as &amp;ldquo;inputs&amp;rdquo; to a language model.</description>
     </item>
-    
     <item>
       <title>A small step towards GAI</title>
       <link>https://lngnmn2.github.io/articles/look-ma-no-i/</link>
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/look-ma-no-i/</guid>
       <description>DESCRIPTION: There is no &amp;ldquo;I&amp;rdquo; in your AI.
 Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).
@@ -112,123 +102,99 @@ There is what every &amp;ldquo;AI researcher&amp;rdquo; should know about Knowle
 There is so-called &amp;ldquo;reality&amp;rdquo; prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.
 &amp;ldquo;I am That&amp;rdquo; (&amp;ldquo;That Thou Art&amp;rdquo;) of Chandogya Upanishad is the &amp;ldquo;end of knowledge&amp;rdquo; and the &amp;ldquo;arrival&amp;rdquo; to the ultimate &amp;ldquo;truth&amp;rdquo;, with implies existence of &amp;ldquo;That&amp;rdquo; and one being just a sub-process (a wave) in It.</description>
     </item>
-    
     <item>
       <title>Why not OOP</title>
       <link>https://lngnmn2.github.io/articles/why-not-oop/</link>
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/why-not-oop/</guid>
       <description>It&amp;#39;s time to backtrack and prune.</description>
     </item>
-    
     <item>
       <title>Just learn to code and do web3shit lmao</title>
       <link>https://lngnmn2.github.io/articles/just-do-web3shit-lmao/</link>
       <pubDate>Thu, 19 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/just-do-web3shit-lmao/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>Never leave Emacs</title>
       <link>https://lngnmn2.github.io/articles/never-leave-emacs/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/never-leave-emacs/</guid>
       <description>How to partially overcome our cognitive deficiencies.</description>
     </item>
-    
     <item>
       <title>Productivity Porn</title>
       <link>https://lngnmn2.github.io/articles/productivity-porn/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/productivity-porn/</guid>
       <description>I know it when I see it.</description>
     </item>
-    
     <item>
       <title>The right way</title>
       <link>https://lngnmn2.github.io/articles/the-right-way/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/the-right-way/</guid>
       <description>How to program instead of doing a webshit coding</description>
     </item>
-    
     <item>
       <title>  Neurons &#34;reuse&#34;
   </title>
       <link>https://lngnmn2.github.io/articles/neurons/</link>
       <pubDate>Sun, 08 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/neurons/</guid>
       <description>There is an inportant subtlety when on is trying to interpret what a Neural Network actually does &amp;ndash; each neuron, it seems, gets activated on a different set of inputs which corresponds to very different set of features. It is most prominent in a computer vision settings, when a selected neuron reacts on completely unrelated parts of inputs, say of cats and of cars.
 Let&amp;rsquo;s see what is going on out there.</description>
     </item>
-    
     <item>
       <title>Solving async-await for Rust</title>
       <link>https://lngnmn2.github.io/articles/async-rust/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/async-rust/</guid>
       <description>So, you want to add these ~async~/~await/ keywords?
 First of all, it has already been seriously researched by the C#/F# .NET guys. Just learn what they have come up with.
 One&amp;rsquo;s own principle-guided reasoning could proceed like this:
 The fundamental difference between ordinary procedures and async procedures is the whole protocol for calling and returning of values, and dealing with actual implementation of the corresponding mechanisms (abstract at this point, but has to reuse what is already out there).</description>
     </item>
-    
     <item>
       <title>Transformers bullshit everywhere</title>
       <link>https://lngnmn2.github.io/articles/transformer-bullshit/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/transformer-bullshit/</guid>
       <description>No, there is no hyper-sheres in the Universe, sorry, Chuds.</description>
     </item>
-    
     <item>
       <title>High Level</title>
       <link>https://lngnmn2.github.io/articles/high-level/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/high-level/</guid>
       <description>I finally found a well-written no-bullshit book about CS. It says, among other things:
 There is no need to define a representation of the values False and True in terms of values of some other type.
 Conceptually, values of type Bool are simply (denoted by) the expressions False and True.
 Of course, the computer’s internal representation of Bool and all other data is in terms of bits, but we don’t need to know any of the details of how that works to write programs.</description>
     </item>
-    
     <item>
       <title>The Junk Foods of Programming</title>
       <link>https://lngnmn2.github.io/articles/junk-food/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/junk-food/</guid>
       <description>A small disclaimer: I&amp;rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.
 Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto &amp;ldquo;engineers&amp;rdquo;, of course.
 Just like chef Gusteau from the Ratatouille movie famously proclaimed &amp;ndash; &amp;ldquo;Anyone can cook&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>LLM Bullshit-3</title>
       <link>https://lngnmn2.github.io/articles/llmbs-3/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/llmbs-3/</guid>
       <description>It is more or less obvious why AI and LLM bubble is so huge - imagine just charging money for every https request to a RESTful API, without, literally, being responsible about the quality of the responce (it is not out fault if a LLM returned bullshit to you, or, which is much worse &amp;ndash; a highly sophisiticated, convincing subtle bullshit).
 Again, there is not enough good code to train a model on it.</description>
     </item>
-    
     <item>
       <title>More Whys</title>
       <link>https://lngnmn2.github.io/articles/more-whys/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/more-whys/</guid>
       <description>Have you ever thought why the Set Theory and Predicate Logic looks &amp;ldquo;the same&amp;rdquo; when being visualized using Venn and Euler diagrams?
 Are these partitions is the most fundamental abstract building block?
@@ -236,46 +202,38 @@ Most of the examples which are used to explain logic has been drawn from &amp;ld
 These are distinct partitions indeed, but how they came to be as they are?
 It is because somewhere in the past a literal &amp;ldquo;fork&amp;rdquo;, a mutation (or a whole set of these) occurred (and the resulting population survived).</description>
     </item>
-    
     <item>
       <title>The Way</title>
       <link>https://lngnmn2.github.io/articles/the-way/</link>
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/the-way/</guid>
       <description>  A breadth-first search for &amp;#34;enlightenment&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>Notes on proper abstractions and ADTs</title>
       <link>https://lngnmn2.github.io/articles/prog1/</link>
       <pubDate>Sun, 24 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/prog1/</guid>
       <description>Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
 Both algebraic types (&amp;ldquo;products&amp;rdquo; and &amp;ldquo;sums&amp;rdquo;), could be used &amp;ldquo;like tables&amp;rdquo;, with new columns being added without affecting any code that is already out there.
 This implies a by name instead of position-based (offset) access.
 This, in turn, is the fundamental, definitive property of structs over tuples.</description>
     </item>
-    
     <item>
       <title>Formulating the problem</title>
       <link>https://lngnmn2.github.io/articles/notes/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/notes/</guid>
       <description>These are just assorted notes for now, which shall become something ready to be formalized.
 Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
 The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
 All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like &amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements like &amp;ldquo;Volume&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>Archery</title>
       <link>https://lngnmn2.github.io/articles/archery/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/archery/</guid>
       <description>The skill beats luck - fortune favors the prepared.
 Shooting is to study the mind (observation, introspection, control). through practice and experience (not reading or watching).
@@ -285,12 +243,10 @@ Each shot reveals what you are (to you).
 Each shot reveals you as a living Buddha or a tense fool.
 Hitting a target with an arrow is a small vehicle; attaining enlightenment with an arrow is a big vehicle.</description>
     </item>
-    
     <item>
       <title>Fixing the annoying bug</title>
       <link>https://lngnmn2.github.io/articles/bug/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/bug/</guid>
       <description>I has been struggling with this very annoying bug when code blocks in the org mode are messed up badly when the global-whitespace-mode is enabled.
 This global-whitespace-mode is especially important to see the actual mess which is usually invisible (like decease causing bacteria).
@@ -299,158 +255,127 @@ So, here is how to fix it.
 Doom themes (as a standalone package)
 (use-package doom-themes :demand :hook (after-init .</description>
     </item>
-    
     <item>
       <title>The org-mode rituals of a narcissistic busy-body</title>
       <link>https://lngnmn2.github.io/articles/org-mode/</link>
       <pubDate>Sun, 03 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/org-mode/</guid>
       <description>The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.
 The underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly &amp;ldquo;the right thing&amp;rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.
 These &amp;ldquo;very smart&amp;rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are &amp;ldquo;very smart&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>LLMS For Coding</title>
       <link>https://lngnmn2.github.io/articles/llms-for-coding/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/llms-for-coding/</guid>
       <description>Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;
 First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.
 If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.</description>
     </item>
-    
     <item>
       <title>On burnout</title>
       <link>https://lngnmn2.github.io/articles/burnout/</link>
       <pubDate>Fri, 18 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/burnout/</guid>
       <description>What is to be done.</description>
     </item>
-    
     <item>
       <title>Deep Learning</title>
       <link>https://lngnmn2.github.io/articles/deep-learning/</link>
       <pubDate>Sat, 12 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/deep-learning/</guid>
       <description>Understanding the underlying universal principles.</description>
     </item>
-    
     <item>
       <title>Trading</title>
       <link>https://lngnmn2.github.io/articles/trading/</link>
       <pubDate>Wed, 09 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/trading/</guid>
       <description>Extracting the principles and the whys.</description>
     </item>
-    
     <item>
       <title>Why S and K are enough.</title>
       <link>https://lngnmn2.github.io/articles/sk/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/sk/</guid>
       <description>DESCRIPTION: Oops, I did it again.
 The hack The word &amp;ldquo;implies&amp;rdquo; and corresponding arrows are grossly overloaded and have more than one subtle but distinct meanings.
 We will read and interpret the &amp;ldquo;arrows&amp;rdquo; (and the word &amp;ldquo;implies&amp;rdquo;) from different formalisms differently (as an implication in terms of necessity and sufficiency and as a single discrete step of causality).
 We will put the universal notion of an environment (and the corresponding Γ abstraction) from obscurity to the center.</description>
     </item>
-    
     <item>
       <title>Abstraction barriers</title>
       <link>https://lngnmn2.github.io/articles/abstractions/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/abstractions/</guid>
       <description>Interfaces, interfaces everywhere.</description>
     </item>
-    
     <item>
       <title>GNU Emacs</title>
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>Trading Math</title>
       <link>https://lngnmn2.github.io/articles/trading-math/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/trading-math/</guid>
       <description>The concrete mathematics of trading.</description>
     </item>
-    
     <item>
       <title>Writing a semi-automated trading system</title>
       <link>https://lngnmn2.github.io/articles/automated-trading/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/automated-trading/</guid>
       <description>AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;
 Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
 Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
 Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).</description>
     </item>
-    
     <item>
       <title>Biological evolution and Life Itself</title>
       <link>https://lngnmn2.github.io/articles/life-itself/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/life-itself/</guid>
       <description>Stable intermediate building blocks.</description>
     </item>
-    
     <item>
       <title>Remote</title>
       <link>https://lngnmn2.github.io/articles/remote/</link>
       <pubDate>Fri, 21 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/remote/</guid>
       <description>Practices that work.</description>
     </item>
-    
     <item>
       <title>The recurring patterns captured as a Monoid</title>
       <link>https://lngnmn2.github.io/articles/monoids/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/monoids/</guid>
       <description>The common patterns There are recurrent patterns, which has been captured in familiar &amp;ldquo;standard&amp;rdquo; abstractions.
 Monoid A Set along with a composition operation, which has an identity element.
 addition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is &amp;quot;&amp;quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.</description>
     </item>
-    
     <item>
       <title>Understanding Rust</title>
       <link>https://lngnmn2.github.io/articles/unrestanding-rust/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/unrestanding-rust/</guid>
       <description>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an &amp;ldquo;arch and OS /duo&amp;rdquo;, and to be &amp;ldquo;aware of&amp;rdquo; the ABIs in general.
 Overview Rust is, in principle, an imperative language.</description>
     </item>
-    
     <item>
       <title>The simplest self-publishing workflow</title>
       <link>https://lngnmn2.github.io/articles/the-simplest-workflow/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/the-simplest-workflow/</guid>
       <description>Overview This is the simplest but smart self-publishing workflow.
 org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages
 Everything is according to the universal principles of being almost &amp;ldquo;pure functional transformations&amp;rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
 At each stage or step we delegate some aspect to an appropriate external vendored tool.</description>
     </item>
-    
   </channel>
 </rss>

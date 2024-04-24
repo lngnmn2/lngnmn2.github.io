@@ -4,46 +4,39 @@
     <title>imperative on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/imperative/</link>
     <description>Recent content in imperative on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/imperative/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Oct 2023 13:46:29 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/imperative/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>All you need is…</title>
       <link>https://lngnmn2.github.io/articles/all-you-need/</link>
       <pubDate>Sun, 29 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/all-you-need/</guid>
       <description>Hold it without an effort, and it will come to you without an end.</description>
     </item>
-    
     <item>
       <title>Never leave Emacs</title>
       <link>https://lngnmn2.github.io/articles/never-leave-emacs/</link>
       <pubDate>Tue, 17 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/never-leave-emacs/</guid>
       <description>How to partially overcome our cognitive deficiencies.</description>
     </item>
-    
     <item>
       <title>GNU Emacs</title>
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>Understanding Rust</title>
       <link>https://lngnmn2.github.io/articles/unrestanding-rust/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/unrestanding-rust/</guid>
       <description>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an &amp;ldquo;arch and OS /duo&amp;rdquo;, and to be &amp;ldquo;aware of&amp;rdquo; the ABIs in general.
 Overview Rust is, in principle, an imperative language.</description>
     </item>
-    
   </channel>
 </rss>

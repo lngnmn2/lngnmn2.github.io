@@ -4,41 +4,36 @@
     <title>Monoid on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/monoid/</link>
     <description>Recent content in Monoid on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Aug 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/monoid/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Aug 2023 19:58:18 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/monoid/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why S and K are enough.</title>
       <link>https://lngnmn2.github.io/articles/sk/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/sk/</guid>
       <description>DESCRIPTION: Oops, I did it again.
 The hack The word &amp;ldquo;implies&amp;rdquo; and corresponding arrows are grossly overloaded and have more than one subtle but distinct meanings.
 We will read and interpret the &amp;ldquo;arrows&amp;rdquo; (and the word &amp;ldquo;implies&amp;rdquo;) from different formalisms differently (as an implication in terms of necessity and sufficiency and as a single discrete step of causality).
 We will put the universal notion of an environment (and the corresponding Γ abstraction) from obscurity to the center.</description>
     </item>
-    
     <item>
       <title>GNU Emacs</title>
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>The recurring patterns captured as a Monoid</title>
       <link>https://lngnmn2.github.io/articles/monoids/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/monoids/</guid>
       <description>The common patterns There are recurrent patterns, which has been captured in familiar &amp;ldquo;standard&amp;rdquo; abstractions.
 Monoid A Set along with a composition operation, which has an identity element.
 addition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is &amp;quot;&amp;quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.</description>
     </item>
-    
   </channel>
 </rss>

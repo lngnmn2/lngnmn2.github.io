@@ -4,14 +4,14 @@
     <title>deep learning on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/deep-learning/</link>
     <description>Recent content in deep learning on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.121.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Nov 2023 00:00:00 +0545</lastBuildDate><atom:link href="https://lngnmn2.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 09:34:17 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Late to the party.</title>
       <link>https://lngnmn2.github.io/articles/late/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/late/</guid>
       <description>This is sort of an answer to this question.
 https://news.ycombinator.com/item?id=38425475
@@ -19,31 +19,25 @@ So, what if you are late to the party?
 Unfortunately, nowadays it is even much harder to get through all the utter bullshit and hype, but there is a sort of a shortcut or &amp;ldquo;the Hard Way&amp;rdquo;.
 There are two and a half key figures: Geoffrey Hinton, who did most of the mathematical heavy lifting, Andrew Ng, who not just did all the derivations, but became the most famous practitioner, and Andrej Karpathy who us just a narcissistic asshole, similar to Lex Friedman.</description>
     </item>
-    
     <item>
       <title>Non-bullshit Trading</title>
       <link>https://lngnmn2.github.io/articles/non-bullshit-trading/</link>
       <pubDate>Mon, 13 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/non-bullshit-trading/</guid>
       <description>  Some assorted &amp;#34;brain dump&amp;#34;.
   </description>
     </item>
-    
     <item>
       <title>LLM predictions</title>
       <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
       <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
     </item>
-    
     <item>
       <title>A small step towards GAI</title>
       <link>https://lngnmn2.github.io/articles/look-ma-no-i/</link>
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/look-ma-no-i/</guid>
       <description>DESCRIPTION: There is no &amp;ldquo;I&amp;rdquo; in your AI.
 Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).
@@ -51,36 +45,29 @@ There is what every &amp;ldquo;AI researcher&amp;rdquo; should know about Knowle
 There is so-called &amp;ldquo;reality&amp;rdquo; prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.
 &amp;ldquo;I am That&amp;rdquo; (&amp;ldquo;That Thou Art&amp;rdquo;) of Chandogya Upanishad is the &amp;ldquo;end of knowledge&amp;rdquo; and the &amp;ldquo;arrival&amp;rdquo; to the ultimate &amp;ldquo;truth&amp;rdquo;, with implies existence of &amp;ldquo;That&amp;rdquo; and one being just a sub-process (a wave) in It.</description>
     </item>
-    
     <item>
       <title>Formulating the problem</title>
       <link>https://lngnmn2.github.io/articles/notes/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/notes/</guid>
       <description>These are just assorted notes for now, which shall become something ready to be formalized.
 Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
 The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
 All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like &amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements like &amp;ldquo;Volume&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>Deep Learning</title>
       <link>https://lngnmn2.github.io/articles/deep-learning/</link>
       <pubDate>Sat, 12 Aug 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/deep-learning/</guid>
       <description>Understanding the underlying universal principles.</description>
     </item>
-    
     <item>
       <title>Trading Math</title>
       <link>https://lngnmn2.github.io/articles/trading-math/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      
       <guid>https://lngnmn2.github.io/articles/trading-math/</guid>
       <description>The concrete mathematics of trading.</description>
     </item>
-    
   </channel>
 </rss>
