@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Rust is like Haskell, but imperative | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, ADT, embedded, DSL">
+<meta name="description" content="  The monument and a world-heritage &#34;site&#34;.
+  ">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/like-haskell-but-imperative/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Rust is like Haskell, but imperative" />
+<meta property="og:description" content="  The monument and a world-heritage &#34;site&#34;.
+  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/like-haskell-but-imperative/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-04-24T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-04-24T10:08:22+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rust is like Haskell, but imperative"/>
+<meta name="twitter:description" content="  The monument and a world-heritage &#34;site&#34;.
+  "/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Rust is like Haskell, but imperative",
+      "item": "https://lngnmn2.github.io/articles/like-haskell-but-imperative/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Rust is like Haskell, but imperative",
+  "name": "Rust is like Haskell, but imperative",
+  "description": "  The monument and a world-heritage \"site\".\n  ",
+  "keywords": [
+    "emacs", "ADT", "embedded", "DSL"
+  ],
+  "articleBody": "What could even be in common between Haskell and Rust? Well, they are the most advanced languages of its time, the most controversial and the most discussed.\nMost importantly - both languages are have a proper type-classes/traits based standard libraries, where the type-classes/traits define major modern mathematical notions, which can be traced to the modern set-theoretic math and related notions. This is what makes the actual difference with other crap like PHP.\nWhile Haskell has been researched (and developed) by the actual top people in the field (Turner, Bird, Wadler, Hudak, SPJ) – all of them had a serious mathematical background – the Rust community is diverse but trying to incorporate all the nice things the previous generations have discovered.\nThis is not just about stdlib, of course (however important that is by itself). The major innovation was in restricting possible behaviors of variables and references to them in a systematic, formalized way. This is the only real major innovation in last 20 years or so.\nRestricting the behavior to avoid “paradoxes” (or just errors) is a Universal pattern (no jokes here). It is exactly the same process as how Evolution selects just a very few stable molecular patterns (proteins) and arrangements (cell membranes). We could easily call this a restriction on all possible molecular arrangements.\nThe first such restriction has been discovered within the Set Theory, which has been proved to be way too general. One has to specify the particular Set one works with, so expressions (set comprehension) would not lose its meaning. This is essentially “typing” (or a rudimentary type-discipline) within a mathematical formalism.\nAnother such instance was restricting the behavior of, again, way too general the Lambda Calculus (another mathematical formalism) by introducing simple typing (otherwise eveything could be applied to everything, which would eventually yield bullshit).\nAnd Barbra Liskov noticed that most of the mathematical :“structures” have been defined by a subset of “objects” defined by a set of all possible (and meaningful) operations on them So should be our Abstract Data Types.\nThe authors of Haskell (mathematicians) have chosen a particular system of pure logic as the basis of the language, so everything is pure and immutable as in math itself. This system of logic is defined as a small extension of (augmented) Simply Typed (restricted) Lambda Calculus. Every Haskell expression will be simplified to an intermediate representation which is just that – terms of a particular system of logic. Haskell has been discovered, not invented.\nAgain, this is not an arbitrary decisions, this is a universal pattern – too general (and too abstract) is unusable. In a theory (at least) Evolution “selects” (by trial and error) a stable subset of all possible arrangements (which does not break easily). Similarly, mathematicians and programmers discover what Evolution has “selected” earlier and the universal patters, such as “putting together” (addition), sequences and actually existing symmetries.\nSo, what Rust has to do with all this? Well, it does a lot of things “just right” (beginning with restrictions on the behavior of references) and the community, however diverse, has emphasis on doing thing right. All the emergent properties of the language magically appear (actually follow from the small set of right decisions based on the fundamental notions of mathematics).\nThe restriction of having either at most one exclusive mutable reference or an arbitrary number of immutable references is what yielded all (well, most of) the emergent properties memed as “safety”.\nIn functional languages references are explicit closures (a proper ADT) and are being explicitly passed around as parameters to functions, so this property (at most one mutable reference at all) is implicit. All the bindings are implicit immutable symbolic references to values.\nLifetimes associated with every variable and then lifted into the type-system was another discovery. In functional languages there is not time, so all expressions, including bindings (their “lifetimes”) are eternal (being a pure logic is not a joke).\nRust is trying to become an expression-oriented language as much as possible (including pattern-matching on data bindings), while the best functional languages have it “naturally” – everything is an expression, which is reducible (denotes) a value (in a so-called “normal form”). Thus the “data constructor” can be viewed (semantically) as “tags” to values, and be matched against. Rust is not so uniform and universal, of course, but it is at least something.\nEven with this quick overview, Rust is by far the most advanced imperative language (don’t even think to embarrass oneself by labeling it as sort of functional – only Chuds do this), which borrows all the nice things from the Haskell and ML (as much as possible).\nUse of Algebraic data types (sum-types) through the standard library is another nice “borrowing”. It makes everything more uniform and “just right” (an Option type is a proper abstraction which captured the notion of possibly Nothing as in $x - x $).\nI could go on, further into other particulars, but I think this writing is already good-enough to show that Rust is sort of an “Imperative Haskell” at many levels. It could be way better polished if designed by a small group of renowned, passionate and principle-guided mathematicians, but the time of small groups (and garages) has already gone. So, Rust is also PHP (inevitably).\n",
+  "wordCount" : "877",
+  "inLanguage": "en",
+  "datePublished": "2024-04-24T00:00:00+05:45",
+  "dateModified": "2024-04-24T10:08:22+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/like-haskell-but-imperative/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Rust is like Haskell, but imperative
+    </h1>
+    <div class="post-description">
+        The monument and a world-heritage &#34;site&#34;.
+  
+    </div>
+    <div class="post-meta"><span title='2024-04-24 00:00:00 +0545 +0545'>April 24, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>What could even be in common between <em>Haskell</em> and <em>Rust</em>? Well, they are the most advanced languages of its time, the most controversial and the most discussed.</p>
+<p>Most importantly - both languages are have a proper type-classes/traits based standard libraries, where the type-classes/traits define major modern mathematical notions, which can be traced to the modern set-theoretic math and related notions. This is what makes the actual difference with other crap like PHP.</p>
+<p>While Haskell has been <em>researched</em> (and developed) by the actual top people in the field (Turner, Bird, Wadler, Hudak, SPJ) &ndash; <em>all of them had a serious mathematical background</em> &ndash;
+the Rust community is <em>diverse</em> but trying to incorporate all the nice things the previous generations have discovered.</p>
+<p>This is not just about stdlib, of course (however important that is by itself). The major innovation was in <em>restricting</em>  possible behaviors of variables and <em>references</em> to them in a systematic, formalized way. This is the only real major innovation in last 20 years or so.</p>
+<p>Restricting the behavior to avoid &ldquo;paradoxes&rdquo; (or just errors) is a Universal pattern (no jokes here). It is exactly the same process as how Evolution selects just a very few <em>stable</em> molecular patterns (proteins) and arrangements (cell membranes).  We could easily call this a restriction on all possible molecular arrangements.</p>
+<p>The first such restriction has been discovered within the Set Theory, which has been proved to be <em>way too general</em>. One has to specify the particular Set one works with, so expressions (set comprehension) would not lose its meaning. This is essentially &ldquo;typing&rdquo; (or a rudimentary type-discipline) within a mathematical formalism.</p>
+<p>Another such instance was restricting the behavior of, again, way too general the Lambda Calculus (another mathematical formalism) by introducing simple typing (otherwise eveything could be applied to everything, which would eventually yield bullshit).</p>
+<p>And Barbra Liskov noticed that most of the mathematical :&ldquo;structures&rdquo; have been defined by a subset of &ldquo;objects&rdquo; defined by a set of all possible (and meaningful) operations on them
+So should be our Abstract Data Types.</p>
+<p>The authors of Haskell (mathematicians) have chosen a particular system of pure logic as the basis of the language, so everything is pure and immutable as in math itself. This system of logic is defined as a small extension of (augmented) Simply Typed (restricted) Lambda Calculus. Every Haskell expression will be simplified to an <em>intermediate representation</em> which is just that &ndash; terms of a particular system of logic. Haskell  has been discovered, not invented.</p>
+<p>Again, this is not an arbitrary decisions, this is a universal pattern &ndash; too general (and too abstract) is unusable. In a theory (at least) Evolution &ldquo;selects&rdquo; (by trial and error) a stable subset of all possible arrangements (which does not break easily). Similarly, mathematicians and programmers discover what Evolution has &ldquo;selected&rdquo; earlier and the universal patters, such as &ldquo;putting together&rdquo; (addition), sequences and actually existing <em>symmetries</em>.</p>
+<p>So, what <code>Rust</code> has to do with all this? Well, it does a lot of things &ldquo;just right&rdquo; (beginning with restrictions on the behavior of references) and the community, however diverse, has emphasis on doing thing right. All the emergent properties of the language magically appear (actually follow from the small set of right decisions based on the fundamental notions of mathematics).</p>
+<p>The restriction of having <em>either</em> at most one <em>exclusive</em> mutable reference
+<em>or</em> an arbitrary number of <em>immutable</em> references is what yielded all (well, most of) the emergent properties memed as &ldquo;safety&rdquo;.</p>
+<p>In functional languages references are explicit closures (a proper ADT) and are being explicitly passed around as parameters to functions, so this property (at most one mutable reference at all) is implicit. All the <em>bindings</em> are implicit immutable symbolic references to values.</p>
+<p>Lifetimes associated with every variable and then lifted into the type-system was another discovery. In functional languages there is not time, so all expressions, including bindings (their &ldquo;lifetimes&rdquo;) are <em>eternal</em> (being a pure logic is not a joke).</p>
+<p>Rust is trying to become an expression-oriented language as much as possible (including pattern-matching on data bindings), while the best functional languages have it &ldquo;naturally&rdquo; &ndash; everything is an expression, which is reducible (denotes) a value (in a so-called &ldquo;normal form&rdquo;). Thus the &ldquo;data constructor&rdquo; can be viewed (semantically) as &ldquo;tags&rdquo; to values, and be matched against. Rust is not so uniform and universal, of course, but it is at least something.</p>
+<p>Even with this quick overview, <code>Rust</code> is by far the most advanced <em>imperative</em> language (don&rsquo;t even think to embarrass oneself by labeling it as sort of functional &ndash; only Chuds do this), which borrows all the nice things from the Haskell and ML (as much as possible).</p>
+<p>Use of <em>Algebraic data types</em> (sum-types) through the standard library is another nice &ldquo;borrowing&rdquo;. It makes everything more uniform and &ldquo;just right&rdquo; (an Option type is a <em>proper abstraction</em> which captured the notion of <em>possibly Nothing</em> as in $x - x $).</p>
+<p>I could go on, further into other particulars, but I think this writing is already <em>good-enough</em> to show that Rust is  sort of an &ldquo;Imperative Haskell&rdquo; at many levels. It could be way better polished if designed by a small group of renowned, passionate and principle-guided mathematicians, but the time of small groups (and garages) has already gone. So, Rust  is also PHP (inevitably).</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded/">embedded</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
