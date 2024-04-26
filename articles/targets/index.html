@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The targets no one else sees | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, ADT, embedded, DSL">
+<meta name="description" content="Yet another article for HN Chuds">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/targets/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/targets/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="The targets no one else sees" />
+<meta property="og:description" content="Yet another article for HN Chuds" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/targets/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-04-26T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-04-26T17:27:37+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The targets no one else sees"/>
+<meta name="twitter:description" content="Yet another article for HN Chuds"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The targets no one else sees",
+      "item": "https://lngnmn2.github.io/articles/targets/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The targets no one else sees",
+  "name": "The targets no one else sees",
+  "description": "Yet another article for HN Chuds",
+  "keywords": [
+    "emacs", "ADT", "embedded", "DSL"
+  ],
+  "articleBody": "Lets talk about some targets no one else sees.\nI am a prod student of Brian Harvey, the great. I used to watch his CS61A recordings like other people watch stupid TV serials. For me it was something like watching X-Files or Twin-Peaks, which are only non-stupid ones.\nThe problem was, however, that even if I understand every word and almost every concept mentioned, I didn’t know which are the most fundamental ones and which are just accidental notions or just preserved in a shared culture social constructions.\nIt took a lot of time and Reading classic CS and Math textbooks to sort out what is fundamental and even Universal, and what are just nice memes.\nThe fundamental and universal notions are the “penetrable partitions, sort of a biological cell membranes with their “portals” and “pumps”, from which our abstract interfaces has been intuitively generalized”.\nIn the old times they used way better vocabulary, and called thing by its proper names. So they said a “type-signature” which describe a procedural abstraction (which should implement a pure function) in classic languages.\nA set of such type-signatures is a partially-defined abstract interface. Partially, because just a set is not enough, we also need a specification – the rules, the “laws” and “invariants”.\nThe universal notion is of an actual Abstraction Barriers (our membranes between partitions) and how such abstraction barriers can be implemented using Abstract Data Types.\nThese notions can be traced back to something very general (abstract) and nevertheless actual and profound. Lets have some excursion to the realms of very general abstractions.\nWhen we are trying to understand what an Abstract Data Type actually is, we would notice that there are two distinct kinds of procedures in its public interface – so-called constructors and selectors. Constructors return actual data values, while selectors are used to actually use a value, at so-called “use-site”. The oversuse of the word “use” is intentional. The other “site” is, well, a “construction site”.\nThere is a seemingly unrelated notion from Gerhads Gentzen’s formalism of Natural Deduction – the rules come in pairs – an Introduction rule and an Elimination rule. The rules are being “constructed” and then somewhere else they are being “used”.\nAnother seemingly unrelated notion is of message-passing from Biology. Messages (actual particular molecular structures) are being created by enzymes (mechanical procedures) at one “site” and then, after traveling freely some distances, being “used” somewhere (presumably by another enzyme). Notice that there is no notions of time nor a particular odering involved\nThe “target” is to realize that “what we need” is just a very few Universal notions, properly generalized, upon which everything has been built (by biological process) or could be build and these notions reccur (re-emerge) at all levels, including the most abstract (but non-bullshit) ones.\nWe have seen this a lot without understanding. The notion of an ADT is the basic building block, similar to some specialized locality (a subprocess) within a cell. An individual procedure is, of course, an enzyme, and suddenly, the totally abstract notion of a Curried function is just abstract notion of a “partially filled” enzyme .\nAbstract Interfaces, are actual implementations of conceptual abstraction barriers. To actually work the abstraction has to be “non-leaking” (proper closures) and interfaces has to be “abstract”, meaning that nothing but the type-signatures of the “pumps” and “portals” have been exposed on the membrane (an abstraction barrier).\nThese are the very foundations. As it will turn out, the universal notions behind logic, math, CS and the part of biology which aurally do information processing (at the molecular level) are the same, and there are just a handful of them.\nNon-bullshit mathematics (which studied a properly captured notions, abstracted out as mathematical objects) has already been captured all of them. We just didn’t sort them out.\nSo, lets list dome of them to have a fell of it.\na symmetry (different point of view on the same process) commutative and distributive “laws” which just generalization of symmetries. associativity as concatenation a Monoid (an operation which produces the same kind of values) all the set-theoretic notion the function theory (the part which reach isomorphisms and homomorphisms) a mathematical closure (over an operation) a logical closure (over all the “free” and bound symbols) the composition of functions (and the related part of the Category theory) This is the locus, an entangled essence. The Curry-Howard Isomorphism clearly shows that this is so. The same few properly captured notions everywhere, at all levels\nThere re some other, which almost always being neglected.\nthe generalization that Sets can be defined by a set of operations (not just a predicate on a common property). the notion of a binding the \\(\\Gamma\\) as the set of all previously known results an environment, which has binding for all symbols how every word in a spoken human language has to be a binding to its meaning how cells are always within their particular locality (biological environment) And a few more “captured principles”\nthe notion of counting and therefore of an abstract time does not exist at the level of molecular or cell biology. the fundamental mathematical notions can be clearly separated (partitioned) into “properly captured” (existent) and “socially constructed” (non-existent). Once done, this will show (unveil) What actually Is and the “basic building blocks” could be clearly seen.\nThey are already visible (at least to some) who asked the questions like “Why The Nartueal Deduction or the Lambda Calculus or the Set Theiry or the Functions or the aspects of the Category theory are “enough for everything”, or “why a system of logic is what it is”.\nThe problem with current understanding is that we mix and match implementation aspects within abstract notions, and they should be separated and well-typed (sorted out). The type-classes and duck-typing in general is the way to go..\n",
+  "wordCount" : "973",
+  "inLanguage": "en",
+  "datePublished": "2024-04-26T00:00:00+05:45",
+  "dateModified": "2024-04-26T17:27:37+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/targets/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The targets no one else sees
+    </h1>
+    <div class="post-description">
+      Yet another article for HN Chuds
+    </div>
+    <div class="post-meta"><span title='2024-04-26 00:00:00 +0545 +0545'>April 26, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Lets talk about some targets no one else sees.</p>
+<p>I am a prod student of Brian Harvey, the great. I used to watch his  CS61A recordings like other people watch stupid TV serials. For me it was something like watching X-Files or Twin-Peaks, which are only non-stupid ones.</p>
+<p>The problem was, however, that even if I understand every word and almost every concept mentioned, I didn&rsquo;t know which are the most fundamental ones and which are just accidental notions or just preserved in a shared culture social constructions.</p>
+<p>It took <em>a lot</em> of time and Reading classic CS and Math textbooks to sort out what is  fundamental and even Universal, and what are just nice memes.</p>
+<p>The fundamental and universal notions are the &ldquo;penetrable partitions, sort of a biological cell membranes with their &ldquo;portals&rdquo; and &ldquo;pumps&rdquo;, from which our <em>abstract interfaces</em> has been intuitively generalized&rdquo;.</p>
+<p>In the old times they used way better vocabulary, and called thing by its proper names. So they said a <em>&ldquo;type-signature&rdquo;</em> which describe a procedural abstraction (which should implement a <em>pure function</em>) in classic languages.</p>
+<p>A set of such type-signatures is a partially-defined abstract interface. Partially, because just a set is not enough, we also need a specification &ndash; the rules, the &ldquo;laws&rdquo; and &ldquo;invariants&rdquo;.</p>
+<p>The universal notion is of an actual <em>Abstraction Barriers</em> (our membranes between partitions) and how such abstraction barriers can be implemented using <em>Abstract Data Types</em>.</p>
+<p>These notions can be traced back to something very general (abstract) and nevertheless actual and profound. Lets have some excursion to the realms of very general abstractions.</p>
+<p>When we are trying to understand what an Abstract Data Type actually is, we would notice that there are two distinct kinds of procedures in its public interface &ndash; so-called <em>constructors</em> and <em>selectors</em>. Constructors return actual data values, while selectors are used to actually <em>use</em> a value, at so-called &ldquo;use-site&rdquo;. The oversuse of the word &ldquo;use&rdquo; is intentional. The other &ldquo;site&rdquo; is, well, a &ldquo;construction site&rdquo;.</p>
+<p>There is a seemingly unrelated notion from Gerhads Gentzen&rsquo;s  formalism of Natural Deduction &ndash; <em>the rules come in pairs</em> &ndash; <em>an Introduction</em> rule and <em>an Elimination</em> rule. The rules are being &ldquo;constructed&rdquo; and then somewhere else they are being &ldquo;used&rdquo;.</p>
+<p>Another seemingly unrelated notion is of message-passing from Biology. Messages (actual particular molecular structures) are being created by enzymes (mechanical procedures) at one &ldquo;site&rdquo; and then, after traveling freely some distances, being &ldquo;used&rdquo; somewhere (presumably by another enzyme). Notice that there is  no notions of time nor  a particular odering involved</p>
+<p>The &ldquo;target&rdquo; is to realize that &ldquo;what we need&rdquo; is just a <em>very few</em> Universal notions, properly generalized, upon which <em>everything</em> has been built (by biological process) or could be build and these notions reccur (re-emerge) at all levels, including the most abstract (but non-bullshit) ones.</p>
+<p>We have seen this a lot without understanding. The notion of an ADT is the basic building block, similar to some specialized locality (a subprocess) within a cell. An individual procedure is, of course,  an enzyme, and suddenly, the totally abstract notion of a Curried function is just abstract notion of a &ldquo;partially filled&rdquo;  enzyme .</p>
+<p>Abstract Interfaces, are actual <em>implementations</em> of conceptual abstraction barriers. To actually work the abstraction has to be &ldquo;non-leaking&rdquo; (proper closures) and interfaces has to be &ldquo;abstract&rdquo;, meaning that nothing but the type-signatures of the &ldquo;pumps&rdquo; and &ldquo;portals&rdquo; have been exposed on the membrane (an abstraction barrier).</p>
+<p>These are the very foundations. As it <em>will</em> turn out, the universal notions behind logic, math, CS and the part of biology which aurally do information processing (at the molecular level) are <em>the same</em>, and there are just a handful of them.</p>
+<p>Non-bullshit mathematics (which studied a properly captured notions, abstracted out as mathematical objects) has already been captured all of them. We just didn&rsquo;t sort them out.</p>
+<p>So, lets list dome of them to have a fell of it.</p>
+<ul>
+<li>a symmetry (different point of view on the same process)</li>
+<li>commutative and distributive &ldquo;laws&rdquo; which just generalization of symmetries.</li>
+<li>associativity as concatenation</li>
+<li>a Monoid (an operation which produces the same kind of values)</li>
+<li>all the set-theoretic notion</li>
+<li>the function theory (the part which reach isomorphisms and homomorphisms)</li>
+<li>a mathematical closure (over an operation)</li>
+<li>a logical closure (over all the &ldquo;free&rdquo; and bound symbols)</li>
+<li>the composition of functions (and the related part of the Category theory)</li>
+</ul>
+<p>This is the <em>locus</em>, an entangled essence. The <em>Curry-Howard Isomorphism</em> clearly shows that this is so. The same few properly captured notions everywhere, at all levels</p>
+<p>There re some other, which almost always being neglected.</p>
+<ul>
+<li>the generalization that Sets can be defined by a set of operations (not just a predicate on a common property).</li>
+<li>the notion of a <em>binding</em></li>
+<li>the \(\Gamma\) as the set of all previously known results</li>
+<li>an <em>environment</em>, which has binding for all symbols</li>
+<li>how every word in a spoken human language has to be a binding to its meaning</li>
+<li>how cells <em>are</em> always within their particular locality (biological environment)</li>
+</ul>
+<p>And a few more &ldquo;captured principles&rdquo;</p>
+<ul>
+<li>the notion of <em>counting</em> and therefore of <em>an abstract time</em> does not exist at the level of molecular or cell biology.</li>
+<li>the fundamental mathematical notions can be clearly separated (partitioned) into &ldquo;properly captured&rdquo; (existent) and &ldquo;socially constructed&rdquo; (non-existent).</li>
+</ul>
+<p>Once done, this will show (unveil) <em>What actually Is</em> and the &ldquo;basic building blocks&rdquo; could be clearly seen.</p>
+<p>They are already visible (at least to some) who asked the questions like <em>&ldquo;Why The Nartueal Deduction or the Lambda Calculus or the Set Theiry or the Functions or the aspects of the Category theory</em>  are &ldquo;enough for everything&rdquo;, or &ldquo;why a system of logic is what it is&rdquo;.</p>
+<p>The problem with current understanding is that we mix and match implementation aspects within abstract notions, and they should be separated and well-typed (sorted out).
+The type-classes and duck-typing in general is the way to go..</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">Emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded/">Embedded</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

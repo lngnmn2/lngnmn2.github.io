@@ -6,7 +6,7 @@
     <description>Recent content in ADT on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Apr 2024 13:53:07 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2024 17:27:37 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/adt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tackling complexity</title>
@@ -14,6 +14,13 @@
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/tackling-complexity/</guid>
       <description>Let some HN Chuds read this.</description>
+    </item>
+    <item>
+      <title>The targets no one else sees</title>
+      <link>https://lngnmn2.github.io/articles/targets/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/targets/</guid>
+      <description>Yet another article for HN Chuds</description>
     </item>
     <item>
       <title>Everything in Emacs</title>
