@@ -6,16 +6,34 @@
     <lastmod>2023-08-05T19:21:03+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/adt/</loc>
-    <lastmod>2024-04-24T10:08:22+05:45</lastmod>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2024-04-24T10:08:22+05:45</lastmod>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/</loc>
-    <lastmod>2024-04-24T10:08:22+05:45</lastmod>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/composabilty/</loc>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/dsl/</loc>
-    <lastmod>2024-04-24T10:08:22+05:45</lastmod>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/monoid/</loc>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/</loc>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/programming/</loc>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/tackling-complexity/</loc>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2024-04-26T13:53:07+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/emacs/</loc>
     <lastmod>2024-04-24T10:08:22+05:45</lastmod>
@@ -29,16 +47,7 @@
     <loc>https://lngnmn2.github.io/articles/everything-in-emacs/</loc>
     <lastmod>2024-04-24T08:34:59+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/</loc>
-    <lastmod>2024-04-24T10:08:22+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/programming/</loc>
-    <lastmod>2024-04-24T10:08:22+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/articles/like-haskell-but-imperative/</loc>
-    <lastmod>2024-04-24T10:08:22+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
     <lastmod>2024-04-24T10:08:22+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/ai/</loc>
@@ -76,12 +85,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/categories/trading/</loc>
     <lastmod>2023-11-13T16:16:17+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/ai/</loc>
-    <lastmod>2023-11-08T09:47:11+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/articles/llm-predictions/</loc>
-    <lastmod>2023-11-08T09:47:11+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/foundations/</loc>
     <lastmod>2023-11-02T11:56:06+05:45</lastmod>
@@ -160,6 +163,9 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/neurons/</loc>
     <lastmod>2023-10-08T19:22:39+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/ai/</loc>
+    <lastmod>2023-11-08T09:35:25+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/plt/</loc>
     <lastmod>2023-10-06T16:45:07+05:45</lastmod>
@@ -281,9 +287,6 @@
     <loc>https://lngnmn2.github.io/tags/foundations/</loc>
     <lastmod>2023-08-05T19:58:18+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/tags/monoid/</loc>
-    <lastmod>2023-08-05T19:58:18+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/semigroup/</loc>
     <lastmod>2023-08-05T19:58:18+05:45</lastmod>
   </url><url>
@@ -316,6 +319,9 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/emacs/</loc>
     <lastmod>2023-08-02T12:43:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/llm-predictions/</loc>
+    <lastmod>2023-11-08T09:35:25+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/kalman-filter/</loc>
     <lastmod>2023-08-10T12:05:25+05:45</lastmod>

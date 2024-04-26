@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Tackling complexity | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, DSL, composabilty, Monoid">
+<meta name="description" content="Let some HN Chuds read this.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/tackling-complexity/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/tackling-complexity/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Tackling complexity" />
+<meta property="og:description" content="Let some HN Chuds read this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/tackling-complexity/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-04-26T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-04-26T13:53:07+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tackling complexity"/>
+<meta name="twitter:description" content="Let some HN Chuds read this."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Tackling complexity",
+      "item": "https://lngnmn2.github.io/articles/tackling-complexity/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tackling complexity",
+  "name": "Tackling complexity",
+  "description": "Let some HN Chuds read this.",
+  "keywords": [
+    "ADT", "DSL", "composabilty", "Monoid"
+  ],
+  "articleBody": "Some hard problems will never be solved by “brainstorms” (more like bullshit-storms) or any about of babbling by Chuds. They require the trained minds like of C.A.R. Hoare or Leslie Lamport. or Philip Wadler or Martin Odersky – the outliers and top performers.. Ideally, they have to be mathematically mature, and preferably on the compiler side (so they also understand important implementation aspects).\nThe “direction” is actually clear and well-understood (a small miracle), and it is in restricting too general concepts and formalisms with additional constraints (so they actually match the environmental constraints), or just typing.\nThey same principle has been successfully applied (intuitively back then) to restrict way too general The Lambda Calculus (to avoid “paradoxes”), and before that, intuitively again, to restrict too general formalism of the Set Theory to require to specify which Set (a particular number system) we are within.\nWhat is typing? (yes, yes, I know!) Conceptually, it is just “tagging” values with (type) tags, and then using a relation such as “has this particular tag”. This is how to partition the universe of values into non-overlapping partitions (subsets). The early [Common] Lisp guys got it just right back then.\nSince then typing has been understood (at least by some not so bone-headed) not as rigid classifications but as duck-typing or having particular “traits” (or “flawours”) or a set of “attributes”, where these attributes are not just symbols but type-signatures (required interfaces).\nThis is nothing new, most of the mathematical “strictures” (Monoids, Groups) has been defined in this way – by the set of operations. This is what Barbara Liskov specialized for the filed of CS as Abstract Data Types.\nSince then we have generalized this notion into abstract interfaces. and, in Rust, a clear syntactic distinction between abstractions and its actual implementations (the impl blocks).\nThe clear distinction between an abstraction itself (formally defined) and its implementations is most important notion (realization). They must be clearly separated with sort of mental abstraction barrier.\nWe create (properly generalize) so called Concepts of the Mind from repeated observations, then we define mathematical abstractions from concepts of the mind, and study and specify their properties. After that we partition (bucket-sort) these abstractions using relations on common properties into classes and what not.\nThe point is to “stay in mathematics” most of the time and consider representations and implementations as an actual construction.process.\nSo, we just arrived at the principle stated by Leslie Lamport (and some others) that mathematics is how one model the world and formally define the concepts. Lets see how it may work.\nAt the level of modeling (concrete mathematics) its is well-understood that the set-theory can be considered as the foundation of Mathematics – all math could be built from it. The systems of logic show us how to construct valid new theorems based on previously proven results (more about this later).\nAt the level of programming (computing) the Lambda Calculus are the foundation, and everything computable could be computed within this stems (formalism).\nBoth of these are way too general, has to be restricted with at least some typing to be actually useful. So, the questin becomes what is the appropriate typing?\nThe last significant advance was the realization that type-classes and traits (set-uniton and set-intersection and not proper-subsets) are the most fundamental operations, and this it is proper meaning of the “composition over inheritance”. meme.\nThe most recent innovative and successful application of this principle of necessary restrictions and that a type-system has to match reality was the formalization of the behavior of references and box-like imperative variables in Rust.\nWhat is the next step? It seems to me that the concept of a Future or an Event is too general to be actually useful and that a restrictive typing (partitioning) is necessary (and probably will be sufficient) to solve the current fucking horrendous mess.\nI am not the first one to arrive at this, of course. The necessity to develop an adequate mathematical theory and then an algebra and even small specialized calculus is the only way to actually successfully tackle complexity. Leslie Lamport did this with TLA+, Martin Odersky did DOT calculus and now working at algebraic effects based on the notion of a capacity.\nI would argue that to solve concurrency we have to type the events and specilaize way too general futures (and events)into highly specialized partitions, each of which would have its own mini-theory and mini-algebra. The set-theoretic formalism will be good-enough.\nOkay, how? Well, just like everything else – begin with actual reality, with What Is (the way the hardware people are doing).\nThe key is the notion of composabilty, which is as central to mathematics as Set Theory itself - without proper and well-understood function composition there would not be advanced mathematics. The Category theorists got this (and only this) right – they have captured the universal principle of composition (andnesting). Or were it the Group theorists formalizing the too abstract notions of relations and functions?\nAnyway, everything has to compose. This is the ideal. Any model of streams (of events) which does not compose is just wrong.\nHow do we compose? Well, we have to form a Monoid over a composition operation(s). It is that simple. At an implementation side it has to be a Monad (again, nothing new here).\nWhat is the problem then? The problem is that we cannot sort out (bucket-sort) the values, so nothing actually composes due to leaking/exposure of incompatible implementation details which has to be hidden behind an abstraction barrier (which is what a Monad accomplishes).\nCan we do better? Absolutely! This is when the notion of the duck-typing and of compable traits will be useful. We have to form a monad overs composition based on traits, not just a single set of values.\nTraits has to be layered, to form specialized layers of DLSs, and thus achieving vertical partitioning between layers of implementations. Layred DSLs is an old idea. The new idea is that they have to be based on traits, which could be traced back to proper generalizations of the fundamental mathematical notions (which, in turn, properly capture certain aspect of What Is).\nNow what? Well, re-reading the Architecture of Complexity by Symon. There are universal patterns – a hierarchical structures and layered systems everywhere. Another universal pattern which was not mentioned was message passing (as universal as being used everywhere in biology) and the modern notion of the packet-based communication.\nThe central notion, however. is still of an ordered sequence and of a stream. Both of these are (must be) composable by definition.\nIn lazy pure functional languages, like Haskell the only way to ensure (establish) a particular order of evaluation is by explicit nesting of function calls. Function composition is just nesting, both in the implementations of (.) and \u003c\u003c=\u003c\u003c. This is the very beginning of so-called “structured concurrency”.\nYes, we just have to nest function calls so that everything composes. For that we better have Monoids, and to actually from them we need a hierarchy of traits, with a Monoid at each level (over composition operatons).\nWhat is the problem then? Over-generalization of the concepts of a Future or Event. They don’t compose in principle. Partition (specialize) them properly, and everything will suddenly “click”. What an idiotic idea was to lump “timers” and “buffers” together under a single concept, given that we should not have any time whatsoever (it should be just another “interrupt” - a particular kind of an event which cannot be ignored – like the signal of an alarm clock which literally abstracts out the time).\nThe remaining challenge is to come up with proper partitioning of the events, but looks like the hardware people did this thousand times. Their packet-streams compose and so are their sequences.\nLet some HN Chuds read this.\n",
+  "wordCount" : "1303",
+  "inLanguage": "en",
+  "datePublished": "2024-04-26T00:00:00+05:45",
+  "dateModified": "2024-04-26T13:53:07+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/tackling-complexity/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Tackling complexity
+    </h1>
+    <div class="post-description">
+      Let some HN Chuds read this.
+    </div>
+    <div class="post-meta"><span title='2024-04-26 00:00:00 +0545 +0545'>April 26, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Some hard problems will never be solved by &ldquo;brainstorms&rdquo; (more like bullshit-storms) or any about of babbling by Chuds.
+They require the trained minds like of C.A.R. Hoare or Leslie Lamport. or Philip Wadler or Martin Odersky &ndash; the <em>outliers</em> and top performers..
+Ideally, they have to be mathematically mature, and preferably on the compiler side (so they also understand important implementation aspects).</p>
+<p>The &ldquo;direction&rdquo; is actually clear and well-understood (a small miracle), and it is <em>in restricting too general concepts and formalisms with additional constraints</em> (so they actually match the environmental constraints), or just <em>typing</em>.</p>
+<p>They same principle has been successfully applied (<em>intuitively</em> back then) to restrict way too general The Lambda Calculus (to avoid &ldquo;paradoxes&rdquo;), and before that, intuitively again, to restrict too general formalism of the Set Theory to require to specify which Set (a particular number system) we are within.</p>
+<p>What is typing? (yes, yes, I know!) Conceptually, it is just &ldquo;tagging&rdquo; values with (type) tags, and then using a <em>relation</em> such as &ldquo;has this particular tag&rdquo;. This is how to partition the universe of values into non-overlapping partitions (subsets). The early  [Common] Lisp guys got it just right back then.</p>
+<p>Since then typing has been understood (at least by some not so bone-headed) not as rigid classifications but as <em>duck-typing</em> or having particular &ldquo;traits&rdquo; (or &ldquo;flawours&rdquo;) or a set of  &ldquo;attributes&rdquo;, where these attributes are not just symbols but <em>type-signatures</em> (required interfaces).</p>
+<p>This is nothing new, most of the mathematical &ldquo;strictures&rdquo; (Monoids, Groups) has been defined in this way &ndash; by the set of operations. This is what Barbara Liskov specialized for the filed of CS as Abstract Data Types.</p>
+<p>Since then we have generalized this notion into <em>abstract interfaces</em>. and, in <code>Rust</code>, a clear syntactic distinction between abstractions and its actual <em>implementations</em> (the <code>impl</code> blocks).</p>
+<p>The clear distinction between an abstraction itself (formally defined) and its <em>implementations</em> is most important notion (realization). They must be clearly separated with sort of mental abstraction barrier.</p>
+<p>We create (properly generalize) so called <em>Concepts of the Mind</em> from repeated observations, then we define mathematical abstractions from concepts of the mind, and study and specify their properties. After that we partition (bucket-sort) these abstractions using relations on common properties into classes and what not.</p>
+<p>The point is to &ldquo;stay in mathematics&rdquo; most of the time and consider representations and implementations as an actual construction.process.</p>
+<p>So, we just arrived at the principle stated by Leslie Lamport (and some others) that mathematics is how one model the world and formally define the concepts. Lets see how it may work.</p>
+<p>At the level of modeling (concrete mathematics) its is well-understood that the set-theory can be considered as the foundation of Mathematics &ndash; all math could be built from it.
+The systems of logic show us how to construct valid <em>new theorems</em> based on previously proven results (more about this later).</p>
+<p>At the level of programming (computing) the Lambda Calculus are the foundation, and everything computable could be computed within this stems (formalism).</p>
+<p>Both of these are way too general, has to be restricted with at least some typing to be actually useful. So, the questin becomes what is the appropriate typing?</p>
+<p>The last significant advance was the realization that type-classes and traits (set-uniton and set-intersection and <em>not proper-subsets</em>) are the most fundamental operations, and this it is proper meaning of the &ldquo;composition over inheritance&rdquo;. meme.</p>
+<p>The most recent innovative and successful application of this principle of necessary restrictions and that a type-system has to match reality was the formalization of the behavior of references and box-like imperative variables in <code>Rust</code>.</p>
+<p>What is the next step? It seems to me that the concept of a <code>Future</code> or an <code>Event</code> is too general to be actually useful and that a restrictive typing (partitioning) is necessary (and probably will be sufficient) to solve the current fucking horrendous mess.</p>
+<p>I am not the first one to arrive at this, of course. The necessity to develop an adequate mathematical theory and then an algebra and even small specialized calculus is the only way to actually successfully  tackle complexity. Leslie Lamport did this with TLA+, Martin Odersky did DOT calculus and now working at algebraic effects based on the notion of a capacity.</p>
+<p>I would argue that to solve concurrency we have to type the events and specilaize way too general futures (and events)into highly specialized partitions, each of which would have its own mini-theory and mini-algebra. The set-theoretic formalism will be good-enough.</p>
+<p>Okay, how? Well, just like everything else &ndash; begin with actual reality, with <em>What Is</em> (the way the hardware people are doing).</p>
+<p>The key is the notion of composabilty, which is as central to mathematics as Set Theory itself - without proper and well-understood function composition there would not be advanced mathematics. The Category theorists got this (and only this) right &ndash; they have captured the universal principle of composition (andnesting). Or were it the Group theorists formalizing the too abstract notions of relations and functions?</p>
+<p>Anyway, <em>everything has to compose</em>. This is the ideal. Any model of streams (of events) which does not compose is just wrong.</p>
+<p>How do we compose? Well, we have to form a <em>Monoid</em> over a composition operation(s). It is that simple. At an implementation side it has to be a <em>Monad</em> (again, nothing new here).</p>
+<p>What is the problem then? The problem is that we cannot sort out (bucket-sort) the values, so nothing actually composes due to leaking/exposure of incompatible implementation details which has to be hidden behind an abstraction barrier (which is what a Monad accomplishes).</p>
+<p>Can we do better? Absolutely! This is when the notion of the <em>duck-typing</em> and of compable <em>traits</em> will be useful. We have to <em>form a monad overs composition based on traits</em>, not just a single set of values.</p>
+<p>Traits has to be layered, to form  specialized layers of DLSs, and thus achieving vertical partitioning between layers of implementations. Layred DSLs is an old idea. The new idea is that they have to be based on traits, which could be traced back to proper generalizations of the fundamental mathematical notions (which, in turn, properly capture certain aspect of <em>What Is</em>).</p>
+<p>Now what? Well, re-reading the Architecture of Complexity by Symon. There are universal patterns &ndash; a hierarchical structures and layered systems everywhere. Another universal pattern which was not mentioned was <em>message passing</em> (as universal as being used everywhere in biology) and the modern notion of the packet-based communication.</p>
+<p>The central notion, however. is still of an ordered sequence and of a stream. Both of these are (must be) composable by definition.</p>
+<p>In lazy pure functional languages, like Haskell the only way to ensure (establish) a particular order of evaluation is by explicit nesting of function calls. Function composition is just nesting, both in the implementations of <code>(.)</code> and <code>&lt;&lt;=&lt;&lt;</code>. This is the very beginning of so-called &ldquo;structured concurrency&rdquo;.</p>
+<p>Yes, we just have to nest function calls so that everything composes. For that we better have Monoids, and to actually from them we need a hierarchy of traits, with a Monoid at each level (over composition operatons).</p>
+<p>What is the problem then? Over-generalization of the concepts of a Future or Event. They don&rsquo;t compose in principle. Partition (specialize) them properly, and everything will suddenly &ldquo;click&rdquo;. What an idiotic idea was to lump &ldquo;timers&rdquo; and &ldquo;buffers&rdquo; together under a single concept, given that we should not have any time whatsoever (it should be just another &ldquo;interrupt&rdquo; - a particular kind of an event which cannot be ignored &ndash; like the signal of an alarm clock which literally abstracts out the time).</p>
+<p>The remaining challenge is to come up with proper partitioning of the events, but looks like the hardware people did this thousand times. Their packet-streams compose and so are their sequences.</p>
+<p>Let some HN Chuds read this.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/composabilty/">Composabilty</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/monoid/">Monoid</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
