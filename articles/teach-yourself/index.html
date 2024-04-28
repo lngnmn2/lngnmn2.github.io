@@ -71,7 +71,7 @@ font-family: 'Source Code Pro', monospace;
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lngnmn2.github.io/articles/teach-yourself/" /><meta property="article:section" content="articles" />
 <meta property="article:published_time" content="2024-04-28T00:00:00+05:45" />
-<meta property="article:modified_time" content="2024-04-28T09:24:13+05:45" />
+<meta property="article:modified_time" content="2024-04-28T11:18:28+05:45" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Teach Yourself programming like Peter Norvig"/>
@@ -108,11 +108,11 @@ font-family: 'Source Code Pro', monospace;
   "keywords": [
     "emacs", "ADT", "embedded", "DSL"
   ],
-  "articleBody": "There are already several websites which publish a “roadmap” of how to teach yourself programming (University keve) using freely available courses and textbooks.\nHere is my 2 cents.\nFirst of all, SICP is an advanced textbook. It is by no means suited for teaching freshmans, unless you are a MIT student, who is math-lover and a “slow thinker”.\nBrian Harvey, the great, managed to teach the CS61A at Berkeley – a SICP-based course which goes at a slow pace. He gave exceptional, state-of-the-art lectures, along with printed lecture notes. This is the only good start.\nThe other exceptionally good courses are:\nBrian Harvey’s lecture notes andComputer Science 61A - Fall 2009 Video archive Eric Grimson’s the last Scheme course at MIT. (can’t find the videos on a redesigned opencourseware) Systematic Program Design by Gregor Kiczales (absolutely a “must have”) Dan Grossman’s “Programming Languages” (on his home page) Norvig’s “poker” course (on Youtube) and his pytudes (on Github) OCaml Programming: Correct + Efficient + Beautiful (including YouTube videos) Composing Programs – modern CS61a textbook, which continues the tradition. and John DeNero’s Lectures on YouTube (he is the author of the online textbook) and, of course, the Wizard lectures. Cambridge “Advanced Functional programming” (lecture notes only) Scheme based courses There are some “problems” with Scheme based coursers. While the Scheme culture at MIT is absolutely wonderful and unique, it takes some understanding to see some shortcomings.\nlack of emphasis on modules and separated units of compilation (CLU and B.Liskov emphasized this) types are described loosely – one has to be very attentive to understand the domain and range for each Scheme procedure. not teaching structs, which are fundamental (yes, yes, a heterogeneous list is an ultimate struct) no Algebraic data types (no ML-like sum-types, sorry) basically, they do not teach techniques for “programming at large” (can’t fit in one’s head, lots of people) the 3110 Ocaml course does. In short, the ML-family languages are more strict (statically typed, homogeneous aggregates) and “more” modular.\nAnyway, Scheme is based on the Lambda Calculus, and this is all you need.\n((lambda (x) (* x x)) 2) ;; let is a lambda with an in-place invocation (let ((x 2)) (+ x 1)) ((lambda (x) (+ 1 x)) 2) ;; unary identity ((lambda (x) x) (lambda x x)) ;; list ((lambda x x) 1 2 3 4) Scheme is strongly-typed, but the types are implicit and usually very generic (due to built-in pairs and lists and the proper Numeric Tower).\nSo, the books (SICP) teaches generalized advanced concepts but uses a language with almost no types.\nThe point is that after some fist Scheme course one has to take an ML course. Nowadays the Cornell CS 3110 is absolutely the best.\n",
-  "wordCount" : "454",
+  "articleBody": "There are already several websites which publish a “roadmap” of how to teach yourself programming (University keve) using freely available courses and textbooks.\nHere is my 2 cents.\nFirst of all, SICP is an advanced textbook. It is by no means suited for teaching freshmans, unless you are a MIT student, who is math-lover and a “slow thinker”.\nBrian Harvey, the great, managed to teach the CS61A at Berkeley – a SICP-based course which goes at a slow pace. He gave exceptional, state-of-the-art lectures, along with printed lecture notes. This is the only good start.\nSecond, OOP is nothing special’ and definitely not “the best way to program”. Whole OOP (so to speak) has been implemented in CommonLisp and later Ocaml just as embedded DSL without any special language suppost. Yes, Smalltalk is cool, but the thing about Smalltalk is message-passing between objects and uniformity (everything is an object in single hierarchy), not OOP per se.\nSo, know more than one paradigm and understand the Whys and the underlying principles (which is the mos important understanding)\nThe other exceptionally good courses are:\nBrian Harvey’s lecture notes andComputer Science 61A - Fall 2009 Video archive Eric Grimson’s the last Scheme course at MIT. (can’t find the videos on a redesigned opencourseware) Systematic Program Design by Gregor Kiczales (absolutely a “must have”) Dan Grossman’s “Programming Languages” (on his home page) Norvig’s “poker” course (on Youtube) and his pytudes (on Github) OCaml Programming: Correct + Efficient + Beautiful (including YouTube videos) Composing Programs – modern CS61a textbook, which continues the tradition. and John DeNero’s Lectures on YouTube (he is the author of the online textbook) and, of course, the Wizard lectures. Cambridge “Advanced Functional programming” (lecture notes only) Scheme based courses There are some “problems” with Scheme based coursers. While the Scheme culture at MIT is absolutely wonderful and unique, it takes some understanding to see some shortcomings.\nlack of emphasis on modules and separated units of compilation (CLU and B.Liskov emphasized this) types are described loosely – one has to be very attentive to understand the domain and range for each Scheme procedure. not teaching structs, which are fundamental (yes, yes, a heterogeneous list is an ultimate struct) no Algebraic data types (no ML-like sum-types, sorry) basically, they do not teach techniques for “programming at large” (can’t fit in one’s head, lots of people) the 3110 Ocaml course does. In short, the ML-family languages are more strict (statically typed, homogeneous aggregates) and “more” modular.\nAnyway, Scheme is based on the Lambda Calculus, and this is all you need.\n((lambda (x) (* x x)) 2) ;; bindings (define is a special form) (define square (lambda (x) (* x x))) ;; let is a special form and ;; conceptually it is just a lambda with an in-place invocation (let ((x 2)) (+ x 1)) ((lambda (x) (+ 1 x)) 2) ;; unary identity ((lambda (x) x) (lambda x x)) ;; list ((lambda x x) 1 2 3 4) ;; special forms ;; notice how let and cond sytax are similar in shape ;; recursion (define map (lambda (f xs) (cond ((null? xs) '()) (else (cons (f (car xs)) (map f (cdr xs))))))) Scheme is strongly-typed, but the types are implicit and usually very generic (due to built-in pairs and lists and the proper Numeric Tower).\nSo, the books (SICP) teaches generalized advanced concepts but uses a language with almost no types (and almost no syntax, which is good).\nThe point is that after some fist Scheme course one has to take an ML course. Nowadays the Cornell CS 3110 is absolutely the best.\nAt Berkeley they rewrote the classic Brian Harvey’s CS61A in Python with a new textbook. It is on par with 3110, but it is Python.\n",
+  "wordCount" : "624",
   "inLanguage": "en",
   "datePublished": "2024-04-28T00:00:00+05:45",
-  "dateModified": "2024-04-28T09:24:13+05:45",
+  "dateModified": "2024-04-28T11:18:28+05:45",
   "author":[{
     "@type": "Person",
     "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
@@ -200,6 +200,8 @@ font-family: 'Source Code Pro', monospace;
 <p>Here is my 2 cents.</p>
 <p>First of all, <code>SICP</code> is an <em>advanced</em> textbook. It is by no means suited for teaching freshmans, unless you are a MIT student, who is math-lover and a &ldquo;slow thinker&rdquo;.</p>
 <p>Brian Harvey, the great, managed to teach the <em>CS61A</em> at Berkeley &ndash; a SICP-based course which goes at a slow pace. He gave exceptional, state-of-the-art lectures, along with printed lecture notes. This is the <em>only</em> good start.</p>
+<p>Second, OOP is <em>nothing special</em>&rsquo; and definitely not &ldquo;the best way to program&rdquo;. Whole OOP (so to speak) has been implemented in CommonLisp and later Ocaml  just as <em>embedded DSL</em> without any special language suppost. Yes, Smalltalk is cool, but <em>the thing</em> about Smalltalk is message-passing between objects and uniformity (everything is an object in single hierarchy), not OOP per se.</p>
+<p>So, know more than one paradigm and understand <em>the Whys</em> and the underlying principles (which is the mos important understanding)</p>
 <p>The other exceptionally good courses are:</p>
 <ul>
 <li><a href="https://people.eecs.berkeley.edu/~bh/61a-pages/Volume2/notes.pdf">Brian Harvey&rsquo;s lecture notes</a> and<a href="https://archive.org/details/ucberkeley_webcast_itunesu_354818254">Computer Science 61A - Fall 2009 Video archive</a></li>
@@ -226,7 +228,11 @@ and John DeNero&rsquo;s <a href="https://www.youtube.com/@JohnDeNero/playlists">
 <p>Anyway, <code>Scheme</code> is based on the Lambda Calculus, and this is all you need.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scheme" data-lang="scheme"><span style="display:flex;"><span>((<span style="color:#66d9ef">lambda </span>(<span style="color:#a6e22e">x</span>) (* x x)) <span style="color:#ae81ff">2</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">;; let is a lambda with an in-place invocation</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; bindings (define is a special form)</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define </span>square (<span style="color:#66d9ef">lambda </span>(<span style="color:#a6e22e">x</span>) (* x x)))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; let is a special form and</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; conceptually it is just a lambda with an in-place invocation</span>
 </span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">let </span>((<span style="color:#a6e22e">x</span> <span style="color:#ae81ff">2</span>)) (+ x <span style="color:#ae81ff">1</span>))
 </span></span><span style="display:flex;"><span>((<span style="color:#66d9ef">lambda </span>(<span style="color:#a6e22e">x</span>) (+ <span style="color:#ae81ff">1</span> x)) <span style="color:#ae81ff">2</span>)
 </span></span><span style="display:flex;"><span>
@@ -235,9 +241,18 @@ and John DeNero&rsquo;s <a href="https://www.youtube.com/@JohnDeNero/playlists">
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">;; list</span>
 </span></span><span style="display:flex;"><span>((<span style="color:#66d9ef">lambda </span>x x) <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; special forms</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; notice how let and cond sytax are similar in shape</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; recursion</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">define </span>map (<span style="color:#66d9ef">lambda </span>(<span style="color:#a6e22e">f</span> xs)
+</span></span><span style="display:flex;"><span>              (<span style="color:#66d9ef">cond </span>((null? xs) <span style="color:#f92672">&#39;</span>())
+</span></span><span style="display:flex;"><span>                    (<span style="color:#66d9ef">else </span>(cons (<span style="color:#a6e22e">f</span> (car xs)) (map f (cdr xs)))))))
 </span></span></code></pre></div><p>Scheme is <em>strongly-typed</em>,  but the types are <em>implicit</em> and usually very generic (due to built-in pairs and lists and the proper <em>Numeric Tower</em>).</p>
-<p>So, the books (SICP) teaches generalized <em>advanced concepts</em> but uses a language with almost no types.</p>
+<p>So, the books (SICP) teaches generalized <em>advanced concepts</em> but uses a language with almost no types (and almost no syntax, which is good).</p>
 <p>The point is that after some fist Scheme course one has to take an ML course. Nowadays the Cornell CS 3110 is absolutely the best.</p>
+<p>At Berkeley they rewrote the classic Brian Harvey&rsquo;s CS61A in Python with a new textbook. It is on par with 3110, but it is Python.</p>
 
 
   </div>
