@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Teach Yourself programming like Peter Norvig | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, ADT, embedded, DSL">
+<meta name="description" content="Classy principle-guided online learning.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/teach-yourself/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/teach-yourself/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Teach Yourself programming like Peter Norvig" />
+<meta property="og:description" content="Classy principle-guided online learning." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/teach-yourself/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-04-28T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-04-28T09:24:13+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Teach Yourself programming like Peter Norvig"/>
+<meta name="twitter:description" content="Classy principle-guided online learning."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Teach Yourself programming like Peter Norvig",
+      "item": "https://lngnmn2.github.io/articles/teach-yourself/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Teach Yourself programming like Peter Norvig",
+  "name": "Teach Yourself programming like Peter Norvig",
+  "description": "Classy principle-guided online learning.",
+  "keywords": [
+    "emacs", "ADT", "embedded", "DSL"
+  ],
+  "articleBody": "There are already several websites which publish a “roadmap” of how to teach yourself programming (University keve) using freely available courses and textbooks.\nHere is my 2 cents.\nFirst of all, SICP is an advanced textbook. It is by no means suited for teaching freshmans, unless you are a MIT student, who is math-lover and a “slow thinker”.\nBrian Harvey, the great, managed to teach the CS61A at Berkeley – a SICP-based course which goes at a slow pace. He gave exceptional, state-of-the-art lectures, along with printed lecture notes. This is the only good start.\nThe other exceptionally good courses are:\nBrian Harvey’s lecture notes andComputer Science 61A - Fall 2009 Video archive Eric Grimson’s the last Scheme course at MIT. (can’t find the videos on a redesigned opencourseware) Systematic Program Design by Gregor Kiczales (absolutely a “must have”) Dan Grossman’s “Programming Languages” (on his home page) Norvig’s “poker” course (on Youtube) and his pytudes (on Github) OCaml Programming: Correct + Efficient + Beautiful (including YouTube videos) Composing Programs – modern CS61a textbook, which continues the tradition. and John DeNero’s Lectures on YouTube (he is the author of the online textbook) and, of course, the Wizard lectures. Cambridge “Advanced Functional programming” (lecture notes only) Scheme based courses There are some “problems” with Scheme based coursers. While the Scheme culture at MIT is absolutely wonderful and unique, it takes some understanding to see some shortcomings.\nlack of emphasis on modules and separated units of compilation (CLU and B.Liskov emphasized this) types are described loosely – one has to be very attentive to understand the domain and range for each Scheme procedure. not teaching structs, which are fundamental (yes, yes, a heterogeneous list is an ultimate struct) no Algebraic data types (no ML-like sum-types, sorry) basically, they do not teach techniques for “programming at large” (can’t fit in one’s head, lots of people) the 3110 Ocaml course does. In short, the ML-family languages are more strict (statically typed, homogeneous aggregates) and “more” modular.\nAnyway, Scheme is based on the Lambda Calculus, and this is all you need.\n((lambda (x) (* x x)) 2) ;; let is a lambda with an in-place invocation (let ((x 2)) (+ x 1)) ((lambda (x) (+ 1 x)) 2) ;; unary identity ((lambda (x) x) (lambda x x)) ;; list ((lambda x x) 1 2 3 4) Scheme is strongly-typed, but the types are implicit and usually very generic (due to built-in pairs and lists and the proper Numeric Tower).\nSo, the books (SICP) teaches generalized advanced concepts but uses a language with almost no types.\nThe point is that after some fist Scheme course one has to take an ML course. Nowadays the Cornell CS 3110 is absolutely the best.\n",
+  "wordCount" : "454",
+  "inLanguage": "en",
+  "datePublished": "2024-04-28T00:00:00+05:45",
+  "dateModified": "2024-04-28T09:24:13+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/teach-yourself/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Teach Yourself programming like Peter Norvig
+    </h1>
+    <div class="post-description">
+      Classy principle-guided online learning.
+    </div>
+    <div class="post-meta"><span title='2024-04-28 00:00:00 +0545 +0545'>April 28, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There are already several websites which publish a &ldquo;roadmap&rdquo; of how to teach yourself programming (University keve) using freely available courses and textbooks.</p>
+<p>Here is my 2 cents.</p>
+<p>First of all, <code>SICP</code> is an <em>advanced</em> textbook. It is by no means suited for teaching freshmans, unless you are a MIT student, who is math-lover and a &ldquo;slow thinker&rdquo;.</p>
+<p>Brian Harvey, the great, managed to teach the <em>CS61A</em> at Berkeley &ndash; a SICP-based course which goes at a slow pace. He gave exceptional, state-of-the-art lectures, along with printed lecture notes. This is the <em>only</em> good start.</p>
+<p>The other exceptionally good courses are:</p>
+<ul>
+<li><a href="https://people.eecs.berkeley.edu/~bh/61a-pages/Volume2/notes.pdf">Brian Harvey&rsquo;s lecture notes</a> and<a href="https://archive.org/details/ucberkeley_webcast_itunesu_354818254">Computer Science 61A - Fall 2009 Video archive</a></li>
+<li>Eric Grimson&rsquo;s the last Scheme course at MIT. (can&rsquo;t find the videos on a redesigned opencourseware)</li>
+<li><a href="https://www.youtube.com/channel/UC7dEjIUwSxSNcW4PqNRQW8w">Systematic Program Design</a> by Gregor Kiczales (absolutely a &ldquo;must have&rdquo;)</li>
+<li>Dan Grossman&rsquo;s &ldquo;Programming Languages&rdquo; (on his home page)</li>
+<li>Norvig&rsquo;s &ldquo;poker&rdquo; course (on Youtube) and his <code>pytudes</code>  (on Github)</li>
+<li><a href="https://cs3110.github.io/textbook/cover.html">OCaml Programming: Correct + Efficient + Beautiful</a> (including YouTube videos)</li>
+<li><a href="https://www.composingprograms.com/">Composing Programs</a> &ndash; modern CS61a textbook, which <em>continues the tradition</em>.
+and John DeNero&rsquo;s <a href="https://www.youtube.com/@JohnDeNero/playlists">Lectures on YouTube</a> (he is the author of the online textbook)</li>
+<li>and, of course, the Wizard lectures.</li>
+<li>Cambridge &ldquo;Advanced Functional programming&rdquo; (lecture notes only)</li>
+</ul>
+<h2 id="scheme-based-courses">Scheme based courses<a hidden class="anchor" aria-hidden="true" href="#scheme-based-courses">#</a></h2>
+<p>There are some &ldquo;problems&rdquo; with Scheme based coursers. While the Scheme culture at MIT is absolutely wonderful and unique, it takes some understanding to see some shortcomings.</p>
+<ul>
+<li>lack of emphasis on modules and separated units of compilation (CLU and B.Liskov emphasized this)</li>
+<li>types are described loosely &ndash; one has to be very attentive to understand the <em>domain</em> and <em>range</em> for each Scheme procedure.</li>
+<li>not teaching <em>structs</em>, which are fundamental (yes, yes, a heterogeneous list is <em>an ultimate struct</em>)</li>
+<li>no <em>Algebraic data types</em> (no ML-like sum-types, sorry)</li>
+<li>basically, they do not teach techniques for &ldquo;programming at large&rdquo; (can&rsquo;t fit in one&rsquo;s head, lots of people)  the 3110 Ocaml course does.</li>
+</ul>
+<p>In short, the ML-family languages are more strict (statically typed, homogeneous aggregates) and &ldquo;more&rdquo; modular.</p>
+<p>Anyway, <code>Scheme</code> is based on the Lambda Calculus, and this is all you need.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scheme" data-lang="scheme"><span style="display:flex;"><span>((<span style="color:#66d9ef">lambda </span>(<span style="color:#a6e22e">x</span>) (* x x)) <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; let is a lambda with an in-place invocation</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">let </span>((<span style="color:#a6e22e">x</span> <span style="color:#ae81ff">2</span>)) (+ x <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>((<span style="color:#66d9ef">lambda </span>(<span style="color:#a6e22e">x</span>) (+ <span style="color:#ae81ff">1</span> x)) <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; unary identity</span>
+</span></span><span style="display:flex;"><span>((<span style="color:#66d9ef">lambda </span>(<span style="color:#a6e22e">x</span>) x) (<span style="color:#66d9ef">lambda </span>x x))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">;; list</span>
+</span></span><span style="display:flex;"><span>((<span style="color:#66d9ef">lambda </span>x x) <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span>)
+</span></span></code></pre></div><p>Scheme is <em>strongly-typed</em>,  but the types are <em>implicit</em> and usually very generic (due to built-in pairs and lists and the proper <em>Numeric Tower</em>).</p>
+<p>So, the books (SICP) teaches generalized <em>advanced concepts</em> but uses a language with almost no types.</p>
+<p>The point is that after some fist Scheme course one has to take an ML course. Nowadays the Cornell CS 3110 is absolutely the best.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">Emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded/">Embedded</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
