@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Die Hard | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, DSL">
+<meta name="description" content="Another writing for HN Chuddies">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/die-hard/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/die-hard/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Die Hard" />
+<meta property="og:description" content="Another writing for HN Chuddies" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/die-hard/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-04-30T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-04-30T15:13:41+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Die Hard"/>
+<meta name="twitter:description" content="Another writing for HN Chuddies"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Die Hard",
+      "item": "https://lngnmn2.github.io/articles/die-hard/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Die Hard",
+  "name": "Die Hard",
+  "description": "Another writing for HN Chuddies",
+  "keywords": [
+    "ADT", "DSL"
+  ],
+  "articleBody": "Lets talk about something really hard. There are at least 3 whole asynchronous, concurrent “full stacks” on top of the Java Runtime written in Scala (which compiles to the JVM bytecode and its standard library is a wrapper around Java’s).\nThe first one, arguably the most widely used. is the Twitter’s platform. Then comes Lightbend (formerly Typesafe), and then stack upon which Spark has been built.\nThe most amazing thing is that vastly complex codebases, like Twitter “it just works”. Not just that, but everything has been open-sourced and the development continues open to literally everyone to see or even participate. Simply amazing. Here is why.\nA JVM implementation, like OpenJDK is an imperative multi-threaded application written in crappy C++ (only recently migrated to the C++11 standard). It runs as an ordinary user-space multithreaded process under an OS.\nThe process is Just-in-time compiler for the Java bytecode (into optimized machine code) which also runs the compiled code and carries (implements) the runtime system (usually called the “Java Runtime”).\nThis runtime library uses almost no services provided by an OS, except low-level memory management (including atomics and fences) and basic low-level I/O. It re-implements everything, starting from basic buffers and even files, in Java.\nThis is already a recipe for a disaster – relying on a complex C++ codebase which delegates almost nothing and tries to do literally everything.\nWhy does this work? The answer is - layers upon layers of proper abstraction barriers and a static type-discipline, which establishes so-called memory-safety.\nThe Java platform (JDK) provides APIs and services, including asynchronous tasks, thread-pools and “excuters”, which runs tasks on a bunch of actual POSIX threads (which all have shared stack and memory segments within the same single JVM process). Just imagine – everything within a single multithreaded user-level process that shares memory.\nAt the first layer Scala translates everything to calls to the Java Runtime, including the most basic things like Buffered I/O.\nThen, using Java APIs, Scala implements the Futures API. Twitter has its own API and implementation for Futures, so does Lightbend. They even have their own mini-runtimes which actually run the Futures on that very same thread poll which JRE provides.\nThe main difference is that Scala’s standard library and Akka (which is a set of libraries too) uses the “Actor Model” for their Futures, while Twitter ones are “actor-less”. This is the basis of a “concurrency stack” – lots and lots of layers of libraries, all based on Futures for implementing async I/O.\nHere is the first take-home message and an a-ha moment – the thesis that Scala is an advanced mostly-functional language designed especially for writing libraries full of layered advanced abstractions and related embedded DSLs is not just buzzwords and marketing-speak, it actually works with the most sophisticated codebases humanity ever produced. Twitter is huge and runs 24/7.\nAnother, even more important message, is that this is NOT because of Java or JVM (it is actually despite Java!) but due to the fundamental principles of proper abstraction and stable abstract interfaces, applied in each of these advanced Scala libraries.\nIt started with Scala, which was a principle-guided academic effort to fix Java, which was and (still is) a fucking abomination, “designed” by an unqualified and uneducated, just like PHP or Ethereum.\nIt is not that Java is any good, it is that applied fundamental Principles, proper academic knowledge and a strict discipline and formality finally won. Scala just comes from a much better tradition and a resulting culture. Nothing could be compared to these actual results (accomplishments) – Rust and especially fucking Kotlin are nothing butfucking jokes.\nThis is only beginning of the story. These layers of advanced libraries are all asynchronous (and concurrent), which means that the actual workflows are non-sequential. Nevertyheless, the underlying libraries has been built with the principle of composition (composability), using combinators like flatMap and almost everything is a proper asynchronous stream, so everything composes. and actually works.\nNow it is time to take a look at the APIs and to become instantly overwhelmed by the amount of nesting and underlying details.\nAgain, all this is possible to understand and to maintain only because of the underlying principles of proper, non-leaking abstractions and abstraction barriers made out of abstract interfaces – sort of penetrable partitions or cell-membranes – the same underlying universal principle.\n“Horizontal” (orthogonal libraries) and “vertical” (layers of functional DSLs) partitioning is the central aspect of making complex systems that actually work.\nThe die-hard part is the complexity of these stacks. To even approach them is to realize that how they has been built. The most amazing part is that the early Twitter team started with Ruby (or something) and then just switched to Scala without being experts having any previous experience with the language, and yet, just by being principled and disciplined they wrote their own stack and then a whole platform.\nThis is how to program and the non-bullshit die hard vibes. I wish I were there. Again, the message is that this is the real programming, perhaps second only to Carmack himself.\n",
+  "wordCount" : "848",
+  "inLanguage": "en",
+  "datePublished": "2024-04-30T00:00:00+05:45",
+  "dateModified": "2024-04-30T15:13:41+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/die-hard/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Die Hard
+    </h1>
+    <div class="post-description">
+      Another writing for HN Chuddies
+    </div>
+    <div class="post-meta"><span title='2024-04-30 00:00:00 +0545 +0545'>April 30, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Lets talk about something really hard. There are at least 3 whole <em>asynchronous, concurrent</em> &ldquo;full stacks&rdquo; on top of the Java Runtime written in Scala (which compiles to the JVM bytecode and its standard library is a wrapper around Java&rsquo;s).</p>
+<p>The first one, arguably the most widely used. is the Twitter&rsquo;s platform. Then comes Lightbend (formerly Typesafe), and then stack upon which Spark has been built.</p>
+<p>The most amazing thing is that vastly complex codebases, like Twitter &ldquo;it just works&rdquo;. Not just that, but <em>everything</em> has been open-sourced and the development continues open to literally everyone to see or even participate. Simply amazing. Here is why.</p>
+<p>A JVM implementation, like <code>OpenJDK</code> is an imperative multi-threaded application written in crappy C++ (only recently migrated to the C++11 standard). It runs as an ordinary user-space multithreaded process under an OS.</p>
+<p>The process is Just-in-time compiler for the Java bytecode (into optimized machine code) which also runs the compiled code and carries (implements) the runtime system (usually called the &ldquo;Java Runtime&rdquo;).</p>
+<p>This runtime library uses almost no services provided by an OS, except low-level memory management (including atomics and fences) and basic low-level I/O. It re-implements everything, starting from basic buffers and even files, in Java.</p>
+<p>This is already a recipe for a disaster &ndash; relying on a complex C++ codebase which delegates almost nothing and tries to do literally everything.</p>
+<p>Why does this work? The answer is - layers upon layers of proper <em>abstraction barriers</em> and a static type-discipline, which establishes so-called memory-safety.</p>
+<p>The Java platform (JDK) provides APIs and services, including asynchronous tasks, thread-pools and &ldquo;excuters&rdquo;, which runs tasks on a bunch of actual POSIX threads (which all have shared stack and memory segments within the same single JVM process). Just imagine &ndash; everything within a single multithreaded user-level process that shares memory.</p>
+<p>At the first layer Scala translates  everything to calls to the Java Runtime, including the most basic things like <em>Buffered</em> I/O.</p>
+<p>Then, using Java APIs, Scala implements the Futures API. Twitter has its own API and implementation for Futures, so does Lightbend. They even have their own mini-runtimes which actually run the Futures on that very same thread poll which JRE provides.</p>
+<p>The main difference is that Scala&rsquo;s standard library and Akka (which is a set of libraries too) uses the &ldquo;Actor Model&rdquo; for their Futures, while Twitter ones are &ldquo;actor-less&rdquo;. This is the basis of a &ldquo;concurrency stack&rdquo; &ndash; lots and lots of <em>layers</em> of libraries, all based on Futures for implementing async I/O.</p>
+<p>Here is the first take-home message and an a-ha moment &ndash; the thesis that Scala is an advanced mostly-functional language designed especially for writing libraries full of layered advanced abstractions and related embedded DSLs is not just buzzwords and marketing-speak, it actually works with the most sophisticated codebases humanity ever produced. Twitter is huge and runs 24/7.</p>
+<p>Another, even more important message, is that this is NOT because of Java or JVM (it is actually <em>despite Java</em>!) but due to the fundamental principles of proper abstraction and stable abstract interfaces, applied in each of these advanced Scala libraries.</p>
+<p>It started with Scala, which was a <em>principle-guided</em> academic effort to fix Java, which was and (still is) a fucking abomination, &ldquo;designed&rdquo; by an <em>unqualified</em> and uneducated, just like PHP or Ethereum.</p>
+<p>It is not that Java is any good, it is that applied fundamental Principles, proper academic knowledge and a strict discipline and formality finally won. Scala just comes from a much better <em>tradition</em> and a resulting culture. Nothing could be compared to these actual results (accomplishments) &ndash; Rust and especially fucking Kotlin are nothing butfucking jokes.</p>
+<p>This is only beginning of the story. These layers of advanced libraries are all asynchronous (and concurrent), which means that the actual workflows are non-sequential. Nevertyheless, the underlying libraries has been built with the principle of <em>composition</em> (composability),  using combinators like <code>flatMap</code> and almost everything is a proper asynchronous stream, so everything composes. and actually works.</p>
+<p>Now it is time to take a look at the APIs and to become instantly <em>overwhelmed</em> by the amount of nesting and underlying details.</p>
+<p>Again, all this is possible to understand and to maintain only because of the underlying principles of proper, non-leaking abstractions and abstraction barriers made out of abstract interfaces &ndash; sort of penetrable partitions or cell-membranes &ndash; the same underlying universal principle.</p>
+<p>&ldquo;Horizontal&rdquo; (orthogonal libraries) and &ldquo;vertical&rdquo; (layers of functional DSLs) partitioning is the central aspect of making complex systems that actually work.</p>
+<p>The <em>die-hard</em> part is the complexity of these stacks. To even approach them is to realize that how they has been built. The most amazing part is that the early Twitter team started with Ruby (or something) and then just switched to Scala without being  experts having any previous experience with the language, and yet, just by being principled and disciplined they wrote their own stack and then a whole platform.</p>
+<p>This is how to program and the non-bullshit <em>die hard</em> vibes. I wish I were there. Again, the message is that <em>this</em> is the real programming, perhaps second only to Carmack himself.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
