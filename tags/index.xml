@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Apr 2024 15:13:41 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2024 08:23:31 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ADT</title>
@@ -16,10 +16,24 @@
       <description></description>
     </item>
     <item>
+      <title>Composition</title>
+      <link>https://lngnmn2.github.io/tags/composition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/composition/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>DSL</title>
       <link>https://lngnmn2.github.io/tags/dsl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/dsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monoid</title>
+      <link>https://lngnmn2.github.io/tags/monoid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/monoid/</guid>
       <description></description>
     </item>
     <item>
@@ -41,13 +55,6 @@
       <link>https://lngnmn2.github.io/tags/composabilty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/composabilty/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Monoid</title>
-      <link>https://lngnmn2.github.io/tags/monoid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lngnmn2.github.io/tags/monoid/</guid>
       <description></description>
     </item>
     <item>

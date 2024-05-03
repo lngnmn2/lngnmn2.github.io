@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>How to program | Notes from the digital underground by Lngnmn</title>
-<meta name="keywords" content="ADT, embedded, DSL">
+<meta name="keywords" content="ADT, DSL, composition, Monoid">
 <meta name="description" content="oops, I did it again.">
 <meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/how-to-program/">
@@ -71,7 +71,7 @@ font-family: 'Source Code Pro', monospace;
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lngnmn2.github.io/articles/how-to-program/" /><meta property="article:section" content="articles" />
 <meta property="article:published_time" content="2024-04-28T00:00:00+05:45" />
-<meta property="article:modified_time" content="2024-04-28T20:58:17+05:45" />
+<meta property="article:modified_time" content="2024-05-03T08:23:31+05:45" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to program"/>
@@ -106,13 +106,13 @@ font-family: 'Source Code Pro', monospace;
   "name": "How to program",
   "description": "oops, I did it again.",
   "keywords": [
-    "ADT", "embedded", "DSL"
+    "ADT", "DSL", "composition", "Monoid"
   ],
   "articleBody": "The great programmers of the past, who wrote the fortran numeric libraries, lets say, drew flow-charts for every procedure they are about to write. This gave them the right intuitions and the right feeling about what they do.\nAt the level of expressions you have just (only) recuring 3 patterns - it will be either a sequence, a conditional (branching) or a loop (recursion), so when they begin to write the code, they were never confused – it has to be one of these.\nMuch later FP people begin to realize that “universal” pattern-matching (everywhere) is a proper generalization. Erlang championed this approach in making implicit pattern everywhere. SML (before Erlang) decomposed functions into individual clauses and also used pattern-matching for its formal parameters. Unlike Erlang they had implicit currying, which is absolutely the way only way to properly conceptualize a multi-argument function.\nThen someone noticed, that certain expressions (pattern-matching and function clauses) mimic (follow) the shape of the data-type. There is an one-to-one correspondence (an isomorphism) between a sum-type and corresponding matching expression for it. This was the first cue turned into a heuristic.\nThe product types do not display such fine structural patterns, but at teast in theory, a product type and a sum-type (of the same number of elements) are duals to each other. This was another cue.\nA curried function, with multiple arrows coming into it, is on a arrows-between-dots diagram would look like a “join” (an elimination of a “fork” somewhere). The Category theorists were onto something.\nNow lets state it at an intuitive level. There are 3 fundamental results, which are just a different “views” onto the same “mountain”. There results being abstract are way more real and serious compared to some P vs NP bullshit. So,\nThe Set theory has been shown to be used to construct the foundations of mathematics. It has been shown that functions alone can be used to compute any computable expression. The Curry-Howard isomorphism states that a simplification of a proof and reduction of an expression are the same process, defined by exactly the same minimal (necessary and sufficient) set of rules. Formalizaition of the notion of a function (with arrow diagrams) reduces everything to just a few recurring patterns of arrows-between-dots. Ok, now what? Well, there is more, My favorite picture, which I drowe on the wall above my bed with a pensil is this: \\[, | \\rarr ;\\] The meaning is almost obvious – everything is reducible to just these Algebraic Data Types, plus (unfortunately) an imperative sequencing (inside of a Monad, of course).\nHow is this useful? When you are about to write an expression, it has to be just one of these – a product-type (a struct), a sum-type (a variant), a function type (a transition) or some I/O crap, which has to be isolated somehow.\nNotice that this applies to every language, from the Lambda Calculus and up, Some language are just better designed by mathematicians, some are PHPs and Javascripts, or some other bastards of the fucking Algol lineage.\nThis is acually a big deal. At the level of abstract types there are also just 4 recurring patterns, not just that, but the algebraic types can be nested.\nThis is the highest possible persective (compared to a flow-chart view), and yet it is almost quivalently simple. The individual arrows (of actual transitions, of the paths being traced) would be the same.\nAt an implementation level (yes, we have to deal with this too) every product-type has to be a proper non-leaking Abstract Data Type with a stable fomrally-specifiid public interface, (and a protocol, like that of an Iterator, stated formally elsewhere), ideally, in its own module (read the first Barbara Liskov booke).\nType-classes (of Wadler) and traits (of Rust) was the most fundamental discovery in the PL theory in the last 30 yers or so. Just use them and sum-types everywhere.\nThe procedures have to form embedded DLS, wich mans that individual operations (operators of a DSL) has to form /Monoids on the same set (type or a type-class or a trait) so that everything composes nicely (just like in a Octave REPL). The last book of Gerald Jay Sussman is all about this.\nAnd, of course, the abstraction principles (by parameterization and even a limited procedural) are applicable at the type level too, so we would have proper generics (parameteric polymorphism).\nThe take-home message is this: one has to model at an approptiate (just right) level, and to program at the highest level possible. The higest level are Sets and Relations – what caused these arrows-between-dots to emerge. We progam with expressions, but we have to thing with mathematics, and to model the concepts of the problem domain with just sets and relations.\nThen writing the code would be – I shit you not – much easier and the quality will be way higer than it is today for the most coders, who usually have no idea about you what you have just read. . The great programmers of the past were onto something, when they said that “10 lines of fully specified and debugged code per week is a good performance”. All the modeling with sets and relatiins, charting and slow thinking has been included.\n",
   "wordCount" : "875",
   "inLanguage": "en",
   "datePublished": "2024-04-28T00:00:00+05:45",
-  "dateModified": "2024-04-28T20:58:17+05:45",
+  "dateModified": "2024-05-03T08:23:31+05:45",
   "author":[{
     "@type": "Person",
     "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
@@ -231,8 +231,9 @@ The great programmers of the past were onto something, when they said that &ldqu
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
-      <li><a href="https://lngnmn2.github.io/tags/embedded/">Embedded</a></li>
       <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/composition/">Composition</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/monoid/">Monoid</a></li>
     </ul>
   </footer>
 </article>

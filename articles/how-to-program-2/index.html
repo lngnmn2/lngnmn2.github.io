@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How to program II | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, DSL, composition, Monoid">
+<meta name="description" content="oops, I did it again.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/how-to-program-2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/how-to-program-2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="How to program II" />
+<meta property="og:description" content="oops, I did it again." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/how-to-program-2/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-05-03T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-05-03T08:23:17+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to program II"/>
+<meta name="twitter:description" content="oops, I did it again."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How to program II",
+      "item": "https://lngnmn2.github.io/articles/how-to-program-2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to program II",
+  "name": "How to program II",
+  "description": "oops, I did it again.",
+  "keywords": [
+    "ADT", "DSL", "composition", "Monoid"
+  ],
+  "articleBody": "Once one has been exposed to a wrong concepts or just bullshit it is very difficult to unlearn what is “already known” and to see things as they really are.\nEspecially when a necessary abstraction barrier is neglected or not even well-understood and some implementation aspects are mixed arbitrary with definitions of an abstraction itself, and with parts of a supposedly abstract interface, which has to form (establish) the abstraction barrier.\nTo have a proper understanding we have to clearly separate the abstraction, its implementation, and the abstract interface from each other. This is the required (necessary) way of thinking.\nAbstraction is (has to be defined in) just simple mathematics – sets and relations (equivalence, equality,functions). An interface, which is an abstraction barrier, is just names (type-signatures) and corresponding formal specifications (sets of rules). An implementation is a Georges’s problem (just kidding).\nSo, lets begin with abstractions.\n“Lets just compose values based on traits (type-classes) so that all the operators (combinators) form Monoids”. Each such set of operators is an embedded DSL. Lets have layers of these.\nLets have streams (of “packets”) everywhere and compose them like they do in an electrical engineering schematics, but using arrows-between-dots diagrams from Category theory.\nOur steam processing will be just like electronic devices, except that ours are “discrete”, not “analog” under the good. Whew, solved a half of programming.\nHere is how. There are some “universal patterns” out there. The most fundamental one is Something | Nothing (look, ma, a sum-type!)., where “Nothing” can be precisely defined as \\(\\forall x, x + (-x)\\).\nThis abstract notion has a generalization of a “collection of at most one element”. When it is empty it has Nothing in it. The empty set, when considered only as a unique singleton marker usually denotes Nothing in a more general (the most abstract) formalism (no infinite nesting nonsense, please).The cardinality of an empty set is 0, not 1.\nSimilarly, the size of an empty collection (with Nothing in it) is zero. So is the length of an empty list. This is, of course, an identity of addition and an identity element for any combinator.\nThe “size” of a non-empty “collection” is \\(1\\). Just as it is with sets, It does not matter what kind of element it is. It matters only for programmers who deal with implementations and representations.\nSo far so good. Here is another universal patten – Completed | Failed, or Success | Failure, which is NOT just an “error”, but a pair of classes of possible outcomes, one of which requires a backtracking and a restart (with or without adjusting)\nWhen we succeed we usually have got someting, so we parameterize it (yes, the Abstraction by Parameterization principle).\nThere are even Left | Right, which are human-centric notions, and also “naturally” parameterized.\nThe most crucial thing about sum-types (disjoint unions) is that its shape (“length”) defines the shape of a corresponding matching expression –defines the number of distinct clauses, each of which is a separate “path” or most abstractly – a distinct “outgoing arrow”.\nThe second most crucial realization is that values of the same kind (not just of the same shape) can be composed using combinators which conceptually preserve the shape.\nNotice that only one of the two possible pathways can be taken at a time – “can only fell into a single hole” (again, a Universal Notion), so the resulting path (sub-graph) will always be a sequence (*-\u003e*-\u003e*).\nAt the level of a programming language (formal semantics) a whole multi-clause matching expression will be substituted with a single clause (one of many potential outcomes).\nOne more realization – when these operations are nested (composed) the “path” (a sequence of arrows) or an outcome (a “tag” on a value) has already been caused (happend), so it literally cannot be changed, only propagated (moved or passed along).\nThis is how to do applied mathematical modeling properly – always to trace everything back to What Is.\nSo, an “introduction” (a sum-type) is isomorphic to an elimination (a matching expression), the number of possible clauses is the number of possible branches, but only one if them will be actually taken (substituted and evaluated), so the resulting “path” will always be a sequence of steps (no forks). Yes, a Universal Norton.\nOne more time – there is no “railway” out there. They are only potentialities, possible outcomes. The railway metaphor is wrong (not two, not of the same length, but “parallel” only in the sense of having “nothing in common”).\nNesting is how a composition of functions is defined (and implemented). Functions under composition form a Monoid. So should all the combinators of a particular sum-type.\nThese are the underlying properly generalied abstract notions of any kind of stream processing DSLs – the best we can do in principle (this is an old result). The actual state-machines are implementation details and are below this level of abstraction.\nNotice that any implementation of a Monoid or a Monad (as corresponding type-classes or traits) are not even there (at this level). We are using the abstract mathematical notions “themselves”, not their realizations or implementations in terms of some programming language.\nMentioning them (or any aspect of it) is just an error - a violation of an abstraction. A conceptual segfault.\nLets talk about operators (still mathematics). They can be of two distinct forms (shapes).\n\\(\\cdot \\rarr \\cdot\\) (a transformation, a single “step”) \\(\\cdot \\rarr \\cdot \\rarr \\cdot\\) (a binary operator – combines two into one) where the second form is a curried function (which can be partially applied).\nEverything composes perfectly, as in arithmetic, as long as there are Monods.\nBinary operators themselves, however, do not compose with (.) (cannot be nested).\nSo we need to invent “Kleisli arrows” (\\(a \\rarr m a\\)) and then compose these using flatten or join (a dirty hack). The proper way is (\u003c=\u003c).\nYou can think of it an “arrows upwards”, so the whole thing is as artificial as complex Numbers. The same general technique being used.\nThis is because a Kleisli arrow itself is a generalization of crossing an abstract abstraction barrier so to speak. Making a Complex number from a Real number is crossing a mathematical abstraction barrier, and literally adding an imaginary Y-axis (changing a structure).\nBehind (above) that abstraction barrier there are some combinators too, but we cannot use them directly from below. First we have to lift our values up there - pass them through an abstract cell-membrane.\nAnother metaphor for lifting is to attach some abstract “molecule” to a value (another “tag”), so it becomes (a part of) something else and ceases to be what it was before. Wrapping is the right word, because it itself is “unchanged” (remains intact).\nThis is an important distinction – becoming a part of something else (of a compound) versus being transformed or broken apart – these are very different classes of outcomes (and they require an incomparable amounts of energy).\nNo such notions remain in pure mathematics, of course. The lifted value is a member of a different set, so the equality relation is no longer defined, and it is not necessarily remain the same within an aggregate (a tuple or a set).\nNotice how “physical abstraction barriers” are very real and impenetrable. So should be ours (which are merely proper generalizations from What Is).\nSo, this is how we do branching (on a flow chart) properly. We do sequencing with nesting of function calls (function composition), and we are using recursion for looping.\nRecursion is much more general than merely imperative loops, it is a generalization of a spiral-shaped process with “unfolding till a base-case”. Mutual recursion is the way to do state-machines.\nWe will talk about Monads next.\n",
+  "wordCount" : "1288",
+  "inLanguage": "en",
+  "datePublished": "2024-05-03T00:00:00+05:45",
+  "dateModified": "2024-05-03T08:23:17+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/how-to-program-2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      How to program II
+    </h1>
+    <div class="post-description">
+      oops, I did it again.
+    </div>
+    <div class="post-meta"><span title='2024-05-03 00:00:00 +0545 +0545'>May 3, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Once one has been exposed to a wrong concepts or just bullshit it is very difficult to unlearn what is &ldquo;already known&rdquo; and to see things as they really are.</p>
+<p>Especially when a necessary abstraction barrier is neglected or not even well-understood and some implementation aspects are mixed arbitrary with definitions of an abstraction itself, and with parts of a supposedly abstract interface, which has to form (establish) the abstraction barrier.</p>
+<p>To have a proper understanding we have to clearly separate the abstraction, its implementation, and the abstract interface from each other. This is the required (necessary) way of thinking.</p>
+<p>Abstraction is (has to be defined in) just simple <em>mathematics</em> &ndash; sets and relations (equivalence, equality,functions).
+An interface, which is an abstraction barrier, is just <em>names</em> (type-signatures) and corresponding formal specifications (sets of rules).
+An implementation is a Georges&rsquo;s problem (just kidding).</p>
+<p>So, lets begin with abstractions.</p>
+<p>&ldquo;Lets just compose values based on traits (type-classes) so that all the operators (combinators) form Monoids&rdquo;. Each such set of operators is an embedded DSL. Lets have layers of these.</p>
+<p>Lets have <em>streams</em> (of &ldquo;packets&rdquo;) everywhere and compose them like they do in an electrical engineering schematics, but using arrows-between-dots diagrams from Category theory.</p>
+<p>Our <em>steam processing</em> will be just like electronic devices, except that ours are &ldquo;discrete&rdquo;, not &ldquo;analog&rdquo; under the good. Whew, solved a half of programming.</p>
+<p>Here is how. There <em>are</em> some &ldquo;universal patterns&rdquo; out there. The most fundamental one is  <code>Something | Nothing</code> (look, ma, a <em>sum-type</em>!)., where &ldquo;Nothing&rdquo; can be precisely defined as \(\forall x, x + (-x)\).</p>
+<p>This abstract notion has a generalization of a &ldquo;collection of at most one element&rdquo;. When it is empty it has <em>Nothing in it</em>. The empty set, when considered only as a unique singleton <em>marker</em> usually denotes <em>Nothing</em> in a more general (the most abstract) formalism (no <em>infinite nesting</em> nonsense, please).The cardinality of an empty set is 0, not 1.</p>
+<p>Similarly, the size of an empty collection (with Nothing in it) is <em>zero</em>. So is the <em>length of an empty list</em>. This is, of course, an identity of addition and an identity element for any combinator.</p>
+<p>The &ldquo;size&rdquo; of a non-empty &ldquo;collection&rdquo; is \(1\). Just as it is with sets, It does not matter what kind of element it is. It matters only for programmers who deal with implementations and representations.</p>
+<p>So far so good. Here is another universal patten &ndash; <code>Completed | Failed</code>, or <code>Success | Failure</code>, which is NOT just an &ldquo;error&rdquo;, but a pair of classes of possible outcomes, one of which requires a <em>backtracking</em> and a restart (with or without adjusting)</p>
+<p>When we succeed we usually have got someting, so we <em>parameterize</em> it (yes, the <em>Abstraction by Parameterization</em> principle).</p>
+<p>There are even <code>Left | Right</code>, which are human-centric notions, and also &ldquo;naturally&rdquo; parameterized.</p>
+<p>The most crucial thing about <em>sum-types</em> (disjoint unions) is that its <em>shape</em> (&ldquo;length&rdquo;) defines the shape of a corresponding <em>matching expression</em> &ndash;defines the number of distinct <em>clauses</em>, each of which is a separate &ldquo;path&rdquo; or most abstractly &ndash; a distinct &ldquo;outgoing arrow&rdquo;.</p>
+<p>The second most crucial realization is that <em>values of the same kind</em> (not just of the same <em>shape</em>) can be <em>composed</em> using combinators which conceptually <em>preserve the shape</em>.</p>
+<p>Notice that only one of the two possible pathways can be taken at a time &ndash; &ldquo;can only fell into a single hole&rdquo; (again, a Universal Notion), so the resulting <em>path</em> (sub-graph) will always be a sequence (<code>*-&gt;*-&gt;*</code>).</p>
+<p>At the level of a programming language (formal semantics) a whole multi-clause matching expression will be <em>substituted</em> with a single clause (one of many potential outcomes).</p>
+<p>One more realization &ndash; when these operations are <em>nested</em> (composed) the &ldquo;path&rdquo; (a sequence of arrows) or an <em>outcome</em> (a &ldquo;tag&rdquo; on a value) has already been <em>caused</em> (happend), so it literally cannot be changed, only <em>propagated</em> (moved or passed along).</p>
+<p>This is how to do <em>applied</em> mathematical modeling properly &ndash; always to trace everything back to <em>What Is</em>.</p>
+<p>So, an &ldquo;introduction&rdquo; (a sum-type) is isomorphic to an elimination (a matching expression), the number of possible clauses is the number of possible branches, but only one if them will be actually taken (substituted and evaluated), so the resulting &ldquo;path&rdquo; will <em>always</em> be a sequence of steps (no forks). Yes, a Universal Norton.</p>
+<p>One more time &ndash; there is no &ldquo;railway&rdquo; out there. They are only potentialities, possible outcomes. The railway metaphor is wrong (not two, not of the same length, but &ldquo;parallel&rdquo; only in the sense of having &ldquo;nothing in common&rdquo;).</p>
+<p>Nesting is how a composition of functions is <em>defined</em> (and implemented). Functions under composition form a Monoid. So should all the combinators of a particular sum-type.</p>
+<p>These are the underlying properly generalied abstract notions of any kind of stream processing DSLs &ndash; the best we can do in principle (this is an old result). The actual state-machines are implementation details and are below this level of abstraction.</p>
+<p>Notice that any <em>implementation</em> of a Monoid or a Monad (as corresponding type-classes or traits) <em>are not even there (at this level)</em>. We are using the abstract mathematical notions &ldquo;themselves&rdquo;, not their realizations or implementations in terms of some programming language.</p>
+<p>Mentioning them (or any aspect of it) is just an error - a violation of an abstraction. A conceptual <em>segfault</em>.</p>
+<p>Lets talk about operators (still mathematics). They can be of two distinct forms (shapes).</p>
+<ul>
+<li>\(\cdot \rarr \cdot\) (a transformation, a single &ldquo;step&rdquo;)</li>
+<li>\(\cdot \rarr \cdot \rarr \cdot\) (a binary operator &ndash; combines two into one)</li>
+</ul>
+<p>where the second form is a curried function (which can be partially applied).</p>
+<p>Everything composes perfectly, as in arithmetic, as long as there are Monods.</p>
+<p>Binary operators themselves, however, do not compose with <code>(.)</code> (cannot be <em>nested</em>).</p>
+<p>So we need to invent &ldquo;<em>Kleisli arrows</em>&rdquo; (\(a \rarr m a\))  and then compose these using <code>flatten</code> or <code>join</code> (a dirty hack). The proper way is <code>(&lt;=&lt;)</code>.</p>
+<p>You can think of it an &ldquo;arrows upwards&rdquo;, so the whole thing is as artificial as <em>complex Numbers</em>. The same general technique being used.</p>
+<p>This is because a Kleisli arrow itself is a generalization of <em>crossing an abstract abstraction barrier</em>  so to speak. Making a Complex number from a Real number is crossing a mathematical abstraction barrier, and literally adding an <em>imaginary</em> Y-axis (changing a structure).</p>
+<p>Behind (above) that abstraction barrier there are some combinators too, but we cannot use them directly from below. First we have to <em>lift</em> our values up there - pass them <em>through an abstract cell-membrane</em>.</p>
+<p>Another metaphor for <em>lifting</em> is to attach some abstract &ldquo;molecule&rdquo; to a value (another &ldquo;tag&rdquo;), so it becomes (a part of) something else and ceases to be what it was before. <em>Wrapping</em> is the right word, because it itself is &ldquo;unchanged&rdquo; (remains intact).</p>
+<p>This is an important distinction &ndash; becoming a part of something else (of a compound) versus being transformed or broken apart &ndash; these are very different <em>classes of outcomes</em> (and they require an incomparable amounts of energy).</p>
+<p>No such notions remain in pure mathematics, of course. The lifted value is a member of a different set, so the equality relation is no longer defined, and it is not necessarily remain the same within an aggregate (a tuple or a set).</p>
+<p>Notice how &ldquo;physical abstraction barriers&rdquo; are very real and impenetrable. So should be ours (which are merely proper generalizations from <em>What Is</em>).</p>
+<p>So, this is how we do <em>branching</em> (on a <em>flow chart</em>) properly. We do <em>sequencing</em> with nesting of function calls (function composition), and we are using recursion for looping.</p>
+<p>Recursion is much more general than merely imperative loops, it is a generalization of a <em>spiral-shaped</em> process with &ldquo;unfolding till a base-case&rdquo;. <em>Mutual recursion</em> is the way to do <em>state-machines</em>.</p>
+<p>We will talk about <em>Monads</em>  next.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/composition/">Composition</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/monoid/">Monoid</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
