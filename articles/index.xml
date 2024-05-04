@@ -6,8 +6,15 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 May 2024 08:23:31 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2024 16:26:03 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why monads?</title>
+      <link>https://lngnmn2.github.io/articles/why-monads/</link>
+      <pubDate>Sat, 04 May 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/why-monads/</guid>
+      <description>How to program III</description>
+    </item>
     <item>
       <title>How to program II</title>
       <link>https://lngnmn2.github.io/articles/how-to-program-2/</link>

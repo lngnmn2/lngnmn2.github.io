@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Why monads? | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="Functor, Monad, ADT, DSL">
+<meta name="description" content="How to program III">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/why-monads/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/why-monads/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Why monads?" />
+<meta property="og:description" content="How to program III" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/why-monads/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-05-04T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-05-04T16:26:03+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Why monads?"/>
+<meta name="twitter:description" content="How to program III"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Why monads?",
+      "item": "https://lngnmn2.github.io/articles/why-monads/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why monads?",
+  "name": "Why monads?",
+  "description": "How to program III",
+  "keywords": [
+    "Functor", "Monad", "ADT", "DSL"
+  ],
+  "articleBody": "You probably have already read things like “Async computations form a Monad” or something like that. Did you ever ask yourself why would they? Here are the answers for you.\nHave you ever seen that kind of device in some chemical and physics labs – a glass wall, with two holes in it which have a pair of thick gloves attached to them, to reach inside? A person put his hands into these gloves and reach into a contained and sealed compartment (environment) and is able to perform some tasks, like moving and filling things inside.\nThis is essentially how return and map work – by defining and then using only them we establish an impenetrable abstraction barrier - similar, at least in principle, to that “glass wall with gloves”.\nAt the more concrete level of semantics of programming languages,, return “lifts” (transforms) values and map “lifts” ordinary functions (on values) into a given “context” (container). Partially applied map yields a function on whole containers, preserving the structure (whatever it may bee).\nWith map we sort of could reach into that “container” without breaking an abstraction barrier – only map “knows” the implementation details of a container. In modern programming languages we define a map (and flatMap) as methods of a class or parts of an Abstract Data Type.\nMore importantly, since map returns a “whole” of the same kind, calls to map can be chained (composed using nesting), just like any other function composition.\nThere is a “law”, which states that instead of composing maps, we can equivalently compose functions (on elements) to get the same effect. \\[map(g . f) = map g . map f\\]\nSo, in terms of a programming language semantics, we have a proper ADT of higher-order functions. Even further, we generalize even further, to a type-class or a trait.\nWhat we actually do wearing these “gloves”? We compose functions (operators) which are “out there”, behind the abstraction barrier. So they better form Monoids.\nFor that we need a composition DSL. The ordinary (.) – a DSL of just one function which is defined by nesting – would not work with abstraction barriers. Something that uses map and return would.\nThe DSL, which is also a proper ADT (or even a trait or a type-class) has to define composition using nesting. Nesting of functions is the main principle (it establishes a particular order of evaluation).\nThe Lambda Calculus demonstrated that bindings, functions and function composition are enough for everything, so such DSLs shall be good-enough too.\nNotice that, just like it is with pure functional languages (which technically are system of logic) we describe computations declaratively – what shall be done eventually, by some runtime system. We never “see” or scrutinize any actual value, we only declare - when this pattern matches, do this, if that matches, do that, call this pure function and then call that one.\nThis is exactly how we describe what has to be done behind that abstraction barrier – we map this function, and then map that one, and in general, describe what has to be done there, behind the barrier.\nOk, enough metaphors, lets see how.\nSome notions from mathematical theories Ordinary functions (which can be thought off as a particular kinds of relations) can be viewed as a “table” (a set of ordered pairs).\nThe Categorical view is that there is an “arrow” between any two elements (of each pair). Such arrow is a separate conceptual entity.\nAll the arrows together are called a “family” (not a set). There are these diagrams of two bubbles with dots and a bunch arrows between them, you know. This is exactly how it is.\nThese abstract notions allow us to talk about both individual arrows and “the whole” (family). So, they say things like some “objects” \\(x\\) and \\(y\\) and an “arrow” \\(f : x -\u003e y\\) between them.\nThen some abstractions can be defined in terms of individual arrows and their additional required properties.\n\\[\\exist unit_{x} : x \\rarr M x, \\forall x | map f . unit_{x} = unit_{y} . f, \\forall x, y, f : x -\u003e y\\]\nSo in this view, a unit is a family of individual arrows from \\(x\\) to some \\(M x\\), all of them, and join is a bunch of arrows from \\(M(M x)\\) to \\(M x\\) (but not back to \\(x\\)), unit is not a bijection, we just can’t.\nThe fundamental “law” is of map and unit, while join is just a hack.\nBoth unit and map form an abstraction boundary, even in mathematical view, an abstract cell-membrane, so to speak.\nThis is universally an one-way transformation. Once values “went through the membrane”, crossed the abstraction boundary (being “lifted”, or transformed) there is no way back.\nThis is why it is convenient to think of this as a families of arrows, for all xs.\nAt the level of CS, only map knows “what is behind the abstraction barrier”. At an abstract level, it “lifts” (passes through a membrane) functions (“arrows”), and transforms (“maps”) a “whole” into a “whole” by naturally applying it to each \\(x\\) (preserving the structure).\nIn our down to Earth CS view, a new “whole” is being created every time as a result.\nThis is what we need to know about these general abstractions – a Functor and, later, a Monoid.\nThe most important thing is that just this much (only these abstractions) is enough (necessary and sufficient).\nBasically, when they said that all Real numbers are also Complex numbers, it is actually that they can be lifted into another Number System, and that some operations can be lifted there too. (this requires some time to sync in).\nAgain, the point is that only these are enough for everything.\nMathematicians do not talk about abstraction barriers, only we, programmers do. We have to be concerned with actual representations and implementations of these “containers” and functions.\nFor us everything has an implicit particular order (in which it has been written or stored).\nFunctor Conceptually, an \\(f : a \\rarr b\\) is a single arrow. A \\(map f\\) defines a whole family of (all individual) arrows. it is that simple\n\\[map : (x \\rarr y) \\rarr (M x \\rarr M y)\\] Partially applied map yields \\(M x \\rarr M y\\) with the same \\(M\\).\nThe concept of a Functor is defined in terms of the identity function, function composition (as nesting) and the map function, which satisfies the following “laws”, \\[map id = id\\] \\[map (g . f) = map g . map f\\] where \\[id x = x\\] \\[(g . f) x = g(f x)\\]\nNotice that function composition as nesting are “already there”, they are the foundation, indeed.\nAt the actual programming languages level partially applied map takes a single arrow and transforms it into all the arrows between two sets so to speak.\na-\u003e b into a b *-\u003e * *-\u003e * *-\u003e * It “maps” whole sets into whole sets (using that function f on elements).\nSo, a functor is a generalization, an operator on “arrows” \\(M a \\rarr M b\\).\nMathematicians do not specify what kind if M is this, only that this is the same M. We would say that the whole mathematical structure is being preserved.\nPartially applying f \u003e :t map map :: (a -\u003e b) -\u003e [a] -\u003e [b] \u003e :t map id map id :: [b] -\u003e [b] it takes a whole (set, list) and returns a subset (another list)\nAt the level of PL mapping of id over a list will produce a copy (a new list with the same elements).\nPartially applying “the whole set” \u003e map' xs f = [f x | x \u003c- xs] \u003e map' [] (+1) [] \u003e map' [1,2,3] (+1) [2,3,4] \u003e :t map' [1,2,3] map' [1,2,3] :: Num t =\u003e (t -\u003e a) -\u003e [a] it just need a single arrow to yield a transformed whole set\nA closure is parameterized by a function on elements but returns a set.\nClauses A structure of a function is Isomorphic to the structure (shape) of a sum-type. \\[[] | a : [a]\\]\nmap [] f = [] map [x:xs] f = f x : xs Abstraction barrier map is the only one who “indeed..” the shape (actual implementation) so there is an abstraction barrier (as an abstract interface).\nConceptually, it “lifts” a given function’s f on elements into a given “context”. And transforms the whole “structure” (with it) preserving the shape.\nList, on the CS level, is what Set is on the more general level of abstract algebra.\n\\(map g . map f\\) – this is exactly how “chaining of wholes” works.\nMonads An abstract operator M on types together with an ADT (a triple of functions) \\[unit : x \\rarr M x\\] \\[map : (x \\rarr y) \\rarr (M x \\rarr M y)\\] \\[join : M (M x) \\rarr M x\\]\nAgain, for Lists, which have representation and implementation\nunit x = [x] map f xs = [f x | x \u003c- xs] copy xs = [x | x \u003c- xs] join xss = [x | xs \u003c- xss, x \u003c- xs] -- flatten Theoretically, unit and join are so called “natural transformations”, and are viewed as families of arrows. There is “laws” about them too: \\[join \\cdot unit = id\\] \\[join \\cdot map unit = id\\] There is a subtlety here: map and join take “the wholes” as their arguments, so map unit has to be applied to some M x and will return a M (M x), which, when “joined” will be the same M a again.\nThere are more “laws”. They are not arbitrary – laws are necessary parts of proper definitions. They are such that constraints on behaviors (specification) of the functions.\nNotice that each “law” is define using at lest two (or all 3) of the functions. Those are required relations (invariants) between functions.\nSet comprehensions A Set-comprehension is a generalized syntax for the abstract mathematical notion of such that. This means some relation is “true”. These relations are called qualifiers, and could be nested (the order matters).\nA set-comprehension defines a subset (a partition)of a set given implicitly in the context.\nNesting of qualifiers is just nesting of functions. Qualifiers are predicates (relations expressed as).\nList comprehensions (a specialization) Programmers have List-comprehensions, a specialization with a concrete implementation.\nIn general a comprehension has the form [t | q] where \\(t\\) is a term and \\(q\\) is a qualifier.\nA qualifier is either\nempty (id) a generator x \u003c- u where \\(x\\) is a variable and \\(u\\) is a listvalued term a composition (nesting) of qualifiers p, q \u003e map' f xs = [ f x | x \u003c- xs ] \u003e map' (+1) [] [] \u003e map' (+1) [1,2,3] [2,3,4] \u003e :t map' map' :: (t -\u003e a) -\u003e [t] -\u003e [a] \u003e :t map' (+1) map' (+1) :: Num a =\u003e [a] -\u003e [a] So, here the result of applying map is equivalent to selecting all the elements\nIn a pseudo-code\nmap(\\x -\u003e t) u = [t | x \u003c- u] In pseudo-haskell map id xs = [x | x \u003c- xs] = xs\n\u003e [x | x \u003c- [1,2,3]] [1,2,3] \u003e map id [1,2,3] [1,2,3] map (g . f) = map g . map f\n\u003e map (^2) (map (+1) [1,2,3]) [4,9,16] \u003e map ((^2) . (+1)) [1,2,3] [4,9,16] map s can be nested, but the argument must be a list of list\n\u003e map (map (+1)) [[1,2,3]] [[2,3,4]] This is WHY join (or flatten) is a part of the ADT. We get rid of the unnecessary and redundant structural nesting using the clever hack with individual arrows going through to “an one level down”.\n\u003e join [[1,2,3]] [1,2,3] \u003e :t join join :: Monad m =\u003e m (m a) -\u003e m a And, of course, the famous flatMap is just a composition of join with a partially applied map.\nPartially applied to a function f which uses return to lift the result “back into the context” of M, so the result will be that nested M (M a) structure (which is isomorphic to M a).\nIt is that simple.\nHave to show this TODO: \u003e\u003e= and desugaring of the do-notation defined as nested lambdas\nWhere? Haskell, with do-notation F# Scala 3, with for-comprehension and actual thunks, in libraries such as cats Ocaml (rudimentary) Rust (has to be a bunch of traits with lots of inlines) ",
+  "wordCount" : "2080",
+  "inLanguage": "en",
+  "datePublished": "2024-05-04T00:00:00+05:45",
+  "dateModified": "2024-05-04T16:26:03+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/why-monads/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Why monads?
+    </h1>
+    <div class="post-description">
+      How to program III
+    </div>
+    <div class="post-meta"><span title='2024-05-04 00:00:00 +0545 +0545'>May 4, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>You probably have already read things like &ldquo;Async computations form a Monad&rdquo; or something like that. Did you ever ask yourself <em>why</em> would they? Here are the answers for you.</p>
+<p>Have you ever seen that kind of device in some chemical and physics labs &ndash; a glass wall, with two holes in it which have a pair of thick gloves attached to them, to reach inside?
+A person put his hands into these gloves and reach into a contained and sealed compartment (environment) and is able to perform some tasks, like moving and filling things inside.</p>
+<p>This is essentially how <code>return</code> and <code>map</code> work &ndash; by defining and then using only them we establish an impenetrable abstraction barrier - similar, at least in principle, to that &ldquo;glass wall with gloves&rdquo;.</p>
+<p>At the more concrete level of semantics of programming languages,, <code>return</code> &ldquo;lifts&rdquo; (transforms) values and <code>map</code> &ldquo;lifts&rdquo; ordinary functions (on values) into a given &ldquo;context&rdquo; (container).
+Partially applied <code>map</code> yields a <em>function on whole containers</em>, preserving the structure (whatever it may bee).</p>
+<p>With <code>map</code> we sort of could reach into that &ldquo;container&rdquo; without breaking an abstraction barrier &ndash; only <code>map</code> &ldquo;knows&rdquo; the implementation details of a container. In modern programming languages we define a <code>map</code> (and <code>flatMap</code>) as methods of a class or parts of an Abstract Data Type.</p>
+<p>More importantly, since <code>map</code> returns a &ldquo;whole&rdquo; <em>of the same kind</em>, calls to <code>map</code> can be chained (composed using <em>nesting</em>), just like any other <em>function composition</em>.</p>
+<p>There is a &ldquo;law&rdquo;, which states that instead of composing maps, we can <em>equivalently</em> compose functions (on elements) to get the same effect.
+\[map(g . f) = map g . map f\]</p>
+<p>So, in terms of a programming language semantics, we have a proper ADT of <em>higher-order functions</em>. Even further, we generalize even further, to a <em>type-class</em> or a <em>trait</em>.</p>
+<p>What we actually do wearing these &ldquo;gloves&rdquo;? We <em>compose functions (operators) which are &ldquo;out there&rdquo;, behind the abstraction barrier</em>. So they better form Monoids.</p>
+<p>For that we need a <em>composition DSL</em>. The ordinary <code>(.)</code> &ndash; a DSL of just one function which is defined by <em>nesting</em> &ndash; would not work with abstraction barriers. Something that uses <code>map</code> and <code>return</code> would.</p>
+<p>The DSL, which is also a proper ADT (or even a trait or a type-class) has to define <em>composition using nesting</em>. Nesting of functions is the main principle (it establishes a particular order of evaluation).</p>
+<p>The Lambda Calculus demonstrated that <em>bindings, functions and function composition</em> are enough for everything, so such DSLs shall be good-enough too.</p>
+<p>Notice that, just like it is with pure functional languages (which technically are system of logic) we describe computations declaratively &ndash; what shall be done <em>eventually</em>, by some <em>runtime system</em>. We never &ldquo;see&rdquo; or scrutinize any actual value, we only declare - <em>when this pattern matches, do this, if that matches, do that, call this pure function and then call that one</em>.</p>
+<p>This is exactly how we describe what has to be done behind that abstraction barrier &ndash; we <code>map</code> this function, and then <code>map</code> that one, and in general, describe what has to be done <em>there, behind the barrier</em>.</p>
+<p>Ok, enough metaphors, lets see <em>how</em>.</p>
+<h2 id="some-notions-from-mathematical-theories">Some notions from mathematical theories<a hidden class="anchor" aria-hidden="true" href="#some-notions-from-mathematical-theories">#</a></h2>
+<p>Ordinary functions (which can be thought off as a particular kinds of relations) can be viewed as a &ldquo;table&rdquo; (a set of ordered pairs).</p>
+<p>The Categorical view is that there is an &ldquo;arrow&rdquo; between any two elements (of each pair). Such arrow is a separate conceptual entity.</p>
+<p>All the arrows together are called a &ldquo;family&rdquo; (not a set). There are these diagrams of two bubbles with dots and a bunch arrows between them, you know. This is exactly how <em>it is</em>.</p>
+<p>These abstract notions allow us to talk about both <em>individual arrows</em> and &ldquo;the whole&rdquo; (family).
+So, they say things like some &ldquo;objects&rdquo; \(x\) and \(y\) and an &ldquo;arrow&rdquo; \(f : x -&gt; y\) between them.</p>
+<p>Then some abstractions can be defined in terms of individual arrows and their additional <em>required properties</em>.</p>
+<p>\[\exist unit_{x} : x \rarr M x, \forall x | map f . unit_{x} = unit_{y} . f, \forall x, y, f : x -&gt; y\]</p>
+<p>So in this view, a <code>unit</code> is a <em>family of individual arrows</em> from \(x\) to some \(M x\), <em>all of them</em>,
+and <code>join</code> is a bunch of arrows from \(M(M x)\) to \(M x\) (but not back to \(x\)), <code>unit</code> is not a <em>bijection</em>, we just can&rsquo;t.</p>
+<p>The fundamental &ldquo;law&rdquo; is of <code>map</code> and <code>unit</code>, while <code>join</code> is just a hack.</p>
+<p>Both <code>unit</code> and <code>map</code> form an <em>abstraction boundary</em>, even in mathematical view, an abstract cell-membrane, so to speak.</p>
+<p>This is universally an <em>one-way transformation</em>. Once values &ldquo;went through the membrane&rdquo;, crossed the abstraction boundary (being &ldquo;lifted&rdquo;, or transformed) <em>there is no way back</em>.</p>
+<p>This is why it is convenient to think of this as a families of arrows, for all <code>xs</code>.</p>
+<p>At the level of CS, only <code>map</code> knows &ldquo;what is behind the abstraction barrier&rdquo;.
+At an abstract level, it &ldquo;lifts&rdquo; (passes through a membrane) functions (&ldquo;arrows&rdquo;),
+and transforms (&ldquo;maps&rdquo;) a &ldquo;whole&rdquo; into a &ldquo;whole&rdquo; by naturally applying it to each \(x\) (preserving the structure).</p>
+<p>In our down to Earth CS view, a new &ldquo;whole&rdquo; is being created every time as a result.</p>
+<p>This is what we need to know about these general abstractions &ndash; a Functor and, later, a Monoid.</p>
+<p>The most important thing is that just this much (only these abstractions) is enough (necessary and sufficient).</p>
+<p>Basically, when they said that all Real numbers are also Complex numbers, it is actually that they can be lifted into another Number System, and that <em>some operations</em> can be lifted there too. (this requires some time to sync in).</p>
+<p>Again, the point is that only these are enough for everything.</p>
+<p>Mathematicians do not talk about abstraction barriers, only we, programmers do. We have to be concerned with actual <em>representations and implementations</em> of these &ldquo;containers&rdquo; and functions.</p>
+<p>For us everything has an implicit particular order (in which it has been written or stored).</p>
+<h2 id="functor">Functor<a hidden class="anchor" aria-hidden="true" href="#functor">#</a></h2>
+<p>Conceptually, an \(f : a \rarr b\) is a <em>single arrow</em>. A \(map f\) defines <em>a whole family of (all individual) arrows</em>.
+it is that simple</p>
+<p>\[map : (x \rarr y) \rarr (M x \rarr M y)\]
+Partially applied <code>map</code> yields \(M x \rarr M y\) with the same \(M\).</p>
+<p>The concept of a <em>Functor</em> is defined in terms of the identity function, function composition (as nesting) and the <code>map</code> function, which satisfies the following &ldquo;laws&rdquo;,
+\[map id = id\]
+\[map (g . f) = map g . map f\]
+where
+\[id x = x\]
+\[(g . f) x = g(f x)\]</p>
+<p>Notice that <em>function composition as nesting</em> are &ldquo;already there&rdquo;, they are the foundation, indeed.</p>
+<p>At the actual programming languages level
+<em>partially applied</em> <code>map</code> takes a single arrow and transforms it into <em>all the arrows between two sets</em> so to speak.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>a-&gt; b into
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a     b
+</span></span><span style="display:flex;"><span>*-&gt; *
+</span></span><span style="display:flex;"><span>*-&gt; *
+</span></span><span style="display:flex;"><span>*-&gt; *
+</span></span></code></pre></div><p>It &ldquo;maps&rdquo; whole sets into whole sets (using that function <code>f</code> on elements).</p>
+<p>So, a functor is a generalization, an operator on &ldquo;arrows&rdquo; \(M a \rarr M b\).</p>
+<p>Mathematicians do not specify what kind if <code>M</code> is this, only that <em>this is the same M</em>.
+We would say that the whole <em>mathematical structure</em> is being preserved.</p>
+<h3 id="partially-applying-f">Partially applying <code>f</code><a hidden class="anchor" aria-hidden="true" href="#partially-applying-f">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">:</span>t map
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map</span> <span style="color:#f92672">::</span> (a <span style="color:#f92672">-&gt;</span> b) <span style="color:#f92672">-&gt;</span> [a] <span style="color:#f92672">-&gt;</span> [b]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">:</span>t map id
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map</span> id <span style="color:#f92672">::</span> [b] <span style="color:#f92672">-&gt;</span> [b]
+</span></span></code></pre></div><p>it takes a whole (set, list) and returns a subset (another list)</p>
+<p>At the level of PL mapping of <code>id</code> over a list will produce a <em>copy</em> (a new list with the same elements).</p>
+<h3 id="partially-applying-the-whole-set">Partially applying &ldquo;the whole set&rdquo;<a hidden class="anchor" aria-hidden="true" href="#partially-applying-the-whole-set">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map&#39; xs f <span style="color:#f92672">=</span> [f x <span style="color:#f92672">|</span> x <span style="color:#f92672">&lt;-</span> xs]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map&#39; <span style="color:#66d9ef">[]</span> (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map&#39; [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>] (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">:</span>t map&#39; [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map&#39;</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>] <span style="color:#f92672">::</span> <span style="color:#66d9ef">Num</span> t <span style="color:#f92672">=&gt;</span> (t <span style="color:#f92672">-&gt;</span> a) <span style="color:#f92672">-&gt;</span> [a]
+</span></span></code></pre></div><p>it just need a <em>single arrow</em> to yield a transformed <em>whole set</em></p>
+<p>A <em>closure</em> is parameterized by a function on elements but returns a set.</p>
+<h3 id="clauses">Clauses<a hidden class="anchor" aria-hidden="true" href="#clauses">#</a></h3>
+<p>A structure of a function is <em>Isomorphic</em> to the structure (shape) of a <em>sum-type</em>.
+\[[] | a : [a]\]</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">map</span> <span style="color:#66d9ef">[]</span> f <span style="color:#f92672">=</span> <span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map</span> [x<span style="color:#66d9ef">:</span>xs] f <span style="color:#f92672">=</span> f x <span style="color:#66d9ef">:</span> xs
+</span></span></code></pre></div><h3 id="abstraction-barrier">Abstraction barrier<a hidden class="anchor" aria-hidden="true" href="#abstraction-barrier">#</a></h3>
+<p><code>map</code> is the only one who &ldquo;indeed..&rdquo; the shape (actual implementation)
+so there is an <em>abstraction barrier</em> (as an <em>abstract interface</em>).</p>
+<p>Conceptually, it &ldquo;lifts&rdquo; a given function&rsquo;s <code>f</code> <em>on elements</em> into a given &ldquo;context&rdquo;.
+And transforms the whole &ldquo;structure&rdquo; (with it) <em>preserving the shape</em>.</p>
+<p><code>List</code>, on the CS level, is what <code>Set</code> is on the more general level of abstract algebra.</p>
+<p>\(map g . map f\) &ndash; this is exactly how &ldquo;chaining of wholes&rdquo; works.</p>
+<h2 id="monads">Monads<a hidden class="anchor" aria-hidden="true" href="#monads">#</a></h2>
+<p>An abstract operator <code>M</code> <em>on types</em> together with an ADT (a triple of functions)
+\[unit : x \rarr M x\]
+\[map : (x \rarr y) \rarr (M x \rarr M y)\]
+\[join : M (M x) \rarr M x\]</p>
+<p>Again, for Lists, which have representation and implementation</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">unit</span> x <span style="color:#f92672">=</span> [x]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map</span> f xs <span style="color:#f92672">=</span> [f x <span style="color:#f92672">|</span> x <span style="color:#f92672">&lt;-</span> xs]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">copy</span> xs <span style="color:#f92672">=</span> [x <span style="color:#f92672">|</span> x <span style="color:#f92672">&lt;-</span> xs]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">join</span> xss <span style="color:#f92672">=</span> [x <span style="color:#f92672">|</span> xs <span style="color:#f92672">&lt;-</span> xss, x <span style="color:#f92672">&lt;-</span> xs] <span style="color:#75715e">-- flatten</span>
+</span></span></code></pre></div><p>Theoretically, <code>unit</code> and <code>join</code> are so called &ldquo;natural transformations&rdquo;, and are viewed as families of arrows. There is &ldquo;laws&rdquo; about them too:
+\[join \cdot unit = id\]
+\[join \cdot map unit = id\]
+There is a <em>subtlety</em> here: <code>map</code> and <code>join</code> take &ldquo;the wholes&rdquo; as their arguments, so <code>map unit</code> has to be applied to some <code>M x</code> and will return a <code>M (M x)</code>, which, when &ldquo;joined&rdquo; will be the same  <code>M a</code> again.</p>
+<p>There are more &ldquo;laws&rdquo;. They are not arbitrary &ndash; laws are <em>necessary parts of proper definitions</em>.
+They are <em>such that</em> constraints on behaviors (specification) of the functions.</p>
+<p>Notice that each &ldquo;law&rdquo; is define using at lest two (or all 3) of the functions.
+Those are required <em>relations (invariants) between functions</em>.</p>
+<h2 id="set-comprehensions">Set comprehensions<a hidden class="anchor" aria-hidden="true" href="#set-comprehensions">#</a></h2>
+<p>A Set-comprehension is a generalized syntax for the abstract mathematical notion of <em>such that</em>.
+This means some <em>relation</em> is &ldquo;true&rdquo;. These relations are called <em>qualifiers</em>, and could be nested (the order matters).</p>
+<p>A set-comprehension defines a subset (a partition)of a set given implicitly in the context.</p>
+<p>Nesting of qualifiers is just nesting of functions.
+Qualifiers are predicates (relations expressed as).</p>
+<h2 id="list-comprehensions--a-specialization">List comprehensions (a specialization)<a hidden class="anchor" aria-hidden="true" href="#list-comprehensions--a-specialization">#</a></h2>
+<p>Programmers have <em>List-comprehensions</em>, a specialization with a concrete implementation.</p>
+<p>In general a comprehension has the form <code>[t | q]</code> where \(t\) is a term and \(q\) is a <em>qualifier</em>.</p>
+<p>A <em>qualifier</em> is either</p>
+<ul>
+<li>empty (id)</li>
+<li>a <em>generator</em> <code>x &lt;- u</code> where \(x\) is a variable and \(u\) is a listvalued term</li>
+<li>a <em>composition (nesting)</em> of qualifiers <code>p, q</code></li>
+</ul>
+<!--listend-->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map&#39; f xs <span style="color:#f92672">=</span> [ f x <span style="color:#f92672">|</span> x <span style="color:#f92672">&lt;-</span> xs ]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map&#39; (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map&#39; (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">:</span>t map&#39;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map&#39;</span> <span style="color:#f92672">::</span> (t <span style="color:#f92672">-&gt;</span> a) <span style="color:#f92672">-&gt;</span> [t] <span style="color:#f92672">-&gt;</span> [a]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">:</span>t map&#39; (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map&#39;</span> (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">::</span> <span style="color:#66d9ef">Num</span> a <span style="color:#f92672">=&gt;</span> [a] <span style="color:#f92672">-&gt;</span> [a]
+</span></span></code></pre></div><p>So, here the result of applying map is equivalent to selecting all the elements</p>
+<p>In a pseudo-code</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>map(\x -&gt; t) u = [t | x &lt;- u]
+</span></span></code></pre></div><p>In <em>pseudo-haskell</em>
+<code>map id xs = [x | x &lt;- xs] = xs</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> [x <span style="color:#f92672">|</span> x <span style="color:#f92672">&lt;-</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]]
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map id [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span></code></pre></div><p><code>map (g . f) = map g . map f</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map (<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>) (map (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">16</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map ((<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">.</span> (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)) [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">16</span>]
+</span></span></code></pre></div><p><code>map</code> s can be <em>nested</em>, but the argument must be a <em>list of list</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> map (map (<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)) [[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]]
+</span></span><span style="display:flex;"><span>[[<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]]
+</span></span></code></pre></div><p>This is <em>WHY</em> <code>join</code> (or <code>flatten</code>) is a part of the ADT. We <em>get rid of the unnecessary and redundant structural nesting</em> using the clever hack with <em>individual arrows</em> going through to &ldquo;an one level down&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> join [[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]]
+</span></span><span style="display:flex;"><span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">:</span>t join
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">join</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Monad</span> m <span style="color:#f92672">=&gt;</span> m (m a) <span style="color:#f92672">-&gt;</span> m a
+</span></span></code></pre></div><p>And, of course, the famous <code>flatMap</code> is just a composition of <code>join</code> with a <em>partially applied</em> <code>map</code>.</p>
+<p>Partially applied to a function <code>f</code> which uses <code>return</code> to <em>lift</em> the result &ldquo;back into the context&rdquo; of <code>M</code>, so the result will be that <em>nested</em> <code>M (M a)</code> structure (which is <em>isomorphic</em> to <code>M a</code>).</p>
+<p>It is that simple.</p>
+<h2 id="have-to-show-this">Have to show this<a hidden class="anchor" aria-hidden="true" href="#have-to-show-this">#</a></h2>
+<p>TODO: <code>&gt;&gt;=</code> and desugaring of the <em>do-notation</em> defined as <em>nested lambdas</em></p>
+<h2 id="where">Where?<a hidden class="anchor" aria-hidden="true" href="#where">#</a></h2>
+<ul>
+<li>Haskell, with <em>do-notation</em></li>
+<li>F#</li>
+<li>Scala 3, with <em>for-comprehension</em> and actual <em>thunks</em>, in libraries such as <code>cats</code></li>
+<li>Ocaml (rudimentary)</li>
+<li>Rust (has to be a bunch of <em>traits</em> with lots of <em>inlines</em>)</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/functor/">Functor</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/monad/">Monad</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Haskell on Notes from the digital underground by Lngnmn</title>
+    <link>https://lngnmn2.github.io/categories/haskell/</link>
+    <description>Recent content in Haskell on Notes from the digital underground by Lngnmn</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 May 2024 16:26:03 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/categories/haskell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why monads?</title>
+      <link>https://lngnmn2.github.io/articles/why-monads/</link>
+      <pubDate>Sat, 04 May 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/why-monads/</guid>
+      <description>How to program III</description>
+    </item>
+  </channel>
+</rss>

@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 May 2024 08:23:31 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2024 16:26:03 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -18,6 +18,13 @@ I wrote a bunch of articles by an organ in the first person.
 https://schiptsov.github.io/
 That scene from Rocky movie Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:
 ..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.</description>
+    </item>
+    <item>
+      <title>Why monads?</title>
+      <link>https://lngnmn2.github.io/articles/why-monads/</link>
+      <pubDate>Sat, 04 May 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/why-monads/</guid>
+      <description>How to program III</description>
     </item>
     <item>
       <title>How to program II</title>
