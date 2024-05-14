@@ -6,20 +6,27 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 May 2024 08:08:41 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2024 16:01:12 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Haskell</title>
-      <link>https://lngnmn2.github.io/categories/haskell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lngnmn2.github.io/categories/haskell/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Programming</title>
       <link>https://lngnmn2.github.io/categories/programming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://lngnmn2.github.io/categories/rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/categories/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Haskell</title>
+      <link>https://lngnmn2.github.io/categories/haskell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/categories/haskell/</guid>
       <description></description>
     </item>
     <item>
@@ -146,13 +153,6 @@
       <link>https://lngnmn2.github.io/categories/remote/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/categories/remote/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust</title>
-      <link>https://lngnmn2.github.io/categories/rust/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lngnmn2.github.io/categories/rust/</guid>
       <description></description>
     </item>
     <item>

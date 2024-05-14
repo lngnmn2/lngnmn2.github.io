@@ -6,8 +6,15 @@
     <description>Recent content in ADT on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 May 2024 08:08:41 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2024 16:01:12 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/adt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On complexity</title>
+      <link>https://lngnmn2.github.io/articles/complexity/</link>
+      <pubDate>Tue, 14 May 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/complexity/</guid>
+      <description>DDD, TDD and the rest of em.</description>
+    </item>
     <item>
       <title>Why monads?</title>
       <link>https://lngnmn2.github.io/articles/why-monads/</link>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>On complexity | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, DSL">
+<meta name="description" content="DDD, TDD and the rest of em.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/complexity/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/complexity/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="On complexity" />
+<meta property="og:description" content="DDD, TDD and the rest of em." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/complexity/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-05-14T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-05-14T16:01:12+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="On complexity"/>
+<meta name="twitter:description" content="DDD, TDD and the rest of em."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "On complexity",
+      "item": "https://lngnmn2.github.io/articles/complexity/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "On complexity",
+  "name": "On complexity",
+  "description": "DDD, TDD and the rest of em.",
+  "keywords": [
+    "ADT", "DSL"
+  ],
+  "articleBody": "Trying to understand complex social systems was my favorite timepass. I went through Eastern philosophy and religions. algorithmic trading, Informix system administration and functional programming. of course. I am a FreeBSD and Gentoo addict too. I almost always compile my stuff from sources (so I know all the dependencies by heart).\nIn particular, Eastern Philosophy (the Early Upanishads and Early Buddhism) helped me to sort out what the current AI tools can achieve and what they cannot do in principle (and I showed why). This is my major achievement so far.\nJust like it is with a food - we better have to know everything - the sourcing, the processing, the packaging or the nuances of cooking. With software it is even much harder to do and the social system is even more fraudulent, similar to blockchain and shitcoins, where there are nothing but self-impostors, low-effort crap and plain scams .\nLots of guys are simply uneducated and unqualified (hello, vitaliks) but nevertheless they are way over-confident and produce a low effort (without much thinking) lowest quality imperative spaghetti (and even books), without bothering with underlying theories (developed and refined for decades by way brighter people) and even with a proper education – they just pile up (commit and push) more and more crap.\nSo, ideally, lets stay, I absolutely want trait-based libraries, with a minimum dependencies, each of which just do one thing and do it well (just right). This is, by the way, how one should organize one’s own projects – a bunch of composable small libraries, which, ideally, are used to build hierarchies (layers) of embedded DSLs. A properly designed DSL, like that of the Octave, has Monoids everywhere (because the domain does).\n“Just right” have lots of meanings at each level. At the highest level I want traits (Wadler’s type-classes), proper Algebraic Data Types, and above all – “no-unsafe” (#![forbid(unsafe_code)]), which “proves” that the authors actually did their homeworks. Or just to write Haskell (no one pays for it).\nOn the other hand, at the highest level, I absolutely want to adhere to the Barbara Liskov’s principles, of having proper non-leaking abstractions, proper ADTs and therefore stable abstract interfaces, with multiple implementations, which implies gradual improvements and even “mature” (without a “pre”) optimizations. Very few programmers understand that this is the essence of serious programming. The Substitution Principle is also important, of course.\nAll the actually working vastly complex software (like Google Chrome) has been built around stable “abstract” interfaces and protocols, as a composition of stable (vertical and horizontal) partitions – penetrable cell membranes. It is that fundamental and this is precisely why this software actually works (being an imperative crap coded in C++, which is ridden by undefined behaviors).\nSo, I want all the developers of the dependencies I use to be as good (well-educated, math-literate, principle-guided, cultured, with fine aesthetics and refined tastes) as possible, which is, of course. just a dream (that’s me in the corner…).\nWhat should I do? Well, Google (as a world’s most advanced C++ software shop) figured it out log ago – you carefully chose and then selfhost (vendor) your dependencies, performing regular code-reveres of the critical parts and even of all updates (carefully examining each diff). They have resources for that, while I myself don’t.\nAnother approach is to have a principle-guided, math-based, done-right and well-polished standard libraries, like of Ocaml, Haskell, F# and perhaps Scala3 and Rust (which is at least trait-based and consistently uses Algebraic types), and just stick to it (all the great compilers – SML/NJ, GHC, ocamlc, scalac has been built this way). But if you have seen things like Scalatest or Serde you probably want to have at least some external dependencies, which has been done right (scalatest is just amazing set of DSLs).\nThere is another “heuristic”: all serious classic language develop their FFI facilities so that they could call the code they don’t want or can’t re-implement. This is the only way – can’t rewrite - just load and call it.\nThe practice must fucus on how to clearly identify what I don’t want even to look at (due to immense complexity) and just use the specification of its APIs (and hoping for a miracle). Wrapping the calls into thin completely isolated modules behind a minimal mostly-functional interface, or even a Monad (only the internal module/library/crate has the dependency).\nI by no means want to re-implement stuff like Mesa or the Vulkan stack or, god forbid, OpenSSL. The way is to build thin wrappers, just like people do for highest quality numeric Fortran libraries – the use-case for all FFIs (yet another cue).\nEven better approach would be to extract and even partially rewrite (simplifying and cutting off the crap) the only code I need and repackage it in my own libraries (the way I ripped off libnginx.so long ago), but it is ok for a slow-running hobby project of a perfectionist or even a “religious practitioner” (FP is a religion, you know), but won’t work in the mundate world outside your window.\nOver-abstraction (unnecessary, redundant abstractions) is the root of all evil. Another evil is to write general frameworks. This is why I do not want tokio, (which is actually a runtime), frameworks and especially middlewares, but again, extracting and self-hosting the code I really use is a very long and unpleasant task. Above all I do not want amateur async crap as dependencies.\nThe principle is that things like async (the fucking metastazying cancer) are appropriate, leave alone necessary only to very specific workloads (use-cases) and presumably it should be minimalisticly designed for each use separately.\nWhat I mean is that over-generalized anync framework is bullshit. Sometimes one need only futures and the simplest means to run them (as in Scala3), sometimes it is lightweight coooperative multitasking (as in Erlang), other times it is just a wrapper on epoll or kqueue . Erlang did it right (with processes), Java did it wrong with Tasks.\nExtracting relevant code from a huge mess like tokio or the Twitter Util is almost impossible, but using the right and minimal abstractions is another the most fundamental principle. One will appreciate it when actally see what a fucking ball of mud all these tokio-based frameworks actually are.\nBy the way, just as real (actual) understanding comes from the ability to trace all the abstract concepts back to the aspects of reality from which they have been generalized (and to recreate them all the way back), so it is with programming – one has to write from the first principles, from ones own understanding, just as I write this file (yes, I can trace every concept I use).\nIt is not even that difficult to draw the sets and relations on paper as bunch of lists (enumerations) and arrows between dots. Just like any good model, it has to be minimal and good-enough for a specific aspect of reality, not something “too general”.\nThere is another heuristic – all the shapes your code could possible take are studied with the so-called Category theory. All your async crap has to be reduced to introductions and corresponding eliminations, to a “fork” and, eventually, a “join”. The principle that a concurrent code shall be pure functional and be properly structured (as Functors and Monoids ) is not “just an opinion” – it is the best we can do in principle. Looks like the cats-effects guys already got this right (but bloated it with implementation of every unnecessary and redundant abstraction out there). F# seems the most sane of them all.\nThe worst part is that this kind of writing of software is possible only in some academic settings and generally uncompetitive in the “real world”. So, again, we have to occasionally eat the over-processed junk food of programming (crappy code pushed upon us by uneducated and unqualified, just like that PHP thing).\nBut a good taste, necessary elegance, solid principles and even perfectionism are the must – these all are halmarks of a high art. classic literature and of the highest Japanase craftsmanship. An art is a required part, not optional.\nSo, Rust, Scala3, Ocaml, F# and Haskell (each of which has been made by mathematicians and perfectionists) with a few (very few) carefully chosen dependencies, in a slow (100 lines per week) principle-guided and based on understanding “sprital shaped” (improve till good-enough) bottom-up process. Fortunately, the medium we work with (the expressions and plain text) is the most mailinable, unlike paints, clay or any other materials.\nIdeally, we have to rewrite it (refactor) again and again just right (with Algebraict types, proper mathematical type-classes and traits) untill nothing can be removed or simplified further. The problem? No one pays for this kind of artistic programming anymore. So I just write articles (from an organ in the first tence) based on a wishful thinking.\nNotice, that using proper Algebraic data types allows one to gradully add new elements to both sum-types and product types without breaking anything, because we process them by pattern-marching or by seleciton by a symbol (a name). This simplifies modications (inevitable and necessary changes) and maintenance. The modern static type-system would help even more.\nOh, I forgot to add – writing everything in Haskell (with only the same depenencies as GHC and cabal) will approach perfection, since one produces a declarative, executable mathematical (well, technically it is a pure logic – the System F-Omega) model of the domain of choice.\nBut Rust, Ocaml or Scala3 are also OK.\n",
+  "wordCount" : "1585",
+  "inLanguage": "en",
+  "datePublished": "2024-05-14T00:00:00+05:45",
+  "dateModified": "2024-05-14T16:01:12+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/complexity/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      On complexity
+    </h1>
+    <div class="post-description">
+      DDD, TDD and the rest of em.
+    </div>
+    <div class="post-meta"><span title='2024-05-14 00:00:00 +0545 +0545'>May 14, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Trying to understand complex social systems was my favorite timepass. I went through <em>Eastern philosophy</em> and religions. algorithmic trading, Informix system administration and <em>functional programming</em>. of course. I am a FreeBSD and <em>Gentoo</em> addict too. I almost always compile my stuff from sources (so I know all the dependencies by heart).</p>
+<p>In particular, Eastern Philosophy (the Early Upanishads and Early Buddhism) helped me to sort out what the current AI tools can achieve and what they cannot do in principle (and I showed <em>why</em>). This is my major achievement so far.</p>
+<p>Just like it is with a food - we better have to know everything - the sourcing, the processing, the packaging or the nuances of cooking. With software it is even much harder to do and the social system is even more fraudulent, similar to blockchain and shitcoins, where there are nothing but self-impostors, low-effort crap  and plain scams .</p>
+<p>Lots of guys are simply uneducated and unqualified (hello, <em>vitaliks</em>) but nevertheless they are way <em>over-confident</em> and produce a <em>low effort</em> (without much thinking) lowest quality imperative spaghetti (and even books), without bothering with underlying theories (developed and refined for decades by way brighter people) and even with a proper education &ndash; they just pile up (commit and push) more and more crap.</p>
+<p>So, ideally, lets stay, I absolutely want <em>trait-based libraries</em>, with a minimum dependencies, each of which just do one thing and do it well (just right). This is, by the way, how one should organize one&rsquo;s own projects &ndash; a bunch of <em>composable</em> small libraries, which, ideally, are used to build hierarchies (layers) of embedded DSLs. A properly designed DSL, like that of the Octave, has <em>Monoids</em> everywhere (because <em>the domain</em> does).</p>
+<p>&ldquo;Just right&rdquo; have lots of meanings at each level. At the highest level I want <em>traits</em> (Wadler&rsquo;s <em>type-classes</em>), proper <em>Algebraic Data Types</em>, and above all &ndash; &ldquo;no-unsafe&rdquo; (<code>#![forbid(unsafe_code)]</code>), which &ldquo;proves&rdquo; that the authors actually did their homeworks. Or just to write Haskell (no one pays for it).</p>
+<p>On the other hand, at the highest level, I absolutely want to adhere to the Barbara Liskov&rsquo;s principles, of having <em>proper non-leaking abstractions</em>, <em>proper ADTs</em> and therefore <em>stable abstract interfaces</em>, with multiple implementations, which implies <em>gradual improvements</em> and even &ldquo;mature&rdquo; (without a &ldquo;pre&rdquo;) optimizations. Very few programmers understand that this is <em>the essence</em> of serious programming. The <em>Substitution Principle</em> is also important, of course.</p>
+<p>All the actually working vastly complex software (like Google Chrome) has been built around stable &ldquo;abstract&rdquo; interfaces and protocols, as a <em>composition</em> of stable (vertical and horizontal) partitions &ndash; <em>penetrable cell membranes</em>. It is that fundamental and this is precisely <em>why</em> this software actually works (being an imperative crap coded in C++, which is ridden by <em>undefined behaviors</em>).</p>
+<p>So, I want <em>all</em> the developers of the <em>dependencies</em> I use to be as good (well-educated, math-literate, principle-guided, cultured, with fine aesthetics and refined tastes) as possible, which is, of course. just a dream (<em>that&rsquo;s me in the corner&hellip;</em>).</p>
+<p>What should I do? Well, Google (as a world&rsquo;s most advanced C++ software shop) figured it out log ago &ndash; you carefully chose and then selfhost (vendor) your dependencies, performing regular code-reveres of the critical parts and even of <em>all updates</em> (carefully examining each diff). They have resources for that, while I myself don&rsquo;t.</p>
+<p>Another approach is to have a principle-guided, math-based, done-right and well-polished standard libraries, like of Ocaml, Haskell, F# and perhaps Scala3 and Rust (which is at least trait-based and consistently uses Algebraic types), <em>and just stick to it</em> (all the great compilers &ndash; SML/NJ, GHC, ocamlc, scalac has been built this way). But if you have seen things like <code>Scalatest</code> or <code>Serde</code> you probably want to have at least <em>some</em> external dependencies, which has been done right (<code>scalatest</code> is just <em>amazing</em> set of DSLs).</p>
+<p>There is another &ldquo;heuristic&rdquo;: all serious classic language develop their FFI facilities so that they could call the code they don&rsquo;t want or can&rsquo;t re-implement. This is the only way &ndash; can&rsquo;t rewrite - just load and call it.</p>
+<p>The practice must fucus on how to clearly identify what I <em>don&rsquo;t want even to look at</em> (due to immense complexity) and just use <em>the specification</em> of its APIs (and hoping for a miracle). Wrapping the calls into thin completely isolated modules behind a <em>minimal mostly-functional interface</em>, or even a <em>Monad</em> (only the internal module/library/crate has the dependency).</p>
+<p>I by no means want to re-implement stuff like Mesa or the Vulkan stack or, god forbid, OpenSSL. The way is to build thin wrappers, just like people do for highest quality numeric Fortran libraries &ndash; <em>the use</em>-case for all FFIs (yet another cue).</p>
+<p>Even better approach would be to extract and even <em>partially rewrite</em> (simplifying and cutting off the crap) the only code I need and repackage it in my own libraries (the way I ripped off libnginx.so long ago), but it is ok for a slow-running hobby project <em>of a perfectionist</em> or even a &ldquo;religious practitioner&rdquo; (FP is a religion, you know), but won&rsquo;t work in the mundate world outside your window.</p>
+<p>Over-abstraction (unnecessary, redundant abstractions) is the root of all evil. Another evil is to write <em>general frameworks</em>. This is why I do not want <code>tokio</code>, (which is actually a <em>runtime</em>), frameworks and especially middlewares, but again, extracting and self-hosting the code I really use is a very long and unpleasant task. Above all I do not want amateur async crap as dependencies.</p>
+<p>The principle is that things like <code>async</code> (the fucking metastazying cancer) are appropriate, leave alone <em>necessary</em> only to very specific workloads (use-cases) and presumably it should be minimalisticly designed for each use separately.</p>
+<p>What I mean is that over-generalized anync framework is bullshit. Sometimes one need only futures and the simplest means to run them (as in Scala3), sometimes it is lightweight coooperative multitasking (as in Erlang), other times it is just a wrapper on <code>epoll</code> or <code>kqueue</code> . Erlang did it right (with processes), Java did it wrong with Tasks.</p>
+<p>Extracting relevant code from a huge mess like <em>tokio</em> or the Twitter Util is almost impossible, but using the right and minimal abstractions is another the most fundamental principle. One will appreciate it when actally see what a fucking ball of mud all these tokio-based frameworks actually are.</p>
+<p>By the way, just as real (actual) understanding comes from the ability to trace all the abstract concepts back to the aspects of reality from which they have been generalized (and to recreate them all the way back), so it is with programming &ndash; one has to write from the first principles, from ones own understanding, just as I write this file (yes, I can trace every concept I use).</p>
+<p>It is not even that difficult to <em>draw</em> the sets and relations on <em>paper</em> as bunch of lists (enumerations) and arrows between dots. Just like any good model, it has to be <em>minimal</em> and <em>good-enough</em> for a specific aspect of reality, not something &ldquo;too general&rdquo;.</p>
+<p>There is another heuristic &ndash; all the shapes your code <em>could</em> possible take are studied with the so-called Category theory. All your <em>async</em> crap has to be reduced to <em>introductions and corresponding eliminations</em>, to a &ldquo;fork&rdquo; and, <em>eventually</em>, a &ldquo;join&rdquo;. The principle that a concurrent code shall be pure functional and be properly structured (as Functors and Monoids ) is not &ldquo;just an opinion&rdquo; &ndash; it is the best we can do in principle. Looks like the <code>cats-effects</code> guys already got this right (but bloated it with implementation of every unnecessary and redundant abstraction out there). <code>F#</code> seems the most sane of them all.</p>
+<p>The worst part is that this kind of writing of software is possible only in some academic settings and generally uncompetitive in the &ldquo;real world&rdquo;. So, again, we have to occasionally eat the over-processed junk food of programming (crappy code pushed upon us by uneducated and unqualified, just like that PHP thing).</p>
+<p>But a <em>good taste</em>, necessary elegance, solid principles and even perfectionism are <em>the must</em> &ndash; these all are halmarks of a <em>high art</em>. classic literature and of the highest Japanase craftsmanship. An art is a required part, not optional.</p>
+<p>So, Rust, Scala3, Ocaml, F# and Haskell (each of which has been made by mathematicians and perfectionists) with a few (very few) carefully chosen dependencies, in a slow (100 lines per week) principle-guided and based on understanding &ldquo;sprital shaped&rdquo; (<em>improve till good-enough</em>) bottom-up process. Fortunately, the medium we work with (the expressions and plain text) is the most mailinable, unlike paints, clay or any other materials.</p>
+<p>Ideally, we have to rewrite it (refactor) again and again <em>just right</em> (with Algebraict types, proper mathematical type-classes and traits) untill nothing can be removed or simplified further. The problem? No one pays for this kind of artistic programming anymore. So I just write articles (from an organ in the first tence) based on a wishful thinking.</p>
+<p>Notice, that using proper <em>Algebraic data types</em> allows one to gradully add new elements to both sum-types and product types without breaking anything, because we process them by pattern-marching or by seleciton by a symbol (a name). This simplifies modications (inevitable and necessary changes) and maintenance. The modern static type-system would help even more.</p>
+<p>Oh, I forgot to add &ndash; writing everything in Haskell (with only the same depenencies as GHC and <code>cabal</code>) will approach perfection, since one produces a declarative, executable mathematical (well, technically it is a pure logic &ndash; the System F-Omega) model of the domain of choice.</p>
+<p>But Rust, Ocaml or Scala3 are also OK.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
