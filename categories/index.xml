@@ -6,8 +6,22 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 May 2024 18:19:29 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2024 15:07:30 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://lngnmn2.github.io/categories/programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://lngnmn2.github.io/categories/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/categories/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://lngnmn2.github.io/categories/ai/</link>
@@ -20,13 +34,6 @@
       <link>https://lngnmn2.github.io/categories/philosophy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/categories/philosophy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://lngnmn2.github.io/categories/programming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lngnmn2.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>
