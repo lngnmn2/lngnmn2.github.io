@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>ADT | Notes from the digital underground by Lngnmn</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="canonical" href="https://lngnmn2.github.io/tags/adt/">
+<title>Vedanta | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="haskell, ADT, monad">
+<meta name="description" content="It simply has to be this way.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/vedanta/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
@@ -18,8 +18,7 @@
 <link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://lngnmn2.github.io/tags/adt/index.xml">
-<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/tags/adt/">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/vedanta/">
 <noscript>
     <style>
         #theme-toggle,
@@ -67,18 +66,74 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="ADT" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lngnmn2.github.io/tags/adt/" />
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:title" content="Vedanta" />
+<meta property="og:description" content="It simply has to be this way." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/vedanta/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-05-27T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-05-27T09:46:29+05:45" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ADT"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Vedanta"/>
+<meta name="twitter:description" content="It simply has to be this way."/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Vedanta",
+      "item": "https://lngnmn2.github.io/articles/vedanta/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Vedanta",
+  "name": "Vedanta",
+  "description": "It simply has to be this way.",
+  "keywords": [
+    "haskell", "ADT", "monad"
+  ],
+  "articleBody": "It is time to publish some more results.\n#+begin_#+BEGIN_SRC haskell Type-level reasoning\nA function application - corresponds to Modus Ponens A specialization, an instance of it.\n\u003e (\\() :: (a -\u003e b) -\u003e a -\u003e b\n(\\)) f x = f x\nReversed order of agreements, still the same Modus Ponens\n\u003e (|\u003e) :: a -\u003e (a -\u003e b) -\u003e b \u003e (|\u003e) x f = f x\n“Multi-argument” is just currying – * -\u003e*-\u003e*-\u003e *\nSame, but with an explicit abstraction barrier (and lifting)\n\u003e (\u003e\u003e=) :: m a -\u003e (a -\u003e m b) -\u003e m b \u003e (\u003e\u003e=) ma f = undefined – has to be defined for each particular type (an instance)\nNotice that this is essentially a type-signature of fmap,\n\u003e fmap :: f a -\u003e(a-\u003eb) -\u003e f b\nwith a reversed order of arguments and a specialized function. which corresponds to a Kleisli arrow.\nNotice also that ($) and fmap differs only in having an explicit container. This is not an arbitrary coincidence.\nAll three are essentially the same, despite funny syntax. A basic step of logical deduction. Behind an abstraction barrier.\nComposition\nof functions \u003e (.) :: (b -\u003e c) -\u003e (a -\u003e b) -\u003e a -\u003e c \u003e (.) f g = \\x -\u003e f (g x)\nof “actions” (actual functions have to use ~return a -\u003e m a~) \u003e (\u003c=\u003c) :: Monad m =\u003e (b -\u003e m c) -\u003e (a -\u003e m b) -\u003e a -\u003e m c \u003e (\u003c=\u003c) f g = undefined – has to be defined for each particular type\nor (\u003e\u003e=) for chaining (“flat” nesting or pipelining ) , exactly the same as (|\u003e)\nNotice that the composition is nesting. This is the only way to implement it.\nThe end of knowledge. #+END_SRC\n",
+  "wordCount" : "295",
+  "inLanguage": "en",
+  "datePublished": "2024-05-27T00:00:00+05:45",
+  "dateModified": "2024-05-27T09:46:29+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/vedanta/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -126,46 +181,73 @@ font-family: 'Source Code Pro', monospace;
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    ADT
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">GNU Emacs
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Emacs is a monument (just like Potala palace in Lhasa) of an old-school software engineering and classic languages – it is, indeed, a world heritage site of the golden age of programming.
-It also could be compared with the ghat complex of Varanasi, which began no one knows when and is constantly changing since then, being reshaped by the “waves” and “tides” of social dynamics.
-Visiting Emacs is like visiting one of such historic sites, and just like them, it has been re-shaped by the successions of mass-hysteria and zealous over-excitement about bullshit....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
-  <a class="entry-link" aria-label="post link to GNU Emacs" href="https://lngnmn2.github.io/articles/emacs/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Vedanta
+    </h1>
+    <div class="post-description">
+      It simply has to be this way.
+    </div>
+    <div class="post-meta"><span title='2024-05-27 00:00:00 +0545 +0545'>May 27, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Understanding Rust
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit “access” to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an “arch and OS /duo”, and to be “aware of” the ABIs in general.
-Overview Rust is, in principle, an imperative language....</p>
+</div>
+  </header> 
+  <div class="post-content"><p>It is time to publish some more results.</p>
+<p>#+begin_#+BEGIN_SRC  haskell
+Type-level reasoning</p>
+<p>A function application - corresponds to <em>Modus Ponens</em>
+A specialization, an instance of it.</p>
+<p>&gt; (\() :: (a -&gt; b) -&gt; a -&gt; b</p>
+<blockquote>
+<p>(\)) f x = f x</p>
+</blockquote>
+<p>Reversed order of agreements, still the same <em>Modus Ponens</em></p>
+<p>&gt; (|&gt;) ::  a -&gt; (a -&gt; b) -&gt; b
+&gt; (|&gt;) x f = f x</p>
+<p>&ldquo;Multi-argument&rdquo; is just <em>currying</em> &ndash; <code>* -&gt;*-&gt;*-&gt; *</code></p>
+<p>Same, but with an explicit <em>abstraction barrier</em> (and <em>lifting</em>)</p>
+<p>&gt; (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b
+&gt; (&gt;&gt;=) ma f = undefined  &ndash; has to be defined for each particular type (an instance)</p>
+<p>Notice that this is essentially a type-signature of <code>fmap</code>,</p>
+<p>&gt; fmap :: f a -&gt;(a-&gt;b) -&gt; f b</p>
+<p>with a reversed order of arguments and a specialized function.
+which corresponds to a <em>Kleisli arrow</em>.</p>
+<p>Notice also that <code>($)</code> and <code>fmap</code> differs only in having an explicit <em>container</em>.
+This is not an arbitrary coincidence.</p>
+<p>All three are essentially the same, despite funny syntax.
+A basic step of logical deduction. Behind an abstraction barrier.</p>
+<p>Composition</p>
+<ul>
+<li>of functions</li>
+</ul>
+<p>&gt; (.) :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c
+&gt; (.) f g = \x -&gt; f (g x)</p>
+<dl>
+<dt>of &ldquo;actions&rdquo; (actual functions have to use ~return</dt>
+<dd>a -&gt; m a~)</dd>
+</dl>
+<p>&gt; (&lt;=&lt;) :: Monad m =&gt; (b -&gt; m c) -&gt; (a -&gt; m b) -&gt; a -&gt; m c
+&gt; (&lt;=&lt;) f g = undefined &ndash; has to be defined for each particular type</p>
+<p>or <code>(&gt;&gt;=)</code> for chaining (&ldquo;flat&rdquo; nesting or pipelining ) , exactly the same as <code>(|&gt;)</code></p>
+<p>Notice that the composition is <em>nesting</em>. This is the <em>only</em> way to implement it.</p>
+<p>The end of knowledge.
+#+END_SRC</p>
+
+
   </div>
-  <footer class="entry-footer"><span title='2023-07-15 00:00:00 +0545 +0545'>July 15, 2023</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
-  <a class="entry-link" aria-label="post link to Understanding Rust" href="https://lngnmn2.github.io/articles/unrestanding-rust/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/haskell/">Haskell</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/monad/">Monad</a></li>
+    </ul>
+  </footer>
 </article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="prev" href="https://lngnmn2.github.io/tags/adt/page/2/">
-      «&nbsp;Prev&nbsp;
-    </a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">
