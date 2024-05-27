@@ -155,13 +155,7 @@ font-family: 'Source Code Pro', monospace;
   </header>
   <div class="entry-content">
     <p>It is time to publish some more results.
-#&#43;begin_#&#43;BEGIN_SRC haskell Type-level reasoning
-A function application - corresponds to Modus Ponens A specialization, an instance of it.
-&gt; (\() :: (a -&gt; b) -&gt; a -&gt; b
-(\)) f x = f x
-Reversed order of agreements, still the same Modus Ponens
-&gt; (|&gt;) :: a -&gt; (a -&gt; b) -&gt; b &gt; (|&gt;) x f = f x
-“Multi-argument” is just currying – * -&gt;*-&gt;*-&gt; *...</p>
+Type-level reasoning A function application - corresponds to /Modus Ponens/ A specialization, an instance of it. &gt; ($) :: (a -&gt; b) -&gt; a -&gt; b &gt; ($) f x = f x Reversed order of agreements, still the same /Modus Ponens/ &gt; (|&gt;) :: a -&gt; (a -&gt; b) -&gt; b &gt; (|&gt;) x f = f x &#34;Multi-argument&#34; is just /currying/ -- ~* -&gt;*-&gt;*-&gt; *~ Same, but with an explicit /abstraction barrier/ (and /lifting/) &gt; (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b &gt; (&gt;&gt;=) ma f = undefined -- has to be defined for each particular type (an instance) Notice that this is essentially a type-signature of ~fmap~, &gt; fmap :: f a -&gt;(a-&gt;b) -&gt; f b with a reversed order of arguments and a specialized function....</p>
   </div>
   <footer class="entry-footer"><span title='2024-05-27 00:00:00 +0545 +0545'>May 27, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
   <a class="entry-link" aria-label="post link to Vedanta" href="https://lngnmn2.github.io/articles/vedanta/"></a>
