@@ -6,8 +6,15 @@
     <description>Recent content in Emacs on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Apr 2024 11:18:28 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jun 2024 19:31:30 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dopamine hacks</title>
+      <link>https://lngnmn2.github.io/articles/neuro/</link>
+      <pubDate>Fri, 07 Jun 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/neuro/</guid>
+      <description>Hacking autism (well, Asperger&amp;#39;s) for fun and profit.</description>
+    </item>
     <item>
       <title>Teach Yourself programming like Peter Norvig</title>
       <link>https://lngnmn2.github.io/articles/teach-yourself/</link>
