@@ -6,7 +6,7 @@
     <description>Recent content in ADT on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jun 2024 10:24:40 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jun 2024 17:42:31 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/adt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A puke from too many bullshit YouTube videos.</title>
@@ -16,6 +16,13 @@
       <description>Recently I have poisoned myself by watching some talking heads on YouTube. The topic was &amp;ldquo;something something structural system design&amp;rdquo;.
 There is a &amp;ldquo;correspondence&amp;rdquo; (not a true isomorphism, but still) between the structural patterns in molecular and cell biology and patterns in a pure functional code &amp;ndash; an augmented Lambda Calculus.
 Both &amp;ldquo;systems&amp;rdquo; are heavily constrained by the execution environment (molecular structures of cell biology is the code and the data, the Universe (in a particular locality) is the runtime).</description>
+    </item>
+    <item>
+      <title>Patterns everywhere</title>
+      <link>https://lngnmn2.github.io/articles/patterns-everywhere/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/patterns-everywhere/</guid>
+      <description>Patterns, patterns everywhere</description>
     </item>
     <item>
       <title>Vedanta</title>
