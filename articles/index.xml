@@ -6,8 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2024 20:30:48 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jun 2024 10:24:40 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A puke from too many bullshit YouTube videos.</title>
+      <link>https://lngnmn2.github.io/articles/before-breakfast/</link>
+      <pubDate>Wed, 19 Jun 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/before-breakfast/</guid>
+      <description>Recently I have poisoned myself by watching some talking heads on YouTube. The topic was &amp;ldquo;something something structural system design&amp;rdquo;.
+There is a &amp;ldquo;correspondence&amp;rdquo; (not a true isomorphism, but still) between the structural patterns in molecular and cell biology and patterns in a pure functional code &amp;ndash; an augmented Lambda Calculus.
+Both &amp;ldquo;systems&amp;rdquo; are heavily constrained by the execution environment (molecular structures of cell biology is the code and the data, the Universe (in a particular locality) is the runtime).</description>
+    </item>
     <item>
       <title>L. Tao on LLMs</title>
       <link>https://lngnmn2.github.io/articles/tao-on-llms/</link>
@@ -169,13 +178,6 @@ There are two and a half key figures: Geoffrey Hinton, who did most of the mathe
       <guid>https://lngnmn2.github.io/articles/non-bullshit-trading/</guid>
       <description>  Some assorted &amp;#34;brain dump&amp;#34;.
   </description>
-    </item>
-    <item>
-      <title>LLM predictions</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
     </item>
     <item>
       <title>On foundations of mathematics</title>
@@ -437,6 +439,14 @@ We will put the universal notion of an environment (and the corresponding Γ abs
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
+    </item>
+    <item>
+      <title>GNU Emacs</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
