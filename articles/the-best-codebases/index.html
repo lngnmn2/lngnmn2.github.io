@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The best codebases | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT">
+<meta name="description" content="HN? I am banned there LOL">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-best-codebases/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-best-codebases/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:title" content="The best codebases" />
+<meta property="og:description" content="HN? I am banned there LOL" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lngnmn2.github.io/articles/the-best-codebases/" /><meta property="article:section" content="articles" />
+<meta property="article:published_time" content="2024-06-29T00:00:00+05:45" />
+<meta property="article:modified_time" content="2024-06-29T09:58:46+05:45" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The best codebases"/>
+<meta name="twitter:description" content="HN? I am banned there LOL"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The best codebases",
+      "item": "https://lngnmn2.github.io/articles/the-best-codebases/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The best codebases",
+  "name": "The best codebases",
+  "description": "HN? I am banned there LOL",
+  "keywords": [
+    "ADT"
+  ],
+  "articleBody": "There is a meaningful HN thread once in a while, due to being populated by the actual ex-googlers and facebookers.\nhttps://news.ycombinator.com/item?id=40818809\nFirst of all, FB approach is “The Worse Is Better” all over again. If you write a quick crap to be replaced by something else very soon, the meme of “Move Fast and Break Things” (which is a polite name for “Just Pile Up more and more Crap, who cares LOL”) will “work” in the short run Otherwise it is guaranteed to accumulate all sorts of “technical debt” (a polite wording for “now costly or impossible to fix early quick idiotic and incompetent decisions”) – just look at Shittereum and ask shitalik – the champion of quick incompetent decisions.\nLets state this principle more clearly – random decisions will never result in a stable system, only “just right” (selected by an social (evolution-like) process of a trial-and-error), usually unique “thins” – this and only this “works”.\nThe DNA/RNA transcription machinery is the canonical example – it has been “selected” for millions of years, an once the “stable intermediate forms” emerged (“the decisions has been made”) there is no way to change this “technical debt”. There is, however, nothing “random” in there – everything else was less stable or energy efficient (plus other subtle constraints).\nNow this idea about letting everyone to change anything (without code owners). This is a idiotic approach at so many levels, it requires a whole section to enumerate.\nDopamine There is a famous experiment in the field of Psychology, when they put a cat in a box with a hidden lever (that opens the door and lets the cat out). At first cats are just literally bouncing around until they found the lever by a pure luck or a chance. Once they found the lever and realise the causality of pressing it causing the opening of the door, they, literally, became experts, and begin to act like the ones, never ever bouncing around again.\nThis is how every expert came up to be.\nThere is another quote from the famous physicist, which states (roughly) that an expert is one who have experienced all the pitfals out there and learned to avoid them, just like these cats.\nWe (humans and other animals) are “driven” by dopamine (and other neuromodulator) oscillations, not by something divine or rational. Due to this fact we tend to seem a quick and easy short-term dopamine spikes. This determines out social behaviour and, on an aggregate level, all the outcomes of social processes.\nThe another fundamental meme principle of “delayed gratification” has dopamine at its actual biological causality.\nThis has obvious implications on programming (as a social activity) – almost everything will be “optimised” for seeking an immediate (shortest term) social reward, which is the easiest (less effort) source of dopamine spikes. This is, of course, how emotionally charged idiotic content beats carefully worded rationality.\nSo, “moving fast” is another name for “lets get moar of these sopamine rewards right fucking now”. Lets push low-effort crap and get the social feedback – the crap just good enough not to crash and burn the whole thing and not to be ridiculed by others (members of society).\nThis, by the way, is the same social patterns behind all the sectarian formations, both in religion and in “sciences” – just pretend to be smart and busy (“sort-of competent”) so the others will become convinced of your “competence”.\nAgain, there is nothing arbitrary in this – it is just implications of dopamine spikes and corresponding lows.\nGuy Steele’a talk Very few people “emerged” (developed themselves with the help of a chance) to get their dopamine from doing the best possible quality stuff. The common “low effort crap” creates a strong aversion in them – the crap aversion.\nJust having this is not enough, one has to daily practice this for years and then you could become another Guy Steele or Jay Sussman. If your are lucky.\nSo, the guy who spent at least a decade working with LISPs (the ancient crap-evasive tradition of carefully-spraking math-literate types) stated clearly what are the problems with the fucking Java (which is a monument to human stupidity and an insult to human intelligence) – they never looked at what LISP is and what makes it so special.\njust a few special forms on top of a uniformity, so the user-defined stuff will look exactly the same as “built-in” generics aren’t just a fancy academic feature, but absolutely necessary shitty, verbose, inconsistent syntax is a huge show-stopper. Everyone else (ignorant narcissists) missed this – Stroustrup, Gosling, and even Rob Pike, so now we have what we have.\nThe take home message is that while everyone-can-change-anything is a pure lunacy, the “code owners” may be just too arrogant or plain stupid. Nothing new here – the leaders has to be worthy.\nLinus, Guido and SPJ There are the classic example of how adequate and competent “leaders” (code owners or guardians) produced the best quality craftwork. (The Guy Steel talk predicted this too).\nNo one wants a random incompetent low-effort literally-whos, driven by dopamine and urge for a quick social “recognition”, to rewrite something in LLVM (which, ironically, right now has a subtle bug which prevent the current Firefox from being compiled) or GHC or eve Python code.\nUnless it is a webshit.\nAgain, only the low-quality stuff that is expected to be thrown away and being replaced by another quick low effort stuff (which is what Facebook actually do) can be written by a bunch or random nobodies without competent guardians or custodians.\nJava (a brain-dead in charge) This is, of course, the case study. The shit was so bad that both classic intellectual traditions, deeply grounded in math and attention to details (LISP and ML) came up with their own (incomparable superior) solutions for this fucking abomination (Kotlin is a low-effort crap).\nOne more time. The “Abstraction and Specification in Programming Languages” by B. Liskov, which basically solved the programming, came up in early 80s. (the Golden Age of programming). CLU, MacLisp and the early Scheme (the lambda papers) came out at the same time.\nThe first version of ClTL came out in 84. By this time Standard ML has already been an established language and the first working version of Erlang has been created.\nAll these language “designers” basically ignored this.\nNow what? There is no substitute for years of deliberate practice, even if it is mostly bouncing around (familiarity with the ancient intellectual traditions – Math, LISP, ML – helps a lot).\n“Going fast and breaking things” will end up like Shittereum, with unboxed 256bit integers (as design decisions) and an imperative spaghetti in general. Never forget PHP 3 – the fractal of bad design (why, yes, Java is everywhere too).\nWhat are the best codebases?\nOcaml stdlib (NOT the Jane Street stuff) Haskell stdlib (comes with GHC) MIT Scheme (yay!) Clojure (1.10+, already polished) Arc (arc3.1.tar) Scala3 immutable collections nginx Scalatest (some other DSLs, cats?) Go stdlib (given an idiotic lack of generics) etc. What do they have in common? Being heavily math-aware, principle-guided, focused on quality (doing things “just right”), attention to details, crap-aversion.\nBut, just as Guy Steele professed, no one would ever wait for a craftsmanship to emerge, and will use cheap crappy low-effort junk-food, in software in media, in printed books, literally everywhere. Easy and cheap dopamine will beat everything.\nLast but not least, the biological notion of a “Honest and Costly Signals” (actually impossible to fake or imitate) is what distinguish a true quality (of a genetic phenotype). There is a lot in this emergent universal principle.\nThe hosnest and costly signal of Google’a actual (non a wishful thinking) superiority is that its monorepo and its Chromium just work.\n",
+  "wordCount" : "1296",
+  "inLanguage": "en",
+  "datePublished": "2024-06-29T00:00:00+05:45",
+  "dateModified": "2024-06-29T09:58:46+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-best-codebases/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The best codebases
+    </h1>
+    <div class="post-description">
+      HN? I am banned there LOL
+    </div>
+    <div class="post-meta"><span title='2024-06-29 00:00:00 +0545 +0545'>June 29, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There is a meaningful HN thread once in a while, due to being populated by the actual ex-googlers and facebookers.</p>
+<p><a href="https://news.ycombinator.com/item?id=40818809">https://news.ycombinator.com/item?id=40818809</a></p>
+<p>First of all, FB approach is &ldquo;The Worse Is Better&rdquo; all over again. If you write a quick crap to be replaced by something else very soon, the meme of &ldquo;Move Fast and Break Things&rdquo; (which is a polite name for &ldquo;Just Pile Up more and more Crap, who cares LOL&rdquo;) will &ldquo;work&rdquo; in the short run Otherwise it is <em>guaranteed</em> to accumulate all sorts of &ldquo;technical debt&rdquo; (a polite wording for &ldquo;now costly or impossible to fix early quick idiotic and incompetent decisions&rdquo;) &ndash; just look at <em>Shittereum</em> and ask <em>shitalik</em> &ndash; the champion of quick incompetent decisions.</p>
+<p>Lets state this principle more clearly &ndash; random decisions will never result in a stable system, only &ldquo;just right&rdquo; (selected by an social (evolution-like) process of a trial-and-error), usually <em>unique</em> &ldquo;thins&rdquo; &ndash; this and only this &ldquo;works&rdquo;.</p>
+<p>The DNA/RNA transcription machinery is the canonical example &ndash; it has been &ldquo;selected&rdquo; for millions of years, an once the &ldquo;stable intermediate forms&rdquo; emerged (&ldquo;the decisions has been made&rdquo;) there is no way to change this &ldquo;technical debt&rdquo;. There is, however, nothing &ldquo;random&rdquo; in there &ndash; everything else was less stable or energy efficient (plus other subtle constraints).</p>
+<p>Now this idea about letting everyone to change anything (without code owners). This is a idiotic approach at so many levels, it requires a whole section to enumerate.</p>
+<h2 id="dopamine">Dopamine<a hidden class="anchor" aria-hidden="true" href="#dopamine">#</a></h2>
+<p>There is a famous experiment in the field of Psychology, when they put a cat in a box with a hidden lever (that opens the door and lets the cat out). At first cats are just literally bouncing around until they found the lever by a pure luck or a chance. Once they found the lever and realise the causality of pressing it causing the opening of the door, they, literally, became <em>experts</em>, and begin to act like the ones, never ever bouncing around again.</p>
+<p>This is how <em>every expert</em> came up to be.</p>
+<p>There is another quote from the famous physicist, which states (roughly) that an <em>expert</em> is one who have experienced <em>all</em> the pitfals out there and learned to avoid them, just like these cats.</p>
+<p>We (humans and other animals) are &ldquo;driven&rdquo; by dopamine (and other neuromodulator) oscillations, not by something divine or rational. Due to this fact we tend to seem a quick and <em>easy</em> short-term dopamine spikes. This determines out social behaviour and, on an aggregate level, all the outcomes of social processes.</p>
+<p>The another fundamental meme principle of &ldquo;delayed gratification&rdquo; has dopamine at its actual biological causality.</p>
+<p>This has obvious implications on programming (as a social activity) &ndash; almost everything will be &ldquo;optimised&rdquo; for seeking an immediate (shortest term) social reward, which is the easiest (less effort) source of dopamine spikes. This is, of course, how emotionally charged idiotic content beats carefully worded rationality.</p>
+<p>So, &ldquo;moving fast&rdquo; is another name for &ldquo;lets get moar of these sopamine rewards right fucking now&rdquo;. Lets push low-effort crap and get the social feedback &ndash; the crap just good enough not to crash and burn the whole thing and not to be ridiculed by others (members of society).</p>
+<p>This, by the way, is the same social patterns behind all the sectarian formations, both in religion and in &ldquo;sciences&rdquo; &ndash; just pretend to be smart and busy (&ldquo;sort-of competent&rdquo;) so <em>the others</em> will become convinced of your &ldquo;competence&rdquo;.</p>
+<p>Again, there is nothing arbitrary in this &ndash; it is just implications of dopamine spikes and corresponding lows.</p>
+<h2 id="guy-steele-a-talk">Guy Steele&rsquo;a talk<a hidden class="anchor" aria-hidden="true" href="#guy-steele-a-talk">#</a></h2>
+<p>Very few people &ldquo;emerged&rdquo; (developed themselves with the help of a chance) to get their dopamine from doing <em>the best possible quality</em> stuff. The common &ldquo;low effort crap&rdquo; creates a strong aversion in them &ndash; the <em>crap aversion</em>.</p>
+<p>Just having this is not enough, one has to daily practice this for years and then you could become another Guy Steele or Jay Sussman. If your are lucky.</p>
+<p>So, the guy who spent at least a decade working with LISPs (the ancient crap-evasive tradition of carefully-spraking math-literate types) stated clearly what are the problems with the fucking Java (which is a monument to human stupidity and an insult to human intelligence) &ndash; they never looked at what LISP is and what makes it so <em>special</em>.</p>
+<ul>
+<li>just a few special forms on top of a uniformity, so</li>
+<li>the user-defined stuff will look exactly the same as &ldquo;built-in&rdquo;</li>
+<li>generics aren&rsquo;t just a fancy academic feature, but absolutely necessary</li>
+<li>shitty, verbose, <em>inconsistent</em> syntax is a huge show-stopper.</li>
+</ul>
+<p>Everyone else (ignorant narcissists) missed this &ndash; Stroustrup, Gosling, and even Rob Pike, so now we have what we have.</p>
+<p>The take home message is that while <em>everyone-can-change-anything</em> is a pure lunacy, the &ldquo;code owners&rdquo; may be just too arrogant or plain stupid. Nothing new here &ndash; the leaders has to be worthy.</p>
+<h2 id="linus-guido-and-spj">Linus, Guido and SPJ<a hidden class="anchor" aria-hidden="true" href="#linus-guido-and-spj">#</a></h2>
+<p>There are the classic example of how adequate and competent &ldquo;leaders&rdquo; (code owners or guardians) produced the best quality craftwork. (The Guy Steel talk predicted this too).</p>
+<p>No one wants a random incompetent low-effort literally-whos, driven by dopamine and urge for a quick social &ldquo;recognition&rdquo;, to rewrite something in LLVM (which, ironically, right now has a subtle bug which prevent the current Firefox from being compiled) or GHC or eve Python code.</p>
+<p>Unless it is a <em>webshit</em>.</p>
+<p>Again, only the low-quality stuff that is expected to be thrown away and being replaced by another quick low effort stuff (which is what Facebook actually do) can be written by a bunch or random nobodies without competent guardians or custodians.</p>
+<h2 id="java--a-brain-dead-in-charge">Java (a brain-dead in charge)<a hidden class="anchor" aria-hidden="true" href="#java--a-brain-dead-in-charge">#</a></h2>
+<p>This is, of course, <em>the</em> case study. The shit was <em>so bad</em> that <em>both</em> classic intellectual traditions, deeply grounded in math and attention to details (LISP and ML) came up with their own (incomparable superior) solutions for this fucking abomination (Kotlin is a low-effort crap).</p>
+<p>One more time. The &ldquo;Abstraction and Specification in Programming Languages&rdquo; by B. Liskov, which basically solved the programming, came up in early 80s. (the Golden Age of programming). CLU, MacLisp and the early Scheme (the lambda papers) came out at the same time.</p>
+<p>The first version of ClTL came out in 84. By this time Standard ML has already been an established language and the first working version of Erlang has been created.</p>
+<p>All these language &ldquo;designers&rdquo; basically ignored this.</p>
+<h2 id="now-what">Now what?<a hidden class="anchor" aria-hidden="true" href="#now-what">#</a></h2>
+<p>There is no substitute for years of deliberate practice, even if it is mostly bouncing around (familiarity with the ancient intellectual traditions &ndash; Math, LISP, ML &ndash; helps a lot).</p>
+<p>&ldquo;Going fast and breaking things&rdquo; will end up like Shittereum, with unboxed 256bit integers (as design decisions) and an imperative spaghetti in general. Never forget PHP 3 &ndash; the fractal of bad design (why, yes, Java is everywhere too).</p>
+<p>What are the best codebases?</p>
+<ul>
+<li>Ocaml stdlib (NOT the Jane Street stuff)</li>
+<li>Haskell stdlib (comes with GHC)</li>
+<li>MIT Scheme (yay!)</li>
+<li>Clojure (1.10+, already polished)</li>
+<li>Arc (arc3.1.tar)</li>
+<li>Scala3 immutable collections</li>
+<li>nginx</li>
+<li>Scalatest (some other DSLs, <code>cats</code>?)</li>
+<li>Go stdlib (given an idiotic lack of generics)</li>
+<li>etc.</li>
+</ul>
+<p>What do they have in common? Being heavily math-aware, principle-guided, focused on quality (doing things &ldquo;just right&rdquo;), attention to details, crap-aversion.</p>
+<p>But, just as Guy Steele professed, no one would ever wait for a craftsmanship to emerge, and will use cheap crappy low-effort junk-food, in software in media, in printed books, literally everywhere. Easy and cheap dopamine will beat everything.</p>
+<p>Last but not least, the biological notion of a &ldquo;Honest and Costly Signals&rdquo; (actually impossible to fake or imitate) is what distinguish a true quality (of a genetic phenotype). There is a lot in this emergent universal principle.</p>
+<p>The hosnest and costly signal of Google&rsquo;a actual (non a wishful thinking) superiority is that its monorepo and its Chromium just work.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
