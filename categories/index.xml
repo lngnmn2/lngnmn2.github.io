@@ -4,10 +4,17 @@
     <title>Categories on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/</link>
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.125.7</generator>
+    <generator>Hugo -- 0.127.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2024 09:58:46 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2024 16:53:58 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://lngnmn2.github.io/categories/ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/categories/ai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programming</title>
       <link>https://lngnmn2.github.io/categories/programming/</link>
@@ -34,13 +41,6 @@
       <link>https://lngnmn2.github.io/categories/emacs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/categories/emacs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://lngnmn2.github.io/categories/ai/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lngnmn2.github.io/categories/ai/</guid>
       <description></description>
     </item>
     <item>

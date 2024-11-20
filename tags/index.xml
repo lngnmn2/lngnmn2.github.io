@@ -4,10 +4,24 @@
     <title>Tags on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/</link>
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.125.7</generator>
+    <generator>Hugo -- 0.127.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jun 2024 09:58:46 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2024 16:53:58 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://lngnmn2.github.io/tags/ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deep Learning</title>
+      <link>https://lngnmn2.github.io/tags/deep-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lngnmn2.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
     <item>
       <title>ADT</title>
       <link>https://lngnmn2.github.io/tags/adt/</link>
@@ -44,13 +58,6 @@
       <description></description>
     </item>
     <item>
-      <title>Deep Learning</title>
-      <link>https://lngnmn2.github.io/tags/deep-learning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lngnmn2.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Trading</title>
       <link>https://lngnmn2.github.io/tags/trading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -62,13 +69,6 @@
       <link>https://lngnmn2.github.io/tags/emacs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://lngnmn2.github.io/tags/emacs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://lngnmn2.github.io/tags/ai/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://lngnmn2.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
