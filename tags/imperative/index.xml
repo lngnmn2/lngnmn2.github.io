@@ -6,8 +6,17 @@
     <description>Recent content in Imperative on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Oct 2023 13:46:29 +0545</lastBuildDate>
+    <lastBuildDate>Sun, 24 Nov 2024 12:38:05 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/imperative/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust 3000</title>
+      <link>https://lngnmn2.github.io/articles/rust-3000/</link>
+      <pubDate>Sun, 24 Nov 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/rust-3000/</guid>
+      <description>There is another shitstorm around Rust &amp;ndash; the just announced meme-effort to verify approximately 7500 unstafe functions in the Rust standard library.
+First of all, what a joke! I never thought there are that many of em. It is easily more than the whole SML, Ocaml and Haskell standard libraries combined. Or at least of the same order.
+If we want, however, to put memes aside for a while, the way to safety begins with the proper and sound principles, so the &amp;ldquo;unsoundness bugs&amp;rdquo; will never appear again.</description>
+    </item>
     <item>
       <title>All you need is…</title>
       <link>https://lngnmn2.github.io/articles/all-you-need/</link>

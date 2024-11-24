@@ -5,16 +5,34 @@
     <loc>https://lngnmn2.github.io/about/</loc>
     <lastmod>2023-08-05T19:21:03+05:45</lastmod>
   </url><url>
+    <loc>https://lngnmn2.github.io/articles/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/imperative/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/programming/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/rust/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/rust-3000/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2024-11-24T12:38:05+05:45</lastmod>
+  </url><url>
     <loc>https://lngnmn2.github.io/tags/ai/</loc>
     <lastmod>2024-11-20T16:53:58+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/ai/</loc>
-    <lastmod>2024-11-20T16:53:58+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2024-11-20T16:53:58+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/</loc>
     <lastmod>2024-11-20T16:53:58+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/deep-learning/</loc>
@@ -23,16 +41,7 @@
     <loc>https://lngnmn2.github.io/articles/llms-und-ai/</loc>
     <lastmod>2024-11-20T16:53:58+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/</loc>
-    <lastmod>2024-11-20T16:53:58+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
-    <lastmod>2024-11-20T16:53:58+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/adt/</loc>
-    <lastmod>2024-06-29T09:58:46+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/programming/</loc>
     <lastmod>2024-06-29T09:58:46+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/the-best-codebases/</loc>
@@ -117,9 +126,6 @@
     <lastmod>2024-05-16T10:18:47+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/complexity/</loc>
-    <lastmod>2024-05-14T16:01:12+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/rust/</loc>
     <lastmod>2024-05-14T16:01:12+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/functor/</loc>
@@ -210,9 +216,6 @@
     <lastmod>2023-10-29T13:46:29+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/homoiconicity/</loc>
-    <lastmod>2023-10-29T13:46:29+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/imperative/</loc>
     <lastmod>2023-10-29T13:46:29+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/esoteric/</loc>
