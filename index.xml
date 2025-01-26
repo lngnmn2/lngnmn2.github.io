@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Dec 2024 18:41:37 +0545</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 10:10:01 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -20,11 +20,12 @@ That scene from Rocky movie Arguably the best scene in the classic Rocky (1976) 
 ..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.</description>
     </item>
     <item>
-      <title>Small tasks</title>
-      <link>https://lngnmn2.github.io/articles/small-tasks/</link>
-      <pubDate>Sat, 21 Dec 2024 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/small-tasks/</guid>
-      <description>The biology of why you cannot write, say, /llama.cpp/</description>
+      <title>Haskell and a LLM</title>
+      <link>https://lngnmn2.github.io/articles/haskell-llm/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/haskell-llm/</guid>
+      <description>This is the difference between a LLM and an expert. An LLM spews out a &amp;ldquo;propaganda&amp;rdquo; from the web.
+### what are the unique properties of a Haskell program 1. **Statically Typed**: Haskell has a strong, static type system that ensures type safety at compile time. 2. **Purely Functional**: Haskell programs are expressions, and functions have no side effects. This leads to code that&amp;#39;s easy to reason about, test, and debug.</description>
     </item>
     <item>
       <title>Rust 3000</title>
