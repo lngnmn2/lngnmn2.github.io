@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Deepseek R1 | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, GPT">
+<meta name="description" content="DESCRIPTION: Memes and mirrors.
+Nowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).
+It started with that meme &ldquo;Attention Is All You Need&rdquo;, when they just came up with an &ldquo;architecture&rdquo; that sticks. No one can explain the actual mechanisms of how exactly or even why the layers are as they are (abstract bullshit aside).">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/deepseek-r1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/deepseek-r1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:url" content="https://lngnmn2.github.io/articles/deepseek-r1/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Deepseek R1">
+  <meta property="og:description" content="DESCRIPTION: Memes and mirrors.
+Nowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).
+It started with that meme “Attention Is All You Need”, when they just came up with an “architecture” that sticks. No one can explain the actual mechanisms of how exactly or even why the layers are as they are (abstract bullshit aside).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-01-26T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-01-26T20:33:46+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="GPT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deepseek R1">
+<meta name="twitter:description" content="DESCRIPTION: Memes and mirrors.
+Nowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).
+It started with that meme &ldquo;Attention Is All You Need&rdquo;, when they just came up with an &ldquo;architecture&rdquo; that sticks. No one can explain the actual mechanisms of how exactly or even why the layers are as they are (abstract bullshit aside).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Deepseek R1",
+      "item": "https://lngnmn2.github.io/articles/deepseek-r1/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Deepseek R1",
+  "name": "Deepseek R1",
+  "description": "DESCRIPTION: Memes and mirrors.\nNowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).\nIt started with that meme \u0026ldquo;Attention Is All You Need\u0026rdquo;, when they just came up with an \u0026ldquo;architecture\u0026rdquo; that sticks. No one can explain the actual mechanisms of how exactly or even why the layers are as they are (abstract bullshit aside).",
+  "keywords": [
+    "AI", "LLM", "GPT"
+  ],
+  "articleBody": "DESCRIPTION: Memes and mirrors.\nNowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).\nIt started with that meme “Attention Is All You Need”, when they just came up with an “architecture” that sticks. No one can explain the actual mechanisms of how exactly or even why the layers are as they are (abstract bullshit aside).\nWith this paper they use even more of abstract therminology, such as “long Chain-of-Thought (CoT)” and even “the reasoning capability” (which, of course, is an illusion to an observer).\nTo see things as they really are there is no other way but to trace everything back to What Is and then to rebuild every concept making sure there is no errors at each and every step. This, by the way, is the only universal theorem proving technique in existence (and it is way more general than just theorems).\nSo, a neural netword encoded as a “model” is a structured data file, which represents a network of some abstract nodes linked to each other with connections or edges.\nEach connection has an associated parameter, which is traditionally called a weight.\nThere are actually no connections (it is an abstract notion) being actually prepresented but only weights – one per “connection”. It is convenient to think of weights as pathes.\nEvery weight, which is just a real number between 0 and 1, can be thought of as a weight, thickness (of a link), a length or a distance (sort of) or just a frequency (of going through it).\nAnother useful notion, closer to What Is is a numeric value of how well mayelinated the connection is (this is from neurobiology).\nSo far everything is nice and pretty reasonable. This is somehow an universal encoding (except that the brain encodes its structure and it is not even close to be uniform or to start at random. Actually, the actual structure of the brain is what defines it. Individual neurons change and prune out).\nSo all the greatest memes (\"to approximate any computable functions\" and “without being explicitly programmed”) are still hold.\nThis is sort of a universal representation of a map of territory, which, again and again, is NOT the territory.\nThe back-prop algorithm based on updated gradients is as good as biological mylienation captured using math. Also cool, this is what the Nobel prize was for.\nThere are, however, lots of questions to ask, such as:\nWhat does this emergent abstract structure actually represents? How accurate is this abstract map with respect to the territory? What was the territory? etc.\nWell, lets say that there are all (well, not really) possible (or potential) pathes between some abstract nodes, where each path can be selected, and at every “step forward” (this is a directed structure) one of highest-scored (according to an abstract heuristic) connections can be taken.\nAn actual inference (forward) pass is not just a single path, but a sum-total of what has been selected at each step according to the weights.\nSo, the whole function is a function of input with respect of weights (parameters), except that it is, of course, not a function – the same inputs does not imply the same output, always.\nThis is, of course, just a simple, fully-connected feed-forward network. No fancy architectures, and the inference algorithm just uses some “small randomness” to select the pathes.\nThe problem is that so called “advanced architectures” and “sophisticated tuning” does not change the fact that there are no “reasoning capabilities” out there, and what they call “emergent reasoning” is just an illusion to an observer.\nLets see how and why this is true in principle.\nThe main question here is “what this abstract structure actually represents”. The answer is “a snapshot of a large chunk of a bullshit verbiage the world has produced”.\nThe weights (or parameters, which can be thought of as distances or frequencies as your please) partially define the shape of this snapshot. Another part is the training data and how exactly it has been “feed forward”.\nMore precisely, the weights emerge from the training process as a result from processing of the training data, and then being used with a new (“unseen”) data.\nModern systems presumably continuously update the weights with each new piece of data – a naive assumption of how the brain works (it turns out the brain structure is notoriously difficult to update once it has been matured, and most of the experiences are just being forgotten).\nSo, what is the claimed breaktrough here? Learning from experience – Unsupervised Reinforcement Learning! My ass.\nBut what is an unsupervised reinforcement learning? Rewards, based on what? on the previous experiences and some neuro-biological heuristics hard-wired by Evolution.\nGood old frequency. Most beaten pathways (a notion grounded in What Is, by the way). The most repeated propaganda. Can frequency and probabilities be the source of truth? No, unless you are majored in humanties.\nWhat is actually going on then? What I am trying to show here is that the neural network (no matter the architecture or fine-tuning!) has, in principle, no capacity for reasoning of any kind, just as a parrot (the bird) has no capacity, in principle, to understand the significance of sounds it produces. It simply does not have neither “languages centers” nor “cortex” evolved (for that).\nThe output stream of tokens from the Deepseek R1 model (or any current LLM whatsoever) is an imitation (cosplay) of reasoning just as “words” uttered by a parrot are imitation of sounds it heard somewhere.\nOne more time, pay attention: just as a parrot produces similar sound waves it overheard most often, an LLM produces similarly looking streams of tokens is has “seen” most often. No more, no less.\nAn LLM has no “machinery” for reasoning of any kind, it is just information processing with advanced curve fitting. Nothing fundamental has been changed within Deepseek R1.\nYes, they came up with a technique to “reinforce” some “common pathways”, but this is not a qualitative improvement. It is still a “parrot” under the hood.\nBut but but here are the benchmarks! Bar charts! Why tf not? If you would measure how well different parrots produce a similarly sounding soundwaves, you count make nice charts and convincing benchmars too.\nConclusion: This is not a reasoning of any kind, emergent or not. This is an ability to produce token streams which “sounds” (look) like a reasoning, based on what has been “seen” (trained) before.\nThis can be easily empirically validated by the fact that the most “common sense” (most often repeated) texts are being produced nearly verbatim from Wikipedia and other authoritative sources.\nAgain, what an LLM does is not a reasoning, it is an imitation of it. It produces something which looks or sounds similar without any form of “understanding” whatsoever. The “parrot” is not just a metaphor, it is an illustration of a similar and very realbiological processes.\n",
+  "wordCount" : "1163",
+  "inLanguage": "en",
+  "datePublished": "2025-01-26T00:00:00+05:45",
+  "dateModified": "2025-01-26T20:33:46+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/deepseek-r1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Deepseek R1
+    </h1>
+    <div class="post-meta"><span title='2025-01-26 00:00:00 +0545 +0545'>January 26, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>DESCRIPTION: Memes and mirrors.</p>
+<p>Nowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).</p>
+<p>It started with that meme &ldquo;Attention Is All You Need&rdquo;, when they just came up with an &ldquo;architecture&rdquo; that sticks. No one can explain the actual mechanisms of how exactly or even <em>why</em> the layers are as they are (abstract bullshit aside).</p>
+<p>With this paper they use even more of abstract therminology, such as &ldquo;<em>long Chain-of-Thought (CoT)</em>&rdquo; and even &ldquo;the reasoning capability&rdquo; (which, of course, is an illusion to an observer).</p>
+<p>To see things as they really are there is no other way but to trace everything back to <em>What Is</em> and then to rebuild every concept making sure there is no errors at each and every step. This, by the way, is the only universal theorem proving technique in existence (and it is way more general than just theorems).</p>
+<p>So, a neural netword encoded as a &ldquo;model&rdquo; is a structured data file, which represents a network of some abstract <em>nodes</em> linked to each other with <em>connections</em> or edges.</p>
+<p>Each <em>connection</em> has an associated parameter, which is traditionally called a <em>weight</em>.</p>
+<p>There are actually no connections  (it is an abstract notion) being actually prepresented  but <em>only weights</em> &ndash; one per &ldquo;connection&rdquo;. It is convenient to think of <em>weights</em> as <em>pathes</em>.</p>
+<p>Every weight, which is just a real number between 0 and 1, can be thought of as a weight, thickness (of a link), a length or a distance (sort of) or just a frequency (of going through it).</p>
+<p>Another useful notion, closer to <em>What Is</em> is a numeric value of how well <em>mayelinated</em> the connection is (this is from neurobiology).</p>
+<p>So far everything is nice and pretty reasonable. This is somehow an universal encoding (except that the brain encodes its structure and it is not even close to be uniform or to start at random. Actually, the actual structure of the brain is what defines it. Individual neurons change and prune out).</p>
+<p>So all the greatest memes (&quot;<em>to approximate any computable functions</em>&quot; and &ldquo;<em>without being explicitly programmed</em>&rdquo;) are still hold.</p>
+<p>This is sort of a <em>universal representation of a map</em> of territory, which, again and again, is NOT the territory.</p>
+<p>The back-prop algorithm based on updated gradients is as good as biological mylienation captured using math. Also cool, this is what the Nobel prize was for.</p>
+<p>There are, however, lots of questions to ask, such as:</p>
+<ul>
+<li>What does this emergent abstract structure actually represents?</li>
+<li>How accurate is this abstract map with respect to the territory?</li>
+<li>What was the territory?</li>
+</ul>
+<p>etc.</p>
+<p>Well, lets say that there are all (well, not really) possible (or potential) <em>pathes</em> between some abstract nodes, where each <em>path</em> can be selected, and at every &ldquo;step forward&rdquo; (this is a directed structure) one of highest-scored (according to an abstract heuristic) connections can be taken.</p>
+<p>An actual inference (forward) pass is not just a single path, but a sum-total of what has been selected at each step according to the weights.</p>
+<p>So, the whole function is a function of input with respect of weights (parameters), except that it is, of course, not a function &ndash; the same inputs does not imply the same output, always.</p>
+<p>This is, of course, just a simple, fully-connected feed-forward network. No fancy architectures, and the inference algorithm just uses some &ldquo;small randomness&rdquo; to select the pathes.</p>
+<p>The problem is that so called &ldquo;advanced architectures&rdquo; and &ldquo;sophisticated tuning&rdquo; does not change the fact that there are no &ldquo;reasoning capabilities&rdquo; out there, and what they call &ldquo;emergent reasoning&rdquo; is just an illusion to an observer.</p>
+<p>Lets see how and why this is true in principle.</p>
+<p>The main question here is &ldquo;what this abstract structure actually represents&rdquo;. The answer is &ldquo;a snapshot of a large chunk of a bullshit verbiage the world has produced&rdquo;.</p>
+<p>The <em>weights</em> (or parameters, which can be thought of as distances or frequencies as your please) partially define the shape of this snapshot. Another part is the training data and how exactly it has been &ldquo;feed forward&rdquo;.</p>
+<p>More precisely, the weights emerge from the training process as a result from processing of the training data, and then being used with a new (&ldquo;unseen&rdquo;) data.</p>
+<p>Modern systems presumably continuously update the weights with each new piece of data &ndash; a naive assumption of how the brain works (it turns out the brain structure is notoriously difficult to update once it has been matured, and most of the experiences are just being forgotten).</p>
+<p>So, what is the claimed breaktrough here? Learning from experience &ndash; <em>Unsupervised Reinforcement Learning</em>! My ass.</p>
+<p>But what is an unsupervised reinforcement learning? Rewards, based on what? on the previous experiences and some neuro-biological heuristics hard-wired by Evolution.</p>
+<p>Good old frequency. Most beaten pathways (a notion grounded in What Is, by the way). The most repeated propaganda. Can frequency and probabilities be the source of truth? No, unless you are majored in humanties.</p>
+<p>What is actually going on then? What I am trying to show here is that the neural network (no matter the architecture or fine-tuning!) has, in principle, no capacity for reasoning of any kind, just as a parrot (the bird) has no capacity, in principle, to understand the significance of sounds it produces. It simply does not have neither &ldquo;languages centers&rdquo; nor &ldquo;cortex&rdquo; evolved (for that).</p>
+<p>The output stream of tokens from the Deepseek R1 model (or any current LLM whatsoever) is an imitation (cosplay) of reasoning just as &ldquo;words&rdquo; uttered by a parrot are imitation of sounds it heard somewhere.</p>
+<p>One more time, pay attention: just as a parrot produces similar sound waves it overheard most often, an LLM produces similarly looking streams of tokens is has &ldquo;seen&rdquo; <em>most often</em>.  No more, no less.</p>
+<p>An LLM has no &ldquo;machinery&rdquo; for reasoning of any kind, it is just information processing with advanced curve fitting. Nothing fundamental has been changed within Deepseek R1.</p>
+<p>Yes, they came up with a technique to &ldquo;reinforce&rdquo; some &ldquo;common pathways&rdquo;, but this is not a <em>qualitative</em> improvement. It is still a &ldquo;parrot&rdquo; under the hood.</p>
+<p>But but but here are the <strong>benchmarks</strong>! <strong>Bar charts</strong>! Why tf not? If you would measure how well different parrots produce a similarly sounding soundwaves, you count make nice charts and convincing benchmars too.</p>
+<p>Conclusion: This is not a reasoning of any kind, emergent or not. This is an ability to produce token streams which &ldquo;sounds&rdquo; (look) like a reasoning, based on what has been &ldquo;seen&rdquo; (trained) before.</p>
+<p>This can be easily empirically validated by the fact that the most &ldquo;common sense&rdquo; (most often repeated) texts are being produced nearly verbatim from <em>Wikipedia</em> and other authoritative sources.</p>
+<p>Again, what an LLM does is not a reasoning, it is an imitation of it. It produces something which looks or sounds similar without any form of &ldquo;understanding&rdquo; whatsoever. The &ldquo;parrot&rdquo; is not just a metaphor, it is an illustration of a similar and very realbiological processes.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/gpt/">GPT</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

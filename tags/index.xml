@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jan 2025 10:10:01 +0545</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2025 20:33:46 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://lngnmn2.github.io/tags/ai/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT</title>
+      <link>https://lngnmn2.github.io/tags/gpt/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/gpt/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Haskell</title>
       <link>https://lngnmn2.github.io/tags/haskell/</link>
@@ -27,13 +41,6 @@
       <link>https://lngnmn2.github.io/tags/imperative/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/imperative/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://lngnmn2.github.io/tags/ai/</link>
-      <pubDate>Wed, 20 Nov 2024 16:53:58 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -132,13 +139,6 @@
       <link>https://lngnmn2.github.io/tags/composabilty/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/composabilty/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GPT</title>
-      <link>https://lngnmn2.github.io/tags/gpt/</link>
-      <pubDate>Mon, 20 Nov 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/gpt/</guid>
       <description></description>
     </item>
     <item>
