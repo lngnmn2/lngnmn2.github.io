@@ -6,8 +6,15 @@
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Feb 2025 17:51:52 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2025 12:20:18 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deepseek In Action</title>
+      <link>https://lngnmn2.github.io/articles/deepseek-in-action/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/deepseek-in-action/</guid>
+      <description>Look, ma, no reasoning.</description>
+    </item>
     <item>
       <title>Reasoning LLMs</title>
       <link>https://lngnmn2.github.io/articles/reasoning-llms/</link>
