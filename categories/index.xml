@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Feb 2025 18:23:45 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 17 Feb 2025 14:42:25 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://lngnmn2.github.io/categories/programming/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://lngnmn2.github.io/categories/ai/</link>
@@ -20,13 +27,6 @@
       <link>https://lngnmn2.github.io/categories/llm/</link>
       <pubDate>Sun, 16 Feb 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://lngnmn2.github.io/categories/programming/</link>
-      <pubDate>Sat, 15 Feb 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>
