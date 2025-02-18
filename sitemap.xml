@@ -5,14 +5,32 @@
     <loc>https://lngnmn2.github.io/about/</loc>
     <lastmod>2023-08-05T19:21:03+05:45</lastmod>
   </url><url>
+    <loc>https://lngnmn2.github.io/tags/ai/</loc>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/ai/</loc>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
+  </url><url>
     <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2025-02-17T19:51:39+05:45</lastmod>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/</loc>
-    <lastmod>2025-02-17T19:51:39+05:45</lastmod>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/grok3/</loc>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/llm/</loc>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/llm/</loc>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/</loc>
-    <lastmod>2025-02-17T19:51:39+05:45</lastmod>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2025-02-18T11:01:38+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/one-more-time/</loc>
     <lastmod>2025-02-17T19:51:39+05:45</lastmod>
@@ -20,22 +38,7 @@
     <loc>https://lngnmn2.github.io/categories/programming/</loc>
     <lastmod>2025-02-17T19:51:39+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/tags/ai/</loc>
-    <lastmod>2025-02-16T18:23:45+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/ai/</loc>
-    <lastmod>2025-02-16T18:23:45+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/articles/ai-slop/</loc>
-    <lastmod>2025-02-16T18:23:45+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/llm/</loc>
-    <lastmod>2025-02-16T18:23:45+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/llm/</loc>
-    <lastmod>2025-02-16T18:23:45+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
     <lastmod>2025-02-16T18:23:45+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/deepseek-in-action/</loc>
@@ -214,6 +217,9 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/non-bullshit-trading/</loc>
     <lastmod>2023-11-13T16:16:17+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/llm-predictions/</loc>
+    <lastmod>2024-06-11T14:02:50+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/foundations/</loc>
     <lastmod>2023-11-02T11:56:06+05:45</lastmod>
@@ -436,9 +442,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/emacs/</loc>
     <lastmod>2023-08-02T12:43:44+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/articles/llm-predictions/</loc>
-    <lastmod>2023-11-08T09:35:25+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/kalman-filter/</loc>
     <lastmod>2023-08-10T12:05:25+05:45</lastmod>
