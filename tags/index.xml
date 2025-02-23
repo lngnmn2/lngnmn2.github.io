@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Feb 2025 11:01:38 +0545</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 17:55:27 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ADT</title>
+      <link>https://lngnmn2.github.io/tags/adt/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/adt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DSL</title>
+      <link>https://lngnmn2.github.io/tags/dsl/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://lngnmn2.github.io/tags/ai/</link>
@@ -48,20 +62,6 @@
       <link>https://lngnmn2.github.io/tags/deep-learning/</link>
       <pubDate>Wed, 20 Nov 2024 16:53:58 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ADT</title>
-      <link>https://lngnmn2.github.io/tags/adt/</link>
-      <pubDate>Sat, 29 Jun 2024 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/adt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DSL</title>
-      <link>https://lngnmn2.github.io/tags/dsl/</link>
-      <pubDate>Tue, 25 Jun 2024 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
       <description></description>
     </item>
     <item>
