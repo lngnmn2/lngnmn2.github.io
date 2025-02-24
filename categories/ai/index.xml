@@ -6,8 +6,18 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Feb 2025 11:01:38 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2025 19:57:45 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding with LLMs</title>
+      <link>https://lngnmn2.github.io/articles/llm-coding/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-coding/</guid>
+      <description>DESCRIPTION: Idiots, idiots everywhere.
+Now I can accurately summarize what coding using LLMs actually /is in just a few sentences.
+Recall how people usually describe a code maintenance job: we have this code to run, while the original developers are gone and leave us no design documentation.
+This hypothetical situation is exactly what you get when an LLM finished spewing out the slop: you now have some code, very cheap, even for free, but it is not yours, the underlying understanding (of the whys) is not in your head, and the original developer is already gone.</description>
+    </item>
     <item>
       <title>Grok3</title>
       <link>https://lngnmn2.github.io/articles/grok3/</link>
