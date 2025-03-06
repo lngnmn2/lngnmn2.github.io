@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Python is already won | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="python, ADT, DSL">
+<meta name="description" content="here is how to catch up.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/python-won/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/python-won/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:url" content="https://lngnmn2.github.io/articles/python-won/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Python is already won">
+  <meta property="og:description" content="here is how to catch up.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-03-06T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-03-06T18:09:01+05:45">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="ADT">
+    <meta property="article:tag" content="DSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python is already won">
+<meta name="twitter:description" content="here is how to catch up.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Python is already won",
+      "item": "https://lngnmn2.github.io/articles/python-won/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Python is already won",
+  "name": "Python is already won",
+  "description": "here is how to catch up.",
+  "keywords": [
+    "python", "ADT", "DSL"
+  ],
+  "articleBody": "It is that simple. The momentum, which is partially due to the unprecedented AI bubble, is such that it actually became “too big to fail” and too important (for more than one industries) to not be “done right”.\n3.14 is getting a proper tail-calls in the interpreter, 3.13 got an initial support for native compilation. It will only continue to get polished by literally millions.\nThe last fundamentally right addition was the support for the proper sum-types (a tagged union) as dataclasses and the the related pattern-matching syntax.\nNow almost any classic FP code could be idiomatically and properly translated into modern (since 3.12 at least) Python.\nOptional[X] is equivalent to X | None, so one can pattern-match on this “anonymous, in-place sum-type” (or just define and name it).\nNo type-classes or traits yet, but who knows.\nAnother well-known advantage is these millions of libraries (of questionable quality) for literally everything.\nBecause the amount (in LoC) of Python code in public domain (on Github an PyPi) is bigger that all the other languages combined (this is not even a joke), it is not a coincidence that all the LLMs “speak Python”, or at least could generate some Python (of a lowest quality, of course).\nSo, knowing Python nowadays is just like knowing some high-school algebra.\nThere is a problem, however (nowadays there is always a problem of this kind) – way too many low quality “teaching materials”, starting from ambitious but grossly unqualified amateurs on YouTube, to plain scam SEO web cites, where they just copy-paste tutorials from each other to run Google ads.\nHere is a more or less up to date list of top-tier teaching materials:\nhttps://www.composingprograms.com/ https://www.youtube.com/@JohnDeNero/playlists https://libgen.li/edition.php?id=138699662 The first two are “spiritual successors” of Brian Harvey, the great (the classic scheme-based CS61A).\nThe book is by John V. Guttag, the MIT hotshot who used to be a co-author of legendary Barbara Liskov.\nThere are also several introductory MIT CS courses (in Python) taught by him. Watch these instead of Netflix. I am not kidding.\nhttps://ocw.mit.edu/courses/6-00sc-introduction-to-computer-science-and-programming-spring-2011/ https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/ These are on par with the best CS course of all time:\nhttps://www.youtube.com/playlist?list=PLre5AT9JnKShBOPeuiD9b-I4XROIJhkIU\nwell, second only to the Wizards lectures.\nThere is a lot more to Python, of course, but this is a decent non-bullshit start.\nAfter that there is a great mini-course by no less than Peter Norvig himself. It is still could be found scattered somewhere on YouTube (the idiots keep removing everything good).\nhttps://www.youtube.com/watch?v=49qSOQpFExQ https://github.com/norvig/pytudes After that there are videos by @karpathy\nhttps://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ Notice, in particular, how he uses nothing but the web browser (Jupyter). This means that the language and the APIs are well-designed, so they can be properly used in a REPL.\nVery few classic languages can be properly used in a REPL (SML/Ocaml, MATLAB, Scheme). The key aspect here is that high-level APIs are actual layers of DSLs, just like in MATMAB.\nThis much is more than enough. Pay attention to the details and how these gurus explain the whys and the whats.\nJust going through this will make you a way-better-than-average Python coder.\nThere is one more book:\nhttps://libgen.li/edition.php?id=137333239 from dataclasses import dataclass @dataclass class Circle: radius: float @dataclass class Rectangle: width: float height: float @dataclass class Triangle: base: float height: float # this! Shape = Circle | Rectangle | Triangle def area(shape: Shape) -\u003e float: match shape: # and this! case Circle(radius): return 3.14159 * radius**2 case Rectangle(width, height): return width * height case Triangle(base, height): return 0.5 * base * height # Example usage circle = Circle(radius=5) print(\"Area of circle:\", area(circle)) rectangle = Rectangle(height=10, width=5) print(\"Area of rectangle:\", area(rectangle)) triangle = Triangle(base=10, height=5) print(\"Area of triangle:\", area(triangle)) ",
+  "wordCount" : "606",
+  "inLanguage": "en",
+  "datePublished": "2025-03-06T00:00:00+05:45",
+  "dateModified": "2025-03-06T18:09:01+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/python-won/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Python is already won
+    </h1>
+    <div class="post-description">
+      here is how to catch up.
+    </div>
+    <div class="post-meta"><span title='2025-03-06 00:00:00 +0545 +0545'>March 6, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>It is that simple. The <em>momentum</em>, which is partially due to the unprecedented AI bubble, is such that it actually became &ldquo;too big to fail&rdquo; and too important (for more than one industries) to not be &ldquo;done right&rdquo;.</p>
+<p>3.14 is getting a proper tail-calls in the interpreter, 3.13 got an initial support for native compilation. It will only continue to get polished by literally millions.</p>
+<p>The last <em>fundamentally right</em> addition was the support for the proper <em>sum-types</em> (a tagged union) as <em>dataclasses</em> and <em>the the related pattern-matching syntax</em>.</p>
+<p>Now almost any classic FP code could be idiomatically and properly translated into modern (since 3.12 at least) Python.</p>
+<p><code>Optional[X]</code> is equivalent to <code>X | None</code>, so one can pattern-match on this &ldquo;anonymous, in-place sum-type&rdquo; (or just define and name it).</p>
+<p>No type-classes or traits yet, but who knows.</p>
+<p>Another well-known advantage is these millions of libraries (of questionable quality) for literally everything.</p>
+<p>Because the amount (in LoC) of Python code in public domain (on <em>Github</em> an <em>PyPi</em>) is bigger that all the other languages combined (this is not even a joke), it is not a coincidence that all the LLMs &ldquo;speak Python&rdquo;, or at least could generate some Python (of a lowest quality, of course).</p>
+<p>So, knowing Python nowadays is just like knowing some high-school algebra.</p>
+<p>There is a problem, however (nowadays there is <em>always</em> a problem of this kind) &ndash; way too many low quality &ldquo;teaching materials&rdquo;, starting from ambitious but grossly unqualified amateurs on YouTube, to plain scam SEO web cites, where they just copy-paste tutorials from each other to run Google ads.</p>
+<p>Here is a more or less up to date list of <em>top-tier</em> teaching materials:</p>
+<ul>
+<li><a href="https://www.composingprograms.com/">https://www.composingprograms.com/</a></li>
+<li><a href="https://www.youtube.com/@JohnDeNero/playlists">https://www.youtube.com/@JohnDeNero/playlists</a></li>
+<li><a href="https://libgen.li/edition.php?id=138699662">https://libgen.li/edition.php?id=138699662</a></li>
+</ul>
+<p>The first two are &ldquo;spiritual successors&rdquo; of Brian Harvey, the great (the classic  scheme-based CS61A).</p>
+<p>The book is by John V. Guttag, the MIT hotshot who used to be a co-author of legendary Barbara Liskov.</p>
+<p>There are also several introductory MIT CS courses (in Python) taught by him. Watch these instead of Netflix. I am not kidding.</p>
+<ul>
+<li><a href="https://ocw.mit.edu/courses/6-00sc-introduction-to-computer-science-and-programming-spring-2011/">https://ocw.mit.edu/courses/6-00sc-introduction-to-computer-science-and-programming-spring-2011/</a></li>
+<li><a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/">https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/</a></li>
+</ul>
+<p>These are on par with the best CS course of all time:</p>
+<p><a href="https://www.youtube.com/playlist?list=PLre5AT9JnKShBOPeuiD9b-I4XROIJhkIU">https://www.youtube.com/playlist?list=PLre5AT9JnKShBOPeuiD9b-I4XROIJhkIU</a></p>
+<p>well, second only to <em>the Wizards lectures</em>.</p>
+<p>There is <em>a lot</em> more to Python, of course, but this is a decent non-bullshit start.</p>
+<p>After that there is a great mini-course by no less than <em>Peter Norvig</em> himself. It is still could be found scattered somewhere on YouTube (the idiots keep removing everything good).</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=49qSOQpFExQ">https://www.youtube.com/watch?v=49qSOQpFExQ</a></li>
+<li><a href="https://github.com/norvig/pytudes">https://github.com/norvig/pytudes</a></li>
+</ul>
+<p>After that there are videos by <code>@karpathy</code></p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ">https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ</a></li>
+</ul>
+<p>Notice, in particular, how he uses nothing but the web browser (<em>Jupyter</em>). This means that the language and the APIs are well-designed, so they can be properly used in a REPL.</p>
+<p>Very few classic languages can be properly used in a REPL (SML/Ocaml, MATLAB, Scheme). The key aspect here is that high-level APIs are actual layers of DSLs, just like in MATMAB.</p>
+<p>This much is more than enough. Pay attention to the details and how these <em>gurus</em> explain the <em>whys</em> and the <em>whats</em>.</p>
+<p>Just going through this will make you a <em>way-better-than-average</em> Python coder.</p>
+<p>There is one more book:</p>
+<ul>
+<li><a href="https://libgen.li/edition.php?id=137333239">https://libgen.li/edition.php?id=137333239</a></li>
+</ul>
+<!--listend-->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> dataclasses <span style="color:#f92672">import</span> dataclass
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span>:
+</span></span><span style="display:flex;"><span>    radius: float
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rectangle</span>:
+</span></span><span style="display:flex;"><span>    width: float
+</span></span><span style="display:flex;"><span>    height: float
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@dataclass</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Triangle</span>:
+</span></span><span style="display:flex;"><span>    base: float
+</span></span><span style="display:flex;"><span>    height: float
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># this!</span>
+</span></span><span style="display:flex;"><span>Shape <span style="color:#f92672">=</span> Circle <span style="color:#f92672">|</span> Rectangle <span style="color:#f92672">|</span> Triangle
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">area</span>(shape: Shape) <span style="color:#f92672">-&gt;</span> float:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">match</span> shape:                   <span style="color:#75715e"># and this!</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> Circle(radius):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3.14159</span> <span style="color:#f92672">*</span> radius<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> Rectangle(width, height):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> width <span style="color:#f92672">*</span> height
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> Triangle(base, height):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> base <span style="color:#f92672">*</span> height
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example usage</span>
+</span></span><span style="display:flex;"><span>circle <span style="color:#f92672">=</span> Circle(radius<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Area of circle:&#34;</span>, area(circle))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rectangle <span style="color:#f92672">=</span> Rectangle(height<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, width<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Area of rectangle:&#34;</span>, area(rectangle))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>triangle <span style="color:#f92672">=</span> Triangle(base<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, height<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Area of triangle:&#34;</span>, area(triangle))
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/python/">Python</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
