@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The C Legacy | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="imperative, ADT, DSL">
+<meta name="description" content="My 5c">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-c-legacy/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-c-legacy/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:url" content="https://lngnmn2.github.io/articles/the-c-legacy/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The C Legacy">
+  <meta property="og:description" content="My 5c">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-03-17T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-03-17T10:48:05+05:45">
+    <meta property="article:tag" content="Imperative">
+    <meta property="article:tag" content="ADT">
+    <meta property="article:tag" content="DSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The C Legacy">
+<meta name="twitter:description" content="My 5c">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The C Legacy",
+      "item": "https://lngnmn2.github.io/articles/the-c-legacy/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The C Legacy",
+  "name": "The C Legacy",
+  "description": "My 5c",
+  "keywords": [
+    "imperative", "ADT", "DSL"
+  ],
+  "articleBody": "There is a small but turbulent shitstorm on Lobste.rs about Go: https://lobste.rs/s/cclrkn/were_multiple_return_values_go_s_biggest\nand the key quote, perhaps, is this:\nI’m always amazed how Ken Thompson, Rob Pike and Robert Griesemer, with a combined 100+ years experience with PLT and about a dozen languages, are treated as total idiots by people whose greatest hits are building a web app once.\nThere is how I think about it.\nBack at the late 90s, when suddenly, out of fucking nowhere we have got Internet, FreeBSD and Linux and that Apache httpd, everything seemed to be just as an endless WOW!!! Something new and amazing almost every day.\nI still remember the “unreal” feeling of seeing an IRC client on a SCO UNIX 3.2 terminal “connected to the whole world”. I have seen that Zyxel modem which served the whole region as an IP uplink to Finland. I have seen things you perople would not belive.\nAnd, yes, at that time the actual experience of having been able to say cc a.c \u0026\u0026 ./a.out was amazing too.\nThen I remember having endless complications of compiling that PHP 2.0 as a DSO module into Apache http server and of running some crappy code, Drupal or something.\nThat PHP thing allowed me to write a lame ad-hook web-reporting system to then small retailer Lenta C\u0026C at which I worked as UNIX and Informix admin. It was a glorious time.\nAgain, the WOW-factor, the novelty and the sudden ability to do something which has never been done before overshadowed everything else and all other concerns (It is an urban legend how crappy SCO UNIX was compared to literally anything. Yes, I ran DEC OSF/1 and AIX too).\nThen suddenly I have read this:\nhttps://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/\nback then it wasn’t formatted this silly and was less politically correctly worded.\nThis was my sudden realization that as a sysadmin who can code, I know and understand literally nothing about the languages I use. Since then I have studied, some, here, there.\nNow look. When C has been released it was exactly the same situation, literally.\nSuddenly, people got something that allow them to do things they have never done before, most notably – port crappy code between different machines (with various degree of success).\nCampuses got UNIX installations for students, and, of course, email, irc, vi, Emacs and what not, literally everything has been written in C.\nJust exactly the same as it were with PHP, almost no one realized how crappy the language actually is – they just keep hacking up stuff, without much awareness, until, perhaps, the Morris virus came out.\nThe C ABI became what it is today – “the way things are”. Zero-terminated strings and NULLs became “the standard” and the compatibility with C became a necessity (hi, Bjarne).\nAgain, using 0 as a special address and a special character was a very clever, and even “obvious” hack, especially given that in the non-bullshit discrete math the positive numbers start at 1 (these old guys all were math-literate).\nAnother reason was the historic stupidity of assuming an (not the) Empty Set to be an apriory member of any other Set, so, again, 0 seemed to be OK.\nAnd, of course, the god-like Common Lisp guys used NIL correctly (yes!) – “T is not NIL” so, CAR of NIL is NIL and so on.\nIt requires a much deeper knowledge to realize that no member of a set should be special (there is a principle of such that behind it, which makes all the elements equivalent in principle, including singleton sets and the empty set).\nMath guys with an abstract algebra and theorem proving background (ML) got this exactly right.\nBut see, the C hacks with 0 are so clever. They resulted in a clever language standard idioms (just as in Common Lisp, but worse). C was a bunch of clever hacks at all levels (syntax, semantics, idioms), just like PHP was for a total newbie.\nOne more time – to say that the inventors of C and UNIX were PL gurus is bullshit. You could say the same about the authors of PHP or Javascript. They were ambitious and enthusiastic and obviously smart, but nowhere near being PL gurus like Barbara Liskov (with her CLU) or the late Ada guys.\nMy own metaphor was that back then C was a thin layer of common imperative idioms for a very thin layer of bad (not proper ADTs), leaky, abstractions – a surgical gloves, through which one can still touch the hardware. PHP 2.0 of its time.\nAs for Go, well, it has been aimed as a in principle minimal PROCEDURAL IMPERATIVE language “done right”, according to what is right in the procedural and imperative mindset, damaged by the hacky and clever Bell Labs and its C (and the early hacky C++) history.\nOkay, enough. “The Worse Is Better” is out there.\nSo, Go is very-very opinionated and it came from its own sect. As a sect it is perfectly fine and cool and clever. They had their own world view and a set of principles to follow, just like any other sectarians do.\nIgnoring literally everything good and true within the ML-family sects was “natural” and even “obvious” thing to do, just like Hindu ignores Muslims and so on.\nTo say that Go is any good except that being a realization of a certain rigid set of principles, is an insult to intelligence.\nThere are less rigid languages (Ocaml, Scala 3) which evolved way better idioms, subtle better semantics, and way more balanced overall feel. They are just a better art.\nAnd yes, I am autistic enough to appreciate how they would return a two values instead of one (on the stack) but not a pair or any other “unnecessary, redundant” abstraction. This is an obsession of “doing the right thing” (again, according to their world view) closest to hardware.\nI myself absolutely love truly high-level ML, OCaml, Matlab or Scala and I see how adding to them “a low level imperative DSL with lots of traditional curly braces” would make a good language. Think of “unsafe” as a DSL with all the cool C syntactic hacks and tricks but without preprocessor and other stuff.\n",
+  "wordCount" : "1038",
+  "inLanguage": "en",
+  "datePublished": "2025-03-17T00:00:00+05:45",
+  "dateModified": "2025-03-17T10:48:05+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-c-legacy/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The C Legacy
+    </h1>
+    <div class="post-description">
+      My 5c
+    </div>
+    <div class="post-meta"><span title='2025-03-17 00:00:00 +0545 +0545'>March 17, 2025</span>&nbsp;·&nbsp;lngnmn2@yahoo.com
+
+</div>
+  </header> 
+  <div class="post-content"><p>There is a small but turbulent shitstorm on <em>Lobste.rs</em> about Go:
+<a href="https://lobste.rs/s/cclrkn/were_multiple_return_values_go_s_biggest">https://lobste.rs/s/cclrkn/were_multiple_return_values_go_s_biggest</a></p>
+<p>and the key quote, perhaps, is this:</p>
+<blockquote>
+<p>I’m always amazed how Ken Thompson, Rob Pike and Robert Griesemer, with a combined 100+ years experience with PLT and about a dozen languages, are treated as total idiots by people whose greatest hits are building a web app once.</p>
+</blockquote>
+<p>There is how I think about it.</p>
+<p>Back at the late 90s, when suddenly, out of fucking nowhere we have got Internet, FreeBSD and Linux and that <em>Apache httpd</em>, everything seemed to be just as an endless <strong>WOW!!!</strong> Something new and amazing almost every day.</p>
+<p>I still remember the &ldquo;unreal&rdquo; feeling of seeing an IRC client on a SCO UNIX 3.2 terminal &ldquo;connected to the whole world&rdquo;. I have seen <strong>that</strong> <em>Zyxel</em> modem which served the whole region as an IP uplink to Finland. I have seen things you perople would not belive.</p>
+<p>And, yes, at that time the actual experience of having been able to say <code>cc a.c &amp;&amp; ./a.out</code> was amazing too.</p>
+<p>Then I remember having endless complications of compiling that PHP 2.0 as a DSO module into Apache http server and of running some crappy code, Drupal or something.</p>
+<p>That PHP thing allowed me to write a lame ad-hook web-reporting system to then small retailer <a href="https://www.lenta.com">Lenta C&amp;C</a> at which I worked as UNIX and Informix admin. It was a glorious time.</p>
+<p>Again, the WOW-factor, the novelty and the sudden ability to do something which has never been done before overshadowed everything else and all other concerns (It is an urban legend how crappy SCO UNIX was compared to literally anything. Yes, I ran DEC OSF/1 and AIX too).</p>
+<p>Then suddenly I have read this:</p>
+<p><a href="https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/">https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/</a></p>
+<p>back then it wasn&rsquo;t formatted this silly and was less politically correctly worded.</p>
+<p>This was my sudden realization that as a sysadmin who can code, I know and understand literally nothing about the languages I use. Since then I have studied, some, here, there.</p>
+<p>Now look. When C has been released it was exactly the same situation, literally.</p>
+<p>Suddenly, people got something that allow them to do things they have never done before, most notably &ndash; port crappy code between different machines (with various degree of success).</p>
+<p>Campuses got UNIX installations for students, and, of course, email, irc, vi, Emacs and what not, literally everything has been written in C.</p>
+<p>Just exactly the same as it were with PHP, almost no one realized how crappy the language actually is &ndash; they just keep hacking up stuff, without much awareness, until, perhaps, the Morris virus came out.</p>
+<p>The C ABI became what it is today &ndash; &ldquo;the way things are&rdquo;. Zero-terminated strings and NULLs became &ldquo;the standard&rdquo; and the compatibility with C became a necessity (hi, Bjarne).</p>
+<p>Again, using <code>0</code> as a <em>special address</em> and a <em>special character</em> was a very clever, and even &ldquo;obvious&rdquo; hack, especially given that in the non-bullshit discrete math the positive numbers start at <code>1</code> (these old guys all were math-literate).</p>
+<p>Another reason was the historic stupidity of assuming an (not the) Empty Set to be an apriory member of any other Set, so, again, <code>0</code> seemed to be OK.</p>
+<p>And, of course, the god-like Common Lisp guys used <code>NIL</code> <em>correctly</em> (yes!) &ndash; <em>&ldquo;T is not NIL&rdquo;</em> so, <code>CAR of NIL is NIL</code> and so on.</p>
+<p>It requires a much deeper knowledge to realize that no member of a set should be special (there is a principle of <em>such that</em> behind it, which makes all the elements equivalent in principle, including singleton sets and <em>the</em> empty set).</p>
+<p>Math guys with an abstract algebra and theorem proving background (ML) got this exactly right.</p>
+<p>But see, the C hacks with <code>0</code> are so clever. They resulted in a clever language <em>standard idioms</em> (just as in Common Lisp, but <em>worse</em>). C was a bunch of clever hacks at all levels (syntax, semantics, idioms), just like PHP was for a total newbie.</p>
+<p>One more time &ndash; to say that the inventors of C and UNIX were PL gurus is bullshit. You could say the same about the authors of PHP or Javascript. They were ambitious and enthusiastic and obviously smart, but nowhere near being PL gurus like Barbara Liskov (with her CLU) or the late Ada guys.</p>
+<p>My own metaphor was that back then C was a thin layer of common <em>imperative</em> idioms for a very thin layer of bad (not proper ADTs), leaky, abstractions &ndash; a surgical gloves, through which one can still touch the hardware. PHP 2.0 of its time.</p>
+<p>As for Go, well, it has been aimed as a in principle minimal <em>PROCEDURAL IMPERATIVE</em> language &ldquo;done right&rdquo;, according to what is right in the procedural and imperative mindset, damaged by the hacky and clever Bell Labs and its C (and the early hacky C++) history.</p>
+<p>Okay, enough. &ldquo;The Worse Is Better&rdquo; is out there.</p>
+<p>So, Go is very-very opinionated and it came from its own sect. As a sect it is perfectly fine and cool and clever. They had their own world view and a set of principles to follow, just like any other sectarians do.</p>
+<p>Ignoring literally everything good and true within the ML-family sects was &ldquo;natural&rdquo; and even &ldquo;obvious&rdquo; thing to do, just like Hindu ignores Muslims and so on.</p>
+<p>To say that Go is any good <em>except</em> that being a realization of a certain rigid set of principles, is an insult to intelligence.</p>
+<p>There are less rigid languages (Ocaml, Scala 3) which evolved way better idioms, subtle better semantics, and way more balanced overall feel. They are just a better art.</p>
+<p>And yes, I am autistic enough to appreciate how they would return a two values instead of one (on the stack) but not a pair or any other &ldquo;unnecessary, redundant&rdquo; abstraction. This is an obsession of &ldquo;doing the right thing&rdquo; (again, according to their world view) closest to hardware.</p>
+<p>I myself absolutely love truly high-level ML, OCaml, Matlab or Scala and I see how adding to them &ldquo;a low level imperative DSL with lots of traditional curly braces&rdquo; would make a <em>good</em> language. Think of &ldquo;unsafe&rdquo; as a DSL with all the cool C syntactic hacks and tricks but without preprocessor and other stuff.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/imperative/">Imperative</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

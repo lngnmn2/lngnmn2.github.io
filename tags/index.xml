@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Mar 2025 20:35:29 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 17 Mar 2025 10:48:05 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ADT</title>
+      <link>https://lngnmn2.github.io/tags/adt/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/adt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DSL</title>
+      <link>https://lngnmn2.github.io/tags/dsl/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Imperative</title>
+      <link>https://lngnmn2.github.io/tags/imperative/</link>
+      <pubDate>Mon, 17 Mar 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/imperative/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://lngnmn2.github.io/tags/ai/</link>
@@ -20,20 +41,6 @@
       <link>https://lngnmn2.github.io/tags/llm/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ADT</title>
-      <link>https://lngnmn2.github.io/tags/adt/</link>
-      <pubDate>Thu, 06 Mar 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/adt/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DSL</title>
-      <link>https://lngnmn2.github.io/tags/dsl/</link>
-      <pubDate>Thu, 06 Mar 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
       <description></description>
     </item>
     <item>
@@ -55,13 +62,6 @@
       <link>https://lngnmn2.github.io/tags/haskell/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/haskell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Imperative</title>
-      <link>https://lngnmn2.github.io/tags/imperative/</link>
-      <pubDate>Sun, 24 Nov 2024 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/imperative/</guid>
       <description></description>
     </item>
     <item>
