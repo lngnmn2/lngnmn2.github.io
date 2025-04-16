@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Day 4chan Got Hacked | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="4chan">
+<meta name="description" content="There is something to realize &ndash; some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.
+The most important thing is that the whole website seem to be never updated after being bought from @moot. This explains anything one needs to know about the how.
+It does not really matter which particular attack has been executed &ndash; it is against old PHP which is a fractal of bad design by definition.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-day-4chan-hacked/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-day-4chan-hacked/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:url" content="https://lngnmn2.github.io/articles/the-day-4chan-hacked/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The Day 4chan Got Hacked">
+  <meta property="og:description" content="There is something to realize – some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.
+The most important thing is that the whole website seem to be never updated after being bought from @moot. This explains anything one needs to know about the how.
+It does not really matter which particular attack has been executed – it is against old PHP which is a fractal of bad design by definition.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-04-16T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-04-16T11:46:03+05:45">
+    <meta property="article:tag" content="4chan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Day 4chan Got Hacked">
+<meta name="twitter:description" content="There is something to realize &ndash; some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.
+The most important thing is that the whole website seem to be never updated after being bought from @moot. This explains anything one needs to know about the how.
+It does not really matter which particular attack has been executed &ndash; it is against old PHP which is a fractal of bad design by definition.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Day 4chan Got Hacked",
+      "item": "https://lngnmn2.github.io/articles/the-day-4chan-hacked/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Day 4chan Got Hacked",
+  "name": "The Day 4chan Got Hacked",
+  "description": "There is something to realize \u0026ndash; some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.\nThe most important thing is that the whole website seem to be never updated after being bought from @moot. This explains anything one needs to know about the how.\nIt does not really matter which particular attack has been executed \u0026ndash; it is against old PHP which is a fractal of bad design by definition.",
+  "keywords": [
+    "4chan"
+  ],
+  "articleBody": "There is something to realize – some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.\nThe most important thing is that the whole website seem to be never updated after being bought from @moot. This explains anything one needs to know about the how.\nIt does not really matter which particular attack has been executed – it is against old PHP which is a fractal of bad design by definition.\nAnd yes, just like C , PHP allows crappy things to be coded fast by ignorant overzealous amateurs (and this is exactly how most of the free software used to be made anyway).\nThe problem is, however, that this place was an important cultural and intellectual (yes, intellectual) phenomena, which must be preserved. It was the last global web service which allowed anonymous discussions and have almost no bans and content deletion (except an obvious and boring utter degeneracy).\nFirst of all, there has to be place like this where people, who are by the normie standards are “freaks” and “creeps” could read and post the way they feel like.\nThe mode and style of expression are the big part of overall motivation (yes, yes, just dopamine and friends) and being banned by some low-iq normie who feels like a sheriff and “knowing it all” really hurts those who are simply different.\nYes, one could have highly policed HN and plebdit, but one would never see anything beyond cultivated mediocrity there – everything is within the one std div.\nYes, on 4chan one is overwhelmed by a sub-par, low-iq degeneracy, but this is an inevitable price for occasionally seeing a post by a true outliers (within 2 std divs).\nThese rare gems (one, rarely two in a thread full of shit) are worth all other annoyances.\nThis could be an intelligent and emotional reply, in whatever style the poster felt appropriate to express himself, or even a beyond-mediocrity, artful non-slop image posted (again) in an anime board.\nYes, the level of discussion of Rust on /g/ is grossly incompetent and outrageously amateur, full of a tranny hate (which is not necessarily a bad thing – it is OK for a biologically normal persons to dislike and distaste an obvious – especially at the unconscious, amygdala level – biological fraud, a biological fake, a biological nonsense) but again, once in a while, some person with real knowledge would speak, just to the hell of it, and these few lines could change one’s flawed understanding or give a deep insight.\nNothing like that could be seen on HN or plebdit. HN has been degraded to “look how “smart” and well-articulated I am” and “we all are so intelligent up here, discussing pronoun and non-biological genders”.\nThere, however, has to be places where one is able to call bullshit “a bullshit” when one feels like it the way one wish to express it.\nI personally find all these pseudo-intellectuals who are seriously talking about non-biological sexes (as abstract concepts) and special rights or even privileges of transvestites (sorry, persons identified themselves as…). What is worse – they are trying to force this primitive cliches and primitive socially constructed concepts and abstract notions on you. I simply refuse to communicate with such normies.\nOne more time: anonymity and freedom of expression, including the form as well as the meaning is absolutely essential and necessary for a [more] healthy society as a whole. This has been shown since middle ages and the US constitution reflects and outlines these necessary rights.\nAnd no, no other small niche image-board could replace 4chan. To “work”, to be what it was, it needs to be a world-wide phenomena, the one-stop, so the law of big numbers will kick in. Niche imageboards are just primitive echo-chambers.\nHighly moderated HN when they just cancel those who make them feel offended is not the answer either. Again, nothing but mediocrity and pseudo-intellectual “look, I am so clever” shitposts are there nowadays, in all these few-pages-long threads.\nSo, some fucking stupid zoomers with a PHP exploit fucked up the important part of the internet. “Thank you”, degens!\n",
+  "wordCount" : "700",
+  "inLanguage": "en",
+  "datePublished": "2025-04-16T00:00:00+05:45",
+  "dateModified": "2025-04-16T11:46:03+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-day-4chan-hacked/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Day 4chan Got Hacked
+    </h1>
+    <div class="post-meta"><span title='2025-04-16 00:00:00 +0545 +0545'>April 16, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There is something to realize &ndash; some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.</p>
+<p>The most important thing is that the whole website seem to be never updated after being bought from <code>@moot</code>. This explains anything one needs to know about the <em>how</em>.</p>
+<p>It does not really matter which particular attack has been executed &ndash; it is against old PHP which is a <em>fractal of bad design by definition</em>.</p>
+<p>And yes, just like <code>C</code> , PHP allows crappy things to be coded fast by ignorant overzealous amateurs (and this is exactly how most of the free software used to be made anyway).</p>
+<p>The problem is, however, that this place was an important cultural and intellectual (yes, intellectual) phenomena, which must be preserved. It was the last global web service which allowed anonymous discussions and have almost no bans and content deletion (except an obvious and boring utter degeneracy).</p>
+<p>First of all, there has to be place like this where people, who are by the normie standards are &ldquo;freaks&rdquo; and &ldquo;creeps&rdquo; could read and post the way they feel like.</p>
+<p>The mode and style of expression are the big part of overall motivation (yes, yes, just dopamine and friends) and being banned by some low-iq normie who feels like a sheriff and &ldquo;knowing it all&rdquo; really hurts those who are simply different.</p>
+<p>Yes, one could have highly policed  <code>HN</code> and <code>plebdit</code>, but one would never see anything beyond cultivated mediocrity there &ndash; <em>everything is within the one std div</em>.</p>
+<p>Yes, on <code>4chan</code> one is overwhelmed by a sub-par, low-iq degeneracy, but this is an inevitable price for occasionally seeing a post by  a true outliers (within 2 std divs).</p>
+<p>These <em>rare gems</em> (one, rarely two in a thread full of shit) are worth all other annoyances.</p>
+<p>This could be an intelligent and emotional reply, in whatever style the poster felt appropriate to express himself, or even a beyond-mediocrity, artful non-slop image posted (again) in an anime board.</p>
+<p>Yes, the level of discussion of <em>Rust</em> on <code>/g/</code> is grossly incompetent and outrageously amateur, full of a tranny hate (which is <em>not necessarily</em> a bad thing &ndash; it is OK for a biologically normal persons to dislike and distaste an obvious &ndash; especially at the unconscious, amygdala level &ndash; <em>biological fraud</em>, a <em>biological fake</em>, a <em>biological nonsense</em>) but again, once in a while, some person with real knowledge would speak, just to the hell of it, and these few lines could change one&rsquo;s flawed understanding or give a deep insight.</p>
+<p>Nothing like that could be seen on <code>HN</code> or <code>plebdit</code>. HN has been degraded to &ldquo;look how &ldquo;smart&rdquo; and well-articulated I am&rdquo; and &ldquo;we all are so intelligent up here, discussing pronoun and non-biological genders&rdquo;.</p>
+<p>There, however, has to be places where one is able to call bullshit &ldquo;a bullshit&rdquo; when one feels like it the way one wish to express it.</p>
+<p>I personally find all these pseudo-intellectuals who are seriously talking about non-biological sexes (as abstract concepts) and special rights or even privileges of transvestites (sorry, persons identified themselves as&hellip;).  What is worse &ndash; they are trying to force this primitive cliches and primitive socially constructed concepts and abstract notions on you. I simply refuse to communicate with such normies.</p>
+<p>One more time: anonymity and <em>freedom of expression, including the form as well as the meaning</em> is absolutely essential and necessary for a [more] healthy society as a whole. This has been shown since middle ages and the US constitution reflects and outlines these necessary rights.</p>
+<p>And no, no other small niche image-board could replace <em>4chan</em>. To &ldquo;work&rdquo;, to be what it was, it needs to be a world-wide phenomena, the <em>one-stop</em>, so <em>the law of big numbers</em> will kick in. Niche imageboards are just primitive echo-chambers.</p>
+<p>Highly moderated <code>HN</code> when they just <em>cancel</em> those who make them feel offended is not the answer either. Again, nothing but mediocrity and pseudo-intellectual &ldquo;look, I am so clever&rdquo;  shitposts are there nowadays, in all these few-pages-long threads.</p>
+<p>So, some fucking stupid zoomers with a PHP exploit fucked up the important part of the internet. &ldquo;Thank you&rdquo;, degens!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/4chan/">4chan</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
