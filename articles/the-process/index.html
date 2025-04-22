@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Process | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, embedded, DSL">
+<meta name="description" content="DATE: &lt;2025-04-22 Tue&gt;
+A lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a &ldquo;food porn&rdquo; on social networks. It is a &ldquo;learn-by-doing (and making mistakes)&rdquo; process.
+Small, complete (Always Be Compiled) iterations, which conceptually corresponds to &ldquo;recursive calls&rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-process/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-process/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:url" content="https://lngnmn2.github.io/articles/the-process/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The Process">
+  <meta property="og:description" content="DATE: &lt;2025-04-22 Tue&gt;
+A lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a “food porn” on social networks. It is a “learn-by-doing (and making mistakes)” process.
+Small, complete (Always Be Compiled) iterations, which conceptually corresponds to “recursive calls” of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-04-22T20:14:06+05:45">
+    <meta property="article:modified_time" content="2025-04-22T20:14:06+05:45">
+    <meta property="article:tag" content="ADT">
+    <meta property="article:tag" content="Embedded">
+    <meta property="article:tag" content="DSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Process">
+<meta name="twitter:description" content="DATE: &lt;2025-04-22 Tue&gt;
+A lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a &ldquo;food porn&rdquo; on social networks. It is a &ldquo;learn-by-doing (and making mistakes)&rdquo; process.
+Small, complete (Always Be Compiled) iterations, which conceptually corresponds to &ldquo;recursive calls&rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Process",
+      "item": "https://lngnmn2.github.io/articles/the-process/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Process",
+  "name": "The Process",
+  "description": "DATE: \u0026lt;2025-04-22 Tue\u0026gt;\nA lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a \u0026ldquo;food porn\u0026rdquo; on social networks. It is a \u0026ldquo;learn-by-doing (and making mistakes)\u0026rdquo; process.\nSmall, complete (Always Be Compiled) iterations, which conceptually corresponds to \u0026ldquo;recursive calls\u0026rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.",
+  "keywords": [
+    "ADT", "embedded", "DSL"
+  ],
+  "articleBody": "DATE: \u003c2025-04-22 Tue\u003e\nA lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a “food porn” on social networks. It is a “learn-by-doing (and making mistakes)” process.\nSmall, complete (Always Be Compiled) iterations, which conceptually corresponds to “recursive calls” of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.\nThe analogy is a flawed analogy because recursive function calls are “suspended” and the actual computation occur “backwards” when recursion unwinds (after reaching and computing base-case).\nWhat is truly remarkable, is that the whole shape of an unwinding recursion is just a single chain of nested function “returns”, from the “deepest” (the base case) back to the function call (and to the “caller” function).\nNesting is the only proper way to compose functions, and recursion is just a composition with itself.\nAnyway, the world “recursion” is overloaded, just like any other abstract term. It is, however, useful analogy to visualize recursive process as a spiral which “ends” at the base-case.\nAnd, surprise! a spiral is just a curved (instead of straight) line (a sequence of points), or a path. The insight is that each “cycle” is closer (to the optimum) but goes through the same phases or “stages”.\nDraw a pie-chart and embed a spiral to its center. This picture is our inaccurate but very useful abstraction – sort of an intuitive understanding, which is NOT wrong in principle.\nWithout all this esoteric stuff, it is just what liberal arts normies call an “iterative, continuous refinement” (until there is nothing more to take away). Real artists know and understand the processes.\npartial solutions like partial functions Each branch of a sum-type is a distinct (non-overlapping) partition, so a corresponding clause (of a pattern-matching expression or a function defined by clauses) is a partial function itself.\nThe trick, William Potter, is that another clauses can be added (and even safely removed) at any time without breaking any other clauses (partial functions).\nNothing like this exists in any other art form. Even plain text is more difficult to modify (because it is less structured and you don’t know where to change), leave alone a canvas or a sculpture.(only from scratch)\nThe great Classic Languages have proper “mathematical” sum-types, not some decorated crappy enums..\nSo, unlike cooking, which is a continuous process, we can do iterations, which is the essence of a non-bullshit “Agile” (if “Agile” captured anything real, it is these distinct short iterations, which end up in a stable state of the whole project).\nThe closest analogy is a partially assembled complex artifact (an aircraft jet engine, say) that is always left in a stable state between shifts, except that we do not have the detailed top-down step-by-step instructions, and have to invent the engine as we assembling it and to change the parts on the go.\nMost of cooking cannot be “paused”, while having a “stable intermediate form” (yes, the concept from the molecular biology). Properly structured software components can.\nBy “properly structured” I mean proper algebraic types (and ADTs) and layers of DSLs (Sussman).\nStarting with types “Properly structured from the start” means stating with types. At the most abstract level these are Algebraic Data Types – either sum, product or function types. This is literally “all you need”.\nEvery concept captured from a problem domain most of the time is either a sum or a product, with nesting, if necessary. “Things” are almost always a “compound” product type, while “possibilities” (or possible states) are clearly sum-types.\nState transitions are naturally “connected arrows” – curried functions and function compositions. These arrows (or paths) will form a graph, which will be reduced by evaluation.\nIt is not a random coincidence that “graph reduction” is the only formal model of lazy evaluation of a pure functional language.\nSo, “sums”, “products” and “function composition” (which is nesting).\nOne concept – one ADT – one module This is a discipline – just the right thing to do. Like in the classic languages (of the ML family) – a file that exports an abstract public (stateless) interface and a file that contains (and hides) the representation and implementation details. In Haskell everything declared in a single file (no header files).\nThis, again, is just the right thing to do. Even in Python.\nHeader files a great idea – sometimes you don’t have the sources, but you may have only the headers. This also “promises” that these interfaces are abstract, stateless and “stable” (do not change on a whim).\nStable abstract interfaces or ADTs (which, ideally, form layers of DLSs) are the central notions of the whole discipline.\njust 4 universal forms (or shapes) of the data a sequence a tree an acyclic graph a table the practice Just like one cannot learn how to play a violin by watching others play and by reading about it, one cannot learn how to program by reading. It is a learn by doing discipline, just like music or sports or almost every other human skill (driving a bike or a car, etc).\nThe proper practice is to write a dummy module and its test file first, by writing down a function specification – what it is supposed to do (as we currently understand it), then write the types – the function signature.\nThe body should just return a dummy “default” value (like 0 or an \"\"\") and then immediately write a test that checks some actual property (according to the specification and the signature) related to this dummy value.\nMake sure everything compiles, and all the tests passed. This forces you to thing in the only proper way of thinking – at the level of abstract interfaces and their almost-formal specifications. This is the true non-bullshit essence of programming.\nBarbara Liskov’s books, Michael Clarkson’s “ABC” principle (and its amazing course) and the whole course about Systematic Program Design by Gregor Kiczales – all converge to this very practice (plus my emphasis for stable intermediate states when just a single clause or a single branch or path added, and it compiles and passes all the tests).\n“All tests passed” is a powerful positive reinforcement and the fastest (and the earliest) feed back loop. Motivation fades away very quickly, so a set of proper /habits and a strict discipline (like of an athlete) is what carries one along the way.\nThe early feedback is the key for human (and even animal!) learning process..\nOne more time – one writes dummy modules and dummy tests first.Then the algebraic types (which represent a captured concept named by a module). The function specifications (of operations) and the function’s type-signatures first, with a body that returns a dummy value – the stub (which can be tested right away).\nThis is not some pedantry by some old guys. This practice and the whole process keeps you motivated and in a proper psychological state, so you could keep going. This has been discovered by a lot of trials and errors, just like singing in a church – it just works.\n",
+  "wordCount" : "1188",
+  "inLanguage": "en",
+  "datePublished": "2025-04-22T20:14:06+05:45",
+  "dateModified": "2025-04-22T20:14:06+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-process/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Process
+    </h1>
+    <div class="post-meta"><span title='2025-04-22 20:14:06 +0545 +0545'>April 22, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>DATE:  <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-04-22 Tue&gt;</span></span></p>
+<p>A lot in common with cooking, which is (arguably) the simplest and the most ancient form of <em>engineering</em>. (TODO: explain with examples). No one can learn to cook by watching a &ldquo;food porn&rdquo; on social networks. It is a &ldquo;learn-by-doing (and making mistakes)&rdquo; process.</p>
+<p>Small, <em>complete</em> (Always Be Compiled) iterations, which conceptually corresponds to &ldquo;recursive calls&rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a <em>local optimum</em>.</p>
+<p>The analogy is a flawed analogy because recursive function calls are  &ldquo;suspended&rdquo; and the actual  computation occur &ldquo;backwards&rdquo; when recursion unwinds (after reaching and computing <em>base-case</em>).</p>
+<p>What is truly remarkable, is that the whole shape of an unwinding recursion is just a single chain of <em>nested</em> function &ldquo;returns&rdquo;, from the &ldquo;deepest&rdquo; (the base case) back to the function call (and to the &ldquo;caller&rdquo; function).</p>
+<p>Nesting is <em>the only proper</em> way to <em>compose</em> functions, and recursion is just a <em>composition with itself</em>.</p>
+<p>Anyway, the world &ldquo;recursion&rdquo; is overloaded, just like any other abstract term. It is, however, <em>useful</em> analogy to visualize recursive process as a <em>spiral</em> which &ldquo;ends&rdquo;  at the base-case.</p>
+<p>And, surprise! a <em>spiral</em> is just a curved (instead of straight) <em>line</em> (a sequence of points), or a <em>path</em>. The insight is that each &ldquo;cycle&rdquo; is <em>closer</em> (to the optimum) but goes through the same phases or &ldquo;stages&rdquo;.</p>
+<p>Draw a <em>pie-chart</em> and embed a spiral to its center. This picture is our inaccurate but very <em>useful abstraction</em> &ndash; sort of an intuitive understanding, which is NOT wrong <em>in principle</em>.</p>
+<p>Without all this esoteric stuff,  it is just what liberal arts normies call an &ldquo;iterative, continuous refinement&rdquo; (<em>until there is nothing more to take away</em>). Real artists know and understand the <em>processes</em>.</p>
+<h2 id="partial-solutions-like-partial-functions">partial solutions like partial functions<a hidden class="anchor" aria-hidden="true" href="#partial-solutions-like-partial-functions">#</a></h2>
+<p>Each branch of a sum-type is a distinct (non-overlapping) partition, so a corresponding <em>clause</em> (of a pattern-matching expression or a function defined by clauses) is a <em>partial function itself</em>.</p>
+<p>The trick, William Potter, is that another clauses can be added (and even safely removed) at any time without breaking any other clauses (partial functions).</p>
+<p>Nothing like this exists in any other <em>art form</em>. Even plain text is more difficult to modify (because it is less structured and you don&rsquo;t know where to change), leave alone a canvas or a sculpture.(only from scratch)</p>
+<p>The great Classic Languages have proper &ldquo;mathematical&rdquo; <em>sum-types</em>, not some decorated crappy enums..</p>
+<p>So, unlike cooking, which is a continuous process, we can do <em>iterations</em>, which is the essence of a non-bullshit &ldquo;Agile&rdquo; (if &ldquo;Agile&rdquo; captured anything real, it is these distinct short iterations, which end up in a <em>stable state</em> of the whole project).</p>
+<p>The closest analogy is a partially assembled complex artifact (an aircraft jet engine, say) that is always left in a stable state between shifts, except that we do not have the detailed top-down step-by-step instructions, and have to invent the engine as we assembling it and to change the parts on the go.</p>
+<p>Most of cooking cannot be &ldquo;paused&rdquo;, while having a &ldquo;stable intermediate form&rdquo; (yes, the concept from the molecular biology). Properly structured software components can.</p>
+<p>By &ldquo;properly structured&rdquo; I mean proper algebraic types (and ADTs) and layers of DSLs (Sussman).</p>
+<h2 id="starting-with-types">Starting with types<a hidden class="anchor" aria-hidden="true" href="#starting-with-types">#</a></h2>
+<p>&ldquo;Properly structured from the start&rdquo; means <em>stating with types</em>. At the most abstract level these are <em>Algebraic Data Types</em> &ndash; either <em>sum, product or function</em> types. This is literally &ldquo;all you need&rdquo;.</p>
+<p>Every concept captured from a problem domain most of the time is  either a sum or a product, with nesting, if necessary. &ldquo;Things&rdquo; are almost always a <em>&ldquo;compound&rdquo; product type</em>, while &ldquo;possibilities&rdquo; (or possible states) are clearly <em>sum-types</em>.</p>
+<p>State transitions are naturally &ldquo;connected  arrows&rdquo; &ndash; curried functions and function compositions. These arrows (or paths) will form a <em>graph</em>, which will be reduced by evaluation.</p>
+<p>It is not a random coincidence that &ldquo;graph reduction&rdquo; is the only formal model of <em>lazy evaluation</em> of a pure functional language.</p>
+<p>So, &ldquo;sums&rdquo;, &ldquo;products&rdquo; and &ldquo;function composition&rdquo; (which is <em>nesting</em>).</p>
+<h2 id="one-concept-one-adt-one-module">One concept &ndash; one ADT &ndash; one module<a hidden class="anchor" aria-hidden="true" href="#one-concept-one-adt-one-module">#</a></h2>
+<p>This is a discipline &ndash; just the right thing to do. Like in the <em>classic languages</em> (of the ML family) &ndash; a file that exports an abstract public (stateless) interface and a file that contains (and hides) the representation and  implementation details.  In Haskell everything declared in a single file (no header files).</p>
+<p>This, again, is just the right thing to do. Even in Python.</p>
+<p>Header files a great idea &ndash; sometimes you don&rsquo;t have the sources, but you may have only the headers. This also &ldquo;promises&rdquo; that these interfaces are abstract, stateless and &ldquo;stable&rdquo; (do not change on a whim).</p>
+<p>Stable abstract interfaces or ADTs (which, ideally, form layers of DLSs) are the central notions of the whole discipline.</p>
+<h2 id="just-4-universal-forms--or-shapes--of-the-data">just 4 universal forms (or shapes) of the data<a hidden class="anchor" aria-hidden="true" href="#just-4-universal-forms--or-shapes--of-the-data">#</a></h2>
+<ul>
+<li>a sequence</li>
+<li>a tree</li>
+<li>an <em>acyclic</em> graph</li>
+<li>a table</li>
+</ul>
+<h2 id="the-practice">the practice<a hidden class="anchor" aria-hidden="true" href="#the-practice">#</a></h2>
+<p>Just like one cannot learn how to play a violin by watching others play and by reading about it, one cannot learn how to program by reading. It is a learn by doing discipline, just like music or sports or  almost every other human skill (driving a bike or a car, etc).</p>
+<p>The proper practice is to write a <em>dummy module and its test file first</em>, by writing down  <em>a function specification</em> &ndash; what it is supposed to do (as we  currently understand it), then write the <em>types</em> &ndash;  the function signature.</p>
+<p>The  body should just return a dummy &ldquo;default&rdquo; value (like <code>0</code> or an <code>&quot;&quot;</code>&quot;) and then  immediately write a test that checks some actual property (according to the specification and the signature) related to this dummy value.</p>
+<p>Make sure everything compiles, and all the tests passed. This forces you to thing in the only proper way of thinking &ndash; at the level of abstract interfaces and their almost-formal specifications. This is the true non-bullshit essence of programming.</p>
+<p>Barbara Liskov&rsquo;s books, Michael Clarkson&rsquo;s &ldquo;ABC&rdquo; principle (and its amazing course) and the whole course about <em>Systematic Program Design</em> by Gregor Kiczales  &ndash; all converge to this very practice (plus my emphasis for <em>stable intermediate states</em> when just a <em>single clause or a single branch or path</em> added, and it compiles and passes all the tests).</p>
+<p>&ldquo;All tests passed&rdquo; is a powerful positive reinforcement and the fastest (and the earliest) feed back loop. Motivation fades away very quickly, so a set of <em>proper /habits</em> and a <em>strict discipline</em> (like of an athlete) is what carries one along the way.</p>
+<p>The <em>early feedback</em> is the key for human (and even animal!) learning process..</p>
+<p>One more time &ndash; one writes dummy modules and dummy tests first.Then the algebraic types (which represent a captured concept named by a module). The  function specifications  (of operations) and the function&rsquo;s  type-signatures first, with a body that returns a dummy value &ndash; the stub (which can be tested right away).</p>
+<p>This is not some pedantry by some old guys. This practice and the whole process keeps you motivated and in a proper psychological state, so you could keep going. This has been discovered by a lot of trials and errors, just like singing in a church &ndash; it just works.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/embedded/">Embedded</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
