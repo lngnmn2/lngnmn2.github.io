@@ -6,8 +6,18 @@
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Mar 2025 10:51:49 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 30 Apr 2025 15:30:16 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Just a Packaged Slop</title>
+      <link>https://lngnmn2.github.io/articles/just-a-packaged-slop/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/just-a-packaged-slop/</guid>
+      <description>DESCRIPTION: Removing the veil of Maya to see things as they really are
+What to do when you have discovered that something is wrong with the world? Nothing, this happens all the time.
+Everything is wrong with C++, but everyone uses it, everything is wrong with packaged food, especially the toxic crap Nestle produced, and everyone is buying it. Nothing can be done.
+Here is what is wrong with your &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;LLMs&amp;rdquo;.</description>
+    </item>
     <item>
       <title>Large Ladyboy Models</title>
       <link>https://lngnmn2.github.io/articles/large-ladyboy-models/</link>
@@ -99,6 +109,13 @@ No one can explain the actual mechanisms of how exactly or even why the layers a
       <description>Abstract bullshitting is not enough.</description>
     </item>
     <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
+    </item>
+    <item>
       <title>LLMS For Coding</title>
       <link>https://lngnmn2.github.io/articles/llms-for-coding/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
@@ -106,14 +123,6 @@ No one can explain the actual mechanisms of how exactly or even why the layers a
       <description>Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;
 First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.
 If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.</description>
-    </item>
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
     </item>
   </channel>
 </rss>
