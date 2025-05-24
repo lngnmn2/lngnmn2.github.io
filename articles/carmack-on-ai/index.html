@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Carmack On Ai | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI">
+<meta name="description" content="https://twitter.com/ID_AA_Carmack/status/1925710474366034326
+I have read the notes. they are a mess.
+For me, Carmack, aside from being a legend, is sort of Goggins of imperative procedural programming, who learned everything by doing without studying the theories first.
+His ultimate strength is, it seems, in a focused doing, ploughing through a problem, if you will, without being exceedingly dramatic.
+Learning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own &ldquo;emergent&rdquo; intuitive understanding &ndash; ones own mental model of how things should be done.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/carmack-on-ai/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/carmack-on-ai/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:url" content="https://lngnmn2.github.io/articles/carmack-on-ai/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Carmack On Ai">
+  <meta property="og:description" content="https://twitter.com/ID_AA_Carmack/status/1925710474366034326
+I have read the notes. they are a mess.
+For me, Carmack, aside from being a legend, is sort of Goggins of imperative procedural programming, who learned everything by doing without studying the theories first.
+His ultimate strength is, it seems, in a focused doing, ploughing through a problem, if you will, without being exceedingly dramatic.
+Learning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own “emergent” intuitive understanding – ones own mental model of how things should be done.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-05-24T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-05-24T11:09:36+05:45">
+    <meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Carmack On Ai">
+<meta name="twitter:description" content="https://twitter.com/ID_AA_Carmack/status/1925710474366034326
+I have read the notes. they are a mess.
+For me, Carmack, aside from being a legend, is sort of Goggins of imperative procedural programming, who learned everything by doing without studying the theories first.
+His ultimate strength is, it seems, in a focused doing, ploughing through a problem, if you will, without being exceedingly dramatic.
+Learning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own &ldquo;emergent&rdquo; intuitive understanding &ndash; ones own mental model of how things should be done.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Carmack On Ai",
+      "item": "https://lngnmn2.github.io/articles/carmack-on-ai/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Carmack On Ai",
+  "name": "Carmack On Ai",
+  "description": "https://twitter.com/ID_AA_Carmack/status/1925710474366034326\nI have read the notes. they are a mess.\nFor me, Carmack, aside from being a legend, is sort of Goggins of imperative procedural programming, who learned everything by doing without studying the theories first.\nHis ultimate strength is, it seems, in a focused doing, ploughing through a problem, if you will, without being exceedingly dramatic.\nLearning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own \u0026ldquo;emergent\u0026rdquo; intuitive understanding \u0026ndash; ones own mental model of how things should be done.",
+  "keywords": [
+    "AI"
+  ],
+  "articleBody": "https://twitter.com/ID_AA_Carmack/status/1925710474366034326\nI have read the notes. they are a mess.\nFor me, Carmack, aside from being a legend, is sort of Goggins of imperative procedural programming, who learned everything by doing without studying the theories first.\nHis ultimate strength is, it seems, in a focused doing, ploughing through a problem, if you will, without being exceedingly dramatic.\nLearning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own “emergent” intuitive understanding – ones own mental model of how things should be done.\nAnd he is, indeed, what he is. He missed the essense of FP (the referential transparency property and the resulting equational reasoning) while was arguing about pure functions as a sort of esoteric stuff.\nHe acknowledged the power of high-level languages and, implicitly, that a proper level of abstraction should match the level of the concepts in the problem domain, the principle that math-inclined FP folks have discovered long ago.\nThere are a lot deep insights in serious FP, including the fact that the shape of the data (of an algebraic data type) determine the shape of functions (operations), and even more general, that Algebraic Data Types capture some universal structures or common patterns.\nAnother the most fundamental aspect is that in FP one never “sees” the actual values, one is only declaring /what has to be done /eventually, using structural pattern-matching and case-analysis. It is not a random coincidence that patterns can be used everywhere, or that individual clauses define partial functions, or that everything can be uniformly “curried” and partially applied, even at the type-level. FP goes as deep as the Curry-Howard Correspondence, which connects FP, through the properly captured recurrent universal patterns, back to What Is. FP, like math itself, is about recurring patterns.\nAnyway, he is the champion of procedural imperative programming (and concrete data structs), and not particularly abstract-mathematics inclined, so be it.\nAs for AI, just observability is not enough. There are much more than the visual system in human and animals learning process. There are emotions and feelings, which can be traced back to the levels of certain neuromodulators, which play a crucial role in the learning process, both as motivation and in habitual repetition, which leads, via cognitive feedback loops, to various forms of reinforcement.\nIt has to be as complex as Skinner’s Behaviorism (which is a gross oversimplification in itself), and mere LLMs (with all the memes, like “attention” and “reasoning”) are obviously not enough – they lack necessary machinery of emotions and feelings, leave alone actual (non-abstract) awareness and self-awareness (for which another kind of a specialized machinery is required),which has been evolved in biology.\nSo, no, it is not that simple as the current mass-hysteria about LLMs and “AI” suggests. The whole bunch of specialized brain areas and especially well-defined signaling among them are just “missing” from the current models. It takes a different kind of the mind to see this clearly.\nReinforcement learning as the systematic way of “strengthen” the connections within a NN, and thus presumably capturing the feedback to build a frequency-based probabilistic abstract models is not enough either.\nFrequency-based probabilistic “knowledge” of events in the environment is different from the conditional probabilities of words (or tokens) about the environment, while ultimately they are incomplete views of The Same.\nUltimately, evolution builds biological structures within the brain – from amygdala, to specialized “areas” and “cortexes” (which are being replicated in the developmental process from a single cell to an organism) which reflects the constraints of the particular environment in which it happen to evolve. This is the central principle (not dissimilar to that the shape of the data determined the shape of the code).\nAgain, there are actual evolved structures, not just probabilities. The whole probabilistic approach is wrong. It is a gross oversimplification, using simple abstraction of counting. Mother Nature does not count. She build structures.\nWe are nowhere near to understand what is “I” in the “AI”. As for the games, the notion of an “analogy” and and similarity (which is a high-level one and seemingly can be captured by the mathematical notion of an isomorphism, while at the biological level it is not just “looks the same”, but especially “feels the same”). The notion that the current AI completely lacks.\n",
+  "wordCount" : "715",
+  "inLanguage": "en",
+  "datePublished": "2025-05-24T00:00:00+05:45",
+  "dateModified": "2025-05-24T11:09:36+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/carmack-on-ai/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Carmack On Ai
+    </h1>
+    <div class="post-meta"><span title='2025-05-24 00:00:00 +0545 +0545'>May 24, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://twitter.com/ID_AA_Carmack/status/1925710474366034326">https://twitter.com/ID_AA_Carmack/status/1925710474366034326</a></p>
+<p>I have read the notes. they are a mess.</p>
+<p>For me, Carmack, aside from being a legend, is sort of Goggins of <em>imperative procedural programming</em>, who learned everything by doing without studying the theories first.</p>
+<p>His ultimate strength is, it seems, in a <em>focused doing</em>, ploughing through a problem, if you will, without being exceedingly dramatic.</p>
+<p>Learning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own &ldquo;emergent&rdquo; intuitive understanding &ndash; ones own mental model of how things should be done.</p>
+<p>And he is, indeed, what he is. He missed the essense of FP (the referential transparency property and the resulting equational reasoning) while was arguing about pure functions as a sort of esoteric stuff.</p>
+<p>He acknowledged the power of high-level languages and, implicitly, that a proper level of abstraction should match the level of the concepts in the problem domain, the principle that math-inclined FP folks have discovered long ago.</p>
+<p>There are a lot deep insights in serious FP, including the fact that the shape of the data (of an algebraic data type)  determine the shape of functions (operations), and even more general, that Algebraic Data Types capture some universal structures or common patterns.</p>
+<p>Another the most fundamental aspect is that in FP one never &ldquo;sees&rdquo; the actual values, one is only <em>declaring /what has to be done /eventually</em>, using structural pattern-matching and case-analysis.  It is not a random coincidence that patterns can be used everywhere, or that individual clauses define partial functions, or that everything can be uniformly <em>&ldquo;curried&rdquo;</em> and <em>partially applied</em>, even at the type-level.  FP goes as deep as the Curry-Howard Correspondence, which connects FP, through the properly captured recurrent universal patterns,  back to <em>What Is</em>. FP, like math itself, is about recurring patterns.</p>
+<p>Anyway, he is the champion of <em>procedural imperative programming (and concrete data structs)</em>, and not particularly abstract-mathematics inclined, so be it.</p>
+<p>As for AI, just observability is not enough. There are much more than the visual system in human and animals learning process.  There are emotions  and feelings, which can be traced back to the levels of certain neuromodulators, which play a crucial role in the learning process, both as motivation and in habitual repetition, which leads, via cognitive feedback loops, to various forms of reinforcement.</p>
+<p>It has to be as complex as Skinner&rsquo;s Behaviorism (which is a gross oversimplification in itself), and mere LLMs (with all the memes, like &ldquo;attention&rdquo; and &ldquo;reasoning&rdquo;) are obviously not enough &ndash; they lack necessary machinery of emotions and feelings, leave alone actual (non-abstract) awareness and self-awareness (for which another kind of a specialized machinery is required),which has been evolved in biology.</p>
+<p>So, no, it is not that simple as the current mass-hysteria  about LLMs and &ldquo;AI&rdquo; suggests.  The whole bunch of specialized brain areas and especially well-defined signaling among them are just &ldquo;missing&rdquo; from the current models. It takes a different kind of the mind to see this clearly.</p>
+<p>Reinforcement learning as the systematic way of &ldquo;strengthen&rdquo; the connections within a NN, and thus presumably capturing the feedback to build a <em>frequency-based probabilistic abstract models</em> is not enough either.</p>
+<p>Frequency-based probabilistic &ldquo;knowledge&rdquo; of events in the environment is different from the conditional probabilities of words (or tokens) about the environment, while ultimately they are incomplete views of The Same.</p>
+<p>Ultimately, evolution builds biological structures within the brain &ndash; from amygdala, to specialized &ldquo;areas&rdquo; and  &ldquo;cortexes&rdquo; (which are being replicated  in the developmental process from a single cell to an organism) which reflects the constraints of the particular environment in which it happen to evolve. This is the central principle (not dissimilar to that the shape of the data determined the shape of the code).</p>
+<p>Again, there are actual evolved structures, not just probabilities. The whole probabilistic approach is wrong. It is a gross oversimplification, using simple abstraction of counting. Mother Nature does not count. She build structures.</p>
+<p>We are nowhere near to understand what is &ldquo;I&rdquo; in the &ldquo;AI&rdquo;. As for the games, the notion of an &ldquo;analogy&rdquo; and and similarity (which is a high-level one and seemingly can be captured  by the mathematical notion of an isomorphism, while at the biological level it is not just &ldquo;looks the same&rdquo;, but especially &ldquo;feels the same&rdquo;). The notion that the current AI completely lacks.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

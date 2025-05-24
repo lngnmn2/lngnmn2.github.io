@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 May 2025 08:54:29 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 24 May 2025 11:09:36 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -18,6 +18,17 @@ I wrote a bunch of articles by an organ in the first person.
 https://schiptsov.github.io/
 That scene from Rocky movie Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:
 ..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.</description>
+    </item>
+    <item>
+      <title>Carmack On Ai</title>
+      <link>https://lngnmn2.github.io/articles/carmack-on-ai/</link>
+      <pubDate>Sat, 24 May 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/carmack-on-ai/</guid>
+      <description>https://twitter.com/ID_AA_Carmack/status/1925710474366034326
+I have read the notes. they are a mess.
+For me, Carmack, aside from being a legend, is sort of Goggins of imperative procedural programming, who learned everything by doing without studying the theories first.
+His ultimate strength is, it seems, in a focused doing, ploughing through a problem, if you will, without being exceedingly dramatic.
+Learning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own &amp;ldquo;emergent&amp;rdquo; intuitive understanding &amp;ndash; ones own mental model of how things should be done.</description>
     </item>
     <item>
       <title>Emergence Of A New Cult</title>
