@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Poor man&#39;s Bullshit | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="types">
+<meta name="description" content="DESCRIPTION: The monument and a world-heritage &ldquo;site&rdquo;.
+Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
+https://lobste.rs/s/y13fa3/poor_man_s_types
+Replying with the Djikstra &ldquo;presense, not the absense&rdquo; quote would be too easy.
+There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/poor-mans-bullshit/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/poor-mans-bullshit/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+
+<meta property="og:url" content="https://lngnmn2.github.io/articles/poor-mans-bullshit/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Poor man&#39;s Bullshit">
+  <meta property="og:description" content="DESCRIPTION: The monument and a world-heritage “site”.
+Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
+https://lobste.rs/s/y13fa3/poor_man_s_types
+Replying with the Djikstra “presense, not the absense” quote would be too easy.
+There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-05-31T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-05-31T08:41:28+05:45">
+    <meta property="article:tag" content="Types">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Poor man&#39;s Bullshit">
+<meta name="twitter:description" content="DESCRIPTION: The monument and a world-heritage &ldquo;site&rdquo;.
+Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
+https://lobste.rs/s/y13fa3/poor_man_s_types
+Replying with the Djikstra &ldquo;presense, not the absense&rdquo; quote would be too easy.
+There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Poor man's Bullshit",
+      "item": "https://lngnmn2.github.io/articles/poor-mans-bullshit/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Poor man's Bullshit",
+  "name": "Poor man\u0027s Bullshit",
+  "description": "DESCRIPTION: The monument and a world-heritage \u0026ldquo;site\u0026rdquo;.\nSome midwit tried to be clever, and other midwits applauded. The top story on Lobsers.\nhttps://lobste.rs/s/y13fa3/poor_man_s_types\nReplying with the Djikstra \u0026ldquo;presense, not the absense\u0026rdquo; quote would be too easy.\nThere are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc.",
+  "keywords": [
+    "types"
+  ],
+  "articleBody": "DESCRIPTION: The monument and a world-heritage “site”.\nSome midwit tried to be clever, and other midwits applauded. The top story on Lobsers.\nhttps://lobste.rs/s/y13fa3/poor_man_s_types\nReplying with the Djikstra “presense, not the absense” quote would be too easy.\nThere are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc. This alone would have been enough to ever rise this bullshit again.\nThere is, however, more than that. Second, types aren’t just mere sets of values (with a set of a meaningful operations on values associated to it – the basic building blocks of abstract algebra – recurringly emerging patterns, properly captured as abstract notions – Group, Ring, Field, etc). This is just the most basic construct.\nThere is a notion (related to the set-subset relation) which we call “general-specific”, or specialization in general. Type-constructors produce or “specialize” types by taking type-parameters (type-variables) as arguments. But this alone would be not interesting enough.\nThe actual “enlightenment” comes after realization that a set of constraints (as being an instance of a particular type-class) can be added for a given type-variable(s), and this, of, course, corresponds to the mathematical qualifier “such that” at the level of an abstract algebra of types (or at the level of interfaces, which are sets of related type-signatures).\nNotice, that this is “the best thing we can do” with types, and this has been discovered, not invented – has been properly generalized from [emergent structure of] Mathematics itself.\nOne more time, the notion of a general-specific at the level of interfaces is a whole “horizontal” dimension, and the additional (well-defined) constraints imposed by type-classes is the “third” one.\nThis is only the declarative aspect. There are also currying and partial application of type-constructors, which is a whole new level of abstraction on that “third” dimension.\nOf course, everything can be abused and misused to the point of ridicule, so just focus of how the universal mathematical notions have been formalized in Haskell using type classes and type-constructors.\nThis was not arbitrary, it captured some common abstract structure which is prior to it.\nMay be you can see this “What Is -\u003e Patterns -\u003e Mathematics -\u003e Lambda Calculus -\u003e Types -\u003e Type-Classes -\u003e Type-Level lambdas”.\n",
+  "wordCount" : "388",
+  "inLanguage": "en",
+  "datePublished": "2025-05-31T00:00:00+05:45",
+  "dateModified": "2025-05-31T08:41:28+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/poor-mans-bullshit/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Poor man&#39;s Bullshit
+    </h1>
+    <div class="post-meta"><span title='2025-05-31 00:00:00 +0545 +0545'>May 31, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>DESCRIPTION: The monument and a world-heritage &ldquo;site&rdquo;.</p>
+<p>Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.</p>
+<p><a href="https://lobste.rs/s/y13fa3/poor_man_s_types">https://lobste.rs/s/y13fa3/poor_man_s_types</a></p>
+<p>Replying with the Djikstra &ldquo;<em>presense, not the absense</em>&rdquo; quote would be too easy.</p>
+<p>There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc. This alone would have been enough to ever rise this bullshit again.</p>
+<p>There is, however, more than that.  Second, types aren&rsquo;t just mere sets of values (with a set of a meaningful operations on values associated to it &ndash; the basic building blocks of abstract algebra &ndash; recurringly emerging patterns, properly captured as abstract notions &ndash; Group, Ring, Field, etc).  This is just the most basic construct.</p>
+<p>There is a notion (related to the set-subset relation) which we call &ldquo;general-specific&rdquo;, or specialization in general. Type-constructors produce or &ldquo;specialize&rdquo; types by taking type-parameters (type-variables) as arguments. But this alone would be not interesting enough.</p>
+<p>The actual &ldquo;enlightenment&rdquo; comes after realization that a set of constraints (as being an instance of a particular type-class) can be added for a given type-variable(s), and this, of, course, corresponds to the mathematical qualifier &ldquo;<em>such that</em>&rdquo; at the level of an <em>abstract algebra of types</em> (or at the level of <em>interfaces</em>, which are sets of related type-signatures).</p>
+<p>Notice, that this is &ldquo;the best thing we can do&rdquo; with types, and this has been discovered, not invented &ndash; has been properly generalized from [emergent structure of] Mathematics itself.</p>
+<p>One more time, the notion of a general-specific at the level of interfaces is a whole &ldquo;horizontal&rdquo; dimension, and the additional (well-defined) constraints imposed by type-classes is the &ldquo;third&rdquo; one.</p>
+<p>This is only the declarative aspect. There are also <em>currying</em> and <em>partial application</em> of type-constructors, which is a whole new level of abstraction on that &ldquo;third&rdquo; dimension.</p>
+<p>Of course, everything can be abused and misused to the point of ridicule, so just focus of how the universal mathematical notions have been formalized in Haskell using type classes and type-constructors.</p>
+<p>This was not arbitrary, it captured some common abstract structure which is prior to it.</p>
+<p>May be you can see this &ldquo;What Is -&gt; Patterns -&gt; Mathematics -&gt; Lambda Calculus -&gt; Types -&gt; Type-Classes -&gt; Type-Level lambdas&rdquo;.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/types/">Types</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

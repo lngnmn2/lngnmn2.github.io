@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 May 2025 15:17:12 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 31 May 2025 08:41:28 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -18,6 +18,17 @@ I wrote a bunch of articles by an organ in the first person.
 https://schiptsov.github.io/
 That scene from Rocky movie Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:
 ..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.</description>
+    </item>
+    <item>
+      <title>Poor man&#39;s Bullshit</title>
+      <link>https://lngnmn2.github.io/articles/poor-mans-bullshit/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/poor-mans-bullshit/</guid>
+      <description>DESCRIPTION: The monument and a world-heritage &amp;ldquo;site&amp;rdquo;.
+Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
+https://lobste.rs/s/y13fa3/poor_man_s_types
+Replying with the Djikstra &amp;ldquo;presense, not the absense&amp;rdquo; quote would be too easy.
+There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc.</description>
     </item>
     <item>
       <title>Move Fast And Build Things</title>
