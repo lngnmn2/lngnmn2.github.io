@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 May 2025 11:10:39 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 31 May 2025 16:09:13 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bullshit Bullshit Everywhere</title>
+      <link>https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/</guid>
+      <description>&amp;ldquo;The Darwin Gödel Machine: AI that improves itself by rewriting its own code&amp;rdquo;
+https://sakana.ai/dgm/
+There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs &amp;ndash; it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not &amp;ldquo;know&amp;rdquo; what it is doing.</description>
+    </item>
     <item>
       <title>Carmack On Ai</title>
       <link>https://lngnmn2.github.io/articles/carmack-on-ai/</link>

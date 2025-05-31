@@ -6,18 +6,26 @@
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.131.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 May 2025 08:41:28 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 31 May 2025 16:09:59 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bullshit Bullshit Everywhere</title>
+      <link>https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/</link>
+      <pubDate>Sat, 31 May 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/</guid>
+      <description>&amp;ldquo;The Darwin Gödel Machine: AI that improves itself by rewriting its own code&amp;rdquo;
+https://sakana.ai/dgm/
+There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs &amp;ndash; it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not &amp;ldquo;know&amp;rdquo; what it is doing.</description>
+    </item>
     <item>
       <title>Poor man&#39;s Bullshit</title>
       <link>https://lngnmn2.github.io/articles/poor-mans-bullshit/</link>
       <pubDate>Sat, 31 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/poor-mans-bullshit/</guid>
-      <description>DESCRIPTION: The monument and a world-heritage &amp;ldquo;site&amp;rdquo;.
-Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
+      <description>Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
 https://lobste.rs/s/y13fa3/poor_man_s_types
 Replying with the Djikstra &amp;ldquo;presense, not the absense&amp;rdquo; quote would be too easy.
-There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc.</description>
+There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc. This alone would have been enough to ever rise this bullshit again.</description>
     </item>
     <item>
       <title>Move Fast And Build Things</title>
