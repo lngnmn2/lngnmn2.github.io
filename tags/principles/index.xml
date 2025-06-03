@@ -4,7 +4,7 @@
     <title>Principles on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/principles/</link>
     <description>Recent content in Principles on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Sep 2023 00:00:00 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/principles/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,13 @@
       <link>https://lngnmn2.github.io/articles/prog1/</link>
       <pubDate>Sun, 24 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/prog1/</guid>
-      <description>Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
-Both algebraic types (&amp;ldquo;products&amp;rdquo; and &amp;ldquo;sums&amp;rdquo;), could be used &amp;ldquo;like tables&amp;rdquo;, with new columns being added without affecting any code that is already out there.
-This implies a by name instead of position-based (offset) access.
-This, in turn, is the fundamental, definitive property of structs over tuples.</description>
+      <description>&lt;p&gt;Special concern for &lt;em&gt;precise&lt;/em&gt; definitions, clarity and brevity
+(omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).&lt;/p&gt;
+&lt;p&gt;Both &lt;em&gt;algebraic types&lt;/em&gt; (&amp;ldquo;products&amp;rdquo; and &amp;ldquo;sums&amp;rdquo;), could be used &amp;ldquo;like
+tables&amp;rdquo;, with new &lt;em&gt;columns&lt;/em&gt; being added without affecting any code
+that is already out there.&lt;/p&gt;
+&lt;p&gt;This implies a &lt;em&gt;by name&lt;/em&gt; instead of position-based (offset) access.&lt;/p&gt;
+&lt;p&gt;This, in turn, is the fundamental, definitive property of structs over tuples.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

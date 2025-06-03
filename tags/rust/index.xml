@@ -4,7 +4,7 @@
     <title>Rust on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/rust/</link>
     <description>Recent content in Rust on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Oct 2023 16:45:07 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
@@ -13,18 +13,30 @@
       <link>https://lngnmn2.github.io/articles/async-rust/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/async-rust/</guid>
-      <description>So, you want to add these async/~await/ keywords?
-First of all, it has already been seriously researched by the C#/F# .NET guys. Just learn what they have come up with.
-One&amp;rsquo;s own principle-guided reasoning could proceed like this:
-The fundamental difference between ordinary procedures and async procedures is the whole protocol for calling and returning of values, and dealing with actual implementation of the corresponding mechanisms (abstract at this point, but has to reuse what is already out there).</description>
+      <description>&lt;p&gt;So, you want to add these &lt;del&gt;async&lt;/del&gt;/~await/ keywords?&lt;/p&gt;
+&lt;p&gt;First of all, it has already been seriously researched by the C#/F#
+.NET guys. Just learn what they have come up with.&lt;/p&gt;
+&lt;p&gt;One&amp;rsquo;s own &lt;em&gt;principle-guided&lt;/em&gt; reasoning could proceed like this:&lt;/p&gt;
+&lt;p&gt;The fundamental difference between ordinary procedures and &lt;code&gt;async&lt;/code&gt;
+procedures is the whole &lt;em&gt;protocol&lt;/em&gt; for calling and returning of values,
+and dealing with actual implementation of the corresponding mechanisms
+(abstract at this point, but has to reuse what is already out there).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Rust</title>
       <link>https://lngnmn2.github.io/articles/unrestanding-rust/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/unrestanding-rust/</guid>
-      <description>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an &amp;ldquo;arch and OS /duo&amp;rdquo;, and to be &amp;ldquo;aware of&amp;rdquo; the ABIs in general.
-Overview Rust is, in principle, an imperative language.</description>
+      <description>&lt;p&gt;The Rust programming language has been &lt;em&gt;hyped&lt;/em&gt; as a &lt;em&gt;system programming language&lt;/em&gt;,
+which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the &lt;em&gt;hardware-level
+abstractions&lt;/em&gt;, such as the Stack, the Heap and the Procedures, together with the
+&lt;em&gt;operating system-level abstractions&lt;/em&gt;, such as following the particular &lt;em&gt;calling conventions&lt;/em&gt;
+(a set of &lt;em&gt;standardized interfaces&lt;/em&gt;) for an &lt;em&gt;&amp;ldquo;arch and OS /duo&amp;rdquo;&lt;/em&gt;, and to be &amp;ldquo;aware of&amp;rdquo;
+the ABIs in general.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Rust is, in principle, an &lt;em&gt;imperative language&lt;/em&gt;. The order of &lt;em&gt;statements&lt;/em&gt; matters
+(a lot, giving the changes of ownership), &lt;em&gt;expressions&lt;/em&gt; are just an addition, and
+there is no (and never will be) &lt;em&gt;referential transparency&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

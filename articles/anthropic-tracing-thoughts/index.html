@@ -10,7 +10,7 @@
 <meta name="description" content="bullshit, bullshit, bullshit...">
 <meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/anthropic-tracing-thoughts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -66,10 +66,7 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-
-<meta property="og:url" content="https://lngnmn2.github.io/articles/anthropic-tracing-thoughts/">
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/anthropic-tracing-thoughts/">
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="Fuck This Shit">
   <meta property="og:description" content="bullshit, bullshit, bullshit...">
@@ -156,7 +153,7 @@ font-family: 'Source Code Pro', monospace;
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -206,25 +203,21 @@ font-family: 'Source Code Pro', monospace;
 <p>A fresh torrent of abstract &ldquo;norime-friendly&rdquo; bullshit is trending on tech social media.</p>
 <p><a href="https://www.anthropic.com/research/tracing-thoughts-language-model">https://www.anthropic.com/research/tracing-thoughts-language-model</a></p>
 <blockquote>
-<p>Claude sometimes thinks in a conceptual space that is shared between language&hellip;</p>
-</blockquote>
+<p>Claude sometimes thinks in a conceptual space that is shared between language&hellip;</p></blockquote>
 <p>No, it does not <em>think</em>. Period. There are <em>paths</em>, which emerge by from the training process, which consists of &ldquo;thickness&rdquo; of weights (if you will), or more precisely &ndash; the paths are the emergent structures which result from selecting the highest probabilities. This is <em>not</em> thinking. Not even close.</p>
 <p>Yes, abstractly or rather vaguely, we could say that an average person repeats that he or she have heard most often, but even this is an obvious bullshit. And parroting is not by any means an intelligence.</p>
 <blockquote>
-<p>Claude will plan what it will say many words ahead, and write to get to that destination&hellip;</p>
-</blockquote>
+<p>Claude will plan what it will say many words ahead, and write to get to that destination&hellip;</p></blockquote>
 <p>No, it wouldn&rsquo;t. There is no planing machinery anywhere among the actual algorithms used. What appears to be &ldquo;planing&rdquo; is just following &ldquo;emergent&rdquo; (from th training process) &ldquo;paths&rdquo;, which are falsely interpreted as being &ldquo;planned&rdquo;.</p>
 <blockquote>
-<p>Claude can write out its reasoning step-by-step.</p>
-</blockquote>
+<p>Claude can write out its reasoning step-by-step.</p></blockquote>
 <p>It does not possess any &ldquo;reasoning&rdquo; capacity. The post-training &ldquo;tuning&rdquo; process use reinforcement learning to even more straightening the most repeated (most probable) wights (forming &ldquo;paths&rdquo; through the data), which is not a substitute for any form of reasoning (which requires re-building concepts from the first principles).</p>
 <p>While it may appear that there is &ldquo;the knowledge of the principles encoded within the model&rdquo;, in actual reality there is nothing but the combinations of &ldquo;tokens&rdquo; encoded as a probabilistic structure.</p>
 <p>Come on, really. The distinction from an appearance and reality has been well understood even by very ancient Indian seers, and some of their insights and principles were recorded in the Upanishads.</p>
 <p>If somethings <em>appears</em> to be (as) something, it does not imply (or mean) that it actually is. Please, stop bullshitting and stop insulting our actual <em>intelligence</em>.</p>
 <p>Now the most crucial, principal part:</p>
 <blockquote>
-<p>I added the ones (6+9=15), carried the 1, then added the tens (3+5+1=9) resulting in 95</p>
-</blockquote>
+<p>I added the ones (6+9=15), carried the 1, then added the tens (3+5+1=9) resulting in 95</p></blockquote>
 <p>This is a fucking lying. Really. The first &ldquo;path&rdquo; just selected the most probable number tokens after <code>36 + 59</code>, and the subsequent answer traversed a <em>distinctly different, completely unrelated path</em>, from some texts which  explain in detail the precise  rules of addition. It never used these rules itself, in principle. The &ldquo;data file&rdquo; simply does not work that way.  <strong>Read this 5 times, if needed</strong>.</p>
 <p>One more time: the actual algorithms behind the whole technological stack only <em>appear</em> to be &ldquo;intelligent&rdquo;, leave alone being capable of &ldquo;thinking&rdquo; and even &ldquo;reasoning&rdquo;. The observer is just tricked (himself) to believe in the memes and lies..</p>
 

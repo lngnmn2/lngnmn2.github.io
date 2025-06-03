@@ -4,7 +4,7 @@
     <title>DSL on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/dsl/</link>
     <description>Recent content in DSL on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Apr 2025 20:14:06 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/dsl/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,9 @@
       <link>https://lngnmn2.github.io/articles/the-process/</link>
       <pubDate>Tue, 22 Apr 2025 20:14:06 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/the-process/</guid>
-      <description>DATE: &amp;lt;2025-04-22 Tue&amp;gt;
-A lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a &amp;ldquo;food porn&amp;rdquo; on social networks. It is a &amp;ldquo;learn-by-doing (and making mistakes)&amp;rdquo; process.
-Small, complete (Always Be Compiled) iterations, which conceptually corresponds to &amp;ldquo;recursive calls&amp;rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.</description>
+      <description>&lt;p&gt;DATE:  &lt;span class=&#34;timestamp-wrapper&#34;&gt;&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2025-04-22 Tue&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A lot in common with cooking, which is (arguably) the simplest and the most ancient form of &lt;em&gt;engineering&lt;/em&gt;. (TODO: explain with examples). No one can learn to cook by watching a &amp;ldquo;food porn&amp;rdquo; on social networks. It is a &amp;ldquo;learn-by-doing (and making mistakes)&amp;rdquo; process.&lt;/p&gt;
+&lt;p&gt;Small, &lt;em&gt;complete&lt;/em&gt; (Always Be Compiled) iterations, which conceptually corresponds to &amp;ldquo;recursive calls&amp;rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a &lt;em&gt;local optimum&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The C Legacy</title>
@@ -151,19 +151,19 @@ Small, complete (Always Be Compiled) iterations, which conceptually corresponds 
       <link>https://lngnmn2.github.io/articles/high-level/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/high-level/</guid>
-      <description>I finally found a well-written no-bullshit book about CS. It says, among other things:
-There is no need to define a representation of the values False and True in terms of values of some other type.
-Conceptually, values of type Bool are simply (denoted by) the expressions False and True.
-Of course, the computer’s internal representation of Bool and all other data is in terms of bits, but we don’t need to know any of the details of how that works to write programs.</description>
+      <description>&lt;p&gt;I finally found a well-written no-bullshit book about CS. It says, among other things:&lt;/p&gt;
+&lt;p&gt;There is no need to define a representation of the values &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;True&lt;/code&gt; in terms of values of some other type.&lt;/p&gt;
+&lt;p&gt;Conceptually, values of type &lt;code&gt;Bool&lt;/code&gt; are simply (denoted by) the expressions &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Of course, the computer’s internal &lt;em&gt;representation&lt;/em&gt; of &lt;code&gt;Bool&lt;/code&gt; and all other data is in terms of bits, but &lt;strong&gt;we don’t need to know any of the details of how that works to write programs&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Junk Foods of Programming</title>
       <link>https://lngnmn2.github.io/articles/junk-food/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/junk-food/</guid>
-      <description>A small disclaimer: I&amp;rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.
-Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto &amp;ldquo;engineers&amp;rdquo;, of course.
-Just like chef Gusteau from the Ratatouille movie famously proclaimed &amp;ndash; &amp;ldquo;Anyone can cook&amp;rdquo;.</description>
+      <description>&lt;p&gt;A small disclaimer: I&amp;rsquo;ve lived in India for a few years, I have some good friends there and I think I &lt;em&gt;begin&lt;/em&gt; to really understand the some cultural aspects which govern this vastly complex and spontaneous society.&lt;/p&gt;
+&lt;p&gt;Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a &lt;em&gt;crapto&lt;/em&gt; &amp;ldquo;engineers&amp;rdquo;, of course.&lt;/p&gt;
+&lt;p&gt;Just like chef &lt;em&gt;Gusteau&lt;/em&gt; from the &lt;em&gt;Ratatouille&lt;/em&gt; movie famously proclaimed &amp;ndash; &lt;em&gt;&amp;ldquo;Anyone can cook&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GNU Emacs</title>

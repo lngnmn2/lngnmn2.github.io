@@ -4,7 +4,7 @@
     <title>Homoiconicity on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/homoiconicity/</link>
     <description>Recent content in Homoiconicity on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Oct 2023 13:46:29 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/homoiconicity/index.xml" rel="self" type="application/rss+xml" />
@@ -27,10 +27,10 @@
       <link>https://lngnmn2.github.io/articles/high-level/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/high-level/</guid>
-      <description>I finally found a well-written no-bullshit book about CS. It says, among other things:
-There is no need to define a representation of the values False and True in terms of values of some other type.
-Conceptually, values of type Bool are simply (denoted by) the expressions False and True.
-Of course, the computer’s internal representation of Bool and all other data is in terms of bits, but we don’t need to know any of the details of how that works to write programs.</description>
+      <description>&lt;p&gt;I finally found a well-written no-bullshit book about CS. It says, among other things:&lt;/p&gt;
+&lt;p&gt;There is no need to define a representation of the values &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;True&lt;/code&gt; in terms of values of some other type.&lt;/p&gt;
+&lt;p&gt;Conceptually, values of type &lt;code&gt;Bool&lt;/code&gt; are simply (denoted by) the expressions &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Of course, the computer’s internal &lt;em&gt;representation&lt;/em&gt; of &lt;code&gt;Bool&lt;/code&gt; and all other data is in terms of bits, but &lt;strong&gt;we don’t need to know any of the details of how that works to write programs&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GNU Emacs</title>

@@ -4,28 +4,42 @@
     <title>Programming on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/programming/</link>
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 May 2025 16:09:59 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 12:34:44 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enshittification Of Knowledge</title>
+      <link>https://lngnmn2.github.io/articles/enshittification-of-knowledge/</link>
+      <pubDate>Tue, 03 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/enshittification-of-knowledge/</guid>
+      <description>&lt;p&gt;There are some philosophical &amp;ldquo;ideals&amp;rdquo;, which has been identified since antiquity and to attainment (or approaching of) which people are striving ever since.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To see things as they really are.&lt;/li&gt;
+&lt;li&gt;To do things just right way.&lt;/li&gt;
+&lt;li&gt;To find an optimum or a &amp;ldquo;perfection&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Perfection has been famously defined as &amp;ldquo;when there is nothing else (more) to take away (to remove)&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Modern meme-based socially-constructed (by retarded majority) social concensus frown upon &amp;ldquo;perfectionism&amp;rdquo; and sees it as the inhibition to &amp;ldquo;getting shit done&amp;rdquo;. They are not wrong, though.  Approaching a perfection (finding a local optimum) is a very different process from just putting together some slop. Yes, indeed, &amp;ldquo;perfection is the enemy of good-enough&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Bullshit Bullshit Everywhere</title>
       <link>https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/</link>
       <pubDate>Sat, 31 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/</guid>
-      <description>&amp;ldquo;The Darwin Gödel Machine: AI that improves itself by rewriting its own code&amp;rdquo;
-https://sakana.ai/dgm/
-There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs &amp;ndash; it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not &amp;ldquo;know&amp;rdquo; what it is doing.</description>
+      <description>&lt;p&gt;&amp;ldquo;The Darwin Gödel Machine: AI that improves itself by rewriting its own code&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://sakana.ai/dgm/&#34;&gt;https://sakana.ai/dgm/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs &amp;ndash; it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not &amp;ldquo;know&amp;rdquo; what it is doing. These are just mathematical procedures (not even functions) &amp;ndash; given an input encoded in a particular way, it produces an output, not even the same for the same input.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Poor man&#39;s Bullshit</title>
       <link>https://lngnmn2.github.io/articles/poor-mans-bullshit/</link>
       <pubDate>Sat, 31 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/poor-mans-bullshit/</guid>
-      <description>Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
-https://lobste.rs/s/y13fa3/poor_man_s_types
-Replying with the Djikstra &amp;ldquo;presense, not the absense&amp;rdquo; quote would be too easy.
-There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc. This alone would have been enough to ever rise this bullshit again.</description>
+      <description>&lt;p&gt;Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lobste.rs/s/y13fa3/poor_man_s_types&#34;&gt;https://lobste.rs/s/y13fa3/poor_man_s_types&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Replying with the Djikstra &amp;ldquo;&lt;em&gt;presense, not the absense&lt;/em&gt;&amp;rdquo; quote would be too easy.&lt;/p&gt;
+&lt;p&gt;There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc. This alone would have been enough to ever rise this bullshit again.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Move Fast And Build Things</title>
@@ -39,47 +53,48 @@ There are two principal distinctions. First how type-classes (in Haskell) can fo
       <link>https://lngnmn2.github.io/articles/carmack-on-ai/</link>
       <pubDate>Sat, 24 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/carmack-on-ai/</guid>
-      <description>https://twitter.com/ID_AA_Carmack/status/1925710474366034326
-I have read the notes. they are a mess.
-For me, Carmack, aside from being a legend, is sort of Goggins of imperative procedural programming, who learned everything by doing without studying the theories first.
-His ultimate strength is, it seems, in a focused doing, ploughing through a problem, if you will, without being exceedingly dramatic.
-Learning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own &amp;ldquo;emergent&amp;rdquo; intuitive understanding &amp;ndash; ones own mental model of how things should be done.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/ID_AA_Carmack/status/1925710474366034326&#34;&gt;https://twitter.com/ID_AA_Carmack/status/1925710474366034326&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I have read the notes. they are a mess.&lt;/p&gt;
+&lt;p&gt;For me, Carmack, aside from being a legend, is sort of Goggins of &lt;em&gt;imperative procedural programming&lt;/em&gt;, who learned everything by doing without studying the theories first.&lt;/p&gt;
+&lt;p&gt;His ultimate strength is, it seems, in a &lt;em&gt;focused doing&lt;/em&gt;, ploughing through a problem, if you will, without being exceedingly dramatic.&lt;/p&gt;
+&lt;p&gt;Learning from experience (actual trails and errors and quick feedback loops) and gradual improvement of his own &amp;ldquo;emergent&amp;rdquo; intuitive understanding &amp;ndash; ones own mental model of how things should be done.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Isomorphisms</title>
       <link>https://lngnmn2.github.io/articles/isomorphisms/</link>
       <pubDate>Wed, 07 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/isomorphisms/</guid>
-      <description>What is so &amp;ldquo;natural&amp;rdquo; about Gentzen&amp;rsquo;s &amp;ldquo;Natural Deduction&amp;rdquo;? It is that our brains are conditioned by the Environment In Which We Happen To Evolve, and the environment is governed by what we call the Law of Causality, which has been captured in the East by the Buddha&amp;rsquo;s &amp;ldquo;Dependent Origination principle&amp;rdquo; and even more precisely by Modus Ponens in the West.
-When this exists, that comes to be; with the arising of this, that arises.</description>
+      <description>&lt;p&gt;What is so &amp;ldquo;natural&amp;rdquo; about Gentzen&amp;rsquo;s &amp;ldquo;Natural Deduction&amp;rdquo;? It is that our brains are conditioned by the Environment In Which We Happen To Evolve, and the environment is governed by what we call &lt;em&gt;the Law of Causality&lt;/em&gt;, which has been captured in the East by the Buddha&amp;rsquo;s &amp;ldquo;Dependent Origination principle&amp;rdquo; and even more precisely by &lt;em&gt;Modus Ponens&lt;/em&gt; in the West.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When this exists, that comes to be; with the arising of this, that arises. When this does not exist, that does not come to be; with the cessation of this, that ceases.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Degens, please</title>
       <link>https://lngnmn2.github.io/articles/degens-please/</link>
       <pubDate>Fri, 02 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/degens-please/</guid>
-      <description>Dear f*cking degens, for Christ sake, try to understand what are you doing and why, once in a while.
-Every time I start neovim with a simple, almost default LazyVim config it starts to download a new copy of the haskell-language-server using ghcup.
-Please, try to understand that this version of haskell-language-server almost certainly won&amp;rsquo;t work with an installed GHC, it works only with the version it has been compiled with.</description>
+      <description>&lt;p&gt;Dear f*cking degens, for Christ sake, try to understand what are you doing and why, once in a while.&lt;/p&gt;
+&lt;p&gt;Every time I start &lt;code&gt;neovim&lt;/code&gt; with a simple, almost default &lt;code&gt;LazyVim&lt;/code&gt; config it starts to download a new copy of the &lt;code&gt;haskell-language-server&lt;/code&gt; using &lt;code&gt;ghcup&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Please, try to understand that this version of &lt;code&gt;haskell-language-server&lt;/code&gt; almost certainly won&amp;rsquo;t work with an installed &lt;code&gt;GHC&lt;/code&gt;, it works only with the version it has been compiled with.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Just a Packaged Slop</title>
       <link>https://lngnmn2.github.io/articles/just-a-packaged-slop/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/just-a-packaged-slop/</guid>
-      <description>DESCRIPTION: Removing the veil of Maya to see things as they really are
-What to do when you have discovered that something is wrong with the world? Nothing, this happens all the time.
-Everything is wrong with C++, but everyone uses it, everything is wrong with packaged food, especially the toxic crap Nestle produced, and everyone is buying it. Nothing can be done.
-Here is what is wrong with your &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;LLMs&amp;rdquo;.</description>
+      <description>&lt;p&gt;DESCRIPTION: Removing the veil of Maya to see things as they really are&lt;/p&gt;
+&lt;p&gt;What to do when you have discovered that something is wrong with the world? Nothing, this happens all the time.&lt;/p&gt;
+&lt;p&gt;Everything is wrong with C++, but everyone uses it, everything is wrong with packaged food, especially the toxic crap Nestle produced, and everyone is buying it. Nothing can be done.&lt;/p&gt;
+&lt;p&gt;Here is what is wrong with your &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;LLMs&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Process</title>
       <link>https://lngnmn2.github.io/articles/the-process/</link>
       <pubDate>Tue, 22 Apr 2025 20:14:06 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/the-process/</guid>
-      <description>DATE: &amp;lt;2025-04-22 Tue&amp;gt;
-A lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a &amp;ldquo;food porn&amp;rdquo; on social networks. It is a &amp;ldquo;learn-by-doing (and making mistakes)&amp;rdquo; process.
-Small, complete (Always Be Compiled) iterations, which conceptually corresponds to &amp;ldquo;recursive calls&amp;rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.</description>
+      <description>&lt;p&gt;DATE:  &lt;span class=&#34;timestamp-wrapper&#34;&gt;&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2025-04-22 Tue&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A lot in common with cooking, which is (arguably) the simplest and the most ancient form of &lt;em&gt;engineering&lt;/em&gt;. (TODO: explain with examples). No one can learn to cook by watching a &amp;ldquo;food porn&amp;rdquo; on social networks. It is a &amp;ldquo;learn-by-doing (and making mistakes)&amp;rdquo; process.&lt;/p&gt;
+&lt;p&gt;Small, &lt;em&gt;complete&lt;/em&gt; (Always Be Compiled) iterations, which conceptually corresponds to &amp;ldquo;recursive calls&amp;rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a &lt;em&gt;local optimum&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The C Legacy</title>
@@ -100,10 +115,10 @@ Small, complete (Always Be Compiled) iterations, which conceptually corresponds 
       <link>https://lngnmn2.github.io/articles/llm-coding/</link>
       <pubDate>Mon, 24 Feb 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/llm-coding/</guid>
-      <description>DESCRIPTION: Idiots, idiots everywhere.
-Now I can accurately summarize what coding using LLMs actually /is in just a few sentences.
-Recall how people usually describe a code maintenance job: we have this code to run, while the original developers are gone and leave us no design documentation.
-This hypothetical situation is exactly what you get when an LLM finished spewing out the slop: you now have some code, very cheap, even for free, but it is not yours, the underlying understanding (of the whys) is not in your head, and the original developer is already gone.</description>
+      <description>&lt;p&gt;DESCRIPTION: Idiots, idiots everywhere.&lt;/p&gt;
+&lt;p&gt;Now I can accurately summarize what coding using LLMs &lt;em&gt;actually /is&lt;/em&gt; in just a few sentences.&lt;/p&gt;
+&lt;p&gt;Recall how people usually describe a code maintenance job: &lt;em&gt;we have this code to run, while the original developers are gone and leave us no design documentation&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This hypothetical situation is exactly what you get when an LLM finished spewing out the slop: you now have some code, very cheap, even for free, but it is &lt;em&gt;not yours&lt;/em&gt;, the underlying understanding (of the whys) &lt;em&gt;is not in your head&lt;/em&gt;, and the original developer is already gone. Disappeared.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How To Program 3</title>
@@ -132,17 +147,36 @@ This hypothetical situation is exactly what you get when an LLM finished spewing
       <link>https://lngnmn2.github.io/articles/haskell-llm/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/haskell-llm/</guid>
-      <description>This is the difference between a LLM and an expert. An LLM spews out a &amp;ldquo;propaganda&amp;rdquo; from the web.
-### what are the unique properties of a Haskell program 1. **Statically Typed**: Haskell has a strong, static type system that ensures type safety at compile time. 2. **Purely Functional**: Haskell programs are expressions, and functions have no side effects. This leads to code that&amp;#39;s easy to reason about, test, and debug.</description>
+      <description>&lt;p&gt;This is the difference between a LLM and an expert. An LLM spews out a &amp;ldquo;propaganda&amp;rdquo; from the web.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### what are the unique properties of a Haskell program
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Statically Typed**&lt;/span&gt;: Haskell has a strong, static type system that ensures type safety at compile time.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Purely Functional**&lt;/span&gt;: Haskell programs are expressions, and functions have no side effects. This leads to code that&amp;#39;s easy to reason about, test, and debug.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;3.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Lazy Evaluation**&lt;/span&gt;: Haskell uses lazy evaluation, meaning it only evaluates expressions when their results are needed. This can lead to more efficient programs and allows for elegant solutions like infinite data structures.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;4.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Higher-Order Functions**&lt;/span&gt;: Functions in Haskell are first-class citizens, meaning they can be passed as arguments, returned as results, and stored in data structures.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;5.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Type Classes**&lt;/span&gt;: Haskell&amp;#39;s type classes (similar to interfaces in other languages) enable ad-hoc polymorphism, allowing related types to be treated uniformly.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;6.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Module System**&lt;/span&gt;: Haskell has a rich module system that supports abstract data types, hiding implementation details, and organizing code into reusable components.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;7.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Concurrency and Parallelism**&lt;/span&gt;: Haskell provides lightweight threads and a high-level concurrency abstraction called Software Transactional Memory (STM), along with support for parallel programming using the Glasgow Haskell Compiler (GHC).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;8.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Rich Ecosystem**&lt;/span&gt;: Haskell has a vibrant community and a large ecosystem of libraries (via Hackage) for various domains, making it practical for real-world applications.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;###
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is what an expert answer could be:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rust 3000</title>
       <link>https://lngnmn2.github.io/articles/rust-3000/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/rust-3000/</guid>
-      <description>There is another shitstorm around Rust &amp;ndash; the just announced meme-effort to verify approximately 7500 unstafe functions in the Rust standard library.
-First of all, what a joke! I never thought there are that many of em. It is easily more than the whole SML, Ocaml and Haskell standard libraries combined. Or at least of the same order.
-If we want, however, to put memes aside for a while, the way to safety begins with the proper and sound principles, so the &amp;ldquo;unsoundness bugs&amp;rdquo; will never appear again.</description>
+      <description>&lt;p&gt;There is another shitstorm around Rust &amp;ndash; the just announced meme-effort to verify approximately &lt;code&gt;7500&lt;/code&gt; unstafe functions in the Rust standard library.&lt;/p&gt;
+&lt;p&gt;First of all, what a joke! I never thought there are that many of em. It is easily more than the whole SML, Ocaml and Haskell standard libraries combined. Or at least of the same order.&lt;/p&gt;
+&lt;p&gt;If we want, however, to put memes aside for a while, the way to safety begins with the proper and sound principles, so the &amp;ldquo;unsoundness bugs&amp;rdquo; will never appear again.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The best codebases</title>
@@ -164,9 +198,9 @@ If we want, however, to put memes aside for a while, the way to safety begins wi
       <link>https://lngnmn2.github.io/articles/before-breakfast/</link>
       <pubDate>Wed, 19 Jun 2024 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/before-breakfast/</guid>
-      <description>Recently I have poisoned myself by watching some talking heads on YouTube. The topic was &amp;ldquo;something something structural system design&amp;rdquo;.
-There is a &amp;ldquo;correspondence&amp;rdquo; (not a true isomorphism, but still) between the structural patterns in molecular and cell biology and patterns in a pure functional code &amp;ndash; an augmented Lambda Calculus.
-Both &amp;ldquo;systems&amp;rdquo; are heavily constrained by the execution environment (molecular structures of cell biology is the code and the data, the Universe (in a particular locality) is the runtime).</description>
+      <description>&lt;p&gt;Recently I have poisoned myself by watching some talking heads on YouTube. The topic was &amp;ldquo;something something structural system design&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;There is a &amp;ldquo;correspondence&amp;rdquo; (not a true isomorphism, but still) between the structural patterns in molecular and cell biology and patterns in a pure functional code &amp;ndash; an augmented Lambda Calculus.&lt;/p&gt;
+&lt;p&gt;Both &amp;ldquo;systems&amp;rdquo; are heavily constrained by the execution environment (molecular structures of cell biology is the code and the data, the Universe (in a particular locality) is the &lt;em&gt;runtime&lt;/em&gt;).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Patterns everywhere</title>
@@ -329,40 +363,48 @@ Both &amp;ldquo;systems&amp;rdquo; are heavily constrained by the execution envi
       <link>https://lngnmn2.github.io/articles/async-rust/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/async-rust/</guid>
-      <description>So, you want to add these async/~await/ keywords?
-First of all, it has already been seriously researched by the C#/F# .NET guys. Just learn what they have come up with.
-One&amp;rsquo;s own principle-guided reasoning could proceed like this:
-The fundamental difference between ordinary procedures and async procedures is the whole protocol for calling and returning of values, and dealing with actual implementation of the corresponding mechanisms (abstract at this point, but has to reuse what is already out there).</description>
+      <description>&lt;p&gt;So, you want to add these &lt;del&gt;async&lt;/del&gt;/~await/ keywords?&lt;/p&gt;
+&lt;p&gt;First of all, it has already been seriously researched by the C#/F#
+.NET guys. Just learn what they have come up with.&lt;/p&gt;
+&lt;p&gt;One&amp;rsquo;s own &lt;em&gt;principle-guided&lt;/em&gt; reasoning could proceed like this:&lt;/p&gt;
+&lt;p&gt;The fundamental difference between ordinary procedures and &lt;code&gt;async&lt;/code&gt;
+procedures is the whole &lt;em&gt;protocol&lt;/em&gt; for calling and returning of values,
+and dealing with actual implementation of the corresponding mechanisms
+(abstract at this point, but has to reuse what is already out there).&lt;/p&gt;</description>
     </item>
     <item>
       <title>High Level</title>
       <link>https://lngnmn2.github.io/articles/high-level/</link>
       <pubDate>Thu, 05 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/high-level/</guid>
-      <description>I finally found a well-written no-bullshit book about CS. It says, among other things:
-There is no need to define a representation of the values False and True in terms of values of some other type.
-Conceptually, values of type Bool are simply (denoted by) the expressions False and True.
-Of course, the computer’s internal representation of Bool and all other data is in terms of bits, but we don’t need to know any of the details of how that works to write programs.</description>
+      <description>&lt;p&gt;I finally found a well-written no-bullshit book about CS. It says, among other things:&lt;/p&gt;
+&lt;p&gt;There is no need to define a representation of the values &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;True&lt;/code&gt; in terms of values of some other type.&lt;/p&gt;
+&lt;p&gt;Conceptually, values of type &lt;code&gt;Bool&lt;/code&gt; are simply (denoted by) the expressions &lt;code&gt;False&lt;/code&gt; and &lt;code&gt;True&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Of course, the computer’s internal &lt;em&gt;representation&lt;/em&gt; of &lt;code&gt;Bool&lt;/code&gt; and all other data is in terms of bits, but &lt;strong&gt;we don’t need to know any of the details of how that works to write programs&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Junk Foods of Programming</title>
       <link>https://lngnmn2.github.io/articles/junk-food/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/junk-food/</guid>
-      <description>A small disclaimer: I&amp;rsquo;ve lived in India for a few years, I have some good friends there and I think I begin to really understand the some cultural aspects which govern this vastly complex and spontaneous society.
-Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a crapto &amp;ldquo;engineers&amp;rdquo;, of course.
-Just like chef Gusteau from the Ratatouille movie famously proclaimed &amp;ndash; &amp;ldquo;Anyone can cook&amp;rdquo;.</description>
+      <description>&lt;p&gt;A small disclaimer: I&amp;rsquo;ve lived in India for a few years, I have some good friends there and I think I &lt;em&gt;begin&lt;/em&gt; to really understand the some cultural aspects which govern this vastly complex and spontaneous society.&lt;/p&gt;
+&lt;p&gt;Nowadays everyone, it seems, is either a programmer or an AI researcher or both. When they are not a &lt;em&gt;crapto&lt;/em&gt; &amp;ldquo;engineers&amp;rdquo;, of course.&lt;/p&gt;
+&lt;p&gt;Just like chef &lt;em&gt;Gusteau&lt;/em&gt; from the &lt;em&gt;Ratatouille&lt;/em&gt; movie famously proclaimed &amp;ndash; &lt;em&gt;&amp;ldquo;Anyone can cook&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>More Whys</title>
       <link>https://lngnmn2.github.io/articles/more-whys/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/more-whys/</guid>
-      <description>Have you ever thought why the Set Theory and Predicate Logic looks &amp;ldquo;the same&amp;rdquo; when being visualized using Venn and Euler diagrams?
-Are these partitions is the most fundamental abstract building block?
-Most of the examples which are used to explain logic has been drawn from &amp;ldquo;natural categories&amp;rdquo; of biological species - mammals, reptiles, men.
-These are distinct partitions indeed, but how they came to be as they are?
-It is because somewhere in the past a literal &amp;ldquo;fork&amp;rdquo;, a mutation (or a whole set of these) occurred (and the resulting population survived).</description>
+      <description>&lt;p&gt;Have you ever thought &lt;em&gt;why&lt;/em&gt; the &lt;em&gt;Set Theory&lt;/em&gt; and &lt;em&gt;Predicate Logic&lt;/em&gt; looks &amp;ldquo;the
+same&amp;rdquo; when being visualized using Venn and Euler diagrams?&lt;/p&gt;
+&lt;p&gt;Are these &lt;em&gt;partitions&lt;/em&gt; is the most fundamental abstract building block?&lt;/p&gt;
+&lt;p&gt;Most of the examples which are used to explain logic has been drawn from
+&amp;ldquo;natural categories&amp;rdquo; of biological species - mammals, reptiles, men.&lt;/p&gt;
+&lt;p&gt;These are distinct partitions indeed, but how they came to be as they
+are?&lt;/p&gt;
+&lt;p&gt;It is because somewhere in the past a literal &amp;ldquo;fork&amp;rdquo;, a mutation (or a
+whole set of these) occurred (and the resulting population survived).&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Way</title>
@@ -377,19 +419,22 @@ It is because somewhere in the past a literal &amp;ldquo;fork&amp;rdquo;, a muta
       <link>https://lngnmn2.github.io/articles/prog1/</link>
       <pubDate>Sun, 24 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/prog1/</guid>
-      <description>Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
-Both algebraic types (&amp;ldquo;products&amp;rdquo; and &amp;ldquo;sums&amp;rdquo;), could be used &amp;ldquo;like tables&amp;rdquo;, with new columns being added without affecting any code that is already out there.
-This implies a by name instead of position-based (offset) access.
-This, in turn, is the fundamental, definitive property of structs over tuples.</description>
+      <description>&lt;p&gt;Special concern for &lt;em&gt;precise&lt;/em&gt; definitions, clarity and brevity
+(omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).&lt;/p&gt;
+&lt;p&gt;Both &lt;em&gt;algebraic types&lt;/em&gt; (&amp;ldquo;products&amp;rdquo; and &amp;ldquo;sums&amp;rdquo;), could be used &amp;ldquo;like
+tables&amp;rdquo;, with new &lt;em&gt;columns&lt;/em&gt; being added without affecting any code
+that is already out there.&lt;/p&gt;
+&lt;p&gt;This implies a &lt;em&gt;by name&lt;/em&gt; instead of position-based (offset) access.&lt;/p&gt;
+&lt;p&gt;This, in turn, is the fundamental, definitive property of structs over tuples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LLMS For Coding</title>
       <link>https://lngnmn2.github.io/articles/llms-for-coding/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/llms-for-coding/</guid>
-      <description>Today https://news.ycombinator.com/ is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;
-First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.
-If I have any understanding of these subjects at all, this is a bubble and irrational exuberance.</description>
+      <description>&lt;p&gt;Today &lt;a href=&#34;https://news.ycombinator.com/&#34;&gt;https://news.ycombinator.com/&lt;/a&gt; is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &lt;em&gt;&amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.&lt;/p&gt;
+&lt;p&gt;If I have any understanding of these subjects at all, this is a bubble and &lt;em&gt;irrational exuberance&lt;/em&gt;. Lets try to unpack &amp;ldquo;the whys&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On burnout</title>
@@ -418,37 +463,60 @@ If I have any understanding of these subjects at all, this is a bubble and irrat
       <link>https://lngnmn2.github.io/articles/automated-trading/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/automated-trading/</guid>
-      <description>AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;
-Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
-Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
-Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).</description>
+      <description>&lt;p&gt;AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;&lt;/p&gt;
+&lt;p&gt;Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.&lt;/p&gt;
+&lt;p&gt;Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.&lt;/p&gt;
+&lt;p&gt;Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).&lt;/p&gt;</description>
     </item>
     <item>
       <title>The recurring patterns captured as a Monoid</title>
       <link>https://lngnmn2.github.io/articles/monoids/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/monoids/</guid>
-      <description>The common patterns There are recurrent patterns, which has been captured in familiar &amp;ldquo;standard&amp;rdquo; abstractions.
-Monoid A Set along with a composition operation, which has an identity element.
-addition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is &amp;quot;&amp;quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.</description>
+      <description>&lt;h2 id=&#34;the-common-patterns&#34;&gt;The common patterns&lt;/h2&gt;
+&lt;p&gt;There are &lt;em&gt;recurrent patterns&lt;/em&gt;, which has been captured in familiar &amp;ldquo;standard&amp;rdquo;
+abstractions.&lt;/p&gt;
+&lt;h2 id=&#34;monoid&#34;&gt;Monoid&lt;/h2&gt;
+&lt;p&gt;A Set along with a &lt;em&gt;composition&lt;/em&gt; operation, which has an identity element.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;addition, for &lt;code&gt;(+)&lt;/code&gt; identity is &lt;code&gt;0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;concatenation, which is a specialization of &lt;em&gt;putting together&lt;/em&gt;, identity is &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;List, a fundamental &lt;em&gt;recursive sum-type&lt;/em&gt;, identity is &lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Option, a specialization of empty/non-empty aspect of a &lt;em&gt;List&lt;/em&gt;,  identity is &lt;code&gt;None&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Boolean logic, very subtle, identity is &lt;code&gt;False&lt;/code&gt; (&lt;em&gt;false imply nothing&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The notion that some Boolean operations form a Monoid is very subtle, but it
+will emerge with &lt;em&gt;conditional expressions&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Rust</title>
       <link>https://lngnmn2.github.io/articles/unrestanding-rust/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/unrestanding-rust/</guid>
-      <description>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an &amp;ldquo;arch and OS /duo&amp;rdquo;, and to be &amp;ldquo;aware of&amp;rdquo; the ABIs in general.
-Overview Rust is, in principle, an imperative language.</description>
+      <description>&lt;p&gt;The Rust programming language has been &lt;em&gt;hyped&lt;/em&gt; as a &lt;em&gt;system programming language&lt;/em&gt;,
+which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the &lt;em&gt;hardware-level
+abstractions&lt;/em&gt;, such as the Stack, the Heap and the Procedures, together with the
+&lt;em&gt;operating system-level abstractions&lt;/em&gt;, such as following the particular &lt;em&gt;calling conventions&lt;/em&gt;
+(a set of &lt;em&gt;standardized interfaces&lt;/em&gt;) for an &lt;em&gt;&amp;ldquo;arch and OS /duo&amp;rdquo;&lt;/em&gt;, and to be &amp;ldquo;aware of&amp;rdquo;
+the ABIs in general.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Rust is, in principle, an &lt;em&gt;imperative language&lt;/em&gt;. The order of &lt;em&gt;statements&lt;/em&gt; matters
+(a lot, giving the changes of ownership), &lt;em&gt;expressions&lt;/em&gt; are just an addition, and
+there is no (and never will be) &lt;em&gt;referential transparency&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The simplest self-publishing workflow</title>
       <link>https://lngnmn2.github.io/articles/the-simplest-workflow/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/the-simplest-workflow/</guid>
-      <description>Overview This is the simplest but smart self-publishing workflow.
-org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages
-Everything is according to the universal principles of being almost &amp;ldquo;pure functional transformations&amp;rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
-At each stage or step we delegate some aspect to an appropriate external vendored tool.</description>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This is the simplest but &lt;em&gt;smart&lt;/em&gt; self-publishing workflow.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Everything is according to the &lt;em&gt;universal principles&lt;/em&gt; of being almost &lt;em&gt;&amp;ldquo;pure
+functional transformations&amp;rdquo;&lt;/em&gt; of a &lt;em&gt;structured and decorated text&lt;/em&gt;, together with
+&lt;em&gt;version control&lt;/em&gt;, which provides sort of &lt;em&gt;immutability&lt;/em&gt; (of the previous versions).&lt;/p&gt;
+&lt;p&gt;At each stage or step we &lt;em&gt;delegate&lt;/em&gt; some aspect to an appropriate external vendored &lt;em&gt;tool&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>Function Composition on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/function-composition/</link>
     <description>Recent content in Function Composition on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Jul 2023 22:51:47 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/function-composition/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,20 @@
       <link>https://lngnmn2.github.io/articles/monoids/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/monoids/</guid>
-      <description>The common patterns There are recurrent patterns, which has been captured in familiar &amp;ldquo;standard&amp;rdquo; abstractions.
-Monoid A Set along with a composition operation, which has an identity element.
-addition, for (+) identity is 0 concatenation, which is a specialization of putting together, identity is &amp;quot;&amp;quot;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.</description>
+      <description>&lt;h2 id=&#34;the-common-patterns&#34;&gt;The common patterns&lt;/h2&gt;
+&lt;p&gt;There are &lt;em&gt;recurrent patterns&lt;/em&gt;, which has been captured in familiar &amp;ldquo;standard&amp;rdquo;
+abstractions.&lt;/p&gt;
+&lt;h2 id=&#34;monoid&#34;&gt;Monoid&lt;/h2&gt;
+&lt;p&gt;A Set along with a &lt;em&gt;composition&lt;/em&gt; operation, which has an identity element.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;addition, for &lt;code&gt;(+)&lt;/code&gt; identity is &lt;code&gt;0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;concatenation, which is a specialization of &lt;em&gt;putting together&lt;/em&gt;, identity is &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;List, a fundamental &lt;em&gt;recursive sum-type&lt;/em&gt;, identity is &lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Option, a specialization of empty/non-empty aspect of a &lt;em&gt;List&lt;/em&gt;,  identity is &lt;code&gt;None&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Boolean logic, very subtle, identity is &lt;code&gt;False&lt;/code&gt; (&lt;em&gt;false imply nothing&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The notion that some Boolean operations form a Monoid is very subtle, but it
+will emerge with &lt;em&gt;conditional expressions&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

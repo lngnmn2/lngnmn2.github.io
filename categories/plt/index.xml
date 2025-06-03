@@ -4,7 +4,7 @@
     <title>PLT on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/plt/</link>
     <description>Recent content in PLT on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Oct 2023 16:45:07 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/plt/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,14 @@
       <link>https://lngnmn2.github.io/articles/async-rust/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/async-rust/</guid>
-      <description>So, you want to add these async/~await/ keywords?
-First of all, it has already been seriously researched by the C#/F# .NET guys. Just learn what they have come up with.
-One&amp;rsquo;s own principle-guided reasoning could proceed like this:
-The fundamental difference between ordinary procedures and async procedures is the whole protocol for calling and returning of values, and dealing with actual implementation of the corresponding mechanisms (abstract at this point, but has to reuse what is already out there).</description>
+      <description>&lt;p&gt;So, you want to add these &lt;del&gt;async&lt;/del&gt;/~await/ keywords?&lt;/p&gt;
+&lt;p&gt;First of all, it has already been seriously researched by the C#/F#
+.NET guys. Just learn what they have come up with.&lt;/p&gt;
+&lt;p&gt;One&amp;rsquo;s own &lt;em&gt;principle-guided&lt;/em&gt; reasoning could proceed like this:&lt;/p&gt;
+&lt;p&gt;The fundamental difference between ordinary procedures and &lt;code&gt;async&lt;/code&gt;
+procedures is the whole &lt;em&gt;protocol&lt;/em&gt; for calling and returning of values,
+and dealing with actual implementation of the corresponding mechanisms
+(abstract at this point, but has to reuse what is already out there).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

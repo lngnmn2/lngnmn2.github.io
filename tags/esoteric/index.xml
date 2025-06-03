@@ -4,7 +4,7 @@
     <title>Esoteric on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/esoteric/</link>
     <description>Recent content in Esoteric on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 May 2025 13:41:02 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/esoteric/index.xml" rel="self" type="application/rss+xml" />
@@ -20,19 +20,25 @@
       <link>https://lngnmn2.github.io/articles/isomorphisms/</link>
       <pubDate>Wed, 07 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/isomorphisms/</guid>
-      <description>What is so &amp;ldquo;natural&amp;rdquo; about Gentzen&amp;rsquo;s &amp;ldquo;Natural Deduction&amp;rdquo;? It is that our brains are conditioned by the Environment In Which We Happen To Evolve, and the environment is governed by what we call the Law of Causality, which has been captured in the East by the Buddha&amp;rsquo;s &amp;ldquo;Dependent Origination principle&amp;rdquo; and even more precisely by Modus Ponens in the West.
-When this exists, that comes to be; with the arising of this, that arises.</description>
+      <description>&lt;p&gt;What is so &amp;ldquo;natural&amp;rdquo; about Gentzen&amp;rsquo;s &amp;ldquo;Natural Deduction&amp;rdquo;? It is that our brains are conditioned by the Environment In Which We Happen To Evolve, and the environment is governed by what we call &lt;em&gt;the Law of Causality&lt;/em&gt;, which has been captured in the East by the Buddha&amp;rsquo;s &amp;ldquo;Dependent Origination principle&amp;rdquo; and even more precisely by &lt;em&gt;Modus Ponens&lt;/em&gt; in the West.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When this exists, that comes to be; with the arising of this, that arises. When this does not exist, that does not come to be; with the cessation of this, that ceases.&lt;/p&gt;</description>
     </item>
     <item>
       <title>No, it doesn&#39;t.</title>
       <link>https://lngnmn2.github.io/articles/no-it-doesnt/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/no-it-doesnt/</guid>
-      <description>There is a typical quote from some random Chud on the internet:
-The location within the [high-dimensional hyper-] space represents the semantic meaning of the content, according to the embedding model’s weird, mostly incomprehensible understanding of the world.
-This is bullshit at so many levels, and in a such &amp;ldquo;lecturing&amp;rdquo; tone.
-First of all, there is no &amp;ldquo;understanding&amp;rdquo; whatsoever and it is not &amp;ldquo;of the world&amp;rdquo;.
-&amp;ldquo;The world&amp;rdquo; is at a fundamentally different level of abstraction from what has been used as &amp;ldquo;inputs&amp;rdquo; to a language model.</description>
+      <description>&lt;p&gt;There is a typical quote from some random Chud on the internet:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The location within the [high-dimensional hyper-] space represents the
+semantic meaning of the content, according to the embedding model’s
+weird, mostly incomprehensible understanding of the world.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This is bullshit at so many levels, and in a such &amp;ldquo;lecturing&amp;rdquo; tone.&lt;/p&gt;
+&lt;p&gt;First of all, there is no &amp;ldquo;understanding&amp;rdquo; whatsoever and it is not &amp;ldquo;of
+the world&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;The world&amp;rdquo; is at a fundamentally different level of abstraction from
+what has been used as &amp;ldquo;inputs&amp;rdquo; to a language model.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

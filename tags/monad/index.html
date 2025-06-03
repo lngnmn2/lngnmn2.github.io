@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/tags/monad/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -67,10 +67,7 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-
-<meta property="og:url" content="https://lngnmn2.github.io/tags/monad/">
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/tags/monad/">
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="Monad">
   <meta property="og:locale" content="en-us">
@@ -98,7 +95,7 @@ font-family: 'Source Code Pro', monospace;
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -143,7 +140,7 @@ font-family: 'Source Code Pro', monospace;
   </header>
   <div class="entry-content">
     <p>It is time to publish some more results.
-Type-level reasoning A function application - corresponds to /Modus Ponens/ A specialization, an instance of it. &gt; ($) :: (a -&gt; b) -&gt; a -&gt; b &gt; ($) f x = f x Reversed order of agreements, still the same /Modus Ponens/ &gt; (|&gt;) :: a -&gt; (a -&gt; b) -&gt; b &gt; (|&gt;) x f = f x &#34;Multi-argument&#34; is just /currying/ -- ~* -&gt;*-&gt;*-&gt; *~ Same, but with an explicit /abstraction barrier/ (and /lifting/) &gt; (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b &gt; (&gt;&gt;=) ma f = undefined -- has to be defined for each particular type (an instance) Notice that this is essentially a type-signature of ~fmap~, &gt; fmap :: f a -&gt;(a-&gt;b) -&gt; f b with a reversed order of arguments and a specialized function....</p>
+Type-level reasoning A function application - corresponds to /Modus Ponens/ A specialization, an instance of it. &gt; ($) :: (a -&gt; b) -&gt; a -&gt; b &gt; ($) f x = f x Reversed order of agreements, still the same /Modus Ponens/ &gt; (|&gt;) :: a -&gt; (a -&gt; b) -&gt; b &gt; (|&gt;) x f = f x &#34;Multi-argument&#34; is just /currying/ -- ~* -&gt;*-&gt;*-&gt; *~ Same, but with an explicit /abstraction barrier/ (and /lifting/) &gt; (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b &gt; (&gt;&gt;=) ma f = undefined -- has to be defined for each particular type (an instance) Notice that this is essentially a type-signature of ~fmap~, &gt; fmap :: f a -&gt;(a-&gt;b) -&gt; f b with a reversed order of arguments and a specialized function. which corresponds to a /Kleisli arrow/. Notice also that ~($)~ and ~fmap~ differs only in having an explicit /container/. This is not an arbitrary coincidence. All three are essentially the same, despite funny syntax. A basic step of logical deduction. Behind an abstraction barrier. Composition - of functions &gt; (.) :: (b -&gt; c) -&gt; (a -&gt; b) -&gt; a -&gt; c &gt; (.) f g = \x -&gt; f (g x) - of &#34;actions&#34; (actual functions have to use ~return :: a -&gt; m a~) &gt; (&lt;=&lt;) :: Monad m =&gt; (b -&gt; m c) -&gt; (a -&gt; m b) -&gt; a -&gt; m c &gt; (&lt;=&lt;) f g = undefined -- has to be defined for each particular type or ~(&gt;&gt;=)~ for chaining (&#34;flat&#34; nesting or pipelining ) , exactly the same as ~(|&gt;)~ Notice that the composition is /nesting/. This is the /only/ way to implement it. The end of knowledge. </p>
   </div>
   <footer class="entry-footer"><span title='2024-05-27 00:00:00 +0545 +0545'>May 27, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
   <a class="entry-link" aria-label="post link to Vedanta" href="https://lngnmn2.github.io/articles/vedanta/"></a>
@@ -156,7 +153,8 @@ Type-level reasoning A function application - corresponds to /Modus Ponens/ A sp
   </header>
   <div class="entry-content">
     <p>You probably have already read things like “Async computations form a Monad” or something like that. Did you ever ask yourself why would they? Here are the answers for you.
-Have you ever seen that kind of device in some chemical and physics labs – a glass wall, with two holes in it which have a pair of thick gloves attached to them, to reach inside? A person put his hands into these gloves and reach into a contained and sealed compartment (environment) and is able to perform some tasks, like moving and filling things inside....</p>
+Have you ever seen that kind of device in some chemical and physics labs – a glass wall, with two holes in it which have a pair of thick gloves attached to them, to reach inside? A person put his hands into these gloves and reach into a contained and sealed compartment (environment) and is able to perform some tasks, like moving and filling things inside.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2024-05-04 00:00:00 +0545 +0545'>May 4, 2024</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
   <a class="entry-link" aria-label="post link to Why monads?" href="https://lngnmn2.github.io/articles/why-monads/"></a>

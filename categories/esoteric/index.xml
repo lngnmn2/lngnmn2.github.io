@@ -4,7 +4,7 @@
     <title>Esoteric on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/esoteric/</link>
     <description>Recent content in Esoteric on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 May 2025 13:41:02 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/esoteric/index.xml" rel="self" type="application/rss+xml" />
@@ -20,21 +20,26 @@
       <link>https://lngnmn2.github.io/articles/more-whys/</link>
       <pubDate>Fri, 29 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/more-whys/</guid>
-      <description>Have you ever thought why the Set Theory and Predicate Logic looks &amp;ldquo;the same&amp;rdquo; when being visualized using Venn and Euler diagrams?
-Are these partitions is the most fundamental abstract building block?
-Most of the examples which are used to explain logic has been drawn from &amp;ldquo;natural categories&amp;rdquo; of biological species - mammals, reptiles, men.
-These are distinct partitions indeed, but how they came to be as they are?
-It is because somewhere in the past a literal &amp;ldquo;fork&amp;rdquo;, a mutation (or a whole set of these) occurred (and the resulting population survived).</description>
+      <description>&lt;p&gt;Have you ever thought &lt;em&gt;why&lt;/em&gt; the &lt;em&gt;Set Theory&lt;/em&gt; and &lt;em&gt;Predicate Logic&lt;/em&gt; looks &amp;ldquo;the
+same&amp;rdquo; when being visualized using Venn and Euler diagrams?&lt;/p&gt;
+&lt;p&gt;Are these &lt;em&gt;partitions&lt;/em&gt; is the most fundamental abstract building block?&lt;/p&gt;
+&lt;p&gt;Most of the examples which are used to explain logic has been drawn from
+&amp;ldquo;natural categories&amp;rdquo; of biological species - mammals, reptiles, men.&lt;/p&gt;
+&lt;p&gt;These are distinct partitions indeed, but how they came to be as they
+are?&lt;/p&gt;
+&lt;p&gt;It is because somewhere in the past a literal &amp;ldquo;fork&amp;rdquo;, a mutation (or a
+whole set of these) occurred (and the resulting population survived).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why S and K are enough.</title>
       <link>https://lngnmn2.github.io/articles/sk/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/sk/</guid>
-      <description>DESCRIPTION: Oops, I did it again.
-The hack The word &amp;ldquo;implies&amp;rdquo; and corresponding arrows are grossly overloaded and have more than one subtle but distinct meanings.
-We will read and interpret the &amp;ldquo;arrows&amp;rdquo; (and the word &amp;ldquo;implies&amp;rdquo;) from different formalisms differently (as an implication in terms of necessity and sufficiency and as a single discrete step of causality).
-We will put the universal notion of an environment (and the corresponding Γ abstraction) from obscurity to the center.</description>
+      <description>&lt;p&gt;DESCRIPTION: Oops, I did it again.&lt;/p&gt;
+&lt;h2 id=&#34;the-hack&#34;&gt;The hack&lt;/h2&gt;
+&lt;p&gt;The word &amp;ldquo;implies&amp;rdquo; and corresponding arrows are grossly &lt;em&gt;overloaded&lt;/em&gt; and have more than one subtle but distinct meanings.&lt;/p&gt;
+&lt;p&gt;We will read and interpret the &amp;ldquo;arrows&amp;rdquo; (and the word &amp;ldquo;implies&amp;rdquo;) from different formalisms differently (as an implication in terms of necessity and sufficiency and as a single discrete step of causality).&lt;/p&gt;
+&lt;p&gt;We will put the universal notion of an environment (and the corresponding Γ abstraction) from obscurity to the center.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Biological evolution and Life Itself</title>

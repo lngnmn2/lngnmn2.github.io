@@ -7,13 +7,17 @@
 <meta name="robots" content="index, follow">
 <title>The simplest self-publishing workflow | Notes from the digital underground by Lngnmn</title>
 <meta name="keywords" content="org-mode, hugo, static site, git, github pages">
-<meta name="description" content="Overview This is the simplest but smart self-publishing workflow.
+<meta name="description" content="Overview
+This is the simplest but smart self-publishing workflow.
+
 org-mode -&gt; ox_hugo -&gt; hugo -&gt; static html -&gt; git commit -a -&gt; git push -&gt; github pages
-Everything is according to the universal principles of being almost &ldquo;pure functional transformations&rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
+Everything is according to the universal principles of being almost &ldquo;pure
+functional transformations&rdquo; of a structured and decorated text, together with
+version control, which provides sort of immutability (of the previous versions).
 At each stage or step we delegate some aspect to an appropriate external vendored tool.">
 <meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/the-simplest-workflow/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -69,10 +73,7 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-
-<meta property="og:url" content="https://lngnmn2.github.io/articles/the-simplest-workflow/">
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/the-simplest-workflow/">
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="The simplest self-publishing workflow">
   <meta property="og:description" content="Overview This is the simplest but smart self-publishing workflow.
@@ -91,9 +92,13 @@ At each stage or step we delegate some aspect to an appropriate external vendore
     <meta property="article:tag" content="Github Pages">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The simplest self-publishing workflow">
-<meta name="twitter:description" content="Overview This is the simplest but smart self-publishing workflow.
+<meta name="twitter:description" content="Overview
+This is the simplest but smart self-publishing workflow.
+
 org-mode -&gt; ox_hugo -&gt; hugo -&gt; static html -&gt; git commit -a -&gt; git push -&gt; github pages
-Everything is according to the universal principles of being almost &ldquo;pure functional transformations&rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
+Everything is according to the universal principles of being almost &ldquo;pure
+functional transformations&rdquo; of a structured and decorated text, together with
+version control, which provides sort of immutability (of the previous versions).
 At each stage or step we delegate some aspect to an appropriate external vendored tool.">
 
 
@@ -123,7 +128,7 @@ At each stage or step we delegate some aspect to an appropriate external vendore
   "@type": "BlogPosting",
   "headline": "The simplest self-publishing workflow",
   "name": "The simplest self-publishing workflow",
-  "description": "Overview This is the simplest but smart self-publishing workflow.\norg-mode -\u0026gt; ox_hugo -\u0026gt; hugo -\u0026gt; static html -\u0026gt; git commit -a -\u0026gt; git push -\u0026gt; github pages\nEverything is according to the universal principles of being almost \u0026ldquo;pure functional transformations\u0026rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).\nAt each stage or step we delegate some aspect to an appropriate external vendored tool.",
+  "description": "Overview This is the simplest but smart self-publishing workflow.\norg-mode -\u0026gt; ox_hugo -\u0026gt; hugo -\u0026gt; static html -\u0026gt; git commit -a -\u0026gt; git push -\u0026gt; github pages\nEverything is according to the universal principles of being almost \u0026ldquo;pure functional transformations\u0026rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).\nAt each stage or step we delegate some aspect to an appropriate external vendored tool.\n",
   "keywords": [
     "org-mode", "hugo", "static site", "git", "github pages"
   ],
@@ -169,7 +174,7 @@ At each stage or step we delegate some aspect to an appropriate external vendore
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -215,8 +220,7 @@ At each stage or step we delegate some aspect to an appropriate external vendore
   <div class="post-content"><h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
 <p>This is the simplest but <em>smart</em> self-publishing workflow.</p>
 <blockquote>
-<p>org-mode -&gt; ox_hugo -&gt; hugo -&gt; static html -&gt; git commit -a -&gt; git push -&gt; github pages</p>
-</blockquote>
+<p>org-mode -&gt; ox_hugo -&gt; hugo -&gt; static html -&gt; git commit -a -&gt; git push -&gt; github pages</p></blockquote>
 <p>Everything is according to the <em>universal principles</em> of being almost <em>&ldquo;pure
 functional transformations&rdquo;</em> of a <em>structured and decorated text</em>, together with
 <em>version control</em>, which provides sort of <em>immutability</em> (of the previous versions).</p>

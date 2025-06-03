@@ -4,7 +4,7 @@
     <title>GPT on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/gpt/</link>
     <description>Recent content in GPT on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Apr 2025 15:35:28 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/gpt/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://lngnmn2.github.io/articles/just-a-packaged-slop/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/just-a-packaged-slop/</guid>
-      <description>DESCRIPTION: Removing the veil of Maya to see things as they really are
-What to do when you have discovered that something is wrong with the world? Nothing, this happens all the time.
-Everything is wrong with C++, but everyone uses it, everything is wrong with packaged food, especially the toxic crap Nestle produced, and everyone is buying it. Nothing can be done.
-Here is what is wrong with your &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;LLMs&amp;rdquo;.</description>
+      <description>&lt;p&gt;DESCRIPTION: Removing the veil of Maya to see things as they really are&lt;/p&gt;
+&lt;p&gt;What to do when you have discovered that something is wrong with the world? Nothing, this happens all the time.&lt;/p&gt;
+&lt;p&gt;Everything is wrong with C++, but everyone uses it, everything is wrong with packaged food, especially the toxic crap Nestle produced, and everyone is buying it. Nothing can be done.&lt;/p&gt;
+&lt;p&gt;Here is what is wrong with your &amp;ldquo;AI&amp;rdquo; and &amp;ldquo;LLMs&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Deepseek R1</title>
       <link>https://lngnmn2.github.io/articles/deepseek-r1/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/deepseek-r1/</guid>
-      <description>DESCRIPTION: Memes and mirrors.
-Nowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).
-It started with that meme &amp;ldquo;Attention Is All You Need&amp;rdquo;, when they just came up with an &amp;ldquo;architecture&amp;rdquo; that sticks.
-That &amp;ldquo;attention&amp;rdquo; and &amp;ldquo;multi head attention&amp;rdquo; turned out to be just a few additional layers of a particular kind.
-No one can explain the actual mechanisms of how exactly or even why the layers are as they are (abstract bullshit aside).</description>
+      <description>&lt;p&gt;DESCRIPTION: Memes and mirrors.&lt;/p&gt;
+&lt;p&gt;Nowadays things are moving way too fast. It is not just controlled trial-and-error, it is literally throwing everything at the wall (to see what sticks).&lt;/p&gt;
+&lt;p&gt;It started with that meme &amp;ldquo;Attention Is All You Need&amp;rdquo;, when they just came up with an &amp;ldquo;architecture&amp;rdquo; that sticks.&lt;/p&gt;
+&lt;p&gt;That &amp;ldquo;attention&amp;rdquo; and &amp;ldquo;multi head attention&amp;rdquo; turned out to be just a few additional layers of a particular kind.&lt;/p&gt;
+&lt;p&gt;No one can explain the actual mechanisms of how exactly or even &lt;em&gt;why&lt;/em&gt; the layers are as they are (abstract bullshit aside). While the general idea was to mimic some specialized brain centers (the key to understand how it works), the actual code was merely &amp;ldquo;buffers&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Selfawareness</title>

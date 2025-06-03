@@ -7,13 +7,16 @@
 <meta name="robots" content="index, follow">
 <title>Notes on proper abstractions and ADTs | Notes from the digital underground by Lngnmn</title>
 <meta name="keywords" content="principles">
-<meta name="description" content="Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
-Both algebraic types (&ldquo;products&rdquo; and &ldquo;sums&rdquo;), could be used &ldquo;like tables&rdquo;, with new columns being added without affecting any code that is already out there.
+<meta name="description" content="Special concern for precise definitions, clarity and brevity
+(omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
+Both algebraic types (&ldquo;products&rdquo; and &ldquo;sums&rdquo;), could be used &ldquo;like
+tables&rdquo;, with new columns being added without affecting any code
+that is already out there.
 This implies a by name instead of position-based (offset) access.
 This, in turn, is the fundamental, definitive property of structs over tuples.">
 <meta name="author" content="Ln Gnmn">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/prog1/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -69,10 +72,7 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-
-<meta property="og:url" content="https://lngnmn2.github.io/articles/prog1/">
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/prog1/">
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="Notes on proper abstractions and ADTs">
   <meta property="og:description" content="Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
@@ -87,8 +87,11 @@ This, in turn, is the fundamental, definitive property of structs over tuples.">
     <meta property="article:tag" content="Principles">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Notes on proper abstractions and ADTs">
-<meta name="twitter:description" content="Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
-Both algebraic types (&ldquo;products&rdquo; and &ldquo;sums&rdquo;), could be used &ldquo;like tables&rdquo;, with new columns being added without affecting any code that is already out there.
+<meta name="twitter:description" content="Special concern for precise definitions, clarity and brevity
+(omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).
+Both algebraic types (&ldquo;products&rdquo; and &ldquo;sums&rdquo;), could be used &ldquo;like
+tables&rdquo;, with new columns being added without affecting any code
+that is already out there.
 This implies a by name instead of position-based (offset) access.
 This, in turn, is the fundamental, definitive property of structs over tuples.">
 
@@ -119,7 +122,7 @@ This, in turn, is the fundamental, definitive property of structs over tuples.">
   "@type": "BlogPosting",
   "headline": "Notes on proper abstractions and ADTs",
   "name": "Notes on proper abstractions and ADTs",
-  "description": "Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).\nBoth algebraic types (\u0026ldquo;products\u0026rdquo; and \u0026ldquo;sums\u0026rdquo;), could be used \u0026ldquo;like tables\u0026rdquo;, with new columns being added without affecting any code that is already out there.\nThis implies a by name instead of position-based (offset) access.\nThis, in turn, is the fundamental, definitive property of structs over tuples.",
+  "description": "Special concern for precise definitions, clarity and brevity (omitting of what is clear from the context), high level of abstraction, and proper generality (just like Sets or Numbers).\nBoth algebraic types (\u0026ldquo;products\u0026rdquo; and \u0026ldquo;sums\u0026rdquo;), could be used \u0026ldquo;like tables\u0026rdquo;, with new columns being added without affecting any code that is already out there.\nThis implies a by name instead of position-based (offset) access.\nThis, in turn, is the fundamental, definitive property of structs over tuples.\n",
   "keywords": [
     "principles"
   ],
@@ -165,7 +168,7 @@ This, in turn, is the fundamental, definitive property of structs over tuples.">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">

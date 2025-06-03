@@ -4,7 +4,7 @@
     <title>Foundations on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/foundations/</link>
     <description>Recent content in Foundations on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Aug 2023 19:58:18 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/foundations/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,11 @@
       <link>https://lngnmn2.github.io/articles/sk/</link>
       <pubDate>Sat, 05 Aug 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/sk/</guid>
-      <description>DESCRIPTION: Oops, I did it again.
-The hack The word &amp;ldquo;implies&amp;rdquo; and corresponding arrows are grossly overloaded and have more than one subtle but distinct meanings.
-We will read and interpret the &amp;ldquo;arrows&amp;rdquo; (and the word &amp;ldquo;implies&amp;rdquo;) from different formalisms differently (as an implication in terms of necessity and sufficiency and as a single discrete step of causality).
-We will put the universal notion of an environment (and the corresponding Γ abstraction) from obscurity to the center.</description>
+      <description>&lt;p&gt;DESCRIPTION: Oops, I did it again.&lt;/p&gt;
+&lt;h2 id=&#34;the-hack&#34;&gt;The hack&lt;/h2&gt;
+&lt;p&gt;The word &amp;ldquo;implies&amp;rdquo; and corresponding arrows are grossly &lt;em&gt;overloaded&lt;/em&gt; and have more than one subtle but distinct meanings.&lt;/p&gt;
+&lt;p&gt;We will read and interpret the &amp;ldquo;arrows&amp;rdquo; (and the word &amp;ldquo;implies&amp;rdquo;) from different formalisms differently (as an implication in terms of necessity and sufficiency and as a single discrete step of causality).&lt;/p&gt;
+&lt;p&gt;We will put the universal notion of an environment (and the corresponding Γ abstraction) from obscurity to the center.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

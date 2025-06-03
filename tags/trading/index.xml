@@ -4,7 +4,7 @@
     <title>Trading on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/trading/</link>
     <description>Recent content in Trading on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Jun 2024 15:28:26 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/trading/index.xml" rel="self" type="application/rss+xml" />
@@ -29,10 +29,16 @@
       <link>https://lngnmn2.github.io/articles/notes/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/notes/</guid>
-      <description>These are just assorted notes for now, which shall become something ready to be formalized.
-Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
-The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
-All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like &amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements like &amp;ldquo;Volume&amp;rdquo;.</description>
+      <description>&lt;p&gt;These are just assorted &lt;em&gt;notes&lt;/em&gt; for now, which shall become something ready to be &lt;em&gt;formalized.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;non-bullshit&#34;&gt;Non-bullshit&lt;/h2&gt;
+&lt;p&gt;The objective is to train a NN which captures &lt;em&gt;subtle recurrent
+patterns&lt;/em&gt; among many well-chosen (and well-defined) &lt;em&gt;features&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The proper set of features that, in turn, captures the most relevant aspects
+of reality is what determines the distinction between a modest success
+or a total failure of this ML approach.&lt;/p&gt;
+&lt;p&gt;All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like
+&amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements
+like &amp;ldquo;Volume&amp;rdquo;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

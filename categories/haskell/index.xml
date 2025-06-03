@@ -4,7 +4,7 @@
     <title>Haskell on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/haskell/</link>
     <description>Recent content in Haskell on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jan 2025 10:10:01 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/haskell/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,27 @@
       <link>https://lngnmn2.github.io/articles/haskell-llm/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/haskell-llm/</guid>
-      <description>This is the difference between a LLM and an expert. An LLM spews out a &amp;ldquo;propaganda&amp;rdquo; from the web.
-### what are the unique properties of a Haskell program 1. **Statically Typed**: Haskell has a strong, static type system that ensures type safety at compile time. 2. **Purely Functional**: Haskell programs are expressions, and functions have no side effects. This leads to code that&amp;#39;s easy to reason about, test, and debug.</description>
+      <description>&lt;p&gt;This is the difference between a LLM and an expert. An LLM spews out a &amp;ldquo;propaganda&amp;rdquo; from the web.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### what are the unique properties of a Haskell program
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Statically Typed**&lt;/span&gt;: Haskell has a strong, static type system that ensures type safety at compile time.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Purely Functional**&lt;/span&gt;: Haskell programs are expressions, and functions have no side effects. This leads to code that&amp;#39;s easy to reason about, test, and debug.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;3.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Lazy Evaluation**&lt;/span&gt;: Haskell uses lazy evaluation, meaning it only evaluates expressions when their results are needed. This can lead to more efficient programs and allows for elegant solutions like infinite data structures.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;4.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Higher-Order Functions**&lt;/span&gt;: Functions in Haskell are first-class citizens, meaning they can be passed as arguments, returned as results, and stored in data structures.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;5.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Type Classes**&lt;/span&gt;: Haskell&amp;#39;s type classes (similar to interfaces in other languages) enable ad-hoc polymorphism, allowing related types to be treated uniformly.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;6.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Module System**&lt;/span&gt;: Haskell has a rich module system that supports abstract data types, hiding implementation details, and organizing code into reusable components.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;7.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Concurrency and Parallelism**&lt;/span&gt;: Haskell provides lightweight threads and a high-level concurrency abstraction called Software Transactional Memory (STM), along with support for parallel programming using the Glasgow Haskell Compiler (GHC).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;8.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Rich Ecosystem**&lt;/span&gt;: Haskell has a vibrant community and a large ecosystem of libraries (via Hackage) for various domains, making it practical for real-world applications.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;###
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Here is what an expert answer could be:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vedanta</title>

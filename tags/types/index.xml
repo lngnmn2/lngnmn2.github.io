@@ -4,7 +4,7 @@
     <title>Types on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/types/</link>
     <description>Recent content in Types on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 31 May 2025 16:09:59 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/types/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
       <link>https://lngnmn2.github.io/articles/poor-mans-bullshit/</link>
       <pubDate>Sat, 31 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/poor-mans-bullshit/</guid>
-      <description>Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.
-https://lobste.rs/s/y13fa3/poor_man_s_types
-Replying with the Djikstra &amp;ldquo;presense, not the absense&amp;rdquo; quote would be too easy.
-There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc. This alone would have been enough to ever rise this bullshit again.</description>
+      <description>&lt;p&gt;Some midwit tried to be clever, and other midwits applauded. The top story on Lobsers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lobste.rs/s/y13fa3/poor_man_s_types&#34;&gt;https://lobste.rs/s/y13fa3/poor_man_s_types&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Replying with the Djikstra &amp;ldquo;&lt;em&gt;presense, not the absense&lt;/em&gt;&amp;rdquo; quote would be too easy.&lt;/p&gt;
+&lt;p&gt;There are two principal distinctions. First how type-classes (in Haskell) can formalize and systematize so-called duck-typing (walks like a duck, quacks like a duck) for the most general mathematical notions, such as equality, ordering, etc. This alone would have been enough to ever rise this bullshit again.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

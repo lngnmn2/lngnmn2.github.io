@@ -4,7 +4,7 @@
     <title>Emacs on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/emacs/</link>
     <description>Recent content in Emacs on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 06 Mar 2025 18:08:54 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
@@ -64,21 +64,33 @@
       <link>https://lngnmn2.github.io/articles/bug/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/bug/</guid>
-      <description>I has been struggling with this very annoying bug when code blocks in the org mode are messed up badly when the global-whitespace-mode is enabled.
-This global-whitespace-mode is especially important to see the actual mess which is usually invisible (like decease causing bacteria).
-My &amp;ldquo;quality benchmark&amp;rdquo; is how my configuration renders Sacha.org, you know.
-So, here is how to fix it.
-Doom themes (as a standalone package)
-(use-package doom-themes :demand :hook (after-init .</description>
+      <description>&lt;p&gt;I has been struggling with this very annoying bug when code blocks in the &lt;code&gt;org mode&lt;/code&gt; are messed up badly when the &lt;code&gt;global-whitespace-mode&lt;/code&gt; is enabled.&lt;/p&gt;
+&lt;p&gt;This &lt;code&gt;global-whitespace-mode&lt;/code&gt; is especially important to see the actual mess which is usually invisible (like decease causing bacteria).&lt;/p&gt;
+&lt;p&gt;My &amp;ldquo;quality benchmark&amp;rdquo; is how my configuration renders &lt;code&gt;Sacha.org&lt;/code&gt;, &lt;em&gt;you know&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;So, here is how to fix it.&lt;/p&gt;
+&lt;p&gt;Doom themes (as a standalone package)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(use-package doom-themes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :demand
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :hook (after-init &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; (lambda ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        (load-theme &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;doom-gruvbox&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :hook (org-mode &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; (lambda ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                      (require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;doom-themes-ext-org&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                      (doom-themes-org-config)))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :init
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (setq doom-themes-enable-bold &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;; if nil, bold is universally disabled&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        doom-themes-enable-italic &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;; if nil, italics is universally&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  :config
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  (load-theme &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;doom-gruvbox&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Built-in &lt;code&gt;whitespace-mode&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>The org-mode rituals of a narcissistic busy-body</title>
       <link>https://lngnmn2.github.io/articles/org-mode/</link>
       <pubDate>Sun, 03 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/org-mode/</guid>
-      <description>The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.
-The underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly &amp;ldquo;the right thing&amp;rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.
-These &amp;ldquo;very smart&amp;rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are &amp;ldquo;very smart&amp;rdquo;.</description>
+      <description>&lt;p&gt;The &lt;code&gt;~org-mode~&lt;/code&gt; package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.&lt;/p&gt;
+&lt;p&gt;The underlying mechanism is satisfaction (a dopamine release reward) from  &lt;em&gt;repeatedly doing supposedly &amp;ldquo;the right thing&amp;rdquo;&lt;/em&gt;, which, in turn, is the neurological basis of all repetitive religious rituals.&lt;/p&gt;
+&lt;p&gt;These &amp;ldquo;very smart&amp;rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their &lt;em&gt;self-identification&lt;/em&gt; is based upon, that they are &amp;ldquo;very smart&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GNU Emacs</title>

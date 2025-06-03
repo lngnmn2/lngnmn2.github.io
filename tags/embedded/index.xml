@@ -4,7 +4,7 @@
     <title>Embedded on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/embedded/</link>
     <description>Recent content in Embedded on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Apr 2025 20:14:06 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/embedded/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,9 @@
       <link>https://lngnmn2.github.io/articles/the-process/</link>
       <pubDate>Tue, 22 Apr 2025 20:14:06 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/the-process/</guid>
-      <description>DATE: &amp;lt;2025-04-22 Tue&amp;gt;
-A lot in common with cooking, which is (arguably) the simplest and the most ancient form of engineering. (TODO: explain with examples). No one can learn to cook by watching a &amp;ldquo;food porn&amp;rdquo; on social networks. It is a &amp;ldquo;learn-by-doing (and making mistakes)&amp;rdquo; process.
-Small, complete (Always Be Compiled) iterations, which conceptually corresponds to &amp;ldquo;recursive calls&amp;rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a local optimum.</description>
+      <description>&lt;p&gt;DATE:  &lt;span class=&#34;timestamp-wrapper&#34;&gt;&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2025-04-22 Tue&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A lot in common with cooking, which is (arguably) the simplest and the most ancient form of &lt;em&gt;engineering&lt;/em&gt;. (TODO: explain with examples). No one can learn to cook by watching a &amp;ldquo;food porn&amp;rdquo; on social networks. It is a &amp;ldquo;learn-by-doing (and making mistakes)&amp;rdquo; process.&lt;/p&gt;
+&lt;p&gt;Small, &lt;em&gt;complete&lt;/em&gt; (Always Be Compiled) iterations, which conceptually corresponds to &amp;ldquo;recursive calls&amp;rdquo; of a spiral-shaped recursive process, which ends up at (converges to) a &lt;em&gt;local optimum&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Teach Yourself programming like Peter Norvig</title>

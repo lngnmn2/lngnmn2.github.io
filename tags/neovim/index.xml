@@ -4,7 +4,7 @@
     <title>Neovim on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/neovim/</link>
     <description>Recent content in Neovim on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 May 2025 12:30:44 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,9 @@
       <link>https://lngnmn2.github.io/articles/degens-please/</link>
       <pubDate>Fri, 02 May 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/degens-please/</guid>
-      <description>Dear f*cking degens, for Christ sake, try to understand what are you doing and why, once in a while.
-Every time I start neovim with a simple, almost default LazyVim config it starts to download a new copy of the haskell-language-server using ghcup.
-Please, try to understand that this version of haskell-language-server almost certainly won&amp;rsquo;t work with an installed GHC, it works only with the version it has been compiled with.</description>
+      <description>&lt;p&gt;Dear f*cking degens, for Christ sake, try to understand what are you doing and why, once in a while.&lt;/p&gt;
+&lt;p&gt;Every time I start &lt;code&gt;neovim&lt;/code&gt; with a simple, almost default &lt;code&gt;LazyVim&lt;/code&gt; config it starts to download a new copy of the &lt;code&gt;haskell-language-server&lt;/code&gt; using &lt;code&gt;ghcup&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Please, try to understand that this version of &lt;code&gt;haskell-language-server&lt;/code&gt; almost certainly won&amp;rsquo;t work with an installed &lt;code&gt;GHC&lt;/code&gt;, it works only with the version it has been compiled with.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -8,12 +8,18 @@
 <title>Formulating the problem | Notes from the digital underground by Lngnmn</title>
 <meta name="keywords" content="trading, deep-learning, neural-network">
 <meta name="description" content="These are just assorted notes for now, which shall become something ready to be formalized.
-Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
-The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
-All the features should be actual &ldquo;measurements&rdquo; of something real, like &ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements like &ldquo;Volume&rdquo;.">
+Non-bullshit
+The objective is to train a NN which captures subtle recurrent
+patterns among many well-chosen (and well-defined) features.
+The proper set of features that, in turn, captures the most relevant aspects
+of reality is what determines the distinction between a modest success
+or a total failure of this ML approach.
+All the features should be actual &ldquo;measurements&rdquo; of something real, like
+&ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements
+like &ldquo;Volume&rdquo;.">
 <meta name="author" content="Ln Gnmn">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/notes/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -69,10 +75,7 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-
-<meta property="og:url" content="https://lngnmn2.github.io/articles/notes/">
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/notes/">
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="Formulating the problem">
   <meta property="og:description" content="These are just assorted notes for now, which shall become something ready to be formalized.
@@ -90,9 +93,15 @@ All the features should be actual “measurements” of something real, like “
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Formulating the problem">
 <meta name="twitter:description" content="These are just assorted notes for now, which shall become something ready to be formalized.
-Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
-The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
-All the features should be actual &ldquo;measurements&rdquo; of something real, like &ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements like &ldquo;Volume&rdquo;.">
+Non-bullshit
+The objective is to train a NN which captures subtle recurrent
+patterns among many well-chosen (and well-defined) features.
+The proper set of features that, in turn, captures the most relevant aspects
+of reality is what determines the distinction between a modest success
+or a total failure of this ML approach.
+All the features should be actual &ldquo;measurements&rdquo; of something real, like
+&ldquo;Open Interest&rdquo; or the &ldquo;Long/Short ratio&rdquo; and other obvious measurements
+like &ldquo;Volume&rdquo;.">
 
 
 <script type="application/ld+json">
@@ -121,7 +130,7 @@ All the features should be actual &ldquo;measurements&rdquo; of something real, 
   "@type": "BlogPosting",
   "headline": "Formulating the problem",
   "name": "Formulating the problem",
-  "description": "These are just assorted notes for now, which shall become something ready to be formalized.\nNon-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.\nThe proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.\nAll the features should be actual \u0026ldquo;measurements\u0026rdquo; of something real, like \u0026ldquo;Open Interest\u0026rdquo; or the \u0026ldquo;Long/Short ratio\u0026rdquo; and other obvious measurements like \u0026ldquo;Volume\u0026rdquo;.",
+  "description": "These are just assorted notes for now, which shall become something ready to be formalized.\nNon-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.\nThe proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.\nAll the features should be actual \u0026ldquo;measurements\u0026rdquo; of something real, like \u0026ldquo;Open Interest\u0026rdquo; or the \u0026ldquo;Long/Short ratio\u0026rdquo; and other obvious measurements like \u0026ldquo;Volume\u0026rdquo;.\n",
   "keywords": [
     "trading", "deep-learning", "neural-network"
   ],
@@ -167,7 +176,7 @@ All the features should be actual &ldquo;measurements&rdquo; of something real, 
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -354,8 +363,8 @@ and math has been done &ldquo;on paper&rdquo;).</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Net</span>(nn<span style="color:#f92672">.</span>Module):
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> __init__(self):
-</span></span><span style="display:flex;"><span>           super(Net, self)<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self):
+</span></span><span style="display:flex;"><span>           super(Net, self)<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>()
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
 </span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">return</span> x

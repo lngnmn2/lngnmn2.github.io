@@ -4,7 +4,7 @@
     <title>Borrowing on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/borrowing/</link>
     <description>Recent content in Borrowing on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Jul 2023 19:45:06 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/borrowing/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,16 @@
       <link>https://lngnmn2.github.io/articles/unrestanding-rust/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/unrestanding-rust/</guid>
-      <description>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an &amp;ldquo;arch and OS /duo&amp;rdquo;, and to be &amp;ldquo;aware of&amp;rdquo; the ABIs in general.
-Overview Rust is, in principle, an imperative language.</description>
+      <description>&lt;p&gt;The Rust programming language has been &lt;em&gt;hyped&lt;/em&gt; as a &lt;em&gt;system programming language&lt;/em&gt;,
+which implies that it has to have an explicit &amp;ldquo;access&amp;rdquo; to the &lt;em&gt;hardware-level
+abstractions&lt;/em&gt;, such as the Stack, the Heap and the Procedures, together with the
+&lt;em&gt;operating system-level abstractions&lt;/em&gt;, such as following the particular &lt;em&gt;calling conventions&lt;/em&gt;
+(a set of &lt;em&gt;standardized interfaces&lt;/em&gt;) for an &lt;em&gt;&amp;ldquo;arch and OS /duo&amp;rdquo;&lt;/em&gt;, and to be &amp;ldquo;aware of&amp;rdquo;
+the ABIs in general.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Rust is, in principle, an &lt;em&gt;imperative language&lt;/em&gt;. The order of &lt;em&gt;statements&lt;/em&gt; matters
+(a lot, giving the changes of ownership), &lt;em&gt;expressions&lt;/em&gt; are just an addition, and
+there is no (and never will be) &lt;em&gt;referential transparency&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>Org-Mode on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/org-mode/</link>
     <description>Recent content in Org-Mode on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Sep 2023 21:58:32 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/org-mode/index.xml" rel="self" type="application/rss+xml" />
@@ -13,19 +13,23 @@
       <link>https://lngnmn2.github.io/articles/org-mode/</link>
       <pubDate>Sun, 03 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/org-mode/</guid>
-      <description>The ~org-mode~ package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.
-The underlying mechanism is satisfaction (a dopamine release reward) from repeatedly doing supposedly &amp;ldquo;the right thing&amp;rdquo;, which, in turn, is the neurological basis of all repetitive religious rituals.
-These &amp;ldquo;very smart&amp;rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their self-identification is based upon, that they are &amp;ldquo;very smart&amp;rdquo;.</description>
+      <description>&lt;p&gt;The &lt;code&gt;~org-mode~&lt;/code&gt; package is abused and misused in so many ways, that it can be seen as a distinct psychological phenomena in itself.&lt;/p&gt;
+&lt;p&gt;The underlying mechanism is satisfaction (a dopamine release reward) from  &lt;em&gt;repeatedly doing supposedly &amp;ldquo;the right thing&amp;rdquo;&lt;/em&gt;, which, in turn, is the neurological basis of all repetitive religious rituals.&lt;/p&gt;
+&lt;p&gt;These &amp;ldquo;very smart&amp;rdquo; guys just maintain an elaborate system of mechanistic and semi-automated rituals to reinforce their deeply held unwarranted belief, on which their &lt;em&gt;self-identification&lt;/em&gt; is based upon, that they are &amp;ldquo;very smart&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The simplest self-publishing workflow</title>
       <link>https://lngnmn2.github.io/articles/the-simplest-workflow/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/the-simplest-workflow/</guid>
-      <description>Overview This is the simplest but smart self-publishing workflow.
-org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages
-Everything is according to the universal principles of being almost &amp;ldquo;pure functional transformations&amp;rdquo; of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
-At each stage or step we delegate some aspect to an appropriate external vendored tool.</description>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This is the simplest but &lt;em&gt;smart&lt;/em&gt; self-publishing workflow.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Everything is according to the &lt;em&gt;universal principles&lt;/em&gt; of being almost &lt;em&gt;&amp;ldquo;pure
+functional transformations&amp;rdquo;&lt;/em&gt; of a &lt;em&gt;structured and decorated text&lt;/em&gt;, together with
+&lt;em&gt;version control&lt;/em&gt;, which provides sort of &lt;em&gt;immutability&lt;/em&gt; (of the previous versions).&lt;/p&gt;
+&lt;p&gt;At each stage or step we &lt;em&gt;delegate&lt;/em&gt; some aspect to an appropriate external vendored &lt;em&gt;tool&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

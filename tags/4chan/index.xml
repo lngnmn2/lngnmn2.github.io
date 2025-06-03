@@ -4,7 +4,7 @@
     <title>4chan on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/4chan/</link>
     <description>Recent content in 4chan on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 16 Apr 2025 11:46:03 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/4chan/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,9 @@
       <link>https://lngnmn2.github.io/articles/the-day-4chan-hacked/</link>
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/the-day-4chan-hacked/</guid>
-      <description>There is something to realize &amp;ndash; some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.
-The most important thing is that the whole website seem to be never updated after being bought from @moot. This explains anything one needs to know about the how.
-It does not really matter which particular attack has been executed &amp;ndash; it is against old PHP which is a fractal of bad design by definition.</description>
+      <description>&lt;p&gt;There is something to realize &amp;ndash; some zoomer (a teenager) brought down a unique world-wide service using some ready-made exploit, probably found on the web, against way outdated unpatched PHP crap.&lt;/p&gt;
+&lt;p&gt;The most important thing is that the whole website seem to be never updated after being bought from &lt;code&gt;@moot&lt;/code&gt;. This explains anything one needs to know about the &lt;em&gt;how&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It does not really matter which particular attack has been executed &amp;ndash; it is against old PHP which is a &lt;em&gt;fractal of bad design by definition&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

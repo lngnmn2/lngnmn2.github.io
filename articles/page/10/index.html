@@ -10,7 +10,7 @@
 <meta name="description" content="Articles - Notes from the digital underground by Lngnmn">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -67,10 +67,7 @@ font-family: 'Noto Sans', sans-serif;
 font-family: 'Source Code Pro', monospace;
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-
-<meta property="og:url" content="https://lngnmn2.github.io/articles/">
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/">
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="Articles">
   <meta property="og:locale" content="en-us">
@@ -113,7 +110,7 @@ font-family: 'Source Code Pro', monospace;
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -153,12 +150,28 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">The recurring patterns captured as a Monoid
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The common patterns There are recurrent patterns, which has been captured in familiar “standard” abstractions.
+Monoid A Set along with a composition operation, which has an identity element.
+addition, for (&#43;) identity is 0 concatenation, which is a specialization of putting together, identity is &#34;&#34;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-07-16 00:00:00 +0545 +0545'>July 16, 2023</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
+  <a class="entry-link" aria-label="post link to The recurring patterns captured as a Monoid" href="https://lngnmn2.github.io/articles/monoids/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Understanding Rust
     </h2>
   </header>
   <div class="entry-content">
     <p>The Rust programming language has been hyped as a system programming language, which implies that it has to have an explicit “access” to the hardware-level abstractions, such as the Stack, the Heap and the Procedures, together with the operating system-level abstractions, such as following the particular calling conventions (a set of standardized interfaces) for an “arch and OS /duo”, and to be “aware of” the ABIs in general.
-Overview Rust is, in principle, an imperative language....</p>
+Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-15 00:00:00 +0545 +0545'>July 15, 2023</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
   <a class="entry-link" aria-label="post link to Understanding Rust" href="https://lngnmn2.github.io/articles/unrestanding-rust/"></a>
@@ -173,7 +186,8 @@ Overview Rust is, in principle, an imperative language....</p>
     <p>Overview This is the simplest but smart self-publishing workflow.
 org-mode -&gt; ox_hugo -&gt; hugo -&gt; static html -&gt; git commit -a -&gt; git push -&gt; github pages
 Everything is according to the universal principles of being almost “pure functional transformations” of a structured and decorated text, together with version control, which provides sort of immutability (of the previous versions).
-At each stage or step we delegate some aspect to an appropriate external vendored tool....</p>
+At each stage or step we delegate some aspect to an appropriate external vendored tool.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2023-07-13 00:00:00 +0545 +0545'>July 13, 2023</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
   <a class="entry-link" aria-label="post link to The simplest self-publishing workflow" href="https://lngnmn2.github.io/articles/the-simplest-workflow/"></a>

@@ -4,7 +4,7 @@
     <title>Trading on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/categories/trading/</link>
     <description>Recent content in Trading on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 May 2025 15:17:12 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/trading/index.xml" rel="self" type="application/rss+xml" />
@@ -36,10 +36,16 @@
       <link>https://lngnmn2.github.io/articles/notes/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/notes/</guid>
-      <description>These are just assorted notes for now, which shall become something ready to be formalized.
-Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
-The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
-All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like &amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements like &amp;ldquo;Volume&amp;rdquo;.</description>
+      <description>&lt;p&gt;These are just assorted &lt;em&gt;notes&lt;/em&gt; for now, which shall become something ready to be &lt;em&gt;formalized.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;non-bullshit&#34;&gt;Non-bullshit&lt;/h2&gt;
+&lt;p&gt;The objective is to train a NN which captures &lt;em&gt;subtle recurrent
+patterns&lt;/em&gt; among many well-chosen (and well-defined) &lt;em&gt;features&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The proper set of features that, in turn, captures the most relevant aspects
+of reality is what determines the distinction between a modest success
+or a total failure of this ML approach.&lt;/p&gt;
+&lt;p&gt;All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like
+&amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements
+like &amp;ldquo;Volume&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Trading</title>
@@ -60,10 +66,10 @@ All the features should be actual &amp;ldquo;measurements&amp;rdquo; of somethin
       <link>https://lngnmn2.github.io/articles/automated-trading/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/automated-trading/</guid>
-      <description>AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;
-Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
-Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
-Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).</description>
+      <description>&lt;p&gt;AUTHOR: &amp;lt;lngnmn2@yahoo.com&amp;gt;&lt;/p&gt;
+&lt;p&gt;Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.&lt;/p&gt;
+&lt;p&gt;Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.&lt;/p&gt;
+&lt;p&gt;Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

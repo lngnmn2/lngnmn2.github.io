@@ -4,7 +4,7 @@
     <title>Deep Learning on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/deep-learning/</link>
     <description>Recent content in Deep Learning on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Nov 2024 16:53:58 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
@@ -13,9 +13,9 @@
       <link>https://lngnmn2.github.io/articles/llms-und-ai/</link>
       <pubDate>Wed, 20 Nov 2024 16:53:58 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/llms-und-ai/</guid>
-      <description>DATE: &amp;lt;2024-11-20 Wed&amp;gt;
-Lets write a few paragraphs which will destroy the current LLM narrative (naive bullshit), while neither any single piece nor the whole article can be refuted.
-This is a high-level proper (classic Eastern) philosophy, which is many levels away from simple logical forms, but it still can be reduced to these, if one wants to. The Proper Philosophy isn&amp;rsquo;t dead, not even it is dying. It cannot, lmao.</description>
+      <description>&lt;p&gt;DATE: &lt;span class=&#34;timestamp-wrapper&#34;&gt;&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2024-11-20 Wed&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Lets write a few paragraphs which will destroy the current LLM narrative (naive bullshit), while neither any single piece  nor the whole article can be refuted.&lt;/p&gt;
+&lt;p&gt;This is a high-level proper (classic Eastern) philosophy, which is many levels away from simple logical forms, but it still can be reduced to these, if one wants to. The Proper Philosophy isn&amp;rsquo;t dead, not even it is dying. It cannot, lmao.&lt;/p&gt;</description>
     </item>
     <item>
       <title>  The &#34;quant&#34; memes from books and movies.
@@ -37,11 +37,11 @@ This is a high-level proper (classic Eastern) philosophy, which is many levels a
       <link>https://lngnmn2.github.io/articles/late/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/late/</guid>
-      <description>This is sort of an answer to this question.
-https://news.ycombinator.com/item?id=38425475
-So, what if you are late to the party?
-Unfortunately, nowadays it is even much harder to get through all the utter bullshit and hype, but there is a sort of a shortcut or &amp;ldquo;the Hard Way&amp;rdquo;.
-There are two and a half key figures: Geoffrey Hinton, who did most of the mathematical heavy lifting, Andrew Ng, who not just did all the derivations, but became the most famous practitioner, and Andrej Karpathy who us just a narcissistic asshole, similar to Lex Friedman.</description>
+      <description>&lt;p&gt;This is sort of an answer to this question.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://news.ycombinator.com/item?id=38425475&#34;&gt;https://news.ycombinator.com/item?id=38425475&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, what if you are late to the party?&lt;/p&gt;
+&lt;p&gt;Unfortunately, nowadays it is even much harder to get through all the utter bullshit and hype, but there is a sort of a shortcut or &amp;ldquo;the Hard Way&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;There are two and a half key figures: &lt;em&gt;Geoffrey Hinton&lt;/em&gt;, who did most of the mathematical heavy lifting, &lt;em&gt;Andrew Ng&lt;/em&gt;, who not just did all the derivations, but became the most famous practitioner, and &lt;em&gt;Andrej Karpathy&lt;/em&gt; who us just a narcissistic asshole, similar to Lex Friedman.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Non-bullshit Trading</title>
@@ -63,21 +63,31 @@ There are two and a half key figures: Geoffrey Hinton, who did most of the mathe
       <link>https://lngnmn2.github.io/articles/look-ma-no-i/</link>
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/look-ma-no-i/</guid>
-      <description>DESCRIPTION: There is no &amp;ldquo;I&amp;rdquo; in your AI.
-Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).
-There is what every &amp;ldquo;AI researcher&amp;rdquo; should know about Knowledge and Intelligence (yes, both capitalized).
-There is so-called &amp;ldquo;reality&amp;rdquo; prior to any knowledge or intelligence. Any reasonable thinker has been arrived at the ultimate reality.
-&amp;ldquo;I am That&amp;rdquo; (&amp;ldquo;That Thou Art&amp;rdquo;) of Chandogya Upanishad is the &amp;ldquo;end of knowledge&amp;rdquo; and the &amp;ldquo;arrival&amp;rdquo; to the ultimate &amp;ldquo;truth&amp;rdquo;, with implies existence of &amp;ldquo;That&amp;rdquo; and one being just a sub-process (a wave) in It.</description>
+      <description>&lt;p&gt;DESCRIPTION: There is no &amp;ldquo;I&amp;rdquo; in your AI.&lt;/p&gt;
+&lt;p&gt;Lets put all the memes and bullshit aside, for a moment and talk serously about GAI (hello, mr. Carmack, sir).&lt;/p&gt;
+&lt;p&gt;There is what every &amp;ldquo;AI researcher&amp;rdquo; should know about Knowledge and
+Intelligence (yes, both capitalized).&lt;/p&gt;
+&lt;p&gt;There &lt;em&gt;is&lt;/em&gt; so-called &amp;ldquo;reality&amp;rdquo; &lt;em&gt;prior to&lt;/em&gt; any knowledge or intelligence. Any
+reasonable thinker has been arrived at the ultimate reality.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;I am That&amp;rdquo;&lt;/em&gt; (&amp;ldquo;That Thou Art&amp;rdquo;) of Chandogya Upanishad is the &amp;ldquo;end of
+knowledge&amp;rdquo; and the &amp;ldquo;arrival&amp;rdquo; to the ultimate &amp;ldquo;truth&amp;rdquo;, with implies
+existence of &amp;ldquo;That&amp;rdquo; and one being just a sub-process (a wave) in It.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Formulating the problem</title>
       <link>https://lngnmn2.github.io/articles/notes/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/notes/</guid>
-      <description>These are just assorted notes for now, which shall become something ready to be formalized.
-Non-bullshit The objective is to train a NN which captures subtle recurrent patterns among many well-chosen (and well-defined) features.
-The proper set of features that, in turn, captures the most relevant aspects of reality is what determines the distinction between a modest success or a total failure of this ML approach.
-All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like &amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements like &amp;ldquo;Volume&amp;rdquo;.</description>
+      <description>&lt;p&gt;These are just assorted &lt;em&gt;notes&lt;/em&gt; for now, which shall become something ready to be &lt;em&gt;formalized.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;non-bullshit&#34;&gt;Non-bullshit&lt;/h2&gt;
+&lt;p&gt;The objective is to train a NN which captures &lt;em&gt;subtle recurrent
+patterns&lt;/em&gt; among many well-chosen (and well-defined) &lt;em&gt;features&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The proper set of features that, in turn, captures the most relevant aspects
+of reality is what determines the distinction between a modest success
+or a total failure of this ML approach.&lt;/p&gt;
+&lt;p&gt;All the features should be actual &amp;ldquo;measurements&amp;rdquo; of something real, like
+&amp;ldquo;Open Interest&amp;rdquo; or the &amp;ldquo;Long/Short ratio&amp;rdquo; and other obvious measurements
+like &amp;ldquo;Volume&amp;rdquo;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Deep Learning</title>
