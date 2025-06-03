@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>On Grinding Leetcode | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="math">
+<meta name="description" content="There are lots of hysterical complains in the social media gutters, like /g/, about Leetcode and apparent uselessness of such math-based drills.. Nothing can be further from the truth.
+First of all, every remarkable  programming achievements of the past, be it of NASA missions, or of Bell Labs, or of Ericsson, or some academic breakthroughs like ML or Scheme or Haskell &ndash; they all are due to the fact that the only way to have access to a computer used to be through mathematics, applied and even purely theoretical. The early Computer Science was basically considered, and especially taught at good schools, as applied math. It should remain this way(but, unfortunately, everything has been ruined).">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/on-grinding-leetcode/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/on-grinding-leetcode/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/on-grinding-leetcode/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="On Grinding Leetcode">
+  <meta property="og:description" content="There are lots of hysterical complains in the social media gutters, like /g/, about Leetcode and apparent uselessness of such math-based drills.. Nothing can be further from the truth.
+First of all, every remarkable programming achievements of the past, be it of NASA missions, or of Bell Labs, or of Ericsson, or some academic breakthroughs like ML or Scheme or Haskell – they all are due to the fact that the only way to have access to a computer used to be through mathematics, applied and even purely theoretical. The early Computer Science was basically considered, and especially taught at good schools, as applied math. It should remain this way(but, unfortunately, everything has been ruined).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-03T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-03T15:39:54+05:45">
+    <meta property="article:tag" content="Math">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="On Grinding Leetcode">
+<meta name="twitter:description" content="There are lots of hysterical complains in the social media gutters, like /g/, about Leetcode and apparent uselessness of such math-based drills.. Nothing can be further from the truth.
+First of all, every remarkable  programming achievements of the past, be it of NASA missions, or of Bell Labs, or of Ericsson, or some academic breakthroughs like ML or Scheme or Haskell &ndash; they all are due to the fact that the only way to have access to a computer used to be through mathematics, applied and even purely theoretical. The early Computer Science was basically considered, and especially taught at good schools, as applied math. It should remain this way(but, unfortunately, everything has been ruined).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "On Grinding Leetcode",
+      "item": "https://lngnmn2.github.io/articles/on-grinding-leetcode/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "On Grinding Leetcode",
+  "name": "On Grinding Leetcode",
+  "description": "There are lots of hysterical complains in the social media gutters, like /g/, about Leetcode and apparent uselessness of such math-based drills.. Nothing can be further from the truth.\nFirst of all, every remarkable programming achievements of the past, be it of NASA missions, or of Bell Labs, or of Ericsson, or some academic breakthroughs like ML or Scheme or Haskell \u0026ndash; they all are due to the fact that the only way to have access to a computer used to be through mathematics, applied and even purely theoretical. The early Computer Science was basically considered, and especially taught at good schools, as applied math. It should remain this way(but, unfortunately, everything has been ruined).\n",
+  "keywords": [
+    "math"
+  ],
+  "articleBody": "There are lots of hysterical complains in the social media gutters, like /g/, about Leetcode and apparent uselessness of such math-based drills.. Nothing can be further from the truth.\nFirst of all, every remarkable programming achievements of the past, be it of NASA missions, or of Bell Labs, or of Ericsson, or some academic breakthroughs like ML or Scheme or Haskell – they all are due to the fact that the only way to have access to a computer used to be through mathematics, applied and even purely theoretical. The early Computer Science was basically considered, and especially taught at good schools, as applied math. It should remain this way(but, unfortunately, everything has been ruined).\nTo really master [an understanding-based] programming (which has almost nothing to do with so-called “coding”) one has to not just know some related mathematics, but to understand where that matematics “came from” – what exactly this or that mathematical notion has been generalized from, in other words one has to actually realize what mathematics Is.\nSo called concrete mathematics (and the best parts of an abstract one) study the properties of captured and properly generalized into abstract concepts recurring (frequently emerging at all levels) patterns in What Is. It is indeed just properly captured generalized observations (of an external observer).\nKnowing (or rather realizing) this, one understands mathematics, and through it, one understands programming and could zoom back and forth from What Is, through math, to program abstractions and specifications and then, and only then to the implementation details.\nAs long as you are able to trace you problem domain to some aspect of What Is, to build a simplest mathematical theory of the domain (by naming and defining the entities, their attributes, relations among them and maybe even some “laws”) using familiar and well-understood mathematics, all the data-structures suddenly match one or another algebraic data type, and the rest of the code almost entirely “writes itself”.\nOne can see how this works “in practice” by reading any code by Peter Norvig, either in his books or in his Pytudes. This, by the way, used to be the only way to program, and this approach has been taught in MIT by Barbara Liskov and John Guttag, Abelson and Sussman and Eric Grimson (before they switched to Python and enshittified everything).\nAnd proper, ground in What Is, mathematics is never hard, because the underlying patterns – the “basic building blocks from which What Is” arises – are never too complicated. Like combinatorics is boring but not hard to understand. Yes, the number of distinct ways some n elements can be permuted (or arranged) is, indeed, n times n-1 times n-2 and so on till we reach the unit. There is simply no other way.\nAgain, math is not “abstract” like in a pretentious bullshit abstractionism (a modern art form), it is abstract in the just right sense of stripping off the particulars in order to accurately capture the underlying essence (a commonality, a recurrent pattern, an isomorphism, or a symmetry), then name it and study its properties, which are “out there”.\nThe [only] royal road to programming is through mathematics. All the attempts to lower the entry barrier just resulted in enshittification of the field.\nOne more motivating example is of Andrew Ng and his wonderful and first-ever MOOC (Machine Learning). In order to write all that code easily and seemingly effortlessly, he has to do all the underlying mathematical derivations by himself, to prove (at least to himself) as everything is, indeed, true (and not mere just ideas) and that all the “underlying machinery” (the algorithms and data structures) is correct.\nThe fact that the whole “implementation” is reducible to a set of matrix operations is a deep one, maybe as deep as the Curry-Howard Isomorphism itself (yes, everything (all possible outcomes) can be seen just as weighted sums of causal factors in a partcicular locality, after all), but this is another story.\nSo, math is not optional but absolutely necessary, just as the sages of the past proclaimed. Without a proper mathematical foundation one ends up with C++ and all the suffering it causes.\n",
+  "wordCount" : "690",
+  "inLanguage": "en",
+  "datePublished": "2025-06-03T00:00:00+05:45",
+  "dateModified": "2025-06-03T15:39:54+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/on-grinding-leetcode/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      On Grinding Leetcode
+    </h1>
+    <div class="post-meta"><span title='2025-06-03 00:00:00 +0545 +0545'>June 3, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There are lots of hysterical complains in the social media gutters, like <code>/g/</code>, about Leetcode and apparent uselessness of such math-based drills.. Nothing can be further from the truth.</p>
+<p>First of all, every remarkable  programming achievements of the past, be it of NASA missions, or of Bell Labs, or of Ericsson, or some academic breakthroughs like ML or Scheme or Haskell &ndash; they all are due to the fact that <em>the only way to have access to a computer used to be through mathematics</em>, applied and even purely theoretical. The early Computer Science was basically considered, and especially taught at good schools, as applied math. It should remain this way(but, unfortunately, everything has been ruined).</p>
+<p>To really master [an understanding-based] programming (which has almost nothing to do with so-called &ldquo;coding&rdquo;) one has to not just know some related mathematics, but to understand where that matematics  &ldquo;came from&rdquo; &ndash; what exactly this or that mathematical notion has been generalized from, in other words one has to actually realize what mathematics Is.</p>
+<p>So called concrete mathematics (and the best parts of an abstract one) study the properties of captured and properly generalized into abstract concepts recurring (frequently emerging at all levels) patterns in What Is. It is indeed just properly captured generalized observations (of an external observer).</p>
+<p>Knowing (or rather <em>realizing</em>) this, one understands mathematics, and through it, one understands programming and could zoom back and forth from What Is, through math, to program abstractions and specifications and then, and only then to the implementation details.</p>
+<p>As long as you are able to trace you problem domain to some aspect of What Is, to build a simplest mathematical theory of the domain (by naming and defining the entities, their  attributes, relations among them  and maybe even some  &ldquo;laws&rdquo;) using familiar and well-understood mathematics, all the data-structures suddenly match  one or another algebraic data type, and the rest of the code almost entirely &ldquo;writes itself&rdquo;.</p>
+<p>One can see  how this works &ldquo;in practice&rdquo; by reading any  code by <em>Peter Norvig</em>, either in his books or in his <em>Pytudes</em>. This, by the way, used to be <em>the only way to program</em>, and this approach has been taught in MIT by Barbara Liskov and John Guttag, Abelson and Sussman and Eric Grimson (before they switched to Python and  enshittified everything).</p>
+<p>And  proper, ground in What Is, mathematics is never hard, because the underlying patterns &ndash; the &ldquo;basic building blocks from which What Is&rdquo; arises &ndash;  are never too complicated.  Like combinatorics is boring but not hard to understand. Yes, the number  of distinct ways some <code>n</code> elements can be permuted (or arranged) is, indeed, <code>n</code> times <code>n-1</code> times <code>n-2</code> and so on <em>till we reach the unit</em>. There is simply <em>no other way</em>.</p>
+<p>Again, math is not &ldquo;abstract&rdquo; like in a pretentious bullshit abstractionism (a modern art form), it is abstract in the just right sense of stripping off the particulars in order to accurately capture the underlying essence (a commonality, a recurrent pattern, an isomorphism, or a symmetry), then <em>name it</em> and study its properties, which are &ldquo;out there&rdquo;.</p>
+<p>The [only] royal road to programming is through mathematics. All the attempts  to lower the entry barrier just resulted in <em>enshittification</em>  of the field.</p>
+<p>One more motivating example is of Andrew Ng and his wonderful and first-ever MOOC (Machine Learning). In order to write all that code <em>easily</em> and seemingly effortlessly, he has to do all the underlying mathematical derivations by himself, to <em>prove</em> (at least to himself) as everything is, indeed, true (and not mere just ideas) and that all the &ldquo;underlying machinery&rdquo; (the algorithms and data structures) is correct.</p>
+<p>The fact that the whole &ldquo;implementation&rdquo; is reducible to a set of matrix operations is a deep one, maybe as deep as the <em>Curry-Howard Isomorphism</em> itself (yes, everything  (all possible outcomes) can be seen just as weighted sums of causal factors in a partcicular locality, after all), but this is another story.</p>
+<p>So, math is not optional but absolutely necessary, just as the sages of the past proclaimed. Without a proper mathematical foundation one ends up with <em>C++</em> and all the suffering it causes.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/math/">Math</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

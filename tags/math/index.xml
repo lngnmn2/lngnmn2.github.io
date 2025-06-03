@@ -6,8 +6,16 @@
     <description>Recent content in Math on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Nov 2023 11:56:06 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 15:39:54 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Grinding Leetcode</title>
+      <link>https://lngnmn2.github.io/articles/on-grinding-leetcode/</link>
+      <pubDate>Tue, 03 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/on-grinding-leetcode/</guid>
+      <description>&lt;p&gt;There are lots of hysterical complains in the social media gutters, like &lt;code&gt;/g/&lt;/code&gt;, about Leetcode and apparent uselessness of such math-based drills.. Nothing can be further from the truth.&lt;/p&gt;
+&lt;p&gt;First of all, every remarkable  programming achievements of the past, be it of NASA missions, or of Bell Labs, or of Ericsson, or some academic breakthroughs like ML or Scheme or Haskell &amp;ndash; they all are due to the fact that &lt;em&gt;the only way to have access to a computer used to be through mathematics&lt;/em&gt;, applied and even purely theoretical. The early Computer Science was basically considered, and especially taught at good schools, as applied math. It should remain this way(but, unfortunately, everything has been ruined).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>On foundations of mathematics</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
