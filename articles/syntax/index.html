@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Syntax | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="DSL">
+<meta name="description" content="Lets solve it just for kicks">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/syntax/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/syntax/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/syntax/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Syntax">
+  <meta property="og:description" content="Lets solve it just for kicks">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-04T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-04T14:45:22+05:45">
+    <meta property="article:tag" content="DSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Syntax">
+<meta name="twitter:description" content="Lets solve it just for kicks">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Syntax",
+      "item": "https://lngnmn2.github.io/articles/syntax/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Syntax",
+  "name": "Syntax",
+  "description": "Lets solve it just for kicks",
+  "keywords": [
+    "DSL"
+  ],
+  "articleBody": "There are lots of literal degens (undeveloped, unrefined, lacking any sense of beauty and elegance) who keep parroting the stupid mantra “syntax does not matter” or “syntax is not important”, or “it is a mater of individual prurience”. Idiots.\nThere is a universal human notion which we call [careful and even obsessive] “attention to details”. In certain cultures this part is very prominent, and one can tell. Every neurologically normal person could name that particular country. Other countries had either brief periods of such “enlightenment” in their past, that can still be observed in traditional architectural and art forms, or have some occupations in which attention to details is the paramount, like that long lost German automobile engineering in the 70s and 80s.\nSuch cultures,, unsurprisingly, are considered the most civilized and refined and exhibit all the hallmarks of a civilized, peaceful and advanced societies.\nSame considerations apply to intellectual endeavors, which can be seen as forms of an art, such as mathematics and math-based functional programming.\nBut how such details evolve, come into existence and become parts of a tradition? The answer is almost universal – by endless trials-and-errors together with a feedback loops form a community (environment).\nThis is how the current mathematical notation has been evolved. What most people are just brushing away as unimportant is actually very deep and profound human achievement. It is has [partial] consistency (infix), uniformity (ratios), orthogonality (ratios again) and even universality (use of parentheses). One cannot easily come up with such a combination of complementing features, in only can be gradually evolved, or, indeed, discovered.\nSo, how do we come up with a good, almost universal (like the current mathematical notation) syntactic forms for a programming. Well , we just do again (without a shame) what the ancient sages did – they took the most used and universally agreed parts of the traditional mathematical notation, and augmented it (mostly too verbose) .\nWhat happened next, is that a whole committee of math majors, some of whom developed their own petty functional languages, designed the almost perfect (well, mostly right) language called Haskell. In Haskell the most “universal” syntactic foams has been captured and “perfected” (minimized). All we have to do is, well, just do this again.\nThere is an important point to realize. If we look at the whole set of ancient traditions, which include ISWIM, APL, Algol, CLU, Prolog, Erlang, SML, Miranda, Common Lisp, Scheme and even SHEN, the C programming language tradition is not just the canonical case the “Worse Is Better” social pattern, it is an obvious enshittification. As cultured persons we won’t even consider C++.\nSo, what universal mathematical notions the Haskell syntactic forms have captured just right? Notice that by “just right” we mean that there is literally noting more talk about, like using parenthesis for grouping and implicit nesting.\nHigh-level principles The noting of overloading is to have more than one meaning associated with a word (a term) depending on an implicit context.\nOverloading of symbols is hard to comprehend so use of a specialized embedded DSLs as distinct “contexts”.\nThus is the reason why toplevel type-signatures shall be at its own line, written in its own embedded DSL.\nIn general. the mathematical notation is “flat”, so using toplevel annotations on a previous line is a major innovation to unclutter the syntactic forms.\nThe symbols unusually agreed upon The symbols and the properly captured notions\n= equality, being the same “thing” -\u003e transformation and a distinct step, a mapping. In expression with clauses captures the notion of an implicit partial function, an implicit lambda. | partition, a sum-type and a clause (partial function). UNIX use of it as a pipelining operator is wired. , a product [type] in Haskell instead of * as in math, SML and Ocaml () nesting, explicit ordering, ! a command, a distinct linguistic form, an explicit “mark” ? a question, a distinct linguistic form which demands an answer, an explicit “mark” Combinations\n\u003c= and \u003e= := assignment, nothing to talk about == an equality predicate, same != with an implicit notion for ! being a logical negation (NOT) /= maybe more direct “rendering” The fact that algebraic sum-types and the partial functions (clauses) defined on each tag (data-constructor) match perfectly is more than just a random coincidence and intuitively captures a universal pattern.\nThe Haskell’s use of (,) for both type- and data-constructors, and of (-\u003e) as an infix partially-applicable type-constructors (with “sections)” is a stroke of a genius in a zealous persuit of uniformity.\nMaybe, just maybe, (*) syntactic form for a product would be more consistent , but the comma captures our notion of enumeration.\nScheme did the “marks” just right – ? for a predicate, and ! for a command (a procedure). These are just naming conversions, but shall be enforced in the syntax.\nUsing ? as a chaining monadic operator is a wrong idea , while having a syntactic sugar for such implicit operators is a great one.\nLISP programmers tried to introduce the (! xxx) and (? xxx) forms, but they are strikingly inferior to.\nObsessive attention to the minutest details in an art form Trying to move from more “universal” (general) to specific\nParenthesis Using parenthesis to override default operator precedence with a notion of an implicit nesting as in function composition.\n\\((2+3)*4\\) is not the same as \\(2+3*4\\)\nThis means that the expression inside the parenthesis is nested [within] the outer expression and has to be evaluated first.\nThis is the traditional way to establish an explicit order of evaluation (overriding the order defined by operator precedence).\nLISP championed the use of parenthesis to explicitly define nested structures, which is obviously related and just more general notion.\n(+) (+ 2 3) (let ((a 1)) (+ a a)) Apostrophe \\[x’ x’’\\]\nThis is where the art and elegance shine – use of a single quote ' (till the end of a parenthesized expression).\n'() Common Lisp uses a “back-quote” for a special kind of quotation within a macro. together with a “matching” comma , as an “unquote” (an inverse operation).\nThis is a manifestation of minimalism and subtlety, which are defining characteristics of an art form.\nBackslash in LaTeX This is another stroke of a genius – witting \\dot or \\hat or \\tilda as a mnemonic mapping to a unicode symbol (with a particular numerical codon) is fantastic.\nNotice that the form \\dot\\ loses all the elegance and appeal. “Till the end of a literal” rule is good-enough. Again, same goes for the LISP quoting.\nCompare this approach to the sheer stupidity Microsoft uses to memorize the non-meaningful numbers and then to press Alt-x . It is exactly such small details that distinguish an art from a crap.\nTraditional mathematical notation the traditional symbol to denote equality (and occasional reasoning) \\[=\\] Notice, that this denotes a statement of fact, not an overloaded predicate.\n“maps to” (an arrow) \\[-\u003e\\]\n\\[+ - * / \u003c \u003c= \u003e \u003e=\\] There is noting more to talk about. These symbols capture the underlying universal mathematical notions perfectly. Intuitively ones sees “less-than-or-equal” as being captured in these symbols.\nHaskell juxtaposition for function application parentheses for explicit nesting (for infix-to-prefiix trans-forms and for, naturally, sections) (.) f g = \\x -\u003e f (g x)\nthe minimalist lambda notation \\x -\u003e x + 1\nuniversal bindings f = \\x -\u003e x + 1 The use of the quality symbol for defining a binding (within the current environment)\nuniversal pattern-matching currying, partial application and \\x -\u003e \\y -\u003e x + y There is already a lot is going on, a lot of “right things” – nested closures – x is captured, implicit lexical scoping\nsections (the syntax for partially applied infix binary operators) syntactic sugar for multiple argument functions which desugars to nested lambdas (+) x y = x + y\nat a higer level Haskell got right type anntations at a separate line using a specialized DSL this is what Scala should do to clear the mess\nErlang universal pattern-marching\nSML functionn clauses\n",
+  "wordCount" : "1341",
+  "inLanguage": "en",
+  "datePublished": "2025-06-04T00:00:00+05:45",
+  "dateModified": "2025-06-04T14:45:22+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/syntax/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Syntax
+    </h1>
+    <div class="post-description">
+      Lets solve it just for kicks
+    </div>
+    <div class="post-meta"><span title='2025-06-04 00:00:00 +0545 +0545'>June 4, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>There are lots of literal degens (undeveloped, unrefined, lacking any sense of beauty and elegance) who keep parroting the stupid mantra &ldquo;syntax does not matter&rdquo; or &ldquo;syntax is not important&rdquo;, or &ldquo;it is a mater of individual prurience&rdquo;. Idiots.</p>
+<p>There is a universal human notion which we call [careful and even obsessive] &ldquo;<em>attention to details</em>&rdquo;. In certain cultures this part is very prominent, and one can tell. Every neurologically normal person could  name that particular country. Other countries had either brief periods of such &ldquo;enlightenment&rdquo; in their past, that can still be observed in traditional architectural and art  forms, or have some occupations in which attention to details is the paramount, like that long lost German automobile engineering in the 70s and 80s.</p>
+<p>Such cultures,, unsurprisingly, are considered the most civilized and refined and exhibit all the hallmarks of a civilized, peaceful and advanced societies.</p>
+<p>Same considerations apply to intellectual endeavors, which can be seen as forms of an art, such as mathematics and math-based functional programming.</p>
+<p>But how such details evolve, come into existence and become parts of a tradition? The answer is almost universal &ndash; by endless trials-and-errors together with a  feedback loops form a community (environment).</p>
+<p>This is how the current mathematical notation has been evolved. What most people are just brushing away as unimportant is actually very deep and profound human achievement. It is has [partial] consistency (infix), uniformity (ratios), orthogonality (ratios again) and even universality (use of parentheses). One cannot easily come up with such a combination of complementing features, in only can be gradually evolved, or, indeed, discovered.</p>
+<p>So, how do we come up with a <em>good</em>, almost universal (like the current mathematical notation) <em>syntactic forms</em> for a programming.  Well , we just do again (without a shame) what the ancient sages did &ndash; they took the most used and universally agreed parts of the  traditional mathematical notation, and augmented it (mostly too verbose) .</p>
+<p>What happened next, is that a whole committee  of math majors, some of whom developed their own petty functional languages,  designed the almost perfect (well, mostly right) language called <em>Haskell</em>.  In Haskell the most &ldquo;universal&rdquo; syntactic foams has been captured and &ldquo;perfected&rdquo; (minimized). All we have to do is, well, just do this again.</p>
+<p>There  is an important point to realize. If we look at the whole set of ancient traditions, which include  ISWIM, APL, Algol, CLU, Prolog, Erlang, SML, Miranda, Common Lisp, Scheme and even SHEN, the C programming
+language tradition is not just the canonical case the &ldquo;Worse Is Better&rdquo; social pattern,  it is an obvious <em>enshittification</em>. As cultured persons we won&rsquo;t even consider C++.</p>
+<p>So, what <em>universal mathematical notions</em> the Haskell syntactic forms have <em>captured</em> just right? Notice that by &ldquo;just right&rdquo; we mean that there is literally noting more talk about, like <em>using parenthesis for grouping and implicit nesting</em>.</p>
+<h2 id="high-level-principles">High-level principles<a hidden class="anchor" aria-hidden="true" href="#high-level-principles">#</a></h2>
+<p>The noting of overloading  is to have more than one <em>meaning</em> associated with a word (a term) depending on an implicit context.</p>
+<p>Overloading of symbols is hard to comprehend so use of a  specialized  embedded DSLs as distinct &ldquo;contexts&rdquo;.</p>
+<p>Thus is the reason why <em>toplevel type-signatures</em> shall be at its own line, written in its own <em>embedded DSL</em>.</p>
+<p>In general. the mathematical notation is &ldquo;flat&rdquo;, so using <em>toplevel annotations</em> on a previous line is a <em>major innovation</em> to unclutter the syntactic forms.</p>
+<h3 id="the-symbols-unusually-agreed-upon">The symbols unusually agreed upon<a hidden class="anchor" aria-hidden="true" href="#the-symbols-unusually-agreed-upon">#</a></h3>
+<p>The symbols and the properly captured notions</p>
+<ul>
+<li><code>=</code> <em>equality</em>, being the same &ldquo;thing&rdquo;</li>
+<li><code>-&gt;</code> <em>transformation</em> and a distinct <em>step</em>, a <em>mapping</em>. In expression with  <em>clauses</em> captures the notion of an <em>implicit</em> partial function, an <em>implicit lambda</em>.</li>
+<li><code>|</code> <em>partition</em>, a <em>sum-type</em> and a <em>clause</em> (partial function). UNIX use of it as a pipelining operator is <em>wired</em>.</li>
+<li><code>,</code> a <em>product</em> [type] in Haskell instead of  <code>*</code> as in math, SML and Ocaml</li>
+<li><code>()</code> nesting, explicit ordering,</li>
+<li><code>!</code> a <em>command</em>, a distinct linguistic form, an explicit &ldquo;mark&rdquo;</li>
+<li><code>?</code> a <em>question</em>, a distinct linguistic form which demands an answer, an explicit  &ldquo;mark&rdquo;</li>
+</ul>
+<p>Combinations</p>
+<ul>
+<li><code>&lt;=</code> and <code>&gt;=</code></li>
+<li><code>:=</code> <em>assignment</em>, nothing to talk about</li>
+<li><code>==</code> an <em>equality predicate</em>, same</li>
+<li><code>!=</code> with an implicit notion for <code>!</code> being a logical negation (NOT) <code>/=</code> maybe more direct &ldquo;rendering&rdquo;</li>
+</ul>
+<p>The fact that algebraic sum-types and the partial functions  (clauses) defined on each tag (data-constructor) match perfectly is more than just a random coincidence and intuitively <em>captures</em> a universal pattern.</p>
+<p>The Haskell&rsquo;s use of <code>(,)</code> for <em>both</em> type- and data-constructors, and of  <code>(-&gt;)</code> as an <em>infix  partially-applicable type-constructors (with &ldquo;sections)&rdquo;</em> is a stroke of a genius in a zealous persuit of uniformity.</p>
+<p>Maybe, just maybe, <code>(*)</code> syntactic form for a <em>product</em>  would be more consistent , but the comma captures our notion of enumeration.</p>
+<p>Scheme did the &ldquo;marks&rdquo; just right &ndash; <code>?</code> for a <em>predicate</em>, and <code>!</code> for a command (a procedure). These are just naming conversions, but shall be enforced in the syntax.</p>
+<p>Using <code>?</code> as a <em>chaining  monadic operator</em> is a wrong idea , while having a syntactic sugar for such implicit operators is a great one.</p>
+<p>LISP programmers tried to introduce the <code>(! xxx)</code> and <code>(? xxx)</code> forms, but they are strikingly inferior to.</p>
+<h2 id="obsessive-attention-to-the-minutest-details-in-an-art-form">Obsessive attention to the minutest details in an art form<a hidden class="anchor" aria-hidden="true" href="#obsessive-attention-to-the-minutest-details-in-an-art-form">#</a></h2>
+<p>Trying to move from more &ldquo;universal&rdquo; (general) to specific</p>
+<h3 id="parenthesis">Parenthesis<a hidden class="anchor" aria-hidden="true" href="#parenthesis">#</a></h3>
+<p>Using parenthesis to override default operator precedence with a notion of an implicit <em>nesting</em> as in function composition.</p>
+<p>\((2+3)*4\) is not the same as \(2+3*4\)</p>
+<p>This means that the expression inside the parenthesis is nested [within] the outer expression and has to be evaluated first.</p>
+<p>This is the traditional way to establish an explicit order of evaluation (overriding the order defined by operator precedence).</p>
+<p><code>LISP</code> championed the use of parenthesis to explicitly define <em>nested</em> structures, which is obviously related and just  more general notion.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(<span style="color:#a6e22e">+</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#a6e22e">+</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>(let ((a <span style="color:#ae81ff">1</span>)) (<span style="color:#a6e22e">+</span> a a))
+</span></span></code></pre></div><h3 id="apostrophe">Apostrophe<a hidden class="anchor" aria-hidden="true" href="#apostrophe">#</a></h3>
+<p>\[x&rsquo; x&rsquo;&rsquo;\]</p>
+<p>This is where the art and elegance shine &ndash; use of a single quote <code>'</code> (till the end of a parenthesized expression).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#f92672">&#39;</span>()
+</span></span></code></pre></div><p><em>Common Lisp</em> uses a &ldquo;back-quote&rdquo; for a special kind of quotation within a macro. together with a &ldquo;matching&rdquo; comma <code>,</code> as an &ldquo;unquote&rdquo; (an <em>inverse</em> operation).</p>
+<p>This is a manifestation of <em>minimalism</em> and <em>subtlety</em>, which are defining characteristics of an art form.</p>
+<h3 id="backslash-in-latex">Backslash in LaTeX<a hidden class="anchor" aria-hidden="true" href="#backslash-in-latex">#</a></h3>
+<p>This is another stroke of a genius &ndash; witting <code>\dot</code> or <code>\hat</code> or <code>\tilda</code>  as a mnemonic mapping to a <em>unicode symbol</em> (with a particular numerical codon) is fantastic.</p>
+<p>Notice that the form <code>\dot\</code> loses all the elegance and appeal. &ldquo;Till the end of a literal&rdquo; <em>rule</em> is good-enough. Again, same goes for the LISP quoting.</p>
+<p>Compare this approach to the sheer stupidity Microsoft uses to memorize the non-meaningful numbers and then to press <code>Alt-x</code> . It is exactly such small details that distinguish an art from a crap.</p>
+<h2 id="traditional-mathematical-notation">Traditional mathematical notation<a hidden class="anchor" aria-hidden="true" href="#traditional-mathematical-notation">#</a></h2>
+<p>the traditional symbol to denote  equality (and occasional reasoning)
+\[=\]
+Notice, that this denotes  a statement of fact, <em>not</em> an overloaded  predicate.</p>
+<p>&ldquo;maps to&rdquo; (an arrow)
+\[-&gt;\]</p>
+<p>\[+ - * / &lt; &lt;= &gt; &gt;=\]
+There is noting more to talk about. These symbols capture the underlying universal mathematical notions  perfectly. Intuitively ones <em>sees</em> &ldquo;less-than-or-equal&rdquo; as being captured in these symbols.</p>
+<h2 id="haskell">Haskell<a hidden class="anchor" aria-hidden="true" href="#haskell">#</a></h2>
+<h3 id="juxtaposition-for-function-application">juxtaposition for function application<a hidden class="anchor" aria-hidden="true" href="#juxtaposition-for-function-application">#</a></h3>
+<h3 id="parentheses-for-explicit-nesting--for-infix-to-prefiix-trans-forms-and-for-naturally-sections">parentheses for explicit nesting (for infix-to-prefiix trans-forms and for, naturally, sections)<a hidden class="anchor" aria-hidden="true" href="#parentheses-for-explicit-nesting--for-infix-to-prefiix-trans-forms-and-for-naturally-sections">#</a></h3>
+<p>(.) f g = \x -&gt; f (g x)</p>
+<h3 id="the-minimalist-lambda-notation">the minimalist lambda notation<a hidden class="anchor" aria-hidden="true" href="#the-minimalist-lambda-notation">#</a></h3>
+<p>\x -&gt; x + 1</p>
+<h3 id="universal-bindings">universal bindings<a hidden class="anchor" aria-hidden="true" href="#universal-bindings">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">\</span>x <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>The use of the quality symbol  for defining a <em>binding</em> (within the current environment)</p>
+<h3 id="universal-pattern-matching">universal pattern-matching<a hidden class="anchor" aria-hidden="true" href="#universal-pattern-matching">#</a></h3>
+<h3 id="currying-partial-application-and">currying, partial application and<a hidden class="anchor" aria-hidden="true" href="#currying-partial-application-and">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">\</span>x <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">\</span>y <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">+</span> y
+</span></span></code></pre></div><p>There is already a lot is going on, a lot of  &ldquo;right things&rdquo; &ndash; nested closures &ndash; <code>x</code> is captured, implicit lexical scoping</p>
+<h3 id="sections--the-syntax-for-partially-applied-infix-binary-operators">sections (the syntax for partially applied infix binary  operators)<a hidden class="anchor" aria-hidden="true" href="#sections--the-syntax-for-partially-applied-infix-binary-operators">#</a></h3>
+<p>syntactic sugar for multiple argument functions which desugars to nested lambdas
+(+) x y = x + y</p>
+<p>at a higer level  Haskell got right
+type anntations  at a separate line using a specialized DSL
+this is what Scala should do to clear the mess</p>
+<p>Erlang
+universal pattern-marching</p>
+<p>SML
+functionn clauses</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
