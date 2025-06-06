@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Vibe coding explained | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="vibecoding, AI">
+<meta name="description" content="Idiots, idiots everywhere...">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/vibe-coding-explained/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/vibe-coding-explained/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/vibe-coding-explained/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Vibe coding explained">
+  <meta property="og:description" content="Idiots, idiots everywhere...">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-06T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-06T12:53:28+05:45">
+    <meta property="article:tag" content="Vibecoding">
+    <meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vibe coding explained">
+<meta name="twitter:description" content="Idiots, idiots everywhere...">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Vibe coding explained",
+      "item": "https://lngnmn2.github.io/articles/vibe-coding-explained/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Vibe coding explained",
+  "name": "Vibe coding explained",
+  "description": "Idiots, idiots everywhere...",
+  "keywords": [
+    "vibecoding", "AI"
+  ],
+  "articleBody": "Reading less social media bullshit and using ones own well-trained mind sometimes helps to clarify complex and noisy topics.\nHere is why, in principle, any LLM coding (I cannot call this crap “programming” because there is no uderstanding involved) will always yield sub-par bullshit.\nLLMs operate on tokens, which are abstract numbers, if you will. Parts of words of a human language are being associated with a distinct token, and then a probabilistic graph-like structure is created out of these tokens, using a fundamental back-propagation algorithm.\nThen, at an inference phase, the system (a binary-encoded probabilistic mathematical model) appears (to an uneducated observer) to behave as if it is “intelligent” and “capable of doing reasoning”. This is, of course, an illusion, created by a vastly complex computation, which can be easily mistaken as an intelligence (yes, yes, the classic “a rope for a snake”) .\nIt the context of programming everything is much worse. Operating, in principle, on “symbols” associated with words that encode entities, attributes, properties and relations (nouns,verbs and adjectives are out there for a reason – they capture the “structure” of What Is) it cannot see the underlying patterns, generalize from them, and capture and name abstractions, in principle – they lacks the machinery to do so.\nHere is how. Any undergraduate, I hope, knows that \\[x \\rightarrox x + 1\\] and \\[y \\rightarrow y + 1\\] are the same function. leave alone that \\[x \\rightarrow x + x\\] and \\[x \\rigjtarrow x * 2\\] are the same function, but different procedures (implementations).\nSuch mathematical notions are the most fundamental and has been taken, vial the Lambda Calculus, into a serious Computer Science – they have formally specified the notion of a bound (in a given context) and of a free variable, and precise rules for consistent renaming to avoid an unintended name capture or shadowing. The linguistic notions of shadowing and overloading has been formally defend too.\nNo conditional-propability based model, no matter what “architecture” (a Transformer or what not) could “see” or capture such notions, leave alone use them. Again, there is simply nothing to talk about – they just cannot, there is neither “awareness” nor “memory of experience” nor “instantiation of rules”.\nSo, the only context in which such models are marginally useful is in filling up the “blanks” in verbose, over-“engineered” OO APIs in crappy OO languages like C++ or Java. This is the only valid “use-case”. The long names, verbose syntax of types, fully qualified method access – all this can be generated (without any underlying understanding).\nThis (and only this) is how Microsoft, lest say, claims that it codes some percentage of some its software with AI – they feed their wast libraries into a more-or-less standard model and it performs a “glorified autocomplete” (indeed!).\nThis is the only use the mere mortals like you and me could have. If you read carefully these overflowing with excitement “vibe coding” shitposts, you will realize that the only task in which AI “succeeds” is, literally, coding some structured and formated crap (think of XML, JSON, CSS, HTML) and simple CRUD code which produces or consumes such (variously) encoded data, provided there were lots and lots of such examples in the training set.\nAgain, how a model “recognizes” a procedure? Only by its names and surrounding names (and there is a notion of order of arguments which it implicitly captures as a probability of a the next token. It is that “next”.\nSo, a properly trained model could generate something that looks like it has “seen” before, no more, no less. It does not perform, in principle, due to the lack of a “mathematical machinery” any kind of “understading”, “reasoning”, “inference”, “deduction”, “induction”, “generalizing”, “specializing”, and so on. It may appear as if it does (to a stupid internet imposter).\nThe next time you see some narcissistic asshole on youtube claims that he “vibe-coded” something, come back here and re-read these few paragraphs above.\n",
+  "wordCount" : "660",
+  "inLanguage": "en",
+  "datePublished": "2025-06-06T00:00:00+05:45",
+  "dateModified": "2025-06-06T12:53:28+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/vibe-coding-explained/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Vibe coding explained
+    </h1>
+    <div class="post-description">
+      Idiots, idiots everywhere...
+    </div>
+    <div class="post-meta"><span title='2025-06-06 00:00:00 +0545 +0545'>June 6, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Reading less social media bullshit and using ones own well-trained mind sometimes helps to clarify complex and noisy topics.</p>
+<p>Here is why, in principle, any LLM coding (I cannot call this crap &ldquo;programming&rdquo; because there is no uderstanding involved) will always yield sub-par bullshit.</p>
+<p>LLMs operate on tokens, which are abstract numbers, if you will. Parts of words of a human language are being associated with a distinct token, and then a probabilistic graph-like structure is created out of  these tokens, using a  fundamental back-propagation algorithm.</p>
+<p>Then, at an inference phase, the system (a binary-encoded probabilistic mathematical model) appears  (to an uneducated observer) to behave as if it is &ldquo;intelligent&rdquo; and &ldquo;capable of doing reasoning&rdquo;. This is, of course, an illusion, created by a vastly complex computation, which can be easily mistaken as an intelligence (yes, yes, the classic &ldquo;a rope for a snake&rdquo;) .</p>
+<p>It the context of programming everything is much worse. Operating, in principle, on &ldquo;symbols&rdquo; associated with words that encode entities,  attributes, properties and relations (nouns,verbs and adjectives are out there for a reason &ndash; they capture the &ldquo;structure&rdquo; of What Is) it cannot see the underlying patterns, generalize from them, and  capture and name abstractions, in principle &ndash; they lacks the machinery to do so.</p>
+<p>Here is how. Any undergraduate, I hope, knows that
+\[x \rightarrox x + 1\]
+and
+\[y \rightarrow y + 1\]
+are <em>the same function</em>. leave alone that
+\[x \rightarrow x + x\]
+and
+\[x \rigjtarrow x * 2\]
+are the same function, but different <em>procedures</em> (implementations).</p>
+<p>Such mathematical notions are the most fundamental and has been taken, vial the Lambda Calculus, into a serious Computer Science &ndash; they have formally specified the notion of a <em>bound</em>  (in a given context) and of a  <em>free</em> variable, and precise rules for consistent renaming to avoid an unintended name  capture or shadowing. The linguistic notions of shadowing and <em>overloading</em>  has been formally defend too.</p>
+<p>No conditional-propability based model, no matter what &ldquo;architecture&rdquo; (a Transformer or what not) could &ldquo;see&rdquo; or capture such notions, leave alone use them. Again, there is simply nothing to talk about &ndash; they just cannot, there is neither &ldquo;awareness&rdquo; nor &ldquo;memory of experience&rdquo; nor &ldquo;instantiation of rules&rdquo;.</p>
+<p>So, the only context in which such models are marginally useful is in filling up the &ldquo;blanks&rdquo; in verbose, over-&ldquo;engineered&rdquo; OO APIs in crappy OO languages like  C++ or Java. This is the only valid &ldquo;use-case&rdquo;. The long names, verbose syntax of types,  fully qualified method access &ndash; all this can be generated (without  <em>any</em> underlying understanding).</p>
+<p>This (and only this) is how Microsoft, lest say, claims that it codes some percentage of some its software with AI &ndash; they feed their wast libraries into a  more-or-less standard model and it performs a &ldquo;<em>glorified autocomplete</em>&rdquo; (indeed!).</p>
+<p>This is the only <em>use</em> the mere mortals like you and me could have. If you read <em>carefully</em> these overflowing with excitement  &ldquo;vibe coding&rdquo; shitposts, you will realize that the only task in which AI &ldquo;succeeds&rdquo; is, literally, coding some structured and formated crap (think of XML, JSON, CSS, HTML) and simple  CRUD code which produces or consumes such (variously) encoded data, provided there  were  lots  and lots of such examples in the training set.</p>
+<p>Again, how a model &ldquo;recognizes&rdquo; a procedure? <em>Only by its names and surrounding names (and there is a notion of order of arguments which it implicitly captures as a probability of a the next token</em>.  It is that &ldquo;next&rdquo;.</p>
+<p>So, a properly trained model could generate something that looks like it has &ldquo;seen&rdquo; before, no more, no less. It does not perform, in principle, due to the lack of  a &ldquo;mathematical machinery&rdquo; any kind of &ldquo;understading&rdquo;, &ldquo;reasoning&rdquo;, &ldquo;inference&rdquo;, &ldquo;deduction&rdquo;, &ldquo;induction&rdquo;, &ldquo;generalizing&rdquo;, &ldquo;specializing&rdquo;, and so on. <em>It may appear as if it does</em> (to a stupid internet imposter).</p>
+<p>The next time you see some narcissistic asshole on youtube claims that he &ldquo;vibe-coded&rdquo; something, come back here and re-read these few paragraphs above.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/vibecoding/">Vibecoding</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
