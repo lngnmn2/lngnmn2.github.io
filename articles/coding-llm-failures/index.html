@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Coding LLM failures | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="emacs, DSL">
+<meta name="description" content="Maybe it is time to settle this discurse once and for all, and move on.
+Recently I asked Deepseek (otherwise amazing), Grok (a meme) and Gemini about idiomatic way of enabling syntax  highlighting in blocks of code, which may appear in an eww or nov modes.
+What they all give me is some stylized pasta from StackOverflow and Github  about polymode and mmm-mode and how to use regexps to find particular blocks and to apply some low-level function on a range.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/coding-llm-failures/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/coding-llm-failures/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/coding-llm-failures/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Coding LLM failures">
+  <meta property="og:description" content="Maybe it is time to settle this discurse once and for all, and move on.
+Recently I asked Deepseek (otherwise amazing), Grok (a meme) and Gemini about idiomatic way of enabling syntax highlighting in blocks of code, which may appear in an eww or nov modes.
+What they all give me is some stylized pasta from StackOverflow and Github about polymode and mmm-mode and how to use regexps to find particular blocks and to apply some low-level function on a range.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-08T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-08T13:59:39+05:45">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="DSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coding LLM failures">
+<meta name="twitter:description" content="Maybe it is time to settle this discurse once and for all, and move on.
+Recently I asked Deepseek (otherwise amazing), Grok (a meme) and Gemini about idiomatic way of enabling syntax  highlighting in blocks of code, which may appear in an eww or nov modes.
+What they all give me is some stylized pasta from StackOverflow and Github  about polymode and mmm-mode and how to use regexps to find particular blocks and to apply some low-level function on a range.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Coding LLM failures",
+      "item": "https://lngnmn2.github.io/articles/coding-llm-failures/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Coding LLM failures",
+  "name": "Coding LLM failures",
+  "description": "Maybe it is time to settle this discurse once and for all, and move on.\nRecently I asked Deepseek (otherwise amazing), Grok (a meme) and Gemini about idiomatic way of enabling syntax highlighting in blocks of code, which may appear in an eww or nov modes.\nWhat they all give me is some stylized pasta from StackOverflow and Github about polymode and mmm-mode and how to use regexps to find particular blocks and to apply some low-level function on a range.\n",
+  "keywords": [
+    "emacs", "DSL"
+  ],
+  "articleBody": "Maybe it is time to settle this discurse once and for all, and move on.\nRecently I asked Deepseek (otherwise amazing), Grok (a meme) and Gemini about idiomatic way of enabling syntax highlighting in blocks of code, which may appear in an eww or nov modes.\nWhat they all give me is some stylized pasta from StackOverflow and Github about polymode and mmm-mode and how to use regexps to find particular blocks and to apply some low-level function on a range.\nThis is, of course, an utter bullshit, and it was eagerly and obviously expected – all the models are building sentences similar (at the level of “tokens”) to ones they have seen before, no more, no less.\nHere is the kind of answer I would like.\nThe unique feature of Emacs is that it has been designed as a set of layerr of function-based DSLs embedded in Rmacs Lisp, which reflect the inherent structure within either a plain text (characters, words, sentences, paragraphs) or [more] structured texts, such as Org, Info, HTML and the derived formats, and some others, like Markdown. Every programming language has its own, even more elaborate structure. This is precisely why there is a notion of a buffer and a major mode associated with it. This design reflects What Is.\nOf all the structured texte modes, the org-mode the most general and less cluttered, (because it is based on the “natural” notion of plain text – sentences, paragraphs and embedded blocks of code). It is indeed very general and lightweight, compared, to, say, LaTeX or even Markdown, and it supports all the fundamental notions of a structure, including links.\nOther specialized modes, which predate org-mode, notably the Info-mode (the texinfo format),has most of these same “universal” notions but less uniformly. Other wonderful modern modes, like Helpful went even further in generality.\nThis (and only this) is the only proper way to do everything in Emacs – use the most general and the most high-level modes, like org, and then convert and interact with specialized modes, like LaTeX, Markdown, Info, and particular modes of various programming languages. The blocks of code has to be easily nested . The org-mode got it almost right (aside form the “technical debt” or early idiotic decisions) which is why it is a “killer app” for Emacs itself.\nWhat we, as Emacs users, want (from dear members of the Emacs team) is to have uniform, familiar, unintrusive, minimalist experience across all structured text modes, including gptel and google-tranlate.\nIt begins with a uniform colortheme, consistent font settings across all buffers, and proper syntax highlighting (are we asking for too much?). Notice that, at least in theory, an embedded code block can appear almost anywhere – in a help or Info as an example (Helpful handles this, Info isn’t), as well as in any html-derived mode, which is a bit tricky. The variable-pitch-mode and mixed-pitch-mode are tried to address this.\nSuppose I am reading some epub , writing notes into org-roam and occasionally at look some web pages in eww (which was my original motivation and annoyance). It should have be a smooth, uniform experience, to the point that you cannot tell /which particular buffer you are currently looking at. In the modern Emacs world you can easily tell by how even the simplest markup and rendering is broken in different ways.\nThis, however, should not be that way. When you are reading a book, it is usually (90%) of the time that all the examples would be in the same programming language. Same, well, lets say 75%, would be true for a web-page. So have a variable associated with a general markup buffer, which hints at the programming language in the code blocks.\nHTML and the derived modes do not describe what is in their code blocks, there is even no notion of a code block, just something formatted with a fixed-width fonts, if at all, so we have to have more “hints”. Nevertheless, partial solutions exists, for shr and other specialized modes.\nIt is not that difficult to generalize this functionality across all structured modes, provided almost everything has already been done right within the built-in org-mode. Make sure the org-mode properly respects the colortheme, that variable-pitch-modes pick up fonts correctly and then use the org-src-font-* consistently everywhere.\nThis sketch of a solution has one distinct feature which no LLM can have in principle – it systematically walks through the levels (and corresponding layers) of abstraction within a vastly complex system, and tries to select an appropriate level – the highest and the most general one (and that will be the org-mode!) . No LLM, current or further, is capable of such reasoning in principle.\nSo, the “hack” would be to apply org-mode’s facilities for handing blocks of code uniformly everywhere. org-mode also does variable- and mixed pitch modes right.\nWith the classic “hooks” and “advices” mechanisms, one can apply simple wrapper functions to buffers with particular modes. Notice that the polymode and mmm-mode are solving a differnt problem. LLMs picked them all because retards on Stackoverflow confused “specialized versus general”.\nAnd no, we don’t need an OO (or, god forbid, Typescript) framework which handles structured text with links, (but we has to be aware of an underlying uniform structure), and no, Treesitter is too low-level to even talk about. The most wonderful feature of Emacs (and org-mode) is that they properly support structured text at the right level of abstraction (when paragraphs are naturally separated by empty lines, not special tags!).\nVery few old-school Emacs devs understand this, however. As long as we stick to the layers of embedded DSLs (which maps to the natural structures via simple ADTs) Emacs will rock, and no Electron-based crap would ever come close.\nLast but not least, the sages of the ancient past, who did the very first inspiring UI designs (of Smalltalk, Lisp Machine, NextStep, Xv and even Motif) have realized that we don’t need too much. Just distinct fonts for text and code (variable-width and fixed-width) and the proper support of blocks, indentation and highlighting. Emacs could easily do it just right by itself, by incorporating the code form packages like Org and Helpful and generalize it across all major modes based on some additional hits and cues.\nNotice, that nether LLMs came up with a working solution, not even with a proper code example. It is murderously hard to change perspective from the overall design to prticulars of the function calls. While this is difficult for a human, who is trained to thing at a higher levels of abstraction, it is impossible for the current LLMs, because there are no such “pathways through the levels of abstractions” – from general to specific, and back, many times per “session” – which is what serious non bullshit programming is all about.\nEnjoy your vibe-coding, retards!\n",
+  "wordCount" : "1144",
+  "inLanguage": "en",
+  "datePublished": "2025-06-08T00:00:00+05:45",
+  "dateModified": "2025-06-08T13:59:39+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/coding-llm-failures/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Coding LLM failures
+    </h1>
+    <div class="post-meta"><span title='2025-06-08 00:00:00 +0545 +0545'>June 8, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Maybe it is time to settle this discurse once and for all, and move on.</p>
+<p>Recently I asked Deepseek (otherwise amazing), Grok (a meme) and Gemini about idiomatic way of enabling syntax  highlighting in blocks of code, which may appear in an <code>eww</code> or <code>nov</code> modes.</p>
+<p>What they all give me is some stylized pasta from <em>StackOverflow</em> and <em>Github</em>  about <code>polymode</code> and <code>mmm-mode</code> and how to use <em>regexps</em> to find particular blocks and to apply some low-level function on a range.</p>
+<p>This is, of course, an utter bullshit, and it was eagerly and obviously expected &ndash; all the models are building sentences similar (at the level of &ldquo;tokens&rdquo;) to ones they have seen before, no more, no less.</p>
+<p>Here is the kind of answer I would like.</p>
+<p>The unique feature of Emacs  is that it has been designed as a set of <em>layerr of  function-based DSLs embedded in Rmacs Lisp</em>, which reflect the inherent structure within  either a plain text (characters, words, sentences, paragraphs)  or [more] structured texts, such as Org, Info, HTML and the derived formats, and some others, like Markdown. Every programming language has its own, even more elaborate structure. This is precisely why there is a notion of a <em>buffer</em> and a <em>major mode</em> associated with it. This design reflects <em>What Is</em>.</p>
+<p>Of all the <em>structured texte modes</em>, the <code>org-mode</code> the most general and less cluttered, (because it is based on the &ldquo;natural&rdquo; notion of plain text &ndash; sentences, paragraphs and embedded <em>blocks of code</em>). It is indeed very general and lightweight, compared, to, say, <em>LaTeX</em> or even <em>Markdown</em>, and it supports all the fundamental notions of a structure, including  links.</p>
+<p>Other <em>specialized</em> modes, which predate <code>org-mode</code>,  notably the <code>Info-mode</code> (the texinfo format),has most of these same &ldquo;universal&rdquo; notions but less uniformly. Other wonderful modern modes, like <code>Helpful</code> went even further in generality.</p>
+<p>This (and only this) is the only proper way to do everything in Emacs &ndash; use the most <em>general</em> and the most <em>high-level</em> modes, like <code>org</code>, and then convert and <em>interact</em> with <em>specialized</em> modes, like LaTeX, Markdown, Info,
+and particular modes of various programming languages. The blocks of code has to be easily nested . The <code>org-mode</code> got it almost right (aside form the &ldquo;technical debt&rdquo; or early idiotic decisions) which is why it is a &ldquo;killer app&rdquo; for Emacs itself.</p>
+<p>What we, as Emacs users, want (from dear members of the  Emacs team) is to have <em>uniform, familiar, unintrusive, minimalist experience across all structured text modes</em>, including <code>gptel</code> and <code>google-tranlate</code>.</p>
+<p>It begins with a uniform colortheme, consistent font settings across all buffers, and proper syntax highlighting (are we asking for too much?). Notice that, at least in theory, an embedded code block can appear almost anywhere &ndash; in a help or Info as an example (<code>Helpful</code> handles this, Info isn&rsquo;t), as well as in any <em>html-derived</em> mode, which is a bit tricky. The <code>variable-pitch-mode</code> and <code>mixed-pitch-mode</code> are tried to address this.</p>
+<p>Suppose I am reading some <code>epub</code> , writing notes into <code>org-roam</code> and occasionally at look some web pages in <code>eww</code> (which was my original motivation and annoyance). It should have be a smooth, uniform experience, to the point that you cannot tell /which particular buffer you are currently looking at.  In the modern Emacs world you can easily tell by how even the simplest markup and rendering is broken in different ways.</p>
+<p>This, however, should not be that way. When you are reading a book, it is usually (90%) of the time that all the examples would be in the same programming language. Same, well, lets say 75%, would be true for a web-page. So have a variable associated with a general markup  buffer, which hints at the programming language in the  code blocks.</p>
+<p>HTML and the derived modes do not describe what is in their code blocks, there is even no notion of a code block, just something formatted with a fixed-width fonts, if at all, so we have to have more &ldquo;hints&rdquo;.  Nevertheless, partial solutions exists, for <code>shr</code> and other specialized modes.</p>
+<p>It is not that difficult to  generalize this functionality across all structured modes, <em>provided almost everything has already been done right within the built-in org-mode</em>.  Make sure the <code>org-mode</code>  properly respects the colortheme, that variable-pitch-modes pick up fonts correctly and then use  the <code>org-src-font-*</code> <em>consistently</em> everywhere.</p>
+<p>This sketch of a solution has one distinct feature which no LLM can have in principle &ndash; it systematically walks through the levels (and corresponding layers) of abstraction within a vastly complex system, and tries to select an appropriate level &ndash; the  highest and the most general one (and that will be the org-mode!) . No LLM, current or further, is capable of such reasoning in principle.</p>
+<p>So, the &ldquo;hack&rdquo; would be to apply org-mode&rsquo;s  facilities for handing blocks of code uniformly everywhere. <code>org-mode</code> also does variable- and mixed pitch modes right.</p>
+<p>With the classic &ldquo;hooks&rdquo; and &ldquo;advices&rdquo; mechanisms, one can apply simple wrapper functions to buffers with particular modes. Notice that the <code>polymode</code> and <code>mmm-mode</code> are solving a differnt problem.  LLMs picked them all because retards on Stackoverflow confused &ldquo;specialized versus general&rdquo;.</p>
+<p>And no, we don&rsquo;t need an OO (or, god forbid, Typescript) framework which handles structured text with links, (but we has to be aware of an underlying uniform structure), and no, Treesitter is too low-level to even talk about. The most wonderful feature of Emacs (and <code>org-mode</code>) is that they properly support structured text at the right level of abstraction (when paragraphs are naturally separated by empty lines, not special tags!).</p>
+<p>Very few old-school Emacs devs understand this, however. As long as we stick to the layers of embedded DSLs  (which maps to the natural structures via simple ADTs) Emacs will rock, and no Electron-based crap would ever come close.</p>
+<p>Last but not least, the sages of the ancient past, who did the very first inspiring UI designs (of Smalltalk, Lisp Machine, NextStep,  Xv and even Motif) have realized that we don&rsquo;t need too much. Just distinct fonts for text and code (variable-width and fixed-width) and the proper support of blocks, indentation and highlighting.  Emacs could easily do it just right by itself, by incorporating the code form packages like Org and Helpful and generalize it across all major modes  based on some additional hits and cues.</p>
+<p>Notice, that nether LLMs came up with a working solution, not even with a proper code example. It is murderously hard to change perspective from the overall design to prticulars of the  function calls.  While this is difficult for a human, who is trained to thing at a higher levels of abstraction, it is impossible for the current  LLMs, because there are no such &ldquo;pathways through the levels of abstractions&rdquo; &ndash; from general to specific, and back, many times per &ldquo;session&rdquo; &ndash; which is what serious non bullshit programming is all  about.</p>
+<p>Enjoy your vibe-coding, retards!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">Emacs</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
