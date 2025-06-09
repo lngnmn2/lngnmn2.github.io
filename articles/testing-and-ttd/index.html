@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Systematic testing and non-bulshit TTD | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="testing, ADT, DSL">
+<meta name="description" content="Testing interacts with your dopamine system, so you will a small yay! every time all tests passed. This is crucial, because motivation tend to decays exponentially and to experience inevitable &ldquo;crashes&rdquo; after spikes.
+TTD is sort of a direct consequence of type-driven (or &ldquo;types first&rdquo;) approach to prototyping.
+Ideally, each type is associated  (in an one-to-one correspondence) with each distinct concept in the problem domain, at an appropriate level of abstraction.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/testing-and-ttd/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/testing-and-ttd/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/testing-and-ttd/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Systematic testing and non-bulshit TTD">
+  <meta property="og:description" content="Testing interacts with your dopamine system, so you will a small yay! every time all tests passed. This is crucial, because motivation tend to decays exponentially and to experience inevitable “crashes” after spikes.
+TTD is sort of a direct consequence of type-driven (or “types first”) approach to prototyping.
+Ideally, each type is associated (in an one-to-one correspondence) with each distinct concept in the problem domain, at an appropriate level of abstraction.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-09T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-09T12:54:48+05:45">
+    <meta property="article:tag" content="Testing">
+    <meta property="article:tag" content="ADT">
+    <meta property="article:tag" content="DSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Systematic testing and non-bulshit TTD">
+<meta name="twitter:description" content="Testing interacts with your dopamine system, so you will a small yay! every time all tests passed. This is crucial, because motivation tend to decays exponentially and to experience inevitable &ldquo;crashes&rdquo; after spikes.
+TTD is sort of a direct consequence of type-driven (or &ldquo;types first&rdquo;) approach to prototyping.
+Ideally, each type is associated  (in an one-to-one correspondence) with each distinct concept in the problem domain, at an appropriate level of abstraction.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Systematic testing and non-bulshit TTD",
+      "item": "https://lngnmn2.github.io/articles/testing-and-ttd/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Systematic testing and non-bulshit TTD",
+  "name": "Systematic testing and non-bulshit TTD",
+  "description": "Testing interacts with your dopamine system, so you will a small yay! every time all tests passed. This is crucial, because motivation tend to decays exponentially and to experience inevitable \u0026ldquo;crashes\u0026rdquo; after spikes.\nTTD is sort of a direct consequence of type-driven (or \u0026ldquo;types first\u0026rdquo;) approach to prototyping.\nIdeally, each type is associated (in an one-to-one correspondence) with each distinct concept in the problem domain, at an appropriate level of abstraction.\n",
+  "keywords": [
+    "testing", "ADT", "DSL"
+  ],
+  "articleBody": "Testing interacts with your dopamine system, so you will a small yay! every time all tests passed. This is crucial, because motivation tend to decays exponentially and to experience inevitable “crashes” after spikes.\nTTD is sort of a direct consequence of type-driven (or “types first”) approach to prototyping.\nIdeally, each type is associated (in an one-to-one correspondence) with each distinct concept in the problem domain, at an appropriate level of abstraction.\nAbstract Data Types, which are algebraic ones under the hood (at the implementation side). are the basic building blocks. “Naked” algebraic value-types “floating around” as values are also OK.\nUsually, each well-designed (orthogonal to everything else) ADT reside in its own module, with only the public interface being exported..\nSuch levels of abstraction within the problem domain give rise to layers of functional DSLs embedded in the programming language in use.\nNotice that really good (carefully designed by mathematicians) languages allow expression the proper sum-types and exponent- (function) types directly, while the product types are records and (derived) tuples.\nIn a good language there is no distinction between “built-in” and user-defined types, so even Bool or option are “user-defined” (pre-defined) in the standard librarye.\nProper support of algebraic types and ADTs via modules is, literally, all you need. And,, of course, All You Need Is Lambda.\nSerious, non-bullshit testing has several characteristics\nselftest, as in an airplane before takeoff “blackbox-testing”,to make sure each particular abstraction has been implemented correctly “glassbox-testing”, explicitly test each possible code path “regression” testing, to make sure you didn’t break anything with the last change automated “coverage” – just do it The most important part is that, glass-box testing can be systematic, in principle, when based on types. With proper algebraic types, one systematically (and mechanically) verifies each path via a data-constructor of a sum-type, which includes lists and trees recursive types, which are almost all sums, each slot and its “selector” of a product-type , each lower and upper bounds of a bounded interval type (a machine type).\nJust doing this will allow on to be much more confident about the current state of the program code.\nTypes not only allow to write better tests systematically, they make simple bugs impossible.\nThe “making illegal states unepresentable” meme (which also known as “smart constructors”) is another type-based approach.\nAnd ultimately one never have a [modifiable] “state”, and systematically produces a fresh new value instead.\nThe non-bullshit TTD is about “beginning with the types” and writing the type-signatures first (a an outline of a module or a class).\nFirst one writes down the algebraic types (the sum-types, the product-types and the function types).\nFor each type a representation invariant shall be specified using some mathematical notation (sets and predicates).\nBased on that mathematical specification, explicit tests for each condition or property (“such that”) has to be written down even before thinking about the implementation details.\nNotice that all this is variations of informal specifications and type-level and then whole interface-level resoling. This is what a high-level programming consists of – designing and prototyping at the interface level.\nJust as the types have been specified (defined), one writes down the example’ of values of each type. Bounds and the “special values” (should be avoided) are the first candidates.\nThen one writes “stubs” for function’s (or methods) which return some dummy values and simultaneously (at the same time) writes the tests for each function (or method) for that dummy value.\n",
+  "wordCount" : "572",
+  "inLanguage": "en",
+  "datePublished": "2025-06-09T00:00:00+05:45",
+  "dateModified": "2025-06-09T12:54:48+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/testing-and-ttd/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Systematic testing and non-bulshit TTD
+    </h1>
+    <div class="post-meta"><span title='2025-06-09 00:00:00 +0545 +0545'>June 9, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Testing interacts with your dopamine system, so you will a small <em>yay!</em> every time all tests passed. This is crucial, because motivation tend to decays exponentially and to experience inevitable &ldquo;crashes&rdquo; after spikes.</p>
+<p>TTD is sort of a direct consequence of <em>type-driven</em> (or &ldquo;types first&rdquo;) approach to prototyping.</p>
+<p>Ideally, each type is associated  (in an one-to-one correspondence) with each <em>distinct concept</em> in the problem domain, at an appropriate <em>level of abstraction</em>.</p>
+<p><em>Abstract Data Types</em>, which are <em>algebraic ones</em> under the hood (at the implementation side). are the basic building blocks. &ldquo;Naked&rdquo; algebraic value-types &ldquo;floating around&rdquo; as values are also OK.</p>
+<p>Usually, each well-designed (orthogonal to everything else) ADT reside in its own module, with only the public interface being exported..</p>
+<p>Such levels of abstraction within the problem domain give rise to <em>layers of functional DSLs</em> embedded in the programming language in use.</p>
+<p>Notice that really good (carefully designed by mathematicians) languages allow expression the proper sum-types  and  exponent- (function) types directly, while the product types are records and (derived) tuples.</p>
+<p>In a good language there is no distinction between &ldquo;built-in&rdquo; and user-defined types, so even <code>Bool</code> or <code>option</code> are &ldquo;user-defined&rdquo;  (pre-defined) in the standard librarye.</p>
+<p>Proper support of algebraic types and  ADTs via modules is, literally, all you need. And,, of course, <em>All You Need Is Lambda</em>.</p>
+<p>Serious, non-bullshit testing has several characteristics</p>
+<ul>
+<li>selftest, as in an airplane before takeoff</li>
+<li>&ldquo;blackbox-testing&rdquo;,to make sure each particular abstraction has been implemented correctly</li>
+<li>&ldquo;glassbox-testing&rdquo;, explicitly test each possible code <em>path</em></li>
+<li>&ldquo;regression&rdquo; testing, to make sure you didn&rsquo;t break anything with the last <em>change</em></li>
+<li>automated &ldquo;coverage&rdquo; &ndash; just do it</li>
+</ul>
+<p>The most important part is that, glass-box testing can be systematic, in principle, when based on types.
+With proper algebraic types, one systematically (and mechanically)  verifies <em>each path via a data-constructor of a sum-type</em>, which includes lists and trees <em>recursive types</em>, which are almost all <em>sums</em>,  each slot and its &ldquo;selector&rdquo; of a <em>product-type</em> , each lower and upper bounds  of a bounded interval type (a machine type).</p>
+<p>Just doing this will allow on to be much more confident about the current state of the program code.</p>
+<p>Types not only allow to write better tests systematically, they make simple bugs <em>impossible</em>.</p>
+<p>The &ldquo;<em>making illegal states unepresentable</em>&rdquo; meme (which also known as &ldquo;smart constructors&rdquo;) is another type-based approach.</p>
+<p>And ultimately one never have a [modifiable] &ldquo;state&rdquo;, and systematically produces a fresh new value instead.</p>
+<p>The non-bullshit TTD is about  &ldquo;beginning with the types&rdquo; and writing the type-signatures first (a an outline of a module or a class).</p>
+<p>First one writes down the algebraic types (the sum-types,  the product-types and the function types).</p>
+<p>For each type a <em>representation invariant</em> shall be specified using some mathematical notation (sets and predicates).</p>
+<p>Based on that mathematical specification, explicit tests for each condition or property (&ldquo;such that&rdquo;) has to be written down even  before thinking about the implementation details.</p>
+<p>Notice that all this is variations of <em>informal specifications</em> and <em>type-level</em> and then whole  <em>interface-level</em> resoling. This is what a <em>high-level</em> programming consists of &ndash; designing and prototyping at the interface level.</p>
+<p>Just as the types have been specified (defined), one writes down the <em>example&rsquo;</em> of values of each type. Bounds  and the &ldquo;special values&rdquo; (should be avoided) are the first candidates.</p>
+<p>Then one writes &ldquo;stubs&rdquo; for function&rsquo;s (or methods) which return some dummy values and simultaneously (at the same time) writes the tests for each function (or method) for that dummy value.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/testing/">Testing</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

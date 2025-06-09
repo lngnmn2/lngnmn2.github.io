@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Testing on Notes from the digital underground by Lngnmn</title>
+    <link>https://lngnmn2.github.io/tags/testing/</link>
+    <description>Recent content in Testing on Notes from the digital underground by Lngnmn</description>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Jun 2025 12:54:48 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Systematic testing and non-bulshit TTD</title>
+      <link>https://lngnmn2.github.io/articles/testing-and-ttd/</link>
+      <pubDate>Mon, 09 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/testing-and-ttd/</guid>
+      <description>&lt;p&gt;Testing interacts with your dopamine system, so you will a small &lt;em&gt;yay!&lt;/em&gt; every time all tests passed. This is crucial, because motivation tend to decays exponentially and to experience inevitable &amp;ldquo;crashes&amp;rdquo; after spikes.&lt;/p&gt;
+&lt;p&gt;TTD is sort of a direct consequence of &lt;em&gt;type-driven&lt;/em&gt; (or &amp;ldquo;types first&amp;rdquo;) approach to prototyping.&lt;/p&gt;
+&lt;p&gt;Ideally, each type is associated  (in an one-to-one correspondence) with each &lt;em&gt;distinct concept&lt;/em&gt; in the problem domain, at an appropriate &lt;em&gt;level of abstraction&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
