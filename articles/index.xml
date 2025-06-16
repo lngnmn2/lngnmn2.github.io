@@ -6,8 +6,19 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jun 2025 14:24:18 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 16 Jun 2025 17:43:34 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forecast Bitcoin Future Price</title>
+      <link>https://lngnmn2.github.io/articles/forecast-bitcoin-further-price/</link>
+      <pubDate>Mon, 16 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/forecast-bitcoin-further-price/</guid>
+      <description>&lt;p&gt;DESCRIPTION: Read some Shiller for Christ sake.&lt;/p&gt;
+&lt;p&gt;I am so tired. These things, when I suddenly stumble upon them, render me speechless and feel wasted and burned out&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price&#34;&gt;https://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a &lt;em&gt;Jupyter&lt;/em&gt; notebook (an &lt;code&gt;.ipynb&lt;/code&gt;), originally developed on Google Colab, where they have all the datasets and the  tools to run the notebooks quickly.&lt;/p&gt;
+&lt;p&gt;It uses some pre-defined package called Prophet (just imagine!) , which I assume contain some basic  &amp;ldquo;state-of-the-art&amp;rdquo; statistical inference crap.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Yes, it is time to scream and  panic</title>
       <link>https://lngnmn2.github.io/articles/the-very-serious-post/</link>
@@ -526,6 +537,13 @@
   </description>
     </item>
     <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
+    </item>
+    <item>
       <title>On foundations of mathematics</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0545</pubDate>
@@ -832,14 +850,6 @@ through practice and experience (not reading or watching).&lt;/p&gt;
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
-    </item>
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>

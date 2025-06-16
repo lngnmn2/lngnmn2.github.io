@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Forecast Bitcoin Future Price | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="crapto, BTC">
+<meta name="description" content="DESCRIPTION: Read some Shiller for Christ sake.
+I am so tired. These things, when I suddenly stumble upon them, render me speechless and feel wasted and burned out
+https://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price
+This is a Jupyter notebook (an .ipynb), originally developed on Google Colab, where they have all the datasets and the  tools to run the notebooks quickly.
+It uses some pre-defined package called Prophet (just imagine!) , which I assume contain some basic  &ldquo;state-of-the-art&rdquo; statistical inference crap.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/forecast-bitcoin-further-price/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/forecast-bitcoin-further-price/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/forecast-bitcoin-further-price/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Forecast Bitcoin Future Price">
+  <meta property="og:description" content="DESCRIPTION: Read some Shiller for Christ sake.
+I am so tired. These things, when I suddenly stumble upon them, render me speechless and feel wasted and burned out
+https://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price
+This is a Jupyter notebook (an .ipynb), originally developed on Google Colab, where they have all the datasets and the tools to run the notebooks quickly.
+It uses some pre-defined package called Prophet (just imagine!) , which I assume contain some basic “state-of-the-art” statistical inference crap.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-16T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-16T17:43:34+05:45">
+    <meta property="article:tag" content="Crapto">
+    <meta property="article:tag" content="BTC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Forecast Bitcoin Future Price">
+<meta name="twitter:description" content="DESCRIPTION: Read some Shiller for Christ sake.
+I am so tired. These things, when I suddenly stumble upon them, render me speechless and feel wasted and burned out
+https://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price
+This is a Jupyter notebook (an .ipynb), originally developed on Google Colab, where they have all the datasets and the  tools to run the notebooks quickly.
+It uses some pre-defined package called Prophet (just imagine!) , which I assume contain some basic  &ldquo;state-of-the-art&rdquo; statistical inference crap.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Forecast Bitcoin Future Price",
+      "item": "https://lngnmn2.github.io/articles/forecast-bitcoin-further-price/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Forecast Bitcoin Future Price",
+  "name": "Forecast Bitcoin Future Price",
+  "description": "DESCRIPTION: Read some Shiller for Christ sake.\nI am so tired. These things, when I suddenly stumble upon them, render me speechless and feel wasted and burned out\nhttps://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price\nThis is a Jupyter notebook (an .ipynb), originally developed on Google Colab, where they have all the datasets and the tools to run the notebooks quickly.\nIt uses some pre-defined package called Prophet (just imagine!) , which I assume contain some basic \u0026ldquo;state-of-the-art\u0026rdquo; statistical inference crap.\n",
+  "keywords": [
+    "crapto", "BTC"
+  ],
+  "articleBody": "DESCRIPTION: Read some Shiller for Christ sake.\nI am so tired. These things, when I suddenly stumble upon them, render me speechless and feel wasted and burned out\nhttps://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price\nThis is a Jupyter notebook (an .ipynb), originally developed on Google Colab, where they have all the datasets and the tools to run the notebooks quickly.\nIt uses some pre-defined package called Prophet (just imagine!) , which I assume contain some basic “state-of-the-art” statistical inference crap.\nfrom prophet import Prophet When you run this, it will show you the “scientifically supported” long-term forecast of literally going into the fucking stratosphere, with all the nice looking charts.\nWhy, yes, some guy studied statistics at a uni, probably in the US, and just applied his knowledge.\nThis is exactly what is wrong. This is a purely mathematical treatment, according to abstract theories of statistical inference, of a real-world phenomena which not even being understood.\nThe smartest guys on earth, in particular the Novel laureate Robert J. Shiller, showed even in popular books that what moves the markets are “narratives” and “irrational exuberance” which spreads through populations exactly like a highly contagious virus, but the “capsids” are made from words – the highly emotionally charged stories linked to dramatic and sudden events. Lots of “actors” are trying to spread and amplify manipulative stories to move the prices, which they, of course, trying to frontrun, but this is another story.\nThe complexity of the whole social phenomena is staggering. They’re are “forces” which arise and fall as we speak, starting from simple FTX/SBF frauds and long running scams like Chainlink (imagine, just to write into the Ethereum immutable ledger that you suddenly “own” a few billions “tokens” out of fucking blue, just by writing that in the “contract”, and then start to sell them for real dollars or stables – what a life!). Anyway.\nThere are emerging large institutional players, who were way too late to the party and bough all the tops (mostly above 60k) and pure Ponzi schemes like Saylor, who literally have no other choice but to keep bying the tops to support his idiotic narrative in hope to keep it from crashing (ok, correcting to some -90%). These organizations and especially their financial backers, obviously, do not want the whole Ponzi to crash (again), so they are trying to advert the inevitable by keeping buying and bragging about it to keep the narrative hot.\nAnd this is just a few aspects out of hundreds in a vastly complex dynamic, unstable equilibrium, and then some guys apply simple abstractions to it and show us the “forecast” made by a “prophet”, my ass.\nEven some more sophisticated machine learning guys are all wrong. How do you expect to “predict” the price (based on a prior training data) when it never been in the 100K range before? The network does not “understand” the irrelevance of the magnitude, leave alone the psychological heuristics about “big round numbers” and what not. While a good model could somehow capture the actual notion of humans preferring simple round numbers (usually the multiples of 10 and 5) by “noticing” (measuring) spikes of volatility (orders, volume) around them, it cannot make any high-level inferences or anything from these “captures”.\nAnd behold, nowadays norimies aren’t trading stuff from their laptops and phones as in 2017 and at the 69k top. It is all primitive algos ran by the very same institutions, and god knows who affiliated (insiders) with exchanges and trading floors.\nThis superficial overview only barely scratches the underlying layers of complexity. And no, that .ipynb does not “forecast” anything. It is just a pseudo-mathematical “look how smart I am” meme, as if statistical inference could in principle infer anything correctly for an evolving as we speak incomprehensibly complex system (it can’t).\nAnd yes, based on the data, the trend is clear, so obviously clear than one has to suspect a bubble and a fraud, similar to the 2008 CDS Ponzi crash. Read some Shiller for Christ sake.\n",
+  "wordCount" : "668",
+  "inLanguage": "en",
+  "datePublished": "2025-06-16T00:00:00+05:45",
+  "dateModified": "2025-06-16T17:43:34+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/forecast-bitcoin-further-price/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Forecast Bitcoin Future Price
+    </h1>
+    <div class="post-meta"><span title='2025-06-16 00:00:00 +0545 +0545'>June 16, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>DESCRIPTION: Read some Shiller for Christ sake.</p>
+<p>I am so tired. These things, when I suddenly stumble upon them, render me speechless and feel wasted and burned out</p>
+<p><a href="https://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price">https://www.kaggle.com/code/vanpatangan/forecast-bitcoin-future-price</a></p>
+<p>This is a <em>Jupyter</em> notebook (an <code>.ipynb</code>), originally developed on Google Colab, where they have all the datasets and the  tools to run the notebooks quickly.</p>
+<p>It uses some pre-defined package called Prophet (just imagine!) , which I assume contain some basic  &ldquo;state-of-the-art&rdquo; statistical inference crap.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> prophet <span style="color:#f92672">import</span> Prophet
+</span></span></code></pre></div><p>When you run this, it will show you the &ldquo;scientifically supported&rdquo; long-term forecast of literally going into the fucking stratosphere, with all the nice looking charts.</p>
+<p>Why, yes, some guy studied statistics at a uni, probably in the US, and just applied his knowledge.</p>
+<p>This is exactly what is wrong. This is a purely mathematical treatment, according to abstract theories of statistical inference, of a real-world phenomena which not even being understood.</p>
+<p>The smartest guys on earth, in particular the Novel laureate  <em>Robert J. Shiller</em>, showed  even in popular books that what moves the markets are &ldquo;narratives&rdquo; and &ldquo;irrational exuberance&rdquo; which spreads through populations exactly like a highly contagious virus, but the &ldquo;capsids&rdquo; are made from words &ndash; the highly emotionally charged stories linked to dramatic and sudden events. Lots of &ldquo;actors&rdquo; are trying to spread and amplify manipulative stories to move the prices, which they, of course, trying to frontrun, but this is another story.</p>
+<p>The complexity of the whole social phenomena is staggering. They&rsquo;re are &ldquo;forces&rdquo; which arise and fall as we speak, starting from simple FTX/SBF frauds and long running scams like Chainlink (imagine, just to write into the Ethereum immutable ledger that you suddenly &ldquo;own&rdquo; a few billions &ldquo;tokens&rdquo; out of fucking blue, just by writing that in the &ldquo;contract&rdquo;, and then start to sell them for real dollars or stables &ndash; what a life!). Anyway.</p>
+<p>There are emerging <em>large</em> institutional players, who were <em>way too late</em> to the party and bough all the tops (mostly above 60k) and pure Ponzi schemes like  Saylor, who literally have no other choice but to keep bying the tops to support his idiotic narrative in hope to keep it from crashing (ok, <em>correcting</em> to some -90%). These organizations and especially their financial backers, obviously, do not want the whole Ponzi to crash (again), so they are trying to advert the inevitable by keeping buying and bragging about it to keep the narrative hot.</p>
+<p>And this is just a few aspects out of hundreds in a vastly complex dynamic, unstable  equilibrium, and then some guys apply simple abstractions to it and show  us the &ldquo;forecast&rdquo; made by a &ldquo;prophet&rdquo;, my ass.</p>
+<p>Even some  more sophisticated machine learning guys are all wrong. How do you expect to &ldquo;predict&rdquo; the price (based on a prior training data) when it never been in the 100K range  before? The network does not &ldquo;understand&rdquo; the irrelevance of the magnitude, leave alone the psychological heuristics about &ldquo;big round numbers&rdquo; and what not. While a good model could somehow capture the actual notion of humans preferring simple round numbers (usually the multiples of 10 and 5) by &ldquo;noticing&rdquo; (measuring) spikes of volatility (orders, volume) around them, it cannot make any high-level inferences or anything from these &ldquo;captures&rdquo;.</p>
+<p>And behold, nowadays norimies aren&rsquo;t trading stuff from their laptops and phones as in 2017 and at the 69k top.  It is all primitive algos ran by the very same institutions, and god knows who affiliated (insiders) with exchanges and trading floors.</p>
+<p>This superficial overview only barely scratches the underlying layers of complexity. And no, that <code>.ipynb</code> does not &ldquo;forecast&rdquo; anything. It is just a pseudo-mathematical &ldquo;look how smart I am&rdquo;  <em>meme</em>, as if statistical inference could <em>in principle</em> infer anything correctly for an evolving as we speak incomprehensibly complex system (it can&rsquo;t).</p>
+<p>And yes, based on the data, the trend is clear, <em>so obviously clear</em> than one has to suspect a bubble and a fraud, similar to the 2008 CDS Ponzi crash. Read some Shiller for Christ sake.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/crapto/">Crapto</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/btc/">BTC</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
