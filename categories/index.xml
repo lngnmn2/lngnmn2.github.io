@@ -6,20 +6,34 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Jun 2025 19:37:26 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jun 2025 17:24:26 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI</title>
-      <link>https://lngnmn2.github.io/categories/ai/</link>
-      <pubDate>Thu, 19 Jun 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/ai/</guid>
+      <title>LLM</title>
+      <link>https://lngnmn2.github.io/categories/llm/</link>
+      <pubDate>Wed, 25 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
       <link>https://lngnmn2.github.io/categories/programming/</link>
-      <pubDate>Thu, 19 Jun 2025 00:00:00 +0545</pubDate>
+      <pubDate>Wed, 25 Jun 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://lngnmn2.github.io/categories/rust/</link>
+      <pubDate>Wed, 25 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://lngnmn2.github.io/categories/ai/</link>
+      <pubDate>Thu, 19 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/ai/</guid>
       <description></description>
     </item>
     <item>
@@ -72,13 +86,6 @@
       <description></description>
     </item>
     <item>
-      <title>LLM</title>
-      <link>https://lngnmn2.github.io/categories/llm/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/llm/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>4chan</title>
       <link>https://lngnmn2.github.io/categories/4chan/</link>
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0545</pubDate>
@@ -97,13 +104,6 @@
       <link>https://lngnmn2.github.io/categories/haskell/</link>
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/haskell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust</title>
-      <link>https://lngnmn2.github.io/categories/rust/</link>
-      <pubDate>Sun, 24 Nov 2024 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/rust/</guid>
       <description></description>
     </item>
     <item>

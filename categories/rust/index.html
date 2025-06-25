@@ -135,6 +135,21 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">LLMs-generated Rust code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Rust code is the ultimate evidence of the principal inability for a probability-based generating algorithm (based on sampling from a “learned” probability distribution over “tokens”) to come up with something that passes the type checker, but for the most trivial cases.
+The “causality” is that generation of the complex syntactic forms without the actual, proper understanding principles and heuristics is, well, “problematic”.
+The running example is these were subtle “already borrowed” panics, where the issue in with the underlying semantics, and the syntax is “correct”. The problem is that a recursive function has to drop all the borrows before a recursive call, and this constraint cannot be expressed in the syntax unless by redundant bindings which will automatically be drooped at the end of the scope.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-06-25 00:00:00 +0545 +0545'>June 25, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;</footer>
+  <a class="entry-link" aria-label="post link to LLMs-generated Rust code" href="https://lngnmn2.github.io/articles/llms-generated-rust/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Rust 3000
     </h2>
   </header>
