@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Rust From The First Principles | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="rust, esoteric">
+<meta name="description" content="  The monument and a world-heritage &#34;site&#34;.
+  ">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/rust-from-the-first-principles/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/rust-from-the-first-principles/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/rust-from-the-first-principles/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Rust From The First Principles">
+  <meta property="og:description" content="  The monument and a world-heritage &#34;site&#34;.
+  ">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-30T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-30T08:31:02+05:45">
+    <meta property="article:tag" content="Rust">
+    <meta property="article:tag" content="Esoteric">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rust From The First Principles">
+<meta name="twitter:description" content="  The monument and a world-heritage &#34;site&#34;.
+  ">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Rust From The First Principles",
+      "item": "https://lngnmn2.github.io/articles/rust-from-the-first-principles/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Rust From The First Principles",
+  "name": "Rust From The First Principles",
+  "description": "  The monument and a world-heritage \"site\".\n  ",
+  "keywords": [
+    "rust", "esoteric"
+  ],
+  "articleBody": "Given the US govt. security agencies recommendations for using Memory Safe Languages (as if there is more than one!), let’s bootstrap the right understanding of what the “memory safety” means from the first principles.\nThe “first principles” will be indeed the first ones, because we will go all the way back to the underlying recurring patterns in What Is, from which the fundamental mathematical notions have been captured, properly generalized, abstracted away, named and their properties systematically studied.\nThere is a minimal (which means nothing can be removed) abstract mathematical formalism to define (and study the properties of) any [possible] commutable [mathematical] function, and composition (nesting) of such functions – The Lambda Calculus of Alonzo Church.\nMost of the texts on the Internet would claim that it has “just three things” (three kinds of terms in the grammar):\n[lambda] abstraction application [of lambdas] [immutable] bindings [of values to variables] This is a gross oversimplification, which ignores the important subtleties. These “bindings” and “abstractions” (and the results of “applications”) does not exist “in a vacuum”. There is a universal notion of an “Environment”, which is a global lookup-table (or even a pure function!) that can be conceptualized as a set of ordered pairs – the symbols (names) being associated with (bound to) corresponding values. These bindings are immutable. New ones can be added to the “table”, producing a new, updated “table” (or a pure function!).\nWhether the symbol (a name) is already in the “Environment” or not is irrelevant, since nothing is ever “destructively updated or over-written”, the only possible operation on an environment is to extend it with a new binding (new information), and to produce a new (updated) environment. Some would argue that this is the simplest but proper abstract model of a whole Universe on which the Causality Principle is acting upon.\nThese abstract notions are not arbitrary or specific to The Lambda Calculus formalism. The notions of “shadowing” (of bindings), which are just an immediate consequences of how the environment is, of “bound and free variables”, and of so-called “lexical scooping”. The last two ones rely on the fact that environment is not a single “flat” set of ordered pairs (implemented or represented as an ordered sequence, since there is no other way – to write anything down as a sequence implies to have some particular order), but in addition to have the notion of nested “frames” of the environment, which conceptually are just “smaller environments” within (not dissimilar of the organelles within a living cells, which used to be particular kinds of cells nested withing other cells).\nEach lambda abstraction has its own implicit tiny [nested] “environment” (its own frame of environment, as they call it), which has only one binding (of its own [single] parameter).\nAgain, nothing here is arbitrary or “invented” – everything has been “discovered” by well-trained mathematicians (as the way to have a minimal and correct representation of universal notions). These notions are applicable to any system of formal logic, starting from the Gerhard Ghentzen’s “Natural Deduction”, and everything based on it, etc. The symbol \\(\\Gamma\\) in the traditional notation denotes an “environment” which contain all the previously derived results and the axioms (to begin with). This is not a random coincidence. Our minds have something similar, implemented in “synaptic states within a particular network of neurons”.\nSuch kind of “structural formalism”, more precisely defined, is used to study the semantics of programming languages in general. The “raw computer memory” is being modeled as a higher-level (higher than a merely array of “machine words”) as a bunch of “cells”, which are, again, just another specialization of a set of ordered pairs.\nThere is, however, a principal difference – in all such formal mathematical models the contents of a “memory cells” can be destructively updated or over-written, with an irrecoverable loss of the previous content (information loss). At least in theory, it does not have to be that way – mathematically, the memory can be extended with new cells that “shadows” the previous ones, so when we look up a value the most recent one will be the answer. The problem is that this idealistic model requires an infinite storage, which is just impossible. The enlightening realization, however, is that mutation is not required or even necessary in principle. Molecular structures which are being used in molecular biology are “supposed by Evolution” be this immutable.\nOkay, biology of Life is way more complicated than our grossly oversimplified models of it, but there are the underlying principles which can be discovered, understood and relied upon. For instance, each “small” molecule is a perfect copy of one another (due to the various electro-chemical constraints), so [each] one is as good an the other. This is exactly how our “immutable values” shall be.\nThese “basic building blocks” of molecular biology [once being used] do not supposed to change behind its back (when it does, due to the increase of an entropy and external factors, this is a decay, “loss of an intended function”, disease and disintegration (death).\nSo, having a lot of immutable identical copies (or clones) is “the discovered by Evolution itself way to do it”. “Immutability” is not a fancy ivory-tower academic’s intellectual masturbation (as degens on /g/ usually put it), this is a universal principle, at least for this particular Universe as it is.\nNotice that changes in (mutations of) particular molecular structures actually do occur withing the living cells “all the time”, especially in the so-called ATP pathways, but they are done by (within, inside of) particular highly specialized and unique “embedded” (withing a cell) molecular structures called “enzymes”, which at least in theory, are not dissimilar to our “pure functions”. One could say that the universal notion of a pure function (which embody a particular transformation from particular inputs to particular outputs), is a properly captured and generalized (actually, the most general) notion of what a biological enzyme is (among other things). It is as general as to capture a “single distinct step of causality itself”.\nLets return back to Earth for a while. What all this “proper philosophy” has to do with Rust? Well, after struggling with abominations like C++ Evolutionary processes “discovered” that by [accidentally, after trying and failing with literally everything else] basing a language on the truly universal notions would eventually yield a more ordered and stable “structure”, just exactly as it was within molecular biology of Life Itself.\nNo, it is not the case that the original designers of Rust were geniuses. It is just that there is no other way – everything has to converge back to What Is and to its universal notions, which are discovered, not invented.\nThe only way of doing computations (and programming) just right, is to base it on the universal underlying notion of a directed acyclic graph (or a DAG), which partially captures the Causality Itself (in a particular locality). The great FP guys of the past have intuitively discovered this fact, by having their terms to form a DAG (what else could it be?) and to discover the graph-reduction method of evaluation (reduction) of such DAGs.\nRust is light-years away from being a near-perfect pure language like Haskell, but at least attempts has been made to build it on actually proper foundations and principles.\nJust as the Simple Typed Lambda Calculus (an evolutionary step toward better stability) restricted and formalized the way too-general notion of applicability of anything to anything else, by introducing a type-discipline (which restricts what can be applied to what by a set of explicit rules), Rust is trying to restrict the imperative “chaos” with a way more strict type-discipline (a particular set of complementing each other rules) to what can and cannot be done at the semantic level.\nThe formalized notions of “move semantics”, “ownership”, “lifetimes” and, in particular, the formalized and enforced at the compile time restrictions on use of “references” is an evolutionary step in the right direction (of more stable intermediate building blocks). Again, it is not “genius insights”, it is mere evolutionary processes (which select “local optimums” of simplicity and stability) at work.\nEverything in Rust can be understood from these principles. The main one is that “restriction, or very careful selection of what to use, is the only way”. This is exactly how Life Itself came to be – by selecting very restricted by the given environmental constraints stable intermediate forms, drooping (eventually discarding) what is not stable-enough.\nSo, the takeaway is this – as an evolutionary step of a procedural imperative language, Rust has been built upon way better, less random theoretical foundation than any other imperative language in existence, approaching the mathematical ideal of pure functional languages.\nIn the next chapters we will build it from the ground up using the universal notions of nesting, “enzymes”, duck-typing (which is how molecular structures are “typed”) and what not.\n",
+  "wordCount" : "1480",
+  "inLanguage": "en",
+  "datePublished": "2025-06-30T00:00:00+05:45",
+  "dateModified": "2025-06-30T08:31:02+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/rust-from-the-first-principles/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Rust From The First Principles
+    </h1>
+    <div class="post-description">
+        The monument and a world-heritage &#34;site&#34;.
+  
+    </div>
+    <div class="post-meta"><span title='2025-06-30 00:00:00 +0545 +0545'>June 30, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>Given the US govt. security agencies recommendations for using Memory Safe Languages (as if there is more than one!),  let&rsquo;s bootstrap the right understanding of what  the &ldquo;memory safety&rdquo; means from the first principles.</p>
+<p>The &ldquo;first principles&rdquo; will be indeed the first ones, because we will go all the way back to the underlying recurring patterns in <em>What Is</em>, from which the fundamental mathematical notions have been captured,  properly generalized, abstracted away, named and their properties systematically studied.</p>
+<p>There is a <em>minimal</em> (which means nothing can be removed) abstract mathematical formalism to define (and study the properties of) any [possible] commutable [mathematical] function, and composition (nesting) of such functions &ndash; The Lambda Calculus of Alonzo Church.</p>
+<p>Most of the texts on the Internet would claim that it has &ldquo;just three things&rdquo; (three kinds of terms in the grammar):</p>
+<ul>
+<li>[lambda] abstraction</li>
+<li>application [of lambdas]</li>
+<li>[immutable] bindings [of values to variables]</li>
+</ul>
+<p>This is a gross oversimplification, which ignores the important subtleties. These &ldquo;bindings&rdquo; and &ldquo;abstractions&rdquo; (and the results of &ldquo;applications&rdquo;) does not exist &ldquo;in a vacuum&rdquo;. There is a universal notion of an &ldquo;Environment&rdquo;, which is a global lookup-table (or even a pure function!) that can be conceptualized as a set of ordered pairs &ndash; the symbols (names) being associated with (bound to) corresponding values. These bindings are <em>immutable</em>. New ones can be added to the &ldquo;table&rdquo;, producing a <em>new</em>, updated &ldquo;table&rdquo; (or a pure function!).</p>
+<p>Whether the symbol (a name) is already in the &ldquo;Environment&rdquo; or not is irrelevant, since nothing is ever &ldquo;destructively updated or over-written&rdquo;, the only possible operation on an environment is to <em>extend it with a new binding (new information)</em>, and to produce a <em>new</em> (updated) environment. Some would argue that this is the simplest but <em>proper</em> abstract model of a whole Universe on which the Causality Principle is acting upon.</p>
+<p>These abstract notions are not arbitrary or specific to The Lambda Calculus formalism.  The notions of &ldquo;<em>shadowing</em>&rdquo; (of bindings), which are just an immediate consequences of how the environment is, of &ldquo;<em>bound and free variables</em>&rdquo;, and of so-called &ldquo;<em>lexical scooping</em>&rdquo;. The last two ones rely on the fact that environment is not a single &ldquo;flat&rdquo; set of ordered pairs (implemented or represented as an ordered sequence, since there is no other way &ndash; to write anything down as a sequence implies to have some particular order), but in addition to have the notion of <em>nested</em> &ldquo;frames&rdquo; of the environment, which conceptually are just &ldquo;smaller environments&rdquo; within (not dissimilar of the organelles within a living cells, which used to be particular kinds of cells nested withing other cells).</p>
+<p>Each <em>lambda abstraction</em> has its own implicit tiny [nested] &ldquo;environment&rdquo; (its own <em>frame</em> of environment, as they call it), which has only one <em>binding</em> (of its own [single] parameter).</p>
+<p>Again, nothing here is arbitrary or &ldquo;invented&rdquo; &ndash; everything has been &ldquo;discovered&rdquo; by well-trained mathematicians (as the way to have a minimal and <em>correct</em> representation of universal notions). These notions are applicable to any system of formal logic, starting from the  Gerhard Ghentzen&rsquo;s &ldquo;Natural Deduction&rdquo;, and everything based on it, etc. The symbol \(\Gamma\) in the traditional notation denotes an &ldquo;environment&rdquo; which contain all the previously derived results and the axioms (to begin with). This is not a random coincidence. Our minds have something similar, implemented in &ldquo;synaptic states within a particular network of neurons&rdquo;.</p>
+<p>Such kind of &ldquo;structural formalism&rdquo;, more precisely defined,  is used to study the semantics of programming languages in general. The &ldquo;raw computer memory&rdquo; is being modeled as a higher-level (higher than a merely array of &ldquo;machine words&rdquo;) as a bunch of &ldquo;cells&rdquo;, which are, again, just another specialization of a set of ordered pairs.</p>
+<p>There is, however, a principal difference &ndash; in all such formal mathematical models the contents of a &ldquo;memory cells&rdquo; can be destructively updated or over-written, with an irrecoverable loss of the previous content (information loss). At least in theory, it does not have to be that way &ndash; mathematically, the memory can be extended with new cells that &ldquo;shadows&rdquo; the previous ones, so when we look up a value the most recent one will be the answer.  The problem is that this idealistic model requires an infinite storage, which is just impossible. The enlightening realization, however, is that mutation is <em>not required or even necessary in principle</em>. Molecular structures which are being used in molecular biology are &ldquo;supposed by Evolution&rdquo; be <em>this immutable</em>.</p>
+<p>Okay, biology of Life is way more complicated than our grossly oversimplified models of it, but there are the underlying principles which can be discovered, understood and relied upon. For instance,  each &ldquo;small&rdquo; molecule is a perfect copy of one another (due to the various electro-chemical constraints), so [each] one is as good an the other. This is exactly how our &ldquo;immutable values&rdquo; shall be.</p>
+<p>These &ldquo;basic building blocks&rdquo; of molecular biology [once being used] <em>do not supposed to change behind its back</em> (when it does, due to the increase of an entropy and external factors, this is a decay, &ldquo;loss of an intended function&rdquo;, disease and disintegration (death).</p>
+<p>So, having a lot of immutable identical copies (or clones) is &ldquo;the discovered by Evolution itself way to do it&rdquo;. &ldquo;Immutability&rdquo; is not a fancy ivory-tower academic&rsquo;s intellectual masturbation (as degens on <code>/g/</code> usually put it), this is a universal principle, at least for this particular Universe as it is.</p>
+<p>Notice that changes in (mutations of) particular molecular structures actually do occur withing the living cells &ldquo;all the time&rdquo;, especially in the so-called  ATP pathways, but they are done <em>by</em> (within, inside of) particular highly specialized and unique &ldquo;embedded&rdquo; (withing a cell) molecular structures called &ldquo;enzymes&rdquo;, which at least in theory, are not dissimilar to our &ldquo;pure functions&rdquo;. One could say that the universal notion of a pure function (which embody a particular transformation from particular inputs to particular outputs), is a properly captured and generalized (actually, the most general) notion of what a biological enzyme is (among other things). It is as general as to capture a &ldquo;single distinct step of causality itself&rdquo;.</p>
+<p>Lets return back to Earth for a while. What all this &ldquo;proper philosophy&rdquo; has to do with Rust? Well, after struggling with abominations like C++ Evolutionary processes &ldquo;discovered&rdquo; that by [accidentally, after trying and failing with literally everything else] basing a language on the truly universal notions would eventually yield a more ordered and stable &ldquo;structure&rdquo;, just exactly as it was within molecular biology of Life Itself.</p>
+<p>No, it is not the case that the original designers of Rust were geniuses. It is just that there is <em>no other way</em> &ndash; everything has to converge back to <em>What Is</em> and to its universal notions, which are discovered, not invented.</p>
+<p>The only way of doing computations (and programming) just right, is to base it on the universal underlying notion of a directed acyclic graph (or a DAG),  which partially captures the Causality Itself (in a particular locality). The great FP guys of the past have intuitively discovered this fact, by having their terms to form a DAG (what else could it be?) and to discover the <em>graph-reduction</em> method of evaluation (reduction) of such DAGs.</p>
+<p>Rust is light-years away from being a near-perfect pure language like Haskell, but at least attempts has been made to build it on actually proper foundations and principles.</p>
+<p>Just as the Simple Typed Lambda Calculus (an evolutionary step toward better stability) <em>restricted</em> and <em>formalized</em> the way too-general notion of <em>applicability of anything to anything else</em>, by introducing a type-discipline (which restricts what can be applied to what by a set of explicit rules), Rust is trying to restrict the imperative &ldquo;chaos&rdquo; with a way more strict type-discipline (a particular set of complementing each other rules) to what can and cannot be done at the semantic level.</p>
+<p>The formalized notions of &ldquo;move semantics&rdquo;, &ldquo;ownership&rdquo;, &ldquo;lifetimes&rdquo; and, in particular, the  formalized and <em>enforced at the compile time</em> restrictions on use of &ldquo;references&rdquo; is an  evolutionary step in the right direction (of more stable intermediate building blocks). Again, it is not &ldquo;genius insights&rdquo;, it is mere evolutionary processes (which select &ldquo;local optimums&rdquo; of simplicity and stability) at work.</p>
+<p>Everything in Rust can be understood from these principles. The main one is that &ldquo;restriction, or very careful selection of what to use, is the only way&rdquo;. This is exactly how Life Itself came to be &ndash; by selecting very restricted by the given environmental constraints stable intermediate forms, drooping (eventually discarding) what is not stable-enough.</p>
+<p>So, the takeaway is this &ndash; as an evolutionary step of a <em>procedural imperative language</em>, Rust has been built upon way better, less random theoretical foundation than any other imperative language in existence, approaching the mathematical ideal of pure functional languages.</p>
+<p>In the next chapters we will build it from the ground up using the universal notions of <em>nesting</em>, &ldquo;enzymes&rdquo;, duck-typing (which is how molecular structures are &ldquo;typed&rdquo;) and what not.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/rust/">Rust</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/esoteric/">Esoteric</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
