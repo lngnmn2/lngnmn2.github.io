@@ -6,7 +6,7 @@
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Jun 2025 08:47:49 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jun 2025 11:52:27 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust From The First Principles</title>
@@ -14,6 +14,13 @@
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/rust-from-the-first-principles/</guid>
       <description>Hitting the target no one else sees.</description>
+    </item>
+    <item>
+      <title>The Rust Cheat Sheet</title>
+      <link>https://lngnmn2.github.io/articles/the-tust-cheatsheet/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-tust-cheatsheet/</guid>
+      <description>Just like the Upanishads, you know</description>
     </item>
     <item>
       <title>On Rust (again)</title>

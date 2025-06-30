@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Rust Cheat Sheet | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="rust">
+<meta name="description" content="Just like the Upanishads, you know">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-tust-cheatsheet/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-tust-cheatsheet/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/the-tust-cheatsheet/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The Rust Cheat Sheet">
+  <meta property="og:description" content="Just like the Upanishads, you know">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-06-30T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-06-30T11:52:27+05:45">
+    <meta property="article:tag" content="Rust">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Rust Cheat Sheet">
+<meta name="twitter:description" content="Just like the Upanishads, you know">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Rust Cheat Sheet",
+      "item": "https://lngnmn2.github.io/articles/the-tust-cheatsheet/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Rust Cheat Sheet",
+  "name": "The Rust Cheat Sheet",
+  "description": "Just like the Upanishads, you know",
+  "keywords": [
+    "rust"
+  ],
+  "articleBody": "An intuitive understanding – approximate, imprecise but not wrong in the principles. A level of vague abstractions which capture the right underlying relationships – nothing essential is missed, nothing imaginary and non-existent is added.\nEverything “just naturally follows” from (can be explained by) the “right [intuitive] understanding”. This is what our ancient ancestors used before they have evolved the “scientific method”.\nAlmost everything, however, can be “explained” (to a fool) by an arbitrary super-natural make-believe nonsense, so we have to be very suspicious to what the “talking heads” are saying and question everything.\nThe ultimate goal is to build up your own “inner” intuitive understanding right from the first principles, and to use this understanding for explanation and decision making.\nYes, yes, this is a “theory-building”, and the view of programming (as well as of mathematics itself) as [an abstracted from irrelevant details and particulars] general (and generalized) theory building.\nFortunately, computers give us the necessary “experimental testing and validation” for our intuitive abstract theories, and the feedback loops from the environment show how well their parts corresponds to the actual aspects of What Is.\nSo, the intuitive (the Right) understanding of the principles behind Rust is this.\nGeneral principles:\nA variable (a named box-like memory location) “owns” a value. Each “box” (for a value of a particular type) has an address (an offset). Each value has single “owner” at a time (responsible for cleaning up). A value “actually moves” around – “changes hands” or “ownership”. The “sources” (right-hand-sides) become invalidated (“emptied”). Can be re-used after being explicitly re-initialized to a new value. No reference (an address of a “box”) “outlives” its value in principle. Taking “by reference” does not move anything anywhere. Taking a mutable reference exclusively looks a value (its box). Anything “by value” actually moves (changes hands or ownership). Blocks of code (local nested scopes) take ownership (moved into). For loops and clauses are such blocks. And any function, of course. The actual formal parameters and return values are passed “by value”. Unless explicitly passed by references, to functions with require them. Iterators are just sets of interfaces (traits) implemented by a functions. So all the general principles apply to any higher-level construct. Consistency and uniformity of the behavior is the key to “stability”. Move semantics:\nShallow “moves” of “fat pointers” between “owners” (variables). Keeping the “owned” (nested) heap-allocated data intact. The simple “atomic” machine types are exception (via the Copy trait) A better RAII:\nEverything becomes invalidated after a “move” or at the end of its scope. Parameters and return values are passed by value (hence moved) Drops at the end of a scope, unless moved up into the caller’s scope. Use references to avoid any transfer of ownership (actual moves). References:\nA non-owning “atomic” pointer to a value (in a particular memory location). Either at most one \u0026mut r or at least one \u0026r (two distinct kinds). A reference [to a “box”] is not the same as the value itself (in its box) A “borrow” [of a value] is a crappy, misleading ill-defined concept. Nothing is being “moved out of the box or “returned back into it”. A reference is still an address (an offset) of a value’s “box” in memory. Lifetimes:\nAn abstract scale super-imposed on nested scopes (code blocks). The mathematical notions “as long as” or “encloses” (properly nested). Every variable has an implicit lifetime, implicitly defined by its scope. Every reference has an explicit /lifetime, which is tied to a value it references. A compile-time proofs of mutual-exclusion guarantees (for references). At most one and only one \u0026mut at a time (all other refs are invalidated). “Smart” pointers:\nJust an ADT (an implicit lambda) with some additional nested structure. Has an associated set of constraints (informally defined as a set of rules). A wrapper around an address only (Rc) or an address together with some data, (Box, Cell) “Owns”, “cleans up” and manages its “resources”. Encapsulates the “logic” for providing a specific behavior. “Smart” constructors:\nThe way to make “invalid/inconsistent states unrepresentable”. By establishing specific representation invariants at a construction time. Unfortunately, is not enforced by the compiler, so will be broken by degens. ",
+  "wordCount" : "692",
+  "inLanguage": "en",
+  "datePublished": "2025-06-30T00:00:00+05:45",
+  "dateModified": "2025-06-30T11:52:27+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-tust-cheatsheet/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Rust Cheat Sheet
+    </h1>
+    <div class="post-description">
+      Just like the Upanishads, you know
+    </div>
+    <div class="post-meta"><span title='2025-06-30 00:00:00 +0545 +0545'>June 30, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>An <em>intuitive</em> understanding &ndash; approximate, imprecise but not wrong in the principles. A level of vague abstractions which capture the right underlying relationships &ndash; nothing essential is missed, nothing imaginary and non-existent is added.</p>
+<p>Everything &ldquo;just naturally follows&rdquo; from (can be explained by) the &ldquo;right [intuitive] understanding&rdquo;. This is what our ancient ancestors used before they have evolved the &ldquo;scientific method&rdquo;.</p>
+<p>Almost everything, however, can be &ldquo;explained&rdquo; (to a fool) by an arbitrary super-natural make-believe nonsense, so we have to be very suspicious to what the &ldquo;talking heads&rdquo; are saying and <em>question everything</em>.</p>
+<p>The ultimate goal is to build up your own &ldquo;inner&rdquo; intuitive understanding right from the first principles, and to use this understanding for explanation and decision making.</p>
+<p>Yes, yes, this is a &ldquo;theory-building&rdquo;, and the view of programming (as well as of mathematics itself) as [an abstracted from irrelevant details and particulars] general (and generalized) theory building.</p>
+<p>Fortunately, computers give us the necessary &ldquo;experimental testing and validation&rdquo; for our intuitive abstract theories, and the feedback loops from the environment show how well their parts corresponds  to the actual aspects of <em>What Is</em>.</p>
+<p>So, the <em>intuitive</em> (the Right) understanding of the principles behind Rust is this.</p>
+<p>General principles:</p>
+<ul>
+<li>A variable (a named box-like memory location) &ldquo;owns&rdquo; a value.</li>
+<li>Each &ldquo;box&rdquo; (for a value <em>of a particular type</em>) has an <em>address</em> (an <em>offset</em>).</li>
+<li>Each <em>value</em> has single &ldquo;owner&rdquo; at a time (responsible for cleaning up).</li>
+<li>A value &ldquo;actually moves&rdquo; around &ndash; &ldquo;changes hands&rdquo; or &ldquo;ownership&rdquo;.</li>
+<li>The &ldquo;sources&rdquo; (right-hand-sides) become <em>invalidated</em> (&ldquo;emptied&rdquo;).</li>
+<li>Can be re-used after being explicitly <em>re-initialized</em> to a new value.</li>
+<li>No reference (an address of a &ldquo;box&rdquo;) &ldquo;outlives&rdquo; its value <em>in principle</em>.</li>
+<li>Taking &ldquo;by reference&rdquo; <em>does not move anything anywhere</em>.</li>
+<li>Taking a <em>mutable reference</em> exclusively looks a value (its box).</li>
+<li>Anything &ldquo;by value&rdquo; actually moves (changes hands or ownership).</li>
+<li>Blocks of code (local nested scopes) take ownership (moved into).</li>
+<li><em>For loops</em> and <em>clauses</em> are such blocks. And any function, of course.</li>
+<li>The actual formal parameters and <em>return values</em> are passed &ldquo;by value&rdquo;.</li>
+<li>Unless <em>explicitly passed by references</em>, to functions with <em>require</em> them.</li>
+<li><em>Iterators</em> are just sets of interfaces (<em>traits</em>) implemented by a functions.</li>
+<li>So all the general principles apply to any higher-level construct.</li>
+<li>Consistency and uniformity of the behavior is the key to &ldquo;stability&rdquo;.</li>
+</ul>
+<p>Move semantics:</p>
+<ul>
+<li>Shallow &ldquo;moves&rdquo; of &ldquo;fat pointers&rdquo; between &ldquo;owners&rdquo; (variables).</li>
+<li>Keeping the &ldquo;owned&rdquo; (<em>nested</em>) heap-allocated data intact.</li>
+<li>The simple &ldquo;atomic&rdquo; <em>machine types</em> are exception (via the  <code>Copy</code> trait)</li>
+</ul>
+<p>A better RAII:</p>
+<ul>
+<li>Everything becomes invalidated after a &ldquo;move&rdquo; or <em>at the end of its scope</em>.</li>
+<li>Parameters and return values are <em>passed by value</em> (hence <em>moved</em>)</li>
+<li>Drops at the end of a scope, unless <em>moved</em> up into the caller&rsquo;s scope.</li>
+<li>Use references to avoid any transfer of ownership (actual moves).</li>
+</ul>
+<p>References:</p>
+<ul>
+<li>A <em>non-owning</em> &ldquo;atomic&rdquo; pointer to a value (in a particular memory location).</li>
+<li><em>Either</em> at most one <code>&amp;mut r</code> <em>or</em> at least one <code>&amp;r</code> (two distinct kinds).</li>
+<li>A reference [to a &ldquo;box&rdquo;] is not the same as the value itself (in its box)</li>
+<li>A &ldquo;borrow&rdquo; [of a value] is a crappy, misleading ill-defined concept.</li>
+<li><em>Nothing is being &ldquo;moved out of the box or &ldquo;returned back into it&rdquo;</em>.</li>
+<li>A reference is still an <em>address</em> (an <em>offset</em>) of a value&rsquo;s &ldquo;box&rdquo; in memory.</li>
+</ul>
+<p>Lifetimes:</p>
+<ul>
+<li>An abstract scale super-imposed on nested scopes (code blocks).</li>
+<li>The mathematical notions &ldquo;as long as&rdquo; or &ldquo;encloses&rdquo; (properly nested).</li>
+<li>Every variable has an implicit lifetime, implicitly defined by its <em>scope</em>.</li>
+<li>Every reference has an <em>explicit /lifetime</em>, which is tied to a <em>value it references</em>.</li>
+<li>A <em>compile-time proofs</em> of mutual-exclusion guarantees (for references).</li>
+<li>At most <em>one and only one</em> <code>&amp;mut</code> at a time (all other refs are invalidated).</li>
+</ul>
+<p>&ldquo;Smart&rdquo; pointers:</p>
+<ul>
+<li>Just an ADT (an implicit lambda) with some additional <em>nested structure</em>.</li>
+<li>Has an associated <em>set of constraints</em> (informally defined as a set of rules).</li>
+<li>A wrapper around an <em>address only</em> (<code>Rc</code>)</li>
+<li>or an address together with some <em>data</em>, (<code>Box</code>, <code>Cell</code>)</li>
+<li>&ldquo;Owns&rdquo;, &ldquo;cleans up&rdquo; and manages its &ldquo;resources&rdquo;.</li>
+<li>Encapsulates the &ldquo;logic&rdquo; for providing a specific <em>behavior</em>.</li>
+</ul>
+<p>&ldquo;Smart&rdquo; constructors:</p>
+<ul>
+<li>The way to make &ldquo;invalid/inconsistent  states unrepresentable&rdquo;.</li>
+<li>By establishing specific <em>representation invariants</em> at a construction time.</li>
+<li>Unfortunately, is <em>not</em> enforced by the compiler, so will be broken by degens.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/rust/">Rust</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
