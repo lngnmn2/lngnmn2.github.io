@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jul 2025 16:24:42 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 03 Jul 2025 12:41:34 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,13 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Programming solved (again)</title>
+      <link>https://lngnmn2.github.io/articles/programming-solved-again/</link>
+      <pubDate>Thu, 03 Jul 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/programming-solved-again/</guid>
+      <description>Oops, I did it again</description>
     </item>
     <item>
       <title>Fortune Favors The Prepared</title>
