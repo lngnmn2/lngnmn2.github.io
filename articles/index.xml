@@ -6,8 +6,16 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jul 2025 12:41:34 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jul 2025 15:48:41 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Age Of Copy-Pasting</title>
+      <link>https://lngnmn2.github.io/articles/the-age-of-copy-pasting/</link>
+      <pubDate>Fri, 04 Jul 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-age-of-copy-pasting/</guid>
+      <description>&lt;p&gt;Just a few years ago we had that running joke &amp;ldquo;pasting code from stackoverflow&amp;rdquo;, which describes a coder, who just find and copy-paste the code &amp;ndash; the &amp;ldquo;right&amp;rdquo; answers &amp;ndash; without any understanding whatsoever.&lt;/p&gt;
+&lt;p&gt;It is well-understood at the level of cognitive neuroscience, that skipping the part of &amp;ldquo;doing it yourself&amp;rdquo; (and so never getting these necessary &lt;em&gt;10,000&lt;/em&gt; hours of a &lt;em&gt;deliberate practice&lt;/em&gt;) basically makes us dumber (lots of  supporting MIT studies, google them) and ultimately wastes out time, the only irreplaceable and the most valuable resource we ever had.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Programming solved (again)</title>
       <link>https://lngnmn2.github.io/articles/programming-solved-again/</link>
