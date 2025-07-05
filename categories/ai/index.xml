@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Jun 2025 08:46:23 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jul 2025 19:20:43 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Illusion Of Intelligence</title>
+      <link>https://lngnmn2.github.io/articles/illusion-of-intelligence/</link>
+      <pubDate>Sat, 05 Jul 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/illusion-of-intelligence/</guid>
+      <description>&lt;p&gt;There is a very simple trick to  break the illusion and to see through &amp;ldquo;the veil of Maya&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Locally-run models, like &lt;em&gt;Deepseek-R1-14b-0528&lt;/em&gt; (at full &lt;code&gt;fp16&lt;/code&gt; quantization),  which is the best I could have,  produce vastly different &amp;ldquo;answers&amp;rdquo; for exactly the same prompt not just between two runs, but if one uses a different math library stack (like recompiling with forcing Intel MKL).&lt;/p&gt;
+&lt;p&gt;Every  time  we run a prompt a reasonably good model  spits out something which &amp;ldquo;looks very reasonable&amp;rdquo;, (unless your are an actual expert in the field), because it captures  &amp;ldquo;common sense&amp;rdquo;, expressed in the training data.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Software In The Era of AI</title>
       <link>https://lngnmn2.github.io/articles/software-intheeraof-ai/</link>
