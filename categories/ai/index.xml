@@ -6,8 +6,15 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Jul 2025 08:45:59 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 23 Jul 2025 08:46:49 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Look ma, 100x engineers</title>
+      <link>https://lngnmn2.github.io/articles/100x-engineering/</link>
+      <pubDate>Wed, 23 Jul 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/100x-engineering/</guid>
+      <description>Another day -- another bullshit</description>
+    </item>
     <item>
       <title>Gold medal-level performance at IMO.</title>
       <link>https://lngnmn2.github.io/articles/openai-gold-medal/</link>
@@ -202,13 +209,6 @@
       <description>Bullshit, bullshit, bullshit... (K-PAX)</description>
     </item>
     <item>
-      <title>Look ma, 100x engineers</title>
-      <link>https://lngnmn2.github.io/articles/100x-engineering/</link>
-      <pubDate>Wed, 24 Apr 2024 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/100x-engineering/</guid>
-      <description>Another day -- another bullshit</description>
-    </item>
-    <item>
       <title>Late to the party.</title>
       <link>https://lngnmn2.github.io/articles/late/</link>
       <pubDate>Mon, 27 Nov 2023 00:00:00 +0545</pubDate>
@@ -225,13 +225,6 @@
       <pubDate>Mon, 20 Nov 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/selfawareness/</guid>
       <description>Abstract bullshitting is not enough.</description>
-    </item>
-    <item>
-      <title>LLM predictions</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
     </item>
     <item>
       <title>A small step towards GAI</title>
@@ -256,6 +249,14 @@ existence of &amp;ldquo;That&amp;rdquo; and one being just a sub-process (a wave
       <description>&lt;p&gt;Today &lt;a href=&#34;https://news.ycombinator.com/&#34;&gt;https://news.ycombinator.com/&lt;/a&gt; is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &lt;em&gt;&amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.&lt;/p&gt;
 &lt;p&gt;If I have any understanding of these subjects at all, this is a bubble and &lt;em&gt;irrational exuberance&lt;/em&gt;. Lets try to unpack &amp;ldquo;the whys&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GNU Emacs</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
     </item>
   </channel>
 </rss>
