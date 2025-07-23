@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Jul 2025 11:38:02 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 23 Jul 2025 08:32:02 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -622,6 +622,13 @@ person&lt;/del&gt;.&lt;/p&gt;
       <guid>https://lngnmn2.github.io/articles/everything-in-emacs/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
+    </item>
+    <item>
+      <title>Look ma, 100x engieers</title>
+      <link>https://lngnmn2.github.io/articles/100x-engineering/</link>
+      <pubDate>Wed, 24 Apr 2024 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/100x-engineering/</guid>
+      <description>Another day -- another bullshit</description>
     </item>
     <item>
       <title>Rust is like Haskell, but imperative</title>
