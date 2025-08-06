@@ -6,8 +6,16 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Aug 2025 19:03:45 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 06 Aug 2025 16:19:49 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>openai-gpt-oss-20b</title>
+      <link>https://lngnmn2.github.io/articles/openai-gpt-oss-20b/</link>
+      <pubDate>Wed, 06 Aug 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/openai-gpt-oss-20b/</guid>
+      <description>&lt;p&gt;OpenAI has recently benedicted us with a 20 billion parameter &amp;ldquo;open source&amp;rdquo; model, which is a significant step up from the previous 7 billion parameter model. This model is designed to be more efficient and effective in understanding and generating human-like text, or rather to &lt;em&gt;appear&lt;/em&gt; to do so.&lt;/p&gt;
+&lt;p&gt;It is a total crap, by the way, at least compared to the online free-tier GROK (which is also very basic and limited). It is, obviously, &amp;ldquo;competing&amp;rdquo; with the DeepSeek&amp;rsquo;s &amp;ldquo;open source&amp;rdquo; offerings, and have a very similar &amp;ldquo;feel&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Let the bubble burst, for Crist&#39;s sake!</title>
       <link>https://lngnmn2.github.io/articles/let-the-bubble-burst/</link>
