@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Programming Before AI | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, DSL">
+<meta name="description" content="I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.
+Yes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.
+So, let&rsquo;s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/programming-before-ai/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/programming-before-ai/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/programming-before-ai/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Programming Before AI">
+  <meta property="og:description" content="I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.
+Yes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.
+So, let’s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-08-11T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-08-11T11:25:22+05:45">
+    <meta property="article:tag" content="ADT">
+    <meta property="article:tag" content="DSL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Programming Before AI">
+<meta name="twitter:description" content="I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.
+Yes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.
+So, let&rsquo;s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Programming Before AI",
+      "item": "https://lngnmn2.github.io/articles/programming-before-ai/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Programming Before AI",
+  "name": "Programming Before AI",
+  "description": "I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.\nYes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.\nSo, let\u0026rsquo;s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.\n",
+  "keywords": [
+    "ADT", "DSL"
+  ],
+  "articleBody": "I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.\nYes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.\nSo, let’s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.\nIn the golden age of programming, the ancient sages were discovered the LISP. It has unique properly that its uniform syntactic forms (including the special forms) are represted in terms of the LIST structures (there is a special term for that which I forgot) which means that it is not only a programming language, but also a meta-language for (and of) itself, which intuitively, connects it to molecular biology, where somehow similar, everything is “defined” in terms of just 20 aminoacids.\nBut this is not the only non-coincidental connection. The uniform prefix-notation used in LISP structurally corresponds to an AST, which is not merely a tree, but an acyclic graph of a program, which has all the universal “primitive” structural patterns or “properties” – a “step”, a “fork”, and a “join” (yes, yes, a composition, a conditional and a curried application). There is also recursion, which has a “higher-level” spiral-like complex shape.\nIt turns out, that these “structural elements” are enough for everything – the same underlying “building blocks” which are used to express profs in logic, expressions in functional programming, and even any algorithm using the structural algorithm charting techniques of the 70s (and electrical schematics in the EE field).\nThe question is “why?” Why these “primitive” structures are enough for everything? Why they are universal?\nWell, it has something to do with the proper (and the only) philosophy, which has the only one question to consider – “What Is?”. Most of degens when they hear the world “philosophy” think about some abstract and useless “metaphysical” bullshit and hand-waving, but the real philosophy is about the “reality” and “What Is”, which is not a subjective opinion, but an objective fact, which sometimes can be expressed in terms of the “universal” language of mathematics, and sometimes can only be grasped as an intuitive (but not wrong) understanding, which is what we are doing here.\nThere are some universal fundamental notions, which has been captured in an unambiguous human language and studied in what we call “logic”. There is something called Modus Ponens, which is a universal rule of inference that, among other things, intuitively captured universal the notion of an “necessary and sufficient condition”, which underlay everything, not just biology of Life Itself, but the “chemistry\"and “physics” as its “runtime”.\nAgain, no one knew anything about physics, chemistry and biology (which turn out to be layere DSLs on top of each other), back then, and the only tools they had were observations, capturing of commonalities and similar appearances, generalization, abstraction and intuition.\nSomehow unsurprisingly, the simple typed lamda calculus, which are enough (“necessary and sufficient”) to compute any commutable function, are based on the notions of an “abstraction” and “application”.\nMolecular biology has something very similar – an enzyme, which is a particular structure (a particularly “folded” into a unique “shape” or a “form” sequence of amino acids), which perform a certain “functions” when all the necessary and sufficient conditions are met. Not dissimilar to sequences of LISP structures (CONSes) which from particular lambda expressions, parameterized by the “arguments”.\nAnd composition of these lambda expressions form distinct “pathways”, something quite similar to biological “pathways”, which control everything in the “higher-level” systems biology (this is not just an empty analogy – the pathways use a form of “structural message passing”, and the “messages” are just particular molecular structures produced by enzymes, when the necessary conditions are meet, and the conditions, in turn, can be the presence of another molecular structure in some of its particular “slot”, so the “chaining” (of reactions) occurs).\nYes, this “crazy back-and-forth” is intentional. Yes, nothing here is incidental or arbitrary. What the different “blind philosophers” have been captured are the one and the same elephant.\nThe abstract algebra that we are trying to discover, which underlay logic, mathematical proofs, functional programming, sequential presses, and even partially captures the Causality itself, and its “dual” Potentiality, is one and the same (just because the universe is the one and the same unfolding process, and thus contradictions cannot exist in principle). This is what it is all about.\nAgain, this isn’t just an analogy; it’s a deep structural equivalence at the level of “structural primitives”, which we all know intuitively, but never really thought about it in a systematic way.\nThe logical connectives, the algebraic data types, the structural elements of a directed acyclic graph, are the one and the same “primitive patterns”, which emerge again and again at all the different levels of any properly captured abstraction, which is natural, if you thing for it for a second.\nThese simple “forks” and “joins” can be combined (composed) at all levels, to form more complex layered structures, creating a hierarchy of languages and abstractions. And this is why Layered DSLs is such a universal idea.\nA more abstract data types forms the basis of a higher-level DSL over the basic “graph structures”. The “abstraction barrier” is the boundary between these layers—the functional interface of a module, for instance, hides the specific implementation (the concrete DAG structure) from the user, exposing only the types (the propositions). This modularity is a direct consequence of the isomorphism, allowing for clean, stateless interfaces.\nAbstraction, Modularity Abstract Data Types – all the way back to Barbara Liskov, the 70s, 80s, and the early 90s – the golden age of programming, of ML, Scheme and CLU, – the intuitive knowedge.\nThe ADTs correspond to the universal notion of the existential qualifier (there exist an … /such that) – hiding a concrete type behind an abstract interface, an abstraction barrier, exposing only some property (which can be captured by a predicate – such that).\nThe universal qualifier (forall … the property holds) corresponds to parametric polymorphism (of some functions) and to generics. Again, nothing is arbitrary or accidental.\nThere is much more. Nesting of Sets and composition of Functions (which is also nesting) form on the same universal patterns, at the most abstract level, which has been noticed by some Category Theorists, etc, etc.\n",
+  "wordCount" : "1117",
+  "inLanguage": "en",
+  "datePublished": "2025-08-11T00:00:00+05:45",
+  "dateModified": "2025-08-11T11:25:22+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/programming-before-ai/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Programming Before AI
+    </h1>
+    <div class="post-meta"><span title='2025-08-11 00:00:00 +0545 +0545'>August 11, 2025</span>&nbsp;·&nbsp;&amp;lt;lngnmn2@yahoo.com&amp;gt;
+
+</div>
+  </header> 
+  <div class="post-content"><p>I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.</p>
+<p>Yes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.</p>
+<p>So, let&rsquo;s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.</p>
+<p>In the golden age of programming, the ancient sages were discovered the LISP. It has unique properly that its uniform syntactic forms (including the <em>special forms</em>) are represted in terms of the LIST structures (there is a special term for that which I forgot) which means that it is not only a programming language, but also a <em>meta-language</em> for (and of) itself, which <em>intuitively</em>, connects it to molecular biology, where somehow similar, everything is &ldquo;defined&rdquo; in terms of just 20 aminoacids.</p>
+<p>But this is not the only non-coincidental connection. The uniform <em>prefix</em>-notation used in LISP structurally corresponds to an AST, which is not merely a tree, but an <em>acyclic graph</em> of a program, which has all the universal &ldquo;primitive&rdquo; structural patterns or &ldquo;properties&rdquo; &ndash; a &ldquo;step&rdquo;, a &ldquo;fork&rdquo;, and a &ldquo;join&rdquo; (yes, yes, a composition, a conditional and a curried application). There is also <em>recursion</em>, which has a &ldquo;higher-level&rdquo; spiral-like complex shape.</p>
+<p>It turns out, that these &ldquo;structural elements&rdquo; are <em>enough for everything</em> &ndash; the same underlying &ldquo;building blocks&rdquo; which are used to express profs in logic, expressions in functional programming, and even any algorithm using the structural algorithm charting techniques of the 70s (and electrical schematics in the EE field).</p>
+<p>The question is &ldquo;why?&rdquo; Why these &ldquo;primitive&rdquo; structures are enough for everything? Why they are universal?</p>
+<p>Well, it has something to do with the proper (and the only) philosophy, which has the only one question to consider &ndash; &ldquo;What Is?&rdquo;.  Most of degens when they hear the world &ldquo;philosophy&rdquo; think about some abstract and useless &ldquo;metaphysical&rdquo; bullshit and hand-waving, but the real philosophy is about the &ldquo;reality&rdquo; and &ldquo;What Is&rdquo;, which is not a subjective opinion, but an objective fact, which <em>sometimes</em> can be expressed in terms of the &ldquo;universal&rdquo; language of mathematics, and sometimes can only be grasped as an <em>intuitive (but not wrong) understanding</em>, which is what we are doing here.</p>
+<p>There are some universal fundamental notions, which has been captured in an unambiguous human language and studied in what we call &ldquo;logic&rdquo;. There is something called Modus Ponens, which is a universal rule of inference that, among other things, intuitively captured universal the notion of an &ldquo;necessary and sufficient condition&rdquo;, which underlay <em>everything</em>, not just biology of Life Itself, but the &ldquo;chemistry&quot;and &ldquo;physics&rdquo; as its &ldquo;runtime&rdquo;.</p>
+<p>Again, no one knew anything about physics, chemistry and biology (which turn out to be layere DSLs on top of each other),  back then, and the only tools they had were observations, capturing of commonalities and similar appearances,  generalization, abstraction and intuition.</p>
+<p>Somehow unsurprisingly, the simple typed lamda calculus, which are enough (&ldquo;necessary and sufficient&rdquo;) to compute any commutable function, are based on the notions of an &ldquo;abstraction&rdquo; and &ldquo;application&rdquo;.</p>
+<p>Molecular biology has something very similar &ndash; an enzyme, which is a particular structure (a particularly &ldquo;folded&rdquo; into a unique &ldquo;shape&rdquo; or a &ldquo;form&rdquo; sequence of amino acids), which perform a certain &ldquo;functions&rdquo; when all the necessary and sufficient conditions are met. Not dissimilar to sequences of LISP structures (CONSes) which from particular lambda expressions, parameterized by the &ldquo;arguments&rdquo;.</p>
+<p>And composition of these lambda expressions form distinct &ldquo;pathways&rdquo;, something quite similar to biological &ldquo;pathways&rdquo;, which control everything in the &ldquo;higher-level&rdquo; <em>systems  biology</em> (this is not just an empty analogy &ndash; the pathways use a form of &ldquo;structural message passing&rdquo;, and the &ldquo;messages&rdquo; are just particular molecular structures produced by enzymes, when the necessary conditions are meet, and the conditions, in turn, can be the presence of another molecular structure in some of its  particular &ldquo;slot&rdquo;, so the &ldquo;chaining&rdquo; (of reactions) occurs).</p>
+<p>Yes, this &ldquo;crazy back-and-forth&rdquo; is intentional. Yes, nothing here is incidental or arbitrary. What the different &ldquo;blind philosophers&rdquo; have been captured are the one and the  same elephant.</p>
+<p>The <em>abstract algebra</em> that we are trying to discover,  which underlay logic, mathematical proofs, functional programming, sequential presses, and even partially captures the Causality itself, and its &ldquo;dual&rdquo; Potentiality,  is one and the same (just because the universe is the one and the same unfolding process, and thus contradictions cannot exist in principle). This is what it is all about.</p>
+<p>Again, this isn&rsquo;t just an analogy; it&rsquo;s a deep structural equivalence at the level of &ldquo;structural primitives&rdquo;, which we all know intuitively, but never really thought about it in a systematic way.</p>
+<p>The logical connectives, the algebraic data types, the structural elements of a directed acyclic graph, are the one and the same &ldquo;primitive patterns&rdquo;, which emerge again and again at all the different levels of <em>any properly captured  abstraction</em>, which is <em>natural</em>, if you thing for it for a second.</p>
+<p>These simple &ldquo;forks&rdquo; and &ldquo;joins&rdquo; can be combined (composed) at all levels, to form more complex layered structures, creating a hierarchy of languages and abstractions. And this is why Layered DSLs is such a universal idea.</p>
+<p>A more abstract data types forms the basis of a higher-level DSL over the basic &ldquo;graph structures&rdquo;. The &ldquo;abstraction barrier&rdquo; is the boundary between these layers—the functional interface of a module, for instance, hides the specific implementation (the concrete DAG structure) from the user, exposing only the types (the propositions). This modularity is a direct consequence of the isomorphism, allowing for clean, stateless interfaces.</p>
+<p>Abstraction, Modularity Abstract Data Types &ndash; all the way back to Barbara Liskov, the 70s, 80s, and the early 90s &ndash;  the golden age of programming, of ML, Scheme and CLU, &ndash; the <em>intuitive</em> knowedge.</p>
+<p>The ADTs correspond to the universal notion of the <em>existential qualifier</em> (<em>there exist an &hellip; /such that</em>) &ndash; hiding a concrete type behind <em>an abstract interface</em>, an abstraction barrier, exposing only some <em>property</em> (which can be captured by a predicate &ndash; <em>such that</em>).</p>
+<p>The <em>universal qualifier</em> (<em>forall &hellip; the property holds</em>) corresponds to parametric polymorphism (of some functions) and to generics. Again, nothing is arbitrary or accidental.</p>
+<p>There is much more. Nesting of Sets and composition of Functions (which is also <em>nesting</em>) form on the same universal patterns, at the most abstract level, which has been noticed by some Category Theorists, etc, etc.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

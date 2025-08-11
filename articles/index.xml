@@ -6,7 +6,7 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Aug 2025 07:06:11 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 11 Aug 2025 11:25:22 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>It Feels Like A Cheating Because It Is</title>
@@ -16,6 +16,15 @@
       <description>&lt;p&gt;The purpose of examination in a college or university setting is to empirically verify that a student has &lt;em&gt;his own genuine understanding&lt;/em&gt; and could actually apply it. It is that simple.&lt;/p&gt;
 &lt;p&gt;This is why some courses even allow to bring a textbook to an exam, because if one does not [already] understand the principles and techniques, the textbook is of no use.&lt;/p&gt;
 &lt;p&gt;However, bringing pocket calculators, smartphones is considered a cheating, precisely because by using these devises one could &lt;em&gt;appear&lt;/em&gt; as possessing  one&amp;rsquo;s own understanding.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Programming Before AI</title>
+      <link>https://lngnmn2.github.io/articles/programming-before-ai/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/programming-before-ai/</guid>
+      <description>&lt;p&gt;I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.&lt;/p&gt;
+&lt;p&gt;Yes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.&lt;/p&gt;
+&lt;p&gt;So, let&amp;rsquo;s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.&lt;/p&gt;</description>
     </item>
     <item>
       <title>openai-gpt-oss-20b</title>
@@ -689,6 +698,13 @@
   </description>
     </item>
     <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
+    </item>
+    <item>
       <title>On foundations of mathematics</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0545</pubDate>
@@ -995,14 +1011,6 @@ through practice and experience (not reading or watching).&lt;/p&gt;
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
-    </item>
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>

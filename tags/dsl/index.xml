@@ -6,8 +6,17 @@
     <description>Recent content in DSL on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jul 2025 12:41:34 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 11 Aug 2025 11:25:22 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/dsl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming Before AI</title>
+      <link>https://lngnmn2.github.io/articles/programming-before-ai/</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/programming-before-ai/</guid>
+      <description>&lt;p&gt;I have to rush to finish my series before AI will completely enshittificate the written knowledge and the classic discipline of programming, which is based on understanding and mathematical rigour.&lt;/p&gt;
+&lt;p&gt;Yes, I seemingly overuse this word beyond the limits of a good style, but I like it, how it is awkward and ugly and yet perfectly captures what a generative AI is doing to a writtern knowledge itself.&lt;/p&gt;
+&lt;p&gt;So, let&amp;rsquo;s try to build it all top-down, for a change. Bottom up is probably the better way, but it takes so long time before one begins to see the whole picture, which is, of course, the one and the same mountain (or an elephant) viewed from different angles and perspectives.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Programming solved (again)</title>
       <link>https://lngnmn2.github.io/articles/programming-solved-again/</link>
