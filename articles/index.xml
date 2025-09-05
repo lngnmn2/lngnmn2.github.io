@@ -6,7 +6,7 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Sep 2025 18:14:59 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 05 Sep 2025 18:16:32 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
@@ -14,11 +14,7 @@
       <link>https://lngnmn2.github.io/articles/programming-without-vapecoding/</link>
       <pubDate>Fri, 05 Sep 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/programming-without-vapecoding/</guid>
-      <description>&lt;p&gt;Abstraction and Modularity are the most fundamental principles. &lt;em&gt;Abstraction barriers&lt;/em&gt; are &amp;ldquo;membranes&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;Representation and Implementation details must be &lt;em&gt;hidden behind&lt;/em&gt; such barriers. so they &lt;em&gt;can be changed&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;This is how &lt;em&gt;Evolution Itself&lt;/em&gt; works at the cellular level: &lt;em&gt;membranes&lt;/em&gt; separate &lt;em&gt;the inside from the outside&lt;/em&gt;, so the changes (favorable mutations) could occur.&lt;/p&gt;
-&lt;p&gt;This &lt;em&gt;enables&lt;/em&gt; the fundamental principle of &lt;em&gt;not committing early to any choices&lt;/em&gt;, to avoid  &lt;em&gt;technical debt&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Evolution has &lt;em&gt;a lot&lt;/em&gt; of &amp;ldquo;technical debt&amp;rdquo;, exactly because what is already &amp;ldquo;out there&amp;rdquo; &lt;em&gt;cannot&lt;/em&gt; be changed &lt;em&gt;without breaking everything that depends on it&lt;/em&gt;.&lt;/p&gt;</description>
+      <description>The last 50 years of an applied programming language&amp;#39;s semantics research in an one page.</description>
     </item>
     <item>
       <title>Kernigan and Rust</title>
