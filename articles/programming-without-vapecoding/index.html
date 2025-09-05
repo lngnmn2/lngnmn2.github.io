@@ -8,7 +8,7 @@
 <title>  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
    | Notes from the digital underground by Lngnmn</title>
 <meta name="keywords" content="ADT, DSL, modularity, abstraction">
-<meta name="description" content="The last 50 years of an applied programming language&#39;s semantics research in an one page.">
+<meta name="description" content="The last 50 years of an applied programming language&#39;s semantics research in one page.">
 <meta name="author" content="lngnmn2@yahoo.com">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/programming-without-vapecoding/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
@@ -71,12 +71,12 @@ font-family: 'Source Code Pro', monospace;
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
   ">
-  <meta property="og:description" content="The last 50 years of an applied programming language&#39;s semantics research in an one page.">
+  <meta property="og:description" content="The last 50 years of an applied programming language&#39;s semantics research in one page.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="articles">
     <meta property="article:published_time" content="2025-09-05T00:00:00+05:45">
-    <meta property="article:modified_time" content="2025-09-05T18:16:32+05:45">
+    <meta property="article:modified_time" content="2025-09-05T19:20:14+05:45">
     <meta property="article:tag" content="ADT">
     <meta property="article:tag" content="DSL">
     <meta property="article:tag" content="Modularity">
@@ -84,7 +84,7 @@ font-family: 'Source Code Pro', monospace;
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
   ">
-<meta name="twitter:description" content="The last 50 years of an applied programming language&#39;s semantics research in an one page.">
+<meta name="twitter:description" content="The last 50 years of an applied programming language&#39;s semantics research in one page.">
 
 
 <script type="application/ld+json">
@@ -113,15 +113,15 @@ font-family: 'Source Code Pro', monospace;
   "@type": "BlogPosting",
   "headline": "  How to program \"just right\" without any LLM \"vapecoding\"\n  ",
   "name": "  How to program \u0022just right\u0022 without any LLM \u0022vapecoding\u0022\n  ",
-  "description": "The last 50 years of an applied programming language's semantics research in an one page.",
+  "description": "The last 50 years of an applied programming language's semantics research in one page.",
   "keywords": [
     "ADT", "DSL", "modularity", "abstraction"
   ],
-  "articleBody": "Abstraction and Modularity are the most fundamental principles. Abstraction barriers are “membranes”.\nRepresentation and Implementation details must be hidden behind such barriers. so they can be changed.\nThis is how Evolution Itself works at the cellular level: membranes separate the inside from the outside, so the changes (favorable mutations) could occur.\nThis enables the fundamental principle of not committing early to any choices, to avoid technical debt.\nEvolution has a lot of “technical debt”, exactly because what is already “out there” cannot be changed without breaking everything that depends on it.\nClearly separating interfaces from implementations is an instance of the separation of concerns principle.\nStart with types and traits, which must be in an 1-to-1 correspondence with the /concepts of the domain.\nMake sure these types and traits are purely abstract and do not contain any implementation details.\nAll types can be reduced to distinct “shapes” – algebraic data types: sum , /product and function types.\nAll types can be parameterized by other types, and thus nested, and even recursive, which is what a List is.\nThe “Abstraction by Paramaterization” principle is universal, not just functions, but also types and modules.\nType-classes (and traits) define the “bounds” (the mathematical “such that”) on behaviors of nested types.\nWrite the “stubs” and “tests” at the level of such abstract interfaces first, /before any implementation.\nThe hierarchical structure of domain’s complexity should match 1-to-1 the layers of DSLs and modules.\nThe “empty” tests shall use module’s public interfaces only, and thus enforce /modularity early.\nUse composable abstract interfaces exported from a module to enforce a clear abstraction barrier.\nModularity: Each module must manage its own ADTs and provide a high-level, stateless interface.\nComposition: Chaining of such interfaces forces one to stay at the same high level of abstraction.\nImmutability: Data is immutable. Functions that “modify” data will return a new, “updated” instance.\nFunctional Pipelines: chain (compose) methods (abstract high-level interfaces) and use high-order functions to process data without mutable state.\nAlgebraic/ Data Types: struct for product types (a combination of fields, an “each of” type ) and enum for sum types (an “one of” type for several possibilities).\nUse pattern matching consistently to destructure enum and struct types, and force one to always /exhaustively handle all the possible cases.\n“New-Types” are structs with a single field that wrap a primitive type to give it domain-specific meaning and constraints, preventing “naked primitive types.”\n“Smart Constructors” are functions, parts of a module’s public interface, that create instances of a type while enforcing a specification representation invariants.\n“Smart constructors” should fail rather than return a “meaningless” None, must never return an invalid or partially valid state. Invalid states must be unrepresentable.\nAn Option is a redundant wrapper at the level of “smart constructors”. It is useful only when the absence of a value is a valid, expected outcome of an operation.\nUse Result types only when failure is a valid, expected outcome of an operation. Otherwise, use panic for unexpected errors. The “fail fast” principle.\nUse the “question mark” operator within a Result-returning function to propagate errors.\n",
-  "wordCount" : "512",
+  "articleBody": "Abstraction and Modularity are the most fundamental principles. Abstraction barriers are “membranes”.\nRepresentation and Implementation details must be hidden behind such barriers. so they can be changed.\nThis is how Evolution Itself works at the cellular level: membranes separate the inside from the outside, so the changes (favorable mutations) could occur.\nThis enables the fundamental principle of not committing early to any choices, to avoid technical debt.\nEvolution has a lot of “technical debt”, exactly because what is already “out there” cannot be changed without breaking everything that depends on it.\nThe ability to “delay or postpone decisions” and to “change your mind” without breaking the “contract” is the most fundamental principle of programming.\nThe “extreme late binding” principle of Kay and Steele is an instance of this more general principle of “postponing the decisions” and enables “lose coupling”.\nThis, in turn, emphasizes the view of method calls as a form of “message passing”, bound by a “contract”.\nClearly separating interfaces from implementations is an instance of the separation of concerns principle.\nStart with types and traits, which must be in an 1-to-1 correspondence with the /concepts of the domain.\nMake sure these types and traits are purely abstract and do not contain any implementation details.\nAll types can be reduced to distinct “shapes” – algebraic data types: sum , /product and function types.\nAll types can be parameterized by other types, and thus nested, and even recursive, which is what a List is.\nThe “Abstraction by Paramaterization” principle is universal, not just functions, but also types and modules.\nType-classes (and traits) define the “bounds” (the mathematical “such that”) on behaviors of nested types.\nWrite the “stubs” and “tests” at the level of such abstract interfaces first, /before any implementation.\nThe hierarchical structure of domain’s complexity should match 1-to-1 the layers of DSLs and modules.\nThe “empty” tests shall use module’s public interfaces only, and thus enforce /modularity early.\nUse composable abstract interfaces exported from a module to enforce a clear abstraction barrier.\nModularity: Each module must manage its own ADTs and provide a high-level, stateless interface.\nComposition: Chaining of such interfaces forces one to stay at the same high level of abstraction.\nImmutability: Data is immutable. Functions that “modify” data will return a new, “updated” instance.\nFunctional Pipelines: chain (compose) methods (abstract high-level interfaces) and use high-order functions to process data without mutable state.\nAlgebraic/ Data Types: struct for product types (a combination of fields, an “each of” type ) and enum for sum types (an “one of” type for several possibilities).\nUse pattern matching consistently to destructure enum and struct types, and force one to always /exhaustively handle all the possible cases.\n“New-Types” are structs with a single field that wrap a primitive type to give it domain-specific meaning and constraints, preventing “naked primitive types.”\n“Smart Constructors” are functions, parts of a module’s public interface, that create instances of a type while enforcing a specification representation invariants.\n“Smart constructors” should fail rather than return a “meaningless” None, must never return an invalid or partially valid state. Invalid states must be unrepresentable.\nAn Option is a redundant wrapper at the level of “smart constructors”. It is useful only when the absence of a value is a valid, expected outcome of an operation.\nUse Result types only when failure is a valid, expected outcome of an operation. Otherwise, use panic for unexpected errors. The “fail fast” principle.\nUse the “question mark” operator within a Result-returning function to propagate errors.\n",
+  "wordCount" : "579",
   "inLanguage": "en",
   "datePublished": "2025-09-05T00:00:00+05:45",
-  "dateModified": "2025-09-05T18:16:32+05:45",
+  "dateModified": "2025-09-05T19:20:14+05:45",
   "author":[{
     "@type": "Person",
     "name": "lngnmn2@yahoo.com"
@@ -200,7 +200,7 @@ font-family: 'Source Code Pro', monospace;
   
     </h1>
     <div class="post-description">
-      The last 50 years of an applied programming language&#39;s semantics research in an one page.
+      The last 50 years of an applied programming language&#39;s semantics research in one page.
     </div>
     <div class="post-meta"><span title='2025-09-05 00:00:00 +0545 +0545'>September 5, 2025</span>&nbsp;·&nbsp;lngnmn2@yahoo.com
 
@@ -211,6 +211,9 @@ font-family: 'Source Code Pro', monospace;
 <p>This is how <em>Evolution Itself</em> works at the cellular level: <em>membranes</em> separate <em>the inside from the outside</em>, so the changes (favorable mutations) could occur.</p>
 <p>This <em>enables</em> the fundamental principle of <em>not committing early to any choices</em>, to avoid  <em>technical debt</em>.</p>
 <p>Evolution has <em>a lot</em> of &ldquo;technical debt&rdquo;, exactly because what is already &ldquo;out there&rdquo; <em>cannot</em> be changed <em>without breaking everything that depends on it</em>.</p>
+<p>The ability to &ldquo;delay or postpone decisions&rdquo; and to &ldquo;change your mind&rdquo; without breaking the &ldquo;contract&rdquo; is <em>the</em> most fundamental principle of programming.</p>
+<p>The &ldquo;extreme late binding&rdquo; principle of Kay and Steele is an instance of this more general principle of &ldquo;postponing the decisions&rdquo; and enables &ldquo;lose coupling&rdquo;.</p>
+<p>This, in turn,  emphasizes the view of  method calls as a form of &ldquo;message passing&rdquo;, bound by a &ldquo;contract&rdquo;.</p>
 <p>Clearly separating interfaces from implementations is an instance of the  <em>separation of concerns</em> principle.</p>
 <p>Start with <em>types</em> and <em>traits</em>, which must be in an <em>1-to-1 correspondence</em> with <em>the /concepts  of the domain</em>.</p>
 <p>Make sure these types and traits are <em>purely abstract</em> and <em>do not</em> contain any implementation details.</p>
