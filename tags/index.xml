@@ -6,13 +6,34 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Sep 2025 11:16:45 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 05 Sep 2025 18:10:48 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstraction</title>
+      <link>https://lngnmn2.github.io/tags/abstraction/</link>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/abstraction/</guid>
+      <description></description>
+    </item>
     <item>
       <title>ADT</title>
       <link>https://lngnmn2.github.io/tags/adt/</link>
-      <pubDate>Tue, 02 Sep 2025 00:00:00 +0545</pubDate>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/adt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DSL</title>
+      <link>https://lngnmn2.github.io/tags/dsl/</link>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Modularity</title>
+      <link>https://lngnmn2.github.io/tags/modularity/</link>
+      <pubDate>Fri, 05 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/modularity/</guid>
       <description></description>
     </item>
     <item>
@@ -20,13 +41,6 @@
       <link>https://lngnmn2.github.io/tags/llm/</link>
       <pubDate>Mon, 25 Aug 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DSL</title>
-      <link>https://lngnmn2.github.io/tags/dsl/</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/dsl/</guid>
       <description></description>
     </item>
     <item>
@@ -461,13 +475,6 @@
       <link>https://lngnmn2.github.io/tags/abstraction-barrier/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/abstraction-barrier/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Modularity</title>
-      <link>https://lngnmn2.github.io/tags/modularity/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/modularity/</guid>
       <description></description>
     </item>
     <item>

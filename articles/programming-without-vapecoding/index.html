@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
+   | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="ADT, DSL, modularity, abstraction">
+<meta name="description" content="Abstraction and Modularity are the most fundamental principles. Abstraction barriers are &ldquo;membranes&rdquo;.
+Representation and Implementation details must be hidden behind such barriers. so they can be changed.
+This is how Evolution Itself works at the cellular level: membranes separate the inside from the outside, so the changes (favorable mutations) could occur.
+This enables the fundamental principle of not committing early to any choices, to avoid  technical debt.
+Evolution has a lot of &ldquo;technical debt&rdquo;, exactly because what is already &ldquo;out there&rdquo; cannot be changed without breaking everything that depends on it.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/programming-without-vapecoding/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/programming-without-vapecoding/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/programming-without-vapecoding/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
+  ">
+  <meta property="og:description" content="Abstraction and Modularity are the most fundamental principles. Abstraction barriers are “membranes”.
+Representation and Implementation details must be hidden behind such barriers. so they can be changed.
+This is how Evolution Itself works at the cellular level: membranes separate the inside from the outside, so the changes (favorable mutations) could occur.
+This enables the fundamental principle of not committing early to any choices, to avoid technical debt.
+Evolution has a lot of “technical debt”, exactly because what is already “out there” cannot be changed without breaking everything that depends on it.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-09-05T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-09-05T18:10:48+05:45">
+    <meta property="article:tag" content="ADT">
+    <meta property="article:tag" content="DSL">
+    <meta property="article:tag" content="Modularity">
+    <meta property="article:tag" content="Abstraction">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
+  ">
+<meta name="twitter:description" content="Abstraction and Modularity are the most fundamental principles. Abstraction barriers are &ldquo;membranes&rdquo;.
+Representation and Implementation details must be hidden behind such barriers. so they can be changed.
+This is how Evolution Itself works at the cellular level: membranes separate the inside from the outside, so the changes (favorable mutations) could occur.
+This enables the fundamental principle of not committing early to any choices, to avoid  technical debt.
+Evolution has a lot of &ldquo;technical debt&rdquo;, exactly because what is already &ldquo;out there&rdquo; cannot be changed without breaking everything that depends on it.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "  How to program \"just right\" without any LLM \"vapecoding\"\n  ",
+      "item": "https://lngnmn2.github.io/articles/programming-without-vapecoding/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "  How to program \"just right\" without any LLM \"vapecoding\"\n  ",
+  "name": "  How to program \u0022just right\u0022 without any LLM \u0022vapecoding\u0022\n  ",
+  "description": "Abstraction and Modularity are the most fundamental principles. Abstraction barriers are \u0026ldquo;membranes\u0026rdquo;.\nRepresentation and Implementation details must be hidden behind such barriers. so they can be changed.\nThis is how Evolution Itself works at the cellular level: membranes separate the inside from the outside, so the changes (favorable mutations) could occur.\nThis enables the fundamental principle of not committing early to any choices, to avoid technical debt.\nEvolution has a lot of \u0026ldquo;technical debt\u0026rdquo;, exactly because what is already \u0026ldquo;out there\u0026rdquo; cannot be changed without breaking everything that depends on it.\n",
+  "keywords": [
+    "ADT", "DSL", "modularity", "abstraction"
+  ],
+  "articleBody": "Abstraction and Modularity are the most fundamental principles. Abstraction barriers are “membranes”.\nRepresentation and Implementation details must be hidden behind such barriers. so they can be changed.\nThis is how Evolution Itself works at the cellular level: membranes separate the inside from the outside, so the changes (favorable mutations) could occur.\nThis enables the fundamental principle of not committing early to any choices, to avoid technical debt.\nEvolution has a lot of “technical debt”, exactly because what is already “out there” cannot be changed without breaking everything that depends on it.\nClearly separating interfaces from implementations is an instance of the separation of concerns principle.\nStart with types and traits, which must be in an 1-to-1 correspondence with the /concepts of the domain.\nMake sure these types and traits are purely abstract and do not contain any implementation details.\nAll types can be reduced to distinct “shapes” – algebraic data types: sum , /product and function types.\nAll types can be parameterized by other types, and thus nested, and even recursive, which is what a List is.\nThe “Abstraction by Paramaterization” principle is universal, not just functions, but also types and modules.\nType-classes (and traits) define the “bounds” (the mathematical “such that”) on behaviors of nested types.\nWrite the “stubs” and “tests” at the level of such abstract interfaces first, /before any implementation.\nThe hierarchical structure of domain’s complexity should match 1-to-1 the layers of DSLs and modules.\nThe “empty” tests shall use module’s public interfaces only, and thus enforce /modularity early.\nUse composable abstract interfaces exported from a module to enforce a clear abstraction barrier.\nModularity: Each module must manage its own ADTs and provide a high-level, stateless interface.\nComposition: Chaining of such interfaces forces one to stay at the same high level of abstraction.\nImmutability: Data is immutable. Functions that “modify” data will return a new, “updated” instance.\nFunctional Pipelines: chain (compose) methods (abstract high-level interfaces) and use high-order functions to process data without mutable state.\nAlgebraic/ Data Types: struct for product types (a combination of fields, an “each of” type ) and enum for sum types (an “one of” type for several possibilities).\nUse pattern matching consistently to destructure enum and struct types, and force one to always /exhaustively handle all the possible cases.\n“New-Types” are structs with a single field that wrap a primitive type to give it domain-specific meaning and constraints, preventing “naked primitive types.”\n“Smart Constructors” are functions, parts of a module’s public interface, that create instances of a type while enforcing a specification representation invariants.\n“Smart constructors” should fail rather than return a “meaningless” None, must never return an invalid or partially valid state. Invalid states must be unrepresentable.\nAn Option is a redundant wrapper at the level of “smart constructors”. It is useful only when the absence of a value is a valid, expected outcome of an operation.\nUse Result types only when failure is a valid, expected outcome of an operation. Otherwise, use panic for unexpected errors. The “fail fast” principle.\nUse the “question mark” operator within a Result-returning function to propagate errors.\n",
+  "wordCount" : "512",
+  "inLanguage": "en",
+  "datePublished": "2025-09-05T00:00:00+05:45",
+  "dateModified": "2025-09-05T18:10:48+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/programming-without-vapecoding/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+        How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
+  
+    </h1>
+    <div class="post-meta"><span title='2025-09-05 00:00:00 +0545 +0545'>September 5, 2025</span>&nbsp;·&nbsp;lngnmn2@yahoo.com
+
+</div>
+  </header> 
+  <div class="post-content"><p>Abstraction and Modularity are the most fundamental principles. <em>Abstraction barriers</em> are &ldquo;membranes&rdquo;.</p>
+<p>Representation and Implementation details must be <em>hidden behind</em> such barriers. so they <em>can be changed</em>.</p>
+<p>This is how <em>Evolution Itself</em> works at the cellular level: <em>membranes</em> separate <em>the inside from the outside</em>, so the changes (favorable mutations) could occur.</p>
+<p>This <em>enables</em> the fundamental principle of <em>not committing early to any choices</em>, to avoid  <em>technical debt</em>.</p>
+<p>Evolution has <em>a lot</em> of &ldquo;technical debt&rdquo;, exactly because what is already &ldquo;out there&rdquo; <em>cannot</em> be changed <em>without breaking everything that depends on it</em>.</p>
+<p>Clearly separating interfaces from implementations is an instance of the  <em>separation of concerns</em> principle.</p>
+<p>Start with <em>types</em> and <em>traits</em>, which must be in an <em>1-to-1 correspondence</em> with <em>the /concepts  of the domain</em>.</p>
+<p>Make sure these types and traits are <em>purely abstract</em> and <em>do not</em> contain any implementation details.</p>
+<p><em>All types</em> can be reduced to distinct &ldquo;shapes&rdquo; &ndash;  <em>algebraic data types</em>: <em>sum , /product and function types</em>.</p>
+<p>All types can be <em>parameterized</em> by other types, and thus <em>nested</em>, and even <em>recursive</em>, which is what a <code>List</code> is.</p>
+<p>The &ldquo;Abstraction by Paramaterization&rdquo; principle  is universal, not just functions, but also <em>types</em> and  <em>modules</em>.</p>
+<p>Type-classes  (and traits) define the &ldquo;bounds&rdquo; (the mathematical &ldquo;such that&rdquo;) on <em>behaviors</em> of nested types.</p>
+<p>Write the &ldquo;stubs&rdquo; and &ldquo;tests&rdquo; at the level of such abstract interfaces <em>first, /before any implementation</em>.</p>
+<p>The hierarchical structure of domain&rsquo;s complexity should <em>match</em> 1-to-1 the layers of DSLs and modules.</p>
+<p>The &ldquo;empty&rdquo; tests shall use module&rsquo;s <em>public interfaces</em> only, and thus <em>enforce /modularity early</em>.</p>
+<p>Use <em>composable</em> abstract interfaces exported from a module <em>to enforce a clear abstraction barrier</em>.</p>
+<p>Modularity: Each module <em>must</em> manage its own ADTs and provide a <em>high-level, stateless interface</em>.</p>
+<p>Composition: Chaining of such interfaces forces one to stay at the same high level of abstraction.</p>
+<p>Immutability: Data is immutable. Functions that &ldquo;modify&rdquo; data will return a new, &ldquo;updated&rdquo; instance.</p>
+<p>Functional Pipelines: chain (compose) methods (abstract high-level interfaces)  and use high-order functions to process data without mutable state.</p>
+<p>Algebraic/ Data Types:  <code>struct</code> for <em>product types</em> (a combination of fields,  an &ldquo;each of&rdquo; type ) and <code>enum</code> for <em>sum types</em> (an &ldquo;one of&rdquo; type for several possibilities).</p>
+<p>Use <em>pattern matching</em>  consistently to destructure <code>enum</code> and <code>struct</code> types, and force one to <em>always /exhaustively handle all the possible cases</em>.</p>
+<p>&ldquo;New-Types&rdquo; are  structs with a single field that wrap a primitive type to give it domain-specific meaning and  constraints, preventing &ldquo;naked primitive types.&rdquo;</p>
+<p>&ldquo;Smart Constructors&rdquo; are functions, parts of a module&rsquo;s public interface, that create instances of a type while <em>enforcing a specification representation invariants</em>.</p>
+<p>&ldquo;Smart constructors&rdquo; should <em>fail</em> rather than return a &ldquo;meaningless&rdquo; <code>None</code>, must <em>never</em> return an invalid or partially valid state. Invalid states must be <em>unrepresentable</em>.</p>
+<p>An <code>Option</code> is a redundant wrapper at the level of &ldquo;smart constructors&rdquo;. It is useful only when <em>the absence of a value is a valid, expected outcome</em> of an operation.</p>
+<p>Use <code>Result</code> types <em>only when failure is a valid, expected outcome</em> of an operation. Otherwise, use <code>panic</code> for unexpected errors. <em>The &ldquo;fail fast&rdquo; principle</em>.</p>
+<p>Use the &ldquo;question mark&rdquo; operator within a <code>Result</code>-returning function <em>to propagate errors</em>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/adt/">ADT</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/dsl/">DSL</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/modularity/">Modularity</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/abstraction/">Abstraction</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

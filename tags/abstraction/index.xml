@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Modularity on Notes from the digital underground by Lngnmn</title>
-    <link>https://lngnmn2.github.io/tags/modularity/</link>
-    <description>Recent content in Modularity on Notes from the digital underground by Lngnmn</description>
+    <title>Abstraction on Notes from the digital underground by Lngnmn</title>
+    <link>https://lngnmn2.github.io/tags/abstraction/</link>
+    <description>Recent content in Abstraction on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Sep 2025 18:10:48 +0545</lastBuildDate>
-    <atom:link href="https://lngnmn2.github.io/tags/modularity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lngnmn2.github.io/tags/abstraction/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>  How to program &#34;just right&#34; without any LLM &#34;vapecoding&#34;
   </title>
@@ -19,13 +19,6 @@
 &lt;p&gt;This is how &lt;em&gt;Evolution Itself&lt;/em&gt; works at the cellular level: &lt;em&gt;membranes&lt;/em&gt; separate &lt;em&gt;the inside from the outside&lt;/em&gt;, so the changes (favorable mutations) could occur.&lt;/p&gt;
 &lt;p&gt;This &lt;em&gt;enables&lt;/em&gt; the fundamental principle of &lt;em&gt;not committing early to any choices&lt;/em&gt;, to avoid  &lt;em&gt;technical debt&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Evolution has &lt;em&gt;a lot&lt;/em&gt; of &amp;ldquo;technical debt&amp;rdquo;, exactly because what is already &amp;ldquo;out there&amp;rdquo; &lt;em&gt;cannot&lt;/em&gt; be changed &lt;em&gt;without breaking everything that depends on it&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Abstraction barriers</title>
-      <link>https://lngnmn2.github.io/articles/abstractions/</link>
-      <pubDate>Fri, 04 Aug 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/abstractions/</guid>
-      <description>Interfaces, interfaces everywhere.</description>
     </item>
   </channel>
 </rss>
