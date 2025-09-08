@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>LLM (and Math) Philosophy 202 | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="LLM, esoteric">
+<meta name="description" content="DESCRIPTION: Idiots, idiots everywhere.jpg
+I am getting old and my cognitive abilities are slowly declining, and I will have no pension or social security, so I need a &ldquo;Turing Award&rdquo; or something. (only partially kidding).  And, yes, I &ldquo;hacked&rdquo; these &ldquo;longevity&rdquo; memes and &ldquo;protocols&rdquo;, but seems like fighting an increase in entropy and the second law of thermodynamics is not that efficient as some meme-guys claim on YouTube ).
+So, lets settle one fundamental meme-question once and for all, so we can let it all go and focus on &ldquo;bio-hacking&rdquo; and what not.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/llm-and-math-phil-202/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/llm-and-math-phil-202/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/llm-and-math-phil-202/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="LLM (and Math) Philosophy 202">
+  <meta property="og:description" content="DESCRIPTION: Idiots, idiots everywhere.jpg
+I am getting old and my cognitive abilities are slowly declining, and I will have no pension or social security, so I need a “Turing Award” or something. (only partially kidding). And, yes, I “hacked” these “longevity” memes and “protocols”, but seems like fighting an increase in entropy and the second law of thermodynamics is not that efficient as some meme-guys claim on YouTube ).
+So, lets settle one fundamental meme-question once and for all, so we can let it all go and focus on “bio-hacking” and what not.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-09-08T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-09-08T11:47:25+05:45">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Esoteric">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LLM (and Math) Philosophy 202">
+<meta name="twitter:description" content="DESCRIPTION: Idiots, idiots everywhere.jpg
+I am getting old and my cognitive abilities are slowly declining, and I will have no pension or social security, so I need a &ldquo;Turing Award&rdquo; or something. (only partially kidding).  And, yes, I &ldquo;hacked&rdquo; these &ldquo;longevity&rdquo; memes and &ldquo;protocols&rdquo;, but seems like fighting an increase in entropy and the second law of thermodynamics is not that efficient as some meme-guys claim on YouTube ).
+So, lets settle one fundamental meme-question once and for all, so we can let it all go and focus on &ldquo;bio-hacking&rdquo; and what not.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "LLM (and Math) Philosophy 202",
+      "item": "https://lngnmn2.github.io/articles/llm-and-math-phil-202/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LLM (and Math) Philosophy 202",
+  "name": "LLM (and Math) Philosophy 202",
+  "description": "DESCRIPTION: Idiots, idiots everywhere.jpg\nI am getting old and my cognitive abilities are slowly declining, and I will have no pension or social security, so I need a \u0026ldquo;Turing Award\u0026rdquo; or something. (only partially kidding). And, yes, I \u0026ldquo;hacked\u0026rdquo; these \u0026ldquo;longevity\u0026rdquo; memes and \u0026ldquo;protocols\u0026rdquo;, but seems like fighting an increase in entropy and the second law of thermodynamics is not that efficient as some meme-guys claim on YouTube ).\nSo, lets settle one fundamental meme-question once and for all, so we can let it all go and focus on \u0026ldquo;bio-hacking\u0026rdquo; and what not.\n",
+  "keywords": [
+    "LLM", "esoteric"
+  ],
+  "articleBody": "DESCRIPTION: Idiots, idiots everywhere.jpg\nI am getting old and my cognitive abilities are slowly declining, and I will have no pension or social security, so I need a “Turing Award” or something. (only partially kidding). And, yes, I “hacked” these “longevity” memes and “protocols”, but seems like fighting an increase in entropy and the second law of thermodynamics is not that efficient as some meme-guys claim on YouTube ).\nSo, lets settle one fundamental meme-question once and for all, so we can let it all go and focus on “bio-hacking” and what not.\nThere is a notion of a vector in a 2D space. It can be conceptualized (thought of) as Cartesian coordinates of a Point on a plane, or/and the a distance from Origin to the Point on a such plane. Notice that the Origin can be set arbitrary anywhere, the only requirement is that “all the notches (of an arbitrary length) has to be exactly equal”.\nOn a 3D space the same principles hold. The vector can be imagined and visualized as an arrow from Origin to the Point.\nNow, some abstract bullshitters (and thus the socially constructed and maintained “consensus”) claim that the same notions of a “distance” would hold on “higher dimension spaces”. The exact wording is that “the mathematical notions are still valid on \\[n \u003e 3\\]”.\nThis is, of course, an abstract bullshit. Adding another imaginary dimension (and just extend a vector by having one more number in it) is an illegal operation. What is produced is a pure imaginary abstract system, which has no existence apart from being build in the way I just described – by adding one more number to a vector.\nYes, the operations of addition (combining) and multiplication (scaling) would “work”, and all the mathematical properties of the resulting abstract system will hold, the math is perfectly valid. This mathematical fact, however, does not imply any existence or applicability whatsoever.\nLLM bullshitters claim a “constructive” existence (by construction) of an n-dimension space in which each “token” is a Point. They claim that in such a space the notion of a distance (from Origin and/ between any two points/) are valid notions. The fact is that “existence” is as imaginary as the n-dimensional spaces themselves. So are the “distances”.\nThe whole gospel of abstract explanations of what LLMs are is just the same as explanations of existence of gods and angels and what not. The clever trick is that math is involved and the math itself can be verified to be correct (which only means that application of the well-know rules produce an expected answer).\nWhat LLMs are really? The answer is not in the realm of imagined abstract systems, but in the actual algorithms, representations and the code being used, because this is what is real.\nSo, what are the algorithms? It is a process of systematic updates of “weights”, no more, no less.\nThere is a proper explanation: Inside the brain, which is a tissue, two basic processes on the level of individual neuron cells occurs (among many others) – myelination of the axons and transformation of “synaptic gaps” , which affects the rate of “firing”. This is how a “conditioning” actually works – brain is a “muscle”, after all.\nNow pay attention. Evolution came up with this “arrangement” without any n-dimensional bullshit. The process of biological evolution at the level of cell biology has no notion of a “number”, of “counting” and thus no “overflows”, no “counters”, no notion of a time (as an abstraction of evenly spaced intervals), and no clocks. And “it just works”.\nSimilarly, the by just systematically updating “weights” or “gradients” on what is essentially a DAG (which is what biological neural nets are) everything can be captured and “represented”. This is the ultimate finding of non-bullshit Artificial Intelligence – that every commutable function can be approximated by a simple neural net, and that the “backprop” process captures the notion of biological feed-back loops and thus in a sense is “universal”. This is exactly what the Nobel has been given for.\nNotice that another “universal” notion is the one of a “fixed point”, which captures the process of a “convergence to What Is”, which is an essential part of any evolutionary process of trials and errors.\nAgain – evolution achieved its results at the level of brain structures without any notion of existence of any bullshit n-dimensional spaces. They are irrelevant and ultimately non-existent. Yes, it is possible to make up a story, and prop up the story with valid rules of mathematics, but this does not make the story more “real”.\nYes, it is possible to say that there are n-dimensional vectors in an n-dimensional space, but that would be just saying, a story. A gospel.\nIn reality there is a particular “information artifact” – a concrete data structure, which represents a fully-connected neural network with each edge having a particular weight associated with it. The artifact itself has been loosely modeled according to how we currently discovered and think the brain works.\nThere are two distinct sets of algorithms – the one is for producing (or training) of such an information artifact (an actual data structure), and the other is for using (or doing “inference”) on such pre-trained data structure. Notice that the actual algorithms, not the imagined abstract explanations, are the “ultimate source of truth”.\nConclusion? Every time you see some Chuddie on the Internet wrote a blog post about n-dimension vectors in an n-dimension spaces, clustering, “distances” and what not, just tell them to kindly fuck off. Nothing of what they spew out to attract attention and to proclaim (an unwarranted) higher social status of being “smart” and “valuable” is real.\nThe fact that the tokens are “one-hot” encoded does not imply that the whole interpretation (the story) is valid. It has something to do with the fact that matrices are used to represent the data in order to perform the fundamental “weighted sum” operations efficiently. An alternative interpretations and representations (as mere weights on a DAG) are even “more valid”, but the point is that no abstract interpretation is necessary for the whole thing to work, just as it is not necessary for any biological system.\nOnly the actual data-structure within a given file is real, and the code that works with it according to a particular pre-defined algorithm.\n",
+  "wordCount" : "1061",
+  "inLanguage": "en",
+  "datePublished": "2025-09-08T00:00:00+05:45",
+  "dateModified": "2025-09-08T11:47:25+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/llm-and-math-phil-202/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      LLM (and Math) Philosophy 202
+    </h1>
+    <div class="post-meta"><span title='2025-09-08 00:00:00 +0545 +0545'>September 8, 2025</span>&nbsp;·&nbsp;lngnmn2@yahoo.com
+
+</div>
+  </header> 
+  <div class="post-content"><p>DESCRIPTION: Idiots, idiots everywhere.jpg</p>
+<p>I am getting old and my cognitive abilities are slowly declining, and I will have no pension or social security, so I need a &ldquo;Turing Award&rdquo; or something. (only partially kidding).  And, yes, I &ldquo;hacked&rdquo; these &ldquo;longevity&rdquo; memes and &ldquo;protocols&rdquo;, but seems like fighting an increase in entropy and the second law of thermodynamics is not that efficient as some meme-guys claim on YouTube ).</p>
+<p>So, lets settle one fundamental meme-question once and for all, so we can let it all go and focus on &ldquo;bio-hacking&rdquo; and what not.</p>
+<p>There is a notion of a vector in a 2D space. It can be conceptualized (thought of) as Cartesian coordinates of a Point on a plane, or/and  the a distance from Origin to the Point on a such plane. Notice that the Origin can be set arbitrary anywhere, the only requirement is that &ldquo;all the notches (of an arbitrary length) has to be exactly equal&rdquo;.</p>
+<p>On a 3D space the same principles hold. The vector can be <em>imagined</em> and <em>visualized</em> as an arrow from Origin to the Point.</p>
+<p>Now, some abstract bullshitters (and thus the socially constructed and maintained &ldquo;consensus&rdquo;) claim that the same notions of a &ldquo;distance&rdquo; would hold on &ldquo;higher dimension spaces&rdquo;. The exact wording is that &ldquo;the mathematical notions are still valid on \[n &gt; 3\]&rdquo;.</p>
+<p>This is, of course, an abstract bullshit.  Adding another imaginary dimension (and just extend a vector by having one more number in it) is an <em>illegal operation</em>. What is produced is a pure imaginary abstract system, which has no existence apart from being build in the way I just described &ndash; by adding one more number to a vector.</p>
+<p>Yes, the operations of addition (combining) and multiplication (scaling) would &ldquo;work&rdquo;, and all the mathematical properties of the resulting abstract system will hold, the math is perfectly valid. This mathematical fact, however, does not imply any existence or applicability whatsoever.</p>
+<p>LLM bullshitters claim a &ldquo;constructive&rdquo; existence (by construction) of an n-dimension space in which each &ldquo;token&rdquo; is a Point. They claim that in such a space the notion of a <em>distance</em> (from Origin and/ between any two points/) are valid notions. The fact is that &ldquo;existence&rdquo; is as imaginary as the n-dimensional spaces themselves. So are the &ldquo;distances&rdquo;.</p>
+<p>The whole gospel of abstract explanations of what LLMs <em>are</em> is just the same as explanations of existence of gods and angels and what not. The clever trick is that math is involved and the math itself can be verified to be  correct (which <em>only</em> means that application of the well-know rules produce an expected answer).</p>
+<p>What LLMs are <em>really</em>? The answer is not in the realm of imagined abstract systems,  but in the actual algorithms, representations and the code being used, because <em>this</em> is what is <em>real</em>.</p>
+<p>So, what are the algorithms? It is a process of  systematic updates of &ldquo;weights&rdquo;, no more, no less.</p>
+<p>There is a proper explanation: Inside the brain, which is a tissue,  two basic processes on the level of individual neuron cells occurs (among many others) &ndash; myelination of the axons and transformation of &ldquo;synaptic gaps&rdquo; , which affects the rate of &ldquo;firing&rdquo;. This is how a &ldquo;conditioning&rdquo; actually works &ndash; brain is a &ldquo;muscle&rdquo;, after all.</p>
+<p>Now pay attention. Evolution came up with this &ldquo;arrangement&rdquo; without any n-dimensional bullshit. The process of biological evolution at the level of cell biology has no notion of a &ldquo;number&rdquo;, of &ldquo;counting&rdquo; and thus no &ldquo;overflows&rdquo;, no &ldquo;counters&rdquo;, no notion of a time (as an abstraction of evenly spaced intervals), and no clocks. And &ldquo;it just works&rdquo;.</p>
+<p>Similarly, the by just systematically updating &ldquo;weights&rdquo; or &ldquo;gradients&rdquo; on what is essentially a DAG (which is what biological neural nets are) <em>everything</em> can be captured and &ldquo;represented&rdquo;. This is the ultimate finding of non-bullshit Artificial Intelligence &ndash; that every commutable function can be approximated by a simple neural net, and that the &ldquo;backprop&rdquo; process captures the notion of biological feed-back loops and thus in a sense is   &ldquo;universal&rdquo;. This is exactly what the Nobel has been given for.</p>
+<p>Notice that another &ldquo;universal&rdquo; notion is  the one of a &ldquo;fixed point&rdquo;, which captures the process of a &ldquo;convergence to What Is&rdquo;, which is an essential part of any evolutionary process of trials and errors.</p>
+<p>Again &ndash; evolution achieved its results at the level of brain structures without any notion of existence of any bullshit n-dimensional spaces. They are irrelevant and ultimately non-existent. Yes, it is possible to make up a story, and prop up the story with valid rules of mathematics, but this does not make the story more &ldquo;real&rdquo;.</p>
+<p>Yes, it is <em>possible</em> to say that there are n-dimensional vectors in an n-dimensional space, but that would be just <em>saying</em>, a story. A gospel.</p>
+<p>In reality there is a particular &ldquo;information artifact&rdquo; &ndash; a concrete data structure, which represents a fully-connected neural network with each edge having a particular weight associated with it. The artifact itself has been loosely modeled according to how we currently discovered and think  the brain works.</p>
+<p>There are two distinct sets of algorithms &ndash; the one is for producing (or training) of such an information artifact (an actual data structure), and the other is for using (or doing &ldquo;inference&rdquo;) on such pre-trained data structure. Notice that the actual algorithms, not the imagined abstract explanations, are the &ldquo;ultimate source of truth&rdquo;.</p>
+<p>Conclusion? Every time you see some Chuddie on the Internet wrote a blog post about n-dimension vectors in an n-dimension spaces, clustering, &ldquo;distances&rdquo; and what not, just tell them to kindly fuck off. Nothing of what they spew out to attract attention and to proclaim (an unwarranted) higher social status of being &ldquo;smart&rdquo; and &ldquo;valuable&rdquo; is real.</p>
+<p>The fact that the tokens are &ldquo;one-hot&rdquo; encoded does not imply that the whole interpretation (the story) is valid. It has something to do with the fact that matrices are used to represent the data in order to perform the fundamental &ldquo;weighted sum&rdquo; operations efficiently. An alternative interpretations and representations (as mere weights on a DAG) are even &ldquo;more valid&rdquo;, but the point is that no abstract interpretation is necessary for the whole thing to work, just as it is not necessary for any biological system.</p>
+<p>Only the actual data-structure within a given file is real, and the code that works with it according to a particular pre-defined algorithm.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/esoteric/">Esoteric</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
