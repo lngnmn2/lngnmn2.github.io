@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Sep 2025 10:53:12 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 11 Sep 2025 09:53:25 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -46,6 +46,13 @@ person&lt;/del&gt;.&lt;/p&gt;
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/kernigan-and-rust/</guid>
       <description>LOL, LMAO even.</description>
+    </item>
+    <item>
+      <title>the LLM upanishad</title>
+      <link>https://lngnmn2.github.io/articles/the-llm-upanishad/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-llm-upanishad/</guid>
+      <description>The modern Eastern philosophy</description>
     </item>
     <item>
       <title>Another top HN post</title>
