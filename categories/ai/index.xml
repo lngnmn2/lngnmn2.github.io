@@ -6,8 +6,20 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Sep 2025 15:05:48 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 16:50:10 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fuck you, gemini</title>
+      <link>https://lngnmn2.github.io/articles/fuck-you-gemini/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/fuck-you-gemini/</guid>
+      <description>&lt;p&gt;FUCK THIS SHIT!&lt;/p&gt;
+&lt;p&gt;No, really. It just hallucinated a non-existent package, with such a confidence lmao&lt;/p&gt;
+&lt;p&gt;Yes, yes, I know, it cannot know anything about &amp;ldquo;existence&amp;rdquo;, but at least these dorks do not &amp;ldquo;deserve&amp;rdquo; the exuberant money they got paid.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uniform Code Block Rendering in Eww and Shr
+To get syntax highlighting in eww and shr, you need to use a package that intercepts &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; tags and applies Emacs&amp;rsquo;s built-in font-locking. The eww-code-blocks-mode is a good choice for this.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DeepMind and OpenAI win Gold</title>
       <link>https://lngnmn2.github.io/articles/deepmind-and-openai-win-gold/</link>
@@ -314,6 +326,13 @@
       <description>Abstract bullshitting is not enough.</description>
     </item>
     <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
+    </item>
+    <item>
       <title>A small step towards GAI</title>
       <link>https://lngnmn2.github.io/articles/look-ma-no-i/</link>
       <pubDate>Sat, 21 Oct 2023 00:00:00 +0545</pubDate>
@@ -336,14 +355,6 @@ existence of &amp;ldquo;That&amp;rdquo; and one being just a sub-process (a wave
       <description>&lt;p&gt;Today &lt;a href=&#34;https://news.ycombinator.com/&#34;&gt;https://news.ycombinator.com/&lt;/a&gt; is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &lt;em&gt;&amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.&lt;/p&gt;
 &lt;p&gt;If I have any understanding of these subjects at all, this is a bubble and &lt;em&gt;irrational exuberance&lt;/em&gt;. Lets try to unpack &amp;ldquo;the whys&amp;rdquo;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
     </item>
   </channel>
 </rss>

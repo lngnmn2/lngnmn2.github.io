@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Sep 2025 15:05:48 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 16:50:10 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,18 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fuck you, gemini</title>
+      <link>https://lngnmn2.github.io/articles/fuck-you-gemini/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/fuck-you-gemini/</guid>
+      <description>&lt;p&gt;FUCK THIS SHIT!&lt;/p&gt;
+&lt;p&gt;No, really. It just hallucinated a non-existent package, with such a confidence lmao&lt;/p&gt;
+&lt;p&gt;Yes, yes, I know, it cannot know anything about &amp;ldquo;existence&amp;rdquo;, but at least these dorks do not &amp;ldquo;deserve&amp;rdquo; the exuberant money they got paid.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uniform Code Block Rendering in Eww and Shr
+To get syntax highlighting in eww and shr, you need to use a package that intercepts &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; tags and applies Emacs&amp;rsquo;s built-in font-locking. The eww-code-blocks-mode is a good choice for this.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DeepMind and OpenAI win Gold</title>
@@ -782,6 +794,13 @@ person&lt;/del&gt;.&lt;/p&gt;
   </description>
     </item>
     <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
+    </item>
+    <item>
       <title>On foundations of mathematics</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0545</pubDate>
@@ -1088,14 +1107,6 @@ through practice and experience (not reading or watching).&lt;/p&gt;
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
-    </item>
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>

@@ -6,8 +6,20 @@
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Sep 2025 15:05:48 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 16:50:10 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fuck you, gemini</title>
+      <link>https://lngnmn2.github.io/articles/fuck-you-gemini/</link>
+      <pubDate>Thu, 25 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/fuck-you-gemini/</guid>
+      <description>&lt;p&gt;FUCK THIS SHIT!&lt;/p&gt;
+&lt;p&gt;No, really. It just hallucinated a non-existent package, with such a confidence lmao&lt;/p&gt;
+&lt;p&gt;Yes, yes, I know, it cannot know anything about &amp;ldquo;existence&amp;rdquo;, but at least these dorks do not &amp;ldquo;deserve&amp;rdquo; the exuberant money they got paid.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uniform Code Block Rendering in Eww and Shr
+To get syntax highlighting in eww and shr, you need to use a package that intercepts &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; tags and applies Emacs&amp;rsquo;s built-in font-locking. The eww-code-blocks-mode is a good choice for this.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DeepMind and OpenAI win Gold</title>
       <link>https://lngnmn2.github.io/articles/deepmind-and-openai-win-gold/</link>
