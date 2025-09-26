@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Sep 2025 16:50:10 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 26 Sep 2025 18:29:09 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prompt engineers, lmao</title>
+      <link>https://lngnmn2.github.io/articles/prompt-engineers-lmao/</link>
+      <pubDate>Fri, 26 Sep 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/prompt-engineers-lmao/</guid>
+      <description>&lt;p&gt;Time waits for no one, the race to the bottom accelerates faster than ever, and the &amp;ldquo;future&amp;rdquo; is now. Competition is severe and mostly meaningless, as in some third-world criminal infested ghetto. This is what LLMs turned our world into.&lt;/p&gt;
+&lt;p&gt;So, lets &amp;ldquo;pee on&amp;rdquo; so called &amp;ldquo;prompt engineers&amp;rdquo;, in the &lt;code&gt;4chan&lt;/code&gt; parlance, of course..&lt;/p&gt;
+&lt;p&gt;Here is my benchmark prompt to evaluate performance of LLMs. All the &amp;ldquo;simple&amp;rdquo; offline models fail miserably, and only Grok and Gemini can produce something adequate.  Claude is also good, but it is supposed to be the best, being trained especially for code generation.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fuck you, gemini</title>
       <link>https://lngnmn2.github.io/articles/fuck-you-gemini/</link>

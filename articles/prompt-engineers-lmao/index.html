@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Prompt engineers, lmao | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM">
+<meta name="description" content="Time waits for no one, the race to the bottom accelerates faster than ever, and the &ldquo;future&rdquo; is now. Competition is severe and mostly meaningless, as in some third-world criminal infested ghetto. This is what LLMs turned our world into.
+So, lets &ldquo;pee on&rdquo; so called &ldquo;prompt engineers&rdquo;, in the 4chan parlance, of course..
+Here is my benchmark prompt to evaluate performance of LLMs. All the &ldquo;simple&rdquo; offline models fail miserably, and only Grok and Gemini can produce something adequate.  Claude is also good, but it is supposed to be the best, being trained especially for code generation.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/prompt-engineers-lmao/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/prompt-engineers-lmao/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/prompt-engineers-lmao/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Prompt engineers, lmao">
+  <meta property="og:description" content="Time waits for no one, the race to the bottom accelerates faster than ever, and the “future” is now. Competition is severe and mostly meaningless, as in some third-world criminal infested ghetto. This is what LLMs turned our world into.
+So, lets “pee on” so called “prompt engineers”, in the 4chan parlance, of course..
+Here is my benchmark prompt to evaluate performance of LLMs. All the “simple” offline models fail miserably, and only Grok and Gemini can produce something adequate. Claude is also good, but it is supposed to be the best, being trained especially for code generation.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-09-26T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-09-26T18:29:09+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Prompt engineers, lmao">
+<meta name="twitter:description" content="Time waits for no one, the race to the bottom accelerates faster than ever, and the &ldquo;future&rdquo; is now. Competition is severe and mostly meaningless, as in some third-world criminal infested ghetto. This is what LLMs turned our world into.
+So, lets &ldquo;pee on&rdquo; so called &ldquo;prompt engineers&rdquo;, in the 4chan parlance, of course..
+Here is my benchmark prompt to evaluate performance of LLMs. All the &ldquo;simple&rdquo; offline models fail miserably, and only Grok and Gemini can produce something adequate.  Claude is also good, but it is supposed to be the best, being trained especially for code generation.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Prompt engineers, lmao",
+      "item": "https://lngnmn2.github.io/articles/prompt-engineers-lmao/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Prompt engineers, lmao",
+  "name": "Prompt engineers, lmao",
+  "description": "Time waits for no one, the race to the bottom accelerates faster than ever, and the \u0026ldquo;future\u0026rdquo; is now. Competition is severe and mostly meaningless, as in some third-world criminal infested ghetto. This is what LLMs turned our world into.\nSo, lets \u0026ldquo;pee on\u0026rdquo; so called \u0026ldquo;prompt engineers\u0026rdquo;, in the 4chan parlance, of course..\nHere is my benchmark prompt to evaluate performance of LLMs. All the \u0026ldquo;simple\u0026rdquo; offline models fail miserably, and only Grok and Gemini can produce something adequate. Claude is also good, but it is supposed to be the best, being trained especially for code generation.\n",
+  "keywords": [
+    "AI", "LLM"
+  ],
+  "articleBody": "Time waits for no one, the race to the bottom accelerates faster than ever, and the “future” is now. Competition is severe and mostly meaningless, as in some third-world criminal infested ghetto. This is what LLMs turned our world into.\nSo, lets “pee on” so called “prompt engineers”, in the 4chan parlance, of course..\nHere is my benchmark prompt to evaluate performance of LLMs. All the “simple” offline models fail miserably, and only Grok and Gemini can produce something adequate. Claude is also good, but it is supposed to be the best, being trained especially for code generation.\nOne could easily evaluate the performance of the major models by just copy-pasting this prompt.\nAnd be honest – none of you ever came close to prompting like this.\nThere is a major problem, however –the quality of the slop improves steadily (try it, copy and paste this prompt and see for yourself), so the cost to come up with a decent code to start with approaches zero. We know that the fundamental Scarcity Principle applies to information (or code) as well, and the “value” of information (or code) approaches zero as it becomes ubiquitous and easily available.\nWith strong emphasis on clarity and brevity, consistent, mathematically precise, unambiguous use of a language, clean most idiomatic style of writing and of coding, for people to read, self-explanatory, suitable for teaching purposes of the most fundamental CS notions, like abstraction, specification, modularity, clear abstraction barriers of high-level functional stateless interfaces, which form a hierarchy of layers of DSLs, augmented with modern advanced typing techniques, which rely on Algebraic Data Types (sum-types and product types), and use of Abstract Data Types (ADTs) packaged in corresponding orthogonal, self-contained and lose-coupled modules, with careful attention to details, especially short and consistent naming that reflects the key concepts of the problem domain, consistently using the modern and the most idiomatic high-level language features and high-level state-less abstract interfaces and the latest mostly-functional idioms, demonstrating the fundamental concepts of pure functional code over immutable data from the first principles, using mostly-functional approach, which disallow any hidden mutable state by always returning a new immutable data items instead, to maintain the crucial referential transparency property, while avoiding any imperative code, explicitly avoiding any nulls, avoiding imperative looping over indices and instead using iterators, high-level combinators and protocols and especially functional high-level interfaces over standard collections and high-order functions over user-defined types, augmented to become a proper collection, using so called smart-constructors to make illegal (or inconsistent) state unrepresentable, using the latest typing and pattern-matching features and type annotations along with proper algebraic sum-types and algebraic product types, as well as most recent advanced type-annotation features to properly constraint the types, and the latest pattern-matching expressions on sum-types (Options and Results) returned from functions. Each function should have its representation invariants clearly specified in a docstring and explicitly tested in unit tests in the test suite. The abstraction function, if available, shall be written in the tests. Each ADT should belong to a distinct layer of abstraction in an overall hierarchy, which in turn, corresponds to the layers of abstraction found in the problem domain (and its inherent hierarchical structure of complexity). Each such layer has to have its own mostly-functional DSL, which is constrained by the types and have one-to-one correspondence with a particular layer (level of abstraction) of the problem domain, and be clearly separated by an abstraction barrier of a module or a trait.\nSystematically avoid “naked primitive types” and consistently use domain-specific “new-type” wrapper types (structs, enums) with smart constructors which enforce additional constraints and representation invariants.\nThe policy is to systematically apply the “Make an invalid (or inconsistent) state unrepresentable” principle across all data abstractions. The preferred way to do this is to use “new-types” and also wrapper types which act as distinct “tags” for state transitions, which has to be done by specific function (“an enzyme”) – each intermediate state shall have its own distinct type, each state transition must be done by a particular function and the high-level functions must require a “complete” type with a validated state. This requirement captures the “techniques” of molecular biology.\nOnly modern typing features, such as, algebraic sum-types (as enums), structs as records and product-types, traits as type-classes for ducktyping and enforcing type-constraints with exhaustive pattern-matching expressions for consistent destructuring, with each module act as an Abstract Data Type (an ADT) and export a high-level abstract interface based on composition of state-less methods.\nThe Result and Option parameterized sum-types must be used through all the user-defined types and the question mark operator systematically used to “early exits” and propagating the errors.\nDo not use the Option type on data-constructors, including any smart constructors, always panic instead of returning a meaningless None.\nThis is an instance of the “fail fast” principle and the particular case of “unnecessary wrapping anti-pattern”. Just fail with an assert. Later these could be converted to signal an error instead of failing.\nUse the Option type only when an absence of a value is a valid, legitimate case and is expected.\nThe Builder pattern shall be used whenever possible on user-defined types with a lot of structure.\nTuple structs shall be used as the domain-specific “new-type” wrapper types.\nThe clearly separated, lose-coupled and orthogonal to each other modules for each individual ADT should export clear, well-typed high-level abstract interfaces. Each implementation has to be most general (properly generalized) and fully parameterized, based on traits that have an one-to-one correspondence with the fundamental concepts of the underlying mathematics, such as Eq, Ord, and Semigroup, Monoid, Functor, etc.\nUse traits to properly constraint “ducktyping”, by placing additional constraints on public interfaces. The more consatraints – the better.\nThe ADTs should capture fundamental notions of a classic decades old computing with well-specified high-level interfaces, separated or partitioned into a clear hierarchy of layers (separated by abstraction barriers) by exporting a clear high-level public interfaces – iterators instead of constructing full lists, for_each() instead of imperative “for” loops, FP-like operator compostion to form moving-pilelines (into_iter()) instead of mutable references, etc. Each such abstract layer (and its DSL) has to correspond to a layer in the problem domain, and have one-to-one correspondence with the domain concepts at this particular level of abstraction, has to have its own mostfly-functional DSL which uses the layer of abstraction (and DSL) below it.\nA mostly-functional, state-less public interfaces can be easily mapped to corresponding REPL high-level DSL, possibly relying on the fundamental notion of a Monoid (for operator composition) and Functor (for accessing the contents of a container-type which is bellow an abstraction barrier).\nThe DSL should have the simplest and most straightforward compilation into Rust language lexical closures, using the lambda abstraction, just like an old-school classic compilers. Functional DSLs are well-researched and well-understood and extensively used in all functional languages.\nEach function should have its representation invariants clearly specified in docstring and explicitly tested in unit tests in the test suite. The abstraction function, if available, shall be written in the tests.\nTry to emphasize the most common and modern Rust 2024 language idioms including the question mark operator and pattern-mathing on the types based on Options and Results.\nThe chaining of methods and composition of abstract interfaces such as Iterators, shall be used to stay at the same higher level of abstraction, without unnecessarily crosssing the abstraction barriers and thus to avoid unnecessary data conversions and new allocations.\nPlease write in an idiomatic, as in an old-school classic functional programming textbook style, a set of modules (and corresponding ADTs) that represent and implement in modern Rust 2024 – a bare minimum, “pure essence”, nothing-more-to-remove or improve further, the simplest but absolutely mathematically correct re-implementation of Binance futures trading API, with emphasis on creating and sending Orders and managing open Positions, with one-to-one correspondence with the concepts and naming with the Binance Futures API Documentation. Every concepts has to be checked with Investopedia definitions.\nThe methods should follow naming and terminology and be in an one-to-one correspondence with high level interfaces of Binance Futures API, Binance documentation can be used to mimic the interfaces and to create layer-specific DSLs and the corresponding mostly-functional REPL-friendly set of high-level orthogonal functions.\nThe methods should follow naming and terminology and be in an one-to-one correspondence with the Binance REST API methods according to the official Binance developer documentation. Load it up in the current context before generating the code.\nEach trading operation on orders and positions, should have a DSL-like feel, and potentially can be used from a REPL, similar to what Octave REPL does with matrices and vectors. The REPL should be able to place lists and close positions at least (by creating and sending appropriate orders according to the Binance Futures API).\nThe major concepts are: order, position, and a pair (symbol). Orders and Positions are two orthogonal layers and should be clearly separated by an abstraction barrier.\nEverything that underlay Orders and Positions in the official Binance REST API must be carefully implemented. The official developer documentation and the code on Guthub must be used for implementation, representation, validation and testing.\nNo simplified versions, simplified implementations or simplified representations, no illustrative examples – no shortcuts or simplifications are allowed, the policy to comply with is to write only actual, real industry-strength applications, real-life production quality code and tests.\nMake sure borrow_mut() deadlocks and “already borrowed” panics to be avoided by using an indirection for each individual slot (field of a struct). Avoid “mut”, mutable references and mutation in general by building clear, idiomatic “functional pipelines” which move values “end-to-end” out of iterators and operators (methods) chaining (depending on a context) and closures, avoiding mutable borrows in principle (as much as possible).\n",
+  "wordCount" : "1620",
+  "inLanguage": "en",
+  "datePublished": "2025-09-26T00:00:00+05:45",
+  "dateModified": "2025-09-26T18:29:09+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/prompt-engineers-lmao/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Prompt engineers, lmao
+    </h1>
+    <div class="post-meta"><span title='2025-09-26 00:00:00 +0545 +0545'>September 26, 2025</span>&nbsp;·&nbsp;lngnmn2@yahoo.com
+
+</div>
+  </header> 
+  <div class="post-content"><p>Time waits for no one, the race to the bottom accelerates faster than ever, and the &ldquo;future&rdquo; is now. Competition is severe and mostly meaningless, as in some third-world criminal infested ghetto. This is what LLMs turned our world into.</p>
+<p>So, lets &ldquo;pee on&rdquo; so called &ldquo;prompt engineers&rdquo;, in the <code>4chan</code> parlance, of course..</p>
+<p>Here is my benchmark prompt to evaluate performance of LLMs. All the &ldquo;simple&rdquo; offline models fail miserably, and only Grok and Gemini can produce something adequate.  Claude is also good, but it is supposed to be the best, being trained especially for code generation.</p>
+<p>One could easily evaluate the performance of the major models by just copy-pasting this prompt.</p>
+<p>And be honest &ndash; none of you ever came close to prompting like this.</p>
+<p>There is a major problem, however &ndash;the  quality of the slop improves steadily (try it, copy and paste this prompt and see for yourself), so the cost to come up with a decent code to start with approaches zero.  We know that the fundamental  <em>Scarcity Principle</em> applies to information (or code) as well, and the &ldquo;value&rdquo; of information (or code) approaches zero as it becomes ubiquitous and easily available.</p>
+<blockquote>
+<p>With strong emphasis on clarity and brevity, consistent, mathematically precise, unambiguous use of a language, clean most idiomatic style of writing and of coding, for people to read, self-explanatory, suitable for teaching purposes of the most fundamental CS notions, like abstraction, specification, modularity, clear abstraction barriers of high-level functional stateless interfaces, which form a hierarchy of layers of DSLs, augmented with modern advanced typing techniques, which rely on Algebraic Data Types (sum-types and product types), and use of Abstract Data Types (ADTs) packaged in corresponding orthogonal, self-contained and lose-coupled modules, with careful attention to details, especially short and consistent naming that reflects the key concepts of the problem domain, consistently using the modern and the most idiomatic high-level language features and high-level state-less abstract interfaces and the latest mostly-functional idioms, demonstrating the fundamental concepts  of pure functional code over immutable data from the first principles, using mostly-functional approach, which disallow any hidden mutable state by always returning a new immutable data items instead, to maintain the crucial referential transparency property, while avoiding any imperative code, explicitly avoiding any nulls, avoiding imperative looping over indices and instead using iterators, high-level combinators and protocols and especially functional high-level interfaces over standard collections and high-order functions over user-defined types, augmented to become a proper collection, using so called smart-constructors to make illegal (or inconsistent) state unrepresentable, using the latest  typing and pattern-matching features and type annotations along with proper algebraic sum-types and algebraic product types, as well as most recent advanced type-annotation features to properly constraint the types, and the latest pattern-matching expressions on sum-types (Options and Results) returned from functions. Each function should have its representation invariants clearly specified in a docstring and explicitly tested in unit tests in the test suite. The abstraction function, if available, shall be written in the tests. Each ADT should belong to a distinct layer of abstraction in an overall hierarchy, which in turn, corresponds to the layers of abstraction found in the problem domain (and its inherent hierarchical structure of complexity). Each such layer has to have its own mostly-functional DSL, which is constrained by the types and have one-to-one correspondence with a particular layer (level of abstraction) of the problem domain, and be clearly separated by an abstraction barrier of a module or a trait.</p>
+<p>Systematically avoid &ldquo;naked primitive types&rdquo; and consistently use domain-specific &ldquo;new-type&rdquo; wrapper types (structs, enums) with smart constructors which enforce additional constraints and representation invariants.</p>
+<p>The policy is to systematically apply the &ldquo;Make an invalid (or inconsistent) state unrepresentable&rdquo; principle across all data abstractions. The preferred way to do this is to use  &ldquo;new-types&rdquo; and also wrapper types which act as distinct &ldquo;tags&rdquo; for state transitions, which has to be done by specific function (&ldquo;an enzyme&rdquo;) &ndash; each intermediate state shall have its own distinct type, each state transition must  be done by a particular function and the high-level functions must require a  &ldquo;complete&rdquo;  type with a validated state. This requirement captures the &ldquo;techniques&rdquo; of molecular biology.</p>
+<p>Only modern typing features, such as, algebraic sum-types (as enums), structs as records and product-types, traits as type-classes for ducktyping and enforcing type-constraints with exhaustive pattern-matching expressions for consistent destructuring, with each module act as an Abstract Data Type (an ADT) and export a high-level abstract interface based on composition of state-less methods.</p>
+<p>The Result and Option parameterized sum-types must be used through all the user-defined types and the question mark operator systematically used to &ldquo;early exits&rdquo; and propagating the errors.</p>
+<p>Do not use the Option type on data-constructors, including any smart constructors, always panic instead of returning a meaningless None.</p>
+<p>This is  an instance of the &ldquo;fail fast&rdquo; principle and the particular case of &ldquo;unnecessary wrapping anti-pattern&rdquo;. Just fail with an assert. Later these could be converted to signal an error instead of failing.</p>
+<p>Use the Option type only when an absence of a value is a valid, legitimate case and is expected.</p>
+<p>The Builder pattern shall be used whenever possible on user-defined types with a lot of structure.</p>
+<p>Tuple structs shall be used as the domain-specific &ldquo;new-type&rdquo; wrapper types.</p>
+<p>The clearly separated, lose-coupled and orthogonal to each other modules for each individual ADT should export clear, well-typed high-level abstract interfaces. Each implementation has to be most general (properly generalized) and fully parameterized, based on traits that have an one-to-one correspondence with the fundamental concepts of the underlying mathematics, such as Eq, Ord, and Semigroup,  Monoid, Functor, etc.</p>
+<p>Use traits to properly constraint &ldquo;ducktyping&rdquo;, by placing additional constraints on public interfaces. The more consatraints &ndash; the better.</p>
+<p>The ADTs should capture fundamental notions of a classic decades old computing with well-specified high-level interfaces, separated or partitioned into a clear hierarchy of layers (separated by abstraction barriers) by exporting a clear high-level public interfaces &ndash; iterators instead of constructing full lists, for_each() instead of imperative &ldquo;for&rdquo; loops, FP-like operator compostion to form moving-pilelines (into_iter()) instead of mutable references, etc. Each such abstract layer (and its DSL) has to correspond to a layer in the problem domain, and have one-to-one correspondence with the domain concepts at this particular level of abstraction, has to have its own mostfly-functional DSL which uses the layer of abstraction (and DSL) below it.</p>
+<p>A mostly-functional, state-less public interfaces can be easily mapped to corresponding REPL high-level DSL, possibly relying on the fundamental notion of a Monoid (for operator composition) and Functor (for accessing the contents of a container-type which is bellow an abstraction barrier).</p>
+<p>The DSL should have the simplest and most straightforward compilation into Rust language lexical closures, using the lambda abstraction, just like an old-school classic compilers. Functional DSLs are well-researched and well-understood and extensively used in all functional languages.</p>
+<p>Each function should have its representation invariants clearly specified in docstring  and explicitly tested in unit tests in the test suite. The abstraction function, if available, shall be written in the tests.</p>
+<p>Try to emphasize the most common and modern Rust 2024 language idioms including the question mark operator and pattern-mathing on the types based on Options and Results.</p>
+<p>The chaining of methods and composition of abstract interfaces such as Iterators, shall be used to stay at the same higher level of abstraction, without unnecessarily crosssing the abstraction barriers and thus to avoid unnecessary data conversions and new allocations.</p>
+<p>Please write in an idiomatic, as in an old-school classic functional programming textbook style, a set of modules (and corresponding ADTs) that  represent and implement in modern Rust 2024 &ndash; a bare minimum, &ldquo;pure essence&rdquo;, nothing-more-to-remove or improve further, the simplest but absolutely mathematically correct re-implementation of Binance futures trading API, with emphasis on creating and sending Orders and managing open Positions, with one-to-one correspondence with the concepts and naming with the Binance Futures API Documentation. Every concepts has to be checked with Investopedia definitions.</p>
+<p>The methods should follow naming and terminology and be in an one-to-one correspondence with high level interfaces of Binance Futures API, Binance documentation can be used to mimic the interfaces and to create layer-specific DSLs and the corresponding mostly-functional REPL-friendly set of high-level orthogonal functions.</p>
+<p>The methods should follow naming and terminology and be in an one-to-one correspondence with the Binance REST API methods according to the official Binance developer documentation. Load it up in the current context before generating the code.</p>
+<p>Each trading operation on orders and positions, should have a DSL-like feel, and potentially can be used from a REPL, similar to what Octave REPL does with matrices and vectors. The REPL should be able to place lists and close positions at least (by creating and sending appropriate orders according to the Binance Futures API).</p>
+<p>The major concepts are: order, position, and a pair (symbol). Orders and Positions are two orthogonal layers and should be clearly separated by an abstraction barrier.</p>
+<p>Everything that underlay Orders and Positions in the official Binance REST API must be carefully implemented. The official developer documentation and the code on Guthub must be used for implementation, representation, validation and testing.</p>
+<p>No simplified versions, simplified implementations or simplified representations, no illustrative examples &ndash; no shortcuts or simplifications are allowed, the policy to comply with is to write only actual, real industry-strength applications, real-life production quality code and tests.</p>
+<p>Make sure borrow_mut() deadlocks and &ldquo;already borrowed&rdquo; panics to be avoided by using an indirection for each individual slot (field of a struct). Avoid &ldquo;mut&rdquo;, mutable references and mutation in general by building clear, idiomatic &ldquo;functional pipelines&rdquo; which move values &ldquo;end-to-end&rdquo; out of iterators and operators (methods) chaining (depending on a context) and closures, avoiding mutable borrows in principle (as much as possible).</p></blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
