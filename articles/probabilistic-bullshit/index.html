@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Probabilistic bullshit | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM">
+<meta name="description" content="Look, ma, a new episode just dropped! This one is full of shit to the brim. Even more so than prof.  Ellen Langer who cannot stay within a context and claimed that 1&#43;1 = 10 because in the binary notation it looks like 10 in decimal&hellip; anyway, whatever.
+https://www.youtube.com/watch?v=MlmFj1-mOtg
+No, the brain ain&rsquo;t computing  any hecking probabilities. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/probabilistic-bullshit/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/probabilistic-bullshit/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/probabilistic-bullshit/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Probabilistic bullshit">
+  <meta property="og:description" content="Look, ma, a new episode just dropped! This one is full of shit to the brim. Even more so than prof. Ellen Langer who cannot stay within a context and claimed that 1&#43;1 = 10 because in the binary notation it looks like 10 in decimal… anyway, whatever.
+https://www.youtube.com/watch?v=MlmFj1-mOtg
+No, the brain ain’t computing any hecking probabilities. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-09-30T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-09-30T09:25:38+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Probabilistic bullshit">
+<meta name="twitter:description" content="Look, ma, a new episode just dropped! This one is full of shit to the brim. Even more so than prof.  Ellen Langer who cannot stay within a context and claimed that 1&#43;1 = 10 because in the binary notation it looks like 10 in decimal&hellip; anyway, whatever.
+https://www.youtube.com/watch?v=MlmFj1-mOtg
+No, the brain ain&rsquo;t computing  any hecking probabilities. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Probabilistic bullshit",
+      "item": "https://lngnmn2.github.io/articles/probabilistic-bullshit/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Probabilistic bullshit",
+  "name": "Probabilistic bullshit",
+  "description": "Look, ma, a new episode just dropped! This one is full of shit to the brim. Even more so than prof. Ellen Langer who cannot stay within a context and claimed that 1+1 = 10 because in the binary notation it looks like 10 in decimal\u0026hellip; anyway, whatever.\nhttps://www.youtube.com/watch?v=MlmFj1-mOtg\nNo, the brain ain\u0026rsquo;t computing any hecking probabilities. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine.\n",
+  "keywords": [
+    "AI", "LLM"
+  ],
+  "articleBody": "Look, ma, a new episode just dropped! This one is full of shit to the brim. Even more so than prof. Ellen Langer who cannot stay within a context and claimed that 1+1 = 10 because in the binary notation it looks like 10 in decimal… anyway, whatever.\nhttps://www.youtube.com/watch?v=MlmFj1-mOtg\nNo, the brain ain’t computing any hecking probabilities. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine.\nIt may appear as it does, but that is an illusion of the mind of an observer.\nYes, certain mathematical abstractions and whole theories captured and abstracted out the notion of a feedback-loop system, which may be modeled as a counting of “[kinds of] outcomes so far” (frequency statistics) or even can be modeled as a Bayesian machine (a measure of belief). But that is not what the brain is doing.\nThe brain has myelination and synaptic plasticity and a whole lot of other stuff going on (a result of “crowd sourcing among vast number of neurons”, something similar to sending a large number of ants to find the shortest path to food).\nYes, synaptic states, “trained” from experience (and myelination, which is also result of a feedback from the environment) can be modeled as a “probability” (a measure of “how likely is this neuron to fire given this input?”), but that is not what the brain is doing. It is just a convenient mathematical abstraction of a human mind. It is not a kalman filter. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine. It, however, may appear to be so, to some over-sophisticated individuals who lost any touch with reality (ironically, due to the very-same feedback loops).\nSo, no, gamers are not evaluating any probabilities faster. They definitely “trained” the neurons to fire quicker as a result of playing 40 hours of CS, but this has nothing to do with the “abstract, high-level” socially constructed explanations which has been given. What appears as a snake may be a rope.\nThe quicker firing does not imply any “probabilistic” or “Bayesian” or “predictive” or “statistical” or “simulation” engine going on. No boxer evaluate any probabilistic strategy in a 5th round. It is all just appearance and stupid interpretations.\nThe answer is tricky. It has been shown, though indirectly, that changing of the properties of synaptic gaps as a result of a feedback loop from the environment (yes, each new experience alters “the weights”) and the DAG-like structure (where “directedness” is the definitive, fundamental property, which captures “Causality itself”) is enough to “approximate any commutable function”, which has a few meanings:\nthis structure alone is “enough” to accurately match any stable-enough environment via feedback loops (this is exactly what the “backprop” algorithm has successfully captured as mathematical process). the biological “representation” is so general an universal, that it can be “interpreted” in almost any way, thus creation illusions in the mind of an observer, who tend to see what he or she has been conditioned to. what appears to be a statistical analysis is just “muscle memory” and “pattern matching”, which happen to perform well at this particular “version” of the apparently stochastic environment (dynamic causality too complex to grasp). So, no. Mother natures does not count, but it “updates the gaps (weights)”. What can be modeled using courting (which is also updating of a variable) is not what is going on. The abstract map is not the biological territory.\nThe point is that most of the talk is a “too high-level” and too “abstract” bullshit, similar to Freudian psychology, where the current socially constructed memes of the day are used to explain “low-level”, “mechanistic” biological processes.\nJust like an artificial neural network which approximates (matches) some “stable-enough” aspect of the environment does not posses any understanding, or even the notion of existence of what it matches in principle (which can be shown by the analysis of the actual algorithms being used), so are biological networks, and it can be seen that there is nothing more than a “weighted DAG” made out of meat.\nBut who am I to criticize a meme Stanford professor at the show of another meme Stanford professor (who makes millions shilling the “science based stuff” to normies)?\n",
+  "wordCount" : "725",
+  "inLanguage": "en",
+  "datePublished": "2025-09-30T00:00:00+05:45",
+  "dateModified": "2025-09-30T09:25:38+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/probabilistic-bullshit/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Probabilistic bullshit
+    </h1>
+    <div class="post-meta"><span title='2025-09-30 00:00:00 +0545 +0545'>September 30, 2025</span>&nbsp;·&nbsp;lngnmn2@yahoo.com
+
+</div>
+  </header> 
+  <div class="post-content"><p>Look, ma, a new episode just dropped! This one is full of shit to the brim. Even more so than prof.  <em>Ellen Langer</em> who cannot stay within a context and claimed that 1+1 = 10 <em>because</em> in the <em>binary notation it looks like 10 in decimal</em>&hellip; anyway, whatever.</p>
+<p><a href="https://www.youtube.com/watch?v=MlmFj1-mOtg">https://www.youtube.com/watch?v=MlmFj1-mOtg</a></p>
+<p>No, the brain <em>ain&rsquo;t computing  any hecking probabilities</em>. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine.</p>
+<p>It may appear as it does, but that is an illusion of the mind of an observer.</p>
+<p>Yes, certain mathematical abstractions and whole theories captured and abstracted out the notion of a feedback-loop system, which may be modeled as a counting of &ldquo;[kinds of] outcomes so far&rdquo; (frequency statistics) or even can be modeled as a Bayesian machine (a measure of <em>belief</em>). But that is not what the brain is doing.</p>
+<p>The brain has myelination and synaptic plasticity and a whole lot of other stuff going on (a result of &ldquo;crowd sourcing among vast number of neurons&rdquo;, something similar to sending a large number of ants to find the shortest path to food).</p>
+<p>Yes, synaptic states, &ldquo;trained&rdquo; from experience  (and myelination, which is also result of a feedback from the environment) can be modeled as a &ldquo;probability&rdquo; (a measure of &ldquo;how likely is this neuron to fire given this input?&rdquo;), but that is not what the brain is doing. It is just a convenient mathematical abstraction of a human mind. It is not a kalman filter. It is not a Bayesian machine. It is not a prediction machine. It is not a simulator. It is not a statistical engine. It, however, may appear to be so, to some over-sophisticated individuals who lost any touch with reality (ironically, due to the very-same feedback loops).</p>
+<p>So, no, gamers are not evaluating any probabilities faster. They definitely &ldquo;trained&rdquo; the neurons to fire quicker as a result of playing 40 hours of CS, but this has nothing to do with the &ldquo;abstract, high-level&rdquo; socially constructed explanations which has been given. What appears as a snake may be a rope.</p>
+<p>The quicker firing does not imply any &ldquo;probabilistic&rdquo; or &ldquo;Bayesian&rdquo; or &ldquo;predictive&rdquo; or &ldquo;statistical&rdquo; or &ldquo;simulation&rdquo; engine going on.  No boxer evaluate any probabilistic strategy in a 5th round. It is all just appearance and stupid interpretations.</p>
+<p>The answer is tricky. It has been shown, though indirectly, that changing of the properties of synaptic gaps as a result of a feedback loop from the environment (yes, each new experience alters &ldquo;the weights&rdquo;) and the DAG-like structure (where &ldquo;directedness&rdquo; is the definitive, fundamental property, which captures &ldquo;Causality itself&rdquo;)  is enough to &ldquo;approximate any commutable function&rdquo;, which has a few meanings:</p>
+<ul>
+<li>this structure alone is &ldquo;enough&rdquo; to accurately match any <em>stable-enough</em> environment via feedback loops (this is exactly what the &ldquo;backprop&rdquo; algorithm has successfully captured as mathematical process).</li>
+<li>the biological &ldquo;representation&rdquo; is so general an universal, that it can be &ldquo;interpreted&rdquo; in almost any way, thus creation illusions in the mind of an observer, who tend to see what he or she has been conditioned to.</li>
+<li>what appears to be a statistical analysis is just &ldquo;muscle memory&rdquo; and &ldquo;pattern matching&rdquo;, which happen to perform well at this particular &ldquo;version&rdquo; of the apparently stochastic environment (dynamic causality too complex to grasp).</li>
+</ul>
+<p>So, no. Mother natures does not count, but it &ldquo;updates the gaps (weights)&rdquo;. What can be modeled using courting (which is also updating of a variable) is not what is going on. The abstract map is not the biological territory.</p>
+<p>The point is that most of the talk is a &ldquo;too high-level&rdquo; and too &ldquo;abstract&rdquo; bullshit, similar to Freudian psychology, where the current socially constructed memes of the day are used to explain &ldquo;low-level&rdquo;, &ldquo;mechanistic&rdquo; biological processes.</p>
+<p>Just like an artificial neural network which approximates (matches) some &ldquo;stable-enough&rdquo; aspect of the environment does not posses any understanding, or even the notion of existence of what it matches in principle (which can be shown by the analysis of the actual algorithms being used), so are biological networks, and it can be seen that there is nothing more than a &ldquo;weighted DAG&rdquo; made out of meat.</p>
+<p>But who am I to criticize a meme Stanford professor at the show of another meme Stanford professor (who makes millions shilling the &ldquo;science based stuff&rdquo; to normies)?</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
