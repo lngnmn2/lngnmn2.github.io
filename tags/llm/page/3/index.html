@@ -135,6 +135,21 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">LLMs-generated Rust code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Rust code is the ultimate evidence of the principal inability for a probability-based generating algorithm (based on sampling from a “learned” probability distribution over “tokens”) to come up with something that passes the type checker, but for the most trivial cases.
+The “causality” is that generation of the complex syntactic forms without the actual, proper understanding principles and heuristics is, well, “problematic”.
+The running example is these were subtle “already borrowed” panics, where the issue in with the underlying semantics, and the syntax is “correct”. The problem is that a recursive function has to drop all the borrows before a recursive call, and this constraint cannot be expressed in the syntax unless by redundant bindings which will automatically be drooped at the end of the scope.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-06-25 00:00:00 +0545 +0545'>June 25, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <a class="entry-link" aria-label="post link to LLMs-generated Rust code" href="https://lngnmn2.github.io/articles/llms-generated-rust/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Software In The Era of AI
     </h2>
   </header>
@@ -268,22 +283,6 @@ Some of them remain thin, just someone walked across it absentmindedly, some get
   </div>
   <footer class="entry-footer"><span title='2025-02-11 00:00:00 +0545 +0545'>February 11, 2025</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
   <a class="entry-link" aria-label="post link to Reasoning LLMs" href="https://lngnmn2.github.io/articles/reasoning-llms/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI vs. Deepseek
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The shitstorm is of the highest category and pleasing to watch.
-The main issue is that there is models can be produced (trained) at a fraction of the costs by just good and hardworking graduate students who did their homework.
-It reminds me of legendary Andrew Ng, who was way above everyone else just by being smart, hardworking and systematic in building everything(deriving all the math) from scratch.
-The Deepseek success has the same vibes. They just done it systematically.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-30 00:00:00 +0545 +0545'>January 30, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
-  <a class="entry-link" aria-label="post link to OpenAI vs. Deepseek" href="https://lngnmn2.github.io/articles/openai-vs-deepseek/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

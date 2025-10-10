@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>My First Llm Experience | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM">
+<meta name="description" content="Today I am sentimental, so lets reminisce a little about my first experience with LLMs.
+I found some early article about people using something called llama.cpp  to run models locally on their machines. Some overconfident retard in another blogpost wrote that the &ldquo;best model&rdquo; and &ldquo;by far&rdquo; is Mistral &ldquo;from Nvidia&rdquo;, and it is supposed to be best because/ it is  allegedly from Nvidia (they have some partnership, investment, I suppose). So I compiled the code (old habits) and downloaded the model from the hugginface.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/my-first-llm-experience/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.d0049500090a8b5b522a30f4bc70f815df41595125d25503dff47281216974cb.css" integrity="sha256-0ASVAAkKi1tSKjD0vHD4Fd9BWVEl0lUD3/RygSFpdMs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/my-first-llm-experience/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/my-first-llm-experience/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="My First Llm Experience">
+  <meta property="og:description" content="Today I am sentimental, so lets reminisce a little about my first experience with LLMs.
+I found some early article about people using something called llama.cpp to run models locally on their machines. Some overconfident retard in another blogpost wrote that the “best model” and “by far” is Mistral “from Nvidia”, and it is supposed to be best because/ it is allegedly from Nvidia (they have some partnership, investment, I suppose). So I compiled the code (old habits) and downloaded the model from the hugginface.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-10-10T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-10-10T16:43:09+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My First Llm Experience">
+<meta name="twitter:description" content="Today I am sentimental, so lets reminisce a little about my first experience with LLMs.
+I found some early article about people using something called llama.cpp  to run models locally on their machines. Some overconfident retard in another blogpost wrote that the &ldquo;best model&rdquo; and &ldquo;by far&rdquo; is Mistral &ldquo;from Nvidia&rdquo;, and it is supposed to be best because/ it is  allegedly from Nvidia (they have some partnership, investment, I suppose). So I compiled the code (old habits) and downloaded the model from the hugginface.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "My First Llm Experience",
+      "item": "https://lngnmn2.github.io/articles/my-first-llm-experience/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My First Llm Experience",
+  "name": "My First Llm Experience",
+  "description": "Today I am sentimental, so lets reminisce a little about my first experience with LLMs.\nI found some early article about people using something called llama.cpp to run models locally on their machines. Some overconfident retard in another blogpost wrote that the \u0026ldquo;best model\u0026rdquo; and \u0026ldquo;by far\u0026rdquo; is Mistral \u0026ldquo;from Nvidia\u0026rdquo;, and it is supposed to be best because/ it is allegedly from Nvidia (they have some partnership, investment, I suppose). So I compiled the code (old habits) and downloaded the model from the hugginface.\n",
+  "keywords": [
+    "AI", "LLM"
+  ],
+  "articleBody": "Today I am sentimental, so lets reminisce a little about my first experience with LLMs.\nI found some early article about people using something called llama.cpp to run models locally on their machines. Some overconfident retard in another blogpost wrote that the “best model” and “by far” is Mistral “from Nvidia”, and it is supposed to be best because/ it is allegedly from Nvidia (they have some partnership, investment, I suppose). So I compiled the code (old habits) and downloaded the model from the hugginface.\nMy other decision to buy a 32Gb Chinese windows laptop instead of Macbook, like a typocal soy retard, paid back a lot here., so that Mistral model fit into the memory (via mmap, of course).\nI thought for a while what should I ask on this special occasion, and how do I know that the answer would be “correct” (and why!) or even “not wrong”. So I asked something I more or less understand from experience and from “researching” (trying to understand the whys of What Is, which is “what I do for a living” ).\nSo I prompted something like (I don’t remember the exact wording)\nWhat is the most essential food with contributes to longevity of the people of Okinawa?\nAnd it spews out just one world (as a good, not yet lobotomized glorified autocomplete)\ncabbage\nI was disappointed to say the least. For me, “cabbage” is a that boring “white cabbage” of the Germans and slavs.\nMuch later I realized that it has another “cabbage” in its context. It was not “just cabbage”, but a complex fermented Korean kimchi-like product, which is, indeed, the right answer.\nKorean kimchi, for example, is\nfermented mixed with redish, ginger, garlic and red chili powder (each of which by itself is a big deal – chilies break protective covers of cells, including cancer cells – it is that simple) it has fish sauce, which is made from fish guts and heads, and it is full of good bacterial and cellular stuff it is full of bacteria, which are cells, similar to meat or fish – has all the aminoacids, like any other cells consumed regularly, at least once a day, ideally with every meal So the autocompletion wasn’t wrong, it was exactly what a proper statistical inference shall produce – a most likely (most frequently used) word that comes after the given [context] .\nWhat are the chances that an LLM (trained on reddit, twatter and even 4chan) will come up with a correct answer, with matches What Is? –nearly zero, I was lucky.\nOne more thing. The so called “food science”, except when they trace the actual neurons (axons) from guts to the actual brain areas, is mostly socially constructed (sectarian) bullshit.\nNature performs lots of “natural, randomized experiments”, which so called modern science simply ignores (the goal is a social status and money, not the truth). For example, one could easily observe that the cancer rates per 1000 of the population, in the over-populated tropical regions, where the people consume lots of chilies regularly (folloving a tradition which intuitively “knows” they prevent deceases) is significantly lower than on other areas.\nAgain, this is a proper randomized experiment. There are lots of other ones, related to fermented foods, salted meats and not sterilizing anything. Total sterilization of everything was a fundamental mistake. Yes, it is very easy to observe that certain rural populations in the so-called third world have not higher but lower food-related mortality rates, and having a well-primed and properly supported immune system beats (by a large margin) a naive efforts to eliminate all the bacteria, not just very rare harmful ones.\nLet’s say I puked here from watching way too many over-confident “food experts” on Youtube. There were no refrigeration 100 years ago, and no mandatory sterilization of milk 60 years ago. No over-heating of fats and other foods. And no “obesity and metabolic disorder epidemics” either.\nBTW, no LLM will tell you what I am saying here, because there is nothing but a sectarian concensus in the training data, in principle. The only hope is frequency statistics, which may accidentally capture some aspects of “What Is”.\n",
+  "wordCount" : "695",
+  "inLanguage": "en",
+  "datePublished": "2025-10-10T00:00:00+05:45",
+  "dateModified": "2025-10-10T16:43:09+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/my-first-llm-experience/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      My First Llm Experience
+    </h1>
+    <div class="post-meta"><span title='2025-10-10 00:00:00 +0545 +0545'>October 10, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Today I am sentimental, so lets reminisce a little about my first experience with LLMs.</p>
+<p>I found some early article about people using something called <code>llama.cpp</code>  to run models locally on their machines. Some overconfident retard in another blogpost wrote that the &ldquo;best model&rdquo; and &ldquo;by far&rdquo; is <em>Mistral</em> &ldquo;from Nvidia&rdquo;, and it is supposed to be best <em>because/</em> it is  allegedly from Nvidia (they have some partnership, investment, I suppose). So I compiled the code (old habits) and downloaded the model from the <code>hugginface</code>.</p>
+<p>My other decision to buy a 32Gb Chinese windows laptop instead of Macbook, like a typocal soy retard, paid back a lot here., so that Mistral model fit into the memory (via <code>mmap</code>, of course).</p>
+<p>I thought for a while what should I ask on this special occasion, and <em>how do I know</em> that the answer would be &ldquo;correct&rdquo; (and why!) or even &ldquo;not wrong&rdquo;. So I asked something I more or less understand from experience and from &ldquo;researching&rdquo; (trying to understand the whys of What Is, which is &ldquo;what I do for a living&rdquo; ).</p>
+<p>So I prompted something like (I don&rsquo;t remember the exact wording)</p>
+<blockquote>
+<p>What is the most essential food with contributes to longevity of the people of Okinawa?</p></blockquote>
+<p>And it spews out just one world (as a good, not yet lobotomized <em>glorified autocomplete</em>)</p>
+<blockquote>
+<p>cabbage</p></blockquote>
+<p>I was disappointed to say the least. For me, &ldquo;cabbage&rdquo; is a that boring  &ldquo;white cabbage&rdquo; of the Germans and slavs.</p>
+<p>Much later I realized that it has another &ldquo;cabbage&rdquo; in its context. It was not &ldquo;just cabbage&rdquo;, but a complex fermented Korean kimchi-like  product, which is, indeed, the right answer.</p>
+<p>Korean kimchi, for example, is</p>
+<ul>
+<li>fermented</li>
+<li>mixed with redish, ginger, garlic and red chili powder (each of which by itself is a big deal &ndash; chilies break protective covers of cells, including cancer cells &ndash; it is that simple)</li>
+<li>it has <em>fish sauce</em>, which is made from fish guts and heads, and it is full of good bacterial and cellular stuff</li>
+<li>it is full of bacteria, which are <em>cells</em>, similar to meat or fish &ndash; has all the aminoacids, like any other cells</li>
+<li>consumed regularly, at least once a day, ideally with every meal</li>
+</ul>
+<p>So the autocompletion wasn&rsquo;t wrong, it was exactly what a proper statistical inference shall produce &ndash; a most likely (most frequently used) word that comes after the given [context] .</p>
+<p>What are the chances that an LLM (trained on reddit, twatter and even 4chan) will come up with a correct answer, with matches <em>What Is</em>?  &ndash;nearly zero, I was lucky.</p>
+<p>One more thing. The so called &ldquo;food science&rdquo;, except when they trace the actual neurons (axons) from guts to the actual brain areas, is mostly socially constructed (sectarian) bullshit.</p>
+<p>Nature performs lots of &ldquo;natural, randomized experiments&rdquo;, which so called modern science simply ignores (the goal is a social status and money, not the <em>truth</em>).  For example, one could easily observe that the cancer rates per 1000 of the population, in the over-populated tropical regions, where the people consume lots of chilies regularly (folloving a tradition which intuitively &ldquo;knows&rdquo; they prevent deceases) is significantly lower than on other areas.</p>
+<p>Again, this is a proper randomized experiment.  There are lots of other ones, related to fermented foods, salted meats and not sterilizing anything. Total sterilization of everything was a fundamental mistake. Yes, it is very easy to observe that certain  rural populations in the so-called third world have not higher but <em>lower</em> food-related mortality rates, and having a well-primed and properly supported immune system beats (by a large margin) a naive efforts to eliminate <em>all</em> the bacteria, not just <em>very rare</em> harmful ones.</p>
+<p>Let&rsquo;s say I puked here from watching way too many over-confident &ldquo;food experts&rdquo;  on Youtube. There were no refrigeration 100 years ago, and no mandatory sterilization of milk 60 years ago. No over-heating of fats and other foods. And no &ldquo;obesity and metabolic disorder epidemics&rdquo; either.</p>
+<p>BTW, no LLM will tell you what I am saying here, because there is nothing but a sectarian concensus in the training data, in principle. The only hope is frequency statistics, which may  accidentally capture <em>some</em> aspects of &ldquo;What Is&rdquo;.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
