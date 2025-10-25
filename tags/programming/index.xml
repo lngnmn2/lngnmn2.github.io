@@ -4,16 +4,18 @@
     <title>Programming on Notes from the digital underground by Lngnmn</title>
     <link>https://lngnmn2.github.io/tags/programming/</link>
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
-    <generator>Hugo -- 0.131.0</generator>
+    <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Dec 2024 18:41:37 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 25 Oct 2025 10:38:13 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Small tasks</title>
-      <link>https://lngnmn2.github.io/articles/small-tasks/</link>
-      <pubDate>Sat, 21 Dec 2024 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/small-tasks/</guid>
-      <description>The biology of why you cannot write, say, /llama.cpp/</description>
+      <title>Everything Is Fucked Up</title>
+      <link>https://lngnmn2.github.io/articles/everythig-is-fucked-up/</link>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/everythig-is-fucked-up/</guid>
+      <description>&lt;p&gt;So I compiled that &lt;code&gt;zed&lt;/code&gt; &amp;ldquo;editor&amp;rdquo; thing everyone is talking about. And I watched carefully the shilling video. Conclusion? Everything is fucked up beyond repair.&lt;/p&gt;
+&lt;p&gt;Why, yes, I understand, a project which is trying to compete with &lt;code&gt;Cursor&lt;/code&gt;, but with their own halfassed &amp;ldquo;vscode&amp;rdquo; writtern in Rust slop (as a wrapper to the &lt;em&gt;webrts&lt;/em&gt;, lmao).&lt;/p&gt;
+&lt;p&gt;It compiles &lt;em&gt;hundreds&lt;/em&gt; of crates into something that looks like &lt;code&gt;vscode&lt;/code&gt;, sacrificing any safety concerns (simply because the underlying C++ code is inherently unsafe and imperative, even with &lt;code&gt;-fno-exceptions -fno-rtti&lt;/code&gt;). &amp;ldquo;Written in Rust&amp;rdquo; thus is just a &amp;ldquo;marketing&amp;rdquo; meme.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
