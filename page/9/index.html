@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head>
 	<meta name="generator" content="Hugo 0.147.7"><meta charset="utf-8">
@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d0049500090a8b5b522a30f4bc70f815df41595125d25503dff47281216974cb.css" integrity="sha256-0ASVAAkKi1tSKjD0vHD4Fd9BWVEl0lUD3/RygSFpdMs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -41,23 +41,38 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
-</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
@@ -91,20 +106,8 @@ font-family: 'Source Code Pro', monospace;
 }
 </script>
 </head>
-
 <body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
@@ -141,6 +144,21 @@ font-family: 'Source Code Pro', monospace;
     </nav>
 </header>
 <main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Attention Is All bullshit.
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Once again I tried to through This meme video. Once again with the same results.
+I have seen these social patterns many times before – when people begin to use ill-defined, anthropomorphic and purely abstract concepts to construct familiar analogies and to invoke intuitions, so everything seems “right” and “logical”.
+Abidharma uses abstract terminology to produce a seemingly coherent system. It started from very reasonable abstractions of The Buddha, which illustrated his ideas with abstract notions like pealing off layers of an onion (to find literally nothing in the center) or a mixture of spices using for cooking, but very quickly went all to pure abstract bullshit.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-04 00:00:00 +0545 +0545'>June 4, 2024</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <a class="entry-link" aria-label="post link to Attention Is All bullshit." href="https://lngnmn2.github.io/articles/attention-is-all-bullshit/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
@@ -271,22 +289,6 @@ At the level of expressions you have just (only) recuring 3 patterns - it will b
   <footer class="entry-footer"><span title='2024-04-28 00:00:00 +0545 +0545'>April 28, 2024</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to How to program" href="https://lngnmn2.github.io/articles/how-to-program/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Teach Yourself programming like Peter Norvig
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>There are already several websites which publish a “roadmap” of how to teach yourself programming (University keve) using freely available courses and textbooks.
-Here is my 2 cents.
-First of all, SICP is an advanced textbook. It is by no means suited for teaching freshmans, unless you are a MIT student, who is math-lover and a “slow thinker”.
-Brian Harvey, the great, managed to teach the CS61A at Berkeley – a SICP-based course which goes at a slow pace. He gave exceptional, state-of-the-art lectures, along with printed lecture notes. This is the only good start.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-04-28 00:00:00 +0545 +0545'>April 28, 2024</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
-  <a class="entry-link" aria-label="post link to Teach Yourself programming like Peter Norvig" href="https://lngnmn2.github.io/articles/teach-yourself/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://lngnmn2.github.io/page/8/">
@@ -314,9 +316,14 @@ Brian Harvey, the great, managed to teach the CS61A at Berkeley – a SICP-based
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -357,11 +364,12 @@ Brian Harvey, the great, managed to teach the CS61A at Berkeley – a SICP-based
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

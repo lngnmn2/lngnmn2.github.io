@@ -6,12 +6,26 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Oct 2025 10:45:31 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 03 Nov 2025 14:54:08 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://lngnmn2.github.io/categories/ai/</link>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://lngnmn2.github.io/categories/llm/</link>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/llm/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programming</title>
       <link>https://lngnmn2.github.io/categories/programming/</link>
-      <pubDate>Sat, 25 Oct 2025 00:00:00 +0545</pubDate>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/programming/</guid>
       <description></description>
     </item>
@@ -30,24 +44,10 @@
       <description></description>
     </item>
     <item>
-      <title>AI</title>
-      <link>https://lngnmn2.github.io/categories/ai/</link>
-      <pubDate>Fri, 10 Oct 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/ai/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Esoteric</title>
       <link>https://lngnmn2.github.io/categories/esoteric/</link>
       <pubDate>Tue, 16 Sep 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/esoteric/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>https://lngnmn2.github.io/categories/llm/</link>
-      <pubDate>Tue, 16 Sep 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/llm/</guid>
       <description></description>
     </item>
     <item>

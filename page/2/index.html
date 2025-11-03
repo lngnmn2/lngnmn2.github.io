@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head>
 	<meta name="generator" content="Hugo 0.147.7"><meta charset="utf-8">
@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d0049500090a8b5b522a30f4bc70f815df41595125d25503dff47281216974cb.css" integrity="sha256-0ASVAAkKi1tSKjD0vHD4Fd9BWVEl0lUD3/RygSFpdMs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -41,23 +41,38 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
+            .toc {
+                background: var(--entry);
             }
+        }
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
             }
         }
 
     </style>
-</noscript><link rel="preconnect" href="https://fonts.googleapis.com">
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
@@ -91,20 +106,8 @@ font-family: 'Source Code Pro', monospace;
 }
 </script>
 </head>
-
 <body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
+    <header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
@@ -141,6 +144,22 @@ font-family: 'Source Code Pro', monospace;
     </nav>
 </header>
 <main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Defeating Nondeterminism, my ass
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>And while passing by…
+Yet another “look, look at us, we are soooo smart and clever, give us much more money just because we are so cool” article dropped.
+https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/
+The lack of exact precision is not the fundamental issue here. Even if one manages to overcome the “numerical instability issues” and would be able to reproduce always the same structural output from the same linguistic (or otherwise structured) input the “hallucinations” and “subtle bullshitting” won’t go away in principle.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-11 00:00:00 +0545 +0545'>September 11, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <a class="entry-link" aria-label="post link to Defeating Nondeterminism, my ass" href="https://lngnmn2.github.io/articles/defeating-nondeterminism/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
@@ -275,19 +294,6 @@ It is a total crap, by the way, at least compared to the online free-tier GROK (
   <footer class="entry-footer"><span title='2025-08-06 00:00:00 +0545 +0545'>August 6, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to openai-gpt-oss-20b" href="https://lngnmn2.github.io/articles/openai-gpt-oss-20b/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Let the bubble burst, for Crist&#39;s sake!
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I have noticed a resent dramatic change in the behavior of major GPTs online providers – most notably, Gemini is now providing just outline of code, full of stubs and “mocks” of real APIs, and not the full code. This is a significant change from the previous behavior where they would provide a semi-complete (but ridden with errors) code solution. Perhaps, mimicking the behavior of ChatGPT, which has been doing this for a while now – they “optimize” for more what appears to be a “dialogue” (more like a normie-level chat), to create a better illusion of “actually conversing with an artificial intelligence”.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-08-03 00:00:00 +0545 +0545'>August 3, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
-  <a class="entry-link" aria-label="post link to Let the bubble burst, for Crist&#39;s sake!" href="https://lngnmn2.github.io/articles/let-the-bubble-burst/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://lngnmn2.github.io/">
@@ -315,9 +321,14 @@ It is a total crap, by the way, at least compared to the online free-tier GROK (
 </a>
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -358,11 +369,12 @@ It is a total crap, by the way, at least compared to the online free-tier GROK (
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })

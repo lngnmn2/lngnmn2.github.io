@@ -6,8 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Oct 2025 10:45:31 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 03 Nov 2025 14:54:08 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bullshit, bullshit, bullshit</title>
+      <link>https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/</link>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/</guid>
+      <description>&lt;p&gt;So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.&lt;/p&gt;
+&lt;p&gt;We will consider only the underlaying fundamental principles, not the particular implementation details, &amp;ldquo;architectures&amp;rdquo; and what not..&lt;/p&gt;
+&lt;p&gt;There are four major aspects to any LLM model &amp;ndash; the training process, the &amp;ldquo;architecture&amp;rdquo; (the structural shape) of a model, the &amp;quot; post-training tuning&amp;quot; (lobotomy) of the model and the inference process.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Everything Is Fucked Up</title>
       <link>https://lngnmn2.github.io/articles/everythig-is-fucked-up/</link>

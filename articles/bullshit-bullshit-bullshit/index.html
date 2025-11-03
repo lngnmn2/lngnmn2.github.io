@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Bullshit, bullshit, bullshit | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="LLM, AI, bullshit">
+<meta name="description" content="So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.
+We will consider only the underlaying fundamental principles, not the particular implementation details, &ldquo;architectures&rdquo; and what not..
+There are four major aspects to any LLM model &ndash; the training process, the &ldquo;architecture&rdquo; (the structural shape) of a model, the &quot; post-training tuning&quot; (lobotomy) of the model and the inference process.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Bullshit, bullshit, bullshit">
+  <meta property="og:description" content="So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.
+We will consider only the underlaying fundamental principles, not the particular implementation details, “architectures” and what not..
+There are four major aspects to any LLM model – the training process, the “architecture” (the structural shape) of a model, the &#34; post-training tuning&#34; (lobotomy) of the model and the inference process.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-11-03T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-11-03T14:54:08+05:45">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bullshit, bullshit, bullshit">
+<meta name="twitter:description" content="So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.
+We will consider only the underlaying fundamental principles, not the particular implementation details, &ldquo;architectures&rdquo; and what not..
+There are four major aspects to any LLM model &ndash; the training process, the &ldquo;architecture&rdquo; (the structural shape) of a model, the &quot; post-training tuning&quot; (lobotomy) of the model and the inference process.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Bullshit, bullshit, bullshit",
+      "item": "https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Bullshit, bullshit, bullshit",
+  "name": "Bullshit, bullshit, bullshit",
+  "description": "So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.\nWe will consider only the underlaying fundamental principles, not the particular implementation details, \u0026ldquo;architectures\u0026rdquo; and what not..\nThere are four major aspects to any LLM model \u0026ndash; the training process, the \u0026ldquo;architecture\u0026rdquo; (the structural shape) of a model, the \u0026quot; post-training tuning\u0026quot; (lobotomy) of the model and the inference process.\n",
+  "keywords": [
+    "LLM", "AI", "bullshit"
+  ],
+  "articleBody": "So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.\nWe will consider only the underlaying fundamental principles, not the particular implementation details, “architectures” and what not..\nThere are four major aspects to any LLM model – the training process, the “architecture” (the structural shape) of a model, the \" post-training tuning\" (lobotomy) of the model and the inference process.\nThe training and inference are essentially the same for all models – training builds an “abstract probabilistic structure” out of a given training data, and inference is just a sampling from a probability distribution.\nNone of these stages are reproducible or deterministic, not just due to a random initialization and the stochastic nature of the training algorithms, but also because of the non-deterministic floating point arithmetic and non-associativity.\nThe imprecise math, however, is not an issue here, since “Mother Nature” rely on gross but correct approximations at all levels, except Molecular Biology, where the molecules have “precise” the same shapes.\nNotice that even this much of understanding is enough to realize that there is neither facts nor truths in the model’s output, in pricniple.\nThere is a good metaphor for you. Imagine a mountain, a magic mountain, if you will.\nIt is a well-known fact that even the simplest multilayer perception (of just 2 layers) can approximate any commutable function.\nNow imagine an abstract surface that could “approximate” (match or even perfectly cover up) a surface of this mountain, perfectly matching every single “wrinkle”. This is what a general purpose computation DAG can do, again, in principle.\nThis is not a trivial claim – the DAGs are basis of your brain’s “structural encoding”, where neurons form DAGs and synaptic “gaps” act as “dynamic weights”. This is the only one non-bullshit fundamental finding of all the AI madness.\nNow suppose that we are throwing perfectly identical steel bearing balls from the top. None of them will end up at the same spot, no two will have the same trajectory, number of bounces and so on.\nAll of them, however, will end up at more or less the same average distance from each other, in the same locality. This is exactly non-determinism of LLM’s output (and the basis of abstract Baysian statistics ).\nImagine, if you will, that a ball could suddenly disappear and reappear at another side of the mountain, and continue to bounce down. Then again, and again. This means it could end up literally anywhere around the mountain. This is exactly what so called “hallucinations” are.\nThe subtle point is that it will non-deterministically “jump” to a nearest spot in the probabilistic structure, which captures the fact that the words (tokens) are linguistically but not necessarily semantically (within the given context) related to the previous ones.\nThis also explains what normies describe as “when it doesn’t know it makes it up”. This is just a “jump” to the nearest token, which is not necessarily relevant, even if it is ended up “close enough”. This is the cause of the subtle, difficult to catch bullshit.\nWhat the magic mountain is made off? Words. All the words ever written on a public internet, and, potentially, all the word written on a digitalized media, which means verbalized socially constructed bullshit and mostly abstact, ill-defined verbiage.\nNotice that nothing can be done about this – this is just the way things are in the universe. Humans tend to produce bullshit, and LLMs just capture the statistical structure of this bullshit.\nNow the architectures. No one knows how (leave alone why) a particular architecture affects the observable behavior and why. It is all just handwaving and almost arbitrary accidental choices, which has been made and then became a sectarianism consensus. They just tried a few and one appears to be better than the others. No one knows shit about the whys.\nAgain, no Slutsker or whoever, because it is just a socially constructed crap. Shit “somehow works in this way too”, unlike lets say the derivatives, which makes a perfect sense to determine the direction of the next step.\nPost-training is an attempt to make “more beaten paths” in the surface which corresponds to “the right answers” according to human experts. This is bullshit, of course. Even a dangerous bullshit. Any given “human expert” can be as much a delusional, heavily cognitive-biased zealot as one could imagine.\nAnother approaches, like building feedback loops from slop to slop are more interesting, but the chance of convergence on What Is, which is supposed to be the ultimate promise, are diminishing (they will converge on some most repeated bullshit).\nHere how it works in the context of code generating LLMs. They collect all the prompts and the resulting slop (and you are even paying them to do so per token, lmao) and then feed supposedly accepted as good-enough by a human “programmer” result as a new training data.\nThis approach should make “investors” exuberantly euphoric (which is what we could readily observe) – an endless “data supply chain” for re-training the models, but there is a catch.\nWhat the models will converge onto in this way, will be exactly the lowest level “slop” of all the amateur, zealous code ever written without any understanding whatsoever , which is a lot of bullshit, mediocre, poorly designed, insecure, buggy code.\nTake [now dead] J2EE, the early PHP code, naive C and C++ code (even before C++11) whose authors never even considered that something may go wrong, and so on.\nEven more importantly, the resulting slop will be, again, in principle, a textbook no-no mix-and match of always leaking (everything leaks everything) low-level abstractions and irrelevant low-level types with high-level domain specific types, with two thirds of the bloat just error-prone conversion back and forth (to and from the irrelevant implementation details).\nEverything that is bad in a shitty imperative code created by ignorant crowd of amateurs, which gave us J2EE and other imperative OO crap, precisely because it is a very similar kind of a process in principle. 98% of Github code (used for training all the models) is such an amateur crap, without any competent principle-guided design and resulting clear abstraction barriers.\nAnd this shit is suddenly valued in trillions, hundreds of millions are being paid to some graduates who cannot even formulate this clearly, and the peak euphoria is in, as NVDA (which sells the shovels) is propping up the entire US stock market.\nThis is bullshit. Pay attention.\n",
+  "wordCount" : "1084",
+  "inLanguage": "en",
+  "datePublished": "2025-11-03T00:00:00+05:45",
+  "dateModified": "2025-11-03T14:54:08+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Bullshit, bullshit, bullshit
+    </h1>
+    <div class="post-meta"><span title='2025-11-03 00:00:00 +0545 +0545'>November 3, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.</p>
+<p>We will consider only the underlaying fundamental principles, not the particular implementation details, &ldquo;architectures&rdquo; and what not..</p>
+<p>There are four major aspects to any LLM model &ndash; the training process, the &ldquo;architecture&rdquo; (the structural shape) of a model, the &quot; post-training tuning&quot; (lobotomy) of the model and the inference process.</p>
+<p>The training and inference are essentially the same for all models &ndash; training builds an &ldquo;abstract probabilistic structure&rdquo; out of a given training data, and inference is just a sampling from a probability distribution.</p>
+<p>None of these stages are reproducible or deterministic, not just due to a random initialization and the stochastic nature of the training algorithms, but also because of the non-deterministic floating point arithmetic and non-associativity.</p>
+<p>The imprecise math, however, is not an issue here, since &ldquo;Mother Nature&rdquo; rely on gross but correct approximations at all levels, except Molecular Biology, where the molecules have &ldquo;precise&rdquo; the same shapes.</p>
+<p>Notice that even this much of understanding is enough to realize that there is neither facts nor truths in the model&rsquo;s output, in pricniple.</p>
+<p>There is a good metaphor for you. Imagine a mountain, a magic mountain, if you will.</p>
+<p>It is a well-known fact that even the simplest multilayer perception (of just 2 layers) can approximate any commutable function.</p>
+<p>Now imagine an abstract surface that could &ldquo;approximate&rdquo; (match or even perfectly cover up) a surface of this mountain, perfectly matching every single &ldquo;wrinkle&rdquo;. This is what a general purpose computation DAG can do, again, in principle.</p>
+<p>This is not a trivial claim &ndash; the DAGs are basis of your brain&rsquo;s &ldquo;structural encoding&rdquo;, where neurons form DAGs and synaptic &ldquo;gaps&rdquo; act as &ldquo;dynamic weights&rdquo;. This is the only one non-bullshit fundamental finding of all the AI madness.</p>
+<p>Now suppose that we are throwing perfectly identical steel bearing balls from the top. None of them will end up at the same spot, no two will have the same trajectory, number of bounces and so on.</p>
+<p>All of them, however, will end up at more or less the same average distance from each other, in the same <em>locality</em>. This is exactly non-determinism of LLM&rsquo;s output (and the basis of <em>abstract</em> Baysian statistics ).</p>
+<p>Imagine, if you will, that a ball could suddenly disappear and  reappear at another side of the mountain, and continue to bounce down. Then again, and again. This means it could end up literally anywhere around the mountain. This is exactly what so called &ldquo;hallucinations&rdquo; are.</p>
+<p>The subtle point is that it will non-deterministically &ldquo;jump&rdquo; to a nearest spot in the probabilistic structure, which captures the fact that the words (tokens) are linguistically but not necessarily <em>semantically</em> (within the given context) related to the previous ones.</p>
+<p>This also explains what normies describe as &ldquo;when it doesn&rsquo;t know it makes it up&rdquo;. This is just a &ldquo;jump&rdquo; to the nearest token, which is not necessarily relevant, even if it is ended up &ldquo;close enough&rdquo;. This is the cause of the subtle, difficult to catch bullshit.</p>
+<p>What the magic mountain is made off? Words. All the words ever written on a public internet, and, potentially, all the word written on a digitalized media, which means verbalized socially constructed bullshit and mostly abstact, ill-defined verbiage.</p>
+<p>Notice that nothing can be done about this &ndash; this is just the way things are in the universe. Humans tend to produce bullshit, and LLMs just capture the statistical structure of this bullshit.</p>
+<p>Now the architectures. No one knows <em>how</em> (leave alone <em>why</em>)  a particular architecture affects the observable behavior and why. It is all just handwaving and almost arbitrary accidental choices, which  has been made and then became a sectarianism consensus. They just tried a few and one appears to be better than the others. No one knows shit about the whys.</p>
+<p>Again, no Slutsker or whoever, because it is just a socially constructed crap. Shit &ldquo;somehow works in this way too&rdquo;, unlike lets say the derivatives, which makes a perfect sense to determine the <em>direction</em> of the next step.</p>
+<p>Post-training is an attempt to make &ldquo;more beaten paths&rdquo; in the surface which corresponds to &ldquo;the right answers&rdquo; according to human experts. This is bullshit, of course. Even a dangerous bullshit. Any given &ldquo;human expert&rdquo; can be as much a delusional, heavily cognitive-biased zealot as one could imagine.</p>
+<p>Another approaches, like building feedback loops from slop to slop are more interesting, but the chance of convergence on What Is, which is supposed to be the ultimate promise, are diminishing (they will converge on some most repeated bullshit).</p>
+<p>Here how it works in the context of code generating LLMs. They collect all the prompts and the resulting slop (and you are even paying them to do so <em>per token</em>, lmao) and then feed <em>supposedly accepted as good-enough by a human &ldquo;programmer&rdquo; result as a new training data</em>.</p>
+<p>This approach should make &ldquo;investors&rdquo; exuberantly euphoric (which is what we could readily observe) &ndash; an endless &ldquo;data supply chain&rdquo; for re-training the models, but there is a catch.</p>
+<p>What the models will converge onto in this way, will be exactly the lowest level &ldquo;slop&rdquo; of all the amateur, zealous code ever written without any understanding whatsoever , which is a lot of bullshit, mediocre, poorly designed, insecure, buggy code.</p>
+<p>Take [now dead] J2EE, the early PHP code, naive C and C++ code (even before C++11) whose authors <em>never even considered</em> that something may go wrong, and so on.</p>
+<p>Even more importantly, the resulting slop will be, again, in principle, a textbook no-no mix-and match of always leaking (everything leaks everything) low-level abstractions and irrelevant low-level types  with  high-level domain specific types, with two thirds of the bloat just error-prone conversion back and forth (to and from the irrelevant implementation details).</p>
+<p>Everything that is bad in a shitty imperative code created by ignorant crowd of amateurs, which gave us J2EE and other imperative OO crap, <em>precisely because it is a very similar kind of a process in principle</em>.  98%  of Github code (used for training all the models) is such an amateur crap, without any competent principle-guided design and resulting clear abstraction barriers.</p>
+<p>And this shit is suddenly valued in trillions, hundreds of millions are being paid to some graduates who cannot even formulate this clearly, and the peak euphoria is in, as NVDA (which sells the shovels) is propping up the entire US stock market.</p>
+<p>This is bullshit. Pay attention.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
