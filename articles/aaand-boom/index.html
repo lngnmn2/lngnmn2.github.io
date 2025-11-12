@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Aaand boom! | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="LLM, AI">
+<meta name="description" content="The thing I hate the most is when some of these fucking YouTube content &ldquo;creators&rdquo;, which decide to monetize an AI coding clickbait with low-effort subpar videos, say &ldquo;aaand boom!&rdquo; when another chunk of a slop has been spewed out by an AI.
+This &ldquo;boom!&rdquo; is an insult to the last 60 years of the programming languages research (including the math-based theory) and to the &ldquo;old sages&rdquo; which crafted their languages and standard libraries in the best possible, &ldquo;just right&rdquo;, perfect, in the sense of &ldquo;nothing more to take away&rdquo;  by surveying all the available literature, non-bullshit papers and spending months of anguish and self-doubt.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/aaand-boom/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/aaand-boom/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/aaand-boom/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Aaand boom!">
+  <meta property="og:description" content="The thing I hate the most is when some of these fucking YouTube content “creators”, which decide to monetize an AI coding clickbait with low-effort subpar videos, say “aaand boom!” when another chunk of a slop has been spewed out by an AI.
+This “boom!” is an insult to the last 60 years of the programming languages research (including the math-based theory) and to the “old sages” which crafted their languages and standard libraries in the best possible, “just right”, perfect, in the sense of “nothing more to take away” by surveying all the available literature, non-bullshit papers and spending months of anguish and self-doubt.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-11-12T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-11-12T16:35:20+05:45">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Aaand boom!">
+<meta name="twitter:description" content="The thing I hate the most is when some of these fucking YouTube content &ldquo;creators&rdquo;, which decide to monetize an AI coding clickbait with low-effort subpar videos, say &ldquo;aaand boom!&rdquo; when another chunk of a slop has been spewed out by an AI.
+This &ldquo;boom!&rdquo; is an insult to the last 60 years of the programming languages research (including the math-based theory) and to the &ldquo;old sages&rdquo; which crafted their languages and standard libraries in the best possible, &ldquo;just right&rdquo;, perfect, in the sense of &ldquo;nothing more to take away&rdquo;  by surveying all the available literature, non-bullshit papers and spending months of anguish and self-doubt.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Aaand boom!",
+      "item": "https://lngnmn2.github.io/articles/aaand-boom/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Aaand boom!",
+  "name": "Aaand boom!",
+  "description": "The thing I hate the most is when some of these fucking YouTube content \u0026ldquo;creators\u0026rdquo;, which decide to monetize an AI coding clickbait with low-effort subpar videos, say \u0026ldquo;aaand boom!\u0026rdquo; when another chunk of a slop has been spewed out by an AI.\nThis \u0026ldquo;boom!\u0026rdquo; is an insult to the last 60 years of the programming languages research (including the math-based theory) and to the \u0026ldquo;old sages\u0026rdquo; which crafted their languages and standard libraries in the best possible, \u0026ldquo;just right\u0026rdquo;, perfect, in the sense of \u0026ldquo;nothing more to take away\u0026rdquo; by surveying all the available literature, non-bullshit papers and spending months of anguish and self-doubt.\n",
+  "keywords": [
+    "LLM", "AI"
+  ],
+  "articleBody": "The thing I hate the most is when some of these fucking YouTube content “creators”, which decide to monetize an AI coding clickbait with low-effort subpar videos, say “aaand boom!” when another chunk of a slop has been spewed out by an AI.\nThis “boom!” is an insult to the last 60 years of the programming languages research (including the math-based theory) and to the “old sages” which crafted their languages and standard libraries in the best possible, “just right”, perfect, in the sense of “nothing more to take away” by surveying all the available literature, non-bullshit papers and spending months of anguish and self-doubt.\nBarbara Liskov (of CLU), Robin Milner (of ML) Steele and Sussman (of Scheme), David Turner (of Miranda), Paul Hudak (and some other members of the committee ), Xavier Leroy (of Ocaml), Martin Odersky (of Scala), to name a few, as long as all the good people who have to actually struggle before the just right words could come out.\nI am by no means in the same league, but I am also struggling to find the right words every time I am trying to speak (ESL helps a lot, by the way). No, it is not like that character from the “Plague”, who struggled to wrote an opening sentence for years, but still.\nAnd, of course, every single one on YouTube is a fucking expert nowadays, showing us how uber-smart and clever they are in using this amazing new technology, they have a quick answer of everything, just like an totally ignorant but repulsively over-confident working class ghetto dweller or just a teenager from a rich family who has been sheltered from anything real.\nSo, what is behind that “aaand boom!”? It is a bit challenging to write a concise summary, so I will just throw in some universal notions there, hoping the underlying structure would become clearly visible.\nWe, probably, shall begin from an understanding of the very process by which the fundamental and universal abstract notions of what we call Mathematics has been discovered and developed by the mind of an “External Observer” (which also produced all the beautiful intuitive knowledge of Upanishads and the Traditional Buddhism).\nThe mind observed, generalized, captured the commonality, abstracted out and named Numbers, Sets, and some Algebraic Structures, among other things, as well as the Modus Ponens and the universal notions which we call logical connectives and qualifiers.\nWhat has been captured (the different views of the same “Magic Mountain”) are, arguably, the different aspects of the simulation, such that “everything has its structure”, and there are “structural” properties in anything around us at all levels. The fact almost all the atoms in your body right now are older that the Earth and even Sun tells one something about the universality of the “Immutable Data” principle, while the Process of Evolution at the cellular level tells us something about the importance of “Immutable Bindings” which occasionally can be “broken for good” (so we have set-car! and set-cdr! in Scheme, but we do not have set-number! ).\nThe simulation, of course, is of “shaking energy fields under different conditions, so in some localities they become stable-enough to become basic building blocks not just of what we call matter, but to Life Itself”. Okay, I am getting carried away.\nThe important realization is that good parts of Math are not arbitrary and not “invented”, but indeed “discovered”. What was “indented” were applications of Math to the real world problems, which include precise mathematical modeling, using mathematics as the language for formally capturing and describing some aspects of What Is (numbers, lines including axis, motion, permutations and what not).\nThe same principle applies to good programming languages, which are not “invented” either, but also “discovered”. Here is how.\nWe have to ask a question no one of the youtube bullshitters ever imagining of asking, but what the actually smart people listed above have one, such as “of what kind of things the properly captured (non-bullshit) mathematical theories were built off”?\nIt turns out that they are the very same universal logical connectives, numbers, sets and discovered (observed,generalized and captured) algebraic structures. Not just that, but mathematicians have been used “Abstract Data Types” for ages without formalizing or even naming them.\nThe Group theory is just a bunch of informally (from the CS point of view) defined ADTs (Barbara Liskov was the first to noticed this and Phil Wadler was the first to properly captured and formalize this notion).\nIt also has been shown that the Set Theory is good enough to formalize all of the “good” mathematics, and the Simple Typed Lambda Calculus is good-enough to define and “mechanically” calculate any commutable function (and the category theory is good enough to formalize all of the “good” set theory).\nThe discovery of so-called Curry-Howard Isomorphism showed us that the underlying structure of “everything” is a Direct Acyclic Graph, and that the basic distinct building blocks of such a Graph has been independently captured (and named differently) by both logicians, applied mathematicians. (the “Propositions as Types” meme is way less important).\nThese discoveries are, in a sense, “fixed points of What Is”, the closest one can come to the “Abstraction Barrier of the Simulation”. Okay, okay.\nA Set is an unordered “mental construct” of distinct, elements without repetitions. When one has to list the elements of a set (articulate or spell out), one has to use some particular ordering, but the ordering is not part of the definition of a set. A Set is defined by its elements only.\nThere are abstract operations on sets, and the rules of manipulating sets (union, intersection, difference, power set, Cartesian product, etc) are well-defined and have been discovered (not invented).\nA Function is a particular kind of a relation between two sets (or the same set), such that each element of the first set (the domain) is associated with exactly one element of the second set (the codomain). The rules of manipulating functions (composition, identity function, inverse function, etc) are also well-defined and have been discovered (not invented).\nA type is a set of values, together with a set of operations that can be performed on those values. The rules of manipulating the values, which define and constraint the particular operations on them (such as addition, multiplication, etc) and the “laws” (associativity, commutativity, distributivity) are also well-defined and have been discovered (not invented).\nI am repeating myself, but this is important. Sets, the universal notion of “such that”, which use captured “properties” (which determine subsets and define corresponding predicates), relations (which define operations) and set the constraints and bounds is what is behind any “boom”.\nJust as the original Lambda Calculus was “too unrestricted” (allowing application of anything to anything, which lead to paradoxes and bullshit), types as mere sets of values are “too unrestricted”, as well as families of functions, which is what, say, an int (int) (in fucking C++ or Java) actually stands for.\nSo we need to capture “structural properties” of functions, types, interfaces (which is exactly what the type-classes or traits are for), modules and protocols as well.\nNotice that these all are just named subsets, produced by a corresponding “such that” set of constraints. This is Vedanta of good programming languages, if you will.\nA function is a set of “arrows between dots”. A type is a set of values. A scope is a set of bindings (of names to values) An Abstract interface is a set of type-signatures (which include names). A trait is a set of interfaces, with “bounds” A trait “bound” is a set of constraints on the interfaces A module is a set of exported abstract interfaces A protocol is a set of informally stated rules. The last major fundamental discovery was the Type-Classes of Philip Wadler, which formally captured exactly these universal mathematical notions at the level of type-signatures (and Abstract Interfaces).\n“such that” at the level of abstract interfaces (sets of type-signatures) “is a” (“and is also an”) a set union of “operations” (less strict that the set-subset relation) associated but informally stated “laws” – “such that” constraints on relations between functions There is something to realize: these are the “fixed points” for everything, which can be traced back to the “very structure of” What Is.\nNot just “proper, just right” semantics, but even syntactic forms. The old sages have tried their best to capture the best part of mathematical notation in their languages, which were just executable math.\nThe notions of Abstract Data Type, of an Algebraic Data Type and of a Type-class with corresponding sets of constraints (or a trait) are central to Programming as a discipline, and thus shall be given “syntactic precedence” in the language. just like ML, Miranda and Haskell intuitively tried to accomplish.\nIt took at least 60 years to formulate some of these notions and god knows how many millennia since the numbers has been generalized and abstracted out and the arithmetic has been discovered.\nThis is, of course, just an emotional and impulsive sketch on a whim, but nothing there is wrong. There are (a statement of fact, not just an opinion) the right ways to model and program, there are the “fixed points” to almost any properly captured and properly generalized abstraction, and there are fixed points to the syntactic forms with which these can be captured, denied and expressed in code.\nBut no,this has nothing to do with “aaand boom!” and the slop it produces.\n",
+  "wordCount" : "1581",
+  "inLanguage": "en",
+  "datePublished": "2025-11-12T00:00:00+05:45",
+  "dateModified": "2025-11-12T16:35:20+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/aaand-boom/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Aaand boom!
+    </h1>
+    <div class="post-meta"><span title='2025-11-12 00:00:00 +0545 +0545'>November 12, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>The thing I hate the most is when some of these fucking YouTube content &ldquo;creators&rdquo;, which decide to monetize an AI coding clickbait with low-effort subpar videos, say &ldquo;aaand boom!&rdquo; when another chunk of a slop has been spewed out by an AI.</p>
+<p>This &ldquo;boom!&rdquo; is an insult to the last 60 years of the programming languages research (including the math-based theory) and to the &ldquo;old sages&rdquo; which crafted their languages and standard libraries in the best possible, &ldquo;just right&rdquo;, perfect, in the sense of &ldquo;nothing more to take away&rdquo;  by surveying all the available literature, non-bullshit papers and spending months of anguish and self-doubt.</p>
+<p>Barbara Liskov (of CLU), Robin Milner (of ML) Steele and Sussman (of Scheme), David Turner (of Miranda),  Paul Hudak (and some other members of the committee ), Xavier Leroy (of Ocaml), Martin Odersky (of Scala), to name a few, as long as all the good people who have to actually struggle before <em>the just right words</em> could come out.</p>
+<p>I am by no means in the same league, but I am also struggling to find the right words every time I am trying to speak (ESL helps a lot, by the way).  No, it is not like that character from the &ldquo;Plague&rdquo;, who struggled to wrote an opening sentence for years, but still.</p>
+<p>And, of course, every single one on YouTube is a fucking expert nowadays, showing us how <em>uber-smart</em> and clever they are in using this amazing new technology, they have a quick answer of everything, just like an totally ignorant but repulsively over-confident working class ghetto dweller or just a teenager from a rich family who has been sheltered from anything real.</p>
+<p>So, what is behind that &ldquo;aaand boom!&rdquo;? It is a bit challenging to write a concise summary, so I will just throw in some universal notions there, hoping the underlying structure would become clearly visible.</p>
+<p>We, probably, shall begin from an understanding of the very process by which the fundamental and universal abstract notions of what we call Mathematics has been discovered and developed by the mind of an &ldquo;External Observer&rdquo; (which also produced all the beautiful <em>intuitive</em> knowledge of Upanishads  and the Traditional Buddhism).</p>
+<p>The mind observed, generalized, captured the commonality, abstracted out and named <em>Numbers</em>, <em>Sets</em>, and some <em>Algebraic Structures</em>, among other things, as well as the <em>Modus Ponens</em> and the universal notions which we call <em>logical connectives</em> and <em>qualifiers</em>.</p>
+<p>What has been captured (the different views of the same &ldquo;Magic Mountain&rdquo;) are, arguably, the different aspects of the simulation, such that &ldquo;everything has its  structure&rdquo;, and there are <em>&ldquo;structural&rdquo; properties</em> in anything around us at all levels. The fact almost all the atoms in your body right now are older that the Earth and even Sun tells one something about the universality of the &ldquo;Immutable Data&rdquo; principle, while the Process of Evolution at the cellular level tells us something about the importance of &ldquo;Immutable Bindings&rdquo; which occasionally can be &ldquo;broken for good&rdquo; (so we have <code>set-car!</code> and <code>set-cdr!</code> in Scheme, but we do not have <code>set-number!</code> ).</p>
+<p>The simulation, of course, is of &ldquo;shaking energy fields under different conditions, so in some localities they become stable-enough to become basic building blocks not just of what we call matter, but to Life Itself&rdquo;.  Okay, I am getting carried away.</p>
+<p>The important realization is that good parts of Math are not arbitrary and not &ldquo;invented&rdquo;, but indeed &ldquo;discovered&rdquo;. What was &ldquo;indented&rdquo; were applications of Math to the real world problems, which include precise mathematical modeling, using mathematics as the language for formally capturing and  describing some aspects of What Is (numbers, lines including axis, motion, permutations and what not).</p>
+<p>The same principle applies to good programming languages, which are not &ldquo;invented&rdquo; either, but also &ldquo;discovered&rdquo;.  Here is how.</p>
+<p>We have to ask a question no one of the youtube bullshitters ever imagining of asking, but what the actually smart people listed above have one, such as &ldquo;of what kind of things the properly captured (non-bullshit) mathematical theories were built off&rdquo;?</p>
+<p>It turns out that they are the very same universal logical connectives, numbers, sets and discovered (observed,generalized and captured) algebraic structures. Not just that, but mathematicians have been used &ldquo;Abstract Data Types&rdquo; for ages without formalizing or even naming <em>them</em>.</p>
+<p>The Group theory is just a bunch of informally (from the CS point of view) defined ADTs (Barbara Liskov was the first to noticed this and Phil Wadler was the first to properly captured and  formalize this notion).</p>
+<p>It also has been shown that the Set Theory is good enough to formalize all of the &ldquo;good&rdquo; mathematics, and the Simple Typed Lambda Calculus is good-enough to define and &ldquo;mechanically&rdquo; calculate any commutable function (and the category theory is good enough to formalize all of the &ldquo;good&rdquo; set theory).</p>
+<p>The discovery of so-called Curry-Howard Isomorphism showed us that the underlying structure of &ldquo;everything&rdquo; is a Direct Acyclic Graph, and that the basic distinct building blocks of such a Graph has been independently captured (and named differently) by both logicians, applied mathematicians. (the &ldquo;Propositions as Types&rdquo; meme is <em>way</em> less important).</p>
+<p>These discoveries are, in a sense, &ldquo;fixed points of What Is&rdquo;, the closest one can come to the &ldquo;Abstraction Barrier of the Simulation&rdquo;. Okay, okay.</p>
+<p>A Set is an unordered &ldquo;mental construct&rdquo; of distinct, elements without repetitions. When one has to <em>list</em> the elements of a set (articulate or spell out), one has to use some particular ordering, but the ordering is not part of the definition of a set. A Set is defined by its elements only.</p>
+<p>There are abstract operations  on sets, and the rules of manipulating sets (union, intersection, difference, power set, Cartesian product, etc) are well-defined and have been discovered (not invented).</p>
+<p>A Function is a particular kind of a <em>relation</em> between two sets (or the same set), such that each element of the first set (the domain) is associated with exactly one element of the second set (the codomain). The rules of manipulating functions (composition, identity function, inverse function, etc) are also well-defined and have been discovered (not invented).</p>
+<p>A type is a set of values, together with a set of operations that can be performed on those values. The rules of manipulating the values, which define and constraint the particular operations on them (such as addition, multiplication, etc) and <em>the &ldquo;laws&rdquo;</em> (associativity, commutativity, distributivity) are also well-defined and have been discovered (not invented).</p>
+<p>I am repeating myself, but this is important. Sets, the universal notion of &ldquo;such that&rdquo;, which use captured &ldquo;properties&rdquo; (which determine subsets and define corresponding predicates),  relations (which define operations) and set the constraints and bounds is what is behind <em>any</em> &ldquo;boom&rdquo;.</p>
+<p>Just as the original Lambda Calculus was &ldquo;too unrestricted&rdquo; (allowing application of anything to anything, which lead to paradoxes and bullshit), types as mere sets of values are &ldquo;too unrestricted&rdquo;, as well as <em>families of functions</em>, which is what, say, an <code>int (int)</code>  (in fucking C++ or Java) actually stands for.</p>
+<p>So we need to capture &ldquo;structural properties&rdquo; of functions, types, interfaces (which is exactly what the type-classes or traits are for), modules and protocols as well.</p>
+<p>Notice that these <em>all</em> are just <em>named subsets</em>, produced by a corresponding &ldquo;such that&rdquo; set of constraints. This is Vedanta of good programming languages, if you will.</p>
+<ul>
+<li>A function is a set of &ldquo;arrows between dots&rdquo;.</li>
+<li>A type is a set of values.</li>
+<li>A scope is a set of <em>bindings</em> (of <em>names</em> to values)</li>
+<li>An <em>Abstract</em> interface is a set of type-signatures (which include <em>names</em>).</li>
+<li>A trait is a set of interfaces, with &ldquo;bounds&rdquo;</li>
+<li>A trait &ldquo;bound&rdquo; is a set of constraints on the interfaces</li>
+<li>A module is a set of exported abstract interfaces</li>
+<li>A protocol is a set of informally stated rules.</li>
+</ul>
+<p>The last major fundamental discovery was the Type-Classes of Philip Wadler, which formally captured exactly these universal mathematical notions at the level of type-signatures (and Abstract Interfaces).</p>
+<ul>
+<li>&ldquo;such that&rdquo; at the level of abstract interfaces (sets of type-signatures)</li>
+<li>&ldquo;is a&rdquo; (&ldquo;and is also an&rdquo;)</li>
+<li>a set union of &ldquo;operations&rdquo; (less strict that the set-subset relation)</li>
+<li>associated but informally stated &ldquo;laws&rdquo; &ndash; &ldquo;such that&rdquo; constraints on relations between functions</li>
+</ul>
+<p>There is something to realize:  these are the &ldquo;fixed points&rdquo; for everything, which can be traced back to the &ldquo;very structure of&rdquo; What Is.</p>
+<p>Not just &ldquo;proper, just right&rdquo; semantics, but even <em>syntactic forms</em>.  The old sages have tried their best to capture the best part of mathematical notation in their languages, which were just executable math.</p>
+<p>The notions of Abstract Data Type, of an Algebraic Data Type and of a Type-class with corresponding sets of constraints (or a trait) are central to Programming as a discipline, and thus shall be given &ldquo;syntactic precedence&rdquo;  in the language. just like ML, Miranda and Haskell <em>intuitively</em> tried to accomplish.</p>
+<p>It took at least 60 years to formulate some of these notions and god knows how many millennia since the numbers has been generalized and abstracted out and the arithmetic has been discovered.</p>
+<p>This is, of course, just an emotional and impulsive  sketch on a whim, but nothing there is wrong. There <em>are</em> (a statement of fact, not just an opinion) the right ways to model and program, there are the &ldquo;fixed points&rdquo; to almost any properly captured and properly generalized abstraction, and there are fixed points to the syntactic forms with which these can be captured, denied and expressed in code.</p>
+<p>But no,this has nothing to do with &ldquo;aaand boom!&rdquo; and the slop it produces.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
