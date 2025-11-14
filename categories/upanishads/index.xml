@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Upanishads on Notes from the digital underground by Lngnmn</title>
+    <link>https://lngnmn2.github.io/categories/upanishads/</link>
+    <description>Recent content in Upanishads on Notes from the digital underground by Lngnmn</description>
+    <generator>Hugo -- 0.147.7</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Nov 2025 17:49:55 +0545</lastBuildDate>
+    <atom:link href="https://lngnmn2.github.io/categories/upanishads/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A few steps closer to Vedanta</title>
+      <link>https://lngnmn2.github.io/articles/vedanta1/</link>
+      <pubDate>Fri, 14 Nov 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/vedanta1/</guid>
+      <description>&lt;p&gt;Once upon a time I find it difficult to read these lecture notes in &lt;a href=&#34;https://www.cl.cam.ac.uk/teaching/1718/L28/materials.html&#34;&gt;https://www.cl.cam.ac.uk/teaching/1718/L28/materials.html&lt;/a&gt; because of ESL and math &amp;ldquo;fear&amp;rdquo;. Nowadays I could, probably, explain the fundamentals more clearly in just a few pages.&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;End Of Knowledge&amp;rdquo; (of seeking to Understand) can be achieved by just a few simple realizations, which means attaining one&amp;rsquo;s own &amp;ldquo;Right Understanding&amp;rdquo; through direct experience and one&amp;rsquo;s own &amp;ldquo;a-ha moments&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Arguably, the &amp;ldquo;Upanishads&amp;rdquo; of Programming began with this book: &lt;a href=&#34;https://mitpress.mit.edu/9780262121125/abstraction-and-specification-in-program-development/&#34;&gt;Abstraction and Specification in Program Development by Barbara Liskov and John V. Guttag&lt;/a&gt;. No, a few years earlier Michael A. Jackson wrote &lt;a href=&#34;https://www.amazon.com/Principles-Program-Design-Michael-Jackson/dp/0138549950&#34;&gt;Principles of Program Design&lt;/a&gt;, which emphasized the fundamental principle that one&amp;rsquo;s program structure should reflect (actually to be in one-to-one correspondence with) the problem structure (which can be defined as an inherent layered structure of complexity of the domain ). But Liskov and Guttag took it to a whole new level.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
