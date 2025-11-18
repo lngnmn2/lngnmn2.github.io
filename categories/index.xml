@@ -6,12 +6,26 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Nov 2025 14:00:38 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 18 Nov 2025 18:12:42 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://lngnmn2.github.io/categories/ai/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://lngnmn2.github.io/categories/llm/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/llm/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programming</title>
       <link>https://lngnmn2.github.io/categories/programming/</link>
-      <pubDate>Fri, 14 Nov 2025 00:00:00 +0545</pubDate>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/programming/</guid>
       <description></description>
     </item>
@@ -20,20 +34,6 @@
       <link>https://lngnmn2.github.io/categories/upanishads/</link>
       <pubDate>Fri, 14 Nov 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/upanishads/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://lngnmn2.github.io/categories/ai/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>https://lngnmn2.github.io/categories/llm/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/llm/</guid>
       <description></description>
     </item>
     <item>
