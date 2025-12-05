@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>They gave 5 LLMs $100K to trade stocks for 8 months | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="crapto, trading">
+<meta name="description" content="What a shitshow &ndash;  https://news.ycombinator.com/item?id=46154491. &ndash; HN midwits are outdoing themselves in trying to signal their virtues and unique snowflakeness.
+Turns out I know enough math, programming, LLM theory (including the underlying math) and trading (in the Elder&rsquo;s tradition) to understand that this is an utter crap &ndash; &ldquo;Everyone is a genius in a bull market&rdquo;.
+This is bullshit at so many levels, and yet, someone paid for this and the &ldquo;researchers&rdquo; got the highest possible &ldquo;living standards&rdquo;, of course.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/100k-to-llms/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/100k-to-llms/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/100k-to-llms/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="They gave 5 LLMs $100K to trade stocks for 8 months">
+  <meta property="og:description" content="What a shitshow – https://news.ycombinator.com/item?id=46154491. – HN midwits are outdoing themselves in trying to signal their virtues and unique snowflakeness.
+Turns out I know enough math, programming, LLM theory (including the underlying math) and trading (in the Elder’s tradition) to understand that this is an utter crap – “Everyone is a genius in a bull market”.
+This is bullshit at so many levels, and yet, someone paid for this and the “researchers” got the highest possible “living standards”, of course.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-12-05T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-12-05T10:50:34+05:45">
+    <meta property="article:tag" content="Crapto">
+    <meta property="article:tag" content="Trading">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="They gave 5 LLMs $100K to trade stocks for 8 months">
+<meta name="twitter:description" content="What a shitshow &ndash;  https://news.ycombinator.com/item?id=46154491. &ndash; HN midwits are outdoing themselves in trying to signal their virtues and unique snowflakeness.
+Turns out I know enough math, programming, LLM theory (including the underlying math) and trading (in the Elder&rsquo;s tradition) to understand that this is an utter crap &ndash; &ldquo;Everyone is a genius in a bull market&rdquo;.
+This is bullshit at so many levels, and yet, someone paid for this and the &ldquo;researchers&rdquo; got the highest possible &ldquo;living standards&rdquo;, of course.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "They gave 5 LLMs $100K to trade stocks for 8 months",
+      "item": "https://lngnmn2.github.io/articles/100k-to-llms/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "They gave 5 LLMs $100K to trade stocks for 8 months",
+  "name": "They gave 5 LLMs $100K to trade stocks for 8 months",
+  "description": "What a shitshow \u0026ndash; https://news.ycombinator.com/item?id=46154491. \u0026ndash; HN midwits are outdoing themselves in trying to signal their virtues and unique snowflakeness.\nTurns out I know enough math, programming, LLM theory (including the underlying math) and trading (in the Elder\u0026rsquo;s tradition) to understand that this is an utter crap \u0026ndash; \u0026ldquo;Everyone is a genius in a bull market\u0026rdquo;.\nThis is bullshit at so many levels, and yet, someone paid for this and the \u0026ldquo;researchers\u0026rdquo; got the highest possible \u0026ldquo;living standards\u0026rdquo;, of course.\n",
+  "keywords": [
+    "crapto", "trading"
+  ],
+  "articleBody": "What a shitshow – https://news.ycombinator.com/item?id=46154491. – HN midwits are outdoing themselves in trying to signal their virtues and unique snowflakeness.\nTurns out I know enough math, programming, LLM theory (including the underlying math) and trading (in the Elder’s tradition) to understand that this is an utter crap – “Everyone is a genius in a bull market”.\nThis is bullshit at so many levels, and yet, someone paid for this and the “researchers” got the highest possible “living standards”, of course.\nFirst of all, a general-purpose LLM could not trade in principle. It can be made to appear as it does, but an appearance is usually very different from what is actually going on – a parrot appears to speak a human language (while it just mimics the sounds), dogs appears to understand a human language, while they just respond to a familiar sounds, “read” the tones of a human voice and use non-verbal cues.\nHere is how. The first principle is the classic one “The past performance is not indicative for a future one”. The model which has been trained on the “past” cannot in principle operate efficiently within an already changed environment. Yes, one could “drive” the road using only its memories, but only till the next obstacle. No, all the self-diving cars have tons of real-time sensors and process the data in a real time, combining the sensory input with the model’s representation (sort of mimicking our current understanding of how biological systems work), which is NOT what the general purpose LLM do.\nSecond, betting on tech stocks (even just the blue chips) in the unprecedented, of an astronomical magnitude tech bubble, with NVDA going parabolic, is not an indicator of any kind of intelligence. It is not even a luck, it is just the ability to buy.\nEvery interpretation they gave to the observed performance of these LLMs is simply, in principle, wrong. The difference in scores is due to chance factor, not any kind of predetermined abilities or even differences in training of said LLMs.\nThe experiment can be dead simple – simulate the same setup with the recorded (and now historical) data and measure the result – there will be no correlations whatsoever, and one does not have to be a rocket scientist to understand precisely why.\nLast but not least, even training (and backtesting) a sophisticated classifier will fail (but, perhaps, will outperform a random-walk strategy) because, again, any market data is “outdated” the moment it released (observed) and the “environment” is quickly “evolving” right behind your back.\nThere are reasons why HFT is considered the only “marginally or mostly deterministic” approach, since the “patterns” they are trying to capture and react to are “stable enough” for just a few moments (until the others react to them).\nThe only non-bullshit trading strategies (aside from inside trading, of course) is to trade the tops and the bottoms, but timing them is very costly and very stressful, and, of course, “the market could remain irrational longer that you can remain solvent”. Even Michael Burry has thrown the towel in trying to time the market (TSLA and NVDA obvious bubbles). “Time in the market beats timing the market” is the most fundamental principle, along with “buy only when there is blood on the streets”. Everything else is just bullshit and memes.\nBy the way, semi-automated trading, using a most straightforward classifier on candle-stick and some indicators (BOLL, RSI) patterns will outperform most of the strategies if (and only if) it is used to time a top (or a bottom) of a market cycle, which is, again, very costly due to constantly being stopped out or liquidated by scam-wicks.\nTrading in the middle of a range is just gambling by definition, and no, your LLMs aren’t any good at it.\n",
+  "wordCount" : "632",
+  "inLanguage": "en",
+  "datePublished": "2025-12-05T00:00:00+05:45",
+  "dateModified": "2025-12-05T10:50:34+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/100k-to-llms/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      They gave 5 LLMs $100K to trade stocks for 8 months
+    </h1>
+    <div class="post-meta"><span title='2025-12-05 00:00:00 +0545 +0545'>December 5, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>What a shitshow &ndash;  <a href="https://news.ycombinator.com/item?id=46154491">https://news.ycombinator.com/item?id=46154491</a>. &ndash; HN midwits are outdoing themselves in trying to signal their virtues and unique snowflakeness.</p>
+<p>Turns out I know enough math, programming, LLM theory (including the underlying math) and trading (in the Elder&rsquo;s tradition) to understand that this is an utter crap &ndash; &ldquo;Everyone is a genius in a bull market&rdquo;.</p>
+<p>This is bullshit at so many levels, and yet, someone paid for this and the &ldquo;researchers&rdquo; got the highest possible &ldquo;living standards&rdquo;, of course.</p>
+<p>First of all, a general-purpose LLM could not trade in principle. It can be made to appear as it does, but an appearance is usually very different from what is actually going on &ndash; a parrot appears to speak a human language (while it just mimics the sounds), dogs appears to understand a human language, while they just respond to a familiar sounds, &ldquo;read&rdquo; the tones of a human voice and use non-verbal cues.</p>
+<p>Here is how. The first principle is the classic one &ldquo;The past performance is not indicative for a future one&rdquo;. The model which has been trained on the &ldquo;past&rdquo; cannot in principle operate efficiently within an already changed environment. Yes, one could &ldquo;drive&rdquo; the road using only its memories, but only till the next obstacle.  No, all the self-diving cars have tons of real-time sensors and process the data in a real time, combining the sensory input with the model&rsquo;s representation (sort of mimicking our current understanding of how biological systems work), which is NOT what the general purpose LLM do.</p>
+<p>Second, betting on tech stocks (even just the blue chips) in the unprecedented, of an astronomical magnitude tech bubble, with NVDA going parabolic, is not an indicator of any kind of intelligence. It is not even a luck, it is just the ability to buy.</p>
+<p>Every interpretation they gave to the observed performance of these LLMs is simply, in principle, wrong. The difference in scores is due to chance factor, not any kind of predetermined abilities or even differences in training of said LLMs.</p>
+<p>The experiment can be dead simple &ndash; simulate the same setup with the recorded (and now historical) data and measure the result &ndash; there will be no correlations whatsoever, and one does not have to be a rocket scientist to understand <em>precisely why</em>.</p>
+<p>Last but not least, even training (and backtesting) a sophisticated classifier will fail (but, perhaps, will outperform a random-walk strategy) because, again, any market data is &ldquo;outdated&rdquo; the moment it released (observed) and the &ldquo;environment&rdquo; is quickly &ldquo;evolving&rdquo; right behind your back.</p>
+<p>There are reasons why HFT is considered the only &ldquo;marginally or mostly deterministic&rdquo; approach, since the &ldquo;patterns&rdquo; they are  trying to capture and react to are &ldquo;stable enough&rdquo; for just a few moments (until the others react to them).</p>
+<p>The only non-bullshit trading strategies (aside from inside trading, of course) is to trade the tops and the bottoms, but timing them is very costly and very stressful, and, of course, &ldquo;the market could remain irrational longer that you can remain solvent&rdquo;. Even Michael Burry has thrown the towel in trying to time the market (TSLA and NVDA obvious bubbles). &ldquo;Time in the market beats timing the market&rdquo; is the most fundamental principle, along with &ldquo;buy only when there is blood on the streets&rdquo;. Everything else is just bullshit and memes.</p>
+<p>By the way, semi-automated trading, using a most straightforward classifier on candle-stick and some indicators (BOLL, RSI) patterns will outperform most of the strategies if (and only if) it is used to time a top (or a bottom) of a market cycle, which is, again, very costly due to constantly being stopped out or liquidated by scam-wicks.</p>
+<p>Trading in the middle of a range is just gambling by definition, and no, your LLMs aren&rsquo;t any good at it.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/crapto/">Crapto</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/trading/">Trading</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
