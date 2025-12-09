@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 12:43:32 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 09 Dec 2025 09:59:05 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some Final Words</title>
+      <link>https://lngnmn2.github.io/articles/some-final-words/</link>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/some-final-words/</guid>
+      <description>&lt;p&gt;So, it seems like this is the time to somehow sum up the current AI hype (way through the roof) and the immediate and long term &lt;em&gt;consequences&lt;/em&gt; of it.&lt;/p&gt;
+&lt;p&gt;First of all, a proper education &amp;ndash; studying the fundamental underlying principles instead of particulars &amp;ndash;  which used to be an unofficial mantra of MIT, pays off again.&lt;/p&gt;
+&lt;p&gt;One just sets particular constraints to a coding LLM and use it as a whole-data-center-powerful &lt;em&gt;constraint satisfaction engine&lt;/em&gt; that spews out a slop, which then can be used for rapid prototyping and minimal-viable products. The properly constrained slop can even be used as the basis of a project, which then undergo proper &lt;em&gt;continuous improvement&lt;/em&gt; and &lt;em&gt;refinement&lt;/em&gt; by a human expert (who knows the &lt;em&gt;whys&lt;/em&gt;).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The new Brahmanas</title>
       <link>https://lngnmn2.github.io/articles/the-new-brahmanas/</link>
