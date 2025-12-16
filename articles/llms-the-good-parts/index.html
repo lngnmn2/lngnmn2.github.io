@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>  LLMs: The &#34;Good&#34; Parts
+   | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="Okay, lets look at the &ldquo;better side&rdquo; of things.
+The good thing about using LLMs is that you do not have to deal with Google Search and any fucking Social Media.
+Imagine a painfully typical scenario &ndash; you want to clarify or better understand something you already vaguely knew or at least aware of. You type a query into Google Search, and you get&hellip; a fucking CEO fucked-up list of Ad-infested links to various web pages &ndash; either the  largest social media containment boards (StackOverflow, Reddit, Medium), or some CEO&rsquo;d blogs, when you are either  greeted with a wall of text (usually directly pasted from tutorials and docs), ads, pop-ups, and other distractions, or some narcissistic asshole&rsquo;s low-effort over-verbose crappy verbiage about &ldquo;how fucking smart he is&rdquo;.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/llms-the-good-parts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/llms-the-good-parts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/llms-the-good-parts/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="  LLMs: The &#34;Good&#34; Parts
+  ">
+  <meta property="og:description" content="Okay, lets look at the “better side” of things.
+The good thing about using LLMs is that you do not have to deal with Google Search and any fucking Social Media.
+Imagine a painfully typical scenario – you want to clarify or better understand something you already vaguely knew or at least aware of. You type a query into Google Search, and you get… a fucking CEO fucked-up list of Ad-infested links to various web pages – either the largest social media containment boards (StackOverflow, Reddit, Medium), or some CEO’d blogs, when you are either greeted with a wall of text (usually directly pasted from tutorials and docs), ads, pop-ups, and other distractions, or some narcissistic asshole’s low-effort over-verbose crappy verbiage about “how fucking smart he is”.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-12-16T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-12-16T17:15:36+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="  LLMs: The &#34;Good&#34; Parts
+  ">
+<meta name="twitter:description" content="Okay, lets look at the &ldquo;better side&rdquo; of things.
+The good thing about using LLMs is that you do not have to deal with Google Search and any fucking Social Media.
+Imagine a painfully typical scenario &ndash; you want to clarify or better understand something you already vaguely knew or at least aware of. You type a query into Google Search, and you get&hellip; a fucking CEO fucked-up list of Ad-infested links to various web pages &ndash; either the  largest social media containment boards (StackOverflow, Reddit, Medium), or some CEO&rsquo;d blogs, when you are either  greeted with a wall of text (usually directly pasted from tutorials and docs), ads, pop-ups, and other distractions, or some narcissistic asshole&rsquo;s low-effort over-verbose crappy verbiage about &ldquo;how fucking smart he is&rdquo;.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "  LLMs: The \"Good\" Parts\n  ",
+      "item": "https://lngnmn2.github.io/articles/llms-the-good-parts/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "  LLMs: The \"Good\" Parts\n  ",
+  "name": "  LLMs: The \u0022Good\u0022 Parts\n  ",
+  "description": "Okay, lets look at the \u0026ldquo;better side\u0026rdquo; of things.\nThe good thing about using LLMs is that you do not have to deal with Google Search and any fucking Social Media.\nImagine a painfully typical scenario \u0026ndash; you want to clarify or better understand something you already vaguely knew or at least aware of. You type a query into Google Search, and you get\u0026hellip; a fucking CEO fucked-up list of Ad-infested links to various web pages \u0026ndash; either the largest social media containment boards (StackOverflow, Reddit, Medium), or some CEO\u0026rsquo;d blogs, when you are either greeted with a wall of text (usually directly pasted from tutorials and docs), ads, pop-ups, and other distractions, or some narcissistic asshole\u0026rsquo;s low-effort over-verbose crappy verbiage about \u0026ldquo;how fucking smart he is\u0026rdquo;.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "Okay, lets look at the “better side” of things.\nThe good thing about using LLMs is that you do not have to deal with Google Search and any fucking Social Media.\nImagine a painfully typical scenario – you want to clarify or better understand something you already vaguely knew or at least aware of. You type a query into Google Search, and you get… a fucking CEO fucked-up list of Ad-infested links to various web pages – either the largest social media containment boards (StackOverflow, Reddit, Medium), or some CEO’d blogs, when you are either greeted with a wall of text (usually directly pasted from tutorials and docs), ads, pop-ups, and other distractions, or some narcissistic asshole’s low-effort over-verbose crappy verbiage about “how fucking smart he is”.\nThis is only the tip of the iceberg (a stupid fucking cliche, I know). When you are being landed on some HN or Plebdit page what happens exactly? You get a wall of text, full of “insights” from various random assholes, who are either clueless or just want to show off their self-proclaimed “expertise”. Most of the content is about “look, ma, I know this and that”, and in general it is about “I” and “me” and “my experience”.\nRecall that focused attention is a limited resource (just like physical endurance). If you spend it on reading all that emotionally charged crap, you have almost none of it left for actually concentrating and thinking about the subject you are trying to learn about. This is not just a “theory” – this is a well-known cognitive bias called the spotlight effect. When you read all that self-centered bullshit, your brain gets hijacked by the emotional content, and you end up focusing on the wrong things. And the worst part is that the dopamine/cortisol rollercoaster you get from reading all that crap leaves you mentally exhausted, and spent of any willpower and motivation, and the dopamine and adrenaline levels has to be restored to their base-lines in order to feel (acutally be) motivated and focused again.\nWith LLMs, hopefully you can avoid all that crap. You can just ask a question, and get a concise, focused answer (slop), without any distractions. You can get the information you need, without having to wade through all the bullshit. At least, this is the theory.\nThe best part of all this is that one can refine the queries by feeding back to it some of it formulations and terminology and even code snippets, thus progressively refining (up to some theoretical “fixed point”) the quality of the slop being generated. This is something that is not possible with traditional search engines.\nAt a “meta-level” all the LLM providers, of course, collect and feed back all user’s queries and interactions as a new training data – literally feeding it on its own slop – thus “improving” the models over time.\nThis, by the way, is the answer to the common question “how exactly do LLMs improve over time?”, provided that the high quality content with both high-quality text and related high-quality code very close to each other is very rare and scarce – just a few old good books by distinguished authors here and there. Not more than 50 or 60 at all. Recall that LLMs operate at the level of “tokens” (mere “morphology” and syntax, without any “semantics” or “understanding” of any kind), and the amount of high-quality token streams (in a proper order, so that the “distances” are “short”) is very limited.\nBy feeding back the user queries and the resulting slop, which is already a mix of [somehow] related text and code, the LLM providers can “amplify” the amount of “high-quality” token streams, thus improving the models over time, while charging you for every token.\nAnd the results are absolutely amazing, at least for the top-tier models like Gemini or Grok or Claude. Being over-constrained by sophisticated prompt-“engineering” techniques (stating the required to apply principles and techniques of a non-bullshit computer science of the last 60 years or so), they can spew out some really good slop, which is often indistinguishable from the best FP textbook code examples, crafted with a principle-guided understanding (math) and careful attention to details and minimal representations by a distinguished author.\nThe only question is – now what? Who will pay me for doing it?\nIt is easy to imagine that all this will quickly turn into a much steeper “race to the bottom”, where for $20/hour or even less you will be asked to turn out at the end of the day a “high-quality” slop of the amount that originally took weeks or months of fully understand and years of studying and practice to produce – a trick which is actually possible nowadays. An experienced “Senior Software Engineer” could literally bootstrap (or at least prototype) a complex system (more realistically – a distinct layer of it) in a single day, and ton polish the whole thing in a week or two.\nI am not completely sure that I really want to participate in such a race, after everything I have seen (I’ve seen things you people wouldn’t believe).\n",
+  "wordCount" : "857",
+  "inLanguage": "en",
+  "datePublished": "2025-12-16T00:00:00+05:45",
+  "dateModified": "2025-12-16T17:15:36+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/llms-the-good-parts/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+        LLMs: The &#34;Good&#34; Parts
+  
+    </h1>
+    <div class="post-meta"><span title='2025-12-16 00:00:00 +0545 +0545'>December 16, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Okay, lets look at the &ldquo;better side&rdquo; of things.</p>
+<p>The good thing about using LLMs is that you do not have to deal with <em>Google Search</em> and any fucking <em>Social Media</em>.</p>
+<p>Imagine a painfully typical scenario &ndash; you want to clarify or better understand something you already vaguely knew or at least aware of. You type a query into Google Search, and you get&hellip; a fucking CEO fucked-up list of Ad-infested links to various web pages &ndash; either the  largest social media containment boards (StackOverflow, Reddit, Medium), or some CEO&rsquo;d blogs, when you are either  greeted with a wall of text (usually directly pasted from tutorials and docs), ads, pop-ups, and other distractions, or some narcissistic asshole&rsquo;s low-effort over-verbose crappy verbiage about &ldquo;how fucking smart he is&rdquo;.</p>
+<p>This is only the tip of the iceberg (a stupid fucking cliche, I know). When you are being landed on some HN or Plebdit page what happens exactly? You get a wall of text, full of &ldquo;insights&rdquo; from various random assholes, who are either clueless or just want to show off their self-proclaimed &ldquo;expertise&rdquo;. Most of the content is about &ldquo;look, ma, I know this and that&rdquo;, and in general it is about &ldquo;I&rdquo; and &ldquo;me&rdquo; and &ldquo;my experience&rdquo;.</p>
+<p>Recall that focused attention is a limited resource (just like physical endurance). If you spend it on reading all that emotionally charged crap, you have almost none of it left for actually concentrating and thinking about the subject you are trying to learn about. This is not just a &ldquo;theory&rdquo; &ndash; this is a well-known cognitive bias called the <em>spotlight effect</em>. When you read all that self-centered bullshit, your brain gets hijacked by the emotional content, and you end up focusing on the wrong things. And the worst part is that the dopamine/cortisol rollercoaster you get from reading all that crap leaves you mentally exhausted,  and <em>spent</em> of any willpower and motivation, and the dopamine and adrenaline levels has to be restored to their base-lines in order to feel (acutally be) motivated and focused again.</p>
+<p>With LLMs, hopefully you can avoid all that crap. You can just ask a question, and get a concise, focused answer (slop), without any distractions. You can get the information you need, without having to wade through all the bullshit. At least, this is the theory.</p>
+<p>The best part of all this is that one can refine the queries by feeding back to it some of it formulations and terminology and even code snippets, thus progressively refining (up to some theoretical &ldquo;fixed point&rdquo;)  the quality of the slop being generated. This is something that is not possible with traditional search engines.</p>
+<p>At a &ldquo;meta-level&rdquo; all the LLM providers, of course,  collect and feed back all user&rsquo;s queries and interactions as a new training data &ndash; literally feeding it on its own slop &ndash;  thus &ldquo;improving&rdquo; the models over time.</p>
+<p>This, by the way, is the answer to the common question &ldquo;how exactly do LLMs improve over time?&rdquo;, provided that the high quality content with both high-quality text and related  high-quality code very close to each other is very rare and scarce &ndash; just a few old good books by distinguished authors here and there. Not more than 50 or 60 at all. Recall that LLMs operate at the level of &ldquo;tokens&rdquo; (mere &ldquo;morphology&rdquo; and syntax, without any &ldquo;semantics&rdquo; or &ldquo;understanding&rdquo; of any kind), and the amount of high-quality token streams (in a proper order, so that the &ldquo;distances&rdquo; are &ldquo;short&rdquo;) is very limited.</p>
+<p>By feeding back the user queries and the resulting slop, which is already a mix of [somehow] related text and code, the LLM providers can &ldquo;amplify&rdquo; the amount of &ldquo;high-quality&rdquo; token streams, thus improving the models over time, while charging <em>you</em> for every token.</p>
+<p>And the results are absolutely amazing, at least for the top-tier models like Gemini or Grok or Claude. Being over-constrained by sophisticated prompt-&ldquo;engineering&rdquo; techniques (stating the required to apply principles and techniques of a non-bullshit computer science of the last 60 years or so), they can spew out  some really good slop, which is often indistinguishable from the best FP textbook code examples, crafted with a principle-guided understanding (math) and careful attention to details and minimal representations by a distinguished author.</p>
+<p>The only question is &ndash; now what? Who will pay me for doing it?</p>
+<p>It is easy to imagine that all this will quickly turn into a much steeper  &ldquo;race to the bottom&rdquo;, where for $20/hour or even less you will be asked to turn out at the end of  the day a &ldquo;high-quality&rdquo; slop of the amount that originally took weeks or months of fully understand and years of studying and  practice to produce &ndash; a trick <em>which is actually possible nowadays</em>. An experienced &ldquo;Senior Software Engineer&rdquo; could literally bootstrap (or at least  prototype) a complex system (more realistically &ndash; a distinct layer of it) in a single day, and ton polish the whole thing in a week or two.</p>
+<p>I am not completely sure that I really want to participate in such a race, after everything I have seen (I&rsquo;ve seen things you people wouldn&rsquo;t believe).</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
