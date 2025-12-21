@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Vibecoding explained | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit, vibecoding">
+<meta name="description" content="https://karpathy.bearblog.dev/year-in-review-2025/
+In this episode @karpathy blessed us all with another blogpost. While his wording is much more careful and even nuanced, there is still a lot of bullshit in it. It way less outrageous bullshit as in the Friedman poocast  and around that time, but still.
+Here are some excerpts:
+
+With vibe coding, programming is not strictly reserved for highly trained professionals, it is something anyone can do.
+&hellip;
+But not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/vibecoding-explained/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/vibecoding-explained/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/vibecoding-explained/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Vibecoding explained">
+  <meta property="og:description" content="https://karpathy.bearblog.dev/year-in-review-2025/
+In this episode @karpathy blessed us all with another blogpost. While his wording is much more careful and even nuanced, there is still a lot of bullshit in it. It way less outrageous bullshit as in the Friedman poocast and around that time, but still.
+Here are some excerpts:
+With vibe coding, programming is not strictly reserved for highly trained professionals, it is something anyone can do.
+…
+But not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-12-21T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-12-21T10:32:11+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+    <meta property="article:tag" content="Vibecoding">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vibecoding explained">
+<meta name="twitter:description" content="https://karpathy.bearblog.dev/year-in-review-2025/
+In this episode @karpathy blessed us all with another blogpost. While his wording is much more careful and even nuanced, there is still a lot of bullshit in it. It way less outrageous bullshit as in the Friedman poocast  and around that time, but still.
+Here are some excerpts:
+
+With vibe coding, programming is not strictly reserved for highly trained professionals, it is something anyone can do.
+&hellip;
+But not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Vibecoding explained",
+      "item": "https://lngnmn2.github.io/articles/vibecoding-explained/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Vibecoding explained",
+  "name": "Vibecoding explained",
+  "description": "https://karpathy.bearblog.dev/year-in-review-2025/\nIn this episode @karpathy blessed us all with another blogpost. While his wording is much more careful and even nuanced, there is still a lot of bullshit in it. It way less outrageous bullshit as in the Friedman poocast and around that time, but still.\nHere are some excerpts:\nWith vibe coding, programming is not strictly reserved for highly trained professionals, it is something anyone can do.\n\u0026hellip;\nBut not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit", "vibecoding"
+  ],
+  "articleBody": "https://karpathy.bearblog.dev/year-in-review-2025/\nIn this episode @karpathy blessed us all with another blogpost. While his wording is much more careful and even nuanced, there is still a lot of bullshit in it. It way less outrageous bullshit as in the Friedman poocast and around that time, but still.\nHere are some excerpts:\nWith vibe coding, programming is not strictly reserved for highly trained professionals, it is something anyone can do.\n…\nBut not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.\nOkay, first, programming and coding are, in principle (from the neurological standpoint) very different activities, and so-called vibe-coding is neither of them. Here is how:\nBy the way, It is even funny how at lest somehow mathematically literate people (he is a PhD, among other things) could even confuse these activities, unless, of course, they are shilling or pitching something, themselves, most of the time.\nJust like in mathematics, programming is about creating a properly captured abstractions, properly generalizing over them (to have a well-defined notion of an angle, lets say), and occasionally (very rare) making new concepts, and, perhaps, once in a lifetime – new ways of thinking, just like thinking about the Group Theory as an plausible abstract foundation of “whole” Geometry.\nA good programmer mostly concerned with such properly generalized abstractions (Algebraic Data Types, in the first place), their properties, and relationships among them, as well as how to specialize “just tight” these “fundamental” abstraction’s to a specific problem domain. The focus is on proper abstraction barriers, high-level, abstract state-less interfaces, modules which export such narrow public interfaces, and composing such modules into larger systems.\nAs other famous meme-guys (hi, @bartosz) noted, programming is about decomposition of some aspects of the real world into properly defined abstractions, and then composing these abstractions into larger properly structured (as a “shallow” hierarchy of layerred DSLs) systems.\nBarbara Liskov’s books were the first principle-guided attempt to systematize such proper programming practices, and they are still the best resource on the topic.\nThere is, of course, a lot more to programming, but the above is the “essence” of it.\nCoding, on the other hand, is a more “mechanical” activity. It is quite similar of how ignorant people (which have a ready strong opinion on absolutely everything) produce their spoken or written verbiage – it just somehow appears from their minds, and they just speak it out loud, or write it down. No one even ask themselves “is it any good?”, or “is it even correct?”, leave alone “from where it comes from?”.\nHow thoughts and speech are actually formed in our minds is a completely different topic, but the analogy is quite accurate. No, it has nothing to do with “probabilities” and “running simulations inside out brains”, but more like neuromodulator-mediated “stochastic parrots”, which are “trained” on the past experiences of the person.\nNotice that a systematic “mathematical” thinking and reasoning is a very different cognitive process that just spewing out whatever comes to mind (in a shower of thoughts tweet, lets say). One has, indeed, to be “trained” for years to do the first, while the second is something that everyone does almost unconsciously, all the time.\nThis is the difference between programming and coding.\nNow , what is “vibe coding”, then? Imagine that you are watching a cooking videos on YouTube. You see something, which looks like the process you “fully understand” (which is a gross illusion) and even could easily replicate (which, is another gross illusion).\nThe playing violin instead of watching someone else do it, is such a cliche, that I almost blush to mention it. But, indeed, this is exactly what vibe coding is. You somehow end up with what fells like (to you) as an “acceptable sound” (which is, actually, quite far from what a real violinist could produce), without even moving your hands, and now you think that you are playing the violin.\nIn the very basic “preside-scientific” terms, the neurological activities involved in “vibe coding” are very similar to those involved in watching cooking videos, or watching someone play the violin. You don’t even “mimic” what you see, (that would require re-typing the slop by yourself world by world) without any actual understanding (the whys) of what is going on.\nSo what exactly these hypothetical “regular people” are engaged with, thinking that they are “program”? That isn’t even coding (they write nothing by themselves). That is sort of a video-game-like activity, where it appears to them that they are “doing something”.\nAgain, even cooking videos are just an illusion of cooking and only an experienced person would “see” the flaws and what has been “cut off” or “oversimplified” in the video. Same with vibe coding – only an experienced programmer would see how this is just an appearance (an cognitive illusion, as in a video game) of programming, and not programming itself.\nNow, what the actual “outcome” of such vibe coding activity is? Well, mostly, it is a pile of something, that appears to be a “good” code, that even actually runs. This is exactly the same of a sophisticated sectarian (sorry, “socially scientific”) bullshitting appears to an uninitiated person – one cannot tell, in principle, whether it is true or not (because it requires that distinct and the only ability, as within the proper mathematics, to “walk all the way” back to the underlying the What Is, and then all the way up, via the processes of proper abstraction, generalization, naming, and so on).\nNotice, I haven’t said a single word about “safety” (which “emerges” from using together in a complementing way just a few properly selected principles, abstractions, “patterns”,and idioms) in order to systematically and consistently “making an illegal state unrepresentable”, lets say, leave alone representation invariant or “efficiency”. Most of vibecoders does not even know the meaning of such long words, let alone the fundamental concepts behind them.\nBut, he said he actually “vibecoded the software he wished to exist”. Well, making some junkfood slop for lunch or dinner is an activity that almost any neurologically normal person could do and almost everyone on earth is doing every other day. If something is edible is not the sign that it is of a good quality, not to mention approaching a fixed point of the best possible quality.\nAt the another, more abstract level, a wall of text (a written verbiage), even if it is grammatically correct and somehow appears to be coherent and even “smooth”, does not imply that it is actually of any good. Coming up with a bunch of more-or-less grammatically correct sentences on a selected topic is not the same as a well-crafted essay (or whatever they teach you at these writting classes at the Ivy Leagues English departments). So is even more with the code.\nIt is also worth mentioning (again and again) that the whole generation process works at the level of mere syntax and estimated probabilities of the next token in a given sequence – there is no understanding of any kind whatsoever in the process, only an appearance (an illusion) of it, as in a parrot’s speech\nSo the term ‘vibecoded’ shall be substituted to a much more “scientifically” appropriate term “parroting” – I have parroted some code and it even runs (why, yes, the basic “micro-patterns” within – conditionals, loops, assignment, procedures, classes and methods – are being “put together” or generated at the level of their syntactic forms). The apparent coherence and apparent actual “correctness” (so it runs at all) are mere illusions, just like apparent grammatical correctness in what a parrot “says”.\nOf course, he knows the algorithms behind of the whole pipeline, but decided to spew out a normie-friendly popular bullshit instead.\nThere is a simple takeaway – by no means the code an LLM spews out is at the same qualitative level as of a human expert, concerned with the underlying principles (systematic and consistent application of which leads to a better non-bullshit type-and memory- “safety”) and the careful craftmnship’s attention to details, just like an “ordinary person” couldn’t suddenly come up with a mathematical “paper” of the level of Euler. Reality does not work that way.\n",
+  "wordCount" : "1378",
+  "inLanguage": "en",
+  "datePublished": "2025-12-21T00:00:00+05:45",
+  "dateModified": "2025-12-21T10:32:11+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/vibecoding-explained/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Vibecoding explained
+    </h1>
+    <div class="post-meta"><span title='2025-12-21 00:00:00 +0545 +0545'>December 21, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://karpathy.bearblog.dev/year-in-review-2025/">https://karpathy.bearblog.dev/year-in-review-2025/</a></p>
+<p>In this episode @karpathy blessed us all with another blogpost. While his wording is much more careful and even nuanced, there is still a lot of bullshit in it. It way less outrageous bullshit as in the Friedman <em>poocast</em>  and around that time, but still.</p>
+<p>Here are some excerpts:</p>
+<blockquote>
+<p>With vibe coding, programming is not strictly reserved for highly trained professionals, it is something anyone can do.</p>
+<p>&hellip;</p>
+<p>But not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.</p></blockquote>
+<p>Okay, first, programming and coding are, in principle (from the neurological standpoint) very different activities, and so-called vibe-coding is neither of them. Here is how:</p>
+<p>By the way, It is even funny how at lest <em>somehow</em> mathematically literate people (he is a PhD, among other things) could even confuse these activities, unless, of course, they are shilling or pitching something, themselves, most of the time.</p>
+<p>Just like in mathematics, programming is about creating a properly captured  abstractions, properly generalizing over them (to have a well-defined notion of an angle, lets say), and occasionally (very rare) making new concepts, and, perhaps, once in a lifetime &ndash; new ways of thinking, just like thinking about the  Group Theory as an plausible abstract foundation of &ldquo;whole&rdquo;  Geometry.</p>
+<p>A good programmer mostly concerned with such properly  generalized abstractions (Algebraic Data Types, in the first place), their properties, and  relationships among them, as well as how to specialize &ldquo;just tight&rdquo; these &ldquo;fundamental&rdquo; abstraction&rsquo;s  to a specific problem domain.  The focus is on proper  <em>abstraction barriers</em>, high-level, abstract state-less interfaces, modules which export such narrow public interfaces, and composing such modules into larger systems.</p>
+<p>As other famous meme-guys (hi, @bartosz) noted, programming is about decomposition of some aspects of the real world into properly defined abstractions, and then composing these abstractions  into larger properly structured (as a &ldquo;shallow&rdquo; hierarchy of layerred DSLs) systems.</p>
+<p>Barbara Liskov&rsquo;s books were the first principle-guided  attempt to systematize such proper programming practices, and they are still the best resource on the topic.</p>
+<p>There is, of course, a lot more to programming, but the above is the &ldquo;essence&rdquo; of it.</p>
+<p>Coding, on the other hand, is a more &ldquo;mechanical&rdquo; activity. It is quite similar of how ignorant people (which have a ready strong opinion on absolutely everything) produce their spoken or written verbiage &ndash; <em>it just somehow appears from their minds</em>, and they just speak it out loud, or write it down.  No one even ask themselves  &ldquo;is it any good?&rdquo;, or &ldquo;is it even correct?&rdquo;, leave alone &ldquo;from where it comes from?&rdquo;.</p>
+<p>How thoughts and speech are actually formed in our minds is a completely different topic, but the analogy is quite accurate. No, it has nothing to do with &ldquo;probabilities&rdquo; and &ldquo;running simulations inside out brains&rdquo;, but more like neuromodulator-mediated &ldquo;stochastic parrots&rdquo;, which are &ldquo;trained&rdquo; on the past experiences of the person.</p>
+<p>Notice that a systematic &ldquo;mathematical&rdquo; thinking and reasoning is a very different cognitive process that just spewing out whatever comes to mind (in a shower of thoughts tweet, lets say). One has, indeed, to be &ldquo;trained&rdquo; for years to do the first, while the second is something that everyone does almost unconsciously, all the time.</p>
+<p><em>This</em> is the difference between programming and coding.</p>
+<p>Now , what is &ldquo;vibe coding&rdquo;, then? Imagine that you are watching a cooking videos on YouTube. You see something, which looks like the process you &ldquo;fully understand&rdquo; (which is a gross illusion) and even could <em>easily</em> replicate (which, is another gross illusion).</p>
+<p>The playing violin instead of watching someone else do it, is such a cliche, that I almost blush to mention it. But, indeed, this is exactly what vibe coding is. You somehow end up with what fells like (to you) as an &ldquo;acceptable sound&rdquo; (which is, actually, quite far from what a real violinist could produce), without even moving your hands, and now you think that you are playing the violin.</p>
+<p>In the very basic &ldquo;preside-scientific&rdquo; terms, the neurological activities involved in &ldquo;vibe coding&rdquo; are very similar to those involved in watching cooking videos, or watching someone play the violin. You don&rsquo;t even &ldquo;mimic&rdquo; what you see, (that would require re-typing the slop by yourself world by world) without any actual understanding (the whys) of what is going on.</p>
+<p>So what exactly these hypothetical &ldquo;regular people&rdquo; are engaged with, thinking that they are &ldquo;program&rdquo;? That isn&rsquo;t even coding (they write nothing by themselves). That is sort of a video-game-like activity, where it appears to them that they are &ldquo;doing something&rdquo;.</p>
+<p>Again, even cooking videos are just an illusion of cooking and only an experienced person would &ldquo;see&rdquo; the flaws and what has been &ldquo;cut off&rdquo; or &ldquo;oversimplified&rdquo; in the video. Same with vibe coding &ndash; only an experienced programmer would see how this is just an appearance (an cognitive illusion, as in a video game) of programming, and not programming itself.</p>
+<p>Now, what the actual &ldquo;outcome&rdquo; of such vibe coding activity is? Well, mostly, it is a pile of something, that <em>appears to be</em> a &ldquo;good&rdquo; code, that even actually runs. This is exactly the same of a sophisticated sectarian (sorry, &ldquo;socially scientific&rdquo;) bullshitting appears to an uninitiated person &ndash; one cannot tell, in principle, whether it is true or not (because it requires that distinct and the only ability, as within the proper mathematics, to &ldquo;walk all the way&rdquo; back to the underlying the <em>What Is</em>, and then all the way up, via the processes of proper abstraction, generalization, naming, and so on).</p>
+<p>Notice, I haven&rsquo;t said a single word about &ldquo;safety&rdquo; (which &ldquo;emerges&rdquo; from using <em>together in a complementing way</em> just a few properly selected principles, abstractions, &ldquo;patterns&rdquo;,and idioms) in order to systematically and consistently &ldquo;making an illegal state unrepresentable&rdquo;, lets say, leave alone representation invariant or &ldquo;efficiency&rdquo;. Most of vibecoders does not even know the meaning of such long words, let alone the fundamental concepts behind them.</p>
+<p>But, he said he actually <em>&ldquo;vibecoded the software he wished to exist&rdquo;</em>. Well, making some junkfood slop for lunch or dinner is an activity that almost any neurologically normal person could do and almost everyone on earth is doing every other day. If something is edible is not the sign that it is of a good quality, not to mention approaching a fixed point of the best possible quality.</p>
+<p>At the another, more abstract level, a wall of text (a written verbiage), even if it is grammatically correct and somehow  <em>appears to be</em> coherent and even &ldquo;smooth&rdquo;, does not imply that it is actually of any good.  Coming up with a bunch of more-or-less grammatically correct sentences on a selected topic is not the same as a well-crafted essay (or whatever they teach you at these writting classes at the Ivy Leagues English departments). So is even more with the code.</p>
+<p>It is also worth mentioning (again and again) that the whole generation process works at the level of mere syntax and estimated probabilities of the next token in a given sequence &ndash; there is no understanding of any kind whatsoever in the process, only an appearance (an illusion) of it, as in a parrot&rsquo;s speech</p>
+<p>So the term &lsquo;vibecoded&rsquo; shall be substituted to a much more &ldquo;scientifically&rdquo; appropriate term &ldquo;parroting&rdquo; &ndash; I have parroted some code and it even runs (why, yes, the basic &ldquo;micro-patterns&rdquo; within &ndash; conditionals, loops, assignment, procedures, classes and methods &ndash; are being &ldquo;put together&rdquo; or generated at the level of their syntactic forms). The apparent coherence and <em>apparent</em> actual &ldquo;correctness&rdquo; (so it runs at all) are mere illusions, just like apparent grammatical correctness in what a parrot &ldquo;says&rdquo;.</p>
+<p>Of course, he knows the algorithms behind of the whole pipeline, but decided to spew out a normie-friendly popular bullshit instead.</p>
+<p>There is a simple takeaway &ndash; by no means the code an LLM spews out is at the same qualitative level as of a human expert, concerned with the underlying principles (systematic and consistent application of which leads to a better non-bullshit type-and memory- &ldquo;safety&rdquo;) and the careful craftmnship&rsquo;s attention to details, just like an &ldquo;ordinary person&rdquo; couldn&rsquo;t suddenly come up with a mathematical &ldquo;paper&rdquo; of the level of Euler. Reality does not work that way.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/vibecoding/">Vibecoding</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

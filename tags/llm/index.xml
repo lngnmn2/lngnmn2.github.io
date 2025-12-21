@@ -6,8 +6,21 @@
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Dec 2025 08:43:11 +0545</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 10:32:11 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vibecoding explained</title>
+      <link>https://lngnmn2.github.io/articles/vibecoding-explained/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/vibecoding-explained/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://karpathy.bearblog.dev/year-in-review-2025/&#34;&gt;https://karpathy.bearblog.dev/year-in-review-2025/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this episode @karpathy blessed us all with another blogpost. While his wording is much more careful and even nuanced, there is still a lot of bullshit in it. It way less outrageous bullshit as in the Friedman &lt;em&gt;poocast&lt;/em&gt;  and around that time, but still.&lt;/p&gt;
+&lt;p&gt;Here are some excerpts:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;With vibe coding, programming is not strictly reserved for highly trained professionals, it is something anyone can do.&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;But not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>  LLMs: The &#34;Good&#34; Parts
   </title>
@@ -382,6 +395,13 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
       <description>Abstract bullshitting is not enough.</description>
     </item>
     <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
+    </item>
+    <item>
       <title>LLMS For Coding</title>
       <link>https://lngnmn2.github.io/articles/llms-for-coding/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
@@ -389,14 +409,6 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
       <description>&lt;p&gt;Today &lt;a href=&#34;https://news.ycombinator.com/&#34;&gt;https://news.ycombinator.com/&lt;/a&gt; is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &lt;em&gt;&amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.&lt;/p&gt;
 &lt;p&gt;If I have any understanding of these subjects at all, this is a bubble and &lt;em&gt;irrational exuberance&lt;/em&gt;. Lets try to unpack &amp;ldquo;the whys&amp;rdquo;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
     </item>
   </channel>
 </rss>
