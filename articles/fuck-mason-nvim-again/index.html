@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Fuck mason-nvim again | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="Idiots">
+<meta name="description" content="Fucking degenerates.
+There is nothing wrong in bullying and humiliating incompetence and arrogant stupidity and impostorism. We all went through all this in our childhood and it did us good &ndash; made us think twice.
+When some fucking degenerate do shit without proper understanding, just low-effort quick &ldquo;solution&rdquo; (the proverbial &ldquo;getting shit done&rdquo;) and then almost everyone pick it as a dependency (because it is getting shit done somehow) everyone (as a society) gets properly fucked.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/fuck-mason-nvim-again/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/fuck-mason-nvim-again/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/fuck-mason-nvim-again/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Fuck mason-nvim again">
+  <meta property="og:description" content="Fucking degenerates.
+There is nothing wrong in bullying and humiliating incompetence and arrogant stupidity and impostorism. We all went through all this in our childhood and it did us good – made us think twice.
+When some fucking degenerate do shit without proper understanding, just low-effort quick “solution” (the proverbial “getting shit done”) and then almost everyone pick it as a dependency (because it is getting shit done somehow) everyone (as a society) gets properly fucked.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2025-12-25T00:00:00+05:45">
+    <meta property="article:modified_time" content="2025-12-25T09:20:49+05:45">
+    <meta property="article:tag" content="Idiots">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fuck mason-nvim again">
+<meta name="twitter:description" content="Fucking degenerates.
+There is nothing wrong in bullying and humiliating incompetence and arrogant stupidity and impostorism. We all went through all this in our childhood and it did us good &ndash; made us think twice.
+When some fucking degenerate do shit without proper understanding, just low-effort quick &ldquo;solution&rdquo; (the proverbial &ldquo;getting shit done&rdquo;) and then almost everyone pick it as a dependency (because it is getting shit done somehow) everyone (as a society) gets properly fucked.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Fuck mason-nvim again",
+      "item": "https://lngnmn2.github.io/articles/fuck-mason-nvim-again/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fuck mason-nvim again",
+  "name": "Fuck mason-nvim again",
+  "description": "Fucking degenerates.\nThere is nothing wrong in bullying and humiliating incompetence and arrogant stupidity and impostorism. We all went through all this in our childhood and it did us good \u0026ndash; made us think twice.\nWhen some fucking degenerate do shit without proper understanding, just low-effort quick \u0026ldquo;solution\u0026rdquo; (the proverbial \u0026ldquo;getting shit done\u0026rdquo;) and then almost everyone pick it as a dependency (because it is getting shit done somehow) everyone (as a society) gets properly fucked.\n",
+  "keywords": [
+    "Idiots"
+  ],
+  "articleBody": "Fucking degenerates.\nThere is nothing wrong in bullying and humiliating incompetence and arrogant stupidity and impostorism. We all went through all this in our childhood and it did us good – made us think twice.\nWhen some fucking degenerate do shit without proper understanding, just low-effort quick “solution” (the proverbial “getting shit done”) and then almost everyone pick it as a dependency (because it is getting shit done somehow) everyone (as a society) gets properly fucked.\nLook here, idiots. Here is the rust-analyzer. It usually comes (being installed) within the toolchain, either via rust-up or from a proper build from the sources, and that is for a reason.\nlngnmn2@localhost ~ $ ldd `which rust-analyzer` linux-vdso.so.1 (0x00007f43bed2d000) librustc_driver-a3dbdc2b2b352eab.so =\u003e /usr/lib/rust/1.92.0/bin/../lib/librustc_driver-a3dbdc2b2b352eab.so (0x00007f43b6800000) libgcc_s.so.1 =\u003e /usr/lib/gcc/x86_64-pc-linux-gnu/15/libgcc_s.so.1 (0x00007f43becb6000) libm.so.6 =\u003e /usr/lib64/libm.so.6 (0x00007f43b6708000) libc.so.6 =\u003e /usr/lib64/libc.so.6 (0x00007f43b6400000) libLLVM.so.21.1 =\u003e /usr/lib/llvm/21/lib64/libLLVM.so.21.1 (0x00007f43abe00000) libstdc++.so.6 =\u003e /usr/lib/gcc/x86_64-pc-linux-gnu/15/libstdc++.so.6 (0x00007f43aba00000) /lib64/ld-linux-x86-64.so.2 (0x00007f43bed2f000) libffi.so.8 =\u003e /usr/lib64/libffi.so.8 (0x00007f43beca3000) libz3.so.4.15 =\u003e /usr/lib64/libz3.so.4.15 (0x00007f43a9800000) libz.so.1 =\u003e /usr/lib64/libz.so.1 (0x00007f43bec84000) libzstd.so.1 =\u003e /usr/lib64/libzstd.so.1 (0x00007f43a96d8000) The reason that it uses the the librustc_driver is that it is tightly coupled with the compiler internals, and it must be in sync with the compiler version. This is why rust-analyzer is not distributed as a standalone binary with all dependencies statically linked (unless you are a fucking idiot).\nOne more time – it uses the compiler as a library. This is not a standalone tool that can be used independently of the compiler version.\nNow look at what the fuckers from mason-nvim did: if you are trying to use rust-analyzer from mason-nvim, it will download some random prebuilt binary from the internet. If you are trying to disable that and use your system rust-analyzer, it will still download that random prebuilt binary and use it instead of your system one. If you completely exclude it, it will break the LSP configuration, because it won’t automaically_enable it and prevent the rest of the system to configure the LSP for you.\nWhy the fuck can’t they just have a variable, like use-system-wide or something like that, which lists the servers to be just used from the $PATH, or, even better, scan /usr/bin:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/cargo/bin for existing binaries, and just use them via full path (fully qualified name ) when found.\nAnd no, there is no adequate solution (allowing it to download and install that shit and then remove and symlink the correct binary until it decides to update).\nThis is just Rust.\nDo you fucking know what haskell-language-server (hls) is? It carries the whole compiler and a half of Hackage as a dependency (yes yes, they are fucking idiots too). The installation is a couple of Gigabytes for each version of the compiler.\nIn general, it is not the editor’s responsibility to try to manage system packages. It will fuck up for obvious reasons. It shall use the system-wide packages a priority, bacause system packages resolved the complex dependencies in the right way (until they don’t).\nYes, modern neovim is moving away from such a lame bloatware, and a modern bare minimum config works perfectly without mason-lspconfig by just looking what is in the $PATH, which is the right way. BTW, people who “invented” paths way back then were way smarter and better educated that you. Not only the concept of a paths do perfect “shadowing” while uses fully-qualified names to resolve any ambiguity, it also roughly correspond to the notion of a nested frames of environment and the proper lexical scooping rules.\nShadowing of names is a proper way.\n",
+  "wordCount" : "576",
+  "inLanguage": "en",
+  "datePublished": "2025-12-25T00:00:00+05:45",
+  "dateModified": "2025-12-25T09:20:49+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/fuck-mason-nvim-again/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Fuck mason-nvim again
+    </h1>
+    <div class="post-meta"><span title='2025-12-25 00:00:00 +0545 +0545'>December 25, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Fucking degenerates.</p>
+<p>There is nothing wrong in bullying and humiliating incompetence and arrogant stupidity and impostorism. We all went through all this in our childhood and it did us good &ndash; made us think twice.</p>
+<p>When some fucking degenerate do shit without proper understanding, just low-effort quick &ldquo;solution&rdquo; (the proverbial &ldquo;getting shit done&rdquo;) and then almost everyone pick it as a dependency (because it is getting shit done somehow) everyone (as a society) gets properly fucked.</p>
+<p>Look here, idiots. Here is the <code>rust-analyzer</code>. It usually comes (being installed) <em>within the toolchain</em>, either via <code>rust-up</code> or from a proper build from the sources, and that is for a reason.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>lngnmn2@localhost ~ $ ldd <span style="color:#e6db74">`</span>which rust-analyzer<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>	linux-vdso.so.1 <span style="color:#f92672">(</span>0x00007f43bed2d000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	librustc_driver-a3dbdc2b2b352eab.so <span style="color:#f92672">=</span>&gt; /usr/lib/rust/1.92.0/bin/../lib/librustc_driver-a3dbdc2b2b352eab.so <span style="color:#f92672">(</span>0x00007f43b6800000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libgcc_s.so.1 <span style="color:#f92672">=</span>&gt; /usr/lib/gcc/x86_64-pc-linux-gnu/15/libgcc_s.so.1 <span style="color:#f92672">(</span>0x00007f43becb6000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libm.so.6 <span style="color:#f92672">=</span>&gt; /usr/lib64/libm.so.6 <span style="color:#f92672">(</span>0x00007f43b6708000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libc.so.6 <span style="color:#f92672">=</span>&gt; /usr/lib64/libc.so.6 <span style="color:#f92672">(</span>0x00007f43b6400000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libLLVM.so.21.1 <span style="color:#f92672">=</span>&gt; /usr/lib/llvm/21/lib64/libLLVM.so.21.1 <span style="color:#f92672">(</span>0x00007f43abe00000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libstdc++.so.6 <span style="color:#f92672">=</span>&gt; /usr/lib/gcc/x86_64-pc-linux-gnu/15/libstdc++.so.6 <span style="color:#f92672">(</span>0x00007f43aba00000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	/lib64/ld-linux-x86-64.so.2 <span style="color:#f92672">(</span>0x00007f43bed2f000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libffi.so.8 <span style="color:#f92672">=</span>&gt; /usr/lib64/libffi.so.8 <span style="color:#f92672">(</span>0x00007f43beca3000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libz3.so.4.15 <span style="color:#f92672">=</span>&gt; /usr/lib64/libz3.so.4.15 <span style="color:#f92672">(</span>0x00007f43a9800000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libz.so.1 <span style="color:#f92672">=</span>&gt; /usr/lib64/libz.so.1 <span style="color:#f92672">(</span>0x00007f43bec84000<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>	libzstd.so.1 <span style="color:#f92672">=</span>&gt; /usr/lib64/libzstd.so.1 <span style="color:#f92672">(</span>0x00007f43a96d8000<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>The reason that it uses the the <code>librustc_driver</code> is that it is tightly coupled with the compiler internals, and it must be in sync with the compiler version. This is why <code>rust-analyzer</code> is not distributed as a standalone binary with all dependencies statically linked (unless you are a fucking idiot).</p>
+<p>One more time &ndash; it uses the compiler as a library. This is not a standalone tool that can be used independently of the compiler version.</p>
+<p>Now look at what the fuckers from <code>mason-nvim</code> did:
+if you are trying to use <code>rust-analyzer</code> from <code>mason-nvim</code>, it will download some random prebuilt binary from the internet. If you are trying to disable that and use your system <code>rust-analyzer</code>, it will still download that random prebuilt binary and use it instead of your system one. If you completely <code>exclude</code> it, it will break the LSP configuration, because it won&rsquo;t <code>automaically_enable</code> it and prevent the rest of the system to  configure the LSP for you.</p>
+<p>Why the fuck can&rsquo;t they just have a variable, like <code>use-system-wide</code> or something like that, which lists the servers to be just used from the <code>$PATH</code>, or, even better, scan <code>/usr/bin:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/cargo/bin</code> for existing binaries, and just use them via <em>full path</em> (fully qualified name ) when found.</p>
+<p>And no, there is no adequate solution (allowing it to download and install that shit and then remove and symlink the correct binary until it decides to update).</p>
+<p>This is just Rust.</p>
+<p>Do you fucking know what <code>haskell-language-server</code> (<code>hls</code>) is? It carries the whole compiler and a half of Hackage as a dependency (yes yes, they are fucking idiots too). The installation is a couple of Gigabytes for each version of the compiler.</p>
+<p>In general, it is not the editor&rsquo;s responsibility to try to manage system packages. It will fuck up for obvious reasons. It shall use the system-wide packages a priority, bacause system packages resolved the complex dependencies in the right way (until they don&rsquo;t).</p>
+<p>Yes, modern neovim is moving away from such a lame bloatware, and a modern bare minimum config works perfectly without <code>mason-lspconfig</code> by just looking what is in the <code>$PATH</code>, which is the right way. BTW, people who &ldquo;invented&rdquo; paths way back then were way smarter and better educated that you. Not only the concept of a paths do perfect &ldquo;shadowing&rdquo; while uses <em>fully-qualified names</em> to resolve any ambiguity, it also roughly correspond to the notion of a nested frames of environment and the proper <em>lexical scooping</em> rules.</p>
+<p>Shadowing of names is a proper way.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/idiots/">Idiots</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
