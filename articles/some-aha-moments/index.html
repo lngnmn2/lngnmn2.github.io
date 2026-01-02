@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Some Aha Moments | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="LLM, AI, bullshit">
+<meta name="description" content="For a quite long time already I sort of &ldquo;ran in the background&rdquo; this question  &ndash; &ldquo;how they bridge the semantic gap between verbiage and the code?&rdquo; In the context of a well-written textbook (extremely rare, just 50 or so in existence) the code examples immediately follow or even intersperse the explanations. Most of the internet content is nothing like that.
+The semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] &ldquo;documentation&rdquo;, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google&rsquo;s monorepo and other megacorp inner code bases.  Almost noting this strict can be found on Github (the primary source of all training).">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/some-aha-moments/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/some-aha-moments/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/some-aha-moments/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Some Aha Moments">
+  <meta property="og:description" content="For a quite long time already I sort of “ran in the background” this question – “how they bridge the semantic gap between verbiage and the code?” In the context of a well-written textbook (extremely rare, just 50 or so in existence) the code examples immediately follow or even intersperse the explanations. Most of the internet content is nothing like that.
+The semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] “documentation”, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google’s monorepo and other megacorp inner code bases. Almost noting this strict can be found on Github (the primary source of all training).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-01-02T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-01-02T19:08:11+05:45">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Some Aha Moments">
+<meta name="twitter:description" content="For a quite long time already I sort of &ldquo;ran in the background&rdquo; this question  &ndash; &ldquo;how they bridge the semantic gap between verbiage and the code?&rdquo; In the context of a well-written textbook (extremely rare, just 50 or so in existence) the code examples immediately follow or even intersperse the explanations. Most of the internet content is nothing like that.
+The semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] &ldquo;documentation&rdquo;, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google&rsquo;s monorepo and other megacorp inner code bases.  Almost noting this strict can be found on Github (the primary source of all training).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Some Aha Moments",
+      "item": "https://lngnmn2.github.io/articles/some-aha-moments/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Some Aha Moments",
+  "name": "Some Aha Moments",
+  "description": "For a quite long time already I sort of \u0026ldquo;ran in the background\u0026rdquo; this question \u0026ndash; \u0026ldquo;how they bridge the semantic gap between verbiage and the code?\u0026rdquo; In the context of a well-written textbook (extremely rare, just 50 or so in existence) the code examples immediately follow or even intersperse the explanations. Most of the internet content is nothing like that.\nThe semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] \u0026ldquo;documentation\u0026rdquo;, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google\u0026rsquo;s monorepo and other megacorp inner code bases. Almost noting this strict can be found on Github (the primary source of all training).\n",
+  "keywords": [
+    "LLM", "AI", "bullshit"
+  ],
+  "articleBody": "For a quite long time already I sort of “ran in the background” this question – “how they bridge the semantic gap between verbiage and the code?” In the context of a well-written textbook (extremely rare, just 50 or so in existence) the code examples immediately follow or even intersperse the explanations. Most of the internet content is nothing like that.\nThe semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] “documentation”, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google’s monorepo and other megacorp inner code bases. Almost noting this strict can be found on Github (the primary source of all training).\nNow I see what they are doing. While stated from the Github crap, they now annotate the code in markdown in a systematic way, and then, of course, feed it (the verbiage and the code) back as new training examples (after people seemingly accepted it is “working” or “acceptable” solution).\nThey just use you to build a much better slop, just as they used captchas to make you manually label their dataset or validate the pre-existing labeling (which both are very costly processes). Now you are generate new training examples for them, not just for free, but some are paid for each token. No wonder both bigtech and Wall street are “all in” without looking back.\nAnother thing I noticed is that it already speaks in cliches an even “slogans”. When I tried to force it to carefully clarify and refine my handwritten GEMINI.md, it replaced all my slightly convoluted subtleties with crystal- clear short sentences and well-define common [mostly meme] terminology.\nThis is not a random coincidence and is actually expected – when you recycle the same slop over and over again, it will very quickly converge at some “local optima” – literally a concave-shaped, localized “echochamber”, just like any religious or scientific sect, constantly parroting their maxims and tenets.\nBut if you put yourself into the loop, clarifying and refining the slop, you could reach some fixed-point in terms of precision, brevity, clarity and conciseness, almost math-like – the language one used to read with the theorems and proofs .\nThis kind of writing is a lost craft since publishing became an industry.\nAnd yet, the quality of the verbiage (slop) it spews out, when properly constrained, and over a few iterations putting it back into a new prompt is absolutely amazing. I spent, literally, a lifetime to learn to write the way I do (which is far from being satisfactory), and it just spit into your face what you hardly could write unless struggle for days, continuously refiling (which I, thank god, never do).\nSo, they trained on your slop as we speak (and call it major advancement in LLM training techniques), and when “personalized”, it quickly creates your own, personal Jesus, sorry, an echochamber, with all the known cognitive biases at work (when something else appear to be and being recognized and interpreted as something familiar).\nOne more time, the “magic” and appeal of LLMs is that they produce heavily cognitive biased appearances, which most people gladly and easily take “for real”. This is why the bubble wasn’t burst till now.\nJust put back some your own subtleties it replaced with commonplace memes, and one day there will be nothing more to remove (clarify). The obsession of some famous MIT guys with fixed-points is not, of course, coincidental.\nThe trick, William Potter, is not minding that it hurts.\nBy the way, the proper way of prompting is to build a context very similar to what it has “already seen” and thus will easily extend, not some kind of “You are a helpful assistant” antrophomorphic bullshit, but once this very crap is constantly being feed back, it soon will become the only way to prompt.\n",
+  "wordCount" : "659",
+  "inLanguage": "en",
+  "datePublished": "2026-01-02T00:00:00+05:45",
+  "dateModified": "2026-01-02T19:08:11+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/some-aha-moments/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Some Aha Moments
+    </h1>
+    <div class="post-meta"><span title='2026-01-02 00:00:00 +0545 +0545'>January 2, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>For a quite long time already I sort of &ldquo;ran in the background&rdquo; this question  &ndash; &ldquo;how they bridge the semantic gap between verbiage and the code?&rdquo; In the context of a well-written textbook (extremely rare, just 50 or so in existence) the code examples immediately follow or even intersperse the explanations. Most of the internet content is nothing like that.</p>
+<p>The semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] &ldquo;documentation&rdquo;, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google&rsquo;s monorepo and other megacorp inner code bases.  Almost noting this strict can be found on Github (the primary source of all training).</p>
+<p>Now I see what they are doing. While stated from the Github crap, they now annotate the code in markdown in a systematic way, and then, of course, feed it (the verbiage and the code) back as new training examples (after people seemingly accepted it is &ldquo;working&rdquo; or &ldquo;acceptable&rdquo; solution).</p>
+<p>They just use you to build a much better slop, just as they used captchas to make you manually label their dataset or validate the pre-existing labeling (which both are very costly processes). Now you are generate new training examples for them, not just for free, but some are paid for each token. No wonder both bigtech and Wall street are &ldquo;all in&rdquo; without looking back.</p>
+<p>Another thing I noticed is that it already speaks in cliches an even &ldquo;slogans&rdquo;. When I tried to force it to carefully clarify and refine my handwritten <code>GEMINI.md</code>, it replaced all my slightly convoluted subtleties with crystal- clear short sentences and well-define common [mostly meme] terminology.</p>
+<p>This is not a random coincidence and is actually <em>expected</em> &ndash; when you recycle the same slop over and over again, it will very quickly converge at some &ldquo;local optima&rdquo; &ndash; literally a concave-shaped, localized &ldquo;echochamber&rdquo;, just like any religious or scientific sect, constantly parroting their maxims and tenets.</p>
+<p>But if you put yourself into the loop, clarifying and refining the slop, you could reach some <em>fixed-point</em> in terms of precision, brevity, clarity and conciseness, almost math-like &ndash; the language one used to read with the theorems and proofs .</p>
+<p>This kind of writing is a <em>lost craft</em> since publishing became an industry.</p>
+<p>And yet, the quality of the verbiage (slop) it spews out, when properly constrained, and over a few iterations putting it back into a new prompt is absolutely amazing. I spent, literally, a lifetime to learn to write the way I do (which is far from being satisfactory), and it just spit into your face what you hardly could write unless struggle for days, continuously refiling (which I, thank god, never do).</p>
+<p>So, they trained on your slop as we speak (and call it major advancement in LLM training techniques), and when &ldquo;personalized&rdquo;,  it quickly creates your own, personal Jesus, sorry, an echochamber, with all the known cognitive biases at work (when something else appear to be and being recognized and interpreted as something familiar).</p>
+<p>One more time, the &ldquo;magic&rdquo; and appeal of LLMs is that they produce heavily cognitive biased appearances, which most people gladly and easily take &ldquo;for real&rdquo;. This is why the bubble wasn&rsquo;t burst till now.</p>
+<p>Just put back some your own subtleties it replaced with commonplace memes, and one day there will be <em>nothing more to remove</em> (clarify). The obsession of some famous MIT guys with <em>fixed-points</em> is not, of course, coincidental.</p>
+<p><em>The trick, William Potter, is not minding that it hurts</em>.</p>
+<p>By the way, the proper way of prompting is to build a context very similar to what it has &ldquo;already seen&rdquo; and thus will easily extend, not some kind of &ldquo;You are a helpful assistant&rdquo; antrophomorphic  bullshit, but once this very crap is constantly being feed back, it soon will become the only way to prompt.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

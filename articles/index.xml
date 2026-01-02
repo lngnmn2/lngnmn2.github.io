@@ -6,7 +6,7 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jan 2026 14:26:18 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 02 Jan 2026 19:08:11 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Everything is so over (broken)</title>
@@ -16,6 +16,14 @@
       <description>&lt;p&gt;One of the major human psychological fallacy is to &amp;ldquo;naturally&amp;rdquo; assume that other people are more or less the same as you, just a bit mire weird. This is bullhit. Some of them are way off.&lt;/p&gt;
 &lt;p&gt;There is something callled a built-in (or native) package manager for  &lt;code&gt;Neovim&lt;/code&gt;  in development. Have you ever tried it?&lt;/p&gt;
 &lt;p&gt;Notice that this is not just an editor, this is a whole &amp;ldquo;ancient&amp;rdquo; tradition (which goes all the way back to hardware terminals and math majors as a synonym for a programmer) with an associated culture, and even religious zealots, which insist on purity, minimalism and even avoidance of plugins (sort of veganism).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Some Aha Moments</title>
+      <link>https://lngnmn2.github.io/articles/some-aha-moments/</link>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/some-aha-moments/</guid>
+      <description>&lt;p&gt;For a quite long time already I sort of &amp;ldquo;ran in the background&amp;rdquo; this question  &amp;ndash; &amp;ldquo;how they bridge the semantic gap between verbiage and the code?&amp;rdquo; In the context of a well-written textbook (extremely rare, just 50 or so in existence) the code examples immediately follow or even intersperse the explanations. Most of the internet content is nothing like that.&lt;/p&gt;
+&lt;p&gt;The semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] &amp;ldquo;documentation&amp;rdquo;, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google&amp;rsquo;s monorepo and other megacorp inner code bases.  Almost noting this strict can be found on Github (the primary source of all training).&lt;/p&gt;</description>
     </item>
     <item>
       <title>OOP Is Flawed In Principle</title>
