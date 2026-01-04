@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Extreme Programming Applied | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, vibecoding">
+<meta name="description" content="Things begin to move way too fast, at least for me.
+There is some amazing fact, which shows that an intuitive understanding can also be valid.
+I remember reading the memest book of the time &ndash;  &ldquo;eXtreme Programming Explained&rdquo; (by still sober and sane Kent Beck), and trying (probably just like everyone else at the time) to &ldquo;distill&rdquo; some grains of &ldquo;wisdom&rdquo; from the torrents of &ldquo;mostly bullshit&rdquo;.
+The real take away from the whole manuscript (at least for me) was that writing tests is what really change everything, in particular, they are, indeed, allow quick, confident and &ldquo;cheap&rdquo; refactoring and thus really &ldquo;facilitate change&rdquo; and, yes, actually speed up the development process.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/extreme-programming-applied/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/extreme-programming-applied/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/extreme-programming-applied/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Extreme Programming Applied">
+  <meta property="og:description" content="Things begin to move way too fast, at least for me.
+There is some amazing fact, which shows that an intuitive understanding can also be valid.
+I remember reading the memest book of the time – “eXtreme Programming Explained” (by still sober and sane Kent Beck), and trying (probably just like everyone else at the time) to “distill” some grains of “wisdom” from the torrents of “mostly bullshit”.
+The real take away from the whole manuscript (at least for me) was that writing tests is what really change everything, in particular, they are, indeed, allow quick, confident and “cheap” refactoring and thus really “facilitate change” and, yes, actually speed up the development process.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-01-04T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-01-04T17:13:12+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Vibecoding">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Extreme Programming Applied">
+<meta name="twitter:description" content="Things begin to move way too fast, at least for me.
+There is some amazing fact, which shows that an intuitive understanding can also be valid.
+I remember reading the memest book of the time &ndash;  &ldquo;eXtreme Programming Explained&rdquo; (by still sober and sane Kent Beck), and trying (probably just like everyone else at the time) to &ldquo;distill&rdquo; some grains of &ldquo;wisdom&rdquo; from the torrents of &ldquo;mostly bullshit&rdquo;.
+The real take away from the whole manuscript (at least for me) was that writing tests is what really change everything, in particular, they are, indeed, allow quick, confident and &ldquo;cheap&rdquo; refactoring and thus really &ldquo;facilitate change&rdquo; and, yes, actually speed up the development process.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Extreme Programming Applied",
+      "item": "https://lngnmn2.github.io/articles/extreme-programming-applied/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Extreme Programming Applied",
+  "name": "Extreme Programming Applied",
+  "description": "Things begin to move way too fast, at least for me.\nThere is some amazing fact, which shows that an intuitive understanding can also be valid.\nI remember reading the memest book of the time \u0026ndash; \u0026ldquo;eXtreme Programming Explained\u0026rdquo; (by still sober and sane Kent Beck), and trying (probably just like everyone else at the time) to \u0026ldquo;distill\u0026rdquo; some grains of \u0026ldquo;wisdom\u0026rdquo; from the torrents of \u0026ldquo;mostly bullshit\u0026rdquo;.\nThe real take away from the whole manuscript (at least for me) was that writing tests is what really change everything, in particular, they are, indeed, allow quick, confident and \u0026ldquo;cheap\u0026rdquo; refactoring and thus really \u0026ldquo;facilitate change\u0026rdquo; and, yes, actually speed up the development process.\n",
+  "keywords": [
+    "AI", "LLM", "vibecoding"
+  ],
+  "articleBody": "Things begin to move way too fast, at least for me.\nThere is some amazing fact, which shows that an intuitive understanding can also be valid.\nI remember reading the memest book of the time – “eXtreme Programming Explained” (by still sober and sane Kent Beck), and trying (probably just like everyone else at the time) to “distill” some grains of “wisdom” from the torrents of “mostly bullshit”.\nThe real take away from the whole manuscript (at least for me) was that writing tests is what really change everything, in particular, they are, indeed, allow quick, confident and “cheap” refactoring and thus really “facilitate change” and, yes, actually speed up the development process.\nAs a direct consequence the discipline which lately would be popularized as Test-Driven Development or TTD naturally emerge.\nThe key point is that it forces one to focus on public (abstract) interfaces and their specifications, and this, quire independently from Kent Beck, are just direct manifestations of the universal principles (of programming, regardless the paradigm) formulated and popularized by Barbara Liskov and Michael Jackson back in the 70s.\nYou make everything abstract ([function] interface) and rigorously specify it with some simple mathematical notation using sets and functions to define or “represent” relations (just what FP guys do from the start) and stay (program) at this very level (of abstraction). It is that simple.\nIf there are any merit (non-bullshit) in XP and TTD (as disciplined “lightweight” methodologies) it is in implicitly (subtly) forcing one –via focusing on tests and even starting with tests (the “tests before code” mantra) and making the tests to be the source of validation and justified, “safe” confidence – to stay at the proper level of abstraction.\nNow guess what? Fucking LLMs (gemini-cli in particular) have proved (validated) the whole approach.\nOne could allow a mere syntax-level slop generator to perform actual “refactoring” of your code (with over-writing the content of the files and even calling git commit on them!) if, and only if, one can quickly validate the changes first by making sure that they do not break the tests, and then, implicitly, that the interfaces are not broken, and thus, they are (still) adhere to the specifications.\nTo actually resist to become overwhelmed (which is quite normal, and even expected, when so many of highly technical changes happen at once) is to force (via discipline and practice) the mind to stay and remain at the level of interfaces and specifications (just as they taught you back in the 70s ).\nIn short, the “main” (less abstract) core principle of XP (and implicitly of TTD) have been proven (by example, and intuitively) to be valid for “pair programming” with an advanced slop generator.\nIt even appears (falsely) as a direct continuum from that very meme book (Google’s SWE book already supersede it).\nAdvanced static typing (type-level constraints and guarantees – trait-based, with extension methods) helps a lot, while tests alone are obviously not enough.\nI already wrote that Rust (and the most constrained languages in general) are the best for vapecoding.\n",
+  "wordCount" : "509",
+  "inLanguage": "en",
+  "datePublished": "2026-01-04T00:00:00+05:45",
+  "dateModified": "2026-01-04T17:13:12+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/extreme-programming-applied/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Extreme Programming Applied
+    </h1>
+    <div class="post-meta"><span title='2026-01-04 00:00:00 +0545 +0545'>January 4, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Things begin to move way too fast, at least for me.</p>
+<p>There is some amazing fact, which shows that an intuitive understanding can also be valid.</p>
+<p>I remember reading the memest book of the time &ndash;  <em>&ldquo;eXtreme Programming Explained&rdquo;</em> (by still sober and sane Kent Beck), and trying (probably just like everyone else at the time) to &ldquo;distill&rdquo; some grains of &ldquo;wisdom&rdquo; from the torrents of &ldquo;mostly bullshit&rdquo;.</p>
+<p>The real take away from the whole manuscript (at least for me) was that writing <em><strong>tests</strong></em> is what really change everything, in particular, they are, indeed, allow quick, <em>confident</em> and &ldquo;cheap&rdquo; refactoring and thus really &ldquo;facilitate change&rdquo; and, yes, actually speed up the development process.</p>
+<p>As a direct consequence the discipline which lately would be popularized as Test-Driven Development or TTD naturally emerge.</p>
+<p>The key point is that it <em>forces</em> one to focus on public (abstract) interfaces and their specifications, and this, quire independently from Kent Beck, are just direct manifestations of the universal principles (of programming, regardless the  paradigm) formulated and popularized by Barbara Liskov and Michael Jackson back in the 70s.</p>
+<p>You make everything abstract ([function] interface) and rigorously specify it with some simple mathematical notation using sets and functions to define or &ldquo;represent&rdquo; relations (just what FP guys do from the start) and stay (program) at this very level (of abstraction). It is that simple.</p>
+<p>If there are any merit (non-bullshit) in <code>XP</code> and <code>TTD</code> (as disciplined &ldquo;lightweight&rdquo; methodologies) it is in implicitly (subtly) forcing one &ndash;via focusing on tests and even starting with tests (the &ldquo;tests before code&rdquo; mantra) and making the tests to be the source of validation and justified, &ldquo;safe&rdquo; confidence &ndash; to stay at the proper level of abstraction.</p>
+<p>Now guess what? Fucking LLMs (<code>gemini-cli</code> in particular) have proved (validated) the whole approach.</p>
+<p>One could  allow a <em>mere syntax-level slop generator</em> to perform actual &ldquo;refactoring&rdquo; of your code (with over-writing the content of the files and even calling <code>git commit</code> on them!) if, and only if, one can quickly validate the changes <em>first</em> by making sure that <em>they do not break the tests</em>, and then, implicitly, that the interfaces are not broken, and thus, they are (still) adhere to the  specifications.</p>
+<p>To actually resist to become <em>overwhelmed</em> (which is quite normal, and even <em>expected</em>, when so many of highly technical changes happen at once) is to force (via discipline and practice) the mind to stay and remain at the level of interfaces and specifications (just as they taught you back in the 70s ).</p>
+<p>In short, the &ldquo;main&rdquo; (less abstract) core principle of <code>XP</code> (and implicitly of <code>TTD</code>) have been proven (by example, and  intuitively) to be valid for &ldquo;pair programming&rdquo; with an advanced slop generator.</p>
+<p>It even appears (falsely) as a direct <em>continuum</em>  from that very meme book (Google&rsquo;s SWE book already supersede it).</p>
+<p>Advanced static typing (type-level constraints and guarantees &ndash; trait-based, with extension methods) helps a lot, while tests alone are obviously not enough.</p>
+<p>I already wrote that Rust (and the most constrained languages in general) are the best for vapecoding.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/vibecoding/">Vibecoding</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

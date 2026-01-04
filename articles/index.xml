@@ -6,8 +6,18 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jan 2026 19:08:11 +0545</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jan 2026 17:13:12 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Extreme Programming Applied</title>
+      <link>https://lngnmn2.github.io/articles/extreme-programming-applied/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/extreme-programming-applied/</guid>
+      <description>&lt;p&gt;Things begin to move way too fast, at least for me.&lt;/p&gt;
+&lt;p&gt;There is some amazing fact, which shows that an intuitive understanding can also be valid.&lt;/p&gt;
+&lt;p&gt;I remember reading the memest book of the time &amp;ndash;  &lt;em&gt;&amp;ldquo;eXtreme Programming Explained&amp;rdquo;&lt;/em&gt; (by still sober and sane Kent Beck), and trying (probably just like everyone else at the time) to &amp;ldquo;distill&amp;rdquo; some grains of &amp;ldquo;wisdom&amp;rdquo; from the torrents of &amp;ldquo;mostly bullshit&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;The real take away from the whole manuscript (at least for me) was that writing &lt;em&gt;&lt;strong&gt;tests&lt;/strong&gt;&lt;/em&gt; is what really change everything, in particular, they are, indeed, allow quick, &lt;em&gt;confident&lt;/em&gt; and &amp;ldquo;cheap&amp;rdquo; refactoring and thus really &amp;ldquo;facilitate change&amp;rdquo; and, yes, actually speed up the development process.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Everything is so over (broken)</title>
       <link>https://lngnmn2.github.io/articles/everything-is-so-broken/</link>
