@@ -6,8 +6,25 @@
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jan 2026 09:33:18 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 08 Jan 2026 19:37:30 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cognitive Biases At Work</title>
+      <link>https://lngnmn2.github.io/articles/cognitive-biases-at-work/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/cognitive-biases-at-work/</guid>
+      <description>&lt;p&gt;There is some output (slop) I got from my recent sessions (yes, yes, I am guilty and ashamed):&lt;/p&gt;
+&lt;p&gt;#+BEGIN_SRC markdown
+### Validation Summary
+I have verified the implementation across the &lt;strong&gt;&lt;strong&gt;Functional Core&lt;/strong&gt;&lt;/strong&gt; (Domain) and the &lt;strong&gt;&lt;strong&gt;Imperative Shell&lt;/strong&gt;&lt;/strong&gt; (Infrastructure &amp;amp; Interface), confirming that the code doesn&amp;rsquo;t just &amp;ldquo;look&amp;rdquo; right but functionally enforces the rules.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;strong&gt;1. Domain Layer (Functional Core)&lt;/strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;strict-encapsulation-all-primitives--f64-string--are-wrapped-in-newtypes--price-quantity-symbol--with-private-fields-dot&#34;&gt;&lt;strong&gt;&lt;strong&gt;Strict Encapsulation:&lt;/strong&gt;&lt;/strong&gt; All primitives (`f64`, `String`) are wrapped in &lt;strong&gt;&lt;strong&gt;Newtypes&lt;/strong&gt;&lt;/strong&gt; (`Price`, `Quantity`, `Symbol`) with private fields.&lt;/h2&gt;
+&lt;h2 id=&#34;correctness-by-construction-smart-constructors--new--result--enforce-invariants--e-dot-g-dot-price-0-symbol-format--dot-it-is-impossible-to-instantiate-invalid-domain-objects-dot&#34;&gt;&lt;strong&gt;&lt;strong&gt;Correctness by Construction:&lt;/strong&gt;&lt;/strong&gt; &lt;strong&gt;&lt;strong&gt;Smart Constructors&lt;/strong&gt;&lt;/strong&gt; (`new() -&amp;gt; Result`) enforce invariants (e.g., price &amp;gt; 0, symbol format). It is impossible to instantiate invalid domain objects.&lt;/h2&gt;
+&lt;h2 id=&#34;algebraic-data-types-order-is-a-sum-type--enum--of-product-types--structs--exhaustively-modeling-valid-order-strategies--market-limit-stoplimit--dot&#34;&gt;&lt;strong&gt;&lt;strong&gt;Algebraic Data Types:&lt;/strong&gt;&lt;/strong&gt; `Order` is a Sum Type (Enum) of Product Types (Structs), exhaustively modeling valid order strategies (`Market`, `Limit`, `StopLimit`).&lt;/h2&gt;
+&lt;h2 id=&#34;typestate-pattern-the-orderbuilder-uses-zero-sized-types--nosymbol-withsymbol--to-enforce-the-order-of-operations-at-compile-time-dot-you-cannot-build-an-order-without-mandatory-fields-dot&#34;&gt;&lt;strong&gt;&lt;strong&gt;Typestate Pattern:&lt;/strong&gt;&lt;/strong&gt; The `OrderBuilder` uses zero-sized types (`NoSymbol`, `WithSymbol`) to enforce the order of operations at compile time. You cannot build an order without mandatory fields.&lt;/h2&gt;
+&lt;h2 id=&#34;error-handling-domainerror-is-a-specific-sum-type-using-thiserror-implementing-the-make-illegal-states-unrepresentable-rule-dot&#34;&gt;&lt;strong&gt;&lt;strong&gt;Error Handling:&lt;/strong&gt;&lt;/strong&gt; `DomainError` is a specific Sum Type using `thiserror`, implementing the &amp;ldquo;Make Illegal States Unrepresentable&amp;rdquo; rule.&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;strong&gt;2. Infrastructure &amp;amp; Interface (Imperative Shell)&lt;/strong&gt;&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Extreme Programming Applied</title>
       <link>https://lngnmn2.github.io/articles/extreme-programming-applied/</link>

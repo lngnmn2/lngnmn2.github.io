@@ -138,6 +138,22 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Cognitive Biases At Work
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>There is some output (slop) I got from my recent sessions (yes, yes, I am guilty and ashamed):
+#&#43;BEGIN_SRC markdown ### Validation Summary I have verified the implementation across the Functional Core (Domain) and the Imperative Shell (Infrastructure &amp; Interface), confirming that the code doesn’t just “look” right but functionally enforces the rules.
+1. Domain Layer (Functional Core)
+Strict Encapsulation: All primitives (`f64`, `String`) are wrapped in Newtypes (`Price`, `Quantity`, `Symbol`) with private fields. Correctness by Construction: Smart Constructors (`new() -&gt; Result`) enforce invariants (e.g., price &gt; 0, symbol format). It is impossible to instantiate invalid domain objects. Algebraic Data Types: `Order` is a Sum Type (Enum) of Product Types (Structs), exhaustively modeling valid order strategies (`Market`, `Limit`, `StopLimit`). Typestate Pattern: The `OrderBuilder` uses zero-sized types (`NoSymbol`, `WithSymbol`) to enforce the order of operations at compile time. You cannot build an order without mandatory fields. Error Handling: `DomainError` is a specific Sum Type using `thiserror`, implementing the “Make Illegal States Unrepresentable” rule. 2. Infrastructure &amp; Interface (Imperative Shell)
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-08 00:00:00 +0545 +0545'>January 8, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <a class="entry-link" aria-label="post link to Cognitive Biases At Work" href="https://lngnmn2.github.io/articles/cognitive-biases-at-work/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Some Aha Moments
     </h2>
   </header>
