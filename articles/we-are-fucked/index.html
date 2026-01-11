@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>We are fucked | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="We are fucked. This time for real.
+I just had some 3 hours Gemini3 session of some 50 interactions, which bootstrapped for me a prototype of the project I wished to build for years. In Just  a Couple of Hours, motherfuckers.
+Yes, the code won&rsquo;t compile, and will be full of subtle hallucinations, The markdown files would be more of &ldquo;wishful thinking&rdquo; and &ldquo;confirmation bias&rdquo;  than a formal, rigorous description of the code, but still.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/we-are-fucked/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/we-are-fucked/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/we-are-fucked/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="We are fucked">
+  <meta property="og:description" content="We are fucked. This time for real.
+I just had some 3 hours Gemini3 session of some 50 interactions, which bootstrapped for me a prototype of the project I wished to build for years. In Just a Couple of Hours, motherfuckers.
+Yes, the code won’t compile, and will be full of subtle hallucinations, The markdown files would be more of “wishful thinking” and “confirmation bias” than a formal, rigorous description of the code, but still.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-01-11T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-01-11T11:29:15+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="We are fucked">
+<meta name="twitter:description" content="We are fucked. This time for real.
+I just had some 3 hours Gemini3 session of some 50 interactions, which bootstrapped for me a prototype of the project I wished to build for years. In Just  a Couple of Hours, motherfuckers.
+Yes, the code won&rsquo;t compile, and will be full of subtle hallucinations, The markdown files would be more of &ldquo;wishful thinking&rdquo; and &ldquo;confirmation bias&rdquo;  than a formal, rigorous description of the code, but still.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "We are fucked",
+      "item": "https://lngnmn2.github.io/articles/we-are-fucked/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "We are fucked",
+  "name": "We are fucked",
+  "description": "We are fucked. This time for real.\nI just had some 3 hours Gemini3 session of some 50 interactions, which bootstrapped for me a prototype of the project I wished to build for years. In Just a Couple of Hours, motherfuckers.\nYes, the code won\u0026rsquo;t compile, and will be full of subtle hallucinations, The markdown files would be more of \u0026ldquo;wishful thinking\u0026rdquo; and \u0026ldquo;confirmation bias\u0026rdquo; than a formal, rigorous description of the code, but still.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "We are fucked. This time for real.\nI just had some 3 hours Gemini3 session of some 50 interactions, which bootstrapped for me a prototype of the project I wished to build for years. In Just a Couple of Hours, motherfuckers.\nYes, the code won’t compile, and will be full of subtle hallucinations, The markdown files would be more of “wishful thinking” and “confirmation bias” than a formal, rigorous description of the code, but still.\nAs long as you know what your are doing, is familiar with the underlying principles and concepts, without focusing too much on the irrelevant (yet) implementation details, one could “guide” it to build, lets say, a functional REPL based on the last 60 years of research in Functional Language’s interpreters and the formally and rigorously defined underlying abstractions, which are being used in ML, Ocaml, Haskell and Scheme.\nYes, it will take a lot of time to clean everything up, fix the hallucinations, and make it run, but just getting a principle-guided formal-spec-based prototype it is simply mindblowing experience.\nMake no mistake, it has a type-checker, “compiles” to thunks and tracks its Environment changes under MVCC, has transactions, checkpoints and rollbacks, at least in the slop.\nI understand that this whole session was a mutual hallucination in a tight feedback loop, while I only have time to skim through the slop, save if for the further analysis and to ask for the next refactoring, while “we both” are sill on it (“in the zone”). It is crucially important for me not to fall out of the “flow” and not to lose the “excitement” and interest too soon, similar to stopping running before at least 9 km.\nThis is how a real cognitive illusion (called Maya by the Upanishadic seers) actually works “in practice”.\nAnd yet, the slop is not a complete bullshit – it is a “simulation” (an appearance) of actual incremental development (or an evolution, based on the previously discovered “stable forms”) of complex, technically challenging project based on the last 60 years of research in [simplistic] FP languages implementations put on fast-forward.\nYou can put in another way – imagine that the model guided by your principle-guided wishful thinking wrote for you a [draft of] version of “Crafting Interpreters” book in just a few hours session, which, after prof-reading, will easily beat the paperback one in any metric, including clarity and rigor.\nThis was done in the Gemini web interface on a whim. I will write everything down structured in the most idiomatic way and then let gemini-cli incrementally refine it up to a “fixed point” when nothing else could be further simplified and clarified, to approach a form of art.\nOne more time – it is only partially an illusion and an appearance – the semantics of the slop it spews out are real, the code is as constrained ad requested (to strictly well-researched mimic FP patterns, like State Monad-lke composition and idiomatic fallback to the previous validated state on a failure case). So, it can incrementally bootstrap [a prototype of] an “Enterprise-grade” (i.e. worth of millions of dollars) rigorously defined and validated system in just hours instead of moths – that’s a few of orders of magnitude.\nThe sometimes the whole modules are stateless (no hidden mutable state in principle), with no nulls, no mut, no \u0026mut, no imperative loops and no imperative indexing policies being enforced.\nAnd then the structural type-level guarantees (instead of runtime checks) and the borrow-checker guarantees (instead of relying on a faulty runtime polymorphism) would be applied and “mechanically verified” by he compiler.\nNow what?\n",
+  "wordCount" : "599",
+  "inLanguage": "en",
+  "datePublished": "2026-01-11T00:00:00+05:45",
+  "dateModified": "2026-01-11T11:29:15+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/we-are-fucked/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      We are fucked
+    </h1>
+    <div class="post-meta"><span title='2026-01-11 00:00:00 +0545 +0545'>January 11, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>We are fucked. This time for real.</p>
+<p>I just had some 3 hours Gemini3 session of some 50 interactions, which bootstrapped for me a prototype of the project I wished to build for years. <strong>In Just  a Couple of Hours</strong>, motherfuckers.</p>
+<p>Yes, the code won&rsquo;t compile, and will be full of subtle hallucinations, The markdown files would be more of &ldquo;wishful thinking&rdquo; and &ldquo;confirmation bias&rdquo;  than a formal, rigorous description of the code, but still.</p>
+<p>As long as you know what your are doing, is familiar with the underlying principles and concepts, without focusing too much on the irrelevant (yet) implementation details, one could &ldquo;guide&rdquo; it to build, lets say, a functional REPL based on the last 60 years of research in Functional Language&rsquo;s interpreters and the formally and rigorously defined underlying abstractions, which are being used in ML, Ocaml, Haskell and Scheme.</p>
+<p>Yes, it will take a lot of time to clean everything up, fix the hallucinations, and make it run, but  just getting a principle-guided formal-spec-based prototype it is simply mindblowing experience.</p>
+<p>Make no mistake, it has a type-checker, &ldquo;compiles&rdquo; to thunks and tracks its Environment changes under MVCC, has transactions, checkpoints and rollbacks, at least in the slop.</p>
+<p>I understand that this whole session was a mutual hallucination in a tight feedback loop, while I only have time to skim through the slop, save if for the further analysis and to ask for the next refactoring, while &ldquo;we both&rdquo; are sill on it (&ldquo;in the zone&rdquo;). It is crucially important for me not to fall out of the &ldquo;flow&rdquo; and not to lose the &ldquo;excitement&rdquo; and interest too soon, similar to stopping running before at least 9 km.</p>
+<p>This is how a real cognitive illusion (called Maya by the Upanishadic seers) actually works &ldquo;in practice&rdquo;.</p>
+<p>And yet, the slop is not a complete bullshit &ndash; it is a &ldquo;simulation&rdquo; (an appearance) of actual incremental development (or an evolution, based on the previously discovered &ldquo;stable forms&rdquo;) of complex, technically challenging project based on the last 60 years of research in [simplistic] FP languages implementations put on <em>fast-forward</em>.</p>
+<p>You can put in another way &ndash; imagine that the model guided by your principle-guided wishful thinking wrote for you a [draft of] version of &ldquo;Crafting Interpreters&rdquo; book in just  a few hours session, which, after prof-reading, will easily beat the paperback one in any metric, including clarity and rigor.</p>
+<p>This was done in the Gemini web interface on a whim. I will write everything down structured in the most idiomatic way and then let <code>gemini-cli</code> incrementally refine it up to a &ldquo;fixed point&rdquo; when nothing else could be further simplified and clarified, to approach a form of art.</p>
+<p>One more time &ndash; it is only partially an illusion and an appearance &ndash; the semantics of the slop it spews out are real, the code is as constrained ad requested (to strictly well-researched mimic FP patterns, like State Monad-lke composition and idiomatic fallback to the previous validated state on a failure case). So, it can incrementally bootstrap [a prototype of] an &ldquo;Enterprise-grade&rdquo; (i.e. worth of millions of dollars) rigorously defined and validated system in just <strong>hours</strong> instead of <strong>moths</strong> &ndash; that&rsquo;s a few of orders of magnitude.</p>
+<p>The sometimes the whole modules are stateless (no hidden mutable state in principle), with <code>no nulls</code>, <code>no mut</code>, <code>no &amp;mut</code>, <code>no imperative loops</code> and <code>no imperative indexing</code> policies being enforced.</p>
+<p>And then the structural type-level guarantees (instead of runtime checks) and the borrow-checker guarantees (instead of relying on a faulty runtime  polymorphism) would be applied and &ldquo;mechanically verified&rdquo; by he compiler.</p>
+<p>Now what?</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
