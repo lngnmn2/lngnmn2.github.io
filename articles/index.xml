@@ -6,8 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 09:35:03 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 12:25:06 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>F-Lang</title>
+      <link>https://lngnmn2.github.io/articles/f-lang/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/f-lang/</guid>
+      <description>&lt;p&gt;Here is what is possible if you have some education about the last 50 years of research in Program Language semantics, and have a refined taste (influenced by proper mathematics):&lt;/p&gt;
+&lt;p&gt;The last third of the chat, when we switched back to mathematical concepts, contains a significant achievement, which I leave in the form &amp;ldquo;as it is&amp;rdquo; for now (without refinement and proper publishing).
+The whole thing is a nice (but a bit tough) read anyway, and this is &lt;em&gt;why&lt;/em&gt; I&amp;rsquo;m publishing it &amp;ldquo;as is&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Another Day – Another Slop</title>
       <link>https://lngnmn2.github.io/articles/another-day-another-slop/</link>
@@ -1032,13 +1041,6 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
   </description>
     </item>
     <item>
-      <title>LLM predictions</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
-    </item>
-    <item>
       <title>On foundations of mathematics</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0545</pubDate>
@@ -1345,6 +1347,14 @@ through practice and experience (not reading or watching).&lt;/p&gt;
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
+    </item>
+    <item>
+      <title>GNU Emacs</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
