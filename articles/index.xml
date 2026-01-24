@@ -6,8 +6,16 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jan 2026 17:48:00 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jan 2026 14:42:49 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Just an Illusion</title>
+      <link>https://lngnmn2.github.io/articles/just-an-illusion/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/just-an-illusion/</guid>
+      <description>&lt;p&gt;Modern coding LLMs are still a shitshow. I would not even comment on the humanties &amp;ndash; the &amp;ldquo;sectarian consensus&amp;rdquo; abstract (ill-defined) verbiage (subtle bullshit) it could produce &amp;ndash; not even an expert could &amp;ldquo;validate&amp;rdquo;  the &amp;ldquo;correctness&amp;rdquo; of the slop (such notion is not defined in their domains).&lt;/p&gt;
+&lt;p&gt;It would be interesting to heavily prompt it about rigorous mathematics, properly captured, generalized and named from the observed aspects of What Is (which is the only proper mathematics, including the derivations of pure abstract algebraic structures, like Monoid, a Group, Latice or even a Category) &amp;hellip; Okay, some day.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>F-Lang</title>
       <link>https://lngnmn2.github.io/articles/f-lang/</link>
