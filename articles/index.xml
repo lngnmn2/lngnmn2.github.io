@@ -6,8 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jan 2026 14:42:49 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jan 2026 19:10:06 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>@karpathy On Claude</title>
+      <link>https://lngnmn2.github.io/articles/karpathy-on-claude/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/karpathy-on-claude/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://x.com/karpathy/status/2015883857489522876&#34;&gt;https://x.com/karpathy/status/2015883857489522876&lt;/a&gt; &amp;ndash; 5.5M views. What could we possible do?&lt;/p&gt;
+&lt;p&gt;Meanwhile, my 2 cents: The current Sonet 4.5 via the web-interface (free-tier) is what I have access to. It can generate very convincing verbiage, consistent with we could find in the best books. That only means it has been trained on the [pirated] books too.&lt;/p&gt;
+&lt;p&gt;Last iteration it wrote a very nice few pages summary of the Google&amp;rsquo;s testing practices, found in the public domain, like the SWE book, Abseil guidelines, the Testing blog, etc. This is only impressive because it managed to combine all these sources into a coherent narrative, without any major hallucinations.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Just an Illusion</title>
       <link>https://lngnmn2.github.io/articles/just-an-illusion/</link>

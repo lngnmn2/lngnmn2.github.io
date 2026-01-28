@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>@karpathy On Claude | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="https://x.com/karpathy/status/2015883857489522876 &ndash; 5.5M views. What could we possible do?
+Meanwhile, my 2 cents: The current Sonet 4.5 via the web-interface (free-tier) is what I have access to. It can generate very convincing verbiage, consistent with we could find in the best books. That only means it has been trained on the [pirated] books too.
+Last iteration it wrote a very nice few pages summary of the Google&rsquo;s testing practices, found in the public domain, like the SWE book, Abseil guidelines, the Testing blog, etc. This is only impressive because it managed to combine all these sources into a coherent narrative, without any major hallucinations.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/karpathy-on-claude/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/karpathy-on-claude/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/karpathy-on-claude/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="@karpathy On Claude">
+  <meta property="og:description" content="https://x.com/karpathy/status/2015883857489522876 – 5.5M views. What could we possible do?
+Meanwhile, my 2 cents: The current Sonet 4.5 via the web-interface (free-tier) is what I have access to. It can generate very convincing verbiage, consistent with we could find in the best books. That only means it has been trained on the [pirated] books too.
+Last iteration it wrote a very nice few pages summary of the Google’s testing practices, found in the public domain, like the SWE book, Abseil guidelines, the Testing blog, etc. This is only impressive because it managed to combine all these sources into a coherent narrative, without any major hallucinations.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-01-28T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-01-28T19:10:06+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="@karpathy On Claude">
+<meta name="twitter:description" content="https://x.com/karpathy/status/2015883857489522876 &ndash; 5.5M views. What could we possible do?
+Meanwhile, my 2 cents: The current Sonet 4.5 via the web-interface (free-tier) is what I have access to. It can generate very convincing verbiage, consistent with we could find in the best books. That only means it has been trained on the [pirated] books too.
+Last iteration it wrote a very nice few pages summary of the Google&rsquo;s testing practices, found in the public domain, like the SWE book, Abseil guidelines, the Testing blog, etc. This is only impressive because it managed to combine all these sources into a coherent narrative, without any major hallucinations.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "@karpathy On Claude",
+      "item": "https://lngnmn2.github.io/articles/karpathy-on-claude/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "@karpathy On Claude",
+  "name": "@karpathy On Claude",
+  "description": "https://x.com/karpathy/status/2015883857489522876 \u0026ndash; 5.5M views. What could we possible do?\nMeanwhile, my 2 cents: The current Sonet 4.5 via the web-interface (free-tier) is what I have access to. It can generate very convincing verbiage, consistent with we could find in the best books. That only means it has been trained on the [pirated] books too.\nLast iteration it wrote a very nice few pages summary of the Google\u0026rsquo;s testing practices, found in the public domain, like the SWE book, Abseil guidelines, the Testing blog, etc. This is only impressive because it managed to combine all these sources into a coherent narrative, without any major hallucinations.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "https://x.com/karpathy/status/2015883857489522876 – 5.5M views. What could we possible do?\nMeanwhile, my 2 cents: The current Sonet 4.5 via the web-interface (free-tier) is what I have access to. It can generate very convincing verbiage, consistent with we could find in the best books. That only means it has been trained on the [pirated] books too.\nLast iteration it wrote a very nice few pages summary of the Google’s testing practices, found in the public domain, like the SWE book, Abseil guidelines, the Testing blog, etc. This is only impressive because it managed to combine all these sources into a coherent narrative, without any major hallucinations.\nThe code, however, what it generated was a stale pasta from github repos – the lua configuration for Neovim (yeah, actually know what your are asking for first!). The config failed in a subtle ways, and I even could tell (not, really) from where the pieces were taken (I have seen tons of this shit across github).\nNo suprises here.\nSo, the hype. When you DO NOT KNOW your subject really well, you cannot actually evaluate the quality of the slop, and you are very impressed, just like our “messiah”, who is barely a coder. If, however, you have spent years on some niche, obscure domains, then you can see how crappy the slop actually is, compared to what it could be by just following some “common-sense” principles, outlined in the popular literature (“Modern Software Development”, “the Google SWE book”, “Domain Model Made Functional”, and what not). Yes, I am well-read Humbert.\nGemini3-pro, on the other hand, wrote almost no verbiage, but the code and the comments. The code was also a github pasta, but it felt way more “professional”.\nI do not know how Google trains its models, but it is kind of obvious, that they just have to feed in their “30+ years” of best practices on the monorepo, especially that applied “leaning to the left” maxim, which is nothing but a clever summary of the essential TDD and XP practices, which are the most essential for writing good code.\nAnyway, who are we compared to @karpathy? Just peasants.\nAnd no, no miracles that Anthropic is promising to us every single day, in sight.\n",
+  "wordCount" : "370",
+  "inLanguage": "en",
+  "datePublished": "2026-01-28T00:00:00+05:45",
+  "dateModified": "2026-01-28T19:10:06+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/karpathy-on-claude/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      @karpathy On Claude
+    </h1>
+    <div class="post-meta"><span title='2026-01-28 00:00:00 +0545 +0545'>January 28, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://x.com/karpathy/status/2015883857489522876">https://x.com/karpathy/status/2015883857489522876</a> &ndash; 5.5M views. What could we possible do?</p>
+<p>Meanwhile, my 2 cents: The current Sonet 4.5 via the web-interface (free-tier) is what I have access to. It can generate very convincing verbiage, consistent with we could find in the best books. That only means it has been trained on the [pirated] books too.</p>
+<p>Last iteration it wrote a very nice few pages summary of the Google&rsquo;s testing practices, found in the public domain, like the SWE book, Abseil guidelines, the Testing blog, etc. This is only impressive because it managed to combine all these sources into a coherent narrative, without any major hallucinations.</p>
+<p>The code, however, what it generated was a stale pasta from github repos &ndash; the lua configuration for Neovim (yeah, actually <em>know</em> what your are asking for <em>first</em>!).  The config failed in a subtle ways, and I even could tell (not, really) from where the pieces were taken (I have seen tons of this shit across github).</p>
+<p>No suprises here.</p>
+<p>So, the hype. When you <em>DO NOT KNOW</em> your subject really well, you cannot actually evaluate the quality of the slop, and you are <em>very</em> impressed, just like our &ldquo;messiah&rdquo;, who is barely a <em>coder</em>. If, however, you  have spent years on some niche, obscure domains, then you can see how crappy the slop actually is, compared to what it could be by just following some &ldquo;common-sense&rdquo; principles, outlined in the <em>popular</em> literature (&ldquo;Modern Software Development&rdquo;, &ldquo;the Google SWE book&rdquo;, &ldquo;Domain Model Made Functional&rdquo;, and what not). Yes, I am well-read Humbert.</p>
+<p>Gemini3-pro, on the other hand, wrote almost no verbiage, but the code and the comments. The code was also a github pasta, but it <em>felt</em> way more &ldquo;professional&rdquo;.</p>
+<p>I do not know how Google trains its models, but it is kind of obvious, that they just have to feed in their &ldquo;30+ years&rdquo;  of best practices on the monorepo, especially that <em>applied</em> &ldquo;leaning to the left&rdquo; maxim, which is nothing but a clever summary of the essential TDD and XP practices, which are the most essential for writing <em>good</em> code.</p>
+<p>Anyway, who are we compared to @karpathy? Just peasants.</p>
+<p>And no, no <em>miracles</em> that Anthropic is promising to us every single day, in sight.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
