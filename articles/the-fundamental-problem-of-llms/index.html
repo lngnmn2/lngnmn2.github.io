@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Fundamental Problem of LLM-assistant Vapecoding | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="Here we formulate (and analyze the implications of) The Fundamental Problem of LLM-assistant vapecoding.
+The problem is this: There is, at the moment, no machinery to systematically and correctly bridge the gap between the generated slop (code) and the accompanied verbiage, which appear to define the semantics of the code.
+What appears to be coherent and consistent is only a cognitive illusion, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-fundamental-problem-of-llms/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-fundamental-problem-of-llms/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/the-fundamental-problem-of-llms/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The Fundamental Problem of LLM-assistant Vapecoding">
+  <meta property="og:description" content="Here we formulate (and analyze the implications of) The Fundamental Problem of LLM-assistant vapecoding.
+The problem is this: There is, at the moment, no machinery to systematically and correctly bridge the gap between the generated slop (code) and the accompanied verbiage, which appear to define the semantics of the code.
+What appears to be coherent and consistent is only a cognitive illusion, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-01-29T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-01-29T10:55:37+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Fundamental Problem of LLM-assistant Vapecoding">
+<meta name="twitter:description" content="Here we formulate (and analyze the implications of) The Fundamental Problem of LLM-assistant vapecoding.
+The problem is this: There is, at the moment, no machinery to systematically and correctly bridge the gap between the generated slop (code) and the accompanied verbiage, which appear to define the semantics of the code.
+What appears to be coherent and consistent is only a cognitive illusion, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Fundamental Problem of LLM-assistant Vapecoding",
+      "item": "https://lngnmn2.github.io/articles/the-fundamental-problem-of-llms/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Fundamental Problem of LLM-assistant Vapecoding",
+  "name": "The Fundamental Problem of LLM-assistant Vapecoding",
+  "description": "Here we formulate (and analyze the implications of) The Fundamental Problem of LLM-assistant vapecoding.\nThe problem is this: There is, at the moment, no machinery to systematically and correctly bridge the gap between the generated slop (code) and the accompanied verbiage, which appear to define the semantics of the code.\nWhat appears to be coherent and consistent is only a cognitive illusion, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "Here we formulate (and analyze the implications of) The Fundamental Problem of LLM-assistant vapecoding.\nThe problem is this: There is, at the moment, no machinery to systematically and correctly bridge the gap between the generated slop (code) and the accompanied verbiage, which appear to define the semantics of the code.\nWhat appears to be coherent and consistent is only a cognitive illusion, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].\nHere is how a human would do this.\nAnalyze the language used by the domain experts and extract the key terms, the entities and the kinds of entities, the individual “stories”, and explicit (and implicit) rules. Model the “Domain” as a mathematical model, using Sets and Relations (mappings as pure functions). List all possible states for each entity [to be in] and formally define a FSM, and then implement explicit state transition functions (transducers). Represent these entities using only the proper Algebraic Data Types (sums, products. arrows) and encapsulate these behind a clear abstraction barrier – inside Abstract Data Types (ADT). Identify the common traits between the Domain-Specific Abstract Data Types, and write down the corresponding Traits (type-classes) Analyze the resulting Traits and add specific constraints (trait bounds) –the more the better. Use the stateless abstract interfaces and the only public interfaces exported from an orthogonal, loose-coupled module, which does only one specific thing (but does it well). Apply the XP and TDD practices and now that new meme-book “Modern Software Development” (which looks like an AI-assisted rip-off of all the previous painfully discovered practices). A lot more subtleties, rules and heuristics. No LLM in existence does anything like this, in principle. The actual algorithms being used (actually implemented) at any stage of the whole mathematical pipeline use “dumb” weights and have “no notion” of the underlying semantics of any kind.\nOne more time: the problem of connecting the semi-formal text to a formal code is non-trivial (the last 50 years of “research” and millions of man-hours were spent to just a few new memes) and by no means is “solved” by LLMs. the LLMs only succeed in producing a convincing appearance of everything being “right”.\nWhat appears to be a “rigorous” and over-confidently presented statements about the code and the explanations are only a “cognitive illusion”, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].\nThe meme-theory about multi-dimension topological clustering of “tokens” into “clusters, which capture the semantic distances” (Slutsker, and other abstract bullshitters) and the “next-token prediction” inference algorithm is not a substitute for the actual understanding of the underlying semantics of the domain. This shall be obvious even to our messiah @katpathy. He just chooses to ignore this obvious fact, because it does not fit his narrative of “AI will solve everything”.\nThere is actually nothing more to say about this. The problem is clear, and the implications are self-evident.\nJust look carefully at the slop and try to actually validate the claims made in the verbiage. You will see that there is no actual “deductible” connection between the two, since the generation process is fundamentally at the level of weights only, and thus stochastic and “apparently probabilistic”.\nThis problem cannot be solved by “better LLMs” or “more data” or “more compute”, again, in principle.\nBut yes, we can use LLMs as “coding assistants” (the Glorified Autocomplete, indeed) to help us write boilerplate code, or to help us with “syntax” or “idiomatic usage” of a specific programming language (which is exactly what Andrej is bragging about on Twitter), but forget about the correctness (of any kind) of the generated code, or the “validity” of the claims made in the verbiage.\nHave a nice day.\n",
+  "wordCount" : "629",
+  "inLanguage": "en",
+  "datePublished": "2026-01-29T00:00:00+05:45",
+  "dateModified": "2026-01-29T10:55:37+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-fundamental-problem-of-llms/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Fundamental Problem of LLM-assistant Vapecoding
+    </h1>
+    <div class="post-meta"><span title='2026-01-29 00:00:00 +0545 +0545'>January 29, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Here we formulate (and analyze the implications of) <em>The Fundamental Problem of LLM-assistant vapecoding</em>.</p>
+<p>The problem is this: <em>There is, at the moment, no machinery to systematically and correctly bridge the gap between the generated slop (code) and the accompanied verbiage, which appear to define the semantics of the code</em>.</p>
+<p>What <em>appears</em> to be coherent and consistent is only a <em>cognitive illusion</em>, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].</p>
+<p>Here is how a human would do this.</p>
+<ul>
+<li>Analyze the language used by the domain experts and extract the key terms, <em>the entities</em> and the kinds of entities, the individual &ldquo;stories&rdquo;, and explicit (and implicit) rules.</li>
+<li>Model the &ldquo;Domain&rdquo; as a mathematical model, using Sets and Relations (mappings as pure functions).</li>
+<li>List all possible states for each entity [to be in] and formally define a FSM, and then implement explicit state transition functions (transducers).</li>
+<li>Represent these entities using <em>only</em> the proper Algebraic Data Types (sums, products. arrows) and encapsulate these behind a clear abstraction barrier &ndash;  inside Abstract Data Types (ADT).</li>
+<li>Identify the <em>common traits</em> between the Domain-Specific Abstract Data Types, and write down the corresponding Traits (type-classes)</li>
+<li>Analyze the resulting Traits and add specific constraints (<em>trait bounds</em>) &ndash;the more the better.</li>
+<li>Use the stateless abstract interfaces and the only public interfaces exported from an orthogonal, loose-coupled module, which does only one specific thing (but does it well).</li>
+<li>Apply the XP and TDD practices and now that new meme-book &ldquo;Modern Software Development&rdquo; (which looks like an AI-assisted rip-off of all the previous painfully discovered practices).</li>
+<li>A lot more <em>subtleties, rules and heuristics</em>.</li>
+</ul>
+<p>No LLM in existence does anything like this, <em>in principle</em>. The actual algorithms being used (actually implemented) at any stage of the whole mathematical pipeline use &ldquo;dumb&rdquo; weights and have &ldquo;no notion&rdquo; of the underlying semantics of any kind.</p>
+<p>One more time: the problem of connecting the semi-formal text to a formal code is non-trivial (the last 50 years of &ldquo;research&rdquo; and millions of man-hours were spent to just a few new memes) and by no means is &ldquo;solved&rdquo; by LLMs. the LLMs only succeed in producing a convincing appearance of everything being &ldquo;right&rdquo;.</p>
+<p>What appears to be a &ldquo;rigorous&rdquo; and over-confidently presented statements about the code and the explanations are only a  &ldquo;cognitive illusion&rdquo;, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].</p>
+<p>The meme-theory about multi-dimension topological clustering of &ldquo;tokens&rdquo; into &ldquo;clusters, which capture the semantic distances&rdquo; (Slutsker, and other abstract bullshitters) and the &ldquo;next-token prediction&rdquo; inference algorithm is <em>not</em> a substitute for the actual <em>understanding</em> of the underlying semantics of the domain. This shall be obvious even to our messiah @katpathy. He just chooses to ignore this obvious fact, because it does not fit his narrative of &ldquo;AI will solve everything&rdquo;.</p>
+<p>There is actually nothing more to say about this. The problem is clear, and the implications are self-evident.</p>
+<p>Just look carefully at the slop and try to actually validate the claims made in the verbiage. You will see that there is no actual &ldquo;deductible&rdquo; connection between the two, since the generation process is fundamentally at the level of weights only, and thus stochastic and &ldquo;apparently probabilistic&rdquo;.</p>
+<p>This problem cannot be solved by &ldquo;better LLMs&rdquo; or &ldquo;more data&rdquo; or &ldquo;more compute&rdquo;, again, in principle.</p>
+<p>But yes, we can use LLMs as &ldquo;coding assistants&rdquo; (the <em>Glorified Autocomplete</em>, indeed) to help us write boilerplate code, or to help us with &ldquo;syntax&rdquo; or &ldquo;idiomatic usage&rdquo; of a specific programming language (which is exactly what Andrej is bragging about on Twitter), but forget about the correctness (of any kind) of the generated code, or the &ldquo;validity&rdquo; of the claims made in the verbiage.</p>
+<p>Have a nice day.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

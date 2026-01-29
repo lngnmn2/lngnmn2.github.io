@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jan 2026 19:10:06 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jan 2026 10:55:37 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,15 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Fundamental Problem of LLM-assistant Vapecoding</title>
+      <link>https://lngnmn2.github.io/articles/the-fundamental-problem-of-llms/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-fundamental-problem-of-llms/</guid>
+      <description>&lt;p&gt;Here we formulate (and analyze the implications of) &lt;em&gt;The Fundamental Problem of LLM-assistant vapecoding&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The problem is this: &lt;em&gt;There is, at the moment, no machinery to systematically and correctly bridge the gap between the generated slop (code) and the accompanied verbiage, which appear to define the semantics of the code&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;What &lt;em&gt;appears&lt;/em&gt; to be coherent and consistent is only a &lt;em&gt;cognitive illusion&lt;/em&gt;, made out of familiar words, which refer to familiar concepts of the mind, which looks plausible [to the mind].&lt;/p&gt;</description>
     </item>
     <item>
       <title>@karpathy On Claude</title>
