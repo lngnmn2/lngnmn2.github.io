@@ -6,8 +6,23 @@
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Feb 2026 07:29:42 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 10 Feb 2026 18:01:44 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eliminating The Impossible</title>
+      <link>https://lngnmn2.github.io/articles/eliminating-the-impossible/</link>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/eliminating-the-impossible/</guid>
+      <description>&lt;p&gt;AUTHOR: &lt;a href=&#34;mailto:lngnmn2@yahoo.com&#34;&gt;lngnmn2@yahoo.com&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?&amp;rdquo;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sherlock Holmes&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;p&gt;So the &amp;ldquo;compiler&amp;rdquo; is there, right on Github  [[&lt;a href=&#34;https://github.com/anthropics/claudes-c-compiler&#34;&gt;https://github.com/anthropics/claudes-c-compiler&lt;/a&gt;], and the only &lt;em&gt;interesting&lt;/em&gt; question is &amp;ldquo;but how&amp;rdquo;?&lt;/p&gt;
+&lt;p&gt;Well, maybe we are grossly exaggerating what might be going on under the hood.&lt;/p&gt;
+&lt;p&gt;There is an enormous, almost unbridgeable gap between a formal view and a statistical view of the world.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Claude&#39;s C Compiler meme</title>
       <link>https://lngnmn2.github.io/articles/claudes-c-compiler/</link>
@@ -527,6 +542,13 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
       <description>Abstract bullshitting is not enough.</description>
     </item>
     <item>
+      <title>LLM predictions</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
+    </item>
+    <item>
       <title>LLMS For Coding</title>
       <link>https://lngnmn2.github.io/articles/llms-for-coding/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0545</pubDate>
@@ -534,14 +556,6 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
       <description>&lt;p&gt;Today &lt;a href=&#34;https://news.ycombinator.com/&#34;&gt;https://news.ycombinator.com/&lt;/a&gt; is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &lt;em&gt;&amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.&lt;/p&gt;
 &lt;p&gt;If I have any understanding of these subjects at all, this is a bubble and &lt;em&gt;irrational exuberance&lt;/em&gt;. Lets try to unpack &amp;ldquo;the whys&amp;rdquo;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GNU Emacs</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
-  </description>
     </item>
   </channel>
 </rss>
