@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>On Emacs (one more time) | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="Emacs">
+<meta name="description" content="Just as I wrote before, GNU Emacs shall be considered as a Word Heritage Site, since it is an embodiment of a distinct, major culture.
+There are lots of guys who are self-proclaimed Emacs experts or even Emacs gurus (sorry, Greek philosophers), yet I find their writings either too narcissistic or too overly-verbose.
+There are some reasons about using modern GNU Emacs in a &ldquo;just right&rdquo; way, and why this is so. Notice that not everything is just a matter of an opinion or a personal preference. Some principles are just stand prior anything subjective.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/on-emacs-one-more-time/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/on-emacs-one-more-time/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/on-emacs-one-more-time/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="On Emacs (one more time)">
+  <meta property="og:description" content="Just as I wrote before, GNU Emacs shall be considered as a Word Heritage Site, since it is an embodiment of a distinct, major culture.
+There are lots of guys who are self-proclaimed Emacs experts or even Emacs gurus (sorry, Greek philosophers), yet I find their writings either too narcissistic or too overly-verbose.
+There are some reasons about using modern GNU Emacs in a “just right” way, and why this is so. Notice that not everything is just a matter of an opinion or a personal preference. Some principles are just stand prior anything subjective.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-02-17T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-02-17T14:16:54+05:45">
+    <meta property="article:tag" content="Emacs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="On Emacs (one more time)">
+<meta name="twitter:description" content="Just as I wrote before, GNU Emacs shall be considered as a Word Heritage Site, since it is an embodiment of a distinct, major culture.
+There are lots of guys who are self-proclaimed Emacs experts or even Emacs gurus (sorry, Greek philosophers), yet I find their writings either too narcissistic or too overly-verbose.
+There are some reasons about using modern GNU Emacs in a &ldquo;just right&rdquo; way, and why this is so. Notice that not everything is just a matter of an opinion or a personal preference. Some principles are just stand prior anything subjective.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "On Emacs (one more time)",
+      "item": "https://lngnmn2.github.io/articles/on-emacs-one-more-time/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "On Emacs (one more time)",
+  "name": "On Emacs (one more time)",
+  "description": "Just as I wrote before, GNU Emacs shall be considered as a Word Heritage Site, since it is an embodiment of a distinct, major culture.\nThere are lots of guys who are self-proclaimed Emacs experts or even Emacs gurus (sorry, Greek philosophers), yet I find their writings either too narcissistic or too overly-verbose.\nThere are some reasons about using modern GNU Emacs in a \u0026ldquo;just right\u0026rdquo; way, and why this is so. Notice that not everything is just a matter of an opinion or a personal preference. Some principles are just stand prior anything subjective.\n",
+  "keywords": [
+    "Emacs"
+  ],
+  "articleBody": "Just as I wrote before, GNU Emacs shall be considered as a Word Heritage Site, since it is an embodiment of a distinct, major culture.\nThere are lots of guys who are self-proclaimed Emacs experts or even Emacs gurus (sorry, Greek philosophers), yet I find their writings either too narcissistic or too overly-verbose.\nThere are some reasons about using modern GNU Emacs in a “just right” way, and why this is so. Notice that not everything is just a matter of an opinion or a personal preference. Some principles are just stand prior anything subjective.\nWhy not console (–without-x) While there are a lot of bullshit in the sub-field of visual design, there are also some infallible “universal” propels, one of which states that “Same things shall lock the same, while different – differently”.\nThis is exactly why one wants more that one font in one’s Emacs, but these fonts shall be used systematically, to clearly distinguish between things that are intuitively the same.\nThis is how, in general, the arbitrary design decisions converged to have variable-pitch fonts and fixed-pitch (or mono-spaced) fonts (where each glyph has the same length in pixels on the horizontal axis).\nIt turns out that the convergence to having any code in a mono-spaced font is not arbitrary, since this keeps the code aligned across the lines, creating a uniform, consistent view. This is not a question of an opinion or a personal preference.\nThe “generalised” text, however, benefits from being displayed using a variable-pitch font, because it “fits more characters in a single line” and because it is what we always see on any printed page.\nThe modern answer is the variable-pitch-mode for non-code buffers, and then mixed-pitch-mode, which makes every text variable-pitch, except what it considered as “code” blocks, and these code-blocks are rendered using a mono-spaced font.\nNotably, Apple has the collections of fonts which adhere to a very similar “philosophy”, while going even further by adding a “condensed” version of variable-pitch fonts, which fit even more text into a single line.\nSo, if you compile GNU Emacs with the OTF font format support (--with-libotf) and download and install Apple Fonts (extracting them manually using 7zip from .dmg files)you could have a clear, modern GNU-Emacs-on-a-Mac experience, especially by selecting the Light variants of the fonts.\nTo complete the experience one needs --with-cairo, --with-cairo-xcb and then --with-harfbuzz which together render your fonts perfectly (instead of using only freetype and libxft).\nWhy gtk (–with-x-toolkit=gtk) Since you already have “a half of GTK3” as dependencies, it is reasonable to use it as the toolkit for Emacs.\nAnother option is the “classic” --with-x-toolkit=no or --with-x-toolkit=athena --without-xaw3d (which is ugly), but both builds are subtly broken – you won’t have the modern font rendering since harfbuzz requires gtk anyway.\nWhy bother? The same principle about “Same thing to look the same” applies for actual less distraction via consistent uniformity, which is also known as the Principle of Less Astonishment (meaning just less “surprises” or “edge-cases”).\nThe true appeal of the “Everything in Emacs” (and the “Never Leave Emacs”) mantras are in the promise of a consistent, uniform and minimalism experience, among other things (such as having org-mode based workflows, that systematically specialise the most general org-mode format into more specific ones, using conversion tools).\nThere is when themes come into play – they increase consistency and uniformity by using intuitive colour-coding in addition to font-coding of information.\nAgain, it only has meaning when the same things look the same across all kinds of buffers (modes), and modern themes (notably Doom Themes) are strive to achieve this consistent and uniform look.\nWhy not just use Doom Emacs. There is definitely no reason for NOT using Doom Emacs for newbies. Doom Emacs is kind of famous for trying to grow its own configuration language – a DSL embedded in Emacs Lisp – which is just the right way to program in any Lisp (according to Guy Steele and Paul Graham! just kidding). Growing a Language and the bottom-up approach of building up a language and then to write a program in it (popularised in the On Lisp book) are one of the best programming methodologies ever invented.\nSo, just use Doom Emacs without its vi bindings (which is not only a heresy but a manifestation of stupidity).\nWhy one should not mix-and-match two distinct cultures is quite another topic. In short, one throws the evolved subtleties of both cultures out of the window and make a hybrid which is esoterically worse than both ingredients alone.\nOne more time – the only real appeal of Emacs is that it is a gradually evolved Lisp-Interpreter-based Environment (similar to the Lisp Machines and Genera), which happen to include an editing capabilities, so one really wants to “never leave it” and having a uniform, consistent less invasive and non-distracting visual experience.\nWhen you customize it, optimize for the uniformity and consistency as well as non-invasive and non-distracting minimalism, which have subtle “cognitive-behavioural” reasons. Otherwise you just have missed the point completely.\nAnd never ever (ever) compare neovim to GNU Emacs, which is just an evolved “editor” (absolutely wonderful in its own particular way).\n",
+  "wordCount" : "860",
+  "inLanguage": "en",
+  "datePublished": "2026-02-17T00:00:00+05:45",
+  "dateModified": "2026-02-17T14:16:54+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/on-emacs-one-more-time/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      On Emacs (one more time)
+    </h1>
+    <div class="post-meta"><span title='2026-02-17 00:00:00 +0545 +0545'>February 17, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Just as I wrote before, GNU Emacs shall be considered as a <em>Word Heritage Site</em>, since it is an embodiment of a distinct, major culture.</p>
+<p>There are lots of guys who are self-proclaimed Emacs experts or even Emacs gurus (sorry, Greek philosophers), yet I find their writings either too narcissistic or too overly-verbose.</p>
+<p>There are some reasons about using modern GNU Emacs in a &ldquo;just right&rdquo; way, and <em>why</em> this is so. Notice that not everything is just a matter of an opinion or a personal preference. Some principles are just stand prior anything subjective.</p>
+<ol>
+<li>
+<p>Why not console (&ndash;without-x)
+While there are a lot of bullshit in the sub-field of visual design, there are also some infallible &ldquo;universal&rdquo; propels, one of which states that &ldquo;Same things shall lock the same, while different &ndash; differently&rdquo;.</p>
+<p>This is exactly <em>why</em> one wants <em>more that one font</em> in one&rsquo;s Emacs, but these fonts shall be used systematically, to clearly distinguish between things that are <em>intuitively</em> the same.</p>
+<p>This is how, in general, the arbitrary design decisions converged to have <em>variable-pitch fonts</em> and <em>fixed-pitch (or mono-spaced) fonts</em> (where each glyph has the same length in pixels on the horizontal axis).</p>
+<p>It turns out that the convergence to having any <code>code</code> in a mono-spaced font is not arbitrary, since this keeps the code <em>aligned</em> across the lines, creating a uniform, consistent view. This is not a question of an opinion or a personal preference.</p>
+<p>The &ldquo;generalised&rdquo; text, however, <em>benefits</em> from being displayed using a  <em>variable-pitch</em> font, because it &ldquo;fits more characters in a single line&rdquo; and because it is what we <em>always</em> see on any printed page.</p>
+<p>The modern answer is the <code>variable-pitch-mode</code>  for non-code buffers, and then <code>mixed-pitch-mode</code>, which makes every text <em>variable-pitch</em>, except what it considered as &ldquo;code&rdquo; blocks, and these code-blocks are rendered using a mono-spaced font.</p>
+<p>Notably, Apple has the collections of fonts which adhere to a very similar &ldquo;philosophy&rdquo;, while going even further by adding a &ldquo;condensed&rdquo; version of variable-pitch fonts, which fit even more text into a single line.</p>
+<p>So, if you compile GNU Emacs with the OTF font format support (<code>--with-libotf</code>) and download  and install Apple Fonts (extracting them manually using <code>7zip</code>  from <code>.dmg</code> files)you could have a clear, modern GNU-Emacs-on-a-Mac experience, especially by selecting the <em>Light</em> variants of the fonts.</p>
+<p>To complete the experience one needs <code>--with-cairo</code>, <code>--with-cairo-xcb</code> and then <code>--with-harfbuzz</code> which together render your fonts perfectly (instead of using only <code>freetype</code> and <code>libxft</code>).</p>
+</li>
+<li>
+<p>Why gtk (&ndash;with-x-toolkit=gtk)
+Since you <em>already</em> have &ldquo;a half of GTK3&rdquo; as dependencies, it is reasonable to use it as the <em>toolkit</em> for Emacs.</p>
+<p>Another option is the &ldquo;classic&rdquo; <code>--with-x-toolkit=no</code> or <code>--with-x-toolkit=athena --without-xaw3d</code> (which is ugly), but both  builds are subtly broken &ndash; you won&rsquo;t have the modern font rendering since <em>harfbuzz</em> requires gtk anyway.</p>
+</li>
+<li>
+<p>Why bother?
+The same principle about &ldquo;Same thing to look the same&rdquo;  applies for actual less distraction via consistent uniformity, which is also known as the Principle of Less Astonishment (meaning just less &ldquo;surprises&rdquo; or &ldquo;edge-cases&rdquo;).</p>
+<p>The true appeal of the &ldquo;Everything in Emacs&rdquo; (and the &ldquo;Never Leave Emacs&rdquo;) mantras are in the promise of a consistent, uniform and <em>minimalism</em> experience, among other things (such as having <code>org-mode</code> based workflows, that systematically specialise the most general org-mode format into more specific ones, using conversion tools).</p>
+<p>There is when <em>themes</em> come into play &ndash; they increase consistency and uniformity by using <em>intuitive</em> colour-coding in addition to font-coding of information.</p>
+<p>Again, it only has meaning when the same things look the same across all kinds of buffers (modes), and modern themes (notably <em>Doom Themes</em>) are strive to achieve this consistent and uniform look.</p>
+</li>
+<li>
+<p>Why not just use <em>Doom Emacs</em>.
+There is definitely no reason for NOT using Doom Emacs <em>for newbies</em>. Doom Emacs is kind of famous for trying to grow its own configuration language &ndash; a DSL embedded in Emacs Lisp &ndash; which is just the right way to program in any Lisp (according to Guy Steele and Paul Graham! just kidding). <em>Growing a Language</em> and the bottom-up approach of building up a language and then to write a program in it (popularised in the  <em>On Lisp</em> book) are one of the best programming methodologies ever invented.</p>
+<p>So, just use Doom Emacs <em>without its vi bindings</em> (which is not only a heresy but a manifestation of stupidity).</p>
+<p>Why one should not mix-and-match two distinct cultures is quite another topic. In short, one throws the evolved subtleties of <em>both</em> cultures out of the window and make a hybrid which is <em>esoterically worse</em> than both ingredients alone.</p>
+<p>One more time &ndash; the only real appeal of Emacs is that it is a <em>gradually evolved</em> Lisp-Interpreter-based <em>Environment</em> (similar to the Lisp Machines and Genera), which happen to include an editing capabilities, so one really wants to &ldquo;never leave it&rdquo; and having a uniform, consistent less invasive and non-distracting visual experience.</p>
+<p>When you customize it, optimize for the uniformity and consistency as well as non-invasive and non-distracting minimalism, which have subtle &ldquo;cognitive-behavioural&rdquo; reasons. Otherwise you just have missed the point completely.</p>
+<p>And never ever (ever) compare <code>neovim</code> to GNU Emacs, which is just an evolved &ldquo;editor&rdquo; (absolutely wonderful in its own particular way).</p>
+</li>
+</ol>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/emacs/">Emacs</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
