@@ -138,6 +138,20 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Cognitive Biases At Work
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>There is some output (slop) I got from my recent sessions (yes, yes, I am guilty and ashamed):
+### Validation Summary I have verified the implementation across the **Functional Core** (Domain) and the **Imperative Shell** (Infrastructure &amp; Interface), confirming that the code doesn&#39;t just &#34;look&#34; right but functionally enforces the rules. **1. Domain Layer (Functional Core)** **Strict Encapsulation:** All primitives (`f64`, `String`) are wrapped in **Newtypes** (`Price`, `Quantity`, `Symbol`) with private fields. **Correctness by Construction:** **Smart Constructors** (`new() -&gt; Result`) enforce invariants (e.g., price &gt; 0, symbol format). It is impossible to instantiate invalid domain objects. **Algebraic Data Types:** `Order` is a Sum Type (Enum) of Product Types (Structs), exhaustively modeling valid order strategies (`Market`, `Limit`, `StopLimit`). **Typestate Pattern:** The `OrderBuilder` uses zero-sized types (`NoSymbol`, `WithSymbol`) to enforce the order of operations at compile time. You cannot build an order without mandatory fields. **Error Handling:** `DomainError` is a specific Sum Type using `thiserror`, implementing the &#34;Make Illegal States Unrepresentable&#34; rule. **2. Infrastructure &amp; Interface (Imperative Shell)** **Hexagonal Architecture:** The `client` module acts as an **Adapter**, translating domain objects into Binance API calls. It isolates side effects (I/O, Time, Crypto). **Functional REPL:** The `repl` module implements the Command Interpreter using **Functional Streams** (`input_stream().map().for_each()`), strictly avoiding imperative `while` loops. **Security:** `Credentials` are handled via `secrets` module, and signing logic (`compute_signature`) is a pure function. **3. Verification (Tests)** **Pass Rate:** **124/124 tests passed**. **Coverage:** The test suite is organized into &#34;Stories&#34; (e.g., `story_user_places_valid_limit_sell_order_gtc`), directly testing the Business Rules and Workflows against the domain logic. The project is correctly set up as a mathematically rigorous, type-driven trading assistant. here is another one:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-09 00:00:00 +0545 +0545'>January 9, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <a class="entry-link" aria-label="post link to Cognitive Biases At Work" href="https://lngnmn2.github.io/articles/cognitive-biases-at-work/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Extreme Programming Applied
     </h2>
   </header>
@@ -273,20 +287,6 @@ Basically, making such a claim is idiotic on so many levels that it is hard to k
   </div>
   <footer class="entry-footer"><span title='2025-12-10 00:00:00 +0545 +0545'>December 10, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Idiots, Idiots Everywhere.jpg" href="https://lngnmn2.github.io/articles/idiots-idiots-everywhere/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">The Garden of Memery
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I am a well-read Humbert. I even remember reading back then that Norvig’s essay about how all the “stupid” OO “design patterns” can be just higher-order functions, (which are, in turn, are just instances Barbara Liskov’s Abstraction by Parameterization principle). Yes, I have read her books too, and the Jackson’s, and Richard Bird’s and what not.
-Like Jelal in the Orhan Pamuk’s “Black Book” I have carefully selected and cultivated my “garden of memory” (or was it “memery”?) which is now begin to wither and to fade away. Was it all in vain? Well, everything is in vain in the long-enough run, but not like this.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-18 00:00:00 +0545 +0545'>November 18, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
-  <a class="entry-link" aria-label="post link to The Garden of Memery" href="https://lngnmn2.github.io/articles/the-garden-of-memery/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
