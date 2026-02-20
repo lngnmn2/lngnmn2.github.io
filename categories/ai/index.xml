@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Feb 2026 10:04:24 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 21 Feb 2026 03:49:33 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Here is how</title>
+      <link>https://lngnmn2.github.io/articles/here-is-how/</link>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/here-is-how/</guid>
+      <description>&lt;p&gt;With advent of LLMs one may understand and validate which ideas of the classic theoretical Computer Science are, indeed, working, and what is mostly irrelevant.&lt;/p&gt;
+&lt;p&gt;The aim is to understand how this cognitive illusion works and &lt;em&gt;why&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;A text of modern Program (the source code) is highly structured and regular. This, of course, goes all the way back to Dijkstra and the discipline of Structured Programming, which among other things, postulates that one should use a small set of semantically well-defined, standard structural blocks or elements (procedures, conditionals, loops) and &lt;em&gt;only&lt;/em&gt; these elements, instead of  arbitrary mess of gotos and jumps. All this, in turn, is kind of obvious to those who have studied mathematics and logic, but the main point is that one can reason about the code in terms of these structural blocks, and this approach has fundamental cognitive advantages.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How To Use These Slop Generators</title>
       <link>https://lngnmn2.github.io/articles/how-to-use-slop-generators/</link>
