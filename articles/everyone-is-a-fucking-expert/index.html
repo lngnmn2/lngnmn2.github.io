@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Everyone is a fucking expert nowadays | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="Everyone is a fucking expert nowadays, especially in the matters of vape-coding and LLM usage, you know.
+Here is an expert wrote a GPT-assisted piece about how cool he really is:
+https://msf.github.io/blogpost/local-llm-performance-framework13.html
+There is, however, a small catch. Running 4bit models when your memory can fit a full-size 64Gb gguf with proper 8bit or (even f16) tensor is just missing the point completely.
+Yes, you will get just a 1-2 generated tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get orders-of-magnitude better slop, in principle.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/everyone-is-a-fucking-expert/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/everyone-is-a-fucking-expert/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/everyone-is-a-fucking-expert/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Everyone is a fucking expert nowadays">
+  <meta property="og:description" content="Everyone is a fucking expert nowadays, especially in the matters of vape-coding and LLM usage, you know.
+Here is an expert wrote a GPT-assisted piece about how cool he really is:
+https://msf.github.io/blogpost/local-llm-performance-framework13.html
+There is, however, a small catch. Running 4bit models when your memory can fit a full-size 64Gb gguf with proper 8bit or (even f16) tensor is just missing the point completely.
+Yes, you will get just a 1-2 generated tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get orders-of-magnitude better slop, in principle.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-02-23T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-02-23T09:43:48+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Everyone is a fucking expert nowadays">
+<meta name="twitter:description" content="Everyone is a fucking expert nowadays, especially in the matters of vape-coding and LLM usage, you know.
+Here is an expert wrote a GPT-assisted piece about how cool he really is:
+https://msf.github.io/blogpost/local-llm-performance-framework13.html
+There is, however, a small catch. Running 4bit models when your memory can fit a full-size 64Gb gguf with proper 8bit or (even f16) tensor is just missing the point completely.
+Yes, you will get just a 1-2 generated tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get orders-of-magnitude better slop, in principle.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Everyone is a fucking expert nowadays",
+      "item": "https://lngnmn2.github.io/articles/everyone-is-a-fucking-expert/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Everyone is a fucking expert nowadays",
+  "name": "Everyone is a fucking expert nowadays",
+  "description": "Everyone is a fucking expert nowadays, especially in the matters of vape-coding and LLM usage, you know.\nHere is an expert wrote a GPT-assisted piece about how cool he really is:\nhttps://msf.github.io/blogpost/local-llm-performance-framework13.html\nThere is, however, a small catch. Running 4bit models when your memory can fit a full-size 64Gb gguf with proper 8bit or (even f16) tensor is just missing the point completely.\nYes, you will get just a 1-2 generated tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get orders-of-magnitude better slop, in principle.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "Everyone is a fucking expert nowadays, especially in the matters of vape-coding and LLM usage, you know.\nHere is an expert wrote a GPT-assisted piece about how cool he really is:\nhttps://msf.github.io/blogpost/local-llm-performance-framework13.html\nThere is, however, a small catch. Running 4bit models when your memory can fit a full-size 64Gb gguf with proper 8bit or (even f16) tensor is just missing the point completely.\nYes, you will get just a 1-2 generated tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get orders-of-magnitude better slop, in principle.\nThe rule is plain and simple – by cutting the weights down one ruins any chance of occasional “emergent effects” (the cognitive illusion of an “intelligence” out of sheer brute-force, which only takes place in a biased mind of an LLM user) and one just consumes the lowest quality pseudo-intellectual (a mere appearance) slop instead.\nIt is qualitatively better to run a full-weighted 14b, leave alone 30b model from a 32Gb gguf file (via mmap, of course) and to have a BBS-like experience than having a “fast” 10-15 tokens of low-quality slop per second.\nThe optimal way for now (Feb 2026) of running local LLM models is to run 64Gb 8bit tensor ggufs on a CPU+mmap backed with an vendor-optimised math library. I wish I could have 64gb.\nThere are the models I am able to run on a 32Gb Core Ultra 155H system, by compiling the llama.cpp with Intel’s icpx compiler and linking with heavily optimized Intel MCL (the Sycl support for llama compiles, but is permanently broken).\n-rw-r–r–. 1 lngnmn2 lngnmn2 32483932576 Oct 27 09:40 Qwen3-30B-A3B-Instruct-2507-Q8_0.gguf -rw-r–r–. 1 lngnmn2 lngnmn2 32483935392 Dec 23 07:50 Qwen3-Coder-30B-A3B-Instruct-Q8_0.gguf -rw-r–r–. 1 lngnmn2 lngnmn2 23205357888 Sep 14 15:49 baidu_ERNIE-4.5-21B-A3B-Thinking-Q8_0.gguf -rwxr-xr-x. 1 lngnmn2 lngnmn2 2126 Dec 23 07:00 g.sh -rw-r–r–. 1 lngnmn2 lngnmn2 27020865120 Dec 22 22:02 mistralai_Ministral-3-14B-Reasoning-2512-bf16.gguf -rw-r–r–. 1 lngnmn2 lngnmn2 33585500096 Dec 21 09:13 nvidia_Nemotron-3-Nano-30B-A3B-Q8_0.gguf\nYes, that would be 1-2 tokes per second, which is perfectly fine. The large coding models (which are the only ones that make any sense), however, are unusable.\nA uncut (f16) Qwen3-Coder 64Gb gguf will probably match a crappy free-tier Claude web models, but I cannot confirm this.\nHere is a simple experiment: formulate a question which you are already know an expert-level answer for, and ask the same question both 4bit and 8bit model (writing the answers in separate files).\nYou will find out that the difference in the answers will be almost exactly as when asking on 4chan and on specialised Quora or Stack Overflow.\nThe reason is that by cutting the weight down you are getting the most common “paths” throught the graph, which roughly corresponds to quick, bold over-confident answers of stupid people, which have a ready memes-based opinion about everything. It is that simple.\n",
+  "wordCount" : "471",
+  "inLanguage": "en",
+  "datePublished": "2026-02-23T00:00:00+05:45",
+  "dateModified": "2026-02-23T09:43:48+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/everyone-is-a-fucking-expert/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Everyone is a fucking expert nowadays
+    </h1>
+    <div class="post-meta"><span title='2026-02-23 00:00:00 +0545 +0545'>February 23, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Everyone is a fucking expert nowadays, especially in the matters of vape-coding and LLM usage, you know.</p>
+<p>Here is an expert wrote a GPT-assisted piece about how cool he really is:</p>
+<p><a href="https://msf.github.io/blogpost/local-llm-performance-framework13.html">https://msf.github.io/blogpost/local-llm-performance-framework13.html</a></p>
+<p>There is, however, a small catch. Running 4bit models when your memory can fit a full-size 64Gb gguf with proper 8bit or (even f16) tensor is just missing the point completely.</p>
+<p>Yes, you will get just a 1-2 <em>generated</em> tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get <em>orders-of-magnitude</em> better slop, in principle.</p>
+<p>The rule is plain and simple &ndash; by cutting the weights down one ruins any chance of occasional  &ldquo;emergent effects&rdquo; (the cognitive illusion of an &ldquo;intelligence&rdquo; out of sheer brute-force, which only takes place in a biased mind of an LLM user) and one just consumes the lowest quality pseudo-intellectual (a mere appearance) slop instead.</p>
+<p>It is qualitatively better to run a full-weighted 14b, leave alone 30b model from a 32Gb gguf file (via <code>mmap</code>, of course) and to have a BBS-like experience than having a &ldquo;fast&rdquo; 10-15 tokens of low-quality slop per second.</p>
+<p>The optimal way for now (Feb 2026) of running local LLM models is to run 64Gb <em>8bit</em> tensor ggufs on a CPU+mmap backed with an vendor-optimised math library. I wish I could have 64gb.</p>
+<p>There are the models I am able to run on a 32Gb Core Ultra 155H system, by compiling the <code>llama.cpp</code> with Intel&rsquo;s <code>icpx</code> compiler and linking with heavily optimized Intel MCL (the Sycl support for llama compiles, but is permanently broken).</p>
+<blockquote>
+<p>-rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 32483932576 Oct 27 09:40 Qwen3-30B-A3B-Instruct-2507-Q8_0.gguf
+-rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 32483935392 Dec 23 07:50 Qwen3-Coder-30B-A3B-Instruct-Q8_0.gguf
+-rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 23205357888 Sep 14 15:49 baidu_ERNIE-4.5-21B-A3B-Thinking-Q8_0.gguf
+-rwxr-xr-x.   1 lngnmn2 lngnmn2        2126 Dec 23 07:00 g.sh
+-rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 27020865120 Dec 22 22:02 mistralai_Ministral-3-14B-Reasoning-2512-bf16.gguf
+-rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 33585500096 Dec 21 09:13 nvidia_Nemotron-3-Nano-30B-A3B-Q8_0.gguf</p></blockquote>
+<p>Yes, that would be 1-2 tokes per second, which is perfectly fine. The large coding models (which are the only ones that make any sense), however, are unusable.</p>
+<p>A uncut (f16) Qwen3-Coder 64Gb gguf will probably match a crappy free-tier Claude web models, but I cannot confirm this.</p>
+<p>Here is a simple experiment: formulate a question which you are already know an expert-level answer for, and ask the same question both 4bit and 8bit model (writing the answers in separate files).</p>
+<p>You will find out that the difference in the answers will be almost exactly as when asking on 4chan and on specialised Quora or Stack Overflow.</p>
+<p>The reason is that by cutting the weight down you are getting the most common &ldquo;paths&rdquo; throught the graph, which roughly corresponds to quick, bold over-confident answers of stupid people, which have a ready memes-based opinion about everything. It is that simple.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
