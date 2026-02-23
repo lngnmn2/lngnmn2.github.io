@@ -6,7 +6,7 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Feb 2026 10:16:59 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 23 Feb 2026 13:34:50 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Everyone is a fucking expert nowadays</title>
@@ -18,6 +18,14 @@
 &lt;p&gt;&lt;a href=&#34;https://msf.github.io/blogpost/local-llm-performance-framework13.html&#34;&gt;https://msf.github.io/blogpost/local-llm-performance-framework13.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;There is, however, a small catch. Running 4bit models when your memory can fit a full-size 64Gb gguf with proper 8bit or (even f16) tensor is just missing the point completely.&lt;/p&gt;
 &lt;p&gt;Yes, you will get just a 1-2 &lt;em&gt;generated&lt;/em&gt; tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get &lt;em&gt;orders-of-magnitude&lt;/em&gt; better slop, in principle.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Let me show you a 100x</title>
+      <link>https://lngnmn2.github.io/articles/let-me-show-you-a-100x/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/let-me-show-you-a-100x/</guid>
+      <description>&lt;p&gt;So, let me show you a &lt;code&gt;100x&lt;/code&gt; for a change. Biological time is running out, so I have to rush out less polished results, but still they are &lt;em&gt;way&lt;/em&gt; above average.&lt;/p&gt;
+&lt;p&gt;What is an intuitive understanding (which can be traced all the way back to the early Upanishads)? It is brain&amp;rsquo;s way to capture (and &amp;ldquo;understand&amp;rdquo;) an observed recurring commonality (a common pattern) without being able to know all the underlying details of how (and exactly why) the pattern emerge.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Here is how</title>
