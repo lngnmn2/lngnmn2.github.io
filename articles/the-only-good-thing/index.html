@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The only good thing about so-called AI | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="So called &ldquo;knowledge workers&rdquo; (a Cal Newport&rsquo;s meme, he has many such memes) are going to be paid at the level of third-world construction fast food workers, which is a good thing, especially so-called humanities &ldquo;professors&rdquo;.
+Here is how.
+A state-of-the art LLM model, even a miserable &ldquo;30B&rdquo; ones (Ike Qwen3.5-30B), which could even be ran locally, &ldquo;compresses&rdquo; (with loss of information, of course) all the written verbiage it has &ldquo;seen&rdquo; (being trained with) into a single abstract structure &ndash; which is, no surprise to me, but it shall be an &ldquo;aha&rdquo; for (You) &ndash; a directed acyclic graph, with a lot of redundancy in it.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-only-good-thing/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-only-good-thing/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/the-only-good-thing/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The only good thing about so-called AI">
+  <meta property="og:description" content="So called “knowledge workers” (a Cal Newport’s meme, he has many such memes) are going to be paid at the level of third-world construction fast food workers, which is a good thing, especially so-called humanities “professors”.
+Here is how.
+A state-of-the art LLM model, even a miserable “30B” ones (Ike Qwen3.5-30B), which could even be ran locally, “compresses” (with loss of information, of course) all the written verbiage it has “seen” (being trained with) into a single abstract structure – which is, no surprise to me, but it shall be an “aha” for (You) – a directed acyclic graph, with a lot of redundancy in it.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-03-27T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-03-27T13:59:30+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The only good thing about so-called AI">
+<meta name="twitter:description" content="So called &ldquo;knowledge workers&rdquo; (a Cal Newport&rsquo;s meme, he has many such memes) are going to be paid at the level of third-world construction fast food workers, which is a good thing, especially so-called humanities &ldquo;professors&rdquo;.
+Here is how.
+A state-of-the art LLM model, even a miserable &ldquo;30B&rdquo; ones (Ike Qwen3.5-30B), which could even be ran locally, &ldquo;compresses&rdquo; (with loss of information, of course) all the written verbiage it has &ldquo;seen&rdquo; (being trained with) into a single abstract structure &ndash; which is, no surprise to me, but it shall be an &ldquo;aha&rdquo; for (You) &ndash; a directed acyclic graph, with a lot of redundancy in it.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The only good thing about so-called AI",
+      "item": "https://lngnmn2.github.io/articles/the-only-good-thing/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The only good thing about so-called AI",
+  "name": "The only good thing about so-called AI",
+  "description": "So called \u0026ldquo;knowledge workers\u0026rdquo; (a Cal Newport\u0026rsquo;s meme, he has many such memes) are going to be paid at the level of third-world construction fast food workers, which is a good thing, especially so-called humanities \u0026ldquo;professors\u0026rdquo;.\nHere is how.\nA state-of-the art LLM model, even a miserable \u0026ldquo;30B\u0026rdquo; ones (Ike Qwen3.5-30B), which could even be ran locally, \u0026ldquo;compresses\u0026rdquo; (with loss of information, of course) all the written verbiage it has \u0026ldquo;seen\u0026rdquo; (being trained with) into a single abstract structure \u0026ndash; which is, no surprise to me, but it shall be an \u0026ldquo;aha\u0026rdquo; for (You) \u0026ndash; a directed acyclic graph, with a lot of redundancy in it.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "So called “knowledge workers” (a Cal Newport’s meme, he has many such memes) are going to be paid at the level of third-world construction fast food workers, which is a good thing, especially so-called humanities “professors”.\nHere is how.\nA state-of-the art LLM model, even a miserable “30B” ones (Ike Qwen3.5-30B), which could even be ran locally, “compresses” (with loss of information, of course) all the written verbiage it has “seen” (being trained with) into a single abstract structure – which is, no surprise to me, but it shall be an “aha” for (You) – a directed acyclic graph, with a lot of redundancy in it.\nArguably, such a DAG is a kind of structure which neurons form, and this structure can, in principle, encode (or represent) any kind of information about the Outside World (the Universe) ran by the Causality Principle, since the Whole Universe Itself is such a DAG (here you should say “wow”). No, really, absolutely everything you see around is an edge of such a DAG of Causality.\nImagine looking at a large Banyan tree right from above. What do you see? A half of a “sphere”, or a whole “front” of leaves. But each leaf has a “connection” to the roots, and each leaf “came to be” as a continuation of a process started by the seed, and what it is “right now”, is, indeed, an edge of a DAG of Causality (at all levels) . Wow.\nEverything else, including (You) is such a “tree” (the ancients were intuitively right with some of their symbolism).\nAnyway, the evolved universal structure to represent “The Inner [Semantic] Map of The Territory [shaped by Causality itself]” is a weighted DAG because Evolution converged on it first (by endless trials and errors), and mathematicians discovered (arrived at) it, by observations and generaliziations, somewhere in the 90s.\nSo, the representation is “just right” and, arguably, even Universal (a global optimum, since it corresponds (captures) the “actual” structure of Reality itself).\nAll the variations of the Curry Howard isomorphism will, eventually, converge to this very same Universal DAG (the one and the same Elephant, which all the blind philosophers are touching), which underlays everything What Is. This is why the abstract structures behind maths, logic, functional programming, electric schematics, vector algebras, and what not, looks so similar. Everything is a Tree [of Life]. And a Hierarchy of Layers “under the hood”.\nThere is, however, a problem. One could build an arbitrary representation, depending on one’s Social Conditioning (which is, of course, is what the process of “training” of a model is and corresponds to). The best philosophers of the Mind, since Upanishads, knew (captured) this process intuitively.\nSo, if one would train an LLM on the corpus of Indian Tantric texts (circa 11th century AD) it would advise you to drink blood of a freshly sacrificed goat as the best thing you could possibly do.\nThis is exactly what all the so-called humanities are – a current “scientific”^W sectarian consensus on a socially constructed abstract bullshit, different within each particular sect.\nLiterally everything, which is not an experimental science or a rigorously verified mathematics, is such kind of sectarian consensus in principle. The whole “Philosophy of Science” arose to just to distinguish the [approximations to] “Truth” from socially constructed abstract bullshit – scientifically known versus socially “known” (yes, yes, J. Krishnamurti,, the great).\nWhatever these “researchers” in humanities do in years of “research” , being paid to support an upper-middle class lifestyle, including the fucking sabbaticals, now can be done in a day or two, provided you know what to ask for (prompt).\nThe life-long process of creating a less wrong “semantic map” of a chosen sub-field of the “territory” is now “compressed” is any of these top 10 LLMs, except when your are doing experimental science, maths or engineering, which is an applied maths and applied scientific method, and can be prompted out in seconds. And the price of such “knowledge” (not of the actual experience) is a couple of rice meals per day.\nWhat I am saying here is this: every single kind of an abstract pseudo-scientific bullshit (not rigorously verified, experimentally confirmed or tested by the real world conditions) can be prompted out in a few seconds and researched in a couple of days. Every single Cal Newport’s “book” can be prompted out in a couple of hours. Every “research”.\nWhatever has been stated without an evidence can be dismissed without an explanation. Finally. And the price of such pseudo-intellectual slop is, finally, approaching that of a greasy rise-based meal, which is the way it should be.\nThe actual Intellectual is striving as much as it is humanly possible To See (Understand) Things As They [Really] Are, if you ask me. No LLM is capable of such understanding in principle. The text above explains the whys.\nOkay, now what? Well, who tf knows. The only comparable social dynamic was the gradual dismissal of the Catholic dogmatism with so-called modern science (based on a reproducible experiment according to a falsifiable theory ), but instead of a couple hundreds of years this “paradigm shift” fill take less than a decade.\nWhat we do know is that so-called “Knowledge work”, at least as these narcissistic Cals Newports and the millions of his likes are doing, is dead for good. One could prompt out any abstract bullshit one wants in just a few seconds and it will be on par with their “books” and their “research”.\nBy the way, the slop it produces on vastly complex and inherently poorly understood scientific topics. such as actual biology behind this or that observed phenomena, is as convoluted and polluted with rightly entangled ill-defined abstractions, just like these ancient Tantric texts. No surprise here – the goal is not to be “Right” or correct, the goal is to have a decent living out of it.\nAmazingly, the same principle applies to a low-effort amateur imperative “coding” –if something imperative/OO crap compiles or runs it now (finally) costs as much as that humanities “research”, but has way more substantial intrinsic value – Windows 11 more or less works somehow.\nSince writing a large, complex software projects is, indeed, an engineering discipline – an applied maths and scientific method (in the testing and validation aspects) it cannot be automated, in principle, even by the swarms of slop generators (“agents” they call them nowadays), simply because the correctness and quality does not reside at the level of tokens.\nYes, a “better” code structure, better language idioms, better design patterns and even better modularity can be “captured” by training on better codebases which already has them within, but the slop as a whole will always be less than the sum of its parts in a very subtle ways (does not live off its promises), and it is not that complicated to see why.\nAgain, the code has its “reality checks” (the compiler, the unit and validation tests, the user’s feedback, etc), while humanities (sectarian) babbling isn’t. But the slop will always be a mere cognitive illusion (by definition), since the rigorous reasoning of any kind has never been applied in the process.\n",
+  "wordCount" : "1193",
+  "inLanguage": "en",
+  "datePublished": "2026-03-27T00:00:00+05:45",
+  "dateModified": "2026-03-27T13:59:30+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-only-good-thing/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The only good thing about so-called AI
+    </h1>
+    <div class="post-meta"><span title='2026-03-27 00:00:00 +0545 +0545'>March 27, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>So called &ldquo;knowledge workers&rdquo; (a Cal Newport&rsquo;s meme, he has many such memes) are going to be paid at the level of third-world construction fast food workers, which is a good thing, especially so-called humanities &ldquo;professors&rdquo;.</p>
+<p>Here is how.</p>
+<p>A state-of-the art LLM model, even a miserable &ldquo;30B&rdquo; ones (Ike Qwen3.5-30B), which could even be ran locally, &ldquo;compresses&rdquo; (with loss of information, of course) all the written verbiage it has &ldquo;seen&rdquo; (being trained with) into a single abstract structure &ndash; which is, no surprise to me, but it shall be an &ldquo;aha&rdquo; for <code>(You)</code> &ndash; a directed acyclic graph, with a lot of redundancy in it.</p>
+<p>Arguably, such a DAG is a kind of structure which neurons form, and this structure can, in principle, encode (or represent) any kind of information about the Outside World (the Universe) ran by the Causality Principle, since the Whole Universe Itself is such a DAG (here you should say &ldquo;wow&rdquo;). No, really, absolutely everything you see around is an edge of such a DAG of Causality.</p>
+<p>Imagine looking at a large Banyan tree right from above. What do you see?  A half of a &ldquo;sphere&rdquo;, or a whole &ldquo;front&rdquo; of leaves. But each leaf has a &ldquo;connection&rdquo; to the roots, and each leaf &ldquo;came to be&rdquo; as a continuation of a process started by the seed, and what it is &ldquo;right now&rdquo;, is, indeed, an edge of a DAG of Causality (at all levels) . Wow.</p>
+<p>Everything else, including <code>(You)</code> is such a &ldquo;tree&rdquo; (the ancients were intuitively right with some of their symbolism).</p>
+<p>Anyway, the evolved universal structure to represent &ldquo;The Inner [Semantic] Map of The Territory [shaped by Causality itself]&rdquo; is a weighted DAG <em>because</em> Evolution converged on it first (by endless trials and errors), and mathematicians discovered (arrived at) it, by observations and generaliziations, somewhere in the 90s.</p>
+<p>So, the representation is &ldquo;just right&rdquo; and, arguably, even Universal (a global optimum, since it corresponds (captures) the &ldquo;actual&rdquo; structure of Reality itself).</p>
+<p>All the variations of the Curry Howard isomorphism will, eventually, converge to this very same Universal DAG (the one and the same Elephant, which all the blind philosophers are touching), which underlays everything <em>What Is</em>.  This is <em>why</em> the abstract structures behind maths, logic, functional programming, electric schematics, vector algebras, and what not, looks so similar. Everything is a Tree [of Life]. And a Hierarchy of Layers &ldquo;under the hood&rdquo;.</p>
+<p>There is, however, a problem. One could build an arbitrary representation, depending on one&rsquo;s <em>Social Conditioning</em> (which is, of course, is what the process of  &ldquo;training&rdquo; of a model is and corresponds to).  The best philosophers of the Mind, since Upanishads, knew (captured) this process <em>intuitively</em>.</p>
+<p>So, if one would train an LLM on the corpus of Indian Tantric texts (circa 11th century AD) it would advise you to drink blood of a freshly sacrificed goat as the best thing you could possibly do.</p>
+<p>This is exactly what all the so-called humanities are &ndash; a current &ldquo;scientific&rdquo;^W sectarian consensus on a socially constructed abstract bullshit, different within each particular sect.</p>
+<p>Literally everything, which is not an experimental science or a rigorously verified mathematics, is such kind of sectarian consensus in principle. The whole &ldquo;Philosophy of Science&rdquo; arose to just to distinguish the [approximations to] &ldquo;Truth&rdquo; from socially constructed abstract bullshit &ndash; scientifically known versus socially &ldquo;known&rdquo; (yes, yes, J. Krishnamurti,, the great).</p>
+<p>Whatever these  &ldquo;researchers&rdquo; in humanities do in <em>years</em> of &ldquo;research&rdquo; , being paid to support an upper-middle class lifestyle, including the fucking sabbaticals, now can be done in a day or two, provided you know what to ask for (prompt).</p>
+<p>The life-long process of creating a <em>less wrong</em> &ldquo;semantic map&rdquo; of a chosen sub-field of the &ldquo;territory&rdquo; is now &ldquo;compressed&rdquo; is any of these top 10 LLMs, <strong>except when your are doing experimental science, maths or engineering</strong>, which is an applied maths and applied scientific method, and can be prompted out in seconds. And the price of such &ldquo;knowledge&rdquo; (not of the actual experience) is a couple of rice meals per day.</p>
+<p>What I am saying here is this: every single kind of an abstract pseudo-scientific bullshit (not rigorously verified, experimentally confirmed or tested by the real world conditions) can be <em>prompted out</em> in a few seconds and researched in a couple of days. Every single Cal Newport&rsquo;s &ldquo;book&rdquo; can be prompted out in a couple of hours. Every &ldquo;research&rdquo;.</p>
+<p><em>Whatever has been stated without an evidence can be dismissed without an explanation</em>. Finally. And the price of such pseudo-intellectual slop is, finally, approaching that of a greasy rise-based meal, which is the way it should be.</p>
+<p>The actual Intellectual is striving as much as it is  humanly possible <em>To See (Understand) Things As They [Really] Are</em>, if you ask me. No LLM is capable of such understanding in principle. The text above explains the whys.</p>
+<p>Okay, now what? Well, who tf knows. The only comparable social dynamic was the gradual dismissal of the Catholic dogmatism with so-called modern science (based on a reproducible experiment  according to a falsifiable theory ), but instead of a couple hundreds of years this &ldquo;paradigm shift&rdquo; fill take less than a decade.</p>
+<p>What we <em>do know</em> is that so-called &ldquo;Knowledge work&rdquo;, at least as these narcissistic Cals Newports and the millions of his likes are doing, is dead for good. One could prompt out any abstract bullshit one wants in just a few seconds and it will be on par with their &ldquo;books&rdquo; and their &ldquo;research&rdquo;.</p>
+<p>By the way, the slop it produces on vastly complex and inherently poorly understood scientific topics. such as actual biology behind this or that observed phenomena, is as convoluted and polluted with rightly entangled ill-defined abstractions, just like these ancient Tantric texts. No surprise here &ndash; the goal is not to be &ldquo;Right&rdquo; or correct, the goal is to have a decent living out of it.</p>
+<p>Amazingly, the same principle applies to a low-effort amateur imperative &ldquo;coding&rdquo; &ndash;if something imperative/OO crap compiles or runs it now (finally) costs as much as that humanities &ldquo;research&rdquo;, but has way more substantial intrinsic value &ndash; Windows 11 more or less works somehow.</p>
+<p>Since writing a large, complex software projects is, indeed, an engineering discipline &ndash; an applied maths and scientific method (in the testing and validation aspects) it cannot be automated, in principle, even by the swarms of slop generators (&ldquo;agents&rdquo; they call them nowadays), simply because the correctness and quality does not reside at the level of tokens.</p>
+<p>Yes, a &ldquo;better&rdquo; code structure, better language idioms, better design patterns and even better modularity can be &ldquo;captured&rdquo; by training on better codebases which already has them within, but the slop as a whole will always be <em>less</em> than the sum of its parts in a very subtle ways (does not live off its promises), and it is not that complicated to see <em>why</em>.</p>
+<p>Again, the code has its &ldquo;reality checks&rdquo; (the compiler, the unit and validation tests, the user&rsquo;s feedback, etc), while humanities (sectarian) babbling isn&rsquo;t. But the slop will always be a mere cognitive illusion (by definition), since the rigorous reasoning of any kind has never been applied in the process.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

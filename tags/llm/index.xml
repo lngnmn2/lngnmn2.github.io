@@ -6,8 +6,17 @@
     <description>Recent content in LLM on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Mar 2026 15:21:16 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 13:59:30 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The only good thing about so-called AI</title>
+      <link>https://lngnmn2.github.io/articles/the-only-good-thing/</link>
+      <pubDate>Fri, 27 Mar 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-only-good-thing/</guid>
+      <description>&lt;p&gt;So called &amp;ldquo;knowledge workers&amp;rdquo; (a Cal Newport&amp;rsquo;s meme, he has many such memes) are going to be paid at the level of third-world construction fast food workers, which is a good thing, especially so-called humanities &amp;ldquo;professors&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Here is how.&lt;/p&gt;
+&lt;p&gt;A state-of-the art LLM model, even a miserable &amp;ldquo;30B&amp;rdquo; ones (Ike Qwen3.5-30B), which could even be ran locally, &amp;ldquo;compresses&amp;rdquo; (with loss of information, of course) all the written verbiage it has &amp;ldquo;seen&amp;rdquo; (being trained with) into a single abstract structure &amp;ndash; which is, no surprise to me, but it shall be an &amp;ldquo;aha&amp;rdquo; for &lt;code&gt;(You)&lt;/code&gt; &amp;ndash; a directed acyclic graph, with a lot of redundancy in it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The state of the craft (so far)</title>
       <link>https://lngnmn2.github.io/articles/the-state-of-the-craft/</link>
