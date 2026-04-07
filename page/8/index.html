@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a5781257de4197b8e3d54346acdf1dd55a9ba4cb91dcace192fc1baf228c08b5.css" integrity="sha256-pXgSV95Bl7jj1UNGrN8d1VqbpMuR3KzhkvwbryKMCLU=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -86,11 +86,11 @@ font-family: 'Source Code Pro', monospace;
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/">
   <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
   <meta property="og:title" content="Notes from the digital underground by Lngnmn">
-  <meta property="og:locale" content="en-us">
+  <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Notes from the digital underground by Lngnmn">
-<meta name="twitter:description" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Notes from the digital underground by Lngnmn">
 
 <script type="application/ld+json">
 {
@@ -144,6 +144,21 @@ font-family: 'Source Code Pro', monospace;
     </nav>
 </header>
 <main class="main"> 
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">LLMs-generated Rust code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Rust code is the ultimate evidence of the principal inability for a probability-based generating algorithm (based on sampling from a “learned” probability distribution over “tokens”) to come up with something that passes the type checker, but for the most trivial cases.
+The “causality” is that generation of the complex syntactic forms without the actual, proper understanding principles and heuristics is, well, “problematic”.
+The running example is these were subtle “already borrowed” panics, where the issue in with the underlying semantics, and the syntax is “correct”. The problem is that a recursive function has to drop all the borrows before a recursive call, and this constraint cannot be expressed in the syntax unless by redundant bindings which will automatically be drooped at the end of the scope.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-06-25 00:00:00 +0545 +0545'>June 25, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <a class="entry-link" aria-label="post link to LLMs-generated Rust code" href="https://lngnmn2.github.io/articles/llms-generated-rust/"></a>
+</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
@@ -277,21 +292,6 @@ First of all, every remarkable programming achievements of the past, be it of NA
   </div>
   <footer class="entry-footer"><span title='2025-06-03 00:00:00 +0545 +0545'>June 3, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to On Grinding Leetcode" href="https://lngnmn2.github.io/articles/on-grinding-leetcode/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Bullshit Bullshit Everywhere
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>“The Darwin Gödel Machine: AI that improves itself by rewriting its own code”
-https://sakana.ai/dgm/
-There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs – it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not “know” what it is doing. These are just mathematical procedures (not even functions) – given an input encoded in a particular way, it produces an output, not even the same for the same input.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-05-31 00:00:00 +0545 +0545'>May 31, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
-  <a class="entry-link" aria-label="post link to Bullshit Bullshit Everywhere" href="https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

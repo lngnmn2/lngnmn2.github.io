@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Artificial Conditioning at a scale. | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="Finally, I have got it Right (sorry &ndash; Less Wrong).
+What modern LLMs (and the underlying algorithms) have captured is not &ldquo;intelligence&rdquo;, but &ldquo;[environmental/social] conditioning&rdquo; &ndash; the ability to build an abstract structure (a &ldquo;map&rdquo; of a territory) and then use as a representation of &ldquo;reality&rdquo;.
+What is remarkable and unprecedented, is that the process of training is a valid mathematical model (approximation) to that very algorithm, which is mother Evolution came up with &ndash; to &ldquo;update&rdquo; (reinforce) the neural connections, marked with a &ldquo;stress-related chemicals&rdquo; at the moment of  actual experience (which the mathematical model abstracted as &ldquo;weights&rdquo;)  when we&rsquo;re asleep (meaning an external process).">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-artificial-conditioning/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-artificial-conditioning/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/the-artificial-conditioning/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The Artificial Conditioning at a scale.">
+  <meta property="og:description" content="Finally, I have got it Right (sorry – Less Wrong).
+What modern LLMs (and the underlying algorithms) have captured is not “intelligence”, but “[environmental/social] conditioning” – the ability to build an abstract structure (a “map” of a territory) and then use as a representation of “reality”.
+What is remarkable and unprecedented, is that the process of training is a valid mathematical model (approximation) to that very algorithm, which is mother Evolution came up with – to “update” (reinforce) the neural connections, marked with a “stress-related chemicals” at the moment of actual experience (which the mathematical model abstracted as “weights”) when we’re asleep (meaning an external process).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-04-07T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-04-07T09:36:05+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Artificial Conditioning at a scale.">
+  <meta name="twitter:description" content="Finally, I have got it Right (sorry – Less Wrong).
+What modern LLMs (and the underlying algorithms) have captured is not “intelligence”, but “[environmental/social] conditioning” – the ability to build an abstract structure (a “map” of a territory) and then use as a representation of “reality”.
+What is remarkable and unprecedented, is that the process of training is a valid mathematical model (approximation) to that very algorithm, which is mother Evolution came up with – to “update” (reinforce) the neural connections, marked with a “stress-related chemicals” at the moment of actual experience (which the mathematical model abstracted as “weights”) when we’re asleep (meaning an external process).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Artificial Conditioning at a scale.",
+      "item": "https://lngnmn2.github.io/articles/the-artificial-conditioning/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Artificial Conditioning at a scale.",
+  "name": "The Artificial Conditioning at a scale.",
+  "description": "Finally, I have got it Right (sorry \u0026ndash; Less Wrong).\nWhat modern LLMs (and the underlying algorithms) have captured is not \u0026ldquo;intelligence\u0026rdquo;, but \u0026ldquo;[environmental/social] conditioning\u0026rdquo; \u0026ndash; the ability to build an abstract structure (a \u0026ldquo;map\u0026rdquo; of a territory) and then use as a representation of \u0026ldquo;reality\u0026rdquo;.\nWhat is remarkable and unprecedented, is that the process of training is a valid mathematical model (approximation) to that very algorithm, which is mother Evolution came up with \u0026ndash; to \u0026ldquo;update\u0026rdquo; (reinforce) the neural connections, marked with a \u0026ldquo;stress-related chemicals\u0026rdquo; at the moment of actual experience (which the mathematical model abstracted as \u0026ldquo;weights\u0026rdquo;) when we\u0026rsquo;re asleep (meaning an external process).\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "Finally, I have got it Right (sorry – Less Wrong).\nWhat modern LLMs (and the underlying algorithms) have captured is not “intelligence”, but “[environmental/social] conditioning” – the ability to build an abstract structure (a “map” of a territory) and then use as a representation of “reality”.\nWhat is remarkable and unprecedented, is that the process of training is a valid mathematical model (approximation) to that very algorithm, which is mother Evolution came up with – to “update” (reinforce) the neural connections, marked with a “stress-related chemicals” at the moment of actual experience (which the mathematical model abstracted as “weights”) when we’re asleep (meaning an external process).\nMy description is, of course, inaccurate and crude, but the main principle is exactly right.\nIf you are, like me, a well-read Humbert, you probably have already seen the various quotes from some of the “smartest people on Earth” that their realizations [suddenly] came up after they cease to think hard about the topic (on a walk, in a shower and what not).\nThe old, (Freudian bullshit) explanation is that the “unconscious processes” keep working in the background (which is not even wrong in principle), but the “Right Understanding” is that an constantly updated neural structure (inner representation) is used for “inference”, and eventually, it matches the actual structure of What Is.\nAll the AI arms race is about building this representation (an abstract structure) within a data-center and to sell the resulting cognitive illusion of a superior intelligence on a per-token basis to the norimies and the normie businesses.\nWhy they are so confident and not even looking back, spending as if there is no tomorrow? Well, because, in principle, this simple set of algorithms – reinforcement learning based on intermittent states (before the final goal has been achieved, as been demonstrated in the Alpha Go model, where the goal state is way too distant and there are lots of em) can, again, in principle, capture anything. The credit is not to some “academics” or meme-AI-researchers, but to the mother Evolution.\nWhat could possible go wrong, then? Exactly what went wrong with all the ancient religions, superstitions, cults, tantric teachings and what not – just saying (or writing in a book) that something is “true” is not enough.\nWhat they have achieved there is not “Intelligence”, but automated, industry-scale “Conditioning”. It is that simple.\nIntelligence is exactly to come up with the methodology for distinguishing a spoken bullshit (socially “known”) from what has been correctly captured as an accurate and valid concept of the mind. Intelligence is to come up with a scientific method to dispel the socially constructed bullshit, and to realize that almost every single utterance you hear or read is such a socially constructed bullshit.\nIntelligence is the very ability to trace a mathematical concept all the way back to What Is – see what has been captured, generalized, abstracted out, conceptualized and named, and then rebuild it on your own, validating every step and see how each validated step leads to the next one, which has to be validated too (against everything which already been validated so far).\nNo model does anything like this, just like no animal or a cult followers does this. They just “trust” their conditioning (which is for animals is the best thing they can possible do).\nAgain, building an oversimplified inner representation of the vastly complex but “stable-enough” shared environment, and then using this inner representation for selecting actions to take is, by far, the greatest Evolutionary adaptation ever, and this, and only this, is what the LLMs actually mimicking.\nThe clowns in the Valley are cock-sure thinking that, eventually, when they feed all the genrated slop (“supervised” or “validated” by the user’s feedback) back into the model, they will have a perfect “map” which will always be correct representation of the territory. They won’t, and it is not so difficult to see exactly why – the proper validation process, as in mathematics or experimental science is lacking, in principle, and without this, all the spoken or written bullshit is just socially constructed bullshit, by definition.\nAnd yet, the code it spews out without any “Intelligence” or “Understanding” involved is simply amazing, and it compiles and runs. The explanations of complex and convoluted cross-disciplinary topics is convincing and “smart” and, unless you see the whole cognitive illusion at work (for that you have, just like in math, trace everything back to the training set and the algorithms, and rebuild the whole pipeline in your mind), you can easily mistake the rope for a snake. And this is what all the billions has been bet on.\nIt is not a coincidence that the ancient metaphors from the Eastern Philosophy of the Mind are a perfect match – this is exactly what is “going on” – a socially constructed illusory world made out of words, which veil out the What Is, and “To See Things As They Are” (the most profound maxim humanity ever captured in words, if you ask me), including the very processes (actual social dynamics) which produce the oversimplified, comfortable illusions, is as actual in the “age of AI” as it has been 2 millennia ago. The universal principles does not change.\nSo, not an Intelligence, but an appearance of it. The environmental Conditioning done right, with a simple but working (correctly captured the “essence” of constantly updating the representation) mathematical model.\nWhat is the bottom like? Well, everyone who blindly trust a model will be eventually fucked up, or at least face a painful disillusionment, just like someone who used prayers instead of antibiotics.\nBy the way, I owe all the “insights” to the ancient Theravada Buddhism tradition, the early Upanishads, and J Krishnamurti – the great fighter of social conditioning.\n",
+  "wordCount" : "959",
+  "inLanguage": "en",
+  "datePublished": "2026-04-07T00:00:00+05:45",
+  "dateModified": "2026-04-07T09:36:05+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-artificial-conditioning/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Artificial Conditioning at a scale.
+    </h1>
+    <div class="post-meta"><span title='2026-04-07 00:00:00 +0545 +0545'>April 7, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Finally, I have got it Right (sorry &ndash; Less Wrong).</p>
+<p>What modern LLMs (and the underlying algorithms) have captured is not &ldquo;intelligence&rdquo;, but &ldquo;[environmental/social] conditioning&rdquo; &ndash; the ability to build an abstract structure (a &ldquo;map&rdquo; of a territory) and then use as a representation of &ldquo;reality&rdquo;.</p>
+<p>What is remarkable and unprecedented, is that the process of training is a valid mathematical model (approximation) to that very algorithm, which is mother Evolution came up with &ndash; to &ldquo;update&rdquo; (reinforce) the neural connections, marked with a &ldquo;stress-related chemicals&rdquo; at the moment of  actual experience (which the mathematical model abstracted as &ldquo;weights&rdquo;)  <em>when we&rsquo;re asleep</em> (meaning an external process).</p>
+<p>My description is, of course, inaccurate and crude, but the main principle is <em>exactly right</em>.</p>
+<p>If you are, like me, a well-read Humbert, you probably have already seen the various quotes from some of the &ldquo;smartest people on Earth&rdquo; that their realizations [suddenly] came up <em>after</em> they cease to think hard about the topic (on a walk, in a shower and what not).</p>
+<p>The old, (Freudian bullshit) explanation is that the &ldquo;unconscious processes&rdquo; keep working in the background (which is not even wrong in principle), but the &ldquo;Right Understanding&rdquo; is that an constantly updated neural structure (inner representation) is used for &ldquo;inference&rdquo;, and eventually, it matches the actual structure of What Is.</p>
+<p>All the AI arms race is about building this representation (an abstract structure) within a data-center and to sell the resulting cognitive illusion of a superior intelligence on a per-token basis to the norimies and the normie businesses.</p>
+<p>Why they are so confident and not even looking back, spending as if there is no tomorrow? Well, because, in principle, this simple set of  algorithms  &ndash; reinforcement learning based on intermittent states (before the final goal has been achieved, as been demonstrated in the Alpha Go model, where the goal state is way too distant and there are lots of em) can, again, in principle, capture anything. The credit is not to some &ldquo;academics&rdquo; or meme-AI-researchers, but to the mother Evolution.</p>
+<p>What could possible go wrong, then? Exactly what went wrong with all the ancient religions, superstitions, cults, tantric teachings and what not &ndash; just saying (or writing in a book) that something is &ldquo;true&rdquo; is not enough.</p>
+<p>What they have achieved there is not &ldquo;Intelligence&rdquo;, but automated, industry-scale &ldquo;Conditioning&rdquo;. It is that simple.</p>
+<p>Intelligence is exactly to come up with the methodology for distinguishing a spoken bullshit (socially &ldquo;known&rdquo;) from what has been correctly captured as an accurate and valid concept of the mind. Intelligence is to come up with a scientific method to dispel the socially constructed bullshit, and to realize that almost every single utterance you hear or read is such a socially constructed bullshit.</p>
+<p>Intelligence is the very ability to trace a mathematical concept all the way back to What Is &ndash; see what has been captured, generalized, abstracted out, conceptualized and named, and then rebuild it on your own, validating every step and see how each validated step leads to the next one, which has to be validated too (against everything which already been validated so far).</p>
+<p>No model does anything like this, just like no animal or a cult followers does this. They just &ldquo;trust&rdquo; their conditioning (which is for animals is the best thing they can possible do).</p>
+<p>Again, building an oversimplified inner representation of the vastly complex but &ldquo;stable-enough&rdquo; shared environment, and then using this inner representation for selecting actions to take is, by far, the greatest Evolutionary adaptation ever, and this, and only this, is what the LLMs actually mimicking.</p>
+<p>The clowns in the Valley are cock-sure thinking that, eventually, when they feed all the genrated slop  (&ldquo;supervised&rdquo; or &ldquo;validated&rdquo; by the user&rsquo;s feedback) back into the model, they will have a perfect &ldquo;map&rdquo; which will always be correct representation of the territory. They won&rsquo;t, and it is not so difficult to see exactly why &ndash; the proper validation process, as in mathematics or experimental science is lacking, in principle, and without this, all the spoken or written bullshit is just socially constructed bullshit, by definition.</p>
+<p>And yet, the code it spews out without any &ldquo;Intelligence&rdquo; or &ldquo;Understanding&rdquo; involved is simply amazing, and it compiles and runs. The explanations of complex and convoluted cross-disciplinary topics is convincing and &ldquo;smart&rdquo; and, unless you see the whole cognitive illusion at work (for that you have, just like in math, trace everything back to the training set and the algorithms, and rebuild the whole pipeline in your mind), you can easily mistake the rope for a snake. And this is what all the billions has been bet on.</p>
+<p>It is not a coincidence that the ancient metaphors from the Eastern Philosophy of the Mind are a perfect match &ndash; this is exactly what is &ldquo;going on&rdquo; &ndash; a socially constructed illusory world made out of words, which veil out the What Is, and &ldquo;To See Things As They Are&rdquo; (the most profound maxim humanity ever captured in words, if you ask me), including the <em>very processes</em> (actual social dynamics) which produce the oversimplified, comfortable illusions, is as actual in the &ldquo;age of AI&rdquo; as it has been 2 millennia ago.  The universal principles does not change.</p>
+<p>So, not an Intelligence, but an appearance of it. The environmental Conditioning done right, with a simple but working (correctly captured the &ldquo;essence&rdquo; of constantly updating the representation) mathematical model.</p>
+<p>What is the bottom like? Well, everyone who blindly trust a model will be eventually fucked up, or at least face a painful disillusionment, just like someone who used prayers instead of antibiotics.</p>
+<p>By the way, I owe all the &ldquo;insights&rdquo; to the ancient Theravada Buddhism tradition, the early Upanishads, and J Krishnamurti &ndash; the great fighter of social conditioning.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
