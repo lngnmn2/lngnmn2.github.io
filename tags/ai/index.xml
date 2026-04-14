@@ -6,8 +6,18 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Apr 2026 09:36:05 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 13:06:53 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This is how</title>
+      <link>https://lngnmn2.github.io/articles/this-is-how/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/this-is-how/</guid>
+      <description>&lt;p&gt;There is a morning conversation with the most powerful free-tier LLM.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Let&amp;rsquo;s do a deep research project, to re-implement a proper, mathematically rigorous and provable (using the findings of the Category Theory) proof-of-concept blockchain implementation from the first principles, right from the ground up.&lt;/p&gt;
+&lt;p&gt;First of all, every single modern blockchain implementation is an amateur crap, full of idiotic design decisions, full of technical debt, made by an unqualified, Dunning-Kruger naive, amateur over-ambitious zealots. Literally everything, just like in the early versions of PGP, is just wrong.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Artificial Conditioning at a scale.</title>
       <link>https://lngnmn2.github.io/articles/the-artificial-conditioning/</link>
