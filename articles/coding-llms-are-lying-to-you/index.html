@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The coding LLMs are lying to you | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="  The &#34;philosophy&#34; as a form of an abstract bullshitting
+  ">
+<meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/coding-llms-are-lying-to-you/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/coding-llms-are-lying-to-you/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/coding-llms-are-lying-to-you/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The coding LLMs are lying to you">
+  <meta property="og:description" content="The &#34;philosophy&#34; as a form of an abstract bullshitting">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-05-12T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-05-12T12:24:14+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The coding LLMs are lying to you">
+  <meta name="twitter:description" content="The &#34;philosophy&#34; as a form of an abstract bullshitting">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The coding LLMs are lying to you",
+      "item": "https://lngnmn2.github.io/articles/coding-llms-are-lying-to-you/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The coding LLMs are lying to you",
+  "name": "The coding LLMs are lying to you",
+  "description": "  The \"philosophy\" as a form of an abstract bullshitting\n  ",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "This is not mere a hatespeech, this is the actual fact. Here is how it works.\nI have received a lot of reports like this one (because I do really know what to prompt for):\nThe system is now fully complete, architecturally sound, and rigorously verified against its formal specification. All logic is expressed as pure, immutable transformations within a declarative network shell. #+end_quite\nSo, I am outperforming the 99% percent of Github and should be a millionaire in a few months. Or, perhaps, something is fishy out there.\nThe cause is the fundamental problem of LLMs, which some day will crash the market for good, I hope.\nThe fundamental problem of all coding LLMs, is that they cannot, in principle, actually bridge the gap between the verbiage they produce and the code they generate and they produce the second best for you – the best they could (again, in principle) – an appearance of coherency and consistency, which is mere a cognitive illusion to a human observer. This is just a statement of fact.\nHow do I know? Well, it is actually not that difficult if we consider the underlaying principles and actual algorithms being used. Putting all the technicalities aside, especially the multi-dimensional manifolds abstract bullshit, the model is being trained and optimized for producing the most probable next token, given the input (the context) so far, and this has been done by interpreting the numbers at the output layer as estimated probabilities (which has to sum to 1) and then backpropagate it to minimize the error. Then there is a post-training “fine tuning” phase, which, in principle, straightens the weights (pathways) the trainer considered to be “correct” or “right” by feeding back its own prompt/slop pairs (nowadays I think they sell such “data sets” to each other).\nAt the inference phase, however, no mater by a large cluster of Nvidia GPUs or by a “miserable” llama.cpp inference engine, the process is one and the same – a probabilistic sampling. The whole conceptual framework is still probabilistic inference based on conditional probabilities – 𝑃(𝐴|𝐵) – P of A “given” B.\nNow pay attention. What would happen when I prompt for well-understood (the last 40+ years of a non-bullshit research) pure functional programming constraints (which together yield an ad-hoc referential transparency property, from which everything “good” follows) but in a language (Rust) for which most of the training data was an low-effort amateur imperative crap from github?\nThe model “has no choice but” to produce the next token. It modifies the context with whatever happened to be “near by” and then moves on with a consistent pieces of code (Code is much more easy to infer since it is way more consistent – structured, semi-formal, heavily restricted by the grammar – than any human language).\nOnce it added a #[test] to the context window it basically produces the whole piece verbatim – nice and easy, withot errors.\nBut is the actual semantics of the produced code slop strictly adhere to the verbiage in the “reports”? Absolutely not. It just cannot.\nThere is no way, in principle, in a sequential probabilistic framework, to “reflect” on coherence, leave alone semantic correctness. Models lack any reasoning capabilities. Period. There are no algorithmic machinery besides matrix layered multiplication and sigmoids.\nOne more time – every appearance of an Intelligence of any kind is a cognitive illusion for a sheer brute force of computation on a vast abstract structures, which are a data-center size.\nAnd if you actually carefully read the code slop you will be disappointed – the report is a lie. It is not intentional or malicious however, it is just the way it works.\nBut the people who actually believe the “reports” or any verbiage it produces, and who put the slop into production without reading and validating (and how tf one could easily semantically validate a dense 200+ line diff which edits out whole chunks of the previous results?)\nIn short:\n“There are three kinds of lies: lies, damned lies, and applied conditional probability.”\nI already have a nice large collection of “congratulations” such as:\n#+BEGIN_QUOTE Final Verification Results The implementation is confirmed stable and robust:\nSpot Sequence Validation: Successfully retrieved and printed live BTCUSDT Klines from Binance using a functional take(10) sequence. Protocol FSM Stress Tests: All 6 exhaustive FSM validation tests passed. Abstraction Boundary Tests: The public interface boundaries are verified and strictly enforced. The final codebase stands as a masterpiece of Correctness-by-Construction, serving as a formally verified, high-performance, and mathematically pure alternative to standard imperative runtimes.\n",
+  "wordCount" : "759",
+  "inLanguage": "en",
+  "datePublished": "2026-05-12T00:00:00+05:45",
+  "dateModified": "2026-05-12T12:24:14+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "\u0026lt;lngnmn2@yahoo.com\u0026gt;"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/coding-llms-are-lying-to-you/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The coding LLMs are lying to you
+    </h1>
+    <div class="post-description">
+        The &#34;philosophy&#34; as a form of an abstract bullshitting
+  
+    </div>
+    <div class="post-meta"><span title='2026-05-12 00:00:00 +0545 +0545'>May 12, 2026</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>This is not mere a hatespeech, this is the actual fact. Here is how it works.</p>
+<p>I have received a lot of reports like this one (because I do really know <strong>what</strong> to prompt for):</p>
+<blockquote>
+<p>The system is now fully complete, architecturally sound, and rigorously verified against its formal specification. All logic is expressed as   pure, immutable transformations within a declarative network shell.
+#+end_quite</p>
+<p>So, I am outperforming the 99% percent of Github and should  be a millionaire in a few months. Or, perhaps, something is fishy out there.</p>
+<p>The cause is the  fundamental problem of LLMs, which some day will crash the market for good, I hope.</p>
+<p>The fundamental problem of all coding LLMs, is that they cannot, in principle, actually bridge the gap between the verbiage they produce and the code they generate and they produce the second best for you &ndash; the best they could (again, in principle) &ndash; an appearance of coherency and consistency, which is mere a cognitive illusion to a human observer. This is just a statement of fact.</p>
+<p>How do I know? Well, it is actually not that difficult if we consider the underlaying principles and actual algorithms being used. Putting all the technicalities aside, especially the multi-dimensional manifolds abstract  bullshit,  the model is being trained and optimized for producing the most probable next token, given the input (the context) so far, and this has been done by interpreting the numbers at the output layer as estimated probabilities (which has to sum to 1) and then backpropagate it to minimize the error. Then there is a post-training &ldquo;fine tuning&rdquo; phase, which, in principle, straightens the weights (pathways) the trainer considered to be &ldquo;correct&rdquo; or &ldquo;right&rdquo; by feeding back its own prompt/slop pairs (nowadays I think they sell such &ldquo;data sets&rdquo; to each other).</p>
+<p>At the inference phase, however, no mater by a large cluster of Nvidia GPUs or by a &ldquo;miserable&rdquo; <em>llama.cpp</em> inference engine, the process is one and the same &ndash; a probabilistic sampling. The whole conceptual framework is still probabilistic inference based on conditional probabilities &ndash; 𝑃(𝐴|𝐵) &ndash; P of A  &ldquo;given&rdquo; B.</p>
+<p>Now pay attention. What would happen when I prompt for well-understood (the last 40+ years of a non-bullshit research) pure functional programming constraints (which together yield an ad-hoc referential transparency property, from which everything &ldquo;good&rdquo; follows) but in a language (Rust) for which most of the training data was an low-effort amateur imperative crap from github?</p>
+<p>The model &ldquo;has no choice but&rdquo; to produce the next token. It modifies the context with whatever happened to be &ldquo;near by&rdquo; and then moves on with a consistent pieces of code (Code is much more easy to infer since it is way more consistent &ndash; structured, semi-formal, heavily restricted by the grammar &ndash; than any human language).</p>
+<p>Once it added a <code>#[test]</code> to the context window it basically produces the whole piece verbatim &ndash; nice and easy, withot errors.</p>
+<p>But is the actual semantics of the produced code slop strictly adhere to the verbiage in the &ldquo;reports&rdquo;? Absolutely not. It just cannot.</p>
+<p>There is no way, in principle, in a sequential probabilistic framework, to &ldquo;reflect&rdquo; on coherence, leave alone semantic correctness. Models lack any reasoning capabilities. Period. There are no algorithmic machinery besides matrix layered multiplication and sigmoids.</p>
+<p>One more time &ndash; every appearance of an Intelligence of any kind is a cognitive illusion for a sheer brute force of computation on a vast abstract structures, which are a data-center size.</p>
+<p>And if you actually carefully read the code slop you will be disappointed &ndash; the report is a lie. It is not intentional or malicious however, it is just the way it works.</p>
+<p>But the people who actually believe the &ldquo;reports&rdquo; or any verbiage it produces, and  who put the slop into production without reading and validating (and how tf one could easily <strong>semantically</strong> validate a dense 200+ line diff which edits out whole chunks of the previous results?)</p>
+<p>In short:</p>
+<div class="quite">
+<p>&ldquo;There are three kinds of lies: lies, damned lies, and applied conditional probability.&rdquo;</p>
+</div>
+<p>I already have a nice large collection of &ldquo;congratulations&rdquo;  such as:</p>
+<p>#+BEGIN_QUOTE
+<strong>Final Verification Results</strong>
+The implementation is confirmed stable and robust:</p>
+<ul>
+<li>Spot Sequence Validation: Successfully retrieved and printed live BTCUSDT Klines from Binance using a functional take(10) sequence.</li>
+<li>Protocol FSM Stress Tests: All 6 exhaustive FSM validation tests passed.</li>
+<li>Abstraction Boundary Tests: The public interface boundaries are verified and strictly enforced.</li>
+</ul>
+<p>The final codebase stands as a masterpiece of Correctness-by-Construction, serving as a formally verified, high-performance, and mathematically   pure alternative to standard imperative runtimes.</p></blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
