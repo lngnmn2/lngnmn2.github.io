@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Another One Who Knows It All | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="Look, ma &ndash; no hands^W^W another one, who knows it all:
+https://www.0xkato.xyz/how-llms-actually-work/
+I am so fucking tired of this shit, don&rsquo;t you?
+Okay, even if arguing with retards is ultimately futile, and especially so in the society which does not value intelligence, but only appearances and virtue signalling, lets  continue competing in our sport of choice while we still can.
+No one understands this shit, since the very process by which the artifact in question has emerged is, in principle, by definition, different from the post-hoc &ldquo;explanations&rdquo; and anthropomorphic &ldquo;rationalizations&rdquo; which plague such &ldquo;literature&rdquo;.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/another-one-who-knows/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/another-one-who-knows/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/another-one-who-knows/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Another One Who Knows It All">
+  <meta property="og:description" content="Look, ma – no hands^W^W another one, who knows it all:
+https://www.0xkato.xyz/how-llms-actually-work/
+I am so fucking tired of this shit, don’t you?
+Okay, even if arguing with retards is ultimately futile, and especially so in the society which does not value intelligence, but only appearances and virtue signalling, lets continue competing in our sport of choice while we still can.
+No one understands this shit, since the very process by which the artifact in question has emerged is, in principle, by definition, different from the post-hoc “explanations” and anthropomorphic “rationalizations” which plague such “literature”.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-06-06T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-06-06T16:24:41+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Another One Who Knows It All">
+  <meta name="twitter:description" content="Look, ma – no hands^W^W another one, who knows it all:
+https://www.0xkato.xyz/how-llms-actually-work/
+I am so fucking tired of this shit, don’t you?
+Okay, even if arguing with retards is ultimately futile, and especially so in the society which does not value intelligence, but only appearances and virtue signalling, lets continue competing in our sport of choice while we still can.
+No one understands this shit, since the very process by which the artifact in question has emerged is, in principle, by definition, different from the post-hoc “explanations” and anthropomorphic “rationalizations” which plague such “literature”.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Another One Who Knows It All",
+      "item": "https://lngnmn2.github.io/articles/another-one-who-knows/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Another One Who Knows It All",
+  "name": "Another One Who Knows It All",
+  "description": "Look, ma \u0026ndash; no hands^W^W another one, who knows it all:\nhttps://www.0xkato.xyz/how-llms-actually-work/\nI am so fucking tired of this shit, don\u0026rsquo;t you?\nOkay, even if arguing with retards is ultimately futile, and especially so in the society which does not value intelligence, but only appearances and virtue signalling, lets continue competing in our sport of choice while we still can.\nNo one understands this shit, since the very process by which the artifact in question has emerged is, in principle, by definition, different from the post-hoc \u0026ldquo;explanations\u0026rdquo; and anthropomorphic \u0026ldquo;rationalizations\u0026rdquo; which plague such \u0026ldquo;literature\u0026rdquo;.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "Look, ma – no hands^W^W another one, who knows it all:\nhttps://www.0xkato.xyz/how-llms-actually-work/\nI am so fucking tired of this shit, don’t you?\nOkay, even if arguing with retards is ultimately futile, and especially so in the society which does not value intelligence, but only appearances and virtue signalling, lets continue competing in our sport of choice while we still can.\nNo one understands this shit, since the very process by which the artifact in question has emerged is, in principle, by definition, different from the post-hoc “explanations” and anthropomorphic “rationalizations” which plague such “literature”.\nThe article in question is a virtue signalling piece which seemingly explains the actual mechanics of how LLMs actually works.\nI would argue that even if the algorithmic parts might be accurate, the explanations of the “whys” are just social constructions and the current accepted abstract dogma, and the whole “architectural decisions” are basically throwing everything at the wall to see what sticks.\nNo one actually understands what would happen even for slight re-arrangement of the architecture – changing numbers of “heads”, transformer “full layers” and so on. This is just a modern day Tantra, when everything is based on current socially constructed and largely disconnected from reality set of beliefs.\nThere is no reproducible experiments that would show that any of these socially constructed “why it works” (the way it can be observed) are correct or even accurate.\nThe nested layered architecture is so complex and actually convoluted, that any possible explanatory path through it just lose its meaning in the middle, similarly to a decay of a signal which is eventually becomes lost in bullshit. We have seen nothing but this social dynamics through all the human history, and it still works because no one will refute you, since refutation takes an order of magnitude more intelligence.\nLet’s talk just a few principal mathematical facts, like each additional sub-matrix (of a “head”) is just a parallel sub-network of weights, and the architecture then is just an empirically evolved (by merely trial-and-error) arrangement of parallel sub-nets, similar to the classic signal-processing patterns – parallel, sum, feedback loop, fork, joint (the only possible ones).\nIgnoring all anthropomorphic language (“looks for”, “understands”, “stores facts”), a transformer is simply a bunch of nested functions – a composition of vector-valued functions – and can be viewed as a pure functional pipeline.\nThe entire model consists of:\nmatrix multiplications additions element-wise nonlinearities normalization operators softmax operators and nothing else.\nThese operations, in principle, encode the classic signal-processing patterns and any architecture can be reduced to combinations of:\nseries composition parallel composition additive merge multiplicative gating recurrence/feedback And just like I said so many times already, an LLM is simply a massive, reverentially transparent computational graph. It happen to be socially constructed ad-hoc, without formal understanding, but the process of “experiments” (throwing shit at the wall and seeing what sticks) from various building blocks from various empirical discoveries.\nThe architecture could have been entirely different (although nothing but forks, joins and parallele branches, in principle) and the “Tantric teachers” would appear the very next day to “explain us why”.\nIn reality, all the architectures are the result of massive, blind, “evolutionary” trial and error. The configurations that “stick” (like the transformer) do so primarily because they can be implemented efficiently in Pytorch, not because they have been done “the right way”.\nThe fact that we end ed up with a “transformer” and the corresponding idiotic anthropomorphic terminology is just an evolutionary accident, not even the consequences of the environmental constraints, like biological evolution.\nOne more time: The whole thing is a strictly deterministic pipeline of pure mathematical functions (where the domains and the ranges are vectors and matrices), implicitly governed by classic signal-processing primitives: forks, parallel pipelines, sums, and non-linear gates (because there cannot be anything else, in principle).\nIt is a computational DAG of almost arbitrary structure (the building blocks are “fixed”, but the composition or nesting can be almost arbitrary). The resulting particular composition (the transformer) a product of trial and error, not deep, fundamental principle-guided deduction.\nAny other explanation is a primitive virtue signalling.\nWhy 32 heads? why expand the feed-forward network by 4x? why place the normalization before the attention block rather than after? These are absolutely an exercise in throwing shit at the wall.\nThe architecture is prior to any such interpretation. The architecture is just the signal-processing graph described above. What the weights learn to implement in that graph is determined by gradient descent on a next-token prediction loss over a corpus.\nAll the architectural decisions were based on the empirical measurement of “the logits” it outputs, they just blindly turning the knobs and see what happens. The “understanding” was added much later, post-hoc, in retrospect, just like it always been with anything socially constructed.\nNo one really understands a shit. But you can become @karpathy, or @slutsker or whoever other popular bullshitter it is, because arguing with them is very difficult and futile.\nThere is a simple takeaway: Almost arbitrarily redundant and convoluted architecture would eventually converge, because a human language has an implicit structure (it is an communication encoding to capture aspects of What Is) and the gradient discent algorithm can, in principle, capture any abstract structure whatsoever (because it just a variation on an iterative Fixed Point theme).\nEverything else is just an evolutionary accident (except the later empirically better algorithmic choices).\nOk, two articles in 8 hours is a bit too much, so the text is more messy than usual.\n",
+  "wordCount" : "919",
+  "inLanguage": "en",
+  "datePublished": "2026-06-06T00:00:00+05:45",
+  "dateModified": "2026-06-06T16:24:41+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/another-one-who-knows/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Another One Who Knows It All
+    </h1>
+    <div class="post-meta"><span title='2026-06-06 00:00:00 +0545 +0545'>June 6, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Look, ma &ndash; no hands^W^W another one, who knows it all:</p>
+<p><a href="https://www.0xkato.xyz/how-llms-actually-work/">https://www.0xkato.xyz/how-llms-actually-work/</a></p>
+<p>I am so fucking tired of this shit, don&rsquo;t you?</p>
+<p>Okay, even if arguing with retards is ultimately futile, and especially so in the society which does not value intelligence, but only appearances and virtue signalling, lets  continue competing in our sport of choice while we still can.</p>
+<p>No one understands this shit, since the very process by which the artifact in question has emerged is, in principle, by definition, different from the post-hoc &ldquo;explanations&rdquo; and anthropomorphic &ldquo;rationalizations&rdquo; which plague such &ldquo;literature&rdquo;.</p>
+<p>The article in question is a virtue signalling piece which seemingly explains the actual mechanics of how LLMs actually works.</p>
+<p>I would argue that even if the algorithmic parts might be accurate, the explanations of the &ldquo;whys&rdquo; are just social constructions and the current accepted abstract dogma, and the whole &ldquo;architectural decisions&rdquo; are  basically throwing everything at the wall to see what sticks.</p>
+<p>No one actually understands what would happen even for slight re-arrangement of the architecture &ndash; changing numbers of &ldquo;heads&rdquo;, transformer &ldquo;full layers&rdquo; and so on. This is just a modern day Tantra, when everything is based on current socially constructed and largely disconnected from reality set of beliefs.</p>
+<p>There is no reproducible experiments that would show that any of these socially constructed &ldquo;why it works&rdquo; (the way it can be observed) are correct or even accurate.</p>
+<p>The nested layered architecture is so complex and actually convoluted, that any possible explanatory path through it just lose its meaning in the middle, similarly to a decay of a signal which is eventually becomes lost in bullshit. We have seen nothing but this social dynamics through all the human history, and it still works because no one will refute you, since refutation takes an order of magnitude more intelligence.</p>
+<p>Let&rsquo;s talk just a few principal mathematical facts, like each additional sub-matrix (of a &ldquo;head&rdquo;) is just a parallel sub-network of weights, and the architecture then is just an empirically evolved (by merely trial-and-error)  arrangement of parallel sub-nets, similar to the classic signal-processing patterns &ndash; parallel, sum, feedback loop, fork, joint (the only possible ones).</p>
+<p>Ignoring all anthropomorphic language (&ldquo;looks for&rdquo;, &ldquo;understands&rdquo;, &ldquo;stores facts&rdquo;), a transformer is simply a bunch of nested functions  &ndash; a composition of vector-valued functions &ndash; and can be viewed as a pure functional pipeline.</p>
+<p>The entire model consists of:</p>
+<ul>
+<li>matrix multiplications</li>
+<li>additions</li>
+<li>element-wise nonlinearities</li>
+<li>normalization operators</li>
+<li>softmax operators</li>
+</ul>
+<p>and nothing else.</p>
+<p>These operations, in principle, encode the classic signal-processing patterns and any architecture can be reduced to combinations of:</p>
+<ul>
+<li>series composition</li>
+<li>parallel composition</li>
+<li>additive merge</li>
+<li>multiplicative gating</li>
+<li>recurrence/feedback</li>
+</ul>
+<p>And just like I said so many times already, an LLM is simply a massive, reverentially transparent computational graph. It happen to be socially constructed ad-hoc, without formal understanding, but the process of  &ldquo;experiments&rdquo; (throwing  shit at the wall and seeing what sticks) from various building blocks from various empirical discoveries.</p>
+<p>The architecture could have been entirely different (although nothing but forks, joins and parallele branches, in principle) and the &ldquo;Tantric teachers&rdquo; would appear the very next day to &ldquo;explain us why&rdquo;.</p>
+<p>In reality, all the architectures are the result of massive, blind, &ldquo;evolutionary&rdquo; trial and error. The configurations that &ldquo;stick&rdquo; (like the transformer) do so primarily because they can be implemented  efficiently in Pytorch, not because they have been done &ldquo;the right way&rdquo;.</p>
+<p>The fact that we end ed up with a &ldquo;transformer&rdquo; and the corresponding idiotic anthropomorphic terminology is just an evolutionary accident, not even  the consequences of the environmental constraints, like biological evolution.</p>
+<p>One more time: The whole thing is a strictly deterministic pipeline of pure mathematical functions (where the  domains  and the ranges are vectors and matrices), implicitly governed by classic signal-processing primitives: forks, parallel pipelines, sums, and non-linear gates (because there cannot be anything else, in principle).</p>
+<p>It is a computational DAG of almost arbitrary structure (the building blocks are &ldquo;fixed&rdquo;, but the composition or nesting can be almost arbitrary). The resulting particular composition (the transformer) a product of trial and error, not deep, fundamental principle-guided deduction.</p>
+<p>Any other  explanation is a primitive virtue signalling.</p>
+<p>Why 32 heads? why expand the feed-forward network by 4x? why place the normalization before the attention block rather than after? These are absolutely an exercise in throwing shit at the wall.</p>
+<p>The architecture is prior to any such interpretation. The architecture is just the signal-processing graph described above. What the weights learn to implement in that graph is determined by gradient descent on a next-token prediction loss over a corpus.</p>
+<p>All the architectural decisions were based on the empirical measurement of &ldquo;the logits&rdquo; it outputs, they just blindly turning the knobs and see what happens. The &ldquo;understanding&rdquo; was added  much later, post-hoc, in retrospect, just like it always been with anything socially constructed.</p>
+<p>No one really understands a shit. But you can become @karpathy, or @slutsker or whoever other popular bullshitter it is, because arguing with them is very difficult and futile.</p>
+<p>There is a simple takeaway: Almost arbitrarily redundant  and convoluted architecture would eventually converge, because a human language has an implicit  structure (it is an communication encoding to capture aspects of What Is) and the gradient discent algorithm can, in principle, capture any abstract structure whatsoever (because it just a variation on an iterative Fixed Point theme).</p>
+<p>Everything else is just an evolutionary accident (except the later empirically better algorithmic choices).</p>
+<p>Ok, <em>two</em> articles in 8 hours is a bit too much, so the text is  more messy than usual.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
