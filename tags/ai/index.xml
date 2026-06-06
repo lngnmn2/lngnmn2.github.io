@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2026 18:27:50 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 10:00:28 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anthopic marketing posts</title>
+      <link>https://lngnmn2.github.io/articles/anthropic-markeitng-posts/</link>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/anthropic-markeitng-posts/</guid>
+      <description>&lt;p&gt;After the &amp;ldquo;Sentient Models&amp;rdquo; has been booed by very few remaining intelligent people they resorted to a the next best meme &amp;ndash; their AI is improving itself (&lt;em&gt;recursively&lt;/em&gt;, my ass).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.anthropic.com/institute/recursive-self-improvement&#34;&gt;https://www.anthropic.com/institute/recursive-self-improvement&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Notice that this has almost nothing to do with the actual underlaying tech, except that the models are being feed with their own slop for the Reinforcement Learning and as new data, and has everything to do with the upcoming IPO &amp;ndash; look, AI writes itself, what can possibly go wrong &amp;ndash; buy our shit.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LLMs and AI so far</title>
       <link>https://lngnmn2.github.io/articles/llms-and-ai-so-far1/</link>
@@ -620,13 +629,6 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
       <description>Bullshit, bullshit, bullshit... (K-PAX)</description>
     </item>
     <item>
-      <title>LLM predictions</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
-    </item>
-    <item>
       <title>Transformers bullshit everywhere</title>
       <link>https://lngnmn2.github.io/articles/transformer-bullshit/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0545</pubDate>
@@ -641,6 +643,14 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
       <description>&lt;p&gt;Today &lt;a href=&#34;https://news.ycombinator.com/&#34;&gt;https://news.ycombinator.com/&lt;/a&gt; is glowing bright with AI memes and buzzwords like a Christmas tree. Everyone is there, including billion dollar corporations announcing a &amp;ldquo;CodeLama-34b&amp;rdquo; which is &lt;em&gt;&amp;ldquo;designed for general code synthesis and understanding.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;First of all, I personaly do not want to rely in any part of my life on any &amp;ldquo;synthesized&amp;rdquo; (and &amp;ldquo;understood&amp;rdquo; software, and demand an explicit opt-out. Yes, yes, I know.&lt;/p&gt;
 &lt;p&gt;If I have any understanding of these subjects at all, this is a bubble and &lt;em&gt;irrational exuberance&lt;/em&gt;. Lets try to unpack &amp;ldquo;the whys&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GNU Emacs</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
     </item>
   </channel>
 </rss>
