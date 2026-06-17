@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Who Would&#39;ve Thought LMAO | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="When they began to feed the generated slop back to the models, they deepen the &ldquo;fundamental problem&rdquo; even further.
+The most recent models produce an excelent verbiage but the code is out of sync with it.
+This fact is very easy to undestand and explain &ndash; the verbiage and the code live in the very different &ldquo;regions&rdquo; of the  model&rsquo;s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different rates and thus do not converge as they are expecting.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/who-would-have-thought/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/who-would-have-thought/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/who-would-have-thought/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Who Would&#39;ve Thought LMAO">
+  <meta property="og:description" content="When they began to feed the generated slop back to the models, they deepen the “fundamental problem” even further.
+The most recent models produce an excelent verbiage but the code is out of sync with it.
+This fact is very easy to undestand and explain – the verbiage and the code live in the very different “regions” of the model’s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different rates and thus do not converge as they are expecting.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-06-17T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-06-17T17:02:33+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Who Would&#39;ve Thought LMAO">
+  <meta name="twitter:description" content="When they began to feed the generated slop back to the models, they deepen the “fundamental problem” even further.
+The most recent models produce an excelent verbiage but the code is out of sync with it.
+This fact is very easy to undestand and explain – the verbiage and the code live in the very different “regions” of the model’s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different rates and thus do not converge as they are expecting.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Who Would've Thought LMAO",
+      "item": "https://lngnmn2.github.io/articles/who-would-have-thought/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Who Would've Thought LMAO",
+  "name": "Who Would\u0027ve Thought LMAO",
+  "description": "When they began to feed the generated slop back to the models, they deepen the \u0026ldquo;fundamental problem\u0026rdquo; even further.\nThe most recent models produce an excelent verbiage but the code is out of sync with it.\nThis fact is very easy to undestand and explain \u0026ndash; the verbiage and the code live in the very different \u0026ldquo;regions\u0026rdquo; of the model\u0026rsquo;s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different rates and thus do not converge as they are expecting.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "When they began to feed the generated slop back to the models, they deepen the “fundamental problem” even further.\nThe most recent models produce an excelent verbiage but the code is out of sync with it.\nThis fact is very easy to undestand and explain – the verbiage and the code live in the very different “regions” of the model’s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different rates and thus do not converge as they are expecting.\nThe verbiage is full of the correct, principle guided semantic promises (assertions), based on the just-right type-level techniques, but the code is just a simplistic imperative crap which uses some right abstractions.\nI am Jack’s absolute lack of surprice here. The training data does not contain a refined, principle-guided literally crafted pure functional Rust code (which is easy to write by restricting the code to the move semantics and compiler-guaranteed referential transparency via immutable references, mimiking the immutable bindings and prersistent data of the pure languages).\nWhat it spews out is just right and theoretically correct false promises and false assertions about the code. The code only appears as conforming to the accompanying verbiage. The Maya (the Cognitive Illusion) is almost perfect but one could see through it.\nThe reason is that the code has a lot more actual “structure” in its syntax (and the underlaying semantics which a model does not even ‘see’) so it only provides the best syntax it has, but, of course, it is, in principle, NOT what the surrounding verbiage asserts.\nEven the comments can easily be off, but this divergence is even more subtle. The comments can easily be stale or simply errornous and there is no way, in principle, the model could “see” it, just as it cannot see “how many ‘r’ is in strawberry” – the same applied principle at work.\nThink yourself of being an Upanishadic seer who sees the veil of Maya (and through it) for the very first time.\nOne more time – what you are looking at in your LLM’s output is a very sophisticated, computationally intense and expensive (but still a brute-force) cognitive illusion.\nSince Anthropic add the actual compiler into the feedback loop, it gives you the code that runs and has no errors, but, again, when the engine is fixing the compiler errors it moves away from the verbiage and does not update it – the same fundamental problem of stale or outdate comments, but at the level of human cognition\nHere is an example of verbiage even a local model can produce:\nStyle: Functional programming textbook style (pure, immutable, referential transparency). Language: Rust 2024 (latest features: `Result`, `Option`, `match`, `traits`, `Algebraic Data Types`). Architecture: Layered DSLs with abstraction barriers, orthogonal modules, high-level stateless interfaces. Coding Standards: No `mut`, no mutable references (use pipelines/moves). No nulls, no imperative loops (use iterators/combinators). No naked primitives (use “new-type” wrappers/ADTs). Smart constructors for invariant enforcement. Traits for duck-typing/constraints (Eq, Ord, Semigroup, Monoid, Functor-like). But the code is an imperative crap because it autocompletes from what it has been trained with and the code blocks are alost always “verbatim” (it will fail if it “chooses” a slightly wrong variable name or a different symbol).\nThere will be a lot of surprises for those who cannot see things as they really are.\n",
+  "wordCount" : "560",
+  "inLanguage": "en",
+  "datePublished": "2026-06-17T00:00:00+05:45",
+  "dateModified": "2026-06-17T17:02:33+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/who-would-have-thought/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Who Would&#39;ve Thought LMAO
+    </h1>
+    <div class="post-meta"><span title='2026-06-17 00:00:00 +0545 +0545'>June 17, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>When they began to feed the generated slop back to the models, they deepen the &ldquo;fundamental problem&rdquo; even further.</p>
+<p>The most recent models produce an excelent verbiage but the code is out of sync with it.</p>
+<p>This fact is very easy to undestand and explain &ndash; the verbiage and the code live in the very different &ldquo;regions&rdquo; of the  model&rsquo;s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different <em>rates</em> and thus do not converge as they are expecting.</p>
+<p>The verbiage is full of the correct, principle guided <em>semantic</em> promises (assertions), based on the  just-right type-level techniques, but the code is just a simplistic imperative crap which uses some right abstractions.</p>
+<p>I am Jack&rsquo;s absolute lack of surprice here. The training data does not contain a refined, principle-guided literally <em>crafted</em> pure functional Rust code (which is easy to write by restricting the code to the move semantics and compiler-guaranteed referential transparency via immutable references, mimiking the immutable bindings  and prersistent data of the pure languages).</p>
+<p>What it spews out is just right and theoretically correct false promises and false assertions about the code. The code only appears as conforming to the accompanying verbiage. The Maya (the Cognitive Illusion) is almost perfect but one could see through it.</p>
+<p>The reason is that the code has a lot more actual &ldquo;structure&rdquo; in its syntax (and the underlaying <em>semantics</em> which a model does not even &lsquo;see&rsquo;) so it only provides the best syntax it has, but, of course, it is, in principle, NOT what the surrounding verbiage asserts.</p>
+<p>Even the comments can easily be off, but this divergence is even more subtle. The comments can easily be stale or simply errornous and there is no way, in principle, the model could &ldquo;see&rdquo; it, just as it cannot see &ldquo;how many &lsquo;r&rsquo; is in strawberry&rdquo; &ndash; the same applied principle at work.</p>
+<p>Think yourself of being an Upanishadic seer who sees the veil of Maya (and through it) for the very first time.</p>
+<p>One more time &ndash; what you are looking at in your LLM&rsquo;s output is a very sophisticated, computationally intense and expensive (but still a brute-force) cognitive illusion.</p>
+<p>Since Anthropic add the actual compiler into the feedback loop, it gives you the code that runs and has no errors, but, again, when the <em>engine</em> is fixing the compiler errors it moves away from the verbiage and does not update it &ndash; the same fundamental problem of stale or outdate comments, but at the level of human cognition</p>
+<p>Here is an example of verbiage even a local model can produce:</p>
+<ul>
+<li><strong>Style:</strong> Functional programming textbook style (pure, immutable, referential transparency).</li>
+<li><strong>Language:</strong> Rust 2024 (latest features: `Result`, `Option`, `match`, `traits`, `Algebraic Data Types`).</li>
+<li><strong>Architecture:</strong> Layered DSLs with abstraction barriers, orthogonal modules, high-level stateless interfaces.</li>
+<li><strong>Coding Standards:</strong>
+<ul>
+<li>No `mut`, no mutable references (use pipelines/moves).</li>
+<li>No nulls, no imperative loops (use iterators/combinators).</li>
+<li>No naked primitives (use &ldquo;new-type&rdquo; wrappers/ADTs).</li>
+<li>Smart constructors for invariant enforcement.</li>
+<li>Traits for duck-typing/constraints (Eq, Ord, Semigroup, Monoid, Functor-like).</li>
+</ul>
+</li>
+</ul>
+<p>But the code is an imperative crap because it autocompletes from what it has been trained with and the code blocks are alost always &ldquo;verbatim&rdquo; (it will fail if it &ldquo;chooses&rdquo; a slightly wrong variable name or a different symbol).</p>
+<p>There will be a lot of surprises for those who cannot see things as they really are.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

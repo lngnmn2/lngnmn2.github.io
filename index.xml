@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 16:24:41 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 17:02:33 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,15 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Who Would&#39;ve Thought LMAO</title>
+      <link>https://lngnmn2.github.io/articles/who-would-have-thought/</link>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/who-would-have-thought/</guid>
+      <description>&lt;p&gt;When they began to feed the generated slop back to the models, they deepen the &amp;ldquo;fundamental problem&amp;rdquo; even further.&lt;/p&gt;
+&lt;p&gt;The most recent models produce an excelent verbiage but the code is out of sync with it.&lt;/p&gt;
+&lt;p&gt;This fact is very easy to undestand and explain &amp;ndash; the verbiage and the code live in the very different &amp;ldquo;regions&amp;rdquo; of the  model&amp;rsquo;s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different &lt;em&gt;rates&lt;/em&gt; and thus do not converge as they are expecting.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Another One Who Knows It All</title>

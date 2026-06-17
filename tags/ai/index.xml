@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 16:24:41 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 17:02:33 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Who Would&#39;ve Thought LMAO</title>
+      <link>https://lngnmn2.github.io/articles/who-would-have-thought/</link>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/who-would-have-thought/</guid>
+      <description>&lt;p&gt;When they began to feed the generated slop back to the models, they deepen the &amp;ldquo;fundamental problem&amp;rdquo; even further.&lt;/p&gt;
+&lt;p&gt;The most recent models produce an excelent verbiage but the code is out of sync with it.&lt;/p&gt;
+&lt;p&gt;This fact is very easy to undestand and explain &amp;ndash; the verbiage and the code live in the very different &amp;ldquo;regions&amp;rdquo; of the  model&amp;rsquo;s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different &lt;em&gt;rates&lt;/em&gt; and thus do not converge as they are expecting.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Another One Who Knows It All</title>
       <link>https://lngnmn2.github.io/articles/another-one-who-knows/</link>
