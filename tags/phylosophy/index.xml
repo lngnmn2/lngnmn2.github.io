@@ -6,7 +6,7 @@
     <description>Recent content in Phylosophy on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jul 2026 19:07:37 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 19:59:35 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/phylosophy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter One</title>
@@ -28,6 +28,19 @@
 &lt;p&gt;the Brihadaranyaka Upanishad&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Now let&amp;rsquo;s get serious for a while. Here I claim that Mother Evolution in the macro-process of Biological Evolution, at the level of Molecular Biology have arrived at and &amp;ldquo;shown us&amp;rdquo; the most fundamental, Universal &amp;ldquo;structures&amp;rdquo; and process shapes (forms), and the mathematics only captured these underlying Universal structures and shapes (forms) and in some cases have clarified their implicit, immanent properties.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapter Three</title>
+      <link>https://lngnmn2.github.io/articles/chapter3/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/chapter3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;data List a = [] | a : [a]
+&amp;ndash; Defined in ‘GHC.Types’&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Recursion looks magical until (You) realize that there &lt;em&gt;is&lt;/em&gt; an underlying structure &amp;ndash; a distinct, particular shape Universal shape,, captured and generalized as an abstract (algebraic) structure, and this structure has  particular properties.&lt;/p&gt;
+&lt;p&gt;Molecular Biology does not generalize or abstract out,but it heavily &lt;em&gt;reuse as much of what is already Out There as possible&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Every information carrying (information encoding) molecular structure has its own distinct particular &amp;ldquo;protocol&amp;rdquo; (an implicit set of rules) being implemented &amp;ndash; an alphabet, the start and stop markers, and &amp;ldquo;what to do&amp;rdquo; when observing or confronting every one of these.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
