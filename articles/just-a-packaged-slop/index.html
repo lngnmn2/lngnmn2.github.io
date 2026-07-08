@@ -13,7 +13,7 @@ Everything is wrong with C&#43;&#43;, but everyone uses it, everything is wrong 
 Here is what is wrong with your &ldquo;AI&rdquo; and &ldquo;LLMs&rdquo;.">
 <meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/just-a-packaged-slop/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -220,7 +220,7 @@ Here is what is wrong with your “AI” and “LLMs”.">
 <p>This is how:</p>
 <p>I was going through an old rare classic book, where they explain to you homomorphisms on lists:</p>
 <p>Yes, yes, our old friends <code>fold_right</code> and <code>fold_left</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> list_it f xs z <span style="color:#f92672">=</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#66d9ef">rec</span> list_it f xs z <span style="color:#f92672">=</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">match</span> xs <span style="color:#66d9ef">with</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> [] <span style="color:#f92672">-&gt;</span> z
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#f92672">(</span>x<span style="color:#f92672">::</span>xs<span style="color:#f92672">)</span> <span style="color:#f92672">-&gt;</span> f x <span style="color:#f92672">(</span>list_it f xs z<span style="color:#f92672">)</span>
@@ -233,7 +233,7 @@ Here is what is wrong with your “AI” and “LLMs”.">
 <p>The first one is <em>not /tail-recursive</em>, which means that it will eventually blow up your stack &ndash; it builds up a chain of nested pending function calls until the base case is reached, the actual computation is done when the recursion unwinds, and the &ldquo;value accumulated so far&rdquo; is implicitly returned from each call.</p>
 <p>The second one is tail-recursive, uses the accumulator pattern (by explicitly passing the accumulator &ndash; &ldquo;the value so far&rdquo; &ndash;  as a parameter).</p>
 <p>Now what ChatGPT (state of he art suggested):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> append xs ys <span style="color:#f92672">=</span> list_it <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x z <span style="color:#f92672">-&gt;</span> x<span style="color:#f92672">::</span>z<span style="color:#f92672">)</span> xs ys
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> append xs ys <span style="color:#f92672">=</span> list_it <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x z <span style="color:#f92672">-&gt;</span> x<span style="color:#f92672">::</span>z<span style="color:#f92672">)</span> xs ys
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> rev xs <span style="color:#f92672">=</span> list_it <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> x z <span style="color:#f92672">-&gt;</span> z <span style="color:#f92672">@</span> <span style="color:#f92672">[</span>x<span style="color:#f92672">])</span> xs []
 </span></span></code></pre></div><p>Every computer science major knows what is deeply wrong with these functions, but <em>these fundamental notions is not in the current /context</em>, so the GPT generates the most often seen &ldquo;naive&rdquo; implementations &ndash; a <em>packaged slop</em>.</p>
@@ -243,7 +243,7 @@ Here is what is wrong with your “AI” and “LLMs”.">
 </ul>
 <p>The fundamental and very serious problem (yes, an alarmist wording) is that most of the people would just hit [Enter] and move along, without any interference of understanding. <em>Look, ma, what a productivity!</em> Who needs an understanding when it type-checks, compiles and even passes some tests (until it crashes)?</p>
 <p>Here is how a <em>well-educated</em> person (who understands the underlying principles) would write these:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> flip f <span style="color:#f92672">=</span> <span style="color:#66d9ef">fun</span> x y <span style="color:#f92672">-&gt;</span> f y x
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> flip f <span style="color:#f92672">=</span> <span style="color:#66d9ef">fun</span> x y <span style="color:#f92672">-&gt;</span> f y x
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> cons x xs <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>x <span style="color:#f92672">::</span> xs<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> rev <span style="color:#f92672">=</span> it_list <span style="color:#f92672">(</span>flip cons<span style="color:#f92672">)</span> []
@@ -254,7 +254,7 @@ Here is what is wrong with your “AI” and “LLMs”.">
 </span></span><span style="display:flex;"><span>  f y
 </span></span></code></pre></div><p>yes, <em>Haskell</em> has so much better, carefully chosen and well-designed syntactic forms, including <em>sections</em>.</p>
 <p>and then</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> partition&#39; f xs <span style="color:#f92672">=</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-ocaml" data-lang="ocaml"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> partition&#39; f xs <span style="color:#f92672">=</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> switch <span style="color:#f92672">(</span>l1<span style="color:#f92672">,</span>l2<span style="color:#f92672">)</span> x <span style="color:#f92672">=</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> f x <span style="color:#66d9ef">then</span> <span style="color:#f92672">(</span>l1<span style="color:#f92672">,</span> x<span style="color:#f92672">::</span>l2<span style="color:#f92672">)</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">(</span>x<span style="color:#f92672">::</span>l1<span style="color:#f92672">,</span> l2<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">in</span> it_list switch <span style="color:#f92672">(</span>[]<span style="color:#f92672">,</span> []<span style="color:#f92672">)</span> xs

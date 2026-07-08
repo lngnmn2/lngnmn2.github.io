@@ -2,7 +2,7 @@
 <html lang="en" dir="auto" data-theme="auto">
 
 <head>
-	<meta name="generator" content="Hugo 0.148.2"><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.163.3"><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -147,6 +147,21 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">On Emacs (one more time)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Just as I wrote before, GNU Emacs shall be considered as a Word Heritage Site, since it is an embodiment of a distinct, major culture.
+There are lots of guys who are self-proclaimed Emacs experts or even Emacs gurus (sorry, Greek philosophers), yet I find their writings either too narcissistic or too overly-verbose.
+There are some reasons about using modern GNU Emacs in a “just right” way, and why this is so. Notice that not everything is just a matter of an opinion or a personal preference. Some principles are just stand prior anything subjective.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-17 00:00:00 +0545 +0545'>February 17, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <a class="entry-link" aria-label="post link to On Emacs (one more time)" href="https://lngnmn2.github.io/articles/on-emacs-one-more-time/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Eliminating The Impossible
     </h2>
   </header>
@@ -171,7 +186,7 @@ There is an enormous, almost unbridgeable gap between a formal view and a statis
     <p>AUTHOR: lngnmn2@yahoo.com
 There are a few facts to understand:
 it has been written from scratch, using an academic literature of the compiler’s sub-field, with focus on IR, SSA, guided by some “compiler people” it does not rely on the legacy gcc internal code which no one really understands, it does not rely on llvm/clang (only the literature) it is not optimizing (all the optimizations are missed) so the generated code quality is worse than gcc -O0 so they frightfully followed all the architecture specifications and ABI standards, which is what slop generators are good for. the actual Rust code has to be evaluated yet (the key metrics are modularity and abstraction, clear abstraction barriers) but I predict it will be an imperative spaghetti crap. lets see.
-...</p>
+</p>
   </div>
   <footer class="entry-footer"><span title='2026-02-10 00:00:00 +0545 +0545'>February 10, 2026</span></footer>
   <a class="entry-link" aria-label="post link to The Claude&#39;s C Compiler meme" href="https://lngnmn2.github.io/articles/claudes-c-compiler/"></a>
@@ -276,20 +291,6 @@ Yes, the code won’t compile, and will be full of subtle hallucinations, The ma
   </div>
   <footer class="entry-footer"><span title='2026-01-11 00:00:00 +0545 +0545'>January 11, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to We are fucked" href="https://lngnmn2.github.io/articles/we-are-fucked/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Cognitive Biases At Work
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>There is some output (slop) I got from my recent sessions (yes, yes, I am guilty and ashamed):
-### Validation Summary I have verified the implementation across the **Functional Core** (Domain) and the **Imperative Shell** (Infrastructure &amp; Interface), confirming that the code doesn&#39;t just &#34;look&#34; right but functionally enforces the rules. **1. Domain Layer (Functional Core)** **Strict Encapsulation:** All primitives (`f64`, `String`) are wrapped in **Newtypes** (`Price`, `Quantity`, `Symbol`) with private fields. **Correctness by Construction:** **Smart Constructors** (`new() -&gt; Result`) enforce invariants (e.g., price &gt; 0, symbol format). It is impossible to instantiate invalid domain objects. **Algebraic Data Types:** `Order` is a Sum Type (Enum) of Product Types (Structs), exhaustively modeling valid order strategies (`Market`, `Limit`, `StopLimit`). **Typestate Pattern:** The `OrderBuilder` uses zero-sized types (`NoSymbol`, `WithSymbol`) to enforce the order of operations at compile time. You cannot build an order without mandatory fields. **Error Handling:** `DomainError` is a specific Sum Type using `thiserror`, implementing the &#34;Make Illegal States Unrepresentable&#34; rule. **2. Infrastructure &amp; Interface (Imperative Shell)** **Hexagonal Architecture:** The `client` module acts as an **Adapter**, translating domain objects into Binance API calls. It isolates side effects (I/O, Time, Crypto). **Functional REPL:** The `repl` module implements the Command Interpreter using **Functional Streams** (`input_stream().map().for_each()`), strictly avoiding imperative `while` loops. **Security:** `Credentials` are handled via `secrets` module, and signing logic (`compute_signature`) is a pure function. **3. Verification (Tests)** **Pass Rate:** **124/124 tests passed**. **Coverage:** The test suite is organized into &#34;Stories&#34; (e.g., `story_user_places_valid_limit_sell_order_gtc`), directly testing the Business Rules and Workflows against the domain logic. The project is correctly set up as a mathematically rigorous, type-driven trading assistant. here is another one:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-01-09 00:00:00 +0545 +0545'>January 9, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
-  <a class="entry-link" aria-label="post link to Cognitive Biases At Work" href="https://lngnmn2.github.io/articles/cognitive-biases-at-work/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

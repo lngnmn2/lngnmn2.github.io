@@ -14,8 +14,8 @@
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/haskell-llm/</guid>
       <description>&lt;p&gt;This is the difference between a LLM and an expert. An LLM spews out a &amp;ldquo;propaganda&amp;rdquo; from the web.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### what are the unique properties of a Haskell program
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### what are the unique properties of a Haskell program
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Statically Typed**&lt;/span&gt;: Haskell has a strong, static type system that ensures type safety at compile time.
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Purely Functional**&lt;/span&gt;: Haskell programs are expressions, and functions have no side effects. This leads to code that&amp;#39;s easy to reason about, test, and debug.

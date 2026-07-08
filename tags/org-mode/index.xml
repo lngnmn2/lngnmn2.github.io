@@ -25,7 +25,8 @@
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This is the simplest but &lt;em&gt;smart&lt;/em&gt; self-publishing workflow.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Everything is according to the &lt;em&gt;universal principles&lt;/em&gt; of being almost &lt;em&gt;&amp;ldquo;pure
 functional transformations&amp;rdquo;&lt;/em&gt; of a &lt;em&gt;structured and decorated text&lt;/em&gt;, together with
 &lt;em&gt;version control&lt;/em&gt;, which provides sort of &lt;em&gt;immutability&lt;/em&gt; (of the previous versions).&lt;/p&gt;

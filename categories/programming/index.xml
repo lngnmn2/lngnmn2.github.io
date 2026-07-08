@@ -6,8 +6,19 @@
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2026 12:01:27 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 12:18:39 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter One</title>
+      <link>https://lngnmn2.github.io/articles/chapter1/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/chapter1/</guid>
+      <description>&lt;p&gt;Here I am going to pee on (You) as an &lt;em&gt;Intellectually Superior Alpha Male [Wolf]&lt;/em&gt; would. The reaction I expect from (You) is to lower your tone, put your tail between your legs and to step aside.&lt;/p&gt;
+&lt;p&gt;I am the last living Natural Philosopher&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;trait&lt;/span&gt; NaturalPhilisopher: &lt;span style=&#34;color:#a6e22e&#34;&gt;Mathematics&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; Classic Physical &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; Programming &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; Liguistics &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; PhilosopgyOfMind {}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A set of traits, indeed.&lt;/p&gt;
+&lt;p&gt;I am living by at the place where small rivers  merge among mountains and forests of trees, somehow like Warden, but for different existential reasons. It is true, when you observe deeply and long enough you will begin to notice at least some of the underlying structure of things around you. This is how the ancient Indian Philosophy emerged and has been partially captured in writing.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Philosophy Of What Is</title>
       <link>https://lngnmn2.github.io/articles/philosophy-of-what-is/</link>
@@ -206,7 +217,8 @@
 &lt;p&gt;&amp;ldquo;How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?&amp;rdquo;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Sherlock Holmes&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;So the &amp;ldquo;compiler&amp;rdquo; is there, right on Github  [[&lt;a href=&#34;https://github.com/anthropics/claudes-c-compiler&#34;&gt;https://github.com/anthropics/claudes-c-compiler&lt;/a&gt;], and the only &lt;em&gt;interesting&lt;/em&gt; question is &amp;ldquo;but how&amp;rdquo;?&lt;/p&gt;
 &lt;p&gt;Well, maybe we are grossly exaggerating what might be going on under the hood.&lt;/p&gt;
 &lt;p&gt;There is an enormous, almost unbridgeable gap between a formal view and a statistical view of the world.&lt;/p&gt;</description>
@@ -293,9 +305,9 @@ The whole thing is a nice (but a bit tough) read anyway, and this is &lt;em&gt;w
       <pubDate>Fri, 09 Jan 2026 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/cognitive-biases-at-work/</guid>
       <description>&lt;p&gt;There is some output (slop) I got from my recent sessions (yes, yes, I am guilty and ashamed):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### Validation Summary
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;I have verified the implementation across the &lt;span style=&#34;font-weight:bold&#34;&gt;**Functional Core**&lt;/span&gt; (Domain) and the &lt;span style=&#34;font-weight:bold&#34;&gt;**Imperative Shell**&lt;/span&gt; (Infrastructure &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;amp;&lt;/span&gt; Interface), confirming that the code doesn&amp;#39;t just &amp;#34;look&amp;#34; right but functionally enforces the rules.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;I have verified the implementation across the &lt;span style=&#34;font-weight:bold&#34;&gt;**Functional Core**&lt;/span&gt; (Domain) and the &lt;span style=&#34;font-weight:bold&#34;&gt;**Imperative Shell**&lt;/span&gt; (Infrastructure &amp;amp; Interface), confirming that the code doesn&amp;#39;t just &amp;#34;look&amp;#34; right but functionally enforces the rules.
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;font-weight:bold&#34;&gt;**1. Domain Layer (Functional Core)**&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;font-weight:bold&#34;&gt;**Strict Encapsulation:**&lt;/span&gt; All primitives (&lt;span style=&#34;color:#e6db74&#34;&gt;`f64`&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;`String`&lt;/span&gt;) are wrapped in &lt;span style=&#34;font-weight:bold&#34;&gt;**Newtypes**&lt;/span&gt; (&lt;span style=&#34;color:#e6db74&#34;&gt;`Price`&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;`Quantity`&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;`Symbol`&lt;/span&gt;) with private fields.
@@ -821,8 +833,8 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
       <pubDate>Sun, 26 Jan 2025 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/haskell-llm/</guid>
       <description>&lt;p&gt;This is the difference between a LLM and an expert. An LLM spews out a &amp;ldquo;propaganda&amp;rdquo; from the web.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### what are the unique properties of a Haskell program
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### what are the unique properties of a Haskell program
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;1.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Statically Typed**&lt;/span&gt;: Haskell has a strong, static type system that ensures type safety at compile time.
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;2.&lt;/span&gt; &lt;span style=&#34;font-weight:bold&#34;&gt;**Purely Functional**&lt;/span&gt;: Haskell programs are expressions, and functions have no side effects. This leads to code that&amp;#39;s easy to reason about, test, and debug.
@@ -1185,7 +1197,8 @@ there is no (and never will be) &lt;em&gt;referential transparency&lt;/em&gt;.&l
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This is the simplest but &lt;em&gt;smart&lt;/em&gt; self-publishing workflow.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;org-mode -&amp;gt; ox_hugo -&amp;gt; hugo -&amp;gt; static html -&amp;gt; git commit -a -&amp;gt; git push -&amp;gt; github pages&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Everything is according to the &lt;em&gt;universal principles&lt;/em&gt; of being almost &lt;em&gt;&amp;ldquo;pure
 functional transformations&amp;rdquo;&lt;/em&gt; of a &lt;em&gt;structured and decorated text&lt;/em&gt;, together with
 &lt;em&gt;version control&lt;/em&gt;, which provides sort of &lt;em&gt;immutability&lt;/em&gt; (of the previous versions).&lt;/p&gt;

@@ -14,7 +14,7 @@ There is, however, a small catch. Running 4bit models when your memory can fit a
 Yes, you will get just a 1-2 generated tokens per second, so it would feel like a dial-up internet all over again (which is not necessarily bad), but you will get orders-of-magnitude better slop, in principle.">
 <meta name="author" content="lngnmn2@yahoo.com">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/everyone-is-a-fucking-expert/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -229,7 +229,8 @@ Yes, you will get just a 1-2 generated tokens per second, so it would feel like 
 -rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 23205357888 Sep 14 15:49 baidu_ERNIE-4.5-21B-A3B-Thinking-Q8_0.gguf
 -rwxr-xr-x.   1 lngnmn2 lngnmn2        2126 Dec 23 07:00 g.sh
 -rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 27020865120 Dec 22 22:02 mistralai_Ministral-3-14B-Reasoning-2512-bf16.gguf
--rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 33585500096 Dec 21 09:13 nvidia_Nemotron-3-Nano-30B-A3B-Q8_0.gguf</p></blockquote>
+-rw-r&ndash;r&ndash;.   1 lngnmn2 lngnmn2 33585500096 Dec 21 09:13 nvidia_Nemotron-3-Nano-30B-A3B-Q8_0.gguf</p>
+</blockquote>
 <p>Yes, that would be 1-2 tokes per second, which is perfectly fine. The large coding models (which are the only ones that make any sense), however, are unusable.</p>
 <p><a href="https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF">An uncut (f16) Qwen3-Coder 61Gb gguf</a> will probably match a crappy free-tier Claude web models, but I cannot confirm this. 36 Gb 8bit gguf produces a loq-effort simplistic crap, if at all.</p>
 <p>Here is a simple experiment: formulate a question which you are already know an expert-level answer for, and ask the same question both 4bit and 8bit model (writing the answers in separate files).</p>

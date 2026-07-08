@@ -32,7 +32,7 @@ The project is correctly set up as a mathematically rigorous, type-driven tradin
 here is another one:">
 <meta name="author" content="lngnmn2@yahoo.com">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/cognitive-biases-at-work/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -227,9 +227,9 @@ font-family: 'Source Code Pro', monospace;
 </div>
   </header> 
   <div class="post-content"><p>There is some output (slop) I got from my recent sessions (yes, yes, I am guilty and ashamed):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### Validation Summary
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>I have verified the implementation across the <span style="font-weight:bold">**Functional Core**</span> (Domain) and the <span style="font-weight:bold">**Imperative Shell**</span> (Infrastructure <span style="color:#960050;background-color:#1e0010">&amp;</span> Interface), confirming that the code doesn&#39;t just &#34;look&#34; right but functionally enforces the rules.
+</span></span></span><span style="display:flex;"><span>I have verified the implementation across the <span style="font-weight:bold">**Functional Core**</span> (Domain) and the <span style="font-weight:bold">**Imperative Shell**</span> (Infrastructure &amp; Interface), confirming that the code doesn&#39;t just &#34;look&#34; right but functionally enforces the rules.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="font-weight:bold">**1. Domain Layer (Functional Core)**</span>
 </span></span><span style="display:flex;"><span>  <span style="font-weight:bold">**Strict Encapsulation:**</span> All primitives (<span style="color:#e6db74">`f64`</span>, <span style="color:#e6db74">`String`</span>) are wrapped in <span style="font-weight:bold">**Newtypes**</span> (<span style="color:#e6db74">`Price`</span>, <span style="color:#e6db74">`Quantity`</span>, <span style="color:#e6db74">`Symbol`</span>) with private fields.
@@ -249,9 +249,9 @@ font-family: 'Source Code Pro', monospace;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>The project is correctly set up as a mathematically rigorous, type-driven trading assistant.
 </span></span></code></pre></div><p>here is another one:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### **Refactoring Summary**
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span>  <span style="font-weight:bold">**Architecture &amp; Structure**</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">*</span>   <span style="font-weight:bold">**Library-First Design**</span>: The project structure was corrected so <span style="color:#e6db74">`src/main.rs`</span> acts as a thin consumer of the <span style="color:#e6db74">`r4`</span> library crate. This prevents code duplication and enforces a clean dependency graph.
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">*</span>   <span style="font-weight:bold">**Modules**</span>: The codebase is split into orthogonal modules (<span style="color:#e6db74">`domain`</span> types, <span style="color:#e6db74">`infrastructure`</span> clients, <span style="color:#e6db74">`interface`</span> REPL), cleanly separated in <span style="color:#e6db74">`src/lib.rs`</span>.

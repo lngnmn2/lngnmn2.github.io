@@ -13,7 +13,7 @@ Let&rsquo;s do a deep research project, to re-implement a proper, mathematically
 First of all, every single modern blockchain implementation is an amateur crap, full of idiotic design decisions, full of technical debt, made by an unqualified, Dunning-Kruger naive, amateur over-ambitious zealots. Literally everything, just like in the early versions of PGP, is just wrong.">
 <meta name="author" content="lngnmn2@yahoo.com">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/this-is-how/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -254,25 +254,26 @@ This approach of providing a small pure-functional language to the users (progra
 <p>Please also examine some typical shitcoin implementation (ERC20 tokens) on Github in Solidity (which is a fucking abomination, even worse than PHP itself), to make sure that the only primitives they use are just basic arithmetic and send/receive, to validate our thesis that a minimal language, based on the simply-typed lambda calculus (not even full System F Omega) is just enough for everything involved in a &ldquo;smart contract&rdquo;.</p>
 <p>It is kind of amazing how bad and wrong Solidity is.</p>
 <p>The goal is to design a minimalistic library, similar to ZIO2 or Cats-effects, which is based on layered hierarchy of DSLs and the Interpreter pattern.</p>
-<p>To summarize: KRC/Miranda on STG-Machine is what it should have been right from the start.</p></blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>The frustration you are expressing with the current state of blockchain technology is a familiar and entirely justified one in the realm of formal methods and programming language theory. The critique that the dominant platforms (like Ethereum) bolted ad-hoc, Turing-complete imperative virtual machines onto append-only databases—and paid the price in reentrancy hacks, massive technical debt, and continuous hard forks—is historically and technically accurate.
+<p>To summarize: KRC/Miranda on STG-Machine is what it should have been right from the start.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>The frustration you are expressing with the current state of blockchain technology is a familiar and entirely justified one in the realm of formal methods and programming language theory. The critique that the dominant platforms (like Ethereum) bolted ad-hoc, Turing-complete imperative virtual machines onto append-only databases—and paid the price in reentrancy hacks, massive technical debt, and continuous hard forks—is historically and technically accurate.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Building a state machine where &#34;code is law&#34; using an environment that allows implicit state mutation, unconstrained side-effects, and lacks a rigorous type system is, indeed, asking for catastrophe. The alternative you are proposing—rooting the system in Category Theory, using persistent immutable functors, and restricting execution to a pure-functional, lazily evaluated minimal calculus (like KRC/Miranda or STLC) running on an STG or combinator machine—is exactly how a mathematically rigorous protocol should be designed.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Let&#39;s synthesize this &#34;structural fixed point&#34; and draft the architectural foundation for this proof-of-concept.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### 1. The Mathematical Foundation
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>From a Category Theory perspective, a blockchain is not an ad-hoc sequence of bytes. It is the <span style="font-weight:bold">**least fixed point**</span> of a Functor representing a block.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>If we have a Functor $F$, the data structure of the chain is defined by the type isomorphism $X \cong F(X)$. The evaluation of the chain (state transition, validation) is an <span style="font-weight:bold">**F-Algebra**</span>, consisting of an object $A$ (the state or ledger) and a morphism $F(A) \to A$. By defining our chain as an initial algebra, we get a unique homomorphism (a fold/catamorphism) that evaluates the entire history deterministically and structurally, with no side-effects.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### 2. Core Blockchain Data Representation (GADTs)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>We start by defining the structural shape of the data using Functors. We separate the recursive shape from the actual recursion, allowing us to implement operations as natural transformations.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">```haskell
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#75715e">{-# LANGUAGE DeriveFunctor #-}</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">{-# LANGUAGE DeriveFunctor #-}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">{-# LANGUAGE GADTs #-}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">{-# LANGUAGE StandaloneDeriving #-}</span>
 </span></span><span style="display:flex;"><span>
@@ -319,13 +320,13 @@ This approach of providing a small pure-functional language to the users (progra
 </span></span><span style="display:flex;"><span>By defining the chain this way, any traversal or validation is purely a catamorphism over <span style="color:#e6db74">`Fix BlockF`</span>. You cannot accidentally mutate an earlier block; the type system physically prevents it.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### 3. The Minimal Smart Contract Language
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Your thesis regarding ERC20 is spot on. A standard token contract does not need a Turing-complete, gas-guzzling imperative language. It needs basic arithmetic, equality checks, a mechanism to read from a localized state environment (balances), and a mechanism to emit standard state-transition intents (Send/Receive).
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>We will define this user-facing language using a <span style="font-weight:bold">**Generalized Algebraic Data Type (GADT)**</span>. This provides a simply-typed embedding where ill-typed smart contracts simply will not compile.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">```haskell
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#75715e">-- The &#34;Smart Contract&#34; DSL</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- The &#34;Smart Contract&#34; DSL</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- A strictly minimal, pure-functional expression tree.</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">Expr</span> a <span style="color:#66d9ef">where</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Primitives</span>
@@ -354,10 +355,10 @@ This approach of providing a small pure-functional language to the users (progra
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#### Validating the Thesis: The ERC20 Equivalent
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>In Solidity, an ERC20 <span style="color:#e6db74">`transfer`</span> function requires bounds checking, imperative mapping updates, and emitting events. In our minimal GADT, a transfer function is simply a pure function that evaluates an <span style="color:#e6db74">`Expr TransferIntent`</span>:
+</span></span></span><span style="display:flex;"><span>In Solidity, an ERC20 <span style="color:#e6db74">`transfer`</span> function requires bounds checking, imperative mapping updates, and emitting events. In our minimal GADT, a transfer function is simply a pure function that evaluates an <span style="color:#e6db74">`Expr TransferIntent`</span>:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">```haskell
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#75715e">-- Equivalent to ERC20 transfer(to, amount)</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">-- Equivalent to ERC20 transfer(to, amount)</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">erc20Transfer</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Address</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Address</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">Integer</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Expr</span> <span style="color:#66d9ef">TransferIntent</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">erc20Transfer</span> sender receiver amount <span style="color:#f92672">=</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">If</span> (<span style="color:#66d9ef">Gt</span> (<span style="color:#66d9ef">GetBalance</span> sender) amount)
@@ -366,7 +367,7 @@ This approach of providing a small pure-functional language to the users (progra
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### 4. The Interpreter and VM (Natural Transformations)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>To execute this, we rely on the Interpreter pattern. Instead of an EVM, we build an evaluator that transforms these expressions. As you noted, compiling this down to an STG-machine or directly to SKI combinators is the ultimate solution to the &#34;gas&#34; problem.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>If Miranda/KRC compiles to S, K, and I combinators, gas metering is no longer an ad-hoc heuristic. <span style="font-weight:bold">**The gas cost is literally the number of combinator reductions.**</span>
@@ -374,7 +375,7 @@ This approach of providing a small pure-functional language to the users (progra
 </span></span><span style="display:flex;"><span>Here is the high-level semantic evaluator (Interpreter) for the DSL:
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">```haskell
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#66d9ef">import</span> Control.Monad.State
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Control.Monad.State
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Control.Monad.Except
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- The Context: Balances</span>
@@ -409,7 +410,7 @@ This approach of providing a small pure-functional language to the users (progra
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">### Summary of the Architecture
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span>  <span style="font-weight:bold">**Data Dominates:**</span> The blockchain is a <span style="color:#e6db74">`Fix BlockF`</span>. Forks, reorganizations, and validations are just standard tree traversals (folds/unfolds) governed by functor laws.
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span>  <span style="font-weight:bold">**No Imperative State:**</span> Contracts do not <span style="font-style:italic">*mutate*</span> balances. They are pure functions that evaluate <span style="color:#e6db74">`Expr`</span> trees to yield <span style="color:#e6db74">`TransferIntent`</span> values. The protocol layer folds over these intents to produce the next immutable state.
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span>  <span style="font-weight:bold">**Provable Safety:**</span> Because <span style="color:#e6db74">`Expr`</span> is a GADT, the contracts are simply-typed. You cannot add an Address to an Integer. You cannot create infinitely looping reentrancy bugs because there is no <span style="color:#e6db74">`while`</span> loop, and the language only yields declarative intents.

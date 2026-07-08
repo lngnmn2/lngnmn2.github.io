@@ -27,7 +27,7 @@ Doom themes (as a standalone package)
 Built-in whitespace-mode">
 <meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/bug/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c2189e7d36d72767de292f8b9d897e4a464aa5bc7eb692cda50064f5eb9eeece.css" integrity="sha256-whiefTbXJ2feKS&#43;LnYl&#43;SkZKpbx&#43;tpLNpQBk9eue7s4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -233,7 +233,7 @@ Doom themes (as a standalone package)
 <p>My &ldquo;quality benchmark&rdquo; is how my configuration renders <code>Sacha.org</code>, <em>you know</em>.</p>
 <p>So, here is how to fix it.</p>
 <p>Doom themes (as a standalone package)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(use-package doom-themes
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(use-package doom-themes
 </span></span><span style="display:flex;"><span>  :demand
 </span></span><span style="display:flex;"><span>  :hook (after-init <span style="color:#f92672">.</span> (lambda ()
 </span></span><span style="display:flex;"><span>                        (load-theme <span style="color:#e6db74">&#39;doom-gruvbox</span> <span style="color:#66d9ef">t</span>)))
@@ -246,7 +246,7 @@ Doom themes (as a standalone package)
 </span></span><span style="display:flex;"><span>  :config
 </span></span><span style="display:flex;"><span>  (load-theme <span style="color:#e6db74">&#39;doom-gruvbox</span> <span style="color:#66d9ef">t</span>))
 </span></span></code></pre></div><p>Built-in <code>whitespace-mode</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(use-package whitespace
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>(use-package whitespace
 </span></span><span style="display:flex;"><span>  :straight <span style="color:#f92672">&#39;</span>(:type built-in)
 </span></span><span style="display:flex;"><span>  :after doom-themes
 </span></span><span style="display:flex;"><span>  :hook (after-init <span style="color:#f92672">.</span> global-whitespace-mode)
@@ -256,7 +256,7 @@ Doom themes (as a standalone package)
 </span></span><span style="display:flex;"><span>    (face tabs spaces trailing space-before-tab newline indentation
 </span></span><span style="display:flex;"><span>  empty space-after-tab space-mark tab-mark))))
 </span></span></code></pre></div><p>The kludge</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  (use-package org
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span>  (use-package org
 </span></span><span style="display:flex;"><span>    :hook (org-mode <span style="color:#f92672">.</span> (lambda ()
 </span></span><span style="display:flex;"><span>                        (set-face-background <span style="color:#e6db74">&#39;org-block</span> <span style="color:#e6db74">&#39;unspecified</span>) <span style="color:#75715e">;; the fix</span>
 </span></span><span style="display:flex;"><span>                        (set-face-attribute <span style="color:#e6db74">&#39;org-table</span> <span style="color:#66d9ef">nil</span> :inherit <span style="color:#e6db74">&#39;fixed-pitch</span>)
