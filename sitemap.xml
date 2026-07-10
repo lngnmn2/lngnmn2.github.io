@@ -572,10 +572,10 @@
     <loc>https://lngnmn2.github.io/articles/patterns-everywhere/</loc>
     <lastmod>2024-06-19T17:42:31+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/tags/deep-learing/</loc>
+    <loc>https://lngnmn2.github.io/categories/deep-learning/</loc>
     <lastmod>2024-06-13T20:30:48+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/categories/deep-learning/</loc>
+    <loc>https://lngnmn2.github.io/tags/deep-learing/</loc>
     <lastmod>2024-06-13T20:30:48+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/tao-on-llms/</loc>
@@ -664,9 +664,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/non-bullshit-trading/</loc>
     <lastmod>2023-11-13T16:16:17+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/articles/llm-predictions/</loc>
-    <lastmod>2024-06-11T14:02:50+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/foundations/</loc>
     <lastmod>2023-11-02T11:56:06+05:45</lastmod>
@@ -871,6 +868,9 @@
   </url><url>
     <loc>https://lngnmn2.github.io/articles/emacs/</loc>
     <lastmod>2023-08-02T12:43:44+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/llm-predictions/</loc>
+    <lastmod>2023-11-08T09:35:25+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/kalman-filter/</loc>
     <lastmod>2023-08-10T12:05:25+05:45</lastmod>
