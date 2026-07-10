@@ -147,6 +147,24 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Fixing the annoying bug
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I has been struggling with this very annoying bug when code blocks in the org mode are messed up badly when the global-whitespace-mode is enabled.
+This global-whitespace-mode is especially important to see the actual mess which is usually invisible (like decease causing bacteria).
+My “quality benchmark” is how my configuration renders Sacha.org, you know.
+So, here is how to fix it.
+Doom themes (as a standalone package)
+(use-package doom-themes :demand :hook (after-init . (lambda () (load-theme &#39;doom-gruvbox t))) :hook (org-mode . (lambda () (require &#39;doom-themes-ext-org) (doom-themes-org-config))) :init (setq doom-themes-enable-bold t ; if nil, bold is universally disabled doom-themes-enable-italic t) ; if nil, italics is universally :config (load-theme &#39;doom-gruvbox t)) Built-in whitespace-mode
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-04 00:00:00 +0545 +0545'>September 4, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <a class="entry-link" aria-label="post link to Fixing the annoying bug" href="https://lngnmn2.github.io/articles/bug/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">The org-mode rituals of a narcissistic busy-body
     </h2>
   </header>
@@ -281,22 +299,6 @@ My favorite example is from archery, when one just measures the distances betwee
   </div>
   <footer class="entry-footer"><span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Trading Math" href="https://lngnmn2.github.io/articles/trading-math/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Writing a semi-automated trading system
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>AUTHOR: &lt;lngnmn2@yahoo.com&gt;
-Writing a semi-automated trading system is easy - just ask John Carmack to write it down for you.
-Before that Eric Evans has to extract the domain knowledge using his DDD approach, and then some top mathematician, or maybe Bartosz Milewski, would build a consistent model from it.
-Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
-  <a class="entry-link" aria-label="post link to Writing a semi-automated trading system" href="https://lngnmn2.github.io/articles/automated-trading/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
