@@ -6,22 +6,8 @@
     <description>Recent content in Phylosophy on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 17:19:23 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 17:25:21 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/phylosophy/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Chapter Four</title>
-      <link>https://lngnmn2.github.io/articles/chapter3/</link>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/chapter3/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;, | -&amp;gt; () =&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Have you seen the language I have designed in which the sum-types and product types are the most primitive primitives? (You) haven&amp;rsquo;t seen nothing.&lt;/p&gt;
-&lt;p&gt;Okay, let&amp;rsquo;s build some &lt;em&gt;from the /First Principles&lt;/em&gt;, right from the ground up of Underlying Reality and Causality Itself.&lt;/p&gt;
-&lt;p&gt;What Is the most fundamental &lt;em&gt;non-quantum&lt;/em&gt; physical notion?  An Atom, which is an Energy being trapped or in a particular physical &lt;em&gt;locality&lt;/em&gt;? Noo.
-Energy Itself, which cannot be created or destroyed, only transformed from any &amp;ldquo;form&amp;rdquo; to another (so we say  it is being conserved within the Universe)? Yes.
-By the way, here we do not consider quantum &amp;ldquo;physics&amp;rdquo; as physics. It is a theoretical socially-constructed  pseudo-science. Modern day Tantric teachings.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Chapter Four</title>
       <link>https://lngnmn2.github.io/articles/chapter4/</link>
@@ -47,7 +33,20 @@ By the way, here we do not consider quantum &amp;ldquo;physics&amp;rdquo; as phy
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A set of traits, indeed.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Chapter One</title>
+      <title>Chapter Three</title>
+      <link>https://lngnmn2.github.io/articles/chapter3/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/chapter3/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;data List a = [] | a : [a]
+&amp;ndash; Defined in ‘GHC.Types’&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Recursion looks magical until (You) realize that there &lt;em&gt;is&lt;/em&gt; an underlying structure &amp;ndash; a distinct, particular shape Universal shape,, captured and generalized as an abstract (algebraic) structure, and this structure has  particular properties.&lt;/p&gt;
+&lt;p&gt;Molecular Biology does not generalize or abstract out,but it heavily &lt;em&gt;reuse as much of what is already Out There as possible&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Every information carrying (information encoding) molecular structure has its own distinct particular &amp;ldquo;protocol&amp;rdquo; (an implicit set of rules) being implemented &amp;ndash; an alphabet, the start and stop markers, and &amp;ldquo;what to do&amp;rdquo; when observing or confronting every one of these.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapter Two</title>
       <link>https://lngnmn2.github.io/articles/chapter2/</link>
       <pubDate>Wed, 08 Jul 2026 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/chapter2/</guid>
