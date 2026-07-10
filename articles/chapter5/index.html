@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Chapter Five | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="Phylosophy">
+<meta name="description" content="Okay, what are the most fundamental, non-bullshit mathematical notions for Functional Programming?
+
+Lambdas, Functions, Currying and Partial Application
+The algebraic notion of a Products and their representation as tuples
+an Ordered Sequence as a Universal shape
+Recursive/Nested data structures, especially a List and a Tree
+Recursive processes (of nested function calls) which arise naturally over recursive data structures.
+The Duality of an Initial Algebra and an Interpreter (being a Unique Homomorphism)
+
+It is not a random coincidence that arguments of a multi-argument function (before Currying) are tuples, not Lists (except in LISPs).">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/chapter5/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/chapter5/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/chapter5/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Chapter Five">
+  <meta property="og:description" content="Okay, what are the most fundamental, non-bullshit mathematical notions for Functional Programming?
+Lambdas, Functions, Currying and Partial Application The algebraic notion of a Products and their representation as tuples an Ordered Sequence as a Universal shape Recursive/Nested data structures, especially a List and a Tree Recursive processes (of nested function calls) which arise naturally over recursive data structures. The Duality of an Initial Algebra and an Interpreter (being a Unique Homomorphism) It is not a random coincidence that arguments of a multi-argument function (before Currying) are tuples, not Lists (except in LISPs).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-07-10T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-07-10T20:10:57+05:45">
+    <meta property="article:tag" content="Phylosophy">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Chapter Five">
+  <meta name="twitter:description" content="Okay, what are the most fundamental, non-bullshit mathematical notions for Functional Programming?
+Lambdas, Functions, Currying and Partial Application The algebraic notion of a Products and their representation as tuples an Ordered Sequence as a Universal shape Recursive/Nested data structures, especially a List and a Tree Recursive processes (of nested function calls) which arise naturally over recursive data structures. The Duality of an Initial Algebra and an Interpreter (being a Unique Homomorphism) It is not a random coincidence that arguments of a multi-argument function (before Currying) are tuples, not Lists (except in LISPs).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Chapter Five",
+      "item": "https://lngnmn2.github.io/articles/chapter5/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Chapter Five",
+  "name": "Chapter Five",
+  "description": "Okay, what are the most fundamental, non-bullshit mathematical notions for Functional Programming?\nLambdas, Functions, Currying and Partial Application The algebraic notion of a Products and their representation as tuples an Ordered Sequence as a Universal shape Recursive/Nested data structures, especially a List and a Tree Recursive processes (of nested function calls) which arise naturally over recursive data structures. The Duality of an Initial Algebra and an Interpreter (being a Unique Homomorphism) It is not a random coincidence that arguments of a multi-argument function (before Currying) are tuples, not Lists (except in LISPs).\n",
+  "keywords": [
+    "Phylosophy"
+  ],
+  "articleBody": "Okay, what are the most fundamental, non-bullshit mathematical notions for Functional Programming?\nLambdas, Functions, Currying and Partial Application The algebraic notion of a Products and their representation as tuples an Ordered Sequence as a Universal shape Recursive/Nested data structures, especially a List and a Tree Recursive processes (of nested function calls) which arise naturally over recursive data structures. The Duality of an Initial Algebra and an Interpreter (being a Unique Homomorphism) It is not a random coincidence that arguments of a multi-argument function (before Currying) are tuples, not Lists (except in LISPs).\nCurrying “emerges naturally” when we list all the “individual morphisms” and observe that a \\(B \\rightarrow C\\) is isomorphic to (has the same structure as) \\(C^B\\) (as many and the same arrows).\nIt goes like this: \\(A \\times B \\rightarrow C\\) is isomorphic to \\(A \\rightarrow C^B\\), but \\(C^B\\) is just \\(B \\rightarrow C\\), so \\(A \\rightarrow (B \\rightarrow C)\\). Isomorphic here means that so-called Hom Sets (sets of all arrows) have the exactly same elements, which means they are the same set. The Category Theory does not say “the same”, because that would mean the same “object”, which is not the case, it say “isomorphic” to each other.\n\\(Hom(A×B,C)≅Hom(A,B→C)\\).\nThis is a non-bullshit part.\nWhy Products? Well, single atoms (or single aminoacids) are way too boring. It gets interesting when chains emerge. Products capture the notion of a molecule. Ordered sequence of a fixed size is what tuples are, and they perfectly capture the notion of a chain of aminoacids – a polypeptide – which is of a fixed size and contains different kinds of aminoacids in a particular order).\nNotice that a single strand of DNA or a single mRNA is a List (due to an arbitrary length), but a protein is definitely a Tuple.\nAnd the whole DNA -\u003e mRNA -\u003e amino acids -\u003e proteins -\u003e enzymes is nothing but information processing, while enzymes are “pure mechanical functions” (same inputs – same output, always), at least in theory.\n",
+  "wordCount" : "333",
+  "inLanguage": "en",
+  "datePublished": "2026-07-10T00:00:00+05:45",
+  "dateModified": "2026-07-10T20:10:57+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/chapter5/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Chapter Five
+    </h1>
+    <div class="post-meta"><span title='2026-07-10 00:00:00 +0545 +0545'>July 10, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Okay, what are the most fundamental, non-bullshit mathematical notions for Functional Programming?</p>
+<ul>
+<li>Lambdas, Functions, Currying and Partial Application</li>
+<li>The algebraic notion of a Products and their representation as tuples</li>
+<li>an Ordered Sequence as a Universal shape</li>
+<li>Recursive/Nested data structures, especially a <code>List</code> and a <code>Tree</code></li>
+<li>Recursive processes (of nested function calls) which arise naturally over recursive data structures.</li>
+<li>The Duality of an Initial Algebra and an Interpreter (being a Unique Homomorphism)</li>
+</ul>
+<p>It is not a random coincidence that arguments of a multi-argument function (before Currying) are <em>tuples</em>, not <em>Lists</em> (except in LISPs).</p>
+<p>Currying &ldquo;emerges naturally&rdquo; when we list all the &ldquo;individual morphisms&rdquo; and observe that a \(B \rightarrow C\) is isomorphic to (has the same structure as) \(C^B\) (as many and the same arrows).</p>
+<p>It goes like this: \(A \times B \rightarrow C\) is isomorphic to \(A \rightarrow C^B\), but \(C^B\) is just \(B \rightarrow C\), so \(A \rightarrow (B \rightarrow C)\). Isomorphic here means that so-called <em>Hom Sets</em> (sets of all arrows) have the exactly same elements, which means they are the same set. The Category Theory does not say &ldquo;the same&rdquo;, because that would mean the same &ldquo;object&rdquo;, which is not the case, it say &ldquo;isomorphic&rdquo; to each other.</p>
+<p>\(Hom(A×B,C)≅Hom(A,B→C)\).</p>
+<p>This is a non-bullshit part.</p>
+<p>Why <em>Products</em>? Well, single atoms (or single aminoacids) are way too boring. It gets interesting when chains emerge. Products capture the notion of a molecule. Ordered sequence of a fixed size is what tuples are, and they perfectly capture the notion of a chain of aminoacids &ndash; a polypeptide &ndash; which is of a fixed size and contains different kinds of aminoacids in a particular order).</p>
+<p>Notice that a single strand of DNA or a single mRNA is a <code>List</code> (due to an arbitrary length), but a protein is definitely a <code>Tuple</code>.</p>
+<p>And the whole  DNA -&gt; mRNA -&gt; amino acids -&gt; proteins -&gt; enzymes is nothing but information processing, while enzymes are &ldquo;pure mechanical functions&rdquo; (same inputs &ndash; same output, always), at least in theory.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/phylosophy/">Phylosophy</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

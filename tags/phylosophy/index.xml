@@ -6,8 +6,24 @@
     <description>Recent content in Phylosophy on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 17:25:21 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 20:10:57 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/phylosophy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter Five</title>
+      <link>https://lngnmn2.github.io/articles/chapter5/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/chapter5/</guid>
+      <description>&lt;p&gt;Okay, what are the most fundamental, non-bullshit mathematical notions for Functional Programming?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lambdas, Functions, Currying and Partial Application&lt;/li&gt;
+&lt;li&gt;The algebraic notion of a Products and their representation as tuples&lt;/li&gt;
+&lt;li&gt;an Ordered Sequence as a Universal shape&lt;/li&gt;
+&lt;li&gt;Recursive/Nested data structures, especially a &lt;code&gt;List&lt;/code&gt; and a &lt;code&gt;Tree&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Recursive processes (of nested function calls) which arise naturally over recursive data structures.&lt;/li&gt;
+&lt;li&gt;The Duality of an Initial Algebra and an Interpreter (being a Unique Homomorphism)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is not a random coincidence that arguments of a multi-argument function (before Currying) are &lt;em&gt;tuples&lt;/em&gt;, not &lt;em&gt;Lists&lt;/em&gt; (except in LISPs).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Chapter Four</title>
       <link>https://lngnmn2.github.io/articles/chapter4/</link>
