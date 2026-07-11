@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 20:22:38 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 14:38:11 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,18 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapter Five</title>
+      <link>https://lngnmn2.github.io/articles/chapter6/</link>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/chapter6/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Unnecessary, redundant abstractions is the root or of all evil. Especially the wrong ones.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are many problems with serious FP programming, most of them are caused by millions of idiots who are constantly broadcasting  virtue signaling pseudo-intellectual bullshit.&lt;/p&gt;
+&lt;p&gt;Another set problems is that thinking symbolically, in terms of unfamiliar and unnatural notation is hard &amp;ndash; unpacking chains of partially applied constructors, converted to a prefix notation&amp;hellip;
+But thinking in terms of arrows, almost without notation, is ever harder &amp;ndash; one has to discard every familiar but  inapplicable in this very abstract context, notions, and think in an unfamiliar way.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapter Five</title>
