@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Chapter Seven | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="Phylosophy">
+<meta name="description" content="Let&rsquo;s try to re-build the foundation of Pure Functional programming in a lazy language such as Miranda or Haskell from the first principles.
+Despite nearly 30 years of research and thousands of academic papers every real world Haskell project is a fucking mess of over-abstraction, using the latest meme abstraction or a fad of the day, whike the whole field is an endless contest of &ldquo;look, ma, I am so smart&rdquo; academic papers. The Arrows paper, and preceding Monad Transformers papers are the hallmarks of academic penis size contests.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/chapter7/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/chapter7/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/chapter7/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Chapter Seven">
+  <meta property="og:description" content="Let’s try to re-build the foundation of Pure Functional programming in a lazy language such as Miranda or Haskell from the first principles.
+Despite nearly 30 years of research and thousands of academic papers every real world Haskell project is a fucking mess of over-abstraction, using the latest meme abstraction or a fad of the day, whike the whole field is an endless contest of “look, ma, I am so smart” academic papers. The Arrows paper, and preceding Monad Transformers papers are the hallmarks of academic penis size contests.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-07-13T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-07-13T16:25:05+05:45">
+    <meta property="article:tag" content="Phylosophy">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Chapter Seven">
+  <meta name="twitter:description" content="Let’s try to re-build the foundation of Pure Functional programming in a lazy language such as Miranda or Haskell from the first principles.
+Despite nearly 30 years of research and thousands of academic papers every real world Haskell project is a fucking mess of over-abstraction, using the latest meme abstraction or a fad of the day, whike the whole field is an endless contest of “look, ma, I am so smart” academic papers. The Arrows paper, and preceding Monad Transformers papers are the hallmarks of academic penis size contests.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Chapter Seven",
+      "item": "https://lngnmn2.github.io/articles/chapter7/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Chapter Seven",
+  "name": "Chapter Seven",
+  "description": "Let\u0026rsquo;s try to re-build the foundation of Pure Functional programming in a lazy language such as Miranda or Haskell from the first principles.\nDespite nearly 30 years of research and thousands of academic papers every real world Haskell project is a fucking mess of over-abstraction, using the latest meme abstraction or a fad of the day, whike the whole field is an endless contest of \u0026ldquo;look, ma, I am so smart\u0026rdquo; academic papers. The Arrows paper, and preceding Monad Transformers papers are the hallmarks of academic penis size contests.\n",
+  "keywords": [
+    "Phylosophy"
+  ],
+  "articleBody": "Let’s try to re-build the foundation of Pure Functional programming in a lazy language such as Miranda or Haskell from the first principles.\nDespite nearly 30 years of research and thousands of academic papers every real world Haskell project is a fucking mess of over-abstraction, using the latest meme abstraction or a fad of the day, whike the whole field is an endless contest of “look, ma, I am so smart” academic papers. The Arrows paper, and preceding Monad Transformers papers are the hallmarks of academic penis size contests.\nSo, let’s try to rebuild everything we can from the first principles, right from the ground up.\nThe Haskell 98 report and the Library report was, in a sense, an arrival at the promised land. All the good books of the time, including Functional Approach To Programming, Bird and Wadler book on Miranda, and every single other book in the late 90s and early 2000s preached the enlightenment of purity and doing thing Just Right, the optimal way, in Just A Few Lines Of Code.\nThat promise seem to never materialize, what we have got shit like Conduit, Yesod or whatever it is. What we have arrived at instead is a towering hierarchies of J2EE-like patterns encoded in Monadic contexts, and competition of whose Arrow is longer and thicker.\nLet’s start from the absolute foundation. We have the Simple Typed Lambda Calculus, which not just Turing Complete (when we extend it with recursion), but uses the type system to avoid paradoxes related to academic fancies of the Set Theory (that every set is a subset of itself, and is thus included in the set of all subsets of itself, which is, of course, bullshit in order to have nice definitions).\nThe Lambda Calculus is also, by definition and by construction, a lazy (non-strict) system (language), so all the nice properties of laziness are Out There from the start.\nWe have Abstraction (as Gentzen’s Introduction rule) and Application (as Elimination rule), variable bindings, parameter passing, returning of a value, nesting of function calls (application), recursion, which is also nesting of function calls, proper lexical scope, and currying and partial application all arise naturally.\nWe then extend the Lambda Calculus by adding Sum and Product types, as well as proper Function Types (as categorical morphisms) into the language as built-ins and thus, indeed, have approached the promised land re be reborn in and the nirvana of doing things “Just Right”.\nThe only one fundamental problem is still here. Since the only way to establish a particular (Causal) order of evaluation in a lazy language is explicit nesting of function calls (which is what both function composition and recursion do), do not have a universal, standardized way to use data-dependency between nested calls, and cannot pass a static or mutable state to a nested function.\nNotice that recursion is operationally the same as function composition – it is nesting of function calls.\nAccording to Barbara Liskov, however, everything can be solved by the Abstraction by Parameterization principle, which basically means pass another parameter along, which may be an implicit one (as in Scala), may be a dictionary (as in Haskell), maybe as a closure, or a higher-order function, which is a closure.\nAnother fundamental principle is Abstraction By Specification (also Liskov), so we have to have standardized abstract interfaces, and just pass around implementations as higher order functions.\nIterators (and the generalized notion of a Protocol as an implemented set of rules) was the culmination and triumph of this approachf Passing closures which implement a particular protocol is the pattern which emerges long before they knew how to say “Dependency Injection”.\nHaskell does not have iterators, but it has its lazy lists (being also, by construction, lazy streams), so, basically they are implicitly iterators.\nThen Functional Design patterns of Scott Wlaschin was another attempt to summarize the actual patters used in functional programming, and what he came up with was Functions, Functions and Functions.\nBut long before Wlaschin, back in 90s, Peter Norvig wrote an essay saying just the same – everything you have in your imperative OO crappy languages are just patterns of high-order functions. Google it.\nNow let’s see which standard abstract interfaces we have.\na function application ($) a function composition (.) a Mealy machine a Monad Despite all the bullshit written about Monads, they are, indeed, arise naturally within the Category Theory and thus are inevitable. The universal notion behind the monadic interfaces is of a Kleisli arrow, which is a mapping (an ordinary pure function) but that “crosses an abstraction barrier” by enhancing the range of a function.\nTo be more precise, it maps a pure value into some larger algebraic structure than just a value. Product, being the “smallest” larger algebraic structure possible, while a Functor is a generalization of a “larger” algebraic structure (which is not necessarily a Product). Again, these notions arise naturally just from construction and observations, and thus are inevitable.\nI will argue that we do not have to have a Functor as the target structure, a product is good-enough, but Functor is “nice to have”, since it abstract out the actual algebraic “shape” or form.\nNow we can do the same trick with the domain, by having a larger algebraic structure for every element of the domain. This, I suppose, is exactly what a Natural transformation between categories supposed to capture – mapping the whole type (well, Category) into an isomorphic type (Category) with every value being embedded into some large algebraic structure, of which Product is the minimal and the most fundamental.\nThe confusion arise because a Functor can be defined as mapping of whole types, and also between types, which the original algebraic structure is preserved and no information is ever being lost, but the range can uniformly enhance or transform (translate) the structure, without breaking or changing any existing relations only introducing new ones.\nThis abstract view is just generalization of DNA translation machinery, which does exactly this – never breaks existing structure, adds more structure and nests these operations (steps).\nThe Kleisli arrows, by the way, are exactly the ones between different structural shapes of the domain and codomain, each individual morphism is such a Kleisli arrow, and each pair of values have a simpler value as source and value with some additional structure as the target.\nNotice that nothing else ever happens, just this. Monads, thus, indeed arise naturally, but the syntax and the interfaces chosen by the Great Bearded Guys at Haskell committee can be better.\nWe have the fish operator, but it requires even more wrapping.\nAt the level of the Category Theory (arrows between dots) everything is justified and optimal and complete and Inevitable, the problem is how do we represent and implement such composition in Haskell.\nInstead of trying to summarize the last 30 years of academic papers and code, we can try to find the only optimal way to solve the passing additional state or data dependencies between nested function calls.\nIt seems like just using Products us enough for everything and can even be proved so.\nWe want only one thing from the Arrow framework – the idea of introducing the (-\u003e) morphism as a higher order function, which wraps an ordinary function.\nThe principal idea is to lift the whole function type (A -\u003e B -\u003e C), which includes the domain type and the range type into a “richer Category”, where composition is exactly the same, but the Domain and Range types are being enhanced (they call this lifted ) or uniformly translated into richer algebraic structures. And the whole new set of morphisms will naturally compose.\nThere are many patterns: what to do with, what to store in, when to modify and when to pass along the data in the “larger” Products, and we have to list all the common possibilities and try to generalize and arrive at the only optimal set of interfaces the smallest set of combinaters.\nThat won’t be a universal machine, but universal Recursive machine, which acts on linear sequences – every recursive computation can be expressed with it. But since almost everything in a pure functional lazy language is nesting of function calls (the implicit dependency graph they form), a lot can be done.\nAnd, of course, the key a-ha moment is that implementations of Mealy Machine, State Monad and some Arrow combinators are structurally the same transition, and this can be properly generalized, stripping away all the Typeclasses and abstract interfaces.\nThis is what we do.\n",
+  "wordCount" : "1422",
+  "inLanguage": "en",
+  "datePublished": "2026-07-13T00:00:00+05:45",
+  "dateModified": "2026-07-13T16:25:05+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/chapter7/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Chapter Seven
+    </h1>
+    <div class="post-meta"><span title='2026-07-13 00:00:00 +0545 +0545'>July 13, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Let&rsquo;s try to re-build the foundation of Pure Functional programming in a lazy language such as Miranda or Haskell from the first principles.</p>
+<p>Despite nearly 30 years of research and thousands of academic papers every real world Haskell project is a fucking mess of over-abstraction, using the latest meme abstraction or a fad of the day, whike the whole field is an endless contest of &ldquo;look, ma, I am so smart&rdquo; academic papers. The Arrows paper, and preceding Monad Transformers papers are the hallmarks of academic penis size contests.</p>
+<p>So, let&rsquo;s try to rebuild everything we can from the first principles, right from the ground up.</p>
+<p>The Haskell 98 report and the Library report was, in a sense, <em>an arrival at the promised land</em>. All the good books of the time, including Functional Approach To Programming, Bird and Wadler book on Miranda, and every single other book in the late 90s and early 2000s preached the enlightenment of purity and doing thing Just Right, the optimal way, in Just A Few Lines Of Code.</p>
+<p>That promise seem to never materialize, what we have got shit like Conduit, Yesod or whatever it is. What we have arrived at instead is a towering hierarchies of J2EE-like patterns encoded in Monadic contexts, and competition of whose Arrow is longer and thicker.</p>
+<p>Let&rsquo;s start from the absolute foundation. We have the Simple Typed Lambda Calculus, which not just Turing Complete (when we extend it with recursion), but uses the type system to avoid paradoxes related to academic fancies of the Set Theory (that every set is a subset of itself, and is thus included in the set of all subsets of itself, which is, of course, bullshit in order to have nice definitions).</p>
+<p>The Lambda Calculus is also, by definition and by construction, a lazy (non-strict) system (language), so all the nice properties of laziness are Out There from the start.</p>
+<p>We have Abstraction (as Gentzen&rsquo;s Introduction rule) and Application (as Elimination rule), variable bindings, parameter passing, returning of a value, nesting of function calls (application), recursion, which is also nesting of function calls, proper lexical scope, and currying and partial application all arise naturally.</p>
+<p>We then extend the Lambda Calculus by adding Sum and Product types, as well as proper Function Types (as categorical morphisms) into the language as built-ins and thus, indeed, have approached the promised land re be reborn in and the nirvana of doing things &ldquo;Just Right&rdquo;.</p>
+<p>The only one fundamental problem is still here. Since the only way to establish a particular (Causal) order of evaluation in a lazy language is explicit nesting of function calls (which is what both function composition and recursion do), do not have a universal, standardized way to use data-dependency between nested calls, and cannot pass a static or mutable state to a nested function.</p>
+<p>Notice that recursion is operationally the same as function composition &ndash; it is nesting of function calls.</p>
+<p>According to Barbara Liskov, however, everything can be solved by the Abstraction by Parameterization principle, which basically means pass another parameter  along, which may be an implicit one (as in Scala), may be a dictionary (as in Haskell), maybe as a closure, or a higher-order function, which is a closure.</p>
+<p>Another fundamental principle is Abstraction By Specification (also Liskov), so we have to have standardized abstract interfaces, and just pass around implementations as higher order functions.</p>
+<p>Iterators (and the generalized  notion of a Protocol as an implemented set of rules) was the culmination and triumph of this approachf Passing closures which implement a particular protocol is the pattern which emerges long before they knew how to say &ldquo;Dependency Injection&rdquo;.</p>
+<p>Haskell does not have iterators, but it has its lazy lists (being also, by construction, lazy streams), so, basically they are implicitly iterators.</p>
+<p>Then Functional Design patterns of Scott Wlaschin was another attempt to summarize the actual patters used in functional programming, and what he came up with was Functions, Functions and Functions.</p>
+<p>But long before Wlaschin, back in 90s, Peter Norvig wrote an essay saying just the same &ndash; everything you have in your imperative OO crappy languages are just patterns of high-order functions. Google it.</p>
+<p>Now let&rsquo;s see which standard abstract interfaces we have.</p>
+<ul>
+<li>a function application ($)</li>
+<li>a function composition (.)</li>
+<li>a Mealy machine</li>
+<li>a Monad</li>
+</ul>
+<p>Despite all the bullshit written about Monads, they are, indeed, arise naturally within the Category Theory  and thus are inevitable. The universal notion behind the monadic interfaces is of a <em>Kleisli arrow</em>, which is a mapping (an ordinary pure function) but that &ldquo;crosses an abstraction barrier&rdquo; by <em>enhancing the range of a function</em>.</p>
+<p>To be more precise, it maps a pure value <em>into some larger algebraic structure</em> than just a value. <em>Product</em>, being the &ldquo;smallest&rdquo; larger algebraic structure possible, while a Functor is a generalization of a &ldquo;larger&rdquo; algebraic structure (which is not  necessarily a Product). Again, these notions arise naturally just from construction and observations, and thus are inevitable.</p>
+<p>I will argue that we do not have to have a Functor as the target structure, a product is good-enough, but Functor is &ldquo;nice to have&rdquo;, since it abstract out <em>the actual algebraic &ldquo;shape&rdquo; or form</em>.</p>
+<p>Now we can do the same trick with the domain, by having a <em>larger algebraic structure</em> for  every element of the domain. This, I suppose, is exactly what a Natural transformation between categories supposed to capture &ndash; mapping the whole type (well, Category) into an isomorphic type (Category) with every value being embedded into some large algebraic structure, of which Product is the minimal and the most fundamental.</p>
+<p>The confusion arise because a Functor can be defined as mapping of whole types, and also between types, which the original algebraic structure is preserved and no information is ever being lost, but the range can uniformly enhance or transform (translate) the structure, without breaking or changing any existing relations only introducing new ones.</p>
+<p>This abstract view is just generalization of DNA translation machinery, which does exactly this &ndash; never breaks existing structure, adds more structure and nests these operations (steps).</p>
+<p>The Kleisli arrows, by the way, are exactly the ones between different structural shapes of the  domain and codomain, each individual morphism is such a Kleisli arrow, and each pair of values have a simpler value as source and value with some additional structure as the target.</p>
+<p>Notice that nothing else ever happens, just this. Monads, thus, indeed arise naturally, but the syntax and the interfaces chosen by the Great Bearded Guys at Haskell committee can be better.</p>
+<p>We have the fish operator, but it requires even more wrapping.</p>
+<p>At the level of the Category Theory (arrows between dots) everything is justified and optimal and complete  and Inevitable, the problem is how do we represent and implement such composition in Haskell.</p>
+<p>Instead of trying to summarize the last 30 years of academic papers and code, we can try to find <em>the only optimal way to solve the passing additional state or data dependencies between nested function calls</em>.</p>
+<p>It seems like just using Products us enough for everything and can even be proved so.</p>
+<p>We want only one thing from the Arrow framework &ndash; the idea of introducing the (-&gt;) morphism as a higher order function, which wraps an ordinary function.</p>
+<p>The principal idea is to lift <em>the whole function type</em> (<code>A -&gt; B -&gt; C</code>), which includes the domain type and the range type into a &ldquo;richer Category&rdquo;, where <em>composition is exactly the same</em>, but the Domain and Range types are being enhanced (they call this lifted ) or <em>uniformly translated</em> into richer algebraic structures. And the whole new set of morphisms will naturally compose.</p>
+<p>There are many patterns: what to do with, what to store in, when to modify and when to pass along the data in the &ldquo;larger&rdquo; <em>Products</em>, and we have to list all the common possibilities and try to generalize and arrive at the only optimal set of interfaces the smallest set of combinaters.</p>
+<p>That won&rsquo;t be a universal machine, but universal Recursive machine, which acts on linear sequences &ndash; every recursive computation can be expressed with it. But since almost everything in a pure functional lazy language is nesting of function calls (the implicit dependency graph they form), a lot can be done.</p>
+<p>And, of course, the key a-ha moment is that implementations of Mealy Machine, State Monad and some Arrow combinators are structurally the same transition, and this can be properly generalized, stripping away all the Typeclasses and abstract interfaces.</p>
+<p>This is what we do.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/phylosophy/">Phylosophy</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

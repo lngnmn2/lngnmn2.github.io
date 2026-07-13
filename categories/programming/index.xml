@@ -6,10 +6,18 @@
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jul 2026 14:49:48 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 16:25:19 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Chapter Five</title>
+      <title>Chapter Seven</title>
+      <link>https://lngnmn2.github.io/articles/chapter7/</link>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/chapter7/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s try to re-build the foundation of Pure Functional programming in a lazy language such as Miranda or Haskell from the first principles.&lt;/p&gt;
+&lt;p&gt;Despite nearly 30 years of research and thousands of academic papers every real world Haskell project is a fucking mess of over-abstraction, using the latest meme abstraction or a fad of the day, whike the whole field is an endless contest of &amp;ldquo;look, ma, I am so smart&amp;rdquo; academic papers. The Arrows paper, and preceding Monad Transformers papers are the hallmarks of academic penis size contests.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chapter Six</title>
       <link>https://lngnmn2.github.io/articles/chapter6/</link>
       <pubDate>Sat, 11 Jul 2026 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/chapter6/</guid>
