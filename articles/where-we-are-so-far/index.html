@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Where We Are So Far | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="So, it feels like it&rsquo;s time to write again, to see where we actually are at.
+Recently there were two big events related to the LLMs. First one is the &ldquo;discovery&rdquo; of a counter-example for the famous conjuncture (and the large blog post by Terence Tao, that he could have discovered it too, LOL).
+Another one was the &ldquo;hack&rdquo; of bitcoin &ldquo;hardware&rdquo; wallets, not the hack itself (it is rather &ldquo;simple&rdquo;) but the fact that, allegedly, an LLM with a given prompt like &ldquo;find a security weakness in this code&rdquo; (not even a &ldquo;vulnerability&rdquo;)  have managed to find the exact RNG bug (reduction of the entropy size form the &ldquo;safe&rdquo; 128 bits from a hardware RNG to a &ldquo;weak&rdquo; 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit &ldquo;state space&rdquo; and find the keys).">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/where-we-are-so-far/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/where-we-are-so-far/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/where-we-are-so-far/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Where We Are So Far">
+  <meta property="og:description" content="So, it feels like it’s time to write again, to see where we actually are at.
+Recently there were two big events related to the LLMs. First one is the “discovery” of a counter-example for the famous conjuncture (and the large blog post by Terence Tao, that he could have discovered it too, LOL).
+Another one was the “hack” of bitcoin “hardware” wallets, not the hack itself (it is rather “simple”) but the fact that, allegedly, an LLM with a given prompt like “find a security weakness in this code” (not even a “vulnerability”) have managed to find the exact RNG bug (reduction of the entropy size form the “safe” 128 bits from a hardware RNG to a “weak” 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit “state space” and find the keys).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-08-11T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-08-11T10:10:28+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Where We Are So Far">
+  <meta name="twitter:description" content="So, it feels like it’s time to write again, to see where we actually are at.
+Recently there were two big events related to the LLMs. First one is the “discovery” of a counter-example for the famous conjuncture (and the large blog post by Terence Tao, that he could have discovered it too, LOL).
+Another one was the “hack” of bitcoin “hardware” wallets, not the hack itself (it is rather “simple”) but the fact that, allegedly, an LLM with a given prompt like “find a security weakness in this code” (not even a “vulnerability”) have managed to find the exact RNG bug (reduction of the entropy size form the “safe” 128 bits from a hardware RNG to a “weak” 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit “state space” and find the keys).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Where We Are So Far",
+      "item": "https://lngnmn2.github.io/articles/where-we-are-so-far/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Where We Are So Far",
+  "name": "Where We Are So Far",
+  "description": "So, it feels like it\u0026rsquo;s time to write again, to see where we actually are at.\nRecently there were two big events related to the LLMs. First one is the \u0026ldquo;discovery\u0026rdquo; of a counter-example for the famous conjuncture (and the large blog post by Terence Tao, that he could have discovered it too, LOL).\nAnother one was the \u0026ldquo;hack\u0026rdquo; of bitcoin \u0026ldquo;hardware\u0026rdquo; wallets, not the hack itself (it is rather \u0026ldquo;simple\u0026rdquo;) but the fact that, allegedly, an LLM with a given prompt like \u0026ldquo;find a security weakness in this code\u0026rdquo; (not even a \u0026ldquo;vulnerability\u0026rdquo;) have managed to find the exact RNG bug (reduction of the entropy size form the \u0026ldquo;safe\u0026rdquo; 128 bits from a hardware RNG to a \u0026ldquo;weak\u0026rdquo; 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit \u0026ldquo;state space\u0026rdquo; and find the keys).\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "So, it feels like it’s time to write again, to see where we actually are at.\nRecently there were two big events related to the LLMs. First one is the “discovery” of a counter-example for the famous conjuncture (and the large blog post by Terence Tao, that he could have discovered it too, LOL).\nAnother one was the “hack” of bitcoin “hardware” wallets, not the hack itself (it is rather “simple”) but the fact that, allegedly, an LLM with a given prompt like “find a security weakness in this code” (not even a “vulnerability”) have managed to find the exact RNG bug (reduction of the entropy size form the “safe” 128 bits from a hardware RNG to a “weak” 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit “state space” and find the keys).\nThere are the usual things to clarify. No LLM is “thinking” or “reasoning” about anything. They are incapable of doing so in principle – there are no “reasoning engines” in them, just matrix multiplications, together with some clever “tricks” of passing the numbers between layers and masking out some of them, which they call “Attention”.\nJust as the very same multi-modal model can create a consistent image for (You) based on pixel patterns it has been trained with, absolutely oblivious to any principle of human anatomy, physiology, symmetries of the bodies and faces, or the facts that hairs shall hang down when the head is upside-down, and so on, yet, it generates everything “correctly” just out of a huge amount of training data, which “out-weight” or “down-weights” the incorrect patterns (and a sheer brute-force, which appears as intelligence).\nSo, no, the model haven’t analyzed any mathematical abstractions in a systematic way to find a counter-example, it just operated at the level of tokens and came out with a string of symbols which human mathematicians have recognized as a correct counter-example, exactly as if they would recognize any pixel patterns in a picture.\nThere is, however, a catch. Some would argue that the result was “novel”, never seen before and never published before, so the LLM “came up on its own”. This is, of course, anthropomorphic bullshit all over again. It managed to “come up” with a novel result exactly because it is a probabilistic inference engine, so it produces the most likely next token, but from a range of possible tokens with slightly different probabilities (mere Numbers which we interpret as a probability) associated with each token.\nThis tells us a few things: first, that there is a “simulation” (an appearance) of thinking by just combining the tokens from “a less common sense”, but not a complete bullshit at the lower layers of probabilities. This is “good” for the “research” and for the “code”, provided, as in the case of the code, that there is a strict and rigorous compiler of strongly-typed language, which can catch the subtle errors and turn them into proper syntax or even semantic fixes, keeping the “novel” (less common) logic intact.\nFor math that would be a proof-checker – a human or an automated one.\nThis, obviously, answers the question (You) are repeatedly asking nowadays: “which languages are the best for LLM vape-coding” – the strictest ones, with the most advanced static tying (Haskell, Ocaml, Rust). The more constraints (typing discipline) – the better. It is that simple. Math guys know the importance of constraints and additional rigor.\nWhat “the humanties majors” can do about subtle errors in their sectarian-consensus based slop due to lack of compiler and proof-checkers ? Probably they shall get the [long deserved] rope.\nAnd what about the “hack” and the “discovery of a subtle cryptographic weakness” (which was hard to spot since it has been obscured by idiotic unrtyped C preprocessor macros)? Well, there are, obviously, some symbolic constants in the code, such as “RNG”, which has been captured as full (new) “tokens”. These “tokens” appear both in texts and in the code, and are “probabilisticly closer” to the discussion of potential weakness of random number generators.\nAgain, it did no “analysis” (in principle), it managed, however, to spew out a sequence of code from its training data (or been loaded into the context verbatim), which apparently has the commonly discussed weakness, just at the level of “token shuffling”, without any “understanding” whatsoever.\nGiven that the current AI race is just about “increasing the brute force to the limits” (optimizing the “compute” and the number of parameters) we can expect that the larger models will generate “better-and-better” common sense sequences (literally) but coming up with something truly “novel” and “never seen before” will be limited and a matter of a pure chance (an actual “path” the in-principle non-deterministic and non-reproducible inference algorithm will occasionally take).\nOne more time: what midwits see as “intelligence” is only appearance of it due to an enormous brute-force of “compute” behind it. Yes, in mathematics a brute-force approach (explicit enumeration and checking for a property to hold) is a feasible, but notice that there has to be a “checker” for subtle bullshit – a divergence from the current “common sense” verbiage.\nThis is where the most potential “research” breakthroughs are – in the less “traveled paths”, as good poets put it. The problem is validation. And no, another LLM cannot validate a novel result, since it requires a different kind of discipline (either proper experiments or prof-checking).\nBut aside from that, talking about interesting subjects with a modern LLMs, even at the shit-tier free plans, is amazing experience, and forcing it to write a minimal, “optimal” code (which it cannot, again, in principle, do by itself) is a rare joy (after hours of frustration and tension).\nSo, the bottom line – still a “glorified autocomplete”.\n",
+  "wordCount" : "959",
+  "inLanguage": "en",
+  "datePublished": "2026-08-11T00:00:00+05:45",
+  "dateModified": "2026-08-11T10:10:28+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/where-we-are-so-far/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Where We Are So Far
+    </h1>
+    <div class="post-meta"><span title='2026-08-11 00:00:00 +0545 +0545'>August 11, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>So, it feels like it&rsquo;s time to write again, to see where we actually are at.</p>
+<p>Recently there were two big events related to the LLMs. First one is the &ldquo;discovery&rdquo; of a counter-example for the famous conjuncture (and the large blog post by Terence Tao, that he could have discovered it too, LOL).</p>
+<p>Another one was the &ldquo;hack&rdquo; of bitcoin &ldquo;hardware&rdquo; wallets, not the hack itself (it is rather &ldquo;simple&rdquo;) but the fact that, allegedly, an LLM with a given prompt like &ldquo;find a security weakness in this code&rdquo; (not even a &ldquo;vulnerability&rdquo;)  have managed to find the exact RNG bug (reduction of the entropy size form the &ldquo;safe&rdquo; 128 bits from a hardware RNG to a &ldquo;weak&rdquo; 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit &ldquo;state space&rdquo; and find the keys).</p>
+<p>There are the usual things to clarify. No LLM is &ldquo;thinking&rdquo; or &ldquo;reasoning&rdquo; about anything. They are incapable of doing so in principle &ndash; there are no &ldquo;reasoning engines&rdquo; in them, just matrix multiplications, <em>together</em> with some clever &ldquo;tricks&rdquo; of passing the numbers between layers and masking out some of them, which they call &ldquo;Attention&rdquo;.</p>
+<p>Just as the very same multi-modal model can create a consistent image for (You) based on pixel patterns it has been trained with, absolutely oblivious to any principle of human anatomy, physiology, symmetries of the bodies and faces, or the facts that hairs shall hang down when the head is upside-down, and so on, yet, it generates everything &ldquo;correctly&rdquo; just out of a huge amount of training data, which &ldquo;out-weight&rdquo; or &ldquo;down-weights&rdquo; the incorrect patterns  (and a sheer brute-force, which appears as intelligence).</p>
+<p>So, no, the model haven&rsquo;t analyzed any mathematical abstractions in a systematic way to find a counter-example, it just operated at the level of tokens and came out with a string of symbols which human mathematicians have recognized as a correct counter-example, exactly as if they would recognize any pixel patterns in a picture.</p>
+<p>There is, however, a catch. Some would argue that the result was &ldquo;novel&rdquo;, never seen before and never published before, so the LLM &ldquo;came up on its own&rdquo;. This is, of course, anthropomorphic bullshit all over again. It managed to &ldquo;come up&rdquo; with a novel result exactly because it is a probabilistic inference engine, so it produces the most likely next token, but from a range of possible tokens with slightly different probabilities (mere Numbers which we interpret as a probability) associated with each token.</p>
+<p>This tells us a few things: first, that there is a &ldquo;simulation&rdquo; (an appearance) of thinking by just combining the tokens from &ldquo;a less common sense&rdquo;, but not a complete bullshit at the lower layers of probabilities. This is &ldquo;good&rdquo; for the &ldquo;research&rdquo; and for the &ldquo;code&rdquo;, provided, as in the case of the code, that there is a strict and rigorous compiler of strongly-typed language,  which can catch the subtle errors and turn them into proper  syntax or even semantic fixes, keeping the &ldquo;novel&rdquo; (less common) logic intact.</p>
+<p>For math that would be a proof-checker &ndash; a human or an automated one.</p>
+<p>This, obviously, answers the question (You) are repeatedly asking nowadays: &ldquo;which languages are the best for LLM vape-coding&rdquo; &ndash; the strictest ones, with the most advanced static tying (Haskell, Ocaml, Rust). The more constraints (typing discipline) &ndash; the better. It is that simple. Math guys know the importance of constraints and additional rigor.</p>
+<p>What &ldquo;the humanties majors&rdquo; can do about subtle errors in their sectarian-consensus based slop due to lack of compiler and proof-checkers ? Probably they shall get the [long deserved] rope.</p>
+<p>And what about the &ldquo;hack&rdquo; and the &ldquo;discovery of a subtle cryptographic weakness&rdquo; (which was hard to spot since it has been obscured by idiotic unrtyped C preprocessor macros)? Well, there are, obviously, some symbolic constants in the code, such as &ldquo;RNG&rdquo;, which has been captured as full (new) &ldquo;tokens&rdquo;. These &ldquo;tokens&rdquo; appear both in texts and in the code, and are &ldquo;probabilisticly closer&rdquo; to the discussion of potential weakness of random number generators.</p>
+<p>Again, it did no &ldquo;analysis&rdquo; (in principle), it managed, however, to spew out a sequence of code from its training data (or been loaded into the context verbatim), which apparently <em>has</em> the commonly discussed weakness, just at the level of &ldquo;token shuffling&rdquo;, without any &ldquo;understanding&rdquo; whatsoever.</p>
+<p>Given that the current AI race is just about &ldquo;increasing the brute force to the limits&rdquo; (optimizing the &ldquo;compute&rdquo; and the number of parameters) we can expect that the larger models will generate &ldquo;better-and-better&rdquo;  common sense sequences (literally) but coming up with something truly &ldquo;novel&rdquo; and &ldquo;never seen before&rdquo; will be limited and a matter of a pure chance (an actual &ldquo;path&rdquo; the in-principle non-deterministic and non-reproducible  inference algorithm will occasionally take).</p>
+<p>One more time: what midwits see as &ldquo;intelligence&rdquo; is only appearance of it due to an enormous brute-force of &ldquo;compute&rdquo; behind it. Yes, in mathematics a brute-force approach (explicit enumeration and checking for a property to hold) is a feasible, but notice that there has to be a &ldquo;checker&rdquo; for subtle bullshit &ndash; a divergence from the current &ldquo;common sense&rdquo; verbiage.</p>
+<p>This is where the most <em>potential</em> &ldquo;research&rdquo; breakthroughs are &ndash; in the less &ldquo;traveled paths&rdquo;, as good poets put it. The problem is validation. And no, another LLM cannot validate a novel result, since it requires a different kind of discipline (either proper experiments or prof-checking).</p>
+<p>But aside from that, talking about interesting subjects with a modern LLMs, even at the shit-tier free plans, is amazing experience, and forcing it to write a minimal, &ldquo;optimal&rdquo; code (which it cannot, again, in principle, do by itself) is a rare joy (after hours of frustration and tension).</p>
+<p>So, the bottom line &ndash; still a &ldquo;glorified autocomplete&rdquo;.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

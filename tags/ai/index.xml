@@ -6,8 +6,17 @@
     <description>Recent content in AI on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jun 2026 17:02:33 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 10:10:28 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Where We Are So Far</title>
+      <link>https://lngnmn2.github.io/articles/where-we-are-so-far/</link>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/where-we-are-so-far/</guid>
+      <description>&lt;p&gt;So, it feels like it&amp;rsquo;s time to write again, to see where we actually are at.&lt;/p&gt;
+&lt;p&gt;Recently there were two big events related to the LLMs. First one is the &amp;ldquo;discovery&amp;rdquo; of a counter-example for the famous conjuncture (and the large blog post by Terence Tao, that he could have discovered it too, LOL).&lt;/p&gt;
+&lt;p&gt;Another one was the &amp;ldquo;hack&amp;rdquo; of bitcoin &amp;ldquo;hardware&amp;rdquo; wallets, not the hack itself (it is rather &amp;ldquo;simple&amp;rdquo;) but the fact that, allegedly, an LLM with a given prompt like &amp;ldquo;find a security weakness in this code&amp;rdquo; (not even a &amp;ldquo;vulnerability&amp;rdquo;)  have managed to find the exact RNG bug (reduction of the entropy size form the &amp;ldquo;safe&amp;rdquo; 128 bits from a hardware RNG to a &amp;ldquo;weak&amp;rdquo; 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit &amp;ldquo;state space&amp;rdquo; and find the keys).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Who Would&#39;ve Thought LMAO</title>
       <link>https://lngnmn2.github.io/articles/who-would-have-thought/</link>
