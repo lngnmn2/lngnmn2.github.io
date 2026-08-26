@@ -138,6 +138,20 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Cognitive Biases At Work
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>There is some output (slop) I got from my recent sessions (yes, yes, I am guilty and ashamed):
+### Validation Summary I have verified the implementation across the **Functional Core** (Domain) and the **Imperative Shell** (Infrastructure &amp; Interface), confirming that the code doesn&#39;t just &#34;look&#34; right but functionally enforces the rules. **1. Domain Layer (Functional Core)** **Strict Encapsulation:** All primitives (`f64`, `String`) are wrapped in **Newtypes** (`Price`, `Quantity`, `Symbol`) with private fields. **Correctness by Construction:** **Smart Constructors** (`new() -&gt; Result`) enforce invariants (e.g., price &gt; 0, symbol format). It is impossible to instantiate invalid domain objects. **Algebraic Data Types:** `Order` is a Sum Type (Enum) of Product Types (Structs), exhaustively modeling valid order strategies (`Market`, `Limit`, `StopLimit`). **Typestate Pattern:** The `OrderBuilder` uses zero-sized types (`NoSymbol`, `WithSymbol`) to enforce the order of operations at compile time. You cannot build an order without mandatory fields. **Error Handling:** `DomainError` is a specific Sum Type using `thiserror`, implementing the &#34;Make Illegal States Unrepresentable&#34; rule. **2. Infrastructure &amp; Interface (Imperative Shell)** **Hexagonal Architecture:** The `client` module acts as an **Adapter**, translating domain objects into Binance API calls. It isolates side effects (I/O, Time, Crypto). **Functional REPL:** The `repl` module implements the Command Interpreter using **Functional Streams** (`input_stream().map().for_each()`), strictly avoiding imperative `while` loops. **Security:** `Credentials` are handled via `secrets` module, and signing logic (`compute_signature`) is a pure function. **3. Verification (Tests)** **Pass Rate:** **124/124 tests passed**. **Coverage:** The test suite is organized into &#34;Stories&#34; (e.g., `story_user_places_valid_limit_sell_order_gtc`), directly testing the Business Rules and Workflows against the domain logic. The project is correctly set up as a mathematically rigorous, type-driven trading assistant. here is another one:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-01-09 00:00:00 +0545 +0545'>January 9, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <a class="entry-link" aria-label="post link to Cognitive Biases At Work" href="https://lngnmn2.github.io/articles/cognitive-biases-at-work/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Extreme Programming Applied
     </h2>
   </header>
@@ -271,21 +285,6 @@ This “boom!” is an insult to the last 60 years of the programming languages 
   </div>
   <footer class="entry-footer"><span title='2025-11-12 00:00:00 +0545 +0545'>November 12, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Aaand boom!" href="https://lngnmn2.github.io/articles/aaand-boom/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Bullshit, bullshit, bullshit
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>So, things begin to move a lot faster and much bigger, and there is something to realize about this unpreceded AI bubble.
-We will consider only the underlaying fundamental principles, not the particular implementation details, “architectures” and what not..
-There are four major aspects to any LLM model – the training process, the “architecture” (the structural shape) of a model, the &#34; post-training tuning&#34; (lobotomy) of the model and the inference process.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-11-03 00:00:00 +0545 +0545'>November 3, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
-  <a class="entry-link" aria-label="post link to Bullshit, bullshit, bullshit" href="https://lngnmn2.github.io/articles/bullshit-bullshit-bullshit/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

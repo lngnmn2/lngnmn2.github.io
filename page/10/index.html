@@ -147,6 +147,21 @@ font-family: 'Source Code Pro', monospace;
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">LLMs-generated Rust code
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Rust code is the ultimate evidence of the principal inability for a probability-based generating algorithm (based on sampling from a “learned” probability distribution over “tokens”) to come up with something that passes the type checker, but for the most trivial cases.
+The “causality” is that generation of the complex syntactic forms without the actual, proper understanding principles and heuristics is, well, “problematic”.
+The running example is these were subtle “already borrowed” panics, where the issue in with the underlying semantics, and the syntax is “correct”. The problem is that a recursive function has to drop all the borrows before a recursive call, and this constraint cannot be expressed in the syntax unless by redundant bindings which will automatically be drooped at the end of the scope.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-06-25 00:00:00 +0545 +0545'>June 25, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <a class="entry-link" aria-label="post link to LLMs-generated Rust code" href="https://lngnmn2.github.io/articles/llms-generated-rust/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Software In The Era of AI
     </h2>
   </header>
@@ -277,21 +292,6 @@ First of all, every remarkable programming achievements of the past, be it of NA
   </div>
   <footer class="entry-footer"><span title='2025-06-03 00:00:00 +0545 +0545'>June 3, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to On Grinding Leetcode" href="https://lngnmn2.github.io/articles/on-grinding-leetcode/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Bullshit Bullshit Everywhere
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>“The Darwin Gödel Machine: AI that improves itself by rewriting its own code”
-https://sakana.ai/dgm/
-There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs – it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not “know” what it is doing. These are just mathematical procedures (not even functions) – given an input encoded in a particular way, it produces an output, not even the same for the same input.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-05-31 00:00:00 +0545 +0545'>May 31, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
-  <a class="entry-link" aria-label="post link to Bullshit Bullshit Everywhere" href="https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
