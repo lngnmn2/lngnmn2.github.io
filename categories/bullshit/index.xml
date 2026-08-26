@@ -6,8 +6,19 @@
     <description>Recent content in Bullshit on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2026 16:29:08 +0545</lastBuildDate>
+    <lastBuildDate>Wed, 26 Aug 2026 17:00:45 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/bullshit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M5</title>
+      <link>https://lngnmn2.github.io/articles/m6/</link>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/m6/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;M6 supports up to 32GB of unified memory to multitask across demanding apps and run LLMs on device for secure and private agentic tasks. It also provides up to 170GB/s of unified memory bandwidth — a 10 percent increase over M5 and a 2.5x increase over M1.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is bullshit, of course. It won&amp;rsquo;t even run the &lt;code&gt;Qwen3.6-27B-Q8_0.gguf&lt;/code&gt;, leave alone the &lt;code&gt;gemma-4-31B-it-Q8_0.gguf&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We don&amp;rsquo;t even talk about &lt;code&gt;F16&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>This Is When Everything Falls Apart</title>
       <link>https://lngnmn2.github.io/articles/everything-falls-apart/</link>
