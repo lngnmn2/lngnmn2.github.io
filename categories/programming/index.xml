@@ -6,8 +6,16 @@
     <description>Recent content in Programming on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Aug 2026 16:29:08 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 20:07:15 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Social Constructs Everywhere</title>
+      <link>https://lngnmn2.github.io/articles/social-constructs-everywhere/</link>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/social-constructs-everywhere/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve re-watched some of &amp;ldquo;iconic&amp;rdquo; (LMAO) @karpathy videos, and saw (again) a lot of very fast hand-waving (literally!) when it  he tried to explain &lt;em&gt;the whys&lt;/em&gt; behind so called multi-head attention, self-attention  and all the catchy memes created by disconnected from reality cocky NLP guys.&lt;/p&gt;
+&lt;p&gt;I have seen this before. There is a typical, canonical, if you will, social construct called Mandala, being usially expressed as a paining caleld Tanka.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>This Is When Everything Falls Apart</title>
       <link>https://lngnmn2.github.io/articles/everything-falls-apart/</link>
