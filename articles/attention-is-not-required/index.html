@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Attention Is Not Required | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="Sometimes, when I do not know what to do with myself I re-watch some lectures for this or that online course on Youtube. Better than doom-scrolling crap, I guess.
+Something similar to that Bladerunner 2049 part, where they watched old Elvis as a hologram.
+Today it was the &#39;Lecture 2 ｜ Machine Learning (Stanford) [5u4G23_OohI].mp4&#39; (of the old CS229, on a blackboard).
+If you watch this think of Tyson in a gym before he became the world champion. The comparison is in how much talent one has to have and then what one can achieve.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/attention-is-not-required/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/attention-is-not-required/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/attention-is-not-required/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Attention Is Not Required">
+  <meta property="og:description" content="Sometimes, when I do not know what to do with myself I re-watch some lectures for this or that online course on Youtube. Better than doom-scrolling crap, I guess.
+Something similar to that Bladerunner 2049 part, where they watched old Elvis as a hologram.
+Today it was the &#39;Lecture 2 ｜ Machine Learning (Stanford) [5u4G23_OohI].mp4&#39; (of the old CS229, on a blackboard).
+If you watch this think of Tyson in a gym before he became the world champion. The comparison is in how much talent one has to have and then what one can achieve.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-09-05T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-09-05T17:39:24+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Attention Is Not Required">
+  <meta name="twitter:description" content="Sometimes, when I do not know what to do with myself I re-watch some lectures for this or that online course on Youtube. Better than doom-scrolling crap, I guess.
+Something similar to that Bladerunner 2049 part, where they watched old Elvis as a hologram.
+Today it was the &#39;Lecture 2 ｜ Machine Learning (Stanford) [5u4G23_OohI].mp4&#39; (of the old CS229, on a blackboard).
+If you watch this think of Tyson in a gym before he became the world champion. The comparison is in how much talent one has to have and then what one can achieve.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Attention Is Not Required",
+      "item": "https://lngnmn2.github.io/articles/attention-is-not-required/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Attention Is Not Required",
+  "name": "Attention Is Not Required",
+  "description": "Sometimes, when I do not know what to do with myself I re-watch some lectures for this or that online course on Youtube. Better than doom-scrolling crap, I guess.\nSomething similar to that Bladerunner 2049 part, where they watched old Elvis as a hologram.\nToday it was the 'Lecture 2 ｜ Machine Learning (Stanford) [5u4G23_OohI].mp4' (of the old CS229, on a blackboard).\nIf you watch this think of Tyson in a gym before he became the world champion. The comparison is in how much talent one has to have and then what one can achieve.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "Sometimes, when I do not know what to do with myself I re-watch some lectures for this or that online course on Youtube. Better than doom-scrolling crap, I guess.\nSomething similar to that Bladerunner 2049 part, where they watched old Elvis as a hologram.\nToday it was the 'Lecture 2 ｜ Machine Learning (Stanford) [5u4G23_OohI].mp4' (of the old CS229, on a blackboard).\nIf you watch this think of Tyson in a gym before he became the world champion. The comparison is in how much talent one has to have and then what one can achieve.\nIn my miserable soviet times at prole ghetto schools we never been taught maths properly, from the ground up, from the very aspects of the underlying reality, which the mathematical abstractions capture, all the way up to this kind of derivation performance. Here I explicitly laugh at @karpachy who only pastes from the web and LLMs.\nWithout profound understanding on mathematics any kind of bullshit with pieces of math in it sounds “serious” and, most importantly, feels like “magic” only trained magicians could perform.\nOn the other hand, if you really try to rebuild the whole chain, right from the first principles, everything clicks, but there is no use for this refined knowledge.\nSome sufi teachers argued that accumulating knowledge is as futile as accumulating anything else, especially golden coins. We have entered the era in which this became true.\nSo, there are two fundamental operations on Natural Numbers – putting together, and adding to itself many times (“times” – multiplication as repeated addition).\nBoth addition and multiplication are commutative, which means it does not matter to which pile you add (one-by-one) the other pile, or, similarly, it does not matter which quantity became the “number of times to add”.\nCommutativity tells you that the order does not matter, and this, in turn, is related to partial derivatives – how much some particular quantity involved in a commutative operation (or in a bunch nested ones) “contribute” to the result.\nThere is also the mathematical notion of multiplication as scaling (instead of just adding many times). Again, it does not matter which number scales which, the result will be the same.\nThen it is possible to express negation and division (on $\\Real $) as “adding a negative number” (implicitly multiplied by \\(-1\\) to “flip” a positive number on a number line) and as “scaling by a reciprocal”, which is just \\(1/n\\), and, indeed, division is “splitting into n equal parts”, which, by the way, is not always possible for natural numbers.\nNow “just” \\(+\\) and \\(\\times\\) is enough for “everything”. Everything interesting, at least.\nThe first “interesting” construction is a Weighted Sum. Almost everything can be thought off (or abstracted and represented as) a Weighted Sum.\nA Polynomial is particular/special kind of a weighted sum, but they by themselves are much less “interesting” that more general weighted sum itself.\nFor example, a generalized weighed sum is the “formula for Causality itself” (while a Directed Acyclic Graph is the “shape of the Causality”).\nJust list all the factors involved, sort them out by how much they contribute, make sure there none relevant missing and none imaginary added, and wallah, just like that.\nOf course, the “threshold” notion for a chemical process is just that sum of relevant factors, exceeding some “energy threshold”.\nSo far we have talked only about “singe” Real numbers added together or Real numbers scaled by other real number constants (cx).\nWhat if we have more than one numerical “coordinate”?\nHere comes the first “aha-moment” – the “whole” Linear Algebra is just packaging of several numbers together and performing \\(+\\) and \\(\\times\\) operations on them. Nothing fundamentally new has been added anywhere.\nThis, in turn, “explains” how some parts of Neural Networks can be expressed as matrices and why this is “enough for everything”.\nThere is another “aha” – no “self-attention”, no “muti-head attention”, no “communication between tokens” are necessary or even required – just matrix multiplications (as function compositions) and some “nonlinearity”.\nBut this is a very long and laborous climb to the top. But trust me, all the misleading (bullshit-bordering) “applied NLP” terminology (“queries” which are not queries, “keys” which are not keys, “attention” which is not attention, and so on) are irrelevant in the end, and are just different kinds of matrices being multiplied (composed).\nSo, the \\(+\\), the \\(\\times\\) and some differentiable “compound” operations, such as “ReLU” or a “Sigmoid”.\nThe key “higher level” building blocks are Partial Derivatives, the “Chain Rule”, the Jacobians and some Category-theoretic composition\nNo special “attention” primitive is mathematically necessary. No special “multi-head” primitive is mathematically necessary. No special “communication” primitive is mathematically necessary. They are architectural patterns expressible within ordinary differentiable composition.\nThe only universal machinery is the algebra of typed values, composition, differentiation, and weighted sums.\nAnd once differentiated:\n\\[ composition \\;\\equiv\\; matrix multiplication. \\]\nThat is the point where the whole BS Transformer vocabulary collapses back into the much older and more fundamental language of linear algebra + partial derivatives + graph composition.\nOk, lets climb.\n",
+  "wordCount" : "844",
+  "inLanguage": "en",
+  "datePublished": "2026-09-05T00:00:00+05:45",
+  "dateModified": "2026-09-05T17:39:24+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/attention-is-not-required/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Attention Is Not Required
+    </h1>
+    <div class="post-meta"><span title='2026-09-05 00:00:00 +0545 +0545'>September 5, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Sometimes, when I do not know what to do with myself I re-watch some lectures for this or that online course on Youtube. Better than doom-scrolling crap, I guess.</p>
+<p>Something similar to that Bladerunner 2049 part, where they watched old Elvis as a hologram.</p>
+<p>Today it was the <code>'Lecture 2 ｜ Machine Learning (Stanford) [5u4G23_OohI].mp4'</code> (of the old CS229, on a blackboard).</p>
+<p>If you watch this think of Tyson in a gym before he became the world champion. The comparison is in how much talent one has to have and then what one can achieve.</p>
+<p>In my miserable soviet times at prole ghetto schools we never been taught maths properly, from the ground up, from the very aspects of the underlying reality, which the mathematical abstractions capture, all the way up to this kind of derivation performance. Here I explicitly laugh at @karpachy who only pastes from the web and LLMs.</p>
+<p>Without profound understanding on mathematics any kind of bullshit with pieces of math in it sounds &ldquo;serious&rdquo; and, most importantly, feels like &ldquo;magic&rdquo; only trained magicians could perform.</p>
+<p>On the other hand, if you really try to rebuild the whole chain, right from the first principles, everything clicks, but there is no use for this refined knowledge.</p>
+<p>Some sufi teachers argued that accumulating knowledge is as futile as accumulating anything else, especially golden coins. We have entered the era in which this became true.</p>
+<p>So, there are two fundamental operations on Natural Numbers &ndash; <em>putting together</em>, and <em>adding to itself many times</em> (&ldquo;times&rdquo; &ndash; multiplication as repeated addition).</p>
+<p>Both addition and multiplication are <em>commutative</em>, which means it does not matter to which pile you add (one-by-one) the other pile, or, similarly, it does not matter which quantity became the &ldquo;number of times to add&rdquo;.</p>
+<p>Commutativity tells you that the order does not matter, and this, in turn, is related to partial derivatives &ndash; how much  some particular quantity involved in a commutative operation (or in a bunch nested ones) &ldquo;contribute&rdquo; to the result.</p>
+<p>There is also the mathematical notion of multiplication as scaling (instead of just adding many times). Again, it does not matter which number scales which, the result will be the same.</p>
+<p>Then it is possible to express negation and division (on $\Real $) as &ldquo;adding a negative number&rdquo;  (implicitly multiplied by \(-1\)  to &ldquo;flip&rdquo; a positive number on a number line) and as &ldquo;scaling by a reciprocal&rdquo;,  which is just \(1/n\), and, indeed, division is &ldquo;splitting into n <em>equal</em> parts&rdquo;, which, by the way, is not always possible for natural numbers.</p>
+<p>Now &ldquo;just&rdquo; \(+\) and \(\times\) is enough for &ldquo;everything&rdquo;.  Everything interesting, at least.</p>
+<p>The first &ldquo;interesting&rdquo; construction is a <em>Weighted Sum</em>. Almost everything can be thought off (or abstracted and represented as) a Weighted Sum.</p>
+<p>A <em>Polynomial</em> is particular/special kind of a weighted sum, but they by themselves are much less &ldquo;interesting&rdquo; that more general weighted sum itself.</p>
+<p>For example, a generalized weighed sum is the &ldquo;formula for Causality itself&rdquo; (while a Directed Acyclic Graph is the &ldquo;shape of the Causality&rdquo;).</p>
+<p>Just list all the factors involved, sort them out by how much they contribute, make sure there none relevant missing and none imaginary added, and wallah, just like that.</p>
+<p>Of course, the  &ldquo;threshold&rdquo; notion for a chemical process is just that sum of relevant factors, exceeding some &ldquo;energy threshold&rdquo;.</p>
+<p>So far we have talked only about &ldquo;singe&rdquo; Real numbers added together or Real numbers scaled by other real number constants (<code>cx</code>).</p>
+<p>What if we have more than one numerical &ldquo;coordinate&rdquo;?</p>
+<p>Here comes the first &ldquo;aha-moment&rdquo; &ndash; the &ldquo;whole&rdquo; Linear Algebra  is just packaging of several numbers together and performing \(+\) and \(\times\) operations on them. Nothing fundamentally new has been added anywhere.</p>
+<p>This, in turn, &ldquo;explains&rdquo; how  some parts of Neural Networks can be expressed as matrices and <em>why</em> this is &ldquo;enough for everything&rdquo;.</p>
+<p>There is another &ldquo;aha&rdquo; &ndash; no &ldquo;self-attention&rdquo;, no &ldquo;muti-head attention&rdquo;, no &ldquo;communication between tokens&rdquo; are necessary or even required &ndash; just matrix multiplications (as function compositions) and some &ldquo;nonlinearity&rdquo;.</p>
+<p>But this is a very long and laborous climb to the top. But trust me, all the misleading (bullshit-bordering) &ldquo;applied NLP&rdquo; terminology (&ldquo;queries&rdquo; which are not  queries, &ldquo;keys&rdquo; which are not keys, &ldquo;attention&rdquo; which is not attention, and so on) are irrelevant in the end, and are just different kinds of matrices being multiplied (composed).</p>
+<p>So, the \(+\), the \(\times\)  and some <em>differentiable</em> &ldquo;compound&rdquo; operations, such as &ldquo;ReLU&rdquo; or a &ldquo;Sigmoid&rdquo;.</p>
+<p>The key &ldquo;higher level&rdquo; building blocks are Partial Derivatives,  the &ldquo;Chain Rule&rdquo;, the Jacobians and some Category-theoretic composition</p>
+<ul>
+<li>No special &ldquo;attention&rdquo; primitive is mathematically necessary.</li>
+<li>No special &ldquo;multi-head&rdquo; primitive is mathematically necessary.</li>
+<li>No special &ldquo;communication&rdquo; primitive is mathematically necessary.</li>
+</ul>
+<p>They are architectural patterns expressible within ordinary differentiable composition.</p>
+<p>The only universal machinery is <em>the algebra of typed values, composition, differentiation, and weighted sums</em>.</p>
+<p>And once differentiated:</p>
+<p>\[ composition \;\equiv\; matrix multiplication. \]</p>
+<p>That is the point where the whole BS Transformer vocabulary collapses back into the much older and more fundamental language of <em>linear algebra + partial derivatives + graph composition</em>.</p>
+<p>Ok, lets climb.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
