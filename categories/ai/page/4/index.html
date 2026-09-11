@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/categories/ai/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -52,12 +52,6 @@
             }
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
     </style>
 </noscript>
 <script>
@@ -94,17 +88,17 @@ font-family: 'Source Code Pro', monospace;
 </head>
 <body class="list" id="top">
     <header class="header">
-    <nav class="nav">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -120,7 +114,7 @@ font-family: 'Source Code Pro', monospace;
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://lngnmn2.github.io/about/" title="About me.">
                     <span>About me.</span>
@@ -146,7 +140,9 @@ font-family: 'Source Code Pro', monospace;
 The reason is this. Remember Google reCAPTCHA - that window when you are forced to select all the cars or traffic lights to view the website you wanted (for an expected revard through a dopamine release).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-13 00:00:00 +0545 +0545'>January 13, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-01-13 00:00:00 +0545 +0545'>January 13, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Wake up, Neo" href="https://lngnmn2.github.io/articles/wake-up-neo/"></a>
 </article>
 
@@ -161,7 +157,9 @@ I just had some 3 hours Gemini3 session of some 50 interactions, which bootstrap
 Yes, the code won’t compile, and will be full of subtle hallucinations, The markdown files would be more of “wishful thinking” and “confirmation bias” than a formal, rigorous description of the code, but still.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-11 00:00:00 +0545 +0545'>January 11, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-01-11 00:00:00 +0545 +0545'>January 11, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to We are fucked" href="https://lngnmn2.github.io/articles/we-are-fucked/"></a>
 </article>
 
@@ -175,7 +173,9 @@ Yes, the code won’t compile, and will be full of subtle hallucinations, The ma
 ### Validation Summary I have verified the implementation across the **Functional Core** (Domain) and the **Imperative Shell** (Infrastructure &amp; Interface), confirming that the code doesn&#39;t just &#34;look&#34; right but functionally enforces the rules. **1. Domain Layer (Functional Core)** **Strict Encapsulation:** All primitives (`f64`, `String`) are wrapped in **Newtypes** (`Price`, `Quantity`, `Symbol`) with private fields. **Correctness by Construction:** **Smart Constructors** (`new() -&gt; Result`) enforce invariants (e.g., price &gt; 0, symbol format). It is impossible to instantiate invalid domain objects. **Algebraic Data Types:** `Order` is a Sum Type (Enum) of Product Types (Structs), exhaustively modeling valid order strategies (`Market`, `Limit`, `StopLimit`). **Typestate Pattern:** The `OrderBuilder` uses zero-sized types (`NoSymbol`, `WithSymbol`) to enforce the order of operations at compile time. You cannot build an order without mandatory fields. **Error Handling:** `DomainError` is a specific Sum Type using `thiserror`, implementing the &#34;Make Illegal States Unrepresentable&#34; rule. **2. Infrastructure &amp; Interface (Imperative Shell)** **Hexagonal Architecture:** The `client` module acts as an **Adapter**, translating domain objects into Binance API calls. It isolates side effects (I/O, Time, Crypto). **Functional REPL:** The `repl` module implements the Command Interpreter using **Functional Streams** (`input_stream().map().for_each()`), strictly avoiding imperative `while` loops. **Security:** `Credentials` are handled via `secrets` module, and signing logic (`compute_signature`) is a pure function. **3. Verification (Tests)** **Pass Rate:** **124/124 tests passed**. **Coverage:** The test suite is organized into &#34;Stories&#34; (e.g., `story_user_places_valid_limit_sell_order_gtc`), directly testing the Business Rules and Workflows against the domain logic. The project is correctly set up as a mathematically rigorous, type-driven trading assistant. here is another one:
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-09 00:00:00 +0545 +0545'>January 9, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-01-09 00:00:00 +0545 +0545'>January 9, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Cognitive Biases At Work" href="https://lngnmn2.github.io/articles/cognitive-biases-at-work/"></a>
 </article>
 
@@ -191,7 +191,9 @@ I remember reading the memest book of the time – “eXtreme Programming Explai
 The real take away from the whole manuscript (at least for me) was that writing tests is what really change everything, in particular, they are, indeed, allow quick, confident and “cheap” refactoring and thus really “facilitate change” and, yes, actually speed up the development process.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-04 00:00:00 +0545 +0545'>January 4, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-01-04 00:00:00 +0545 +0545'>January 4, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Extreme Programming Applied" href="https://lngnmn2.github.io/articles/extreme-programming-applied/"></a>
 </article>
 
@@ -205,7 +207,9 @@ The real take away from the whole manuscript (at least for me) was that writing 
 The semantically closest entities in the code are specially formatted comments that are used to generate [an appearance of] “documentation”, with a modern fashion to mention some core concepts being used. This kind of well-documented (enforced by the strict rules) code one would find in placed like Google’s monorepo and other megacorp inner code bases. Almost noting this strict can be found on Github (the primary source of all training).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-01-02 00:00:00 +0545 +0545'>January 2, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-01-02 00:00:00 +0545 +0545'>January 2, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Some Aha Moments" href="https://lngnmn2.github.io/articles/some-aha-moments/"></a>
 </article>
 
@@ -223,7 +227,9 @@ With vibe coding, programming is not strictly reserved for highly trained profes
 But not only does vibe coding empower regular people to approach programming, it empowers trained professionals to write a lot more (vibe coded) software that would otherwise never be written.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-12-21 00:00:00 +0545 +0545'>December 21, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-12-21 00:00:00 +0545 +0545'>December 21, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Vibecoding explained" href="https://lngnmn2.github.io/articles/vibecoding-explained/"></a>
 </article>
 
@@ -239,7 +245,9 @@ The good thing about using LLMs is that you do not have to deal with Google Sear
 Imagine a painfully typical scenario – you want to clarify or better understand something you already vaguely knew or at least aware of. You type a query into Google Search, and you get… a fucking CEO fucked-up list of Ad-infested links to various web pages – either the largest social media containment boards (StackOverflow, Reddit, Medium), or some CEO’d blogs, when you are either greeted with a wall of text (usually directly pasted from tutorials and docs), ads, pop-ups, and other distractions, or some narcissistic asshole’s low-effort over-verbose crappy verbiage about “how fucking smart he is”.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-12-16 00:00:00 +0545 +0545'>December 16, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-12-16 00:00:00 +0545 +0545'>December 16, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to   LLMs: The &#34;Good&#34; Parts
   " href="https://lngnmn2.github.io/articles/llms-the-good-parts/"></a>
 </article>
@@ -255,7 +263,9 @@ I have had to delete some nice movies in order to download and try that over-hyp
 I have a small set of highly sophisticated prompts which I use to measure the apparent quality of a generated slop of the 4 major data-center-sized LLMs.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-12-16 00:00:00 +0545 +0545'>December 16, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-12-16 00:00:00 +0545 +0545'>December 16, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to And this is exactly how" href="https://lngnmn2.github.io/articles/this-is-exactly-how/"></a>
 </article>
 
@@ -270,7 +280,9 @@ https://news.ycombinator.com/item?id=46207505
 Basically, making such a claim is idiotic on so many levels that it is hard to know where to start. Almost the whole of classic non-bullshit programming language theory research is about how to correctly address C’s shortcomings and semantic issues, and how to avoid the inherent in the design of the language (and the ABI) problems.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-12-10 00:00:00 +0545 +0545'>December 10, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-12-10 00:00:00 +0545 +0545'>December 10, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Idiots, Idiots Everywhere.jpg" href="https://lngnmn2.github.io/articles/idiots-idiots-everywhere/"></a>
 </article>
 
@@ -285,7 +297,9 @@ First of all, a proper education – studying the fundamental underlying princip
 One just sets particular constraints to a coding LLM and use it as a whole-data-center-powerful constraint satisfaction engine that spews out a slop, which then can be used for rapid prototyping and minimal-viable products. The properly constrained slop can even be used as the basis of a project, which then undergo proper continuous improvement and refinement by a human expert (who knows the whys).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-12-09 00:00:00 +0545 +0545'>December 9, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-12-09 00:00:00 +0545 +0545'>December 9, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Some Final Words" href="https://lngnmn2.github.io/articles/some-final-words/"></a>
 </article>
 <footer class="page-footer">
@@ -302,15 +316,19 @@ One just sets particular constraints to a coding LLM and use it as a whole-data-
 <footer class="footer">
         <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
@@ -349,14 +367,13 @@ One just sets particular constraints to a coding LLM and use it as a whole-data-
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 

@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/tags/ai/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -52,12 +52,6 @@
             }
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
     </style>
 </noscript>
 <script>
@@ -94,17 +88,17 @@ font-family: 'Source Code Pro', monospace;
 </head>
 <body class="list" id="top">
     <header class="header">
-    <nav class="nav">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -120,7 +114,7 @@ font-family: 'Source Code Pro', monospace;
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://lngnmn2.github.io/about/" title="About me.">
                     <span>About me.</span>
@@ -148,7 +142,9 @@ https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/
 The lack of exact precision is not the fundamental issue here. Even if one manages to overcome the “numerical instability issues” and would be able to reproduce always the same structural output from the same linguistic (or otherwise structured) input the “hallucinations” and “subtle bullshitting” won’t go away in principle.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-11 00:00:00 +0545 +0545'>September 11, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-09-11 00:00:00 +0545 +0545'>September 11, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Defeating Nondeterminism, my ass" href="https://lngnmn2.github.io/articles/defeating-nondeterminism/"></a>
 </article>
 
@@ -162,7 +158,9 @@ The lack of exact precision is not the fundamental issue here. Even if one manag
 The “outside” world is inherently complex, non-deterministic and “concurrent” at the level of “compositions” and, at the same “time”, deterministic enough at the level of the “most basic building blocks” (of biology, lets say) – “simple” molecular structure’s (“small” molecules) are exactly the same, exact copies of clones of each other (otherwise everything will break) while larger molecular structures (like whole proteins and their compositions) may have “flaws” or “mutations” or just simple “kinks” – a slightly different shape or a resulting form.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-09-11 00:00:00 +0545 +0545'>September 11, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-09-11 00:00:00 +0545 +0545'>September 11, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to the LLM upanishad" href="https://lngnmn2.github.io/articles/the-llm-upanishad/"></a>
 </article>
 
@@ -175,7 +173,9 @@ The “outside” world is inherently complex, non-deterministic and “concurre
     <p>I have noticed a resent dramatic change in the behavior of major GPTs online providers – most notably, Gemini is now providing just outline of code, full of stubs and “mocks” of real APIs, and not the full code. This is a significant change from the previous behavior where they would provide a semi-complete (but ridden with errors) code solution. Perhaps, mimicking the behavior of ChatGPT, which has been doing this for a while now – they “optimize” for more what appears to be a “dialogue” (more like a normie-level chat), to create a better illusion of “actually conversing with an artificial intelligence”.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-08-03 00:00:00 +0545 +0545'>August 3, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-08-03 00:00:00 +0545 +0545'>August 3, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Let the bubble burst, for Crist&#39;s sake!" href="https://lngnmn2.github.io/articles/let-the-bubble-burst/"></a>
 </article>
 
@@ -188,7 +188,9 @@ The “outside” world is inherently complex, non-deterministic and “concurre
     <p>We are living through a paradigmatic shift, the one described in the “Scientific Revolution” by Thomas Kuhn. As I mentioned many times, texts and even crappy code became very, very cheap, just like a processed junk-food or a low-effort street-food slop. This is the “shift” and the end of so-called “knowledge work” as we know it. At least this is the end of the pretentious “knowledge work”, when one just pretends to be an expert is social settings, using very straightforward verbal and non-verbal cues to signal their “knowledge” and “expertise”, just as a priest would do in the not so distant past.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-08-02 00:00:00 +0545 +0545'>August 2, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-08-02 00:00:00 +0545 +0545'>August 2, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to The Knowledge Work Bubble" href="https://lngnmn2.github.io/articles/the-knowledge-work-bubble/"></a>
 </article>
 
@@ -202,7 +204,9 @@ The “outside” world is inherently complex, non-deterministic and “concurre
 Understanding cannot be “outsourced” or even safely “delegated”. One will always end up with a sort of “tragedy of commons”, when sterilization and modern technologies produced packaged foods which slowly but surely kill you. This is what happens when you “delegate” your own understanding.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-07-13 00:00:00 +0545 +0545'>July 13, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-07-13 00:00:00 +0545 +0545'>July 13, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Now What?" href="https://lngnmn2.github.io/articles/now-what/"></a>
 </article>
 
@@ -217,7 +221,9 @@ Karpathy is shilling “Cursor” and other cloud-based mettered AI services (wh
 We should some day know which marketing “genious” came up with this “winning strategy” – to metter every single token (byte) and try to sell this to corporations. Corporations do not want to be mettered like that, they want to metter normies, the way Cellular operators do, and they never use any normies plans themselves.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-19 00:00:00 +0545 +0545'>June 19, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-06-19 00:00:00 +0545 +0545'>June 19, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Software In The Era of AI" href="https://lngnmn2.github.io/articles/software-intheeraof-ai/"></a>
 </article>
 
@@ -231,7 +237,9 @@ We should some day know which marketing “genious” came up with this “winni
 The code will be better than high-dopamine, “laser-focused” (on Adderall or just amphetamines), but not so well-educated on fundamentals zealots could produce. Better than inexperienced in realities of the actual open-source software ecosystems academics could even hope to write, no matter how good their theoretical understanding is. With very specific and properly constrained prompting, which takes into account the major results of the last 50-or-60 years of PL and CS research, especially in the field of math-based Functional Programming and Immutable Data Structures, one can get almost optimal (approaching perfection small pieces of code, provided you understand what theoretical-limited perfection actually looks like in this particular case, and why.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-12 00:00:00 +0545 +0545'>June 12, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-06-12 00:00:00 +0545 +0545'>June 12, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Yes, it is time to scream and  panic" href="https://lngnmn2.github.io/articles/the-very-serious-post/"></a>
 </article>
 
@@ -246,7 +254,9 @@ Here is why, in principle, any LLM coding (I cannot call this crap “programmin
 LLMs operate on tokens, which are abstract numbers, if you will. Parts of words of a human language are being associated with a distinct token, and then a probabilistic graph-like structure is created out of these tokens, using a fundamental back-propagation algorithm.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-06 00:00:00 +0545 +0545'>June 6, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-06-06 00:00:00 +0545 +0545'>June 6, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Vibe coding explained" href="https://lngnmn2.github.io/articles/vibe-coding-explained/"></a>
 </article>
 
@@ -261,7 +271,9 @@ To see things as they really are. To do things just right way. To find an optimu
 Modern meme-based socially-constructed (by retarded majority) social concensus frown upon “perfectionism” and sees it as the inhibition to “getting shit done”. They are not wrong, though. Approaching a perfection (finding a local optimum) is a very different process from just putting together some slop. Yes, indeed, “perfection is the enemy of good-enough”.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-06-03 00:00:00 +0545 +0545'>June 3, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-06-03 00:00:00 +0545 +0545'>June 3, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Enshittification Of Knowledge" href="https://lngnmn2.github.io/articles/enshittification-of-knowledge/"></a>
 </article>
 
@@ -276,7 +288,9 @@ https://sakana.ai/dgm/
 There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs – it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not “know” what it is doing. These are just mathematical procedures (not even functions) – given an input encoded in a particular way, it produces an output, not even the same for the same input.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-05-31 00:00:00 +0545 +0545'>May 31, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2025-05-31 00:00:00 +0545 +0545'>May 31, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Bullshit Bullshit Everywhere" href="https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/"></a>
 </article>
 <footer class="page-footer">
@@ -293,15 +307,19 @@ There is what is actually going on. A model trained on a large amount code is, i
 <footer class="footer">
         <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
@@ -340,14 +358,13 @@ There is what is actually going on. A model trained on a large amount code is, i
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 

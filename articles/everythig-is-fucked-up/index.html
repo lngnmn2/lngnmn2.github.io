@@ -12,7 +12,7 @@ Why, yes, I understand, a project which is trying to compete with Cursor, but wi
 It compiles hundreds of crates into something that looks like vscode, sacrificing any safety concerns (simply because the underlying C&#43;&#43; code is inherently unsafe and imperative, even with -fno-exceptions -fno-rtti). &ldquo;Written in Rust&rdquo; thus is just a &ldquo;marketing&rdquo; meme.">
 <meta name="author" content="lngnmn2@yahoo.com">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/everythig-is-fucked-up/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -50,12 +50,6 @@ It compiles hundreds of crates into something that looks like vscode, sacrificin
 
             .toc {
                 background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
             }
         }
 
@@ -159,17 +153,17 @@ It compiles hundreds of crates into something that looks like vscode, sacrificin
 </head>
 <body id="top">
     <header class="header">
-    <nav class="nav">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -185,7 +179,7 @@ It compiles hundreds of crates into something that looks like vscode, sacrificin
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://lngnmn2.github.io/about/" title="About me.">
                     <span>About me.</span>
@@ -202,11 +196,13 @@ It compiles hundreds of crates into something that looks like vscode, sacrificin
     <h1 class="post-title entry-hint-parent">
       Everything Is Fucked Up
     </h1>
-    <div class="post-meta"><span title='2025-10-25 00:00:00 +0545 +0545'>October 25, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+    <div class="post-meta">
+
+<span title='2025-10-25 00:00:00 +0545 +0545'>October 25, 2025</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>So I compiled that <code>zed</code> &ldquo;editor&rdquo; thing everyone is talking about. And I watched carefully the shilling video. Conclusion? Everything is fucked up beyond repair.</p>
+  <div class="post-content md-content"><p>So I compiled that <code>zed</code> &ldquo;editor&rdquo; thing everyone is talking about. And I watched carefully the shilling video. Conclusion? Everything is fucked up beyond repair.</p>
 <p>Why, yes, I understand, a project which is trying to compete with <code>Cursor</code>, but with their own halfassed &ldquo;vscode&rdquo; writtern in Rust slop (as a wrapper to the <em>webrts</em>, lmao).</p>
 <p>It compiles <em>hundreds</em> of crates into something that looks like <code>vscode</code>, sacrificing any safety concerns (simply because the underlying C++ code is inherently unsafe and imperative, even with <code>-fno-exceptions -fno-rtti</code>). &ldquo;Written in Rust&rdquo; thus is just a &ldquo;marketing&rdquo; meme.</p>
 <p>Why, I understand that re-using a half of Chromium &ndash; &ldquo;not reinventing the wheel&rdquo; (meme) &ndash; is a &ldquo;smart&rdquo; decision (yes, Chromium already <em>implemented</em> all the unicode and rendering related stuff in a crappy imperative OO fashion, utilizing <em>millions of man-hours</em>). There is no better strategy for pushing out something &ldquo;viable&rdquo; as fast as possible.</p>
@@ -246,15 +242,19 @@ It compiles hundreds of crates into something that looks like vscode, sacrificin
 <footer class="footer">
         <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
@@ -293,14 +293,13 @@ It compiles hundreds of crates into something that looks like vscode, sacrificin
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 

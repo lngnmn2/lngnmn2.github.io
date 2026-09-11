@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/categories/programming/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -52,12 +52,6 @@
             }
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
     </style>
 </noscript>
 <script>
@@ -94,17 +88,17 @@ font-family: 'Source Code Pro', monospace;
 </head>
 <body class="list" id="top">
     <header class="header">
-    <nav class="nav">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -120,7 +114,7 @@ font-family: 'Source Code Pro', monospace;
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://lngnmn2.github.io/about/" title="About me.">
                     <span>About me.</span>
@@ -149,7 +143,9 @@ These are distinct partitions indeed, but how they came to be as they are?
 It is because somewhere in the past a literal “fork”, a mutation (or a whole set of these) occurred (and the resulting population survived).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-09-29 00:00:00 +0545 +0545'>September 29, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-09-29 00:00:00 +0545 +0545'>September 29, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to More Whys" href="https://lngnmn2.github.io/articles/more-whys/"></a>
 </article>
 
@@ -165,7 +161,9 @@ There are two “strategies” for these algorithms (of how to expand the “fri
 The first one goes “fast” and “narrow” (inforamaly), where another one goes “slowly”, and “layer after layer”.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-09-25 00:00:00 +0545 +0545'>September 25, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-09-25 00:00:00 +0545 +0545'>September 25, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to The Way" href="https://lngnmn2.github.io/articles/the-way/"></a>
 </article>
 
@@ -181,7 +179,9 @@ This implies a by name instead of position-based (offset) access.
 This, in turn, is the fundamental, definitive property of structs over tuples.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-09-24 00:00:00 +0545 +0545'>September 24, 2023</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-09-24 00:00:00 +0545 +0545'>September 24, 2023</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
   <a class="entry-link" aria-label="post link to Notes on proper abstractions and ADTs" href="https://lngnmn2.github.io/articles/prog1/"></a>
 </article>
 
@@ -196,7 +196,9 @@ First of all, I personaly do not want to rely in any part of my life on any “s
 If I have any understanding of these subjects at all, this is a bubble and irrational exuberance. Lets try to unpack “the whys”.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-08-26 00:00:00 +0545 +0545'>August 26, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-08-26 00:00:00 +0545 +0545'>August 26, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to LLMS For Coding" href="https://lngnmn2.github.io/articles/llms-for-coding/"></a>
 </article>
 
@@ -210,7 +212,9 @@ If I have any understanding of these subjects at all, this is a bubble and irrat
 We have never been evolved to live immersed in a constantly changing environment, where almost nothing that worked well yesterday will work day after tomorrow. The environment we have evolved in is stable, even in the social aspects (of traditionalist societies).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-08-18 00:00:00 +0545 +0545'>August 18, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-08-18 00:00:00 +0545 +0545'>August 18, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to On burnout" href="https://lngnmn2.github.io/articles/burnout/"></a>
 </article>
 
@@ -226,7 +230,9 @@ The “most real” abstraction barrier is how what we call “atoms” are “u
 More precisely, cell biology “is not concerned” with what atoms “really are” and use them as an abstraction, provided that there is no one to “see this”, aside from an “higher level” intelligent observer.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-08-04 00:00:00 +0545 +0545'>August 4, 2023</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-08-04 00:00:00 +0545 +0545'>August 4, 2023</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
   <a class="entry-link" aria-label="post link to Abstraction barriers" href="https://lngnmn2.github.io/articles/abstractions/"></a>
 </article>
 
@@ -241,7 +247,9 @@ It also could be compared with the ghat complex of Varanasi, which began no one 
 Visiting Emacs is like visiting one of such historic sites, and just like them, it has been re-shaped by the successions of mass-hysteria and zealous over-excitement about bullshit.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to GNU Emacs" href="https://lngnmn2.github.io/articles/emacs/"></a>
 </article>
 
@@ -257,7 +265,9 @@ Before that Eric Evans has to extract the domain knowledge using his DDD approac
 Maybe it is even better to rather ask Simon Peyton Jones to write a matching engine, so you will have it pure-functional, with the most important parts formally proven in Coq (and then translated into Haskell code).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-07-28 00:00:00 +0545 +0545'>July 28, 2023</span>&nbsp;·&nbsp;<span>Ln Gnmn</span></footer>
   <a class="entry-link" aria-label="post link to Writing a semi-automated trading system" href="https://lngnmn2.github.io/articles/automated-trading/"></a>
 </article>
 
@@ -272,7 +282,9 @@ Monoid A Set along with a composition operation, which has an identity element.
 addition, for (&#43;) identity is 0 concatenation, which is a specialization of putting together, identity is &#34;&#34;. List, a fundamental recursive sum-type, identity is [] Option, a specialization of empty/non-empty aspect of a List, identity is None Boolean logic, very subtle, identity is False (false imply nothing) The notion that some Boolean operations form a Monoid is very subtle, but it will emerge with conditional expressions.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-07-16 00:00:00 +0545 +0545'>July 16, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-07-16 00:00:00 +0545 +0545'>July 16, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to The recurring patterns captured as a Monoid" href="https://lngnmn2.github.io/articles/monoids/"></a>
 </article>
 
@@ -286,7 +298,9 @@ addition, for (&#43;) identity is 0 concatenation, which is a specialization of 
 Overview Rust is, in principle, an imperative language. The order of statements matters (a lot, giving the changes of ownership), expressions are just an addition, and there is no (and never will be) referential transparency.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2023-07-15 00:00:00 +0545 +0545'>July 15, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2023-07-15 00:00:00 +0545 +0545'>July 15, 2023</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Understanding Rust" href="https://lngnmn2.github.io/articles/unrestanding-rust/"></a>
 </article>
 <footer class="page-footer">
@@ -303,15 +317,19 @@ Overview Rust is, in principle, an imperative language. The order of statements 
 <footer class="footer">
         <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
@@ -350,14 +368,13 @@ Overview Rust is, in principle, an imperative language. The order of statements 
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 

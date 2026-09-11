@@ -12,7 +12,7 @@ https://sakana.ai/dgm/
 There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs &ndash; it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not &ldquo;know&rdquo; what it is doing. These are just mathematical procedures (not even functions) &ndash; given an input encoded in a particular way, it produces an output, not even the same for the same input.">
 <meta name="author" content="&amp;lt;lngnmn2@yahoo.com&amp;gt;">
 <link rel="canonical" href="https://lngnmn2.github.io/articles/bullshit-bullshit-everywhere/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -50,12 +50,6 @@ There is what is actually going on. A model trained on a large amount code is, i
 
             .toc {
                 background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
             }
         }
 
@@ -159,17 +153,17 @@ There is what is actually going on. A model trained on a large amount code is, i
 </head>
 <body id="top">
     <header class="header">
-    <nav class="nav">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -185,7 +179,7 @@ There is what is actually going on. A model trained on a large amount code is, i
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://lngnmn2.github.io/about/" title="About me.">
                     <span>About me.</span>
@@ -202,11 +196,13 @@ There is what is actually going on. A model trained on a large amount code is, i
     <h1 class="post-title entry-hint-parent">
       Bullshit Bullshit Everywhere
     </h1>
-    <div class="post-meta"><span title='2025-05-31 00:00:00 +0545 +0545'>May 31, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span>
+    <div class="post-meta">
+
+<span title='2025-05-31 00:00:00 +0545 +0545'>May 31, 2025</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>&ldquo;The Darwin Gödel Machine: AI that improves itself by rewriting its own code&rdquo;</p>
+  <div class="post-content md-content"><p>&ldquo;The Darwin Gödel Machine: AI that improves itself by rewriting its own code&rdquo;</p>
 <p><a href="https://sakana.ai/dgm/">https://sakana.ai/dgm/</a></p>
 <p>There is what is actually going on. A model trained on a large amount code is, in principle, no different from any other LLMs &ndash; it is just a statistical model that predicts the next token based on the previous ones. It does not understand the code it spews out, it does not &ldquo;know&rdquo; what it is doing. These are just mathematical procedures (not even functions) &ndash; given an input encoded in a particular way, it produces an output, not even the same for the same input.</p>
 <p>When one trains a model on any code, including the code it is based on, there is, again, in principle, nothing &ldquo;magical&rdquo; or extraordinary happen &ndash; it does not become &ldquo;aware&rdquo; of anything or attained an &ldquo;understanding&rdquo; of any kind. It is still a probabilistic structure without any &ldquo;awareness&rdquo; whatsoever.</p>
@@ -229,15 +225,19 @@ There is what is actually going on. A model trained on a large amount code is, i
 <footer class="footer">
         <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
@@ -276,14 +276,13 @@ There is what is actually going on. A model trained on a large amount code is, i
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 

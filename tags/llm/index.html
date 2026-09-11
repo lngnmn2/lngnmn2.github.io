@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://lngnmn2.github.io/tags/llm/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
@@ -52,12 +52,6 @@
             }
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
     </style>
 </noscript>
 <script>
@@ -94,17 +88,17 @@ font-family: 'Source Code Pro', monospace;
 </head>
 <body class="list" id="top">
     <header class="header">
-    <nav class="nav">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -120,7 +114,7 @@ font-family: 'Source Code Pro', monospace;
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://lngnmn2.github.io/about/" title="About me.">
                     <span>About me.</span>
@@ -148,7 +142,9 @@ Today it was the &#39;Lecture 2 ｜ Machine Learning (Stanford) [5u4G23_OohI].mp
 If you watch this think of Tyson in a gym before he became the world champion. The comparison is in how much talent one has to have and then what one can achieve.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-09-05 00:00:00 +0545 +0545'>September 5, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-09-05 00:00:00 +0545 +0545'>September 5, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Attention Is Not Required" href="https://lngnmn2.github.io/articles/attention-is-not-required/"></a>
 </article>
 
@@ -163,7 +159,9 @@ Recently there were two big events related to the LLMs. First one is the “disc
 Another one was the “hack” of bitcoin “hardware” wallets, not the hack itself (it is rather “simple”) but the fact that, allegedly, an LLM with a given prompt like “find a security weakness in this code” (not even a “vulnerability”) have managed to find the exact RNG bug (reduction of the entropy size form the “safe” 128 bits from a hardware RNG to a “weak” 40 bits of flawed software RNG, so the attackers are just brute-forcing the 40bit “state space” and find the keys).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-08-11 00:00:00 +0545 +0545'>August 11, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-08-11 00:00:00 +0545 +0545'>August 11, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Where We Are So Far" href="https://lngnmn2.github.io/articles/where-we-are-so-far/"></a>
 </article>
 
@@ -178,7 +176,9 @@ The most recent models produce an excelent verbiage but the code is out of sync 
 This fact is very easy to undestand and explain – the verbiage and the code live in the very different “regions” of the model’s representation (weight matrix or whatever it is) and these regions are getting tuned (reinforced) at a very different rates and thus do not converge as they are expecting.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-06-17 00:00:00 +0545 +0545'>June 17, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-06-17 00:00:00 +0545 +0545'>June 17, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Who Would&#39;ve Thought LMAO" href="https://lngnmn2.github.io/articles/who-would-have-thought/"></a>
 </article>
 
@@ -195,7 +195,9 @@ Okay, even if arguing with retards is ultimately futile, and especially so in th
 No one understands this shit, since the very process by which the artifact in question has emerged is, in principle, by definition, different from the post-hoc “explanations” and anthropomorphic “rationalizations” which plague such “literature”.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-06-06 00:00:00 +0545 +0545'>June 6, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-06-06 00:00:00 +0545 +0545'>June 6, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Another One Who Knows It All" href="https://lngnmn2.github.io/articles/another-one-who-knows/"></a>
 </article>
 
@@ -210,7 +212,9 @@ https://www.anthropic.com/institute/recursive-self-improvement
 Notice that this has almost nothing to do with the actual underlaying tech, except that the models are being feed with their own slop for the Reinforcement Learning and as new data, and has everything to do with the upcoming IPO – look, AI writes itself, what can possibly go wrong – buy our shit.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-06-06 00:00:00 +0545 +0545'>June 6, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-06-06 00:00:00 +0545 +0545'>June 6, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to Anthopic marketing posts" href="https://lngnmn2.github.io/articles/anthropic-markeitng-posts/"></a>
 </article>
 
@@ -224,7 +228,9 @@ Notice that this has almost nothing to do with the actual underlaying tech, exce
 On the other side Anthropic emerged as a true leader in the armrace [to the bottom] since their code slop generator is qualitatively better than Gemini – the closes competitor. Everything else is just bullshit (both ChatGPT and Grok are, indeed, merely Infotainment chatbots).
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-05-30 00:00:00 +0545 +0545'>May 30, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-05-30 00:00:00 +0545 +0545'>May 30, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to LLMs and AI so far" href="https://lngnmn2.github.io/articles/llms-and-ai-so-far1/"></a>
 </article>
 
@@ -239,7 +245,9 @@ On the other side Anthropic emerged as a true leader in the armrace [to the bott
 It is not that we didn’t see through these primitive manipulative tactics or “respected them” to not to hurt their felling, we just simply acknowledged that these people are strictly way below our levels and just did not bother. These managers, by the way, are still cock sure of their cleverness and their abilities “to manage people efficiently” and that no one sees how they do it.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-05-22 00:00:00 +0545 +0545'>May 22, 2026</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-05-22 00:00:00 +0545 +0545'>May 22, 2026</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to   The &#34;Jewish Tricks&#34; of LLMs
   " href="https://lngnmn2.github.io/articles/the-jewish-tricks-llms/"></a>
 </article>
@@ -256,7 +264,9 @@ The system is now fully complete, architecturally sound, and rigorously verified
 So, I am outperforming the 99% percent of Github and should be a millionaire in a few months. Or, perhaps, something is fishy out there.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-05-12 00:00:00 +0545 +0545'>May 12, 2026</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-05-12 00:00:00 +0545 +0545'>May 12, 2026</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to The coding LLMs are lying to you" href="https://lngnmn2.github.io/articles/coding-llms-are-lying-to-you/"></a>
 </article>
 
@@ -269,7 +279,9 @@ So, I am outperforming the 99% percent of Github and should be a millionaire in 
     <p>This is how things work: you, being a “literally who?” nobody, wrote approximately 13 pages of titles of articles, about exactly how and why the current incarnation of AI is only an appearance of “intelligence” and a textbook cognitive illusion, and then some fuck wrote a single blog post and got all the fucking HN top page and what not. Life is harsh, competition for being [recognized as] “smart” is throat cutting, you know.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-05-07 00:00:00 +0545 +0545'>May 7, 2026</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-05-07 00:00:00 +0545 +0545'>May 7, 2026</span>&nbsp;·&nbsp;<span>&amp;lt;lngnmn2@yahoo.com&amp;gt;</span></footer>
   <a class="entry-link" aria-label="post link to Appearing Of Being Productive" href="https://lngnmn2.github.io/articles/appearing-to-be-productive/"></a>
 </article>
 
@@ -284,7 +296,9 @@ I usually trying to avoid HN in its current incarnation (as a safe-space for ent
 https://arkaung.github.io/interactive-turboquant/ – I have seen this shit before, a lot of it. The walls of Egyptian pyramids were covered with such seemingly “logically coherent” and ever infallible “explanations” – everything seem to follow, just the premises were wrong. Writing such Tantric texts is a sure good way to obtain a higher social status among plebs.
 ...</p>
   </div>
-  <footer class="entry-footer"><span title='2026-04-27 00:00:00 +0545 +0545'>April 27, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
+  <footer class="entry-footer">
+
+<span title='2026-04-27 00:00:00 +0545 +0545'>April 27, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span></footer>
   <a class="entry-link" aria-label="post link to The Ordinary Day Of a…" href="https://lngnmn2.github.io/articles/the-ordinary-day-of-a/"></a>
 </article>
 <footer class="page-footer">
@@ -298,15 +312,19 @@ https://arkaung.github.io/interactive-turboquant/ – I have seen this shit befo
 <footer class="footer">
         <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
 
+    
+    
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a>
 
@@ -345,14 +363,13 @@ https://arkaung.github.io/interactive-turboquant/ – I have seen this shit befo
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 
