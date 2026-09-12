@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 18:34:31 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 10:37:36 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,17 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The model</title>
+      <link>https://lngnmn2.github.io/articles/the-model/</link>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-model/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;a half-dozen monkeys with typewriters would eventually write all the books in the British Museum.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Imagine that a billion monkeys with keyboards can do.&lt;/p&gt;
+&lt;p&gt;This, by the way, in itself if a bullshit abstract social construction, since the branching factor of a resulting dag (of potential sequences each monkey can produce) is probably larger than &amp;ldquo;number of atoms in the observable universe&amp;rdquo; (memes, memes everywhere). You also have to do &lt;code&gt;git merge&lt;/code&gt;, which would be an intractable problem.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Archery</title>
