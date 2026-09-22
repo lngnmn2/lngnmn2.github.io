@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2026 10:21:10 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 09:26:48 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,14 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Polite Bullshiting As A Soft Skill</title>
+      <link>https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/</link>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/</guid>
+      <description>&lt;p&gt;Have you ever tried to write a so-called SKILL.md file for your LLM &amp;ldquo;agents&amp;rdquo;? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?&lt;/p&gt;
+&lt;p&gt;For me, at least, it is just an utter bullshit. Recall that what these &amp;ldquo;skills&amp;rdquo; actually do is just that the contents of a SKILL.md file is being loaded into the &amp;ldquo;context window&amp;rdquo; of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process &amp;ldquo;harnessing&amp;rdquo; or something.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What A Fucking Shitshow</title>

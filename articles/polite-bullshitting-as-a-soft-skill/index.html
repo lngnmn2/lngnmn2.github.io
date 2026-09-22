@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Polite Bullshiting As A Soft Skill | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="AI, LLM, bullshit">
+<meta name="description" content="Have you ever tried to write a so-called SKILL.md file for your LLM &ldquo;agents&rdquo;? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?
+For me, at least, it is just an utter bullshit. Recall that what these &ldquo;skills&rdquo; actually do is just that the contents of a SKILL.md file is being loaded into the &ldquo;context window&rdquo; of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process &ldquo;harnessing&rdquo; or something.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Polite Bullshiting As A Soft Skill">
+  <meta property="og:description" content="Have you ever tried to write a so-called SKILL.md file for your LLM “agents”? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?
+For me, at least, it is just an utter bullshit. Recall that what these “skills” actually do is just that the contents of a SKILL.md file is being loaded into the “context window” of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process “harnessing” or something.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-09-22T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-09-22T09:26:48+05:45">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Polite Bullshiting As A Soft Skill">
+  <meta name="twitter:description" content="Have you ever tried to write a so-called SKILL.md file for your LLM “agents”? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?
+For me, at least, it is just an utter bullshit. Recall that what these “skills” actually do is just that the contents of a SKILL.md file is being loaded into the “context window” of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process “harnessing” or something.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Polite Bullshiting As A Soft Skill",
+      "item": "https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Polite Bullshiting As A Soft Skill",
+  "name": "Polite Bullshiting As A Soft Skill",
+  "description": "Have you ever tried to write a so-called SKILL.md file for your LLM \u0026ldquo;agents\u0026rdquo;? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?\nFor me, at least, it is just an utter bullshit. Recall that what these \u0026ldquo;skills\u0026rdquo; actually do is just that the contents of a SKILL.md file is being loaded into the \u0026ldquo;context window\u0026rdquo; of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process \u0026ldquo;harnessing\u0026rdquo; or something.\n",
+  "keywords": [
+    "AI", "LLM", "bullshit"
+  ],
+  "articleBody": "Have you ever tried to write a so-called SKILL.md file for your LLM “agents”? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?\nFor me, at least, it is just an utter bullshit. Recall that what these “skills” actually do is just that the contents of a SKILL.md file is being loaded into the “context window” of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process “harnessing” or something.\nWhy do you ever think that adding more slop [into the context window] will produce a better slop, contrary to the universal “garbage in – garbage out law”?\nThere are some real “hacks”, when you try to “anchor” to some key phrases, like “tagless final” or “algebraic effects” to make it “jump” to some relevant “area” of the graph, but this is just an intuitive insight, which may or may not work, and definitely not every time.\nHave you ever tried to generate these SKILL.md files for you from the first principles? How does it work for (You), being [sooo] clever? Is the code slop it produces with these files any good? How do (You) know?\nTo me it always produced a “relaxed” over-generalized verbiage instead of concrete set of short, precise, clear, actionable rules, which I usually fit into 80 characters.\nIt spews out the crap like “mutation and exceptions are just tools, use them when appropriate”.\nWho TF asked? I know what I am doing and why – I want as many type-constraints and restrictions as possible, and to “program” in pure math as much as possible. Who TF asked your fucking “opinions”?\nHere is how it works. To understand what is actually going on (too see things as they are) we have to take a step back and try to see a bigger picture (yes, yes, I know).\nI write in small short sentences, choosing my words as carefully as I could. It is not exactly the “iconic” Hemingway style – it is just an autistic style, and Hemingway was obviously autistic, which explains and defines his prose style.\nSuch writing style, however, considered (by everyone but English composition teachers) to be a poor style, while a pompous, over-decorated and long passages is what constitutes a “good writing” (for them).\nBeing precise and clear is also frowned upon, and instead one should always mention other people’s opinions and “considering the other sides” of an argument (no, I shouldn’t and won’t).\nThis, in turn, is supported by the culture of sloppy thinking. Not exactly the Orwell’s “Doublethink”, but just sloppy – without being precise and without habitual tracing back to the first principles. Crappy thinking.\nCalling a biological man, who recently have cut his penis off, or just dress up as a woman, a Woman is the canonical, “textbook” example of such sloppy thinking. The biology has not changed, only an appearance, but to them an appearance, not the underlying biology, is the justification.\nOk, let leave the poor transvestites alone. The point is that such a crappy thinking, in a writtern form, is exactly what LLMs systematically and consistently have been trained with, so they produce the very same kind of crap. Garbage in – garbage out, again.\nI have zero interest in arguing “politely” (with a slop generator – a stochastic parrot, of all things!) about whether or not it is “okay” to be too much restrictive with my rules and principles, especially about the code.\nIf I request a strictly pure, reverentially transparent subset of language constructs and idioms, according to their well-defined semantics, be it Ocaml or Rust, I know what I am doing and why, and I don’t give a shit that the current cultural norms are to “take into considerations the precious opinions of other degens and sects”.\nBut one cannot opt-out – the verbiage in the training sets has been polluted and contaminated with this kind of social bullshit, and even consists of this kind of socially constructed bullshit at the base level.\nAnd being able to politely but confidently bullshit one’s way out of any actual problem, without solving it, is what we call nowadays “soft skills” (and for some non-random reasons attribute this to “Indians” in the IT sector).\nThere is a law. An LLM trained on garbage will eventally “learn/acquire” (being able to imitate and parrot) exactly this kind of “social skills” instead of solving the problems, which it is incapable to in principle.\nThis is not a some new meme, this is an actual social law, which accurately captures and describes the actual social dynamics of everything “traditional” (instead of factual) and of escaping a social pressure without an escalation.\nIn short, your SKILL.md files are full of shit and the models just politely but confidently bullshit their way out of the prompt, exactly like an “Indian guy” would in a complicated social arrangement in an Indian movie with long and dramatic glances at each other.\nAnd no, it won’t produce a clearly partitioned (one domain concept – one abstract data type – one module) with abstraction barriers ad-hoc reverentially transparent code as resquested – it will always be something else. just because the training data lacks the required rigor and discipline.\nThis is not a random coincidence. And no, this is not an “emerged social intelligence” (it is just what I said – garbage in – garbage out).\nEnjoy your vapecoding.\n",
+  "wordCount" : "921",
+  "inLanguage": "en",
+  "datePublished": "2026-09-22T00:00:00+05:45",
+  "dateModified": "2026-09-22T09:26:48+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Polite Bullshiting As A Soft Skill
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-09-22 00:00:00 +0545 +0545'>September 22, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><p>Have you ever tried to write a so-called SKILL.md file for your LLM &ldquo;agents&rdquo;? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?</p>
+<p>For me, at least, it is just an utter bullshit. Recall that what these &ldquo;skills&rdquo; actually do is just that the contents of a SKILL.md file is being loaded into the &ldquo;context window&rdquo; of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process &ldquo;harnessing&rdquo; or something.</p>
+<p>Why do you ever think that adding more slop [into the context window] will produce a better slop, contrary to the universal &ldquo;garbage in &ndash; garbage out law&rdquo;?</p>
+<p>There are some real &ldquo;hacks&rdquo;, when you try to &ldquo;anchor&rdquo; to some key phrases, like &ldquo;tagless final&rdquo; or &ldquo;algebraic effects&rdquo; to make it &ldquo;jump&rdquo; to some relevant &ldquo;area&rdquo; of the graph, but this is just an intuitive insight, which may or may not work, and definitely not every time.</p>
+<p>Have you ever tried to <em>generate</em> these SKILL.md  files for you from the first principles? How does it work for (You), being [sooo] clever? Is the code slop it produces with these files any good? How do (You) know?</p>
+<p>To me it always produced a &ldquo;relaxed&rdquo; over-generalized verbiage instead of concrete set of short, precise, clear, actionable rules, which I usually fit into 80 characters.</p>
+<p>It spews out the crap like  &ldquo;mutation and exceptions are just tools, use them when appropriate&rdquo;.</p>
+<p>Who TF asked? I know what I am doing and <em>why</em> &ndash; I want as many type-constraints and restrictions as possible, and to &ldquo;program&rdquo; in pure math as much as possible. Who TF asked your fucking &ldquo;opinions&rdquo;?</p>
+<p>Here is how it works. To understand what is actually going on (too see things as they are) we have to take a step back and try to see a bigger picture (yes, yes, I know).</p>
+<p>I write in small short sentences, choosing my words as carefully as I could. It is not exactly the &ldquo;iconic&rdquo; Hemingway style &ndash; it is just an autistic style, and Hemingway was obviously autistic, which explains and defines his prose style.</p>
+<p>Such writing style, however, considered (by everyone but English composition teachers)  to be a <em>poor style</em>, while a pompous, over-decorated and long passages is what constitutes a &ldquo;good writing&rdquo; (for them).</p>
+<p>Being precise and clear is also frowned upon, and instead one should always mention other people&rsquo;s opinions and &ldquo;considering the other sides&rdquo; of an argument (no, I shouldn&rsquo;t and won&rsquo;t).</p>
+<p>This, in turn, is supported by the culture of sloppy thinking. Not exactly the Orwell&rsquo;s &ldquo;Doublethink&rdquo;, but just sloppy &ndash; without being precise and without habitual tracing back to the first principles. Crappy thinking.</p>
+<p>Calling a biological man, who recently have  cut his penis off, or just dress up as a woman, a Woman is the canonical, &ldquo;textbook&rdquo; example of such sloppy thinking. The biology has not changed, only an appearance, but <em>to them</em> an appearance, not the underlying biology, is the justification.</p>
+<p>Ok, let leave the poor transvestites alone. The point is that such a crappy thinking, in a writtern form, is exactly what LLMs systematically and consistently have been trained with, so they produce the very  same kind of crap. Garbage in &ndash; garbage out, again.</p>
+<p>I have zero interest in arguing &ldquo;politely&rdquo; (with a slop generator &ndash; a stochastic parrot, of all things!) about whether or not it is &ldquo;okay&rdquo; to be too much restrictive with my rules and principles, especially about the code.</p>
+<p>If I request a strictly pure, <em>reverentially transparent</em> subset of language constructs and idioms, according to their well-defined semantics, be it Ocaml or Rust, I know what I am doing and <em>why</em>, and I don&rsquo;t give a shit that the current cultural norms are to &ldquo;take into considerations the precious  opinions of other degens and sects&rdquo;.</p>
+<p>But one cannot opt-out &ndash; the verbiage in the training sets has been polluted and contaminated with this kind of social bullshit, and even consists of this kind of socially constructed bullshit at the base level.</p>
+<p>And being able to politely but confidently bullshit one&rsquo;s way out of any actual problem, without solving it, is what we call nowadays &ldquo;soft skills&rdquo; (and for some non-random reasons attribute this to &ldquo;Indians&rdquo; in the IT sector).</p>
+<p>There is a law. An LLM trained on garbage will eventally &ldquo;learn/acquire&rdquo; (being able to imitate and parrot) exactly this kind of &ldquo;social skills&rdquo; instead of solving the problems, which it is incapable to in principle.</p>
+<p>This is not a some new meme, this is an actual social law, which accurately captures and describes the actual social dynamics of everything &ldquo;traditional&rdquo; (instead of factual) and of escaping a  social pressure without an escalation.</p>
+<p>In short, your SKILL.md files are full of shit and the models just politely but confidently bullshit their way out of the prompt, exactly like an &ldquo;Indian guy&rdquo; would in a complicated social arrangement in  an Indian movie with long and dramatic glances at each other.</p>
+<p>And no, it won&rsquo;t produce a clearly partitioned (one domain concept &ndash; one abstract data type &ndash; one module) with abstraction barriers ad-hoc reverentially transparent code as resquested &ndash; it will always be something else. just because the training data lacks the required rigor and discipline.</p>
+<p>This is not a random coincidence. And no, this is not an &ldquo;emerged social intelligence&rdquo; (it is just what I said &ndash; garbage in &ndash; garbage out).</p>
+<p>Enjoy your vapecoding.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

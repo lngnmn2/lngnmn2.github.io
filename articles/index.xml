@@ -6,8 +6,16 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2026 10:21:10 +0545</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 09:26:48 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polite Bullshiting As A Soft Skill</title>
+      <link>https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/</link>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/</guid>
+      <description>&lt;p&gt;Have you ever tried to write a so-called SKILL.md file for your LLM &amp;ldquo;agents&amp;rdquo;? So, how does it work for (You)? Does it follow your instructions? Really? Dow do (You) know? Have you verified the slop?&lt;/p&gt;
+&lt;p&gt;For me, at least, it is just an utter bullshit. Recall that what these &amp;ldquo;skills&amp;rdquo; actually do is just that the contents of a SKILL.md file is being loaded into the &amp;ldquo;context window&amp;rdquo; of the inference engine. So that is just more verbiage in addition to your prompt. Idiots on the street nowadays are calling this process &amp;ldquo;harnessing&amp;rdquo; or something.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>What A Fucking Shitshow</title>
       <link>https://lngnmn2.github.io/articles/what-a-fucking-shitshow/</link>
