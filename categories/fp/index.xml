@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>FP on Notes from the digital underground by Lngnmn</title>
-    <link>https://lngnmn2.github.io/tags/fp/</link>
+    <link>https://lngnmn2.github.io/categories/fp/</link>
     <description>Recent content in FP on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Sep 2026 10:52:37 +0545</lastBuildDate>
-    <atom:link href="https://lngnmn2.github.io/tags/fp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lngnmn2.github.io/categories/fp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Monads, yes, again</title>
       <link>https://lngnmn2.github.io/articles/monads-again/</link>
@@ -16,13 +16,6 @@
       <description>&lt;p&gt;People are saying &lt;em&gt;avoid Monad &amp;ldquo;tutorials&amp;rdquo; [written by unqualified retards]&lt;/em&gt; , so writing down one is an IQ test and understanding is a &amp;ldquo;filter&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;And, indeed, one has to know and understand some related concepts and become to a certain kind of mathematical thinking, otherwise one would apply bullshit imperative programming concepts instead of mathematical ones.&lt;/p&gt;
 &lt;p&gt;The first  concept is &amp;ldquo;composition of functions&amp;rdquo;, the famous \(\circ\) operator of the traditional mathematical notation. it takes two functions (of a single argument) and produces a new function (of a single argument, which is operationally defined is nesting of function calls. Notice that  this is &lt;em&gt;The Only Way&lt;/em&gt; to define composition of functions and that there is no other way to define it.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Move Fast And Build Things</title>
-      <link>https://lngnmn2.github.io/articles/move-fast-and-build-things/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/move-fast-and-build-things/</guid>
-      <description>Time to stop readign and to write something down.</description>
     </item>
   </channel>
 </rss>

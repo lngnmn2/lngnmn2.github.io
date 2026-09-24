@@ -6,8 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 09:26:48 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 10:52:37 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monads, yes, again</title>
+      <link>https://lngnmn2.github.io/articles/monads-again/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/monads-again/</guid>
+      <description>&lt;p&gt;People are saying &lt;em&gt;avoid Monad &amp;ldquo;tutorials&amp;rdquo; [written by unqualified retards]&lt;/em&gt; , so writing down one is an IQ test and understanding is a &amp;ldquo;filter&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;And, indeed, one has to know and understand some related concepts and become to a certain kind of mathematical thinking, otherwise one would apply bullshit imperative programming concepts instead of mathematical ones.&lt;/p&gt;
+&lt;p&gt;The first  concept is &amp;ldquo;composition of functions&amp;rdquo;, the famous \(\circ\) operator of the traditional mathematical notation. it takes two functions (of a single argument) and produces a new function (of a single argument, which is operationally defined is nesting of function calls. Notice that  this is &lt;em&gt;The Only Way&lt;/em&gt; to define composition of functions and that there is no other way to define it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Polite Bullshiting As A Soft Skill</title>
       <link>https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/</link>

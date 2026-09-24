@@ -5,19 +5,37 @@
     <loc>https://lngnmn2.github.io/about/</loc>
     <lastmod>2023-08-05T19:21:03+05:45</lastmod>
   </url><url>
+    <loc>https://lngnmn2.github.io/articles/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/fp/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/fp/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/articles/monads-again/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/categories/programming/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
+    <loc>https://lngnmn2.github.io/tags/</loc>
+    <lastmod>2026-09-24T10:52:37+05:45</lastmod>
+  </url><url>
     <loc>https://lngnmn2.github.io/categories/ai/</loc>
     <lastmod>2026-09-22T09:26:48+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/tags/ai/</loc>
     <lastmod>2026-09-22T09:26:48+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/articles/</loc>
-    <lastmod>2026-09-22T09:26:48+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/tags/bullshit/</loc>
-    <lastmod>2026-09-22T09:26:48+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/</loc>
     <lastmod>2026-09-22T09:26:48+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/categories/llm/</loc>
@@ -26,16 +44,7 @@
     <loc>https://lngnmn2.github.io/tags/llm/</loc>
     <lastmod>2026-09-22T09:26:48+05:45</lastmod>
   </url><url>
-    <loc>https://lngnmn2.github.io/</loc>
-    <lastmod>2026-09-22T09:26:48+05:45</lastmod>
-  </url><url>
     <loc>https://lngnmn2.github.io/articles/polite-bullshitting-as-a-soft-skill/</loc>
-    <lastmod>2026-09-22T09:26:48+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/categories/programming/</loc>
-    <lastmod>2026-09-22T09:26:48+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/</loc>
     <lastmod>2026-09-22T09:26:48+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/what-a-fucking-shitshow/</loc>
@@ -490,9 +499,6 @@
   </url><url>
     <loc>https://lngnmn2.github.io/tags/types/</loc>
     <lastmod>2025-05-31T16:09:59+05:45</lastmod>
-  </url><url>
-    <loc>https://lngnmn2.github.io/tags/fp/</loc>
-    <lastmod>2025-05-26T15:17:12+05:45</lastmod>
   </url><url>
     <loc>https://lngnmn2.github.io/articles/move-fast-and-build-things/</loc>
     <lastmod>2025-05-26T15:17:12+05:45</lastmod>

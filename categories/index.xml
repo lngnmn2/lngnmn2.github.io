@@ -6,8 +6,22 @@
     <description>Recent content in Categories on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Sep 2026 09:26:48 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 10:52:37 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FP</title>
+      <link>https://lngnmn2.github.io/categories/fp/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/fp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>https://lngnmn2.github.io/categories/programming/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://lngnmn2.github.io/categories/ai/</link>
@@ -20,13 +34,6 @@
       <link>https://lngnmn2.github.io/categories/llm/</link>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/categories/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Programming</title>
-      <link>https://lngnmn2.github.io/categories/programming/</link>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/categories/programming/</guid>
       <description></description>
     </item>
     <item>
