@@ -6,8 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2026 12:20:06 +0545</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 18:27:03 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Bullshit At The UN General Assembly</title>
+      <link>https://lngnmn2.github.io/articles/ai-bullshit-at-the-general-assembly/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/ai-bullshit-at-the-general-assembly/</guid>
+      <description>&lt;p&gt;Whatever bullshit Sam and especially Dario are spewing out at the UNGA, it is still a bullshit.&lt;/p&gt;
+&lt;p&gt;What they actually have is a particular set of running algorithms, which, while mimicking just one aspect of how the brain works (in principle, not in the details), is, obviously, not enough to materialize the promises they gave away.&lt;/p&gt;
+&lt;p&gt;First. they bet all these borrowed trillions on the assumption that &amp;ldquo;by scaling it&amp;rdquo; (more compute, more storage) and by wiring the slop generator blocks in series, similar to what complex EE systems are being composed, they will achieve so called AGI.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Monads, yes, again</title>
       <link>https://lngnmn2.github.io/articles/monads-again/</link>
@@ -1475,13 +1484,6 @@ To get syntax highlighting in eww and shr, you need to use a package that interc
   </description>
     </item>
     <item>
-      <title>LLM predictions</title>
-      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
-      <pubDate>Wed, 08 Nov 2023 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
-      <description>Modern alchemy and astrology using Linea Algebra on Nvidia GPUs</description>
-    </item>
-    <item>
       <title>On foundations of mathematics</title>
       <link>https://lngnmn2.github.io/articles/foundations/</link>
       <pubDate>Thu, 02 Nov 2023 00:00:00 +0545</pubDate>
@@ -1775,6 +1777,14 @@ like &amp;ldquo;Volume&amp;rdquo;.&lt;/p&gt;</description>
       <link>https://lngnmn2.github.io/articles/emacs/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/articles/emacs/</guid>
+      <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
+  </description>
+    </item>
+    <item>
+      <title>GNU Emacs</title>
+      <link>https://lngnmn2.github.io/articles/llm-predictions/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/llm-predictions/</guid>
       <description>  The monument and a world-heritage &amp;#34;site&amp;#34;.
   </description>
     </item>
