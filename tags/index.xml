@@ -6,8 +6,15 @@
     <description>Recent content in Tags on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2026 18:27:03 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 07:08:04 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FP</title>
+      <link>https://lngnmn2.github.io/tags/fp/</link>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/tags/fp/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://lngnmn2.github.io/tags/ai/</link>
@@ -20,13 +27,6 @@
       <link>https://lngnmn2.github.io/tags/bullshit/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/bullshit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>FP</title>
-      <link>https://lngnmn2.github.io/tags/fp/</link>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0545</pubDate>
-      <guid>https://lngnmn2.github.io/tags/fp/</guid>
       <description></description>
     </item>
     <item>
@@ -282,7 +282,7 @@
       <description></description>
     </item>
     <item>
-      <title>Deep Learning</title>
+      <title>Deep-Learning</title>
       <link>https://lngnmn2.github.io/tags/deep-learning/</link>
       <pubDate>Wed, 20 Nov 2024 16:53:58 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/deep-learning/</guid>
@@ -401,7 +401,7 @@
       <description></description>
     </item>
     <item>
-      <title>Neural Network</title>
+      <title>Neural-Network</title>
       <link>https://lngnmn2.github.io/tags/neural-network/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0545</pubDate>
       <guid>https://lngnmn2.github.io/tags/neural-network/</guid>
