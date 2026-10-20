@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Where We Are So Far | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="FP">
+<meta name="description" content="So, this is what is actually going on  (seen as they are) in plain English.
+The sheer brute-force of data-center-sized &ldquo;frontier&rdquo; models is so brute that it easily appears as &ldquo;intelligence&rdquo;.
+This is still the next-token prediction based on a conditional probability under the hood.
+There is no &ldquo;understanding&rdquo;, no &ldquo;reasoning&rdquo;, no &ldquo;knowledge&rdquo;, no &ldquo;skills&rdquo; (these are just the same streams of tokens).
+But this is not mere a &ldquo;glorified autocomplete&rdquo; anymore. There are compilers, code linters and even basic static analysis tools in the loop.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/where-we-are-so-far-1/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/where-we-are-so-far-1/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/where-we-are-so-far-1/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="Where We Are So Far">
+  <meta property="og:description" content="So, this is what is actually going on (seen as they are) in plain English.
+The sheer brute-force of data-center-sized “frontier” models is so brute that it easily appears as “intelligence”.
+This is still the next-token prediction based on a conditional probability under the hood.
+There is no “understanding”, no “reasoning”, no “knowledge”, no “skills” (these are just the same streams of tokens).
+But this is not mere a “glorified autocomplete” anymore. There are compilers, code linters and even basic static analysis tools in the loop.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-10-17T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-10-20T15:31:48+05:45">
+    <meta property="article:tag" content="FP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Where We Are So Far">
+  <meta name="twitter:description" content="So, this is what is actually going on (seen as they are) in plain English.
+The sheer brute-force of data-center-sized “frontier” models is so brute that it easily appears as “intelligence”.
+This is still the next-token prediction based on a conditional probability under the hood.
+There is no “understanding”, no “reasoning”, no “knowledge”, no “skills” (these are just the same streams of tokens).
+But this is not mere a “glorified autocomplete” anymore. There are compilers, code linters and even basic static analysis tools in the loop.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Where We Are So Far",
+      "item": "https://lngnmn2.github.io/articles/where-we-are-so-far-1/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Where We Are So Far",
+  "name": "Where We Are So Far",
+  "description": "So, this is what is actually going on (seen as they are) in plain English.\nThe sheer brute-force of data-center-sized \u0026ldquo;frontier\u0026rdquo; models is so brute that it easily appears as \u0026ldquo;intelligence\u0026rdquo;.\nThis is still the next-token prediction based on a conditional probability under the hood.\nThere is no \u0026ldquo;understanding\u0026rdquo;, no \u0026ldquo;reasoning\u0026rdquo;, no \u0026ldquo;knowledge\u0026rdquo;, no \u0026ldquo;skills\u0026rdquo; (these are just the same streams of tokens).\nBut this is not mere a \u0026ldquo;glorified autocomplete\u0026rdquo; anymore. There are compilers, code linters and even basic static analysis tools in the loop.\n",
+  "keywords": [
+    "FP"
+  ],
+  "articleBody": "So, this is what is actually going on (seen as they are) in plain English.\nThe sheer brute-force of data-center-sized “frontier” models is so brute that it easily appears as “intelligence”.\nThis is still the next-token prediction based on a conditional probability under the hood.\nThere is no “understanding”, no “reasoning”, no “knowledge”, no “skills” (these are just the same streams of tokens).\nBut this is not mere a “glorified autocomplete” anymore. There are compilers, code linters and even basic static analysis tools in the loop.\nThey pipe the slop through the selected tooling and feed the results back into the loop, so the compile errors are being fixed for you.\nThis is the only real selling point. Fixing compilation errors and tests is a YUGE productivity boost, approaching a 100x meme.\nThere is a lot of whining and moaning on a low IQ social media, like /g/, and this is perfectly justified.\nIf you know what to ask and what to expect (which means you are an actual senior level programmer) you can just prompt the right things and watch the compiler and the tooling do the rest (in a loop).\nIf you are a clueless junior or a student, you will eventually be buried under a mountain gradually (and inevitably) added complexity which you do not and cannot understand.\nThe canonical and real example is actual UB in the slop in C/C++. No compiler can catch a subtle Undefined Behavior of C/C++ and non-determinism of an imperative crap in general.\nUse the right, well-designed and writtern by knowledgeable, top-level academics (Leroy, SPJ, Odersky) languages for your slop. Restrict to the pure-functional subset.\nThe “knowing what you do (and why)” has no equivalent and no replacement in an LLM loop-based workflow. Only an appearance that everything is okay (and the crap runs).\nMaking code that “runs” was never been a big problem – all the crappy imperative untyped languages (C, C++, PHP, Java, Javascript, Python) constitute the proof by example.\nComing up with something that runs is not the fundamental challenge. It is that “everything has been done Right” (which Ocaml, Scala and Haskell designers are trying to accomplish).\nAnd striving for perfection is an operational definition of an Art. No LLM “knows about” or “understands” or “can deliver” such a perfection. It just puts the next token to the end of a stream..\nOne more time: a datacenter-sized “frontier” models, with their compiler and tooling “loops”, are doing all the “mechanical” work, and do it at the level no human can even compete (brute force).\nAnd This Is What It Is today.\nAnother level of complexity is the training data. There are enormous amount of crappy C/C++, Python and Javascript, and very few textbook-grade Ocaml, Scala, Haskell, Rust.\nThe classic, canonical example is Haskell, where idiots are using monadic combinators and monad transformers outsize of the parsing libraries where they belong.\nNo code uses the properer Hexagonal Architecture (isolating IO within adapters at the outer abstraction boundaries) and all the other nice things smart people come up with.\n99% of public Haskell code is an amateur crap with unnecessary and redundant “type-level pyramids of doom” (look, ma, I am so clever).\nThis implies that the slop will be crappy by definition – there is, literally, no good training data for the best languages.\nThe model will spew the right, reassuring verbiage, but the code will not match. One has to be an actual expert to notice the subtle semantic gap between the text and the actual code.\nAmateurs will stand no chance.\nAside from that, if (You) ask something well-known, a frontier LLM will output something that runs.\nThe bottom line is this:\nJust like in any competitive sports, there are some people which are noticeably better than others. The same principle applies to prompting and vapecoding. A senior dev with a proper CS background will outrun a whole team of amateurs easily and quickly. The promised 100x is Out There (when an LLM runs your compiler loop).\nThis means, among other things, that there will be way fewer “programming” jobs and ever fewer well-paid ones. The times of “100k per year after graduation” are over.\nAnd yes, LLMs today are doing what Indian oursourcing teams did, but 100x faster and with 1000x less errors (but with nasty subtle ones) for a fraction of the costs.\nLet that sink in. Everything else a reasonably smart individual could simply deduce from this actual fact.\nOne more thing: the best, well-researched and well-designed (with necessary constraints) mostly-functional well-typed languages make an enormous qualitative difference.\n",
+  "wordCount" : "764",
+  "inLanguage": "en",
+  "datePublished": "2026-10-17T00:00:00+05:45",
+  "dateModified": "2026-10-20T15:31:48+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/where-we-are-so-far-1/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Where We Are So Far
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-10-17 00:00:00 +0545 +0545'>October 17, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><p>So, this is what is actually going on  (seen as they are) in plain English.</p>
+<p>The sheer brute-force of data-center-sized &ldquo;frontier&rdquo; models is so brute that it easily appears as &ldquo;intelligence&rdquo;.</p>
+<p>This is still the next-token prediction based on a conditional probability under the hood.</p>
+<p>There is no &ldquo;understanding&rdquo;, no &ldquo;reasoning&rdquo;, no &ldquo;knowledge&rdquo;, no &ldquo;skills&rdquo; (these are just the same streams of tokens).</p>
+<p>But this is not mere a &ldquo;glorified autocomplete&rdquo; anymore. There are compilers, code linters and even basic static analysis tools in the loop.</p>
+<p>They pipe the slop through the selected tooling and feed the results back into the loop, so the compile errors are being fixed for you.</p>
+<p>This is the only real selling point. Fixing compilation errors and tests is a YUGE productivity boost, approaching a 100x meme.</p>
+<p>There is a lot of whining and moaning on a low IQ  social media, like <code>/g/</code>, and this is perfectly justified.</p>
+<p>If you know what to ask and what to expect (which means you are an actual senior level programmer) you can just prompt the right things and watch the compiler and the tooling do the rest (in a loop).</p>
+<p>If you are a clueless junior or a student, you will eventually be buried under a mountain gradually (and inevitably) added complexity <em>which you do not and cannot understand</em>.</p>
+<p>The canonical and real example is actual UB in the slop in C/C++.  No compiler can catch a subtle Undefined Behavior of C/C++ and non-determinism of an imperative crap in general.</p>
+<p>Use the right, well-designed <em>and writtern</em> by knowledgeable, top-level academics (Leroy, SPJ, Odersky) languages for your slop. Restrict to the pure-functional subset.</p>
+<p>The <em>&ldquo;knowing what you do (and why)&rdquo;</em> has no equivalent and no replacement in an LLM loop-based workflow. Only an appearance that everything is okay (and the crap runs).</p>
+<p>Making code that &ldquo;runs&rdquo; was never been a big problem &ndash; all the crappy imperative  untyped languages  (C, C++, PHP, Java, Javascript, Python) constitute the proof by example.</p>
+<p>Coming up with something that runs is not the fundamental challenge. It is that <em>&ldquo;everything has been done Right&rdquo;</em>  (which Ocaml, Scala and Haskell designers are trying to accomplish).</p>
+<p>And striving for perfection is an operational definition of an Art. No LLM &ldquo;knows about&rdquo; or &ldquo;understands&rdquo; or &ldquo;can deliver&rdquo; such a perfection. It just puts the next token to the end of a stream..</p>
+<p>One more time: a datacenter-sized &ldquo;frontier&rdquo; models, with their compiler and tooling &ldquo;loops&rdquo;, are doing all the &ldquo;mechanical&rdquo; work, and do it at the level no human can even compete (brute force).</p>
+<p>And <em>This Is What It Is</em> today.</p>
+<p>Another level of complexity is the training data. There are enormous amount of crappy C/C++, Python and Javascript, and very few textbook-grade Ocaml, Scala, Haskell, Rust.</p>
+<p>The classic, canonical example is Haskell, where idiots are using monadic combinators and monad transformers  outsize of the parsing libraries where they belong.</p>
+<p>No code uses the properer Hexagonal Architecture (isolating IO within adapters at the outer abstraction boundaries) and all the other nice things smart people come up with.</p>
+<p>99% of public Haskell code is an amateur crap with unnecessary and redundant &ldquo;type-level pyramids of doom&rdquo; (look, ma, I am so clever).</p>
+<p>This <em>implies</em> that the slop will be crappy by definition &ndash; there is, literally, no good training data for the best languages.</p>
+<p>The model will spew the right, reassuring verbiage, but the code will not match. One has to be an actual expert to notice the subtle semantic gap between the text and the actual code.</p>
+<p>Amateurs will stand no chance.</p>
+<p>Aside from that, if (You) ask something well-known, a frontier LLM will output something that runs.</p>
+<p>The bottom line is this:</p>
+<p>Just like in any competitive sports, there are some people which are noticeably better than others. The same principle applies to prompting and vapecoding.  A senior dev with a proper CS background will outrun a whole team of amateurs easily and quickly. The promised 100x is Out There (when an LLM runs your compiler loop).</p>
+<p>This means, among other things, that there will be <strong>way</strong> fewer &ldquo;programming&rdquo; jobs and ever fewer well-paid ones. The times of &ldquo;100k per year after graduation&rdquo; are over.</p>
+<p>And yes, LLMs today are doing what Indian oursourcing teams did, but 100x faster and with 1000x less errors (but with nasty subtle ones) for a fraction of the costs.</p>
+<p>Let that sink in. Everything else a reasonably smart individual could simply deduce from this actual fact.</p>
+<p>One more thing: the best, well-researched and well-designed (with necessary constraints) mostly-functional well-typed languages make an <em>enormous qualitative difference</em>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/fp/">FP</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
