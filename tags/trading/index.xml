@@ -6,8 +6,16 @@
     <description>Recent content in Trading on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 10:50:34 +0545</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 12:28:07 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/tags/trading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Crapto</title>
+      <link>https://lngnmn2.github.io/articles/on-crapto/</link>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/on-crapto/</guid>
+      <description>&lt;p&gt;I am an Alexander Elder&amp;rsquo;s fan and student, not just because I am a refugee too (my mom is Ukrainian), but because he essentially figured it all out back in the &lt;em&gt;hecking&lt;/em&gt; 1993, before trading even became mainstream, and his system withstood the test of more than 25 years and completely, totally different, fully automated markets.&lt;/p&gt;
+&lt;p&gt;I am also a big fan of the Jane Street &amp;ldquo;cool story&amp;rdquo;, at least the part that they shill to the public and which I understand quite well &amp;ndash; a man studied at a very good school (Cornell), with the right tradition (ML-family) under the best teachers (Clarkson and Co.), got a PhD (which means got the Right Understanding and proper Indoctrination)  and then used the Ocaml language (designed and implemented by correctness-obsessed serious  theoreticians and academics) for &lt;em&gt;semi-automation&lt;/em&gt; of error-prone tasks, with not just significant, but very large (potentially destructive) costs of errors.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>They gave 5 LLMs $100K to trade stocks for 8 months</title>
       <link>https://lngnmn2.github.io/articles/100k-to-llms/</link>
