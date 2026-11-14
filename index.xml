@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2026 12:28:07 +0545</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 18:41:15 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,15 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The One-shot Result</title>
+      <link>https://lngnmn2.github.io/articles/the-one-shot-results/</link>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-one-shot-results/</guid>
+      <description>&lt;p&gt;Recently there were lots of nonsense posted on Xitter and elsewhere about &amp;ldquo;complete AA-grade games &amp;quot; or &amp;ldquo;ready to production CAD designs&amp;rdquo; from a single simplistic prompts, like &amp;ldquo;make me an AA grade first person shooter with photo-realistic graphics&amp;rdquo;,  almost literally.&lt;/p&gt;
+&lt;p&gt;The question, of course, is not how it dances so well, but how it dances at all.&lt;/p&gt;
+&lt;p&gt;The answer seems to be &amp;ldquo;the training process and the  training data&amp;rdquo;, as usual.&lt;/p&gt;</description>
     </item>
     <item>
       <title>On Crapto</title>

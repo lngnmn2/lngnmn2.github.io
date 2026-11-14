@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The One-shot Result | Notes from the digital underground by Lngnmn</title>
+<meta name="keywords" content="FP, LLM, AI, bullshit">
+<meta name="description" content="Recently there were lots of nonsense posted on Xitter and elsewhere about &ldquo;complete AA-grade games &quot; or &ldquo;ready to production CAD designs&rdquo; from a single simplistic prompts, like &ldquo;make me an AA grade first person shooter with photo-realistic graphics&rdquo;,  almost literally.
+The question, of course, is not how it dances so well, but how it dances at all.
+The answer seems to be &ldquo;the training process and the  training data&rdquo;, as usual.">
+<meta name="author" content="lngnmn2@yahoo.com">
+<link rel="canonical" href="https://lngnmn2.github.io/articles/the-one-shot-results/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://lngnmn2.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lngnmn2.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lngnmn2.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lngnmn2.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lngnmn2.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://lngnmn2.github.io/articles/the-one-shot-results/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap" rel="stylesheet">
+<style>
+font-family: 'Noto Serif', serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Source Code Pro', monospace;
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><meta property="og:url" content="https://lngnmn2.github.io/articles/the-one-shot-results/">
+  <meta property="og:site_name" content="Notes from the digital underground by Lngnmn">
+  <meta property="og:title" content="The One-shot Result">
+  <meta property="og:description" content="Recently there were lots of nonsense posted on Xitter and elsewhere about “complete AA-grade games &#34; or “ready to production CAD designs” from a single simplistic prompts, like “make me an AA grade first person shooter with photo-realistic graphics”, almost literally.
+The question, of course, is not how it dances so well, but how it dances at all.
+The answer seems to be “the training process and the training data”, as usual.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="articles">
+    <meta property="article:published_time" content="2026-11-14T00:00:00+05:45">
+    <meta property="article:modified_time" content="2026-11-14T18:41:15+05:45">
+    <meta property="article:tag" content="FP">
+    <meta property="article:tag" content="LLM">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Bullshit">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The One-shot Result">
+  <meta name="twitter:description" content="Recently there were lots of nonsense posted on Xitter and elsewhere about “complete AA-grade games &#34; or “ready to production CAD designs” from a single simplistic prompts, like “make me an AA grade first person shooter with photo-realistic graphics”, almost literally.
+The question, of course, is not how it dances so well, but how it dances at all.
+The answer seems to be “the training process and the training data”, as usual.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Articles",
+      "item": "https://lngnmn2.github.io/articles/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The One-shot Result",
+      "item": "https://lngnmn2.github.io/articles/the-one-shot-results/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The One-shot Result",
+  "name": "The One-shot Result",
+  "description": "Recently there were lots of nonsense posted on Xitter and elsewhere about \u0026ldquo;complete AA-grade games \u0026quot; or \u0026ldquo;ready to production CAD designs\u0026rdquo; from a single simplistic prompts, like \u0026ldquo;make me an AA grade first person shooter with photo-realistic graphics\u0026rdquo;, almost literally.\nThe question, of course, is not how it dances so well, but how it dances at all.\nThe answer seems to be \u0026ldquo;the training process and the training data\u0026rdquo;, as usual.\n",
+  "keywords": [
+    "FP", "LLM", "AI", "bullshit"
+  ],
+  "articleBody": "Recently there were lots of nonsense posted on Xitter and elsewhere about “complete AA-grade games \" or “ready to production CAD designs” from a single simplistic prompts, like “make me an AA grade first person shooter with photo-realistic graphics”, almost literally.\nThe question, of course, is not how it dances so well, but how it dances at all.\nThe answer seems to be “the training process and the training data”, as usual.\nWe all know the principles – with each training example the back-propagation algorithm based on symbolic derivatives, slightly alters all the weights, in principle. The tricks like “batching” and whatever they do nowadays does not change this fact.\nThis, in turn, suggests to train not on a randomly shuffled data, but on coherent and consistent data, like a whole large codebase, because good code is much more structured, consistent and coherent.\nI have also suggested to train first on a primary school textbooks, then high-school ones, then university textbooks and then articles and at last all the online bullshit, so the “trails through the snow (or paths through the mountains)” develop early and stay beaten up as early as possible.\nThis, of course, mimics the process of a human language acquisition (by a child from the exposure to the examples within her shared environment).\nThere is another subtlety. Since a written prose has much less structure than a program code, especially in crappy verbose imperative languages, the inference process easily and often “jumps” between “possible paths” and the result, given what is already in the buffer, is coherent (and free of grammar and spelling errors).\nThis works because the grammar and spelling rules are implicitly captured in the weights – incorrect spelling and grammar just end up with way lower weights.\nBut the semantics is a completely different story, and the “jumps” produce so-called hallucinations. It is that simple.\nWith the code, however, you cannot “jump” (arbitrarily select less probable path) – everything will blow up. But the training data are so coherent and structured, that all other paths are way less probable, given what is already in the inference buffer.\nThis means that datacenter -sized “frontier” LLMs just represent everything “verbatim”.\nIt is wonderful topic in itself, how an LLM representation (and the brain’s synaptic gaps) stay “consistent” when being continuously slightly perturbed (with each flow of blood and with each backprob pass). The answer is that these changes are real but tiny, almost negligible (until they aren’t).\nLook, ma, I still remember my theoretical courses!\nSo, what Anthropic and others are doing is that they simply feed everything in, both whole code bases and poor user’s slop sessions (this was assumed from right the start) and the model is vast, it encodes whole projects “verbatim” – via standing out [emergent] paths through the fresh snow.\nThis is how and why these one-shot prompts work. Again, we have a sheer brute force, not an intelligence. Only a very convicing appearance (a cognitive illusion) of it.\nParaphrasing Dijkstra – how do you know that the “adder” works for all possible combination of numbers? There is only one way to know – study how it is actually implemented.\n",
+  "wordCount" : "529",
+  "inLanguage": "en",
+  "datePublished": "2026-11-14T00:00:00+05:45",
+  "dateModified": "2026-11-14T18:41:15+05:45",
+  "author":[{
+    "@type": "Person",
+    "name": "lngnmn2@yahoo.com"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lngnmn2.github.io/articles/the-one-shot-results/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Notes from the digital underground by Lngnmn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lngnmn2.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://lngnmn2.github.io/" accesskey="h" title="Notes from the digital underground by Lngnmn (Alt + H)">Notes from the digital underground by Lngnmn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://lngnmn2.github.io/about/" title="About me.">
+                    <span>About me.</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The One-shot Result
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-11-14 00:00:00 +0545 +0545'>November 14, 2026</span>&nbsp;·&nbsp;<span>lngnmn2@yahoo.com</span>
+
+</div>
+  </header> 
+  <div class="post-content md-content"><p>Recently there were lots of nonsense posted on Xitter and elsewhere about &ldquo;complete AA-grade games &quot; or &ldquo;ready to production CAD designs&rdquo; from a single simplistic prompts, like &ldquo;make me an AA grade first person shooter with photo-realistic graphics&rdquo;,  almost literally.</p>
+<p>The question, of course, is not how it dances so well, but how it dances at all.</p>
+<p>The answer seems to be &ldquo;the training process and the  training data&rdquo;, as usual.</p>
+<p>We all know the principles &ndash; with each training example the back-propagation algorithm based on symbolic derivatives, slightly alters <em>all</em> the weights, in principle. The tricks like &ldquo;batching&rdquo; and whatever they do nowadays does not change this fact.</p>
+<p>This, in turn, suggests to train not on a randomly shuffled data, but on coherent and consistent data, like a whole large codebase, because good code is much more structured, consistent and coherent.</p>
+<p>I have also suggested to train first on a primary school textbooks, then high-school ones, then university textbooks and then articles and at last all the online bullshit, so the &ldquo;trails through the snow (or paths through the mountains)&rdquo;  develop early and stay beaten up as early as possible.</p>
+<p>This, of course, mimics the process of a human language acquisition (by a child from the exposure to the examples within her shared environment).</p>
+<p>There is another subtlety. Since a written prose has much less structure than a program code, especially in crappy verbose imperative languages, the inference process easily and often &ldquo;jumps&rdquo; between &ldquo;possible paths&rdquo; and the result, given what is already in the buffer, is coherent (and free of grammar  and spelling errors).</p>
+<p>This works because the grammar and spelling rules are implicitly captured in the weights &ndash; incorrect spelling and grammar just end up with way lower weights.</p>
+<p>But the semantics is a completely different story, and the  &ldquo;jumps&rdquo; produce so-called hallucinations. It is that simple.</p>
+<p>With the code, however, you cannot &ldquo;jump&rdquo; (arbitrarily select less probable path) &ndash; everything will blow up. But the training data are so coherent and structured, that <em>all</em> other paths are way less probable, given what is already in the inference buffer.</p>
+<p>This means that datacenter -sized &ldquo;frontier&rdquo; LLMs just represent everything &ldquo;verbatim&rdquo;.</p>
+<p>It is wonderful topic in itself, how an LLM representation (and the brain&rsquo;s synaptic gaps) stay &ldquo;consistent&rdquo;  when being continuously slightly perturbed (with each flow of blood and with each backprob pass). The answer is that these changes are real but tiny, almost negligible (until they aren&rsquo;t).</p>
+<p>Look, ma, I still remember my theoretical courses!</p>
+<p>So, what Anthropic and others are doing is that they simply feed everything in, both whole code bases and  poor user&rsquo;s slop sessions (this was assumed from right the start)  and the model is vast, it encodes whole projects &ldquo;verbatim&rdquo; &ndash; via standing out [emergent] paths through the fresh snow.</p>
+<p>This is how and why these one-shot prompts work. Again, we have a sheer brute force, not an intelligence. Only a very convicing appearance (a cognitive illusion) of it.</p>
+<p>Paraphrasing Dijkstra  &ndash; how do you know that the &ldquo;adder&rdquo; works for all possible combination of numbers? There is only one way to know &ndash; study how it is actually implemented.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lngnmn2.github.io/tags/fp/">FP</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/llm/">LLM</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://lngnmn2.github.io/tags/bullshit/">Bullshit</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://lngnmn2.github.io/">Notes from the digital underground by Lngnmn</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
