@@ -6,7 +6,7 @@
     <description>Recent content on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Nov 2026 18:41:15 +0545</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 09:36:54 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me.</title>
@@ -22,6 +22,16 @@ person&lt;/del&gt;.&lt;/p&gt;
 &lt;p&gt;Arguably the best scene in the classic Rocky (1976) movie, is when Mickey comes with an offer:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;..Well, what ya need is a manager. A manager, listen to me. I know, because I&amp;rsquo;ve been in this racket for fifty years&amp;hellip;I&amp;rsquo;ve seen it all, all of it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>  The sheer idiocy of building &#34;small&#34; multimodal models
+  </title>
+      <link>https://lngnmn2.github.io/articles/the-sheer-idiocy/</link>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/the-sheer-idiocy/</guid>
+      <description>&lt;p&gt;The striking idiocy of keeping making multimodal &amp;ldquo;local&amp;rdquo; models to fit into the intentionally (to maximize profits) memory-limited crapbooks of the Mac cult victims, is beyond my comprehension.&lt;/p&gt;
+&lt;p&gt;Yes, nothing local runs on an over-priced 16GB crapbooks, and barely runs (~ 1 token/sec) on 32GB crippled Mac Minies, since there are no mainstream Macbooks with 32GB and the top-tier Pro models cost like $3K+.&lt;/p&gt;
+&lt;p&gt;To fullfill the demand of the igorant cultists all kinds of Q4_0 crappy factorizations are being built, which produce a very generic, commonplace slop for reasons discussed at length here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The One-shot Result</title>
