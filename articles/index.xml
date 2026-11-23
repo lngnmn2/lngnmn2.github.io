@@ -6,8 +6,17 @@
     <description>Recent content in Articles on Notes from the digital underground by Lngnmn</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2026 09:36:54 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 19:23:30 +0545</lastBuildDate>
     <atom:link href="https://lngnmn2.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>That Stupid Pelican On A Bicycle</title>
+      <link>https://lngnmn2.github.io/articles/that-stupid-pelican-on-a-bicycle/</link>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0545</pubDate>
+      <guid>https://lngnmn2.github.io/articles/that-stupid-pelican-on-a-bicycle/</guid>
+      <description>&lt;p&gt;Today I will show you something remarkable.&lt;/p&gt;
+&lt;p&gt;All the documented and controlled &amp;ldquo;experiments&amp;rdquo; which performed &lt;em&gt;controlled&lt;/em&gt; comparisons of the LLMs with that degenerate pelican-on-a-bicycle meme &amp;ldquo;test&amp;rdquo; produced the result of that fucking pelican &lt;em&gt;facing right&lt;/em&gt; &amp;ndash; 100%, without a single exception.&lt;/p&gt;
+&lt;p&gt;Here is a claim, which cannot be imperically verified but can be easily justified from the first principles unudertanding &amp;ndash; every major model for the very same prompt (without a single word altered) will produce the image of a pelicane &lt;em&gt;facing right&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>  The sheer idiocy of building &#34;small&#34; multimodal models
   </title>
